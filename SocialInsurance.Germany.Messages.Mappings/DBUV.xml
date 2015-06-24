@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <template name="DBUV">
+    <field name="Kennung" length="4" literal="DBUV" required="true"/>
+    <field name="AnzahlUV" length="1" required="true"/>
+    <field name="Reserve" length="15" required="true"/>
+    <field name="UVGrund" length="3" required="false"/>
+    <field name="Betriebsnummer" length="15" required="true"/>
+    <field name="Mitgliedsnummer" length="20" required="true"/>
+    <field name="BetriebsnummerGTS" length="15" required="true"/>
+    <field name="Gefahrtarifstelle" length="8" required="true"/>
+    <field name="BeitragsArbeitsentgelt" length="6" required="true"/>
+    <field name="Arbeitsstunden" length="4" required="true"/>
+  </template>
+</beanio>

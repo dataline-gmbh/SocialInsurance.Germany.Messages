@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <template name="DBGB">
+    <field name="Kennung" length="4" literal="DBGB" required="true"/>
+    <field name="Geburtsname" length="30" required="false"/>
+    <field name="Geburtsnamenvorsatzwort" length="20" required="false"/>
+    <field name="Geburtsnamenzusatz" length="20" required="false"/>
+    <field name="Geburtsdatum" length="8" required="true"/>
+    <field name="Geschlecht" length="1" regex="[M]|[W]" required="true"/>
+    <field name="Geburtsort" length="34" required="true"/>
+  </template>
+</beanio>

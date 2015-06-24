@@ -4,6 +4,7 @@
       <AnalyzerSettings>
         <StringProperty Name="AdvancedNaming_Property">$(AABB):$(AaBb)</StringProperty>
         <StringProperty Name="AdvancedNaming_ClassNotInternal">$(AABB):$(AaBb)</StringProperty>
+        <StringProperty Name="AdvancedNaming_Words">3D A B C DE EN FxCop ID IDs OK StyleCop SV US X</StringProperty>
       </AnalyzerSettings>
     </Analyzer>
   </Analyzers>

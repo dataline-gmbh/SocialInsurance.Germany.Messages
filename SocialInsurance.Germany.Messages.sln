@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialInsurance.Germany.Messages.Pocos", "SocialInsurance.Germany.Messages.Pocos\SocialInsurance.Germany.Messages.Pocos.csproj", "{1E06A926-570F-4CA4-988F-46CAFF25DBD8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialInsurance.Germany.Messages.Mappings", "SocialInsurance.Germany.Messages.Mappings\SocialInsurance.Germany.Messages.Mappings.csproj", "{71125897-2A32-4D4D-A6F2-95506CF65DB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialInsurance.Germany.Messages.Tests", "SocialInsurance.Germany.Messages.Tests\SocialInsurance.Germany.Messages.Tests.csproj", "{DD9432A6-8BF2-4294-B46C-E4BE273B52A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{1E06A926-570F-4CA4-988F-46CAFF25DBD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E06A926-570F-4CA4-988F-46CAFF25DBD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E06A926-570F-4CA4-988F-46CAFF25DBD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71125897-2A32-4D4D-A6F2-95506CF65DB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71125897-2A32-4D4D-A6F2-95506CF65DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71125897-2A32-4D4D-A6F2-95506CF65DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71125897-2A32-4D4D-A6F2-95506CF65DB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD9432A6-8BF2-4294-B46C-E4BE273B52A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD9432A6-8BF2-4294-B46C-E4BE273B52A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD9432A6-8BF2-4294-B46C-E4BE273B52A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD9432A6-8BF2-4294-B46C-E4BE273B52A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

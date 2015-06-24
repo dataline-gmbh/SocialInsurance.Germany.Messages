@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBME.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBNA.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBGB.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBAN.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBEU.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBUV.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <template name="DSMEv3">
+    <field name="Kennung" literal="DSME" length="4" rid="true" required="true" />
+    <field name="Verfahren" literal="DEUEV" length="5" required="true" />
+    <field name="BetriebsnummerAbsender" length="15" required="true" />
+    <field name="BetriebsnummerEmpfänger" length="15" required="true" />
+    <field name="Versionsnummer" length="2" literal="03" rid="true" />
+    <field name="Datumerstellung" length="20" required="true" format="yyyyMMddHHmmssffffff" />
+    <field name="Fehlerkennzeichnung" regex="[0]|[1]" length="1" required="true" />
+    <field name="Fehleranzahl" length="1" required="true" />
+    <field name="Versicherungsnummer" length="12" required="false" />
+    <field name="Reservefeld" length="2" required="true" />
+    <field name="BetriebsnummerVerursacher" length="15" required="true" />
+    <field name="AktenzeichenVerursacher" length="20" required="false" />
+    <field name="BetriebsnummerKK" length="15" required="true" />
+    <field name="AktenzeichenKK" length="20" required="false" />
+    <field name="BetriebsnummerAbrechnungsstelle" length="15" required="false" />
+    <field name="Personengruppe" length="3" required="true" />
+    <field name="Abgabegrund" length="2" required="true" />
+    <field name="Staatsangehörigkeitsschlüssel" length="3" required="true" />
+    <field name="HatMeldesachverhalt" length="1" typeHandler="jn" required="true"/>    
+    <field name="HatName" length="1" typeHandler="jn" required="true"/>    
+    <field name="HatGeburtsangaben" length="1" typeHandler="jn" required="true"/>    
+    <field name="HatAnschrift" length="1" typeHandler="jn" required="true"/>    
+    <field name="HatEuropäischeVersicherungsnummer" length="1" typeHandler="jn" required="true"/>    
+    <field name="HatUnfallversicherung" length="1" typeHandler="jn" required="true"/>    
+    <field name="MMSVA" length="1" regex="[J]|[N]" required="true"/>
+    <field name="MMVergabeRückmeldung" length="1" regex="[J]|[N]" required="true"/>
+    <field name="MMRückmeldungGeringfügig" length="1" regex="[J]|[N]" required="true"/>
+    <field name="Intern1" length="3" required="true" />
+    <field name="MMSofort" length="1" regex="[J]|[N]" required="true"/>
+    <field name="KennzeichenStatus" length="1" regex="[1-2]" required="true" />
+    <field name="Reserve1" length="1" required="true" />
+    <field name="KPVersionsnummer" length="2" required="true" />
+    <field name="MMKVDaten" length="1" regex="[J]|[N]" required="true"/>
+    <field name="Reserve2" length="1" required="true" />
+    <field name="Intern2" length="20" required="true" />
+    <field name="Nebenversionsnummer" length="2" required="true" />
+    <field name="ProduktIdentifier" length="7" required="true" />
+    <field name="ModifikationsIdentifier" length="8" required="true" />
+    <field name="DatensatzID" length="32" required="true" />
+    <field name="Reserve3" length="100" required="true" />
+    <field name="Reserve4" length="100" required="true" />
+    <field name="Reserve5" length="100" required="true" />
+    <segment name="ListeDBME" class="SocialInsurance.Germany.Messages.Pocos.DBME, SocialInsurance.Germany.Messages.Pocos" occursRef="HatMeldesachverhalt" collection="list">
+      <include template="DBME" />
+    </segment>
+    <segment name="ListeDBNA" class="SocialInsurance.Germany.Messages.Pocos.DBNA, SocialInsurance.Germany.Messages.Pocos" occursRef="HatName" collection="list">
+      <include template="DBNA" />
+    </segment>
+    <segment name="ListeDBGB" class="SocialInsurance.Germany.Messages.Pocos.DBGB, SocialInsurance.Germany.Messages.Pocos" occursRef="HatGeburtsangaben" collection="list">
+      <include template="DBGB" />
+    </segment>
+    <segment name="ListeDBAN" class="SocialInsurance.Germany.Messages.Pocos.DBAN, SocialInsurance.Germany.Messages.Pocos" occursRef="HatAnschrift" collection="list">
+      <include template="DBAN" />
+    </segment>
+    <segment name="ListeDBEU" class="SocialInsurance.Germany.Messages.Pocos.DBEU, SocialInsurance.Germany.Messages.Pocos" occursRef="HatEuropäischeVersicherungsnummer" collection="list">
+      <include template="DBEU" />
+    </segment>
+    <segment name="ListeDBUV" class="SocialInsurance.Germany.Messages.Pocos.DBUV, SocialInsurance.Germany.Messages.Pocos" occursRef="HatUnfallversicherung" collection="list">
+      <include template="DBUV" />
+    </segment>
+  </template>
+</beanio>

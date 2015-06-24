@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSME.xml, SocialInsurance.Germany.Messages.Mappings"/>
+
+  <stream name="meldung10" format="fixedlength">
+    <record name="DSME" class="SocialInsurance.Germany.Messages.Pocos.DSME, SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSMEv3"/>
+    </record>
+  </stream>
+</beanio>

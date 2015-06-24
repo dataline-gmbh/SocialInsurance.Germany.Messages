@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <typeHandler name="jn" class="BeanIO.Types.BooleanCharacterTypeHandler, BeanIO">
+    <property name="TrueValue" value="J"/>
+  </typeHandler>
+  <typeHandler name="sk" class="BeanIO.Types.BooleanCharacterTypeHandler, BeanIO">
+    <property name="TrueValue" value="S"/>
+  </typeHandler>
+</beanio>
