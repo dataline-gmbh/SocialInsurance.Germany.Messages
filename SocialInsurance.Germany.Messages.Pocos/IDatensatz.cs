@@ -1,4 +1,5 @@
-﻿namespace SocialInsurance.Germany.Messages.Pocos
+﻿using System.Collections.Generic;
+namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
     /// Schnittstelle für Datensätze
@@ -9,5 +10,8 @@
         /// Holt die Kennung für den Datensatz
         /// </summary>
         string KE { get; }
+
+
+        DBFE Fehler { get; }
     }
 }

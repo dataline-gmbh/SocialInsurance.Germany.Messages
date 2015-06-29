@@ -9,76 +9,132 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datenbaustein: DBME - Meldesachverhalt
     /// </summary>
-    public class DBME
+    public class DBME : IDatenbaustein
     {
         /// <summary>
-        /// KENNUNG KE, Kennung, Stellen 001-004, Mussangabe
+        /// Initialisiert eine neue Instanz der <see cref="DBME"/> Klasse.
         /// </summary>
-        public string Kennung { get; set; }
+        public DBME()
+        {
+            KE = "DBME";
+        }
 
         /// <summary>
-        /// KENNZ-STORNO KENNZST, Kennzeichen Stornierung, Stellen 005-005, Stornierung einer bereits abgegebenen Meldung: N = keine Stornierung;J = Stornierung, Mussangabe
+        /// Holt oder setzt die Kennung
         /// </summary>
-        public string KennzeichenStorno { get; set; }
+        /// <remarks>
+        /// Kennung, um welchen Datenbaustein es sich handelt.
+        /// </remarks>
+        public string KE { get; set; }
 
         /// <summary>
-        /// KENNZ-GLEITZONE KENNZGLE, Kennzeichen Gleitzone, Stellen 006-006, 0 = kein Arbeitsentgelt innerhalb der Gleitzone/Verzicht auf die Gleitzonenregelung;1 = Arbeitentgelt durchgehend innerhalb der Gleitzone;2 = Arbeitsentgelt sowohl innerhalb als auch außerhalb der Gleitzone, Mussangabe
+        /// Holt oder setzt das Kennzeichen Stornierung
         /// </summary>
-        public string KennzeichenGleitzone { get; set; }
+        /// <remarks>
+        /// Kennzeichen Stornierung, Länge 1, Stornierung einer bereits abgegebenen Meldung: N = keine Stornierung;J = Stornierung, Mussangabe
+        /// </remarks>
+        public string KENNZST { get; set; }
 
         /// <summary>
-        /// ZEITRAUM-BEGINN ZRBG, Beginn des Zeitraums, Stellen 007-014, für den die Meldung gelten soll (Beschäftigungsbeginn), in der Form: jhjjmmtt, Mussangabe
+        /// Holt oder setzt das Kennzeichen Gleitzone
         /// </summary>
-        public DateTime ZeitraumBeginn { get; set; }
+        /// <remarks>
+        /// Kennzeichen Gleitzone, Länge 1, 0 = kein Arbeitsentgelt 
+        /// innerhalb der Gleitzone/Verzicht auf die Gleitzonenregelung;
+        /// 1 = Arbeitentgelt durchgehend innerhalb der Gleitzone;
+        /// 2 = Arbeitsentgelt sowohl innerhalb als auch außerhalb der Gleitzone, Mussangabe
+        /// </remarks>
+        public string KENNZGLE { get; set; }
 
         /// <summary>
-        /// ZEITRAUM-ENDE ZREN, Ende des Zeitraumes, Stellen 015-022, für den die Meldung gelten soll(Beschäftigungsende), in der Form: jhjjmmtt. Das ZREN muss für Anmeldungen (GD im DSME = 10 - 13) Nullen sein., Mussangabe
+        /// Holt oder setzt den Beginn des Zeitraums
         /// </summary>
-        public DateTime ZeitraumEnde { get; set; }
+        /// <remarks>
+        /// Beginn des Zeitraums, Länge 8, für den die Meldung gelten soll 
+        /// (Beschäftigungsbeginn), in der Form: jhjjmmtt, Mussangabe
+        /// </remarks>
+        public DateTime ZRBG { get; set; }
 
         /// <summary>
-        /// ZAHL-TAGE ZLTG, Anzahl der Tage für kurzfristig Beschäftigte, Stellen 023-024, Mussangabe
+        /// Holt oder setzt das Ende des Zeitraums
         /// </summary>
-        public string Zahltage { get; set; }
+        /// <remarks>
+        /// Ende des Zeitraumes, Länge 8, für den die Meldung gelten soll
+        /// (Beschäftigungsende), in der Form: jhjjmmtt. 
+        /// Das ZREN muss für Anmeldungen (GD im DSME = 10 - 13) Nullen sein, Mussangabe
+        /// </remarks>
+        public DateTime ZREN { get; set; }
 
         /// <summary>
-        /// WAEHRUNGS-KENNZ WG, Währungskennzeichen, Stellen 025-025, E = Euro, Mussangabe unter Bedingungen
+        /// Holt oder setzt die Anzahl der Tage für kurzfristig Beschäftigte
         /// </summary>
-        public string Währungskennzeichen { get; set; }
+        public string ZLTG { get; set; }
 
         /// <summary>
-        /// ENTGELT EG, Entgelt in vollen Euro, Stellen 025-031, Mussangabe
+        /// Holt oder setzt das Währungskennzeichen
         /// </summary>
-        public string Entgelt { get; set; }
+        /// <remarks>
+        /// Währungskennzeichen, Länge 1, E = Euro, Mussangabe unter Bedingungen
+        /// </remarks>
+        public string WG { get; set; }
 
         /// <summary>
-        /// BEITRAGS-GRUPPE BYGR, Beitragsgruppenschlüssel, Stellen 032-035, Stelle 1 = KV, Stelle 2 = RV, Stelle 3 = ALV, Stelle 4 = PV, Mussangabe
+        /// Holt oder setzt das Entgelt
         /// </summary>
-        public string Beitragsgruppe { get; set; }
+        /// <remarks>
+        /// Entgelt in vollen Euro, Länge 6, Mussangabe
+        /// </remarks>
+        public string EG { get; set; }
 
         /// <summary>
-        /// TAETIGKEITS-SC TTSC, Angaben zur Tätigkeit, Stellen 036,044, Mussangabe
+        /// Holt oder setzt den Beitragsgruppenschlüssel
         /// </summary>
-        public string Tätigkeitsschlüssel { get; set; }
+        /// <remarks>
+        /// Beitragsgruppenschlüssel, Länge 4, 
+        /// Stelle 1 = KV, Stelle 2 = RV, 
+        /// Stelle 3 = ALV, Stelle 4 = PV, Mussangabe
+        /// </remarks>
+        public string BYGR { get; set; }
 
         /// <summary>
-        /// KENNZ-RECHTSKREIS KENNZRK, Kennzeichen Betriebsstätte (Rechtskreis), Stellen 045-045, W = altes Bundesland, O = neues Bundesland einschließlich Ost-Berlin, Mussangabe
+        /// Holt oder setzt den Tätigkeitsschlüssel
         /// </summary>
-        public string KennzeichenRechtskreis { get; set; }
+        /// <remarks>
+        /// Angaben zur Tätigkeit, Länge 9, Mussangabe
+        /// </remarks>
+        public string TTSC { get; set; }
 
         /// <summary>
-        /// KENNZ-MEHRFACH KENNZMF, Kennzeichen Mehrfachbeschäftigter, Stellen 046-046, Mussangabe
+        /// Holt oder setzt das Kennzeichen Betriebssstätte (Rechtskreis)
         /// </summary>
-        public string KennzeichenMehrfach { get; set; }
+        /// <remarks>
+        /// Kennzeichen Betriebsstätte (Rechtskreis), Länge 1, 
+        /// W = altes Bundesland, O = neues Bundesland einschließlich Ost-Berlin, Mussangabe
+        /// </remarks>
+        public string KENNZRK { get; set; }
 
         /// <summary>
-        /// INTERN, Internes Kennzeichen der Sozialversicherungsträger, Stellen 047-047
+        /// Holt oder setzt das Kennzeichen Mehrfachbeschäftigter
         /// </summary>
-        public string Intern { get; set; }
+        /// <remarks>
+        /// Kennzeichen Mehrfachbeschäftigter, Länge 1, Mussangabe
+        /// </remarks>
+        public string KENNZMF { get; set; }
 
         /// <summary>
-        /// RESERVE, Reservefelder, Stellen 048-147
+        /// Holt oder setzt das Interne Kennzeichen
         /// </summary>
-        public string Reserve { get; set; }
+        /// <remarks>
+        /// Internes Kennzeichen der Sozialversicherungsträger, Länge 1
+        /// </remarks>
+        public string INTERN { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Reservefeld
+        /// </summary>
+        /// <remarks>
+        /// Reservefeld, Länge 100, Mussangabe
+        /// </remarks>
+        private string RESERVE { get; set; }
     }
 }

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBKA.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBTN.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <template name="DSBDv1">
+    <field name="KE" literal="DSBD" length="4" rid="true" required="true" />
+    <field name="VF" literal="BTRAG" length="5" required="true" />
+    <field name="BBNRAB" length="15" required="true" />
+    <field name="BBNREP" length="15" required="true" />
+    <field name="VERNR" length="2" literal="01" rid="true" />
+    <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
+    <field name="FEKZ" regex="[0]|[1]" typeHandler="01" length="1" required="true" />
+    <field name="FEAN" length="1" required="true" />
+    <field name="BBNRBS" length="15" required="true"/>
+    <field name="RESERVE1" length="11" required="false"/>
+    <field name="BBNRAS" length="15" required="false"/>
+    <field name="GD" length="2" required="true"/>
+    <field name="RESERVE2" length="5" required="false"/>
+    <field name="NAME1" length="30" required="true"/>
+    <field name="NAME2" length="30" required="false"/>
+    <field name="NAME3" length="30" required="false"/>
+    <field name="PLZZU" length="10" required="true"/>
+    <field name="ORT" length="34" required="true"/>
+    <field name="STR" length="33" required="false"/>
+    <field name="HNR" length="9" required="false"/>
+    <field name="PLZPO" length="10" required="false"/>
+    <field name="POSTFACH" length="10" required="false"/>
+    <field name="RUHEND" length="1" required="true"/>
+    <field name="BBNRME" length="15" required="false"/>
+    <field name="ANRAP" length="1" required="false"/>
+    <field name="NAMEAP" length="30" required="false"/>
+    <field name="TELAP" length="20" required="false"/>
+    <field name="FAXAP" length="20" required="false"/>
+    <field name="EMAILAP" length="70" required="false"/>
+    <field name="AZVU" length="20" required="false"/>
+    <field name="DATENSATZID" length="20" required="false"/>
+    <field name="BBNRKK" length="15" required="false"/>
+    <field name="RESERVE3" length="15" required="false"/>
+    <field name="MMKA" length="1" typeHandler="jn" required="true"/>
+    <field name="MMTN" length="1" typeHandler="jn" required="true"/>
+    <field name="RESERVE3" length="5" required="false"/>
+    <segment name="ListeDBKA" class="SocialInsurance.Germany.Messages.Pocos.DBKA" occursRef="MMKA" collection="list">
+      <include template="DBKA"/>
+    </segment>
+    <segment name="ListeDBTN" class="SocialInsurance.Germany.Messages.Pocos.DBTN" occursRef="MMTN" collection="list">
+      <include template="DBTN"/>
+    </segment>
+  </template>
+</beanio>

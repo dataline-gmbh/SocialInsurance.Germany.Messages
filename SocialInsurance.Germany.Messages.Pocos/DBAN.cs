@@ -5,52 +5,73 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datenbaustein: DBAN - Anschrift
     /// </summary>
-    public class DBAN
+    public class DBAN : IDatenbaustein
     {
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DBAN"/> Klasse.
         /// </summary>
         public DBAN()
         {
-            Kennung = "DBAN";
+            KE = "DBAN";
         }
 
         /// <summary>
         /// Holt oder setzt die Kennung
         /// </summary>
-        public string Kennung { get; set; }
+        /// <remarks>
+        /// Kennung, um welchen Datenbaustein es sich handelt.
+        /// </remarks>
+        public string KE { get; set; }
 
         /// <summary>
-        /// Länderkennzeichen, Stellen 005-007, Mussangabe unter Bedingungen
+        /// Holt oder setzt das Länderkennzeichen
         /// </summary>
-        public string Länderkennzeichen { get; set; }
+        /// <remarks>
+        /// Länderkennzeichen, Länge 3, Mussangabe unter Bedingungen
+        /// </remarks>
+        public string LDKZ { get; set; }
 
         /// <summary>
-        /// LAENDER-KENNZ LDKZ, PLZ, Stellen 008-017, Mussangabe unter Bedingungen
+        /// Holt oder setzt die Postleitzahl
         /// </summary>
+        /// <remarks>
+        /// Postleitzahl, Länge 10, Mussangabe unter Bedingungen
+        /// </remarks>
         public string PLZ { get; set; }
-
+                
         /// <summary>
-        /// WOHNORT ORT, Wohnort, Stellen 018-051, Mussangabe
+        /// Holt oder setzt den Ort
         /// </summary>
-        public string Wohnort { get; set; }
+        /// <remarks>
+        /// Wohnort, Länge 34, Mussangabe
+        /// </remarks>
+        public string ORT { get; set; }
 
         /// <summary>
-        /// STRASSE STR, Straße, Stellen 052-084, Pflichtangabe, soweit bekannt
+        /// Holt oder setzt die Strasse
         /// </summary>
-        public string Strasse { get; set; }
+        /// <remarks>
+        /// Straße, Länge 33, Pflichtangabe, soweit bekannt
+        /// </remarks>
+        public string STR { get; set; }
 
         /// <summary>
-        /// HAUS-NR NR, Hausnummer, Stellen 085-093, Pflichtangabe, soweit bekannt
+        /// Holt oder setzt die Hausnummer
+        /// </summary>
+        /// <remarks>
+        /// HAUS-NR NR, Hausnummer, Länge 9, Pflichtangabe, soweit bekannt
         /// Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das
         /// Feld Straße zu übernehmen. In solchen Fällen muss dann das Feld Hausnummer auf Grundstellung
         /// (Leerzeichen) stehen.
-        /// </summary>
-        public string Hausnummer { get; set; }
+        /// </remarks>
+        public string NR { get; set; }
 
         /// <summary>
-        /// ADR-ZUSATZ, Anschriftenzusatz, Stellen 094-133, Pflichtangabe, soweit bekannt
+        /// Holt oder setzt den Anschriftenzusatz
         /// </summary>
-        public string Anschriftenzusatz { get; set; }
+        /// <remarks>
+        /// ADR-ZUSATZ, Anschriftenzusatz, Stellen 094-133, Pflichtangabe, soweit bekannt
+        /// </remarks>
+        public string ADRZU { get; set; }
     }
 }

@@ -9,21 +9,39 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datenbaustein: DBSO - Sofortmeldung
     /// </summary>
-    public class DBSO
+    public class DBSO : IDatenbaustein
     {
         /// <summary>
-        /// KENNUNG KE, Kennung, Stellen 001-004, Mussangabe
+        /// Initialisiert eine neue Instanz der <see cref="DBSO"/> Klasse.
         /// </summary>
-        public string Kennung { get; set; }
+        public DBSO() 
+        {
+            KE = "DBSO";
+        }
 
         /// <summary>
-        /// KENNZ-STORNO-SOFORT KENNZSTSO, Kennzeichen, Stellung 005-005, Stornierung einer bereits abgegebenen Sofortmeldung, N = keine Stornierung J = Stornierung, Mussangabe
+        /// Holt oder setzt die Kennung
         /// </summary>
-        public string KennzeichenStorno { get; set; }
+        /// <remarks>
+        /// Kennung, um welchen Datenbaustein es sich handelt.
+        /// </remarks>
+        public string KE { get; set; }
 
         /// <summary>
-        /// ZEITRAUM-BEGINN-SOFORT ZRBGSO, Beginn des Zeitraums, Stellen 006-013,  in der Form: jhjjmmtt, Mussangabe
+        /// Holt oder setzt das Kennzeichen Stornierung
         /// </summary>
-        public DateTime Zeitraumbeginn { get; set; }
+        /// <remarks>
+        /// Kennzeichen, Länge 1, Stornierung einer bereits abgegebenen 
+        /// Sofortmeldung, N = keine Stornierung J = Stornierung, Mussangabe
+        /// </remarks>
+        public string KENNZSTSO{ get; set; }
+
+        /// <summary>
+        /// Holt oder setzt den Beginn des Zeitraums
+        /// </summary>
+        /// <remarks>
+        /// Beginn des Zeitraums, Länge 8,  in der Form: jhjjmmtt, Mussangabe
+        /// </remarks>
+        public DateTime ZRBGSO { get; set; }
     }
 }

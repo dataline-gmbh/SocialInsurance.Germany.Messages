@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <template name="DSKOv2">
+    <field name="KE" literal="DSME" length="4" rid="true" required="true" />
+    <field name="VF" literal="DEUEV" length="5" required="true" />
+    <field name="BBNRAB" length="15" required="true" />
+    <field name="BBNREP" length="15" required="true" />
+    <field name="VERNR" length="2" literal="03" rid="true" />
+    <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
+    <field name="FEKZ" regex="[0]|[1]" typeHandler="01" length="1" required="true" />
+    <field name="FEAN" length="1" required="true" />
+    <field name="BBNRER" length="15" required="true"/>
+    <field name="PRODID" length="7" required="true"/>
+    <field name="MODID" length="8" required="true"/>
+    <field name="NAME1" length="30" required="true"/>
+    <field name="NAME2" length="30" required="false"/>
+    <field name="NAME3" length="30" required="false"/>
+    <field name="PLZ" length="10" required="true"/>
+    <field name="ORT" length="34" required="true"/>
+    <field name="STR" length="33" required="false"/>
+    <field name="NR" length="9" required="false"/>
+    <field name="ANRAP" length="1" required="true"/>
+    <field name="NAMEAP" length="30" required="true"/>
+    <field name="TELAP" length="20" required="true"/>
+    <field name="FAXAP" length="20" required="false"/>
+    <field name="EMAILAP" length="70" required="true"/>
+    <field name="VERBEST" length="1" required="true" />
+    <field name="FERUECK" length="1" required="true"/>
+    <field name="RESERVE" length="3" required="true"/>
+    <segment name="ListeDBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, SocialInsurance.Germany.Messages.Pocos" occursRef="FEKZ" collection="list">
+      <include template="DBFE" />
+    </segment>
+  </template>
+</beanio>

@@ -9,41 +9,70 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datenbaustein: DBGB - Geburtsangaben
     /// </summary>
-    public class DBGB
+    public class DBGB : IDatenbaustein
     {
         /// <summary>
-        /// KENNUNG, Kennung, Stellen 001-004, Mussangabe
+        /// Initialisiert eine neue Instanz der <see cref="DBGB"/> Klasse.
         /// </summary>
-        public string Kennung { get; set; }
+        public DBGB() 
+        {
+            KE = "DBGB";
+        }
 
         /// <summary>
-        /// GB-NAME GBNA, Geburtsname, Stellen 05-034, Pflichtangabe, soweit bekannt
+        /// Holt oder setzt die Kennung
         /// </summary>
-        public string Geburtsname { get; set; }
+        /// <remarks>
+        /// Kennung, um welchen Datenbaustein es sich handelt.
+        /// </remarks>
+        public string KE { get; set; }
 
         /// <summary>
-        /// GB-VORSATZWORT GBVOSA, Vorsatzwort des Geburtsnamens, Stellen 035-054, Pflichtangabe, soweit bekannt
+        /// Holt oder setzt den Geburtsnamen
         /// </summary>
-        public string Geburtsnamenvorsatzwort { get; set; }
+        /// <remarks>
+        /// Geburtsname, Länge 30, Pflichtangabe, soweit bekannt
+        /// </remarks>
+        public string GBNA { get; set; }
 
         /// <summary>
-        /// GB-NAMENSZUSATZ GBNAZU, Namenzusatz des Geburtsnamens, Stellen 055-074, Pflichtangabe, soweit bekannt
+        /// Holt oder setzt den Vorsatzwort des Geburtsnamens
         /// </summary>
-        public string Geburtsnamenzusatz { get; set; }
+        /// <remarks>
+        /// Vorsatzwort des Geburtsnamens,Länge 20, Pflichtangabe, soweit bekannt
+        /// </remarks>
+        public string GBVORSA { get; set; }
 
         /// <summary>
-        /// GEBURTSDATUM GBDT, Geburtsdatum, Stellen 075-082, im Format: jhjjmmtt, Mussangabe
+        /// Holt oder setzt den Namenszusatz des Geburtsnamens
         /// </summary>
-        public string Geburtsdatum { get; set; }
+        /// <remarks>
+        /// Namenzusatz des Geburtsnamens, Stellen 055-074, Pflichtangabe, soweit bekannt
+        /// </remarks>
+        public string GBNAZU { get; set; }
 
         /// <summary>
-        /// GESCHLECHT GE, Geschlecht, Stellen 083-083, M = männlich; W = weiblich, Mussangabe
+        /// Holt oder setzt das Geburtsdatum
         /// </summary>
-        public string Geschlecht { get; set; }
+        /// <remarks>
+        /// Geburtsdatum, Länge 8, im Format: jhjjmmtt, Mussangabe
+        /// </remarks>
+        public DateTime GBDT { get; set; }
 
         /// <summary>
-        /// GB-ORT GBOT, Geburtsort, Stellen 084-117, Mussangabe
+        /// Holt oder setzt das Geschlecht
         /// </summary>
-        public string Geburtsort { get; set; }
+        /// <remarks>
+        /// Geschlecht, Länge 1, M = männlich; W = weiblich, Mussangabe
+        /// </remarks>
+        public string GE { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt den Geburtsort
+        /// </summary>
+        /// <remarks>
+        /// Geburtsort, Länge 34, Mussangabe
+        /// </remarks>
+        public string GBOT { get; set; }
     }
 }

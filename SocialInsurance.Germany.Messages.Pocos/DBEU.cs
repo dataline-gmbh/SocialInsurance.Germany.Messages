@@ -9,21 +9,38 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datenbaustein: DBEU - Europäische Versicherungsnummer
     /// </summary>
-    public class DBEU
+    public class DBEU : IDatenbaustein
     {
         /// <summary>
-        /// KENNUNG KE, Kennung, Stellen 001-004, Mussangabe
+        /// Initialisiert eine neue Instanz der <see cref="DBEU"/> Klasse.
         /// </summary>
-        public string Kennung { get; set; }
+        public DBEU() 
+        {
+            KE = "DBEU";
+        }
 
         /// <summary>
-        /// GB-LAND GBLD, Geburtsland eines EU-/EWR-Staatsangehörigen, Stellen 005-007, Mussangabe
+        /// Holt oder setzt die Kennung
         /// </summary>
-        public string Geburtsland { get; set; }
+        /// <remarks>
+        /// Kennung, um welchen Datenbaustein es sich handelt.
+        /// </remarks>
+        public string KE { get; set; }
 
         /// <summary>
-        /// EUVSNR EUVSNR, Europäische VSNR, Stellen 008-027, Pflichtangabe, soweit bekannt
+        /// Holt oder setzt das Geburtsland
         /// </summary>
-        public string EUVersicherungsnummer { get; set; }
+        /// <remarks>
+        /// Geburtsland eines EU-/EWR-Staatsangehörigen, Länge 3, Mussangabe
+        /// </remarks>
+        public string GBLD { get; set; }
+
+        /// <summary>
+        /// HOlt oder setzt die Europäische VSNR
+        /// </summary>
+        /// <remarks>
+        /// Europäische VSNR, Stellen 008-027, Pflichtangabe, soweit bekannt
+        /// </remarks>
+        public string EUVSNR { get; set; }
     }
 }

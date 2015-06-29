@@ -9,41 +9,70 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datenbaustein: DBNA Name
     /// </summary>
-    public class DBNA
+    public class DBNA : IDatenbaustein
     {
         /// <summary>
-        /// KENNUNG KE, Kennung, Stellen 001 - 004, Mussangabe
+        /// Initialisiert eine neue Instanz der <see cref="DBNA"/> Klasse.
         /// </summary>
-        public string Kennung { get; set; }
+        public DBNA() 
+        {
+            KE = "DBNA";
+        }
 
         /// <summary>
-        /// FAMILIENNAME FMNA, Familienname, Stellen 005 - 034, Mussangabe
+        /// Holt oder setzt die Kennung
         /// </summary>
-        public string Familienname { get; set; }
+        /// <remarks>
+        /// Kennung, um welchen Datenbaustein es sich handelt.
+        /// </remarks>
+        public string KE { get; set; }
 
         /// <summary>
-        /// VORNAME VONA, Vorname, Stellen 035-064, Mussangabe
+        /// Holt oder setzt den Familiennamen
         /// </summary>
-        public string Vorname { get; set; }
+        /// <remarks>
+        /// Familienname, Länge 30, Mussangabe
+        /// </remarks>
+        public string FMNA { get; set; }
 
         /// <summary>
-        /// VORSATZWORT VOSA, Vorsatzwort, Stellen 065-084, Pflichtangabe, soweit bekannt
+        /// Holt oder setzt den Vornamen
         /// </summary>
-        public string Vorsatzwort { get; set; }
+        /// <remarks>
+        /// Vorname, Länge 30, Mussangabe
+        /// </remarks>
+        public string VONA { get; set; }
 
         /// <summary>
-        /// NAMENSZUSATZ NAZU, Namenszusatz, Stellen 085-104, Pflichtangabe, soweit bekannt
+        /// Holt oder setzt den Vorsatzwort
         /// </summary>
-        public string Namenszusatz { get; set; }
+        /// <remarks>
+        /// Vorsatzwort, Länge 20, Pflichtangabe, soweit bekannt
+        /// </remarks>
+        public string VOSA { get; set; }
 
         /// <summary>
-        /// TITEL TITEL, Titel, Stellen 105-124, Pflichtangabe, soweit bekannt
+        /// Holt oder setzt den Namenszusatz
         /// </summary>
-        public string Titel { get; set; }
+        /// <remarks>
+        /// Namenszusatz, Länge 20, Pflichtangabe, soweit bekannt
+        /// </remarks>
+        public string NAZU { get; set; }
 
         /// <summary>
-        /// KENNZ-AEND-BER KENNZAB, Kennzeichenänderung, Stellen 125-125, Mussangabe unter Bedingungen
+        /// Holt oder setzt den Titel
         /// </summary>
-        public string Kennzeichenänderung { get; set; }
+        /// <remarks>
+        /// Titel, Stellen Länge 20, Pflichtangabe, soweit bekannt
+        /// </remarks>
+        public string TITEL { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Kennzeichen Änderung
+        /// </summary>
+        /// <remarks>
+        /// Kennzeichenänderung, Länge 1, Mussangabe unter Bedingungen
+        /// </remarks>
+        public string KENNZAB { get; set; }
     }
 }

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <beanio xmlns="http://www.beanio.org/2015/06">
   <template name="DBEU">
-    <field name="Kennung" length="4" literal="DBEU" required="true"/>
-    <field name="Geburtsland" length="3" required="true"/>
-    <field name="EUVersicherungsnummer" length="20" required="true"/>
+    <field name="KE" length="4" literal="DBEU" required="true"/>
+    <field name="GBLD" length="3" required="true"/>
+    <field name="EUVSNR" length="20" required="true"/>
   </template>
 </beanio>

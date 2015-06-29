@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <template name="DBRG">
+    <field name="KE" length="4" literal="DBRG" required="true"/>
+    <field name="ZRBG" length="8" required="true" format="yyyyMMdd"/>
+    <field name="ZREN" length="8" required="true" format="yyyyMMdd"/>
+    <field name="PERSGR" length="3" required="true"/>
+    <field name="ZLTG" length="2" required="true"/>
+    <field name="WG" length="1" required="true"/>
+    <field name="EG" length="6" required="true"/>
+    <field name="BYGR" length="4" required="true"/>
+    <field name="BBNRAG" length="15" required="true"/>
+    <field name="BBNRKK" length="15" required="true"/>
+    <field name="NABE1" length="28" required="true"/>
+    <field name="NABE2" length="28" required="true"/>
+    <field name="STR" length="28" required="true"/>
+    <field name="PLZ" length="5" required="true"/>
+    <field name="ORT" length="32" required="true"/>
+    <field name="PZB" length="19" required="true"/>
+    <field name="ANRG" length="2" required="true"/>
+  </template>
+</beanio>

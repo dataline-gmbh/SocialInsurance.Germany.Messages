@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
-    /// Datenbaustein: DBKS - Knappschaft/See
+    /// Datenbaustein: DBSV - Sozialversicherungsausweis
     /// </summary>
-    public class DBKS : IDatenbaustein
+    public class DBSV : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBKS"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="DBSV"/> Klasse.
         /// </summary>
-        public DBKS() 
+        public DBSV()
         {
-            KE = "DBKS";
+            KE = "DBSV";
         }
 
         /// <summary>
@@ -28,14 +28,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string KE { get; set; }
 
         /// <summary>
-        /// Holt oder setzt die Kennzeichen-Daten für S = See oder K = Knappschaft
+        /// Holt oder setzt das SV-Ausweis Kennzeichen.
         /// </summary>
         /// <remarks>
-        /// Kennzeichen-Daten, Länge 1, Mussangabe
-        /// Vorhanden für
-        /// K = knappschaftliche SV
-        /// S = See-SV
+        /// Kennzeichen, ob ein SV-Ausweis zu erstellen ist, Länge 1, Mussangabe
+        /// J = SV-Ausweis ausstellen
         /// </remarks>
-        public string KENNZKS { get; set; }
+        public string KENNZSVA { get; set; }
     }
 }

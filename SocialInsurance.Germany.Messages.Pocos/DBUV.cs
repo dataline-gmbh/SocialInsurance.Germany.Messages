@@ -10,30 +10,32 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DBUV"/> Klasse.
         /// </summary>
-        public DBUV()
+        public DBUV() 
         {
             KE = "DBUV";
         }
 
         /// <summary>
-        /// KENNUNG KE, Kennung, Stellen 001-004, Mussangabe
+        /// Holt oder setzt die Kennung
         /// </summary>
+        /// <remarks>
+        /// Kennung, um welchen Datenbaustein es sich handelt.
+        /// </remarks>
         public string KE { get; set; }
 
         /// <summary>
-        /// ANZAHL-UV, Anzahl angehängter UV-Daten(maximal 9), Stellen 005-005, Mussangabe
+        /// Holt oder setzt die Anzahl der angehängten UV-Daten
         /// </summary>
-        public string AnzahlUV { get; set; }
-
+        /// <remarks>
+        /// Anzahl angehängter UV-Daten(maximal 9), Länge 1, Mussangabe
+        /// </remarks>
+        public string ANUV { get; set; }
+        
         /// <summary>
-        /// RESERVE, Reservefelder, Stellen 006-020, Mussangabe
+        /// Holt oder setzt den Grund bei Abgabe von UV-Daten
         /// </summary>
-        public string Reserve { get; set; }
-
-        // die folgenden Felder wiederholen sich entsprechend der Anzahl im Feld ANUV
-
-        /// <summary>
-        /// UV-GRUND-n UVGDn, Grund für die Besonderheiten bei der Abgabe der UVDaten, Stellen 001-003, Mussangabe
+        /// <remarks>
+        /// Grund für die Besonderheiten bei der Abgabe der UVDaten, Länge 3, Mussangabe
         /// Grundstellung (Leerzeichen) = ohne Besonderheiten
         /// A07 = Meldungen für Arbeitnehmer der UV-Träger
         /// A08 = Unternehmen ist Mitglied bei einer landwirtschaftlichen Berufsgenossenschaft
@@ -42,37 +44,59 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// B02 = Keine UV-Pflicht wegen Auslandsbeschäftigung
         /// B03 = Versicherungsfreiheit in der UV gemäß SGB VII
         /// C01 = Entsparung von übertragenem Wertguthaben durch die DRV Bund
-        /// </summary>
-        public string UVGrund { get; set; }
+        /// </remarks>
+        public string UVGD { get; set; }
 
         /// <summary>
-        /// BBNR-UV-n BBNRUVn, Betriebsnummer des zuständigen UV-Trägers, Stellen 004-0018, (8 Stellen linksbündig mit nachfolgenden Leerzeichen)
+        /// Holt oder setzt die Betriebsnummer des zuständigen UV-Trägers
         /// </summary>
-        public string Betriebsnummer { get; set; }
+        /// <remarks>
+        /// Betriebsnummer des zuständigen UV-Trägers, Länge 15, (8 Stellen linksbündig mit nachfolgenden Leerzeichen)
+        /// </remarks>
+        public string BBNRUV { get; set; }
 
         /// <summary>
-        /// MITGLIEDS-NR-n MNRn, Mitgliedsnummer des Unternehmens beim zuständigen UV-Träger, Stellen 039-053, Mussangabe unter Bedingungen
+        /// Holt oder setzt die Mitgliedsnummer des Unternehmens
         /// </summary>
-        public string Mitgliedsnummer { get; set; }
+        /// <remarks>
+        /// Mitgliedsnummer des Unternehmens beim zuständigen UV-Träger, 
+        /// Länge 20, Mussangabe unter Bedingungen
+        /// </remarks>
+        public string MNR { get; set; }
 
         /// <summary>
-        /// BBNR-GTS-n BBNRGTn, Betriebsnummer des UV-Trägers, dessen Gefahrtarif angewendet wird, Stellen 039-053, (8 Stellen linksbündig mit nachfolgenden Leerzeichen), Mussangabe unter Bedingungen
+        /// Holt oder setzt die Betriebsnummer des UV-Trägers, dessen Gefahrtarif angewendet wird
         /// </summary>
-        public string BetriebsnummerGTS { get; set; }
+        /// <remarks>
+        /// Betriebsnummer des UV-Trägers, dessen Gefahrtarif angewendet wird, 
+        /// Länge 15(8 Stellen linksbündig mit nachfolgenden Leerzeichen), Mussangabe unter Bedingungen
+        /// </remarks>
+        public string BBNRGT { get; set; }
 
         /// <summary>
-        /// GT-STELLE-n GTSTn, Gefahrtarifstelle, Stellen 054-061, Mussangabe unter Bedingungen
+        /// Holt oder setzt die Gefahrtarifstelle
         /// </summary>
-        public string Gefahrtarifstelle { get; set; }
+        /// <remarks>
+        /// Gefahrtarifstelle, Länge 8, Mussangabe unter Bedingungen
+        /// </remarks>
+        public string GTST { get; set; }
 
         /// <summary>
-        /// UV-EG-n UVEGn, Beitragspflichtiges Arbeitsentgelt zur Unfallversicherung, Stellen 062-067, Mussangabe
+        /// Holt oder setzt das beitragspflichtige Arbeitsentgelt
         /// </summary>
-        public string BeitragsArbeitsentgelt { get; set; }
+        /// <remarks>
+        /// Beitragspflichtiges Arbeitsentgelt zur Unfallversicherung, Länge 6, Mussangabe
+        /// </remarks>
+        public string UVEG { get; set; }
 
         /// <summary>
-        /// ARBSTD-n ARBSTDn, Geleistete Arbeitsstunden, Stellen 068-071, Mussangabe
+        /// Holt oder setzt die geleisteten Arbeitsstunden
         /// </summary>
-        public string Arbeitsstunden { get; set; }
+        /// <remarks>
+        /// Geleistete Arbeitsstunden, Länge 4, Mussangabe
+        /// </remarks>
+        public string ARBSTD { get; set; }
+
+        private string RESERVE { get; set; }
     }
 }

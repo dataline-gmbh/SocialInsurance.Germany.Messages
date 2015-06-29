@@ -7,35 +7,33 @@ using System.Threading.Tasks;
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
-    /// Datenbaustein: DBKS - Knappschaft/See
+    /// Datenbaustein: DBFE - Fehler
     /// </summary>
-    public class DBKS : IDatenbaustein
+    public class DBFE : IDatenbaustein
     {
+
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBKS"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="DBFE"/> Klasse.
         /// </summary>
-        public DBKS() 
+        public DBFE()
         {
-            KE = "DBKS";
+            KE = "DBFE";
         }
 
         /// <summary>
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
-        /// Kennung, um welchen Datenbaustein es sich handelt.
+        /// Kennung, um welchen Datensatz es sich handelt.
         /// </remarks>
         public string KE { get; set; }
 
         /// <summary>
-        /// Holt oder setzt die Kennzeichen-Daten für S = See oder K = Knappschaft
+        /// Holt oder setzt die Fehlernummer
         /// </summary>
         /// <remarks>
-        /// Kennzeichen-Daten, Länge 1, Mussangabe
-        /// Vorhanden für
-        /// K = knappschaftliche SV
-        /// S = See-SV
+        /// Fehlernummer, 7 Stellen plus 1 Leerzeichen plus Fehlertext (z. B. : xxxxxxx Entgelt überschreitet die BBG), Länge 72
         /// </remarks>
-        public string KENNZKS { get; set; }
+        public string FE { get; set; }
     }
 }
