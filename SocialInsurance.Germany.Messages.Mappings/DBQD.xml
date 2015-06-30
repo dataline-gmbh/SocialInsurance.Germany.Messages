@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <template name="DBQD">
+    <field name="KE" length="4" literal="DBFE" required="true"/>
+    <field name="VF" length="5" literal="DEUEV" required="true"/>
+    <field name="VD" length="8" required="true" format="yyyyMMdd"/>
+    <field name="ED" length="8" required="true" format="yyyyMMdd"/>
+    <field name="DTNR" length="6" required="true"/>
+    <field name="ANZDS" length="8" required="true"/>
+    <field name="ANZOK" length="8" required="true"/>
+    <field name="ANZFE" length="8" required="true"/>
+    <field name="ANZHW" length="8" required="true"/>
+  </template>
+</beanio>

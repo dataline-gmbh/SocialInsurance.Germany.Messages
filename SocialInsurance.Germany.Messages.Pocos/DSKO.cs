@@ -38,8 +38,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt das Verfahren
         /// </summary>
         /// <remarks>
-        /// Verfahren, für das der Datensatz bestimmt ist, Länge 5,
-        /// BTRAG = Betriebsdatenpflege durch Arbeitgeber, Mussangabe
+        /// Verfahren, für das der Datensatz bestimmt ist, Länge 5, Mussangabe
+        /// DEUEV = DEÜVMeldeverfahren
         /// </remarks>
         public string VF { get; set; }
 

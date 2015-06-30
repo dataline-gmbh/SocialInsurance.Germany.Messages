@@ -26,7 +26,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public DSBD()
         {
             KE = "DSBD";
-            VF = "BTRAG";
             VERNR = "01";
         }
 
@@ -42,8 +41,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt das Verfahren
         /// </summary>
         /// <remarks>
-        /// Verfahren, für das der Datensatz bestimmt ist, Länge 5,
-        /// BTRAG = Betriebsdatenpflege durch Arbeitgeber, Mussangabe
+        /// Verfahren, für das der Datensatz bestimmt ist, Länge 5,  Mussangabe
+        /// BTRAG = Betriebsdatenpflege durch Arbeitgeber, 
+        /// BTRKS = Betriebsdatenpflege durch die Deutsche Rentenversicherung Knappschaft-Bahn-See im selbst verwalteten Betriebsnummern- bereich 
+        /// BTRKV = Betriebsdatenpflege durch Krankenkassen, Deutsche Rentenversicherung Knappschaft-Bahn-See, Arbeitsgemeinschaft Berufsständischer Versorgungseinrichtungen, Unfallversicherung 
+        /// BTRRV = Betriebsdatenpflege durch Rentenversicherung
         /// </remarks>
         public string VF { get; set; }
 
@@ -111,7 +113,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string BBRNBS { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld
+        /// Holt oder setzt das Reservefeld 1
         /// </summary>
         /// <remarks>
         /// Reservefeld, Länge 11, Mussangabe
@@ -143,12 +145,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string GD { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld
+        /// Holt oder setzt die Wirtschaftsunterklasse
         /// </summary>
         /// <remarks>
-        /// Reservefeld, Länge 5, Mussangabe unter Bedingungen
+        /// Wirtschaftsunterklasse nach der Klassifikation WZ2008
         /// </remarks>
-        public string RESERVE2 { get; set; }
+        public string WUKL { get; set; }
 
         /// <summary>
         /// Holt oder setzt den ersten Teil des Namens des Betriebes
@@ -319,12 +321,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string BBNRKK { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld
+        /// Holt oder setzt das Reservefeld 2
         /// </summary>
         /// <remarks>
         /// Reservefeld, Länge 15, Mussangabe
         /// </remarks>
-        public string RESERVE3 { get; set; }
+        public string RESERVE2 { get; set; }
 
 
         /// <summary>
@@ -360,12 +362,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld
+        /// Holt oder setzt das Reservefeld 3
         /// </summary>
         /// <remarks>
         /// Reservefeld, Länge 5, Mussangabe
         /// </remarks>
-        public string RESERVE4 { get; set; }
+        public string RESERVE3 { get; set; }
 
         public DBKA AbwKorrespondenzanschrift
         {

@@ -11,13 +11,13 @@
     <field name="BBNREP" length="15" required="true" />
     <field name="VERNR" length="2" literal="01" rid="true" />
     <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
-    <field name="FEKZ" regex="[0-1]" typeHandler="01" length="1" required="true" />
+    <field name="FEKZ" regex="[0-4]" typeHandler="01" length="1" required="true" />
     <field name="FEAN" length="1" required="true" />
     <field name="BBNRBS" length="15" required="true"/>
     <field name="RESERVE1" length="11" required="false"/>
     <field name="BBNRAS" length="15" required="false"/>
     <field name="GD" length="2" required="true"/>
-    <field name="RESERVE2" length="5" required="false"/>
+    <field name="WUKL" length="5" required="false"/>
     <field name="NAME1" length="30" required="true"/>
     <field name="NAME2" length="30" required="false"/>
     <field name="NAME3" length="30" required="false"/>
@@ -37,7 +37,7 @@
     <field name="AZVU" length="20" required="false"/>
     <field name="DATENSATZID" length="20" required="false"/>
     <field name="BBNRKK" length="15" required="false"/>
-    <field name="RESERVE3" length="15" required="false"/>
+    <field name="RESERVE2" length="15" required="false"/>
     <field name="MMKA" length="1" typeHandler="jn" required="true"/>
     <field name="MMTN" length="1" typeHandler="jn" required="true"/>
     <field name="RESERVE3" length="5" required="false"/>

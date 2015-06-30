@@ -23,7 +23,7 @@
     <field name="FEKZ" regex="[0-4]" length="1" required="true" />
     <field name="FEAN" length="1" required="true" />
     <field name="VSNR" length="12" required="false" />
-    <field name="RESERVE1" length="2" required="false"/>
+    <field name="VSTR" length="2" required="true"/>
     <field name="BBNRVU" length="15" required="true" />
     <field name="AZVU" length="20" required="false" />
     <field name="BBNRKK" length="15" required="true" />
@@ -42,21 +42,15 @@
     <field name="MMSV" length="1" typeHandler="jn" required="true"/>
     <field name="MMVR" length="1" typeHandler="jn" required="true"/>
     <field name="MMRG" length="1" typeHandler="jn" required="true"/>
-    <field name="INTERN1" length="3" required="true" />
+    <field name="KENNZUE" length="1" required="true" />
+    <field name="MMUEB" length="1" required="true"/>
+    <field name="KENNZUP" length="1" required="false"/>
     <field name="MMSO" length="1" typeHandler="jn" required="true"/>
     <field name="KENNZSTA" length="1" regex="[1-2]" required="true" />
-    <field name="RESERVE2" length="1" required="false"/>
+    <field name="MMUE"  length="1" typeHandler="jn" required="true"/>
     <field name="VERNRKP" length="2" required="true" />
     <field name="MMKV" length="1" typeHandler="jn" required="true"/>
-    <field name="RESERVE3" length="1" required="false"/>
-    <field name="INTERN2" length="20" required="true" />
-    <field name="NEVERNR" length="2" required="true" />
-    <field name="PRODID" length="7" required="true" />
-    <field name="MODID" length="8" required="true" />
-    <field name="DSID" length="32" required="true" />
-    <field name="RESERVE4" length="100" required="false"/>
-    <field name="RESERVE5" length="100" required="false"/>
-    <field name="RESERVE6" length="100" required="false"/>
+    <field name="RESERVE" length="1" required="false"/>
     <segment name="ListeDBME" class="SocialInsurance.Germany.Messages.Pocos.DBME, SocialInsurance.Germany.Messages.Pocos" occursRef="MMME" collection="list">
       <include template="DBME" />
     </segment>

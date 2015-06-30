@@ -130,6 +130,14 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string VSNR { get; set; }
 
         /// <summary>
+        /// Holt oder setzt den Versicherungsträger, für den die Meldung bestimmt ist
+        /// </summary>
+        /// <remarks>
+        /// Versicherungsträger, für den die Meldung bestimmt ist, Länge 2, Mussangabe
+        /// </remarks>
+        public string VSTR { get; set; }
+
+        /// <summary>
         /// Holt oder setzt die Betriebsnummer des Verursachers des Datensatzes
         /// </summary>
         /// <remarks>
@@ -347,12 +355,37 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Interne Kennzeichen
+        /// Holt oder setzt die Meldungen der Bundesagentur für Arbeit
         /// </summary>
         /// <remarks>
-        /// Interne Kennzeichen der Sozialversicherungsträger, Länge 3
+        /// Meldungen der Bundesagentur für Arbeit, Länge 1, Mussangabe
+        /// 1 = coLei, 2 = COLIBRI, 3 = A2LL, 4 = VAM, 5 = MAZ,
+        /// 6 = BAB/Reha, 7 = zPDV, 8 = Kommunen (Alg II), A = ALLEGRO
         /// </remarks>
-        public string INTERN1 { get; set; }
+        public string KENNZUE { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt den Übermittlungsweg der abgegebenen Meldung
+        /// </summary>
+        /// <remarks>
+        /// Übermittlungsweg der abgegebenen Meldung, Länge 1, Mussangabe unter Bedingungen
+        /// 1 = Meldung eines Arbeitgebers aus systemgeprüftem Programm (§ 18 DEÜV)
+        /// 4 = Erstellung oder Änderung einer Meldung durch die Krankenkasse
+        /// 5 = Meldung eines Arbeitgebers mittels maschinell erstellter Ausfüllhilfe (§ 18 DEÜV)
+        /// 9 = Meldung von der Deutschen Rentenversicherung Knappschaft-Bahn-See aufgrund einer 
+        /// Meldung eines Arbeitgebers durch Meldebeleg nach§ 28a Absatz 6a SGB IV
+        /// </remarks>
+        public string MMUEB { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Kennzeichen, dass die Anschrift zuzulassen ist
+        /// </summary>
+        /// <remarks>
+        /// Kennzeichen, dass die Anschrift nach Prüfung durch die Sachbearbeitung
+        /// der Krankenkasse trotz UNIPOSTAbweisung durch die Datenstelle zuzulassen ist, Länge 1, Kannangabe
+        /// D = Anschrift ist zuzulassen
+        /// </remarks>
+        public string KENNZUP { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Vorhandensein von Sofortmeldung
@@ -379,6 +412,20 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string KENNZSTA { get; set; }
 
         /// <summary>
+        /// Holt oder setzt das Vorhandensein von Überwachung Einzugsvergütung
+        /// </summary>
+        /// <remarks>
+        /// Datenbaustein DBUE, Länge 1, Mussangabe
+        /// Überwachung Einzugsvergütung vorhanden:
+        /// N = keine Überwachungsdaten
+        /// J = Überwachungsdatenvorhanden
+        /// Anmerkung: Bei diesem Merkmalsfeld für den Datenbaustein „Überwachung Einzugsvergütung“ handelt es sich um       
+        /// eine Information, die ausschließlich die Rentenversicherung intern nutzt. Die Prüfungen mit Ausnahme DSME500
+        /// sind nicht im gemeinsamen Kernprüfprogramm realisiert, sondern hier nur dokumentiert, damit mögliche Inhalte transparent sind.
+        /// </remarks>
+        public bool MMUE { get; set; }
+
+        /// <summary>
         /// Holt oder setzt die Versionsnummer des Kernprüfungsprogramms
         /// </summary>
         /// <remarks>
@@ -401,47 +448,9 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Interne Kennzeichen der Sozialversicherungsträger
+        /// Reservefeld
         /// </summary>
-        /// <remarks>
-        /// Interne Kennzeichen der Sozialversicherungsträger, Länge 20
-        /// </remarks>
-        public string INTERN2 { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt die Nebenversionsnummer des übermittelten Datensatzes
-        /// </summary>
-        /// <remarks>
-        /// Nebenversionsnummer des übermittelten Datensatzes, Länge 2, Mussangabe
-        /// </remarks>
-        public string NEVERNR { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt den Produkt-Identifier
-        /// </summary>
-        /// <remarks>
-        /// Produkt-Identifier des geprüften Softwareproduktes, das beim Ersteller der Datei eingesetzt wird, Länge 7, Mussangabe
-        /// </remarks>
-        public string PRODID { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt den Modifikations-Identifier
-        /// </summary>
-        /// <remarks>
-        /// Modifikations-Identifier des geprüften Softwareproduktes, das beim Ersteller der Datei eingesetzt wird, Länge 8, Mussangabe
-        /// Sie wird je geprüfter Produktversion von der ITSG vergeben
-        /// </remarks>
-        public string MODID { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt die Datensatz-ID
-        /// </summary>
-        /// <remarks>
-        /// Datensatz-ID des übermittelten Datensatzes, Länge 32, Pflichtangabe, soweit bekannt
-        /// </remarks>
-        public string DSID { get; set; }
-
-       
+        private string RESERVE { get; set; }       
 
         public DBME Meldesachverhalt
         {
@@ -640,32 +649,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Reservefeld
         /// </summary>
-        private string RESERVE1 { get; set; }
-
-        /// <summary>
-        /// Reservefeld
-        /// </summary>
-        private string RESERVE2 { get; set; }
-
-        /// <summary>
-        /// Reservefeld
-        /// </summary>
-        private string RESERVE3 { get; set; }
-
-        /// <summary>
-        /// Reservefeld
-        /// </summary>
-        private string RESERVE4 { get; set; }
-
-        /// <summary>
-        /// Reservefeld
-        /// </summary>
-        private string RESERVE5 { get; set; }
-
-        /// <summary>
-        /// Reservefeld
-        /// </summary>
-        private string RESERVE6 { get; set; }
 
         private class WrapperDBKS
         {

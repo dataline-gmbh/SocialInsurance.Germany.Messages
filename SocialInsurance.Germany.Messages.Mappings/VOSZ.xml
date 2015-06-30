@@ -9,5 +9,6 @@
     <field name="DTNR" length="6" required="true"/>
     <field name="NAAB" length="50" required="false"/>
     <field name="VERNR" length="2" required="true"/>
+    <field name="DBFE" collection="list" minOccurs="0" maxOccurs="unbounded" />
   </template>
 </beanio>

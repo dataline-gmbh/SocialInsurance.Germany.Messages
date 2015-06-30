@@ -43,7 +43,9 @@
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="DBAN.cs" />
+    <Compile Include="DBAZ.cs" />
     <Compile Include="DBEU.cs" />
+    <Compile Include="DBEZ.cs" />
     <Compile Include="DBFE.cs" />
     <Compile Include="DBGB.cs" />
     <Compile Include="DBKA.cs" />
@@ -53,15 +55,20 @@
     <Compile Include="DBKV.cs" />
     <Compile Include="DBME.cs" />
     <Compile Include="DBNA.cs" />
+    <Compile Include="DBQD.cs" />
+    <Compile Include="DBQK.cs" />
+    <Compile Include="DBQV.cs" />
     <Compile Include="DBRG.cs" />
     <Compile Include="DBSO.cs" />
     <Compile Include="DBSV.cs" />
     <Compile Include="DBTN.cs" />
     <Compile Include="DBUV.cs" />
     <Compile Include="DBVR.cs" />
+    <Compile Include="DSAE.cs" />
     <Compile Include="DSBD.cs" />
     <Compile Include="DSKO.cs" />
     <Compile Include="DSME.cs" />
+    <Compile Include="DSQU.cs" />
     <Compile Include="FehlerKennzeichen.cs" />
     <Compile Include="IDatenbaustein.cs" />
     <Compile Include="IDatensatz.cs" />

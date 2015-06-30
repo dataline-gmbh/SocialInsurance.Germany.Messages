@@ -111,8 +111,19 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DBKV.xml" />
-    <Content Include="NCSZ.xml" />
-    <Content Include="VOSZ.xml" />
+    <EmbeddedResource Include="DBEZ.xml" />
+    <EmbeddedResource Include="DBQD.xml" />
+    <EmbeddedResource Include="DBQK.xml" />
+    <EmbeddedResource Include="DBQV.xml" />
+    <EmbeddedResource Include="DSQU.xml" />
+    <EmbeddedResource Include="NCSZ.xml" />
+    <EmbeddedResource Include="VOSZ.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DBAZ.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DSAE.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

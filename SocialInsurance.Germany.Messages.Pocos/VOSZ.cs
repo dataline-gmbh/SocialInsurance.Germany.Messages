@@ -9,7 +9,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datensatz: VOSZ - Vorlaufsatz
     /// </summary>
-    public class VOSZ
+    public class VOSZ : IDatensatz
     {
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="VOSZ"/> Klasse.
@@ -85,5 +85,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Versionsnummer des Vorlaufsatzes, 01 - 99, Länge 2, Mussangabe
         /// </remarks>
         public string VERNR { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt eine Liste von Fehlern
+        /// </summary>
+        public IList<DBFE> DBFE{ get; set; }
     }
 }
