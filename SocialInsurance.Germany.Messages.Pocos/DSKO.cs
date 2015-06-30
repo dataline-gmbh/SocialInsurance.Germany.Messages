@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
-    /// Datensatz: DKSO - Datensatz Kommunikation
+    /// Datensatz: DSKO - Datensatz Kommunikation
     /// </summary>    
     public class DSKO : IDatensatz
     {

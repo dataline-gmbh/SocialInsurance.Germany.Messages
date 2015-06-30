@@ -46,6 +46,7 @@
     <Compile Include="DBKS.cs" />
     <Compile Include="DBKSK.cs" />
     <Compile Include="DBKSS.cs" />
+    <Compile Include="DBKV.cs" />
     <Compile Include="DBME.cs" />
     <Compile Include="DBNA.cs" />
     <Compile Include="DBRG.cs" />

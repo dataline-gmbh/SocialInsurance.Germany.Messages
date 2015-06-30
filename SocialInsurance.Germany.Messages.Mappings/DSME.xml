@@ -10,6 +10,7 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBVR.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBRG.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBSO.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBKV.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <template name="DSMEv3">
@@ -74,8 +75,20 @@
     <segment name="ListeDBUV" class="SocialInsurance.Germany.Messages.Pocos.DBUV, SocialInsurance.Germany.Messages.Pocos" occursRef="MMUV" collection="list">
       <include template="DBUV" />
     </segment>
-    <segment name="ListeDBSV" class="SocialInsurance.Germany.Messages.Pocos.DBSV, SocialInsurance.Germany.Messages.Pocos" occursRef="MMSV" collection="list">
-      <include template="DBSV" />
+    <segment name="ListeDBKS" class="SocialInsurance.Germany.Messages.Pocos.DSME+WrapperDBKS, SocialInsurance.Germany.Messages.Pocos" occursRef="MMKS" collection="list">
+      <!--
+      Wir können hier nicht das Template benutzen, weil wir eine eigene Typ-Konvertierung nutzen müssen
+      um zwischen DBKSS und DBKSK unterscheiden zu können.
+      Der Umweg über die Wrapper-Klasse muss gemacht werden, damit wir die Typ-Konvertierung für DBKS
+      nutzen können.
+      -->
+      <field name="Value" keepPadding="true" length="220"/>
+    </segment>
+    <segment name="ListeDBSO" class="SocialInsurance.Germany.Messages.Pocos.DBSO, SocialInsurance.Germany.Messages.Pocos" occursRef="MMSO" collection="list">
+      <include template="DBSO" />
+    </segment>
+    <segment name="ListeDBKV" class="SocialInsurance.Germany.Messages.Pocos.DBKV, SocialInsurance.Germany.Messages.Pocos" occursRef="MMKV" collection="list">
+      <include template="DBKV" />
     </segment>
     <segment name="ListeDBVR" class="SocialInsurance.Germany.Messages.Pocos.DBVR, SocialInsurance.Germany.Messages.Pocos" occursRef="MMVR" collection="list">
       <include template="DBVR" />
@@ -83,12 +96,11 @@
     <segment name="ListeDBRG" class="SocialInsurance.Germany.Messages.Pocos.DBRG, SocialInsurance.Germany.Messages.Pocos" occursRef="MMRG" collection="list">
       <include template="DBRG" />
     </segment>
-    <segment name="ListeDBSO" class="SocialInsurance.Germany.Messages.Pocos.DBSO, SocialInsurance.Germany.Messages.Pocos" occursRef="MMSO" collection="list">
-      <include template="DBSO" />
+    <segment name="ListeDBSV" class="SocialInsurance.Germany.Messages.Pocos.DBSV, SocialInsurance.Germany.Messages.Pocos" occursRef="MMSV" collection="list">
+      <include template="DBSV" />
     </segment>
     <segment name="ListeDBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, SocialInsurance.Germany.Messages.Pocos" occursRef="FEKZ" collection="list">
       <include template="DBFE" />
     </segment>
-    <!--<field name="DBKS" occursRef="MMKS" keepPadding="true" length="220"/>-->
   </template>
 </beanio>

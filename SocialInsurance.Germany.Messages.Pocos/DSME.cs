@@ -364,7 +364,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// N = keine Krankenversicherungsdaten vorhanden
         /// J = Krankenversicherungsdaten vorhanden
         /// </remarks>
-        public bool MMKV { get; set; }
+        public bool MMKV
+        {
+            get { return _hatDbkv ?? Krankenversicherung != null; }
+            set { _hatDbkv = value; }
+        }
 
         /// <summary>
         /// Holt oder setzt das Interne Kennzeichen der Sozialversicherungsträger
@@ -503,11 +507,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         {
             get
             {
-                return ListeDBKS == null ? null : ListeDBKS.SingleOrDefault();
+                return ListeDBKS == null ? null : ListeDBKS.Select(x => x.Value).SingleOrDefault();
             }
             set
             {
-                ListeDBKS = ListeDBKS.Set(value);
+                ListeDBKS = ListeDBKS.Set(WrapperDBKS.Create(value));
                 _hatDbks = null;
             }
         }
@@ -522,6 +526,19 @@ namespace SocialInsurance.Germany.Messages.Pocos
             {
                 ListeDBSV = ListeDBSV.Set(value);
                 _hatDbsv = null;
+            }
+        }
+
+        public DBKV Krankenversicherung
+        {
+            get
+            {
+                return ListeDBKV == null ? null : ListeDBKV.SingleOrDefault();
+            }
+            set
+            {
+                ListeDBKV = ListeDBKV.Set(value);
+                _hatDbkv = null;
             }
         }
 
@@ -591,13 +608,15 @@ namespace SocialInsurance.Germany.Messages.Pocos
 
         private bool? _hatDbks;
 
+        private bool? _hatDbso;
+
+        public bool? _hatDbkv;
+
         private bool? _hatDbsv;
 
         private bool? _hatDbvr;
 
         private bool? _hatDbrg;
-
-        private bool? _hatDbso;
 
         private bool? _hatDbfe;
 
@@ -613,15 +632,17 @@ namespace SocialInsurance.Germany.Messages.Pocos
 
         private IList<DBUV> ListeDBUV { get; set; }
 
-        private IList<DBKS> ListeDBKS { get; set; }
+        private IList<WrapperDBKS> ListeDBKS { get; set; }
+
+        private IList<DBSO> ListeDBSO { get; set; }
+
+        private IList<DBKV> ListeDBKV { get; set; }
 
         private IList<DBSV> ListeDBSV { get; set; }
 
         private IList<DBVR> ListeDBVR { get; set; }
 
-        private IList<DBRG> ListeDBRG { get; set; }
-
-        private IList<DBSO> ListeDBSO { get; set; }
+        private IList<DBRG> ListeDBRG { get; set; }        
 
         private IList<DBFE> ListeDBFE { get; set; }
 
@@ -655,6 +676,19 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         private string RESERVE6 { get; set; }
 
+        private class WrapperDBKS
+        {
+            public DBKS Value { get; set; }
 
+            public static WrapperDBKS Create(DBKS value)
+            {
+                if (value == null)
+                    return null;
+                return new WrapperDBKS
+                {
+                    Value = value,
+                };
+            }
+        }
     }
 }
