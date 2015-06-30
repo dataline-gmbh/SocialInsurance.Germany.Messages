@@ -4,7 +4,12 @@ using System.Resources;
 // Allgemeine Informationen über eine Assembly werden über folgende
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die einer Assembly zugeordnet sind.
-[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyProduct("SV-Meldungen für Deutschland")]
+#if DEBUG
+[assembly: AssemblyConfiguration("Debug")]
+#else
+[assembly: AssemblyConfiguration("Release")]
+#endif
 [assembly: AssemblyCompany("DATALINE GmbH")]
 [assembly: AssemblyCopyright("Copyright © 2015 DATALINE GmbH")]
 //// [assembly: AssemblyTrademark("")]
