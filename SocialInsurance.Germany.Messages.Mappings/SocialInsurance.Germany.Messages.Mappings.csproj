@@ -66,6 +66,7 @@
       <Link>mapping.xsd</Link>
       <SubType>Designer</SubType>
     </None>
+    <None Include="SocialInsurance.Germany.Messages.Mappings.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
