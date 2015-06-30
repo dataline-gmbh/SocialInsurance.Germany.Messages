@@ -36,8 +36,12 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
+    <None Include="SocialInsurance.Germany.Messages.Pocos.nuspec" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    </Compile>
     <Compile Include="DBAN.cs" />
     <Compile Include="DBEU.cs" />
     <Compile Include="DBFE.cs" />

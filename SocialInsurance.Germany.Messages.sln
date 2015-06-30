@@ -9,6 +9,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialInsurance.Germany.Mes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialInsurance.Germany.Messages.Tests", "SocialInsurance.Germany.Messages.Tests\SocialInsurance.Germany.Messages.Tests.csproj", "{DD9432A6-8BF2-4294-B46C-E4BE273B52A1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2FE5FB37-91CF-4F8C-8806-07AFB0582FAD}"
+	ProjectSection(SolutionItems) = preProject
+		dataline-64.png = dataline-64.png
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{E3E24650-83F3-4E9F-A038-6AB054863CEC}"
+	ProjectSection(SolutionItems) = preProject
+		NuGet\install-mappings.ps1 = NuGet\install-mappings.ps1
+		NuGet\install-pocos.ps1 = NuGet\install-pocos.ps1
+		NuGet\uninstall-mappings.ps1 = NuGet\uninstall-mappings.ps1
+		NuGet\uninstall-pocos.ps1 = NuGet\uninstall-pocos.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
