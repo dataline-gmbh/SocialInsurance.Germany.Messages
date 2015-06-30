@@ -9,7 +9,7 @@
     <releaseNotes>Erste Version als NuGet-Paket.</releaseNotes>
     <language>de-DE</language>
     <projectUrl>https://github.com/dataline-gmbh/SocialInsurance.Germany.Messages</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/dataline-gmbh/SocialInsurance.Germany.Messages/dataline-64.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/dataline-gmbh/SocialInsurance.Germany.Messages/master/dataline-64.png</iconUrl>
     <licenseUrl>https://github.com/dataline-gmbh/SocialInsurance.Germany.Messages/wiki/Lizenz</licenseUrl>
     <copyright>2015 DATALINE GmbH</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
