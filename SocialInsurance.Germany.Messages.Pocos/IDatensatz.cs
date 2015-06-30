@@ -11,6 +11,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         string KE { get; }
 
-        DBFE Fehler { get; }
+        IList<DBFE> DBFE { get;}
     }
 }

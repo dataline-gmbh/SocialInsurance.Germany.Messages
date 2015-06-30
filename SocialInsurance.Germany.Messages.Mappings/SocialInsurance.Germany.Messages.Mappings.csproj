@@ -60,6 +60,7 @@
     <Compile Include="Meldungen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Types\DBKSTypeHandler.cs" />
+    <Compile Include="Types\NumericEnumTypeHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\packages\FubarDev.BeanIO.2.2.0\src\Xsd\2015\06\mapping.xsd">

@@ -9,6 +9,32 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// </summary>
     public class DSME : IDatensatz
     {
+        private bool? _hatDbme;
+
+        private bool? _hatDbna;
+
+        private bool? _hatDbgb;
+
+        private bool? _hatDban;
+
+        private bool? _hatDbeu;
+
+        private bool? _hatDbuv;
+
+        private bool? _hatDbks;
+
+        private bool? _hatDbso;
+
+        public bool? _hatDbkv;
+
+        private bool? _hatDbsv;
+
+        private bool? _hatDbvr;
+
+        private bool? _hatDbrg;
+
+        private FehlerKennzeichen? _fekz;
+
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DSME"/> Klasse.
         /// </summary>
@@ -77,10 +103,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Kennzeichnung für fehlerhafte Datensätze, Länge 1, 0 = Datensatz fehlerfrei 1 = Datensatz fehlerhaft, Mussangabe
         /// </remarks>
-        public bool FEKZ
+        public FehlerKennzeichen FEKZ
         {
-            get { return _hatDbfe ?? Fehler != null; }
-            set { _hatDbfe = value; }
+            get { return _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft); }
+            set { _fekz = value; }
         }
 
         /// <summary>
@@ -89,7 +115,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Anzahl der Fehler des Datensatzes, Länge 1, Mussangabe
         /// </remarks>
-        public string FEAN { get; set; }
+        public int FEAN 
+        {
+            get { return DBFE == null ? 0 : DBFE.Count; } 
+            private set { }
+        }
 
         /// <summary>
         /// Holt oder setzt die Versicherungsnummer
@@ -581,45 +611,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBFE Fehler
-        {
-            get
-            {
-                return ListeDBFE == null ? null : ListeDBFE.SingleOrDefault();
-            }
-            set
-            {
-                ListeDBFE = ListeDBFE.Set(value);
-                _hatDbfe = null;
-            }
-        }
-
-        private bool? _hatDbme;
-
-        private bool? _hatDbna;
-
-        private bool? _hatDbgb;
-
-        private bool? _hatDban;
-
-        private bool? _hatDbeu;
-
-        private bool? _hatDbuv;
-
-        private bool? _hatDbks;
-
-        private bool? _hatDbso;
-
-        public bool? _hatDbkv;
-
-        private bool? _hatDbsv;
-
-        private bool? _hatDbvr;
-
-        private bool? _hatDbrg;
-
-        private bool? _hatDbfe;
-
         private IList<DBME> ListeDBME { get; set; }
 
         private IList<DBNA> ListeDBNA { get; set; }
@@ -644,7 +635,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
 
         private IList<DBRG> ListeDBRG { get; set; }        
 
-        private IList<DBFE> ListeDBFE { get; set; }
+        public IList<DBFE> DBFE { get; set; }
 
         /// <summary>
         /// Reservefeld

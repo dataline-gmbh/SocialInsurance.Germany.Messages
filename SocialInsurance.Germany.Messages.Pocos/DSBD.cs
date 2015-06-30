@@ -11,6 +11,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// </summary>
     public class DSBD : IDatensatz
     {
+        private FehlerKennzeichen? _fekz;
+
+        private bool? _hatDbka;
+
+        private bool? _hatDbtn;
 
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DSBD"/> Klasse.
@@ -80,10 +85,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Kennzeichnung für fehlerhafte Datensätze, Länge 1, 0 = Datensatz fehlerfrei 1 = Datensatz fehlerhaft, Mussangabe
         /// </remarks>
-        public bool FEKZ
+        public FehlerKennzeichen FEKZ
         {
-            get { return _hatDbfe ?? Fehler != null; }
-            set { _hatDbfe = value; }
+            get { return _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft); }
+            set { _fekz = value; }
         }
 
         /// <summary>
@@ -92,7 +97,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Anzahl der Fehler des Datensatzes, Länge 1, Mussangabe
         /// </remarks>
-        public string FEAN { get; set; }
+        public int FEAN
+        {
+            get { return DBFE == null ? 0 : DBFE.Count; }
+            private set { }
+        }
 
         /// <summary>
         /// Holt oder setzt die Betriebsnummer der Betriebsstätte
@@ -384,29 +393,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBFE Fehler
-        {
-            get
-            {
-                return ListeDBFE == null ? null : ListeDBFE.SingleOrDefault();
-            }
-            set
-            {
-                ListeDBFE = ListeDBFE.Set(value);
-                _hatDbfe = null;
-            }
-        }
-
-        public bool? _hatDbka { get; set; }
-
-        public bool? _hatDbtn { get; set; }
-
-        private bool? _hatDbfe { get; set; }
+        public IList<DBFE> DBFE { get; set; }
 
         private IList<DBKA> ListeDBKA { get; set; }
 
         private IList<DBTN> ListeDBTN { get; set; }
-
-        private IList<DBFE> ListeDBFE { get; set; }
     }
 }

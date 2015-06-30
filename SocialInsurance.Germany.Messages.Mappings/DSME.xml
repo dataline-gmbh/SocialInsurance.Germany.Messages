@@ -20,7 +20,7 @@
     <field name="BBNREP" length="15" required="true" />
     <field name="VERNR" length="2" literal="03" rid="true" />
     <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
-    <field name="FEKZ" regex="[0]|[1]" typeHandler="01" length="1" required="true" />
+    <field name="FEKZ" regex="[0-4]" length="1" required="true" />
     <field name="FEAN" length="1" required="true" />
     <field name="VSNR" length="12" required="false" />
     <field name="RESERVE1" length="2" required="false"/>
@@ -99,7 +99,7 @@
     <segment name="ListeDBSV" class="SocialInsurance.Germany.Messages.Pocos.DBSV, SocialInsurance.Germany.Messages.Pocos" occursRef="MMSV" collection="list">
       <include template="DBSV" />
     </segment>
-    <segment name="ListeDBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, SocialInsurance.Germany.Messages.Pocos" occursRef="FEKZ" collection="list">
+    <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
       <include template="DBFE" />
     </segment>
   </template>

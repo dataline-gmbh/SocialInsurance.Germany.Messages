@@ -3,13 +3,14 @@
   <typeHandler name="jn" class="BeanIO.Types.BooleanCharacterTypeHandler, BeanIO">
     <property name="TrueValue" value="J"/>
   </typeHandler>
-  <typeHandler name="01" class="BeanIO.Types.BooleanCharacterTypeHandler, BeanIO">
-    <property name="TrueValue" value="1"/>
-    <property name="FalseValue" value="0"/>
-  </typeHandler>
   <typeHandler 
     class="SocialInsurance.Germany.Messages.Mappings.Types.DBKSTypeHandler, SocialInsurance.Germany.Messages.Mappings" 
     format="fixedlength" 
     type="SocialInsurance.Germany.Messages.Pocos.DBKS, SocialInsurance.Germany.Messages.Pocos">
+  </typeHandler>
+  <typeHandler
+    class="SocialInsurance.Germany.Messages.Mappings.Types.NumericEnumTypeHandler`1[[SocialInsurance.Germany.Messages.Pocos.FehlerKennzeichen, SocialInsurance.Germany.Messages.Pocos]], SocialInsurance.Germany.Messages.Mappings"
+    format="fixedlength"
+    type="SocialInsurance.Germany.Messages.Pocos.FehlerKennzeichen, SocialInsurance.Germany.Messages.Pocos">
   </typeHandler>
 </beanio>

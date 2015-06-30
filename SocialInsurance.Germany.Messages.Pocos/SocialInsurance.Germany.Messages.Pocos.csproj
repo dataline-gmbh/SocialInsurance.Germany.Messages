@@ -62,6 +62,7 @@
     <Compile Include="DSBD.cs" />
     <Compile Include="DSKO.cs" />
     <Compile Include="DSME.cs" />
+    <Compile Include="FehlerKennzeichen.cs" />
     <Compile Include="IDatenbaustein.cs" />
     <Compile Include="IDatensatz.cs" />
     <Compile Include="ListExtensions.cs" />
