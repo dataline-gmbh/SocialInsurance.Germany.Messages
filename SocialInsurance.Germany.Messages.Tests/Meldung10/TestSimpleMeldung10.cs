@@ -13,7 +13,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Meldung10
         [Fact]
         public void TestMitSV()
         {
-            var input = LoadData("m10mitSVok.txt").ReadToEnd();
+            var input = LoadData("m10mitSVok.dat").ReadToEnd();
             var output = new StringWriter();
             var writer = StreamFactory.CreateWriter("meldung10", output);
             var reader = StreamFactory.CreateReader("meldung10", new StringReader(input));
@@ -39,9 +39,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Meldung10
         }
 
         [Fact]
-        public void TestOhneSV() 
+        public void TestOhneSV()
         {
-            var input = LoadData("m10ohneSVok.txt").ReadToEnd();
+            var input = LoadData("m10ohneSVok.dat").ReadToEnd();
             var output = new StringWriter();
             var writer = StreamFactory.CreateWriter("meldung10", output);
             var reader = StreamFactory.CreateReader("meldung10", new StringReader(input));
