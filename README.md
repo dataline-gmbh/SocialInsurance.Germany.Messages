@@ -1,6 +1,6 @@
 ﻿# SocialInsurance.Germany.Messages
 
-[![Build-Status](https://img.shields.io/teamcity/https/build.service-dataline.de:8081/s/OpenSource_DguvValidator.svg?label=TeamCity)](https://build.service-dataline.de:8081/viewType.html?buildTypeId=OpenSource_SocialInsuranceGermanyMessages&guest=1)
+[![Build-Status](https://img.shields.io/teamcity/https/build.service-dataline.de:8081/s/OpenSource_SocialInsuranceGermanyMessages.svg?label=TeamCity)](https://build.service-dataline.de:8081/viewType.html?buildTypeId=OpenSource_SocialInsuranceGermanyMessages&guest=1)
 
 Klassen und [BeanIO](https://github.com/FubarDevelopment/beanio-net)-Mappings für SV-Meldedateien.
 
