@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <beanio xmlns="http://www.beanio.org/2015/06">
   <template name="DBTN">
-    <field name="KE" literal="DBTN" length="4" required="true"/>
+    <field name="KE" length="4" literal="DBTN" required="true"/>
     <field name="SOFOPFL" length="1" required="true"/>
     <field name="DATENTSO" length="8" required="true"/>
     <field name="GUELTSO" length="8" required="true" format="yyyyMMdd"/>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBMM.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBMS.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBGZ.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBBG.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBNA.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBGB.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBAN.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <template name="DSKKv1">
+    <field name="KE" literal="DSKK" length="4" rid="true" required="true" />
+    <field name="VF" literal="DEUEV" length="5" required="true" />
+    <field name="BBNRAB" length="15" required="true"/>
+    <field name="BBNREP" length="15" required="true"/>
+    <field name="VERNR" length="2" required="true"/>
+    <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff"/>
+    <field name="FEKZ" regex="[0-4]" length="1" required="true" />
+    <field name="FEAN" length="1" required="true" />
+    <field name="VSNR" length="12" required="true" />
+    <field name="MG" length="2" required="true"/>
+    <field name="RESERVE1" length="15" required="false"/>
+    <field name="AZKK" length="20" required="false"/>
+    <field name="BBNRAG" length="15" required="true"/>
+    <field name="AZAG" length="20" required="false"/>
+    <field name="BBNRAS" length="15" required="true"/>
+    <field name="RESERVE2" length="3" required="false"/>
+    <field name="GD" length="2" required="true"/>
+    <field name="RESERVE3" length="3" required="false"/>
+    <field name="MMMM" length="1" typeHandler="jn" required="true"/>
+    <field name="MMMS" length="1" typeHandler="jn" required="true"/>
+    <field name="MMMZ" length="1" typeHandler="jn" required="true"/>
+    <field name="MMMG" length="1" typeHandler="jn" required="true"/>
+    <field name="MMNA" length="1" typeHandler="jn" required="true"/>
+    <field name="MMGB" length="1" typeHandler="jn" required="true"/>
+    <field name="MMAN" length="1" typeHandler="jn" required="true"/>
+    <field name="RESERVE" length="13" required="false"/>
+    <segment name="ListeDBMM" class="SocialInsurance.Germany.Messages.Pocos.DBMM, SocialInsurance.Germany.Messages.Pocos" occursRef="MMMM" collection="list">
+      <include template="DBMM" />
+    </segment>
+    <segment name="ListeDBMS" class="SocialInsurance.Germany.Messages.Pocos.DBMS, SocialInsurance.Germany.Messages.Pocos" occursRef="MMMS" collection="list">
+      <include template="DBMS" />
+    </segment>
+    <segment name="ListeDBGZ" class="SocialInsurance.Germany.Messages.Pocos.DBGZ, SocialInsurance.Germany.Messages.Pocos" occursRef="MMMZ" collection="list">
+      <include template="DBGZ" />
+    </segment>
+    <segment name="ListeDBBG" class="SocialInsurance.Germany.Messages.Pocos.DBBG, SocialInsurance.Germany.Messages.Pocos" occursRef="MMMG" collection="list">
+      <include template="DBBG" />
+    </segment>
+    <segment name="ListeDBNA" class="SocialInsurance.Germany.Messages.Pocos.DBNA, SocialInsurance.Germany.Messages.Pocos" occursRef="MMNA" collection="list">
+      <include template="DBNA" />
+    </segment>
+    <segment name="ListeDBGB" class="SocialInsurance.Germany.Messages.Pocos.DBGB, SocialInsurance.Germany.Messages.Pocos" occursRef="MMGB" collection="list">
+      <include template="DBGB" />
+    </segment>
+    <segment name="ListeDBAN" class="SocialInsurance.Germany.Messages.Pocos.DBAN, SocialInsurance.Germany.Messages.Pocos" occursRef="MMAN" collection="list">
+      <include template="DBAN" />
+    </segment>
+    <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
+      <include template="DBFE" />
+    </segment>
+  </template>
+</beanio>

@@ -7,33 +7,33 @@ using System.Threading.Tasks;
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
-    /// Datenbaustein: DBAZ - Anrechnungszeiten
+    /// Datenbaustein: DBMM - Meldesachverhalt GKV-Monatsmeldung
     /// </summary>
-    public class DBAZ : IDatenbaustein
+    public class DBMM : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBAZ"/> Klasse.
+        /// Initialisier eine neue Instanz der <see cref="DBMM"/> Klasse
         /// </summary>
-        public DBAZ()
+        public DBMM() 
         {
-            KE = "DBAZ";
+            KE = "DBMM";
         }
 
         /// <summary>
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
-        /// Kennung, um welchen Datenbaustein es sich handelt.
+        /// Kennung, um welchen Datenbaustein es sich handelt
         /// </remarks>
         public string KE { get; set; }
 
         /// <summary>
-        /// Holt oder setzt die Angaben zu der gemeldeten Zeit
+        /// Hol oder setzt das GKV-Monatsmeldung Kennzeichen
         /// </summary>
         /// <remarks>
-        /// Angaben zu der gemeldeten Zeit, Länge 2, Mussangabe
+        /// Kennzeichen, ob eine GKVMonatsmeldung abzugeben ist, Länge 1, Mussangabe
         /// </remarks>
-        public string LEAT { get; set; }
+        public string KENNZMOME { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beginn des Zeitraums, für den die Meldung gelten soll

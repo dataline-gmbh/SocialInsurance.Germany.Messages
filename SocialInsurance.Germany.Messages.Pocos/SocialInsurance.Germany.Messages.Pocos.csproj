@@ -44,16 +44,20 @@
     </Compile>
     <Compile Include="DBAN.cs" />
     <Compile Include="DBAZ.cs" />
+    <Compile Include="DBBG.cs" />
     <Compile Include="DBEU.cs" />
     <Compile Include="DBEZ.cs" />
     <Compile Include="DBFE.cs" />
     <Compile Include="DBGB.cs" />
+    <Compile Include="DBGZ.cs" />
     <Compile Include="DBKA.cs" />
     <Compile Include="DBKS.cs" />
     <Compile Include="DBKSK.cs" />
     <Compile Include="DBKSS.cs" />
     <Compile Include="DBKV.cs" />
     <Compile Include="DBME.cs" />
+    <Compile Include="DBMM.cs" />
+    <Compile Include="DBMS.cs" />
     <Compile Include="DBNA.cs" />
     <Compile Include="DBQD.cs" />
     <Compile Include="DBQK.cs" />
@@ -66,6 +70,7 @@
     <Compile Include="DBVR.cs" />
     <Compile Include="DSAE.cs" />
     <Compile Include="DSBD.cs" />
+    <Compile Include="DSKK.cs" />
     <Compile Include="DSKO.cs" />
     <Compile Include="DSME.cs" />
     <Compile Include="DSQU.cs" />
@@ -76,6 +81,9 @@
     <Compile Include="NCSZ.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VOSZ.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DBBG.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -11,4 +11,4 @@
     <field name="VERNR" length="2" required="true"/>
     <field name="DBFE" collection="list" minOccurs="0" maxOccurs="unbounded" />
   </template>
-</beanio>
+</beanio> 

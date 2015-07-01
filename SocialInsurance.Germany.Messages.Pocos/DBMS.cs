@@ -7,33 +7,42 @@ using System.Threading.Tasks;
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
-    /// Datenbaustein: DBAZ - Anrechnungszeiten
+    /// Datenbaustein: DBMS - Meldesachverhalt Sozialausgleich
     /// </summary>
-    public class DBAZ : IDatenbaustein
+    public class DBMS : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBAZ"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="DBMS"/> Klasse
         /// </summary>
-        public DBAZ()
+        public DBMS() 
         {
-            KE = "DBAZ";
+            KE = "DBMS";
         }
 
         /// <summary>
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
-        /// Kennung, um welchen Datenbaustein es sich handelt.
+        /// Kennung, um welchen Datenbaustein es sich handelt
         /// </remarks>
         public string KE { get; set; }
 
         /// <summary>
-        /// Holt oder setzt die Angaben zu der gemeldeten Zeit
+        /// Holt oder setzt das Kennzeichen Stornierung
         /// </summary>
         /// <remarks>
-        /// Angaben zu der gemeldeten Zeit, Länge 2, Mussangabe
+        /// Kennzeichen, Stornierung einer bereits abgegebenen Meldung
+        /// N = keine Stornierung, J = Stornierung
         /// </remarks>
-        public string LEAT { get; set; }
+        public string KENNZST { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Kennzeichen, ob und wie der Sozialausgleich durch den Arbeitgeber durchzuführen ist
+        /// </summary>
+        /// <remarks>
+        /// Kennzeichen, ob und wie der Sozialausgleich durch den Arbeitgeber durchzuführen ist, Länge 1, Mussangabe
+        /// </remarks>
+        public string KENNZSOZA { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beginn des Zeitraums, für den die Meldung gelten soll

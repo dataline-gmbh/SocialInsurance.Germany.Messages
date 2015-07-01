@@ -9,7 +9,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datenbaustein: DBEZ - Entgeltersatzleistungszeiten
     /// </summary>
-    public class DBEZ
+    public class DBEZ : IDatenbaustein
     {
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DBEZ"/> Klasse.

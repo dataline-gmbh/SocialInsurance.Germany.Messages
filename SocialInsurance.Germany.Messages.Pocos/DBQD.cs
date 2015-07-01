@@ -9,7 +9,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datenbaustein: DBQD - Quittung-DEÜV
     /// </summary>
-    public class DBQD
+    public class DBQD : IDatenbaustein
     {
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DBQD"/> Klasse.

@@ -9,7 +9,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datenbaustein: DBQV – Quittung-KVNR
     /// </summary>
-    public class DBQV
+    public class DBQV : IDatenbaustein
     {
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DBQV"/> Klasse.
