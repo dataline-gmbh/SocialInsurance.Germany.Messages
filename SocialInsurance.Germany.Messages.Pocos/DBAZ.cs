@@ -33,7 +33,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Angaben zu der gemeldeten Zeit, Länge 2, Mussangabe
         /// </remarks>
-        public string LEAT { get; set; }
+        public int LEAT { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beginn des Zeitraums, für den die Meldung gelten soll

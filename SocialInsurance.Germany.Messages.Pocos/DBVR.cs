@@ -33,7 +33,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Grund der Abgabe, Länge 2, Mussangabe
         /// </remarks>
-        public string GDMQ{ get; set; }
+        public int GDMQ{ get; set; }
         
         /// <summary>
         /// Holt oder setzt die Betriebsnummer der Vergabeanstalt
@@ -41,7 +41,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Bereichsnummer der Vergabeanstalt, Länge 2, Mussangabe
         /// </remarks>
-        public string BRNR { get; set; }
+        public int BRNR { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Versicherungsnummer

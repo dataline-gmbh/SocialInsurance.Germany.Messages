@@ -28,6 +28,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public DSQU()
         {
             KE = "DSQU";
+            VERNR = 1;
         }
 
         /// <summary>
@@ -68,7 +69,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Versionsnummer des übermittelten Datensatzes, 01 - 99, Länge 2, Mussangabe
         /// </remarks>
-        public string VERNR { get; set; }
+        public int VERNR { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Zeitpunkt der Erstellung des Datensatzes
@@ -108,7 +109,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Versionsnummer des Kernprüfprogramms, mit der die quittierte Datei verarbeitet wurde, Länge 2, Mussangabe
         /// </remarks>
-        public string VERKP { get; set; }
+        public int VERKP { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Reservefeld 2

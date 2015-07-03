@@ -63,6 +63,7 @@
     <Compile Include="DBQK.cs" />
     <Compile Include="DBQV.cs" />
     <Compile Include="DBRG.cs" />
+    <Compile Include="DBRGP.cs" />
     <Compile Include="DBSO.cs" />
     <Compile Include="DBSV.cs" />
     <Compile Include="DBTN.cs" />

@@ -17,7 +17,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Seemännische Berufsgruppen, Länge 2, Mussangabe
         /// </remarks>
-        public string BGR { get; set; }
+        public int BGR { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Versicherungsarten
@@ -29,7 +29,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// - Versicherung kraft Ausstrahlung
         /// - Versicherung auf Antrag
         /// </remarks>
-        public string VA { get; set; }
+        public int VA { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Fahrzeuggruppen
@@ -37,7 +37,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Fahrzeuggruppen, Länge 2, Mussangabe
         /// </remarks>
-        public string FGR { get; set; }
+        public int FGR { get; set; }
 
         /// <summary>
         /// Holt oder setzt die seemännischen Befähigungszeugnisse (Patente)
@@ -45,7 +45,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Seemännische Befähigungszeugnisse, Länge 2, Pflichtangabe, soweit bekannt
         /// </remarks>
-        public string PAT { get; set; }
+        public int PAT { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Antrag auf RV-Befreiung
@@ -58,6 +58,21 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public string AQRVB { get; set; }
 
-        private string RESERVE { get; set; }
+        /// <summary>
+        /// Holt oder setzt die Angabe der VKNR
+        /// </summary>
+        /// <remarks>
+        /// Angabe der VKNR zur Speicherung im Rentenversicherungskonto(BQ-Format), Länge 2, Mussangabe
+        /// Feld wirdvon der See-KK vor Weiterleitung an die RV gefüllt.
+        /// </remarks>
+        private int VKNR { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Reservefeld
+        /// </summary>
+        /// <remarks>
+        /// Reservefeld, Länge 168, Mussangabe
+        /// </remarks>
+        public string RESERVE { get; set; }
     }
 }

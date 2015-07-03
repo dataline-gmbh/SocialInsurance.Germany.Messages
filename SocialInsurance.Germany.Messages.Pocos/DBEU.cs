@@ -33,7 +33,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Geburtsland eines EU-/EWR-Staatsangehörigen, Länge 3, Mussangabe
         /// </remarks>
-        public string GBLD { get; set; }
+        public int GBLD { get; set; }
 
         /// <summary>
         /// HOlt oder setzt die Europäische VSNR

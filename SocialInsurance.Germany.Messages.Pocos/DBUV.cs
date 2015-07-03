@@ -29,7 +29,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Anzahl angehängter UV-Daten(maximal 9), Länge 1, Mussangabe
         /// </remarks>
-        public string ANUV { get; set; }
+        public int ANUV { get; set; }
         
         /// <summary>
         /// Holt oder setzt den Grund bei Abgabe von UV-Daten
@@ -87,7 +87,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Beitragspflichtiges Arbeitsentgelt zur Unfallversicherung, Länge 6, Mussangabe
         /// </remarks>
-        public string UVEG { get; set; }
+        public int UVEG { get; set; }
 
         /// <summary>
         /// Holt oder setzt die geleisteten Arbeitsstunden

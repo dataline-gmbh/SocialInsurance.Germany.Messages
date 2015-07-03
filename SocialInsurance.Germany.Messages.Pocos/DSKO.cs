@@ -23,7 +23,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         {
             KE = "DSKO";
             VF = "DEUEV";
-            VERNR = "02";
+            VERNR = 2;
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Versionsnummer des übermittelten Datensatzes, Länge 2, Mussangabe
         /// </remarks>
-        public string VERNR { get; set; }
+        public int VERNR { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Zeitpunkt der Erstellung des Dateznsatzes
@@ -107,7 +107,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Sie ist auf dem Weg zur Datenannahmestelle der Einzugsstelle identisch
         /// mit der Betriebsnummer des Absenders der Datei; Stellen 010 bis 024 
         /// (8 Stellen linksbündig mit nachfolgenden Leerzeichen).
-        public string BBNER { get; set; }
+        public string BBNRER { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Produkt-Identifier des geprüften Softwareproduktes

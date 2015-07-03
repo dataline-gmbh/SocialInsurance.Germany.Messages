@@ -58,7 +58,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Dateinummer der Sendung, Länge 6, Mussangabe
         /// </remarks>
-        public string DTNR { get; set; }
+        public int DTNR { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Anzahl der übermittelten KVNR-Datensätze
@@ -66,7 +66,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Anzahl der übermittelten KVNR-Datensätze ohne Vor- und Nachlaufsatz, Länge 8
         /// </remarks>
-        public string ANZDS { get; set; }
+        public int ANZDS { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Anzahl der fehlerfreien Datensätze
@@ -74,7 +74,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Anzahl der fehlerfreien Datensätze, Länge 8, Mussangabe
         /// </remarks>
-        public string ANZOK { get; set; }
+        public int ANZOK { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Anzahl der fehlerhaften Datensätze
@@ -82,7 +82,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Anzahl der fehlerhaften Datensätze, Länge 8, Mussangabe
         /// </remarks>
-        public string ANZFE { get; set; }
+        public int ANZFE { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Anzahl der erstellten Hinweise
@@ -90,6 +90,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Anzahl der erstellten Hinweise, Länge 8, Mussangabe
         /// </remarks>
-        public string ANZHW { get; set; }
+        public int ANZHW { get; set; }
     }
 }

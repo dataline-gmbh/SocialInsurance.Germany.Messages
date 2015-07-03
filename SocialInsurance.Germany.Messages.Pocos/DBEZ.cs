@@ -43,7 +43,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Angaben zur Leistungsart, Länge 2, Mussangabe
         /// von 00 = Krankengeld bis 50 = Entgeltsicherung für ältere Arbeitnehmer
         /// </remarks>
-        public string LEAT { get; set; }
+        public int LEAT { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Grund der Abgabe
@@ -53,7 +53,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// 02 = Ende des Leistungsbezuges
         /// 03 = Jahresmeldung, 04 = Gesonderte Meldung
         /// </remarks>
-        public string GDMQ { get; set; }
+        public int GDMQ { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beginn des Zeitraums, für den die Meldung gelten soll
@@ -86,7 +86,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Entgelt in vollen DM/Euro, Länge 6, Mussangabe
         /// </remarks>
-        public string EG { get; set; }
+        public int EG { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beitragsanteil
@@ -95,7 +95,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Beitragsanteil, Länge 7, Mussangabe
         /// 5 Stellen DM/Euro, 2 Stellen Pfennige/Cent
         /// </remarks>
-        public string BY { get; set; }
+        public int BY { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen Rechtskreis

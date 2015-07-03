@@ -68,7 +68,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Dateifolgenummer, 000001 - 999999, Länge 6, Mussangabe
         /// </remarks>
-        public string DTNR { get; set; }
+        public int DTNR { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Kurzbezeichnung des Absenders
@@ -84,7 +84,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Versionsnummer des Vorlaufsatzes, 01 - 99, Länge 2, Mussangabe
         /// </remarks>
-        public string VERNR { get; set; }
+        public int VERNR { get; set; }
 
         /// <summary>
         /// Holt oder setzt eine Liste von Fehlern

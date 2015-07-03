@@ -38,12 +38,14 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string KENNZST { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld 1
+        /// Holt oder setzt den Grund für Besonderheiten bei der Abgabe der KV-Daten
         /// </summary>
         /// <remarks>
-        /// Reservefeld, Länge 2, Mussangabe
+        /// Grund für die Besonderheiten bei der Abgabed er KV-Daten, Länge 2, Mussangabe
+        /// Grundstellung (00) = ohne Besonderheiten, 01 = GKVMonatsmeldung für unständig Beschäftigte
+        /// 02 = GKVMonatsmeldung bei nicht vollständigem Sozialausgleich
         /// </remarks>
-        public string RESERVE1 { get; set; }
+        public int KVGD { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Anzahl der SV-Beitragspflichttage
@@ -51,7 +53,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Anzahl der Tage, für die eine Beitragspflicht zur Sozialversicherungim Abrechnungsmonat besteht (SV-Tage), Länge 2, Mussangabe
         /// </remarks>
-        public string SVTG { get; set; }
+        public int SVTG { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beginn des Zeitraums der Meldung
@@ -70,12 +72,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public DateTime ZRENKV { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld 2
+        /// Holt oder setzt das laufende Entgelt
         /// </summary>
         /// <remarks>
-        /// Reservefeld, Länge 8, Mussangabe
+        /// Laufendes Entgelt in Eurocent, Länge 8, Mussangabe
         /// </remarks>
-        public string RESERVE2 { get; set; }
+        public int LFDEG { get; set; }
 
         /// <summary>
         /// Holt oder setzt das einmalig gezahlte Entgelt
@@ -83,15 +85,58 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Einmalig gezahltes Entgelt in Eurocent, Länge 8, Mussangabe
         /// </remarks>
-        public string EZEG { get; set; }
+        public int EZEG { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld 3
+        /// Holt oder setzt die beitragspflichtige Einnahme in der gesetzlichen Rentenversicherung
         /// </summary>
         /// <remarks>
-        /// Reservefeld, Länge 27, Mussangabe
+        /// Beitragspflichtige Einnahme in der gesetzlichen Rentenversicherung bei Bezug von Kurzarbeitergeld nach § 163 Absatz 6 SGB VI
+        /// in Eurocent, Länge 8, Mussangabe
         /// </remarks>
-        public string RESERVE3 { get; set; }
+        public string BBGRUKUG { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Kennzeichen für die Gleitzonenregelung des Beschäftigten
+        /// </summary>
+        /// <remarks>
+        /// Kennzeichen, dass der Beschäftigte Entgelte im Sinne der Gleitzonenregelung erhält, Länge 1, Mussangabe
+        /// 0 = kein Arbeitsentgelt innerhalb der Gleitzone, 1 = Arbeitsentgelt innerhalb der Gleitzone
+        /// </remarks>
+        public int KENNZGLESV { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Reservefeld 1
+        /// </summary>
+        /// <remarks>
+        /// Reservefeld 1, Länge 1, Mussangabe
+        /// </remarks>
+        public string RESERVE1 { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Reservefeld 2
+        /// </summary>
+        /// <remarks>
+        /// Reservefeld 2, Länge 1, Mussangabe
+        /// </remarks>
+        public string RESERVE2 { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das regelmäßige Jahresentgelt
+        /// </summary>
+        /// <remarks>
+        /// Regelmäßiges Jahresentgelt in Eurocent, Länge 8, Mussangabe unter Bedingungen
+        /// </remarks>
+        public string RJEG { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt die beitragpflichtigen Einnahmen der gesetzlichen Rentenversicherung
+        /// </summary>
+        /// <remarks>
+        /// Beitragspflichtige Einnahmen in der gesetzlichen Rentenversicherung bei Bezug von Aufstockungsbeträgen
+        /// nach § 163 Absatz 5 Satz 1 SGB VI in Eurocent, Länge 8, Mussangabe
+        /// </remarks>
+        public string BBGRUATG { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beitragsgruppenschlüssel
@@ -111,40 +156,13 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public string KENNZRK { get; set; }
 
+        
         /// <summary>
-        /// Holt oder setzt das laufende Entgelt zur KV/PV
+        /// Holt oder setzt das Reservefeld 3
         /// </summary>
         /// <remarks>
-        /// Laufendes Entgelt zur KV/PV in Eurocent, Länge 8, Mussangabe
-        /// Laufendes Arbeitsentgelt von dem Beiträge bei Versicherungspflicht
-        /// zur Kranken- und Pflegeversicherung gezahlt wurden oder zu zahlen gewesen wären
+        /// Reservefeld 3, Länge 53, Mussangabe
         /// </remarks>
-        public string LFDKV { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt das laufende Entgelt zur RV
-        /// </summary>
-        /// <remarks>
-        /// Laufendes Entgelt zur RV in Eurocent, Länge 8, Mussangabe
-        /// Laufendes Arbeitsentgelt von dem Beiträge zur gesetzlichen Rentenversicherung gezahlt wurden
-        /// </remarks>
-        public string LFDRV { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt das laufende Entgelt zur AIV
-        /// </summary>
-        /// <remarks>
-        /// Laufendes Entgelt zur AlV in Eurocent
-        /// Laufendes Arbeitsentgelt von dem Beiträge zur Arbeitslosenversicherung gezahlt wurden
-        /// </remarks>
-        public string LFDAV { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt das Reservefeld 4
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, Länge 53, Mussangabe
-        /// </remarks>
-        public string RESERVE4 { get; set; }
+        public string RESERVE3 { get; set; }
     }
 }

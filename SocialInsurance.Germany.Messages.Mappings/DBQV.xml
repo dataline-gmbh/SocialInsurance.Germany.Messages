@@ -5,10 +5,10 @@
     <field name="VF" length="5" literal="KVNR" required="true"/>
     <field name="VD" length="8" required="true" format="yyyyMMdd"/>
     <field name="ED" length="8" required="true" format="yyyyMMdd"/>
-    <field name="DTNR" length="6" required="true"/>
-    <field name="ANZDS" length="8" required="true"/>
-    <field name="ANZOK" length="8" required="true"/>
-    <field name="ANZFE" length="8" required="true"/>
-    <field name="ANZHW" length="8" required="true"/>
+    <field name="DTNR" length="6" required="true" type="int" format="0"/>
+    <field name="ANZDS" length="8" required="true" type="int" format="0"/>
+    <field name="ANZOK" length="8" required="true" type="int" format="0"/>
+    <field name="ANZFE" length="8" required="true" type="int" format="0"/>
+    <field name="ANZHW" length="8" required="true" type="int" format="0"/>
   </template>
 </beanio>

@@ -66,7 +66,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Meldung10\TestSimpleMeldung10.cs" />
+    <Compile Include="Deuev\TestDEUEVVerfahren.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestBasis.cs" />
   </ItemGroup>
@@ -74,7 +74,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Meldung10\m10mitSVok.dat" />
+    <EmbeddedResource Include="Deuev\deuev.dat" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SocialInsurance.Germany.Messages.Mappings\SocialInsurance.Germany.Messages.Mappings.csproj">
@@ -88,9 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Meldung10\m10ohneSVok.dat" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -20,6 +20,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public NCSZ()
         {
             KE = "NCSZ";
+            VERNR = 1;
         }
 
         /// <summary>
@@ -68,7 +69,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Dateifolgenummer, 000001 - 999999, Länge 6, Mussangabe
         /// </remarks>
-        public string DTNR { get; set; }
+        public int DTNR { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Anzahl der erstellten Datensätze
@@ -76,7 +77,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Anzahl der erstellten Datensätze (ohne Vor- und Nachlaufsätze), Länge 8, Mussangabe
         /// </remarks>
-        public string ZLSZ { get; set; }
+        public int ZLSZ { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Versionsnummer des Nachlaufsatzes
@@ -84,6 +85,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Versionsnummer des Nachlaufsatzes, 01 - 99, Länge 2, Mussangabe
         /// </remarks>
-        public string VERNR { get; set; }
+        public int VERNR { get; set; }
     }
 }

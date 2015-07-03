@@ -3,18 +3,20 @@
   <template name="DBKV">
     <field name="KE" length="4" literal="DBKV" required="true"/>
     <field name="KENNZST" length="1" required="true"/>
-    <field name="RESERVE1" length="2" required="false"/>
-    <field name="SVTG" length="2" required="true"/>
+    <field name="KVGD" length="2" required="true" type="int" format="0"/>
+    <field name="SVTG" length="2" required="true" type="int" format="0"/>
     <field name="ZRBGKV" length="8" required="true" format="yyyyMMdd"/>
     <field name="ZRENKV" length="8" required="true" format="yyyyMMdd"/>
-    <field name="RESERVE2" length="8" required="false"/>
-    <field name="EZEG" length="8" required="true"/>
-    <field name="RESERVE3" length="27" required="false"/>
+    <field name="LFDEG" length="8" required="true" type="int" format="0"/>
+    <field name="EZEG" length="8" required="true" type="int" format="0"/>
+    <field name="BBGRUKUG" length="8" required="true" type="int" format="0"/>
+    <field name="KENNZGLESV" length="1" required="true" type="int" format="0"/>
+    <field name="RESERVE1" length="1" required="false"/>
+    <field name="RESERVE2" length="1" required="false"/>
+    <field name="RJEG" length="8" required="true"/>
+    <field name="BBGRUATG" length="8" required="true"/>
     <field name="BYGR" length="4" required="true"/>
     <field name="KENNZRK" length="1" required="true"/>
-    <field name="LFDKV" length="8" required="true"/>
-    <field name="LFDRV" length="8" required="true"/>
-    <field name="LFDAV" length="8" required="true"/>
-    <field name="RESERVE4" length="53" required="false"/>
+    <field name="RESERVE3" length="9" required="false"/>
   </template>
 </beanio>
