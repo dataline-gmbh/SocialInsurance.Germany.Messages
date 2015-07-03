@@ -13,10 +13,10 @@
     <field name="KENNZGLESV" length="1" required="true" type="int" format="0"/>
     <field name="RESERVE1" length="1" required="false"/>
     <field name="RESERVE2" length="1" required="false"/>
-    <field name="RJEG" length="8" required="true"/>
-    <field name="BBGRUATG" length="8" required="true"/>
-    <field name="BYGR" length="4" required="true"/>
-    <field name="KENNZRK" length="1" required="true"/>
+    <field name="RJEG" length="8" required="false"/>
+    <field name="BBGRUATG" length="8" required="false"/>
+    <field name="BYGR" length="4" required="false"/>
+    <field name="KENNZRK" length="1" required="false"/>
     <field name="RESERVE3" length="9" required="false"/>
   </template>
 </beanio>

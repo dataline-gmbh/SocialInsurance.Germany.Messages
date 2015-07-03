@@ -3,17 +3,16 @@
   <template name="DBME">
     <field name="KE" length="4" literal="DBME" required="true"/>
     <field name="KENNZST" length="1" regex="[J]|[N]" required="true"/>
-    <field name="KENNZGLE" length="1" regex="[0-2]" required="true"/>
+    <field name="KENNZGLE" length="1" regex="[N]|[J]|[0-2]" required="false"/>
     <field name="ZRBG" length="8" required="true" format="yyyyMMdd"/>
-    <field name="ZREN" length="8" required="true" format="yyyyMMdd"/>
+    <!--<field name="ZREN" length="8" required="false" format="yyyyMMdd"/>-->
+    <field name="ZREN" length="8" required="true"/>
     <field name="ZLTG" length="2" required="true"/>
-    <field name="WG" length="1" required="true"/>
+    <field name="WG" length="1" required="false"/>
     <field name="EG" length="6" required="true"/>
     <field name="BYGR" length="4" required="true"/>
-    <field name="TTSC" length="9" required="true"/>
-    <field name="KENNZRK" length="1" required="true" regex="[W]|[O]"/>
+    <field name="TTSC" length="9" required="false"/>
+    <field name="KENNZRK" length="1" required="false" regex="[W]|[O]"/>
     <field name="KENNZMF" length="1" required="true" regex="[J]|[N]"/>
-    <field name="INTERN" length="1" required="true"/>
-    <field name="RESERVE" length="100" required="false"/>
   </template>
 </beanio>

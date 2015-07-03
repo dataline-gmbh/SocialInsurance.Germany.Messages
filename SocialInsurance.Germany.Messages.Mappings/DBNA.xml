@@ -7,6 +7,6 @@
     <field name="VOSA" length="20" required="false" />
     <field name="NAZU" length="20" required="false" />
     <field name="TITEL" length="20" required="false" />
-    <field name="KENNZAB" length="1" regex="[A]|[ ]" required="false" />
+    <field name="KENNZAB" length="1" regex="[A]|[M]" required="false" />
   </template>
 </beanio>

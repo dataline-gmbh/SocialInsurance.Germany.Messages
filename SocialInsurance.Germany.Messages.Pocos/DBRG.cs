@@ -155,6 +155,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public int ANRG { get; set; }
 
-        public List<DBRGP> DBRGPListe { get; set; }
+        public IList<DBRGP> DBRGPListe { get; set; }
     }
 }

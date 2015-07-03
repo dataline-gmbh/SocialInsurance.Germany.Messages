@@ -12,7 +12,7 @@
       <include template="DSKOv2"/>
     </record>
     <record order="3" name="DSME" minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSME, SocialInsurance.Germany.Messages.Pocos">
-      <include template="DSMEv3"/>
+      <include template="DSMEv2"/>
     </record>
     <record order="4" name="NCSZ" minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, SocialInsurance.Germany.Messages.Pocos">
       <include template="NCSZv1"/>

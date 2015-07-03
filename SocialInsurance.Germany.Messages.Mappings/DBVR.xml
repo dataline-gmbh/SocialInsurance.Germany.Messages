@@ -4,6 +4,6 @@
     <field name="KE" length="4" literal="DBVR" required="true"/>
     <field name="GDMQ" length="2" required="true" type="int" format="0"/>
     <field name="BRNR" length="2" required="true" type="int" format="0"/>
-    <field name="VSNRZH" length="12" required="true"/>
+    <field name="VSNRZH" length="12" required="false"/>
   </template>
 </beanio>

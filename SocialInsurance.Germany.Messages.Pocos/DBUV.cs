@@ -30,6 +30,14 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Anzahl angehängter UV-Daten(maximal 9), Länge 1, Mussangabe
         /// </remarks>
         public int ANUV { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Reservefeld
+        /// </summary>
+        /// <remarks>
+        /// Reservefeld, Länge 15, Mussangabe
+        /// </remarks>
+        public string RESERVE { get; set; }
         
         /// <summary>
         /// Holt oder setzt den Grund bei Abgabe von UV-Daten
@@ -97,6 +105,5 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public string ARBSTD { get; set; }
 
-        private string RESERVE { get; set; }
     }
 }

@@ -63,7 +63,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// (Beschäftigungsende), in der Form: jhjjmmtt. 
         /// Das ZREN muss für Anmeldungen (GD im DSME = 10 - 13) Nullen sein, Mussangabe
         /// </remarks>
-        public DateTime ZREN { get; set; }
+        public string ZREN { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Anzahl der Tage für kurzfristig Beschäftigte
@@ -120,21 +120,5 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Kennzeichen Mehrfachbeschäftigter, Länge 1, Mussangabe
         /// </remarks>
         public string KENNZMF { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt das Interne Kennzeichen
-        /// </summary>
-        /// <remarks>
-        /// Internes Kennzeichen der Sozialversicherungsträger, Länge 1
-        /// </remarks>
-        public string INTERN { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt das Reservefeld
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, Länge 100, Mussangabe
-        /// </remarks>
-        private string RESERVE { get; set; }
     }
 }

@@ -2,9 +2,9 @@
 <beanio xmlns="http://www.beanio.org/2015/06">
   <template name="DBAN">
     <field name="KE" length="4" literal="DBAN" required="true"/>
-    <field name="LDKZ" length="3" required="true"/>
-    <field name="PLZ" length="10" required="true"/>
-    <field name="ORT" length="34" required="true"/>
+    <field name="LDKZ" length="3" required="false"/>
+    <field name="PLZ" length="10" required="false"/>
+    <field name="ORT" length="34" required="false"/>
     <field name="STR" length="33" required="false"/>
     <field name="NR" length="9" required="false"/>
     <field name="ADRZU" length="40" required="false"/>

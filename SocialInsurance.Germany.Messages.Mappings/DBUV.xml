@@ -3,13 +3,13 @@
   <template name="DBUV">
     <field name="KE" length="4" literal="DBUV" required="true"/>
     <field name="ANUV" length="1" required="true" type="int" format="0"/>
-    <property name="RESERVE" value="               "/>
+    <field name="RESERVE" length="15" required="false"/>
     <field name="UVGD" length="3" required="false"/>
-    <field name="BBNRUV" length="15" required="true"/>
-    <field name="MNR" length="20" required="true"/>
-    <field name="BBNRGT" length="15" required="true"/>
-    <field name="GTST" length="8" required="true"/>
-    <field name="UVEG" length="6" required="true" type="inz" format="0"/>
+    <field name="BBNRUV" length="15" required="false"/>
+    <field name="MNR" length="20" required="false"/>
+    <field name="BBNRGT" length="15" required="false"/>
+    <field name="GTST" length="8" required="false"/>
+    <field name="UVEG" length="6" required="true" type="int" format="0"/>
     <field name="ARBSTD" length="4" required="true"/>
   </template>
 </beanio>

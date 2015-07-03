@@ -94,7 +94,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Beitragspflichtige Einnahme in der gesetzlichen Rentenversicherung bei Bezug von Kurzarbeitergeld nach § 163 Absatz 6 SGB VI
         /// in Eurocent, Länge 8, Mussangabe
         /// </remarks>
-        public string BBGRUKUG { get; set; }
+        public int BBGRUKUG { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen für die Gleitzonenregelung des Beschäftigten
