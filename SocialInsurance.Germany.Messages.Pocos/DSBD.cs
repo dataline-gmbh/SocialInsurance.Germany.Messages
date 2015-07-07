@@ -110,7 +110,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Betriebsnummer der Betriebsstätte, für die die Meldung vorgenommen wird, Länge 15, Mussangabe
-        public string BBRNBS { get; set; }
+        public string BBNRBS { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Reservefeld 1
@@ -310,7 +310,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Länge 20, Kannangabe
-        public string DATENSATZUD { get; set; }
+        public string DATENSATZID { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Betriebsnummer der für den Beschäftigten zuständigen Einzugsstelle oder der berufsständischen Versorgungseinrichtung
@@ -397,8 +397,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
 
         public IList<DBFE> DBFE { get; set; }
 
-        private IList<DBKA> ListeDBKA { get; set; }
+        public IList<DBKA> ListeDBKA { get; set; }
 
-        private IList<DBTN> ListeDBTN { get; set; }
+        public IList<DBTN> ListeDBTN { get; set; }
     }
 }

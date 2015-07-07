@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <template name="DBRGP">
+    <field name="ZRBGNN" length="8" required="true" format="yyyyMMdd"/>
+    <field name="ZRENNN" length="8" required="true" format="yyyyMMdd"/>
+    <field name="PERSGRNN" length="3" required="true" type="int" format="0"/>
+    <field name="ZLTGNN" length="2" required="true" type="int" format="0"/>
+    <field name="WGNN" length="1" required="true"/>
+    <field name="EGNN" length="6" required="true" type="int" format="0"/>
+    <field name="BYGRNN" length="4" required="true" type="int" format="0"/>
+    <field name="BBNRAGNN" length="15" required="true"/>
+    <field name="EPNRNN" length="15" required="true"/>
+    <field name="HWNN" length="15" required="true"/>
+    <field name="NABE1NN" length="28" required="true"/>
+    <field name="NABE2NN" length="28" required="true"/>
+    <field name="STRNN" length="28" required="true"/>
+    <field name="PLZNN" length="5" required="true" type="int" format="0"/>
+    <field name="ORTNN" length="32" required="true"/>
+    <field name="PZBNN" length="19" required="true"/>
+  </template>
+</beanio>

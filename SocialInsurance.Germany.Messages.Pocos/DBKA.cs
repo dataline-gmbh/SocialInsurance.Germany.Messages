@@ -60,6 +60,14 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string PLZZU { get; set; }
 
         /// <summary>
+        /// Holt oder setzt den Ort
+        /// </summary>
+        /// <remarks>
+        /// Ort, Länge 34, Mussangabe
+        /// </remarks>
+        public string ORT { get; set; }
+
+        /// <summary>
         /// Holt oder setzt die Straße
         /// </summary>
         /// <remarks>
