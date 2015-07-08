@@ -37,7 +37,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         {
             KE = "DSME";
             VF = "DEUEV";
-            VERNR = "01";
+            VERNR = 1;
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Versionsnummer des übermittelten Datensatzes, Länge 2, Mussangabe
         /// </remarks>
-        public string VERNR { get; set; }
+        public int VERNR { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Zeitpunkt der Erstellung des Dateznsatzes

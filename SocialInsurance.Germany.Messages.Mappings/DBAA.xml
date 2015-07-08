@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <template name="DBAA">
+    <field name="KE" length="4" literal="DBAA" required="true"/>
+    <field name="ANRAA" length="1" required="false"/>
+    <field name="NAMEAA" length="30" required="true"/>
+    <field name="TELAA" length="20" required="true"/>
+    <field name="FAXAA" length="20" required="false"/>
+    <field name="EMAILAA" length="70" required="false"/>
+    <field name="NABE1" length="30" required="false"/>
+    <field name="NABE2" length="30" required="false"/>
+    <field name="NABE3" length="30" required="false"/>
+    <field name="PLZB" length="10" required="false"/>
+    <field name="ORTB" length="34" required="false"/>
+    <field name="STRB" length="33" required="false"/>
+    <field name="NRB" length="9" required="false"/>
+  </template>
+</beanio>
