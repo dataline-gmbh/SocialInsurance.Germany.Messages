@@ -136,9 +136,9 @@
     <EmbeddedResource Include="DBMS.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DBHB.xml" />
-    <Content Include="DBMI.xml" />
-    <Content Include="DSBE.xml" />
+    <EmbeddedResource Include="DBHB.xml" />
+    <EmbeddedResource Include="DBMI.xml" />
+    <EmbeddedResource Include="DSBE.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
