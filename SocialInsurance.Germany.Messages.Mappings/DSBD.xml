@@ -9,7 +9,7 @@
     <field name="VF" literal="BTRAG" length="5" required="true" />
     <field name="BBNRAB" length="15" required="true" />
     <field name="BBNREP" length="15" required="true" />
-    <field name="VERNR" length="2" literal="01" rid="true" />
+    <field name="VERNR" length="2" literal="01" rid="true" type="int" format="0"/>
     <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
     <field name="FEKZ" regex="[0-4]" length="1" required="true" />
     <field name="FEAN" length="1" required="true" />

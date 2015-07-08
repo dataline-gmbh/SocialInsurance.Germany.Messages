@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <template name="DBMI">
+    <field name="KE" length="4" literal="DBMI" required="true"/>
+    <field name="KEAN" length="20" required="true"/>
+    <field name="FMNA" length="30" required="true"/>
+    <field name="VONA" length="30" required="true"/>
+    <field name="VOSA" length="20" required="false"/>
+    <field name="NAZU" length="20" required="false"/>
+    <field name="TITEL" length="20" required="false"/>
+    <field name="GE" length="1" required="true"/>
+    <field name="GBDT" length="8" required="true" format="yyyyMMdd"/>
+  </template>
+</beanio>

@@ -50,12 +50,14 @@
     <Compile Include="DBFE.cs" />
     <Compile Include="DBGB.cs" />
     <Compile Include="DBGZ.cs" />
+    <Compile Include="DBHB.cs" />
     <Compile Include="DBKA.cs" />
     <Compile Include="DBKS.cs" />
     <Compile Include="DBKSK.cs" />
     <Compile Include="DBKSS.cs" />
     <Compile Include="DBKV.cs" />
     <Compile Include="DBME.cs" />
+    <Compile Include="DBMI.cs" />
     <Compile Include="DBMM.cs" />
     <Compile Include="DBMS.cs" />
     <Compile Include="DBNA.cs" />
@@ -71,6 +73,7 @@
     <Compile Include="DBVR.cs" />
     <Compile Include="DSAE.cs" />
     <Compile Include="DSBD.cs" />
+    <Compile Include="DSBE.cs" />
     <Compile Include="DSKK.cs" />
     <Compile Include="DSKO.cs" />
     <Compile Include="DSME.cs" />

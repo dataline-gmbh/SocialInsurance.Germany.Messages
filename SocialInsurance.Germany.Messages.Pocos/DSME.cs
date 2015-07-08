@@ -646,10 +646,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
 
         public IList<DBFE> DBFE { get; set; }
 
-        /// <summary>
-        /// Reservefeld
-        /// </summary>
-
         private class WrapperDBKS
         {
             public DBKS Value { get; set; }

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <template name="DBHB">
+    <field name="KE" length="4" literal="DBHB" required="true"/>
+    <field name="VZHB" length="1" required="true"/>
+    <field name="HB" length="8" required="true" type="int" format="0"/>
+  </template>
+</beanio>
+  
