@@ -395,6 +395,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
+        public IList<DBFE> DBFE { get; set; }
+
         private IList<DBAU> ListeDBAU { get; set; }
 
         private IList<DBBT> ListeDBBT { get; set; }
@@ -405,8 +407,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
 
         private IList<DBNA> ListeDBNA { get; set; }
 
-        private IList<DBAA> ListeDBAA { get; set; }
-
-        private IList<DBFE> DBFE { get; set; }
+        private IList<DBAA> ListeDBAA { get; set; }        
     }
 }

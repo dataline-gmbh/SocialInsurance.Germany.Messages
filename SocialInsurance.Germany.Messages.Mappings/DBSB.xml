@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBSBF.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <template name="DBFZ">
+    <field name="KE" length="4" literal="DBFZ" required="true"/>
+    <field name="ANSB" length="2" required="true" type="int" format="0" regex="[1-31]"/>
+    <segment name="DBSBFListe" class="SocialInsurance.Germany.Messages.Pocos.DBSBF, SocialInsurance.Germany.Messages.Pocos" occursRef="ANSB" collection="list">
+      <include template="DBSBF"/>
+    </segment>
+  </template>
+</beanio>

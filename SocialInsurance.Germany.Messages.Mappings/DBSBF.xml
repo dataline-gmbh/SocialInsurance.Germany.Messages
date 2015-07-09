@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <template name="DBSBF">
+    <field name="VSB" length="1" required="false"/>
+    <field name="SB" length="10" required="true" type="int" format="0"/>
+    <field name="SBART" length="2" required="true" type="int" format="0"/>
+    <field name="SBARTTX" length="30" required="false"/>
+  </template>
+</beanio>

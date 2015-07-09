@@ -137,15 +137,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die fortgezahlten Arbeitgeberanteile
         /// </summary>
         /// <remarks>
-        /// Fortgezahlte Arbeitgeberanteile(ohne Einmalzahlung), Länge 9, Mussangabe
-        /// in der Form: EURO/CENT 
-        /// </remarks>
-        public int FBRUTAU { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt die fortgezahlten Arbeitgeberanteile
-        /// </summary>
-        /// <remarks>
         /// Fortgezahlte Arbeitgeberanteile(ohne Einmalzahlung), Länge 9, Pflichtangabe, soweit bekannt
         /// in der Form: EURO/CENT 
         /// </remarks>

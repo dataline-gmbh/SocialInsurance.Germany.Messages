@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <template name="DBAB">
+    <field name="KE" length="4" literal="DBAB" required="true"/>
+    <field name="BORTLDKZ" length="3" required="false"/>
+    <field name="BPLZ" length="10" required="true"/>
+    <field name="BORT" length="34" required="true"/>
+  </template> 
+</beanio>

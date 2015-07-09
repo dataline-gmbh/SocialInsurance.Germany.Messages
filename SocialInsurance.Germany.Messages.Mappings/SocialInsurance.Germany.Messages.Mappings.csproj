@@ -158,6 +158,34 @@
   <ItemGroup>
     <EmbeddedResource Include="DBAA.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DBAB.xml" />
+    <EmbeddedResource Include="DBAG.xml" />
+    <EmbeddedResource Include="DBEN.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DBFZ.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DBAS.xml" />
+    <EmbeddedResource Include="DBFZF.xml" />
+    <EmbeddedResource Include="DBSB.xml" />
+    <EmbeddedResource Include="DBSBF.xml" />
+    <EmbeddedResource Include="DBSE.xml" />
+    <EmbeddedResource Include="DBSEF.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DBZD.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DBNB.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DBHA.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DBKE.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
