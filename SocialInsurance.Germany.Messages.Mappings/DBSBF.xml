@@ -2,8 +2,8 @@
 <beanio xmlns="http://www.beanio.org/2015/06">
   <template name="DBSBF">
     <field name="VSB" length="1" required="false"/>
-    <field name="SB" length="10" required="true" type="int" format="0"/>
-    <field name="SBART" length="2" required="true" type="int" format="0"/>
+    <field name="SB" length="10" required="true" type="int" format="0000000000"/>
+    <field name="SBART" length="2" required="true" type="int" format="00"/>
     <field name="SBARTTX" length="30" required="false"/>
   </template>
 </beanio>

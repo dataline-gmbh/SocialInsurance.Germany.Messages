@@ -2,8 +2,8 @@
 <beanio xmlns="http://www.beanio.org/2015/06">
   <template name="DBVR">
     <field name="KE" length="4" literal="DBVR" required="true"/>
-    <field name="GDMQ" length="2" required="true" type="int" format="0"/>
-    <field name="BRNR" length="2" required="true" type="int" format="0"/>
+    <field name="GDMQ" length="2" required="true" type="int" format="00"/>
+    <field name="BRNR" length="2" required="true" type="int" format="00"/>
     <field name="VSNRZH" length="12" required="false"/>
   </template>
 </beanio>

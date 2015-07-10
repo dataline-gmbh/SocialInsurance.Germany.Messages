@@ -3,13 +3,13 @@
   <template name="DBEZ">
     <field name="KE" length="4" literal="DBEZ" required="true"/>
     <field name="KENNZST" length="1" required="true"/>
-    <field name="LEAT" length="2" required="true" type="int" format="0"/>
-    <field name="GDMQ" length="2" required="true" type="int" format="0"/>
+    <field name="LEAT" length="2" required="true" type="int" format="00"/>
+    <field name="GDMQ" length="2" required="true" type="int" format="00"/>
     <field name="ZRBG" length="8" required="true" format="yyyyMMdd"/>
     <field name="ZREN" length="8" required="true" format="yyyyMMdd"/>
     <field name="WG" length="1" required="true"/>
-    <field name="EG" length="6" required="true" type="int" format="0"/>
-    <field name="BY" length="7" required="true" type="int" format="0"/>
+    <field name="EG" length="6" required="true" type="int" format="000000"/>
+    <field name="BY" length="7" required="true" type="int" format="0000000"/>
     <field name="KENNZRK" length="1" required="true"/>
     <field name="MMWE" length="1" required="true"/>
   </template>

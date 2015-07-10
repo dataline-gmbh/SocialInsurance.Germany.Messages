@@ -9,7 +9,7 @@
     <field name="MNR" length="20" required="false"/>
     <field name="BBNRGT" length="15" required="false"/>
     <field name="GTST" length="8" required="false"/>
-    <field name="UVEG" length="6" required="true" type="int" format="0"/>
+    <field name="UVEG" length="6" required="true" type="int" format="000000"/>
     <field name="ARBSTD" length="4" required="true"/>
   </template>
 </beanio>

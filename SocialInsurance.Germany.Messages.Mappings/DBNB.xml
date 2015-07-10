@@ -2,12 +2,12 @@
 <beanio xmlns="http://www.beanio.org/2015/06">
   <template name="DBNB">
     <field name="KE" length="4" literal="DBNB" required="true"/>
-    <field name="STU1KW" length="4" required="true" type="int" format="0"/>
-    <field name="STU2KW" length="4" required="true" type="int" format="0"/>
-    <field name="STU3KW" length="4" required="true" type="int" format="0"/>
-    <field name="STU4KW" length="4" required="true" type="int" format="0"/>
-    <field name="STU5KW" length="4" required="true" type="int" format="0"/>
-    <field name="STU6KW" length="4" required="true" type="int" format="0"/>
+    <field name="STU1KW" length="4" required="true" type="int" format="0000"/>
+    <field name="STU2KW" length="4" required="true" type="int" format="0000"/>
+    <field name="STU3KW" length="4" required="true" type="int" format="0000"/>
+    <field name="STU4KW" length="4" required="true" type="int" format="0000"/>
+    <field name="STU5KW" length="4" required="true" type="int" format="0000"/>
+    <field name="STU6KW" length="4" required="true" type="int" format="0000"/>
     <field name="HEIMARBAUSG" length="40" required="false"/>
     <field name="HEIMARBABL" length="40" required="false"/>
   </template>

@@ -6,9 +6,9 @@
     <field name="BBNRAB" length="15" required="true"/>
     <field name="BBNREP" length="15" required="true"/>
     <field name="ED" length="8" required="true" format="yyyyMMdd"/>
-    <field name="DTNR" length="6" required="true" type="int" format="0"/>
+    <field name="DTNR" length="6" required="true" type="int" format="000000"/>
     <field name="NAAB" length="50" required="false"/>
-    <field name="VERNR" length="2" required="true" type="int" format="0"/>
+    <field name="VERNR" length="2" required="true" type="int" format="00"/>
     <field name="DBFE" length="7" collection="list" minOccurs="0" maxOccurs="unbounded" />
   </template>
 </beanio> 

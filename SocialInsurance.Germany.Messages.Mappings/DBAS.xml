@@ -2,8 +2,8 @@
 <beanio xmlns="http://www.beanio.org/2015/06">
   <template name="DBFZ">
     <field name="KE" length="4" literal="DBAS" required="true"/>
-    <field name="MMARTAS" length="1" required="true" type="int" regex="[1-2]"/>
-    <field name="ASBEG" length="8" required="true" type="int" format="0"/>
+    <field name="MMARTAS" length="1" required="true" type="int" regex="[12]"/>
+    <field name="ASBEG" length="8" required="true" type="int" format="00000000"/>
     <field name="ASVOREND" length="8" required="true" format="yyyyMMdd"/>
     <field name="TATASEND" length="8" required="true" format="yyyyMMdd"/>
   </template>

@@ -24,15 +24,15 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 writer.Write(vosz);
                 streamObject = reader.Read();
                 var dsko = Assert.IsType<DSKO>(streamObject);
-                //writer.Write(dsko);
+                writer.Write(dsko);
                 streamObject = reader.Read();
                 var dsme = Assert.IsType<DSME>(streamObject);
-                //writer.Write("DSME", dsme);
+                writer.Write(dsme);
                 streamObject = reader.Read();
-                var NCSZ = Assert.IsType<NCSZ>(streamObject);
-                //writer.Write("NCSZ", NCSZ);
+                var ncsz = Assert.IsType<NCSZ>(streamObject);
+                writer.Write(ncsz);
                 writer.Close();
-                //Assert.Equal(input, output.ToString());
+                Assert.Equal(input, output.ToString());
             }
             finally
             {

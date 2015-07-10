@@ -5,20 +5,20 @@
     <field name="KE" length="4" literal="DBRG" required="true"/>
     <field name="ZRBG" length="8" required="true" format="yyyyMMdd"/>
     <field name="ZREN" length="8" required="true" format="yyyyMMdd"/>
-    <field name="PERSGR" length="3" required="true" type="int" format="0"/>
-    <field name="ZLTG" length="2" required="true" type="int" format="0"/>
+    <field name="PERSGR" length="3" required="true" type="int" format="000"/>
+    <field name="ZLTG" length="2" required="true" type="int" format="00"/>
     <field name="WG" length="1" required="true"/>
-    <field name="EG" length="6" required="true" type="int" format="0"/>
-    <field name="BYGR" length="4" required="true" type="int" format="0"/>
+    <field name="EG" length="6" required="true" type="int" format="000000"/>
+    <field name="BYGR" length="4" required="true" type="int" format="0000"/>
     <field name="BBNRAG" length="15" required="true"/>
     <field name="BBNRKK" length="15" required="true"/>
     <field name="NABE1" length="28" required="true"/>
     <field name="NABE2" length="28" required="true"/>
     <field name="STR" length="28" required="true"/>
-    <field name="PLZ" length="5" required="true" type="int" format="0"/>
+    <field name="PLZ" length="5" required="true" type="int" format="00000"/>
     <field name="ORT" length="32" required="true"/>
     <field name="PZB" length="19" required="true"/>
-    <field name="ANRG" length="2" required="true" type="int" format="0"/>
+    <field name="ANRG" length="2" required="true" type="int" format="00"/>
     <segment name="DBRGPListe" class="SocialInsurance.Germany.Messages.Pocos.DBRGP, SocialInsurance.Germany.Messages.Pocos" occursRef="ANRG" collection="list">
       <include template="DBRGP"/>
     </segment>

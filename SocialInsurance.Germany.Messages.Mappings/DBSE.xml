@@ -3,7 +3,7 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBSEF.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <template name="DBSE">
     <field name="KE" length="4" literal="DBFZ" required="true"/>
-    <field name="ANSTSOB" length="2" required="true" type="int" format="0" regex="[1-31]"/>
+    <field name="ANSTSOB" length="2" required="true" type="int" format="00" regex="([0-2][0-9])|(3[01])"/>
     <segment name="DBSEFListe" class="SocialInsurance.Germany.Messages.Pocos.DBSEF, SocialInsurance.Germany.Messages.Pocos" occursRef="ANSTSOB" collection="list">
       <include template="DBSEF"/>
     </segment>

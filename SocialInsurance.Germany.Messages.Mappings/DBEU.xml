@@ -2,7 +2,7 @@
 <beanio xmlns="http://www.beanio.org/2015/06">
   <template name="DBEU">
     <field name="KE" length="4" literal="DBEU" required="true"/>
-    <field name="GBLD" length="3" required="true" type="int" format="0"/>
+    <field name="GBLD" length="3" required="true" type="int" format="000"/>
     <field name="EUVSNR" length="20" required="true"/>
   </template>
 </beanio>

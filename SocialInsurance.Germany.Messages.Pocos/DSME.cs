@@ -423,7 +423,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// eine Information, die ausschließlich die Rentenversicherung intern nutzt. Die Prüfungen mit Ausnahme DSME500
         /// sind nicht im gemeinsamen Kernprüfprogramm realisiert, sondern hier nur dokumentiert, damit mögliche Inhalte transparent sind.
         /// </remarks>
-        public bool MMUE { get; set; }
+        public bool? MMUE { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Versionsnummer des Kernprüfungsprogramms

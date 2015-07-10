@@ -9,8 +9,8 @@
     <field name="VF" literal="BVBEI" length="5" required="true" />
     <field name="BBNRAB" length="15" required="true" />
     <field name="BBNREP" length="15" required="true" />
-    <field name="VERNRDS" length="2" literal="01" rid="true" type="int" format="0"/>
-    <field name="VERNRKP" length="2" type="int" format="0"/>
+    <field name="VERNRDS" length="2" literal="01" rid="true" type="int" format="00"/>
+    <field name="VERNRKP" length="2" type="int" format="00"/>
     <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
     <field name="FEKZ" regex="[0-4]" length="1" required="true" />
     <field name="FEAN" length="1" required="true" />
@@ -19,28 +19,28 @@
     <field name="NA3" length="30" required="false"/>
     <field name="STR" length="33" required="false"/>
     <field name="HNR" length="9" required="false"/>
-    <field name="PLZ" length="5" required="true" type="int" format="0"/>
+    <field name="PLZ" length="5" required="true" type="int" format="00000"/>
     <field name="ORT" length="34" required="true"/>
     <field name="AZVU" length="20" required="false"/>
     <field name="BBNRVU" length="15" required="true"/>
     <field name="BBNRAS" length="15" required="false"/>
     <field name="BBNRBV" length="15" required="true"/>
     <field name="MNRBV" length="17" required="true"/>
-    <field name="ABMO" length="6" required="true" type="int" format="0"/>
-    <field name="VEMO" length="6" required="true" type="int" format="0"/>
+    <field name="ABMO" length="6" required="true" type="int" format="000000"/>
+    <field name="VEMO" length="6" required="true" type="int" format="000000"/>
     <field name="MEVO" length="1" required="true"/>
     <field name="VZSVTG" length="1" required="true"/>
-    <field name="SVTG" length="2" required="true" regex="[0-31]" type="int" format="0"/>
+    <field name="SVTG" length="2" required="true" regex="([0-2][0-9])|(3[01])" type="int" format="00"/>
     <field name="VZLGA" length="1" required="true"/>
-    <field name="LGA" length="8" required="true" type="int" format="0"/>
+    <field name="LGA" length="8" required="true" type="int" format="00000000"/>
     <field name="LGAF" length="1" required="true" type="int"/>
     <field name="VZEGA" length="1" required="true"/>
-    <field name="EGA" length="9" required="true" type="int" format="0"/>
+    <field name="EGA" length="9" required="true" type="int" format="000000000"/>
     <field name="VZEGAB" length="1" required="true"/>
-    <field name="EGAB" length="8" required="true" type="int" format="0"/>
+    <field name="EGAB" length="8" required="true" type="int" format="00000000"/>
     <field name="BZ" length="1" required="true"/>
     <field name="VZPB" length="1" required="true"/>
-    <field name="PB" length="8" required="true" type="int" format="0"/>
+    <field name="PB" length="8" required="true" type="int" format="00000000"/>
     <field name="DBMIV" length="1" required="true" typeHandler="jn"/>
     <field name="DBHBV" length="1" required="true" typeHandler="jn"/>
     <segment name="ListeDBMI" class="SocialInsurance.Germany.Messages.Pocos.DBMI, SocialInsurance.Germany.Messages.Pocos" occursRef="DBMIV" collection="list">

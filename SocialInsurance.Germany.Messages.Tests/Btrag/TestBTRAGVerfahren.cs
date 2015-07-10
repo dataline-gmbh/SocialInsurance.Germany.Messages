@@ -23,14 +23,18 @@ namespace SocialInsurance.Germany.Messages.Tests.Btrag
             {
                 var streamObject = reader.Read();
                 var vosz = Assert.IsType<VOSZ>(streamObject);
+                writer.Write(vosz);
                 streamObject = reader.Read();
                 var dsko = Assert.IsType<DSKO>(streamObject);
+                writer.Write(dsko);
                 streamObject = reader.Read();
                 var dsbd = Assert.IsType<DSBD>(streamObject);
+                writer.Write(dsbd);
                 streamObject = reader.Read();
                 var ncsz = Assert.IsType<NCSZ>(streamObject);
+                writer.Write(ncsz);
                 writer.Close();
-                //Assert.Equal(input, output.ToString());
+                Assert.Equal(input, output.ToString());
             }
             finally
             {

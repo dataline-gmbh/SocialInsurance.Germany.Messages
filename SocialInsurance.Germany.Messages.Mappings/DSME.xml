@@ -18,7 +18,7 @@
     <field name="VF" literal="DEUEV" length="5" required="true" />
     <field name="BBNRAB" length="15" required="true" />
     <field name="BBNREP" length="15" required="true" />
-    <field name="VERNR" length="2" literal="02" rid="true" type="int" format="2" />
+    <field name="VERNR" length="2" literal="02" rid="true" type="int" format="00" />
     <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
     <field name="FEKZ" regex="[0-4]" length="1" required="true" />
     <field name="FEAN" length="1" required="true" />
@@ -46,7 +46,7 @@
     <field name="MMUEB" length="1" required="false"/>
     <field name="KENNZUP" length="1" required="false"/>
     <field name="MMSO" length="1" typeHandler="jn" required="true"/>
-    <field name="KENNZSTA" length="1" regex="[1-2]" required="false" />
+    <field name="KENNZSTA" length="1" regex="[12]" required="false" />
     <field name="MMUE"  length="1" typeHandler="jn" required="false"/>
     <field name="VERNRKP" length="2" required="false" />
     <field name="MMKV" length="1" typeHandler="jn" required="true"/>
