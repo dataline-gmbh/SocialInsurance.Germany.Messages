@@ -63,16 +63,16 @@
     <Compile Include="Types\NumericEnumTypeHandler.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\packages\FubarDev.BeanIO.2.2.0\src\Xsd\2015\06\mapping.xsd">
-      <Link>mapping.xsd</Link>
+    <None Include="mapping.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="SocialInsurance.Germany.Messages.Mappings.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="BeanIO">
-      <HintPath>..\packages\FubarDev.BeanIO.2.2.0\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\BeanIO.dll</HintPath>
+    <Reference Include="BeanIO, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FubarDev.BeanIO.2.2.1\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\BeanIO.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.dll</HintPath>
