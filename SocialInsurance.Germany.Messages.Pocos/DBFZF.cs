@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SocialInsurance.Germany.Messages.Pocos
 {
+    /// <summary>
     /// sich wiederholende Felder von DBFZ
     /// </summary>
     public class DBFZF

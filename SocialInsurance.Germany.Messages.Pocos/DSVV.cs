@@ -172,7 +172,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Entfällt hier
         /// </summary>
         /// <remarks>
-        /// Entfällt hier, Grundstellung liefern, Länge 2, Mussangabe 
+        /// Entfällt hier, Grundstellung liefern, Länge 2, Mussangabe
+        /// </remarks>
         public int GD { get; set; }
 
         /// <summary>

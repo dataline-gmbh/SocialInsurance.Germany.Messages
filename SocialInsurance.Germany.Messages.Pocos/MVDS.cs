@@ -284,7 +284,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMEN 
         {
-            get { return _hatDben ?? ELENAGrunddaten != null; }
+            get { return _hatDben ?? DBEN != null; }
             set { _hatDben = value; }
         }
 
@@ -461,7 +461,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public string RESERVE2 { get; set; }
 
-        public DBEN ELENAGrunddaten
+        public DBEN DBEN
         {
             get
             {

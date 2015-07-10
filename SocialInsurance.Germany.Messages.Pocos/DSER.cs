@@ -303,13 +303,13 @@ namespace SocialInsurance.Germany.Messages.Pocos
             get { return _hatDbna ?? Name != null; }
             set { _hatDbna = value; }
         }
+
         /// <summary>
         /// Holt oder setzt das Vorhandensein von Ansprechpartner Arbeitgeber
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBAA, Länge 1, Mussangabe
         /// Ansprechpartner Arbeitgeber vorhanden: N = Nein, J = Ja
-
         /// </remarks>
         public bool MMDBAA
         {

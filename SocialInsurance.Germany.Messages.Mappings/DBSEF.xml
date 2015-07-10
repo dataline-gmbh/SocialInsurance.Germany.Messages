@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<beanio xmlns="http://www.beanio.org/2015/06">
-  <template name="DBSEF">
-    <field name="VSTSOB" length="1" required="true"/>
-    <field name="STSOB" length="10" required="true" type="int" format="0000000000"/>
-    <field name="STSOBART" length="2" required="true" type="int" format="00" regex="(01)|(0[7-9])|([1-9][0-9])"/>
-    <field name="STSOBARTTX" length="30" required="false"/>
-  </template>
-</beanio>

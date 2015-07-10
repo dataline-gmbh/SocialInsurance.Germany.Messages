@@ -110,6 +110,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Betriebsnummer der Betriebsstätte, für die die Meldung vorgenommen wird, Länge 15, Mussangabe
+        /// </remarks>
         public string BBNRBS { get; set; }
 
         /// <summary>
@@ -125,6 +126,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Betriebsnummer der Abrechnungsstelle, Länge 15, Pflichtangabe, soweit bekannt
+        /// </remarks>
         public string BBNRAS { get; set; }
 
         /// <summary>
@@ -310,6 +312,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Länge 20, Kannangabe
+        /// </remarks>
         public string DATENSATZID { get; set; }
 
         /// <summary>

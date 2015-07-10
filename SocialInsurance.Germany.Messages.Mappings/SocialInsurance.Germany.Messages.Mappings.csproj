@@ -172,7 +172,6 @@
     <EmbeddedResource Include="DBSB.xml" />
     <EmbeddedResource Include="DBSBF.xml" />
     <EmbeddedResource Include="DBSE.xml" />
-    <EmbeddedResource Include="DBSEF.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DBZD.xml" />

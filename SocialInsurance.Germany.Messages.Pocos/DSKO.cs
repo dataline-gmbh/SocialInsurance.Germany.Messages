@@ -107,6 +107,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Sie ist auf dem Weg zur Datenannahmestelle der Einzugsstelle identisch
         /// mit der Betriebsnummer des Absenders der Datei; Stellen 010 bis 024 
         /// (8 Stellen linksbündig mit nachfolgenden Leerzeichen).
+        /// </remarks>
         public string BBNRER { get; set; }
 
         /// <summary>

@@ -25,7 +25,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
 
         private bool? _hatDbso;
 
-        public bool? _hatDbkv;
+        private bool? _hatDbkv;
 
         private bool? _hatDbsv;
 

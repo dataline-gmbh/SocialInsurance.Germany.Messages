@@ -35,6 +35,48 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public int ANSTSOB { get; set; }
 
-        public IList<DBSEF> DBSEFListe { get; set; }
+        public IList<DBSE_STSOB> STSOB { get; set; }
+
+        /// <summary>
+        /// wiederholt sich entsprechend der Anzahl im Feld ANSTSOB von DBSE
+        /// </summary>
+        public class DBSE_STSOB
+        {
+            /// <summary>
+            /// Holt oder setzt das Vorzeichen vom steuerpflichtigen sonstigen Bezug
+            /// </summary>
+            /// <remarks>
+            /// Plus (+) / Leerzeichen = positiver Betrag
+            /// Minus (-) = negativer Betrag 
+            /// </remarks>
+            public string VSTSOB { get; set; }
+
+            /// <summary>
+            /// Holt oder setzt die Höhe des steuerpflichtigen sonstigen Bezuges
+            /// </summary>
+            /// <remarks>
+            /// Höhe des steuerpflichtigen sonstigen Bezuges(steuerpflichtiges Arbeitsentgelt), Länge 10, Mussangabe
+            /// </remarks>
+            public int STSOB { get; set; }
+
+            /// <summary>
+            /// Holt oder setzt die Art des steuerpflichtigen sonstigen Bezuges
+            /// </summary>
+            /// <remarks>
+            /// Art des steuerpflichtigen sonstigen Bezuges (Schlüssel)
+            /// 01 = Weihnachtszuwendungen, 02 = 13. und 14. Monatsgehälter
+            /// 03 = Urlaubsgeld, 04 = Gratifikationen und Tantiemen, 05 = Urlaubsabgeltungen
+            /// 06 = Jubiläumszuwendungen, 07 = Abfindungsbrutto, 99 = sonstiges
+            /// </remarks>
+            public int STSOBART { get; set; }
+
+            /// <summary>
+            /// Holt oder setzt die Art des steuerpflichtigen sonstigen Bezuges
+            /// </summary>
+            /// <remarks>
+            /// Art des steuerpflichtigen sonstigen Bezuges (Freitext), Länge 30, Mussangabe unter Bedingungen
+            /// </remarks>
+            public string STSOBARTTX { get; set; }
+        }
     }
 }

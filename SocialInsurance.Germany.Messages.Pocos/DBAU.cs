@@ -112,7 +112,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Angabe der wöchentlichen Arbeitszeit in Stunden und Industrieminuten, Länge 4, Mussangabe unter Bedingungen
         /// mit zwei Nachkommastellen in der Form: 0000 (z. B. 3750) 
-        /// </remarks
+        /// </remarks>
         public int AZWOECH { get; set; }
 
         /// <summary>
@@ -121,7 +121,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Angabe der täglichen Arbeitszeit in Stunden und Industrieminuten, Länge 4, Mussangabe unter Bedingungen
         /// mit zwei Nachkommastellen in der Form: 0000 (z. B. 3750) 
-        /// </remarks
+        /// </remarks>
         public int AZTGL { get; set; }
 
         /// <summary>

@@ -154,7 +154,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMAZ
         {
-            get { return _hatDbaz ?? Anrechnungszeiten!= null; }
+            get { return _hatDbaz ?? DBAZ!= null; }
             set { _hatDbaz = value; }
         }
 
@@ -200,7 +200,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public string VERNRKP { get; set; }
 
-        public DBAZ Anrechnungszeiten
+        /// <summary>
+        /// Anrechnungszeiten
+        /// </summary>
+        public DBAZ DBAZ
         {
             get
             {
