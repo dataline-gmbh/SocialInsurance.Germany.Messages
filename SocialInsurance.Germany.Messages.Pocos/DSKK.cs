@@ -201,7 +201,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMMM
         {
-            get { return _hatDbmm ?? GKVMonatsmeldung != null; }
+            get { return _hatDbmm ?? DBMM != null; }
             set { _hatDbmm = value; }
         }
 
@@ -215,7 +215,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMMS
         {
-            get { return _hatDbms ?? Sozialausgleich != null; }
+            get { return _hatDbms ?? DBMS != null; }
             set { _hatDbms = value; }
         }
 
@@ -229,7 +229,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMMZ
         {
-            get { return _hatDbgz ?? Gleitzone != null; }
+            get { return _hatDbgz ?? DBGZ != null; }
             set { _hatDbgz = value; }
         }
 
@@ -243,7 +243,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMMG
         {
-            get { return _hatDbbg ?? Beitragsbemessungsgrenze != null; }
+            get { return _hatDbbg ?? DBBG != null; }
             set { _hatDbbg = value; }
         }
 
@@ -257,7 +257,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMNA
         {
-            get { return _hatDbna ?? Name != null; }
+            get { return _hatDbna ?? DBAN != null; }
             set { _hatDbna = value; }
         }
 
@@ -271,7 +271,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMGB
         {
-            get { return _hatDbgb ?? Geburtsangaben != null; }
+            get { return _hatDbgb ?? DBGB != null; }
             set { _hatDbgb = value; }
         }
 
@@ -285,11 +285,14 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMAN
         {
-            get { return _hatDban ?? Anschrift != null; }
+            get { return _hatDban ?? DBAN != null; }
             set { _hatDban = value; }
         }
 
-        public DBMM GKVMonatsmeldung
+        /// <summary>
+        /// GVK Monatsmeldung
+        /// </summary>
+        public DBMM DBMM
         {
             get
             {
@@ -302,7 +305,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBMS Sozialausgleich
+        /// <summary>
+        /// Sozialausgleich
+        /// </summary>
+        public DBMS DBMS
         {
             get
             {
@@ -315,7 +321,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBGZ Gleitzone
+        /// <summary>
+        /// Gleitzone
+        /// </summary>
+        public DBGZ DBGZ
         {
             get
             {
@@ -328,7 +337,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBBG Beitragsbemessungsgrenze
+        /// <summary>
+        /// Beitragsbemessungsgrenze
+        /// </summary>
+        public DBBG DBBG
         {
             get
             {
@@ -341,7 +353,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBNA Name
+        /// <summary>
+        /// Name
+        /// </summary>
+        public DBNA DBNA
         {
             get
             {
@@ -354,9 +369,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-
-
-        public DBGB Geburtsangaben
+        /// <summary>
+        /// Geburtsangaben
+        /// </summary>
+        public DBGB DBGB
         {
             get
             {
@@ -369,9 +385,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-
-
-        public DBAN Anschrift
+        /// <summary>
+        /// Anschrift
+        /// </summary>
+        public DBAN DBAN
         {
             get
             {
@@ -384,20 +401,23 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public IList<DBMM> ListeDBMM { get; set; }
+        private IList<DBMM> ListeDBMM { get; set; }
 
-        public IList<DBMS> ListeDBMS { get; set; }
+        private IList<DBMS> ListeDBMS { get; set; }
         
-        public IList<DBGZ> ListeDBGZ { get; set; }
+        private IList<DBGZ> ListeDBGZ { get; set; }
 
-        public IList<DBBG> ListeDBBG {get;set;}
+        private IList<DBBG> ListeDBBG { get; set; }
 
-        public IList<DBNA> ListeDBNA { get; set; }
+        private IList<DBNA> ListeDBNA { get; set; }
 
-        public IList<DBGB> ListeDBGB { get; set; }
+        private IList<DBGB> ListeDBGB { get; set; }
 
-        public IList<DBAN> ListeDBAN { get; set; }
+        private IList<DBAN> ListeDBAN { get; set; }
 
+        /// <summary>
+        /// Holt oder setzt eine Liste von Fehlern
+        /// </summary>
         public IList<DBFE> DBFE { get; set; }
     }
 }

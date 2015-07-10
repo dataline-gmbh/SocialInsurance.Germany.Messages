@@ -168,7 +168,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMEZ
         {
-            get { return _hatDbez ?? Entgeltersatzleistungszeiten != null; }
+            get { return _hatDbez ?? DBEZ != null; }
             set { _hatDbez = value; }
         }
 
@@ -216,7 +216,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBEZ Entgeltersatzleistungszeiten
+        /// <summary>
+        /// Entgeltersatzleistungszeiten
+        /// </summary>
+        public DBEZ DBEZ
         {
             get
             {
@@ -233,6 +236,9 @@ namespace SocialInsurance.Germany.Messages.Pocos
 
         private IList<DBEZ> ListeDBEZ { get; set; }
 
+        /// <summary>
+        /// Holt oder setzt eine Liste von Fehlern
+        /// </summary>
         public IList<DBFE> DBFE { get; set; }
     }
 }

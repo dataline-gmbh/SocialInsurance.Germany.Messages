@@ -374,6 +374,9 @@ namespace SocialInsurance.Germany.Messages.Pocos
 
         private IList<DBAN> ListeDBAN { get; set; }
 
+        /// <summary>
+        /// Holt oder setzt eine Liste von Fehlern
+        /// </summary>
         public IList<DBFE> DBFE { get; set; }
       
     }

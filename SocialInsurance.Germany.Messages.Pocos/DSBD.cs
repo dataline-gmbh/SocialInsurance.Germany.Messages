@@ -345,7 +345,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMKA
         {
-            get { return _hatDbka ?? AbwKorrespondenzanschrift != null; }
+            get { return _hatDbka ?? DBKA != null; }
             set { _hatDbka = value; }
         }
 
@@ -360,7 +360,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMTN
         {
-            get { return _hatDbtn ?? Teilnahmepflicht != null; }
+            get { return _hatDbtn ?? DBTN != null; }
             set { _hatDbtn = value; }
         }
 
@@ -372,7 +372,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public string RESERVE3 { get; set; }
 
-        public DBKA AbwKorrespondenzanschrift
+        /// <summary>
+        /// Abweichende Korrespondenzanschrift
+        /// </summary>
+        public DBKA DBKA
         {
             get
             {
@@ -385,7 +388,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBTN Teilnahmepflicht
+        /// <summary>
+        /// Teilnahmepflicht
+        /// </summary>
+        public DBTN DBTN
         {
             get
             {
@@ -397,11 +403,14 @@ namespace SocialInsurance.Germany.Messages.Pocos
                 _hatDbtn = null;
             }
         }
+        
+        private IList<DBKA> ListeDBKA { get; set; }
 
+        private IList<DBTN> ListeDBTN { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt eine Liste von Fehlern
+        /// </summary>
         public IList<DBFE> DBFE { get; set; }
-
-        public IList<DBKA> ListeDBKA { get; set; }
-
-        public IList<DBTN> ListeDBTN { get; set; }
     }
 }

@@ -129,7 +129,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMQD
         {
-            get { return _hatDbqd ?? QuittungDEÜV != null; }
+            get { return _hatDbqd ?? DBQD != null; }
             set { _hatDbqd = value; }
         }
 
@@ -143,7 +143,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMQK
         {
-            get { return _hatDbqk ?? QuittungKVdR != null; }
+            get { return _hatDbqk ?? DBQK != null; }
             set { _hatDbqk = value; }
         }
 
@@ -157,7 +157,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMQV
         {
-            get { return _hatDbqv ?? QuittungKVNR != null; }
+            get { return _hatDbqv ?? DBQV != null; }
             set { _hatDbqv = value; }
         }
 
@@ -169,7 +169,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public string RESERVE3 { get; set; }
 
-        public DBQD QuittungDEÜV
+        /// <summary>
+        /// Quittung-DEÜV
+        /// </summary>
+        public DBQD DBQD
         {
             get
             {
@@ -182,7 +185,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBQK QuittungKVdR
+        /// <summary>
+        /// DBQK-Quittung-KVDR
+        /// </summary>
+        public DBQK DBQK
         {
             get
             {
@@ -195,7 +201,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
         
-        public DBQV QuittungKVNR
+        /// <summary>
+        /// DBQV-Quittung-KVNR
+        /// </summary>
+        public DBQV DBQV
         {
             get
             {
@@ -207,13 +216,16 @@ namespace SocialInsurance.Germany.Messages.Pocos
                 _hatDbqv = null;
             }
         }
-
-        public IList<DBFE> DBFE { get; set; }
-
+                
         private IList<DBQD> ListeDBQD { get; set; }
 
         private IList<DBQK> ListeDBQK { get; set; }
 
         private IList<DBQV> ListeDBQV { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt eine Liste von Fehlern
+        /// </summary>
+        public IList<DBFE> DBFE { get; set; }
     }
 }

@@ -35,6 +35,9 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public int ANSTSOB { get; set; }
 
+        /// <summary>
+        /// Liste der sich wiederholenden Felder
+        /// </summary>
         public IList<DBSE_STSOB> STSOB { get; set; }
 
         /// <summary>

@@ -130,7 +130,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DBGZ.xml" />
-    <EmbeddedResource Include="DBRGP.xml" />
     <EmbeddedResource Include="DSKK.xml" />
     <EmbeddedResource Include="DBMM.xml" />
     <EmbeddedResource Include="DBMS.xml" />
@@ -168,9 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DBAS.xml" />
-    <EmbeddedResource Include="DBFZF.xml" />
     <EmbeddedResource Include="DBSB.xml" />
-    <EmbeddedResource Include="DBSBF.xml" />
     <EmbeddedResource Include="DBSE.xml" />
   </ItemGroup>
   <ItemGroup>

@@ -246,7 +246,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMDBAU
         {
-            get { return _hatDbau ?? Arbeitsunfähigkeit != null; }
+            get { return _hatDbau ?? DBAU != null; }
             set { _hatDbau = value; }
         }
 
@@ -260,7 +260,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMDBBT
         {
-            get { return _hatDbbt ?? Beschäftigungsverbot != null; }
+            get { return _hatDbbt ?? DBBT != null; }
             set { _hatDbbt = value; }
         }
 
@@ -274,7 +274,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMDBZU
         {
-            get { return _hatDbzu ?? Mutterschaft != null; }
+            get { return _hatDbzu ?? DBZU != null; }
             set { _hatDbzu = value; }
         }
 
@@ -287,7 +287,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMDBBV
         {
-            get { return _hatDbbv ?? Bankverbindung != null; }
+            get { return _hatDbbv ?? DBBV != null; }
             set { _hatDbbv = value; }
         }
 
@@ -300,7 +300,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMDBNA
         {
-            get { return _hatDbna ?? Name != null; }
+            get { return _hatDbna ?? DBNA != null; }
             set { _hatDbna = value; }
         }
 
@@ -313,11 +313,14 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMDBAA
         {
-            get { return _hatDbaa ?? Ansprechpartner != null; }
+            get { return _hatDbaa ?? DBAA != null; }
             set { _hatDbaa = value; }
         }
 
-        public DBAU Arbeitsunfähigkeit
+        /// <summary>
+        /// Arbeitsunfähigkeit
+        /// </summary>
+        public DBAU DBAU
         {
             get
             {
@@ -330,7 +333,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBBT Beschäftigungsverbot
+        /// <summary>
+        /// Beschäftigungsverbot
+        /// </summary>
+        public DBBT DBBT
         {
             get
             {
@@ -343,7 +349,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBZU Mutterschaft
+        /// <summary>
+        /// Mutterschaft
+        /// </summary>
+        public DBZU DBZU
         {
             get
             {
@@ -356,7 +365,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBBV Bankverbindung
+        /// <summary>
+        /// Bankverbindung
+        /// </summary>
+        public DBBV DBBV
         {
             get
             {
@@ -369,7 +381,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBNA Name
+        /// <summary>
+        /// Name
+        /// </summary>
+        public DBNA DBNA
         {
             get
             {
@@ -382,7 +397,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBAA Ansprechpartner
+        /// <summary>
+        /// Ansprechpartner
+        /// </summary>
+        public DBAA DBAA
         {
             get
             {
@@ -395,6 +413,9 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
+        /// <summary>
+        /// Holt oder setzt eine Liste von Fehlern
+        /// </summary>
         public IList<DBFE> DBFE { get; set; }
 
         private IList<DBAU> ListeDBAU { get; set; }

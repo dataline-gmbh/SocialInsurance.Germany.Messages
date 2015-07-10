@@ -57,7 +57,6 @@
     <Compile Include="DBEZ.cs" />
     <Compile Include="DBFE.cs" />
     <Compile Include="DBFZ.cs" />
-    <Compile Include="DBFZF.cs" />
     <Compile Include="DBGB.cs" />
     <Compile Include="DBGZ.cs" />
     <Compile Include="DBHA.cs" />
@@ -78,9 +77,7 @@
     <Compile Include="DBQK.cs" />
     <Compile Include="DBQV.cs" />
     <Compile Include="DBRG.cs" />
-    <Compile Include="DBRGP.cs" />
     <Compile Include="DBSB.cs" />
-    <Compile Include="DBSBF.cs" />
     <Compile Include="DBSE.cs" />
     <Compile Include="DBSO.cs" />
     <Compile Include="DBSV.cs" />

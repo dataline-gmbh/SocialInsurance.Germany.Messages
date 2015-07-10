@@ -256,6 +256,9 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public string RESERVE { get; set; }
 
+        /// <summary>
+        /// Holt oder setzt eine Liste von Fehlern
+        /// </summary>
         public IList<DBFE> DBFE { get; set; }
     }
 }

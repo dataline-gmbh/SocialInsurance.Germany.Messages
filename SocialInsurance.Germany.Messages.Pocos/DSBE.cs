@@ -361,7 +361,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool DBMIV
         {
-            get { return _hatDbmi ?? Mitgliedsidentifikation != null; }
+            get { return _hatDbmi ?? DBMI != null; }
             set { _hatDbmi = value; }
         }
 
@@ -375,7 +375,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool DBHBV
         {
-            get { return _hatDbhb ?? Höherversicherungsbeitrag != null; }
+            get { return _hatDbhb ?? DBHB != null; }
             set { _hatDbhb = value; }
         }
 
@@ -387,7 +387,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public string RESERVE { get; set; }
 
-        public DBMI Mitgliedsidentifikation
+        /// <summary>
+        /// Mitgliedsidentifikation
+        /// </summary>
+        public DBMI DBMI
         {
             get
             {
@@ -400,7 +403,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBHB Höherversicherungsbeitrag
+        /// <summary>
+        /// Höherversicherungsbeitrag
+        /// </summary>
+        public DBHB DBHB
         {
             get
             {
@@ -417,6 +423,9 @@ namespace SocialInsurance.Germany.Messages.Pocos
 
         private IList<DBHB> ListeDBHB { get; set; }
 
+        /// <summary>
+        /// Holt oder setzt eine Liste von Fehlern
+        /// </summary>
         public IList<DBFE> DBFE { get; set; }
     }
 }

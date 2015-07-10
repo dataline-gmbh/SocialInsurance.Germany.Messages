@@ -4,8 +4,11 @@
   <template name="DBFZ">
     <field name="KE" length="4" literal="DBFZ" required="true"/>
     <field name="ANSB" length="2" required="true" type="int" format="00" regex="([0-2][0-9])|(3[01])"/>
-    <segment name="DBSBFListe" class="SocialInsurance.Germany.Messages.Pocos.DBSBF, SocialInsurance.Germany.Messages.Pocos" occursRef="ANSB" collection="list">
-      <include template="DBSBF"/>
+    <segment name="SB" class="SocialInsurance.Germany.Messages.Pocos.DBSB+DBSB_SB, SocialInsurance.Germany.Messages.Pocos" occursRef="ANSB" collection="list">
+      <field name="VSB" length="1" required="false"/>
+      <field name="SB" length="10" required="true" type="int" format="0000000000"/>
+      <field name="SBART" length="2" required="true" type="int" format="00"/>
+      <field name="SBARTTX" length="30" required="false"/>
     </segment>
   </template>
 </beanio>

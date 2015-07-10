@@ -297,7 +297,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMNA
         {
-            get { return _hatDbna ?? Name != null; }
+            get { return _hatDbna ?? DBNA != null; }
             set { _hatDbna = value; }
         }
 
@@ -310,7 +310,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMGB
         {
-            get { return _hatDbgb ?? Geburtsangaben != null; }
+            get { return _hatDbgb ?? DBGB != null; }
             set { _hatDbgb = value; }
         }
 
@@ -323,7 +323,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMAN
         {
-            get { return _hatDban ?? Anschrift != null; }
+            get { return _hatDban ?? DBAN != null; }
             set { _hatDban = value; }
         }
         /// <summary>
@@ -335,7 +335,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMAG
         {
-            get { return _hatDbag ?? Arbeiterangaben != null; }
+            get { return _hatDbag ?? DBAG != null; }
             set { _hatDbag = value; }
         }
 
@@ -348,7 +348,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMAB
         {
-            get { return _hatDbab ?? Arbeitgeberanschriftabweichung != null; }
+            get { return _hatDbab ?? DBAB != null; }
             set { _hatDbab = value; }
         }
         /// <summary>
@@ -360,7 +360,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMFZ
         {
-            get { return _hatDbfz ?? Fehlzeiten != null; }
+            get { return _hatDbfz ?? DBFZ != null; }
             set { _hatDbfz = value; }
         }
         /// <summary>
@@ -372,7 +372,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMSE
         {
-            get { return _hatDbse ?? Steuerpflichtbezug != null; }
+            get { return _hatDbse ?? DBSE != null; }
             set { _hatDbse = value; }
         }
 
@@ -385,7 +385,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMSB
         {
-            get { return _hatDbsb ?? Steuerfreibezug != null; }
+            get { return _hatDbsb ?? DBSB != null; }
             set { _hatDbsb = value; }
         }
 
@@ -398,7 +398,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMAS
         {
-            get { return _hatDbas ?? Ausbildung != null; }
+            get { return _hatDbas ?? DBAS != null; }
             set { _hatDbas = value; }
         }
 
@@ -411,7 +411,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMZD
         {
-            get { return _hatDbzd ?? Zusatzdaten != null; }
+            get { return _hatDbzd ?? DBZD != null; }
             set { _hatDbzd = value; }
         }
 
@@ -424,7 +424,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMNB
         {
-            get { return _hatDbnb ?? Nebenbescharbeitslose != null; }
+            get { return _hatDbnb ?? DBNB != null; }
             set { _hatDbnb = value; }
         }
         /// <summary>
@@ -436,7 +436,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMHA
         {
-            get { return _hatDbha ?? Heimarbeiter != null; }
+            get { return _hatDbha ?? DBHA != null; }
             set { _hatDbha = value; }
         }
 
@@ -449,7 +449,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMKE
         {
-            get { return _hatDbke ?? Kündigung != null; }
+            get { return _hatDbke ?? DBKE != null; }
             set { _hatDbke = value; }
         }
 
@@ -461,6 +461,9 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public string RESERVE2 { get; set; }
 
+        /// <summary>
+        /// ELENA-Grunddaten
+        /// </summary>
         public DBEN DBEN
         {
             get
@@ -474,7 +477,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBNA Name
+        /// <summary>
+        /// Name
+        /// </summary>
+        public DBNA DBNA
         {
             get
             {
@@ -486,10 +492,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
                 _hatDbna = null;
             }
         }
-
-
-
-        public DBGB Geburtsangaben
+        
+        /// <summary>
+        /// Geburtsangaben
+        /// </summary>
+        public DBGB DBGB
         {
             get
             {
@@ -501,10 +508,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
                 _hatDbgb = null;
             }
         }
-
-
-
-        public DBAN Anschrift
+        
+        /// <summary>
+        /// Anschrift
+        /// </summary>
+        public DBAN DBAN
         {
             get
             {
@@ -517,7 +525,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBAG Arbeiterangaben
+        /// <summary>
+        /// Arbeiterangaben
+        /// </summary>
+        public DBAG DBAG
         {
             get
             {
@@ -530,7 +541,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBAB Arbeitgeberanschriftabweichung
+        /// <summary>
+        /// Arbeitgeberanschriftabweichung
+        /// </summary>
+        public DBAB DBAB
         {
             get
             {
@@ -543,7 +557,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBFZ Fehlzeiten
+        /// <summary>
+        /// Fehlzeiten
+        /// </summary>
+        public DBFZ DBFZ
         {
             get
             {
@@ -556,7 +573,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBSE Steuerpflichtbezug
+        /// <summary>
+        /// Steuerpflichtbezug
+        /// </summary>
+        public DBSE DBSE
         {
             get
             {
@@ -569,7 +589,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBSB Steuerfreibezug
+        /// <summary>
+        /// Steuerfreibezug
+        /// </summary>
+        public DBSB DBSB
         {
             get
             {
@@ -582,7 +605,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBAS Ausbildung
+        /// <summary>
+        /// Ausbildung
+        /// </summary>
+        public DBAS DBAS
         {
             get
             {
@@ -595,7 +621,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBZD Zusatzdaten
+        /// <summary>
+        /// Zusatzdaten
+        /// </summary>
+        public DBZD DBZD
         {
             get
             {
@@ -608,7 +637,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBNB Nebenbescharbeitslose
+        /// <summary>
+        /// Nebenbeschäftigung Arbeitslose
+        /// </summary>
+        public DBNB DBNB
         {
             get
             {
@@ -621,7 +653,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBHA Heimarbeiter
+        /// <summary>
+        /// Heimarbeiter
+        /// </summary>
+        public DBHA DBHA
         {
             get
             {
@@ -634,7 +669,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBKE Kündigung
+        /// <summary>
+        /// Kündigung
+        /// </summary>
+        public DBKE DBKE
         {
             get
             {
@@ -675,6 +713,9 @@ namespace SocialInsurance.Germany.Messages.Pocos
 
         private IList<DBKE> ListeDBKE { get; set; }
 
+        /// <summary>
+        /// Holt oder setzt eine Liste von Fehlern
+        /// </summary>
         public IList<DBFE> DBFE { get; set; }
     }
 }

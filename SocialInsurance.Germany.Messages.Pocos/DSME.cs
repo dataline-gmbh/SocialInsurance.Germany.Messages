@@ -226,7 +226,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMME
         {
-            get { return _hatDbme ?? Meldesachverhalt != null; }
+            get { return _hatDbme ?? DBME != null; }
             set { _hatDbme = value; }
         }
 
@@ -240,7 +240,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMNA
         {
-            get { return _hatDbna ?? Name != null; }
+            get { return _hatDbna ?? DBNA != null; }
             set { _hatDbna = value; }
         }
 
@@ -254,7 +254,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMGB
         {
-            get { return _hatDbgb ?? Geburtsangaben != null; }
+            get { return _hatDbgb ?? DBGB != null; }
             set { _hatDbgb = value; }
         }
 
@@ -268,7 +268,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMAN
         {
-            get { return _hatDban ?? Anschrift != null; }
+            get { return _hatDban ?? DBAN != null; }
             set { _hatDban = value; }
         }
 
@@ -282,7 +282,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMEU
         {
-            get { return _hatDbeu ?? EuropäischeVersicherungsnummer != null; }
+            get { return _hatDbeu ?? DBEU != null; }
             set { _hatDbeu = value; }
         }
 
@@ -296,7 +296,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMUV
         {
-            get { return _hatDbuv ?? Unfallversicherung != null; }
+            get { return _hatDbuv ?? DBUV != null; }
             set { _hatDbuv = value; }
         }
 
@@ -308,7 +308,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMKS
         {
-            get { return _hatDbks ?? KnappschaftSee != null; }
+            get { return _hatDbks ?? DBKS != null; }
             set { _hatDbks = value; }
         }
 
@@ -322,7 +322,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMSV
         {
-            get { return _hatDbsv ?? Sozialversicherungsausweis != null; }
+            get { return _hatDbsv ?? DBSV != null; }
             set { _hatDbsv = value; }
         }
 
@@ -336,7 +336,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMVR
         {
-            get { return _hatDbvr ?? Vergabe != null; }
+            get { return _hatDbvr ?? DBVR != null; }
             set { _hatDbvr = value; }
         }
 
@@ -350,7 +350,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMRG
         {
-            get { return _hatDbrg ?? Rückmeldung != null; }
+            get { return _hatDbrg ?? DBRG != null; }
             set { _hatDbrg = value; }
         }
 
@@ -397,7 +397,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMSO
         {
-            get { return _hatDbso ?? Sofortmeldung != null; }
+            get { return _hatDbso ?? DBSO != null; }
             set { _hatDbso = value; }
         }
 
@@ -443,7 +443,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMKV
         {
-            get { return _hatDbkv ?? Krankenversicherung != null; }
+            get { return _hatDbkv ?? DBKV != null; }
             set { _hatDbkv = value; }
         }
 
@@ -452,7 +452,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         private string RESERVE { get; set; }       
 
-        public DBME Meldesachverhalt
+        /// <summary>
+        /// Meldesachverhalt
+        /// </summary>
+        public DBME DBME
         {
             get
             {
@@ -465,9 +468,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        
-
-        public DBNA Name
+        /// <summary>
+        /// Name
+        /// </summary>
+        public DBNA DBNA
         {
             get
             {
@@ -480,9 +484,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        
-
-        public DBGB Geburtsangaben
+        /// <summary>
+        /// Geburtsangaben
+        /// </summary>
+        public DBGB DBGB
         {
             get
             {
@@ -495,9 +500,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        
-
-        public DBAN Anschrift
+        /// <summary>
+        /// Anschrift
+        /// </summary>
+        public DBAN DBAN
         {
             get
             {
@@ -510,9 +516,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        
-
-        public DBEU EuropäischeVersicherungsnummer
+        /// <summary>
+        /// Europäische Versicherungsnummer
+        /// </summary>
+        public DBEU DBEU
         {
             get
             {
@@ -524,10 +531,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
                 _hatDbeu = null;
             }
         }
-
-        
-
-        public DBUV Unfallversicherung
+               
+        /// <summary>
+        /// Unfallversicherung
+        /// </summary>
+        public DBUV DBUV
         {
             get 
             {
@@ -539,10 +547,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
                 _hatDbuv = null;
             }
         }
-
-        
-
-        public DBKS KnappschaftSee
+                
+        /// <summary>
+        /// Knappschaft See
+        /// </summary>
+        public DBKS DBKS
         {
             get
             {
@@ -555,7 +564,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBSV Sozialversicherungsausweis
+        /// <summary>
+        /// Sozialversicherungsausweis
+        /// </summary>
+        public DBSV DBSV
         {
             get
             {
@@ -568,7 +580,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBKV Krankenversicherung
+        /// <summary>
+        /// Krankenversicherung
+        /// </summary>
+        public DBKV DBKV
         {
             get
             {
@@ -581,7 +596,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBVR Vergabe
+        /// <summary>
+        /// Vergabe
+        /// </summary>
+        public DBVR DBVR
         {
             get
             {
@@ -594,7 +612,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBRG Rückmeldung
+        /// <summary>
+        /// Rückmeldung
+        /// </summary>
+        public DBRG DBRG
         {
             get
             {
@@ -607,7 +628,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        public DBSO Sofortmeldung
+        /// <summary>
+        /// Sofortmeldung
+        /// </summary>
+        public DBSO DBSO
         {
             get
             {
@@ -642,8 +666,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
 
         private IList<DBVR> ListeDBVR { get; set; }
 
-        private IList<DBRG> ListeDBRG { get; set; }        
+        private IList<DBRG> ListeDBRG { get; set; }
 
+        /// <summary>
+        /// Holt oder setzt eine Liste von Fehlern
+        /// </summary>
         public IList<DBFE> DBFE { get; set; }
 
         private class WrapperDBKS
