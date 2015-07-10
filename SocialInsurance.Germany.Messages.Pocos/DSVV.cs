@@ -190,7 +190,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Ist diese Person als Beamter / Richter / Soldat tätig? Länge 1, Mussangabe
         /// J = j, N = nein
         /// </remarks>
-        public string BEAM { get; set; }
+        public bool BEAM { get; set; }
 
         /// <summary>
         /// Entfällt hier
@@ -198,7 +198,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Entfällt hier, Grundstellung liefern, Länge 8, Mussangabe 
         /// </remarks>
-        public string BEGINN { get; set; }
+        public string MONATBEG { get; set; }
 
         /// <summary>
         /// Entfällt hier
@@ -232,7 +232,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Kennzeichen, Stornierung einer bereits abgegebenen Meldung
         /// N = keine Stornierung
         /// </remarks>
-        public string KENNZST { get; set; }
+        public bool KENNZST { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Vorhandensein von ELENA Grunddaten
@@ -269,7 +269,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// J = Anschriftsangaben vorhanden
         /// </remarks>
         public bool MMAN { get; set; }
-
         /// <summary>
         /// Holt oder setzt das Vorhandensein von Arbeitgeberangaben
         /// </summary>
@@ -368,9 +367,13 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public string RESERVE2 { get; set; }
 
+        private IList<DBNA> ListeDBNA { get; set; }
+
+        private IList<DBGB> ListeDBGB { get; set; }
+
+        private IList<DBAN> ListeDBAN { get; set; }
+
         public IList<DBFE> DBFE { get; set; }
-
-
       
     }
 }
