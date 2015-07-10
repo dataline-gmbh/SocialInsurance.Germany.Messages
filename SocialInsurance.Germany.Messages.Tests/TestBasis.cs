@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Runtime.CompilerServices;
 
 using BeanIO;
 
@@ -25,6 +26,7 @@ namespace SocialInsurance.Germany.Messages.Tests
             get { return _factory; }
         }
 
+        [MethodImpl(MethodImplOptions.NoInlining)]
         protected TextReader LoadData(string resourceName)
         {
             var frame = new StackTrace(1).GetFrame(0);

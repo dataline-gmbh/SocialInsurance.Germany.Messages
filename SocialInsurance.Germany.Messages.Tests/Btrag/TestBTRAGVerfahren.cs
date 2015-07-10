@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 
 using SocialInsurance.Germany.Messages.Pocos;
@@ -10,11 +9,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Btrag
 {
     public class TestBTRAGVerfahren : TestBasis
     {
-
         [Fact]
         public void TestBTRAG()
         {
-
             var input = LoadData("btrag.dat").ReadToEnd();
             var output = new StringWriter();
             var writer = StreamFactory.CreateWriter("btrag", output);
