@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <beanio xmlns="http://www.beanio.org/2015/06">
-  <template name="DBFZ">
+  <template name="DBAS">
     <field name="KE" length="4" literal="DBAS" required="true"/>
     <field name="MMARTAS" length="1" required="true" type="int" regex="[12]"/>
     <field name="ASBEG" length="8" required="true" type="int" format="00000000"/>

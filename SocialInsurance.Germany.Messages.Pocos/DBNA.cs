@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
-    /// Datenbaustein: DBNA Name
+    /// Datenbaustein: DBNA - Name
     /// </summary>
     public class DBNA : IDatenbaustein
     {

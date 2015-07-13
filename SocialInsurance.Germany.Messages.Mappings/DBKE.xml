@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <beanio xmlns="http://www.beanio.org/2015/06">
-  <template name="DBHA">
-    <field name="KE" length="4" literal="DBHA" required="true"/>
+  <template name="DBKE">
+    <field name="KE" length="4" literal="DBKE" required="true"/>
     <field name="AVEND" length="8" required="true" format="yyyyMMdd"/>
     <field name="AVBFR" length="1" required="true" regex="[JN]"/>
     <field name="AVBFSCHR" length="1" required="false" regex="[JN]"/>
@@ -30,7 +30,7 @@
     <field name="AGKUEZU" length="8" required="true" type="int" format="00000000"/>
     <field name="KF" length="3" required="true" type="int" format="000"/>
     <field name="KFZE" length="1" required="true" type="int" regex="[0-4]"/>
-    <field name="KFZE" length="1" required="true" type="int" regex="[0-5]"/>
+    <field name="KFBZ" length="1" required="true" type="int" regex="[0-5]"/>
     <field name="KA"  length="1" required="false" regex="[JN]"/>
     <field name="KAU"  length="1" required="false" regex="[JN]"/>
     <field name="KAUAUG" length="30" required="false"/>

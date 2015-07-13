@@ -28,6 +28,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
             KE = "DSBE";
             VF = "BVBEI";
             VERNRDS = 1;
+            IK = 0;
         }
 
         /// <summary>
@@ -280,13 +281,13 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public int LGA { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das laufende gezahlte Entgelt
+        /// Holt oder setzt die Internkennung
         /// </summary>
         /// <remarks>
-        /// Laufendes gezahltes Entgelt (LGA), Länge 1, Mussangabe
-        /// ausschließlich fiktives Entgelt, 0 = Nein, 1 = Ja
+        /// Internkennung, Länge 1, Mussangabe
+        /// Fix 0
         /// </remarks>
-        public int LGAF { get; set; }
+        public int IK { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Vorzeichen für Einmalzahlung im ABMO

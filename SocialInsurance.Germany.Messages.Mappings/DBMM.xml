@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <beanio xmlns="http://www.beanio.org/2015/06">
-  <template name="DBEU">
+  <template name="DBMM">
     <field name="KE" length="4" literal="DBMM" required="true"/>
     <field name="KENNZST" length="1" required="true"/>
     <field name ="KENNZMOME" length="1" required="true" regex="[1-3]" />

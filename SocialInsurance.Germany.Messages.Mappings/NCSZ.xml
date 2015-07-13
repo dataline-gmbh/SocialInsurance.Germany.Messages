@@ -8,6 +8,6 @@
     <field name="ED" length="8" required="true" format="yyyyMMdd"/>
     <field name="DTNR" length="6" required="true" type="int" format="000000"/>
     <field name="ZLSZ" length="8" required="true" type="int" format="00000000"/> 
-    <field name="VERNR" length="2" required="true" type="int" format="00"/>
+    <field name="VERNR" length="2" required="true" literal="01" type="int" format="00"/>
   </template>
 </beanio>

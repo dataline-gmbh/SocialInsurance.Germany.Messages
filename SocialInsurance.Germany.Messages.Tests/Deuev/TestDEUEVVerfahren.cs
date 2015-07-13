@@ -11,9 +11,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
     public class TestDEUEVVerfahren : TestBasis
     {
         [Fact]
-        public void TestDEUEV()
+        public void TestDEUEVMeldung10() 
         {
-            var input = LoadData("deuev.dat").ReadToEnd();
+            var input = LoadData("deuev10.dat").ReadToEnd();
             var output = new StringWriter();
             var writer = StreamFactory.CreateWriter("deuev", output);
             var reader = StreamFactory.CreateReader("deuev", new StringReader(input));
@@ -27,6 +27,54 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 writer.Write(dsko);
                 streamObject = reader.Read();
                 var dsme = Assert.IsType<DSME>(streamObject);
+                Assert.Equal(dsme.GD, "10");
+                Assert.NotNull(dsme.DBNA);
+                Assert.NotNull(dsme.DBAN);
+                Assert.NotNull(dsme.DBME);
+                if (string.IsNullOrWhiteSpace(dsme.VSNR))
+                {
+                    Assert.NotNull(dsme.DBGB);
+                    Assert.NotNull(dsme.DBEU);
+                }
+                writer.Write(dsme);
+                streamObject = reader.Read();
+                var ncsz = Assert.IsType<NCSZ>(streamObject);
+                writer.Write(ncsz);
+                writer.Close();
+                Assert.Equal(input, output.ToString());
+            }
+            finally
+            {
+                reader.Close();
+            }
+        }
+
+        [Fact]
+        public void TestDEUEVMeldung20() 
+        {
+            var input = LoadData("deuev20.dat").ReadToEnd();
+            var output = new StringWriter();
+            var writer = StreamFactory.CreateWriter("deuev", output);
+            var reader = StreamFactory.CreateReader("deuev", new StringReader(input));
+            try
+            {
+                var streamObject = reader.Read();
+                var vosz = Assert.IsType<VOSZ>(streamObject);
+                writer.Write(vosz);
+                streamObject = reader.Read();
+                var dsko = Assert.IsType<DSKO>(streamObject);
+                writer.Write(dsko);
+                streamObject = reader.Read();
+                var dsme = Assert.IsType<DSME>(streamObject);
+                Assert.Equal(dsme.GD, "20");
+                Assert.NotNull(dsme.DBNA);
+                Assert.NotNull(dsme.DBSO);
+                if (string.IsNullOrWhiteSpace(dsme.VSNR))
+                {
+                    Assert.NotNull(dsme.DBGB);
+                    Assert.NotNull(dsme.DBAN);
+                    Assert.NotNull(dsme.DBEU);
+                }
                 writer.Write(dsme);
                 streamObject = reader.Read();
                 var ncsz = Assert.IsType<NCSZ>(streamObject);

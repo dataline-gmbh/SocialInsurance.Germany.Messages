@@ -73,10 +73,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Btrag\btrag.dat" />
+    <EmbeddedResource Include="Deuev\deuev10.dat" />
+    <EmbeddedResource Include="Deuev\deuev20.dat" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Deuev\deuev.dat" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SocialInsurance.Germany.Messages.Mappings\SocialInsurance.Germany.Messages.Mappings.csproj">

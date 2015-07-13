@@ -33,7 +33,7 @@
     <field name="SVTG" length="2" required="true" regex="([0-2][0-9])|(3[01])" type="int" format="00"/>
     <field name="VZLGA" length="1" required="true"/>
     <field name="LGA" length="8" required="true" type="int" format="00000000"/>
-    <field name="LGAF" length="1" required="true" type="int"/>
+    <field name="IK" length="1" required="true" type="int" literal="0"/>
     <field name="VZEGA" length="1" required="true"/>
     <field name="EGA" length="9" required="true" type="int" format="000000000"/>
     <field name="VZEGAB" length="1" required="true"/>
@@ -43,6 +43,7 @@
     <field name="PB" length="8" required="true" type="int" format="00000000"/>
     <field name="DBMIV" length="1" required="true" typeHandler="jn"/>
     <field name="DBHBV" length="1" required="true" typeHandler="jn"/>
+    <field name="RESERVE" length="2" required="false"/>
     <segment name="ListeDBMI" class="SocialInsurance.Germany.Messages.Pocos.DBMI, SocialInsurance.Germany.Messages.Pocos" occursRef="DBMIV" collection="list">
       <include template="DBMI" />
     </segment>

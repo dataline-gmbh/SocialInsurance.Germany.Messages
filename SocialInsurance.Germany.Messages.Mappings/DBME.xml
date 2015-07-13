@@ -5,7 +5,6 @@
     <field name="KENNZST" length="1" regex="[JN]" required="true"/>
     <field name="KENNZGLE" length="1" regex="[NJ]|[0-2]" required="false"/>
     <field name="ZRBG" length="8" required="true" format="yyyyMMdd"/>
-    <!--<field name="ZREN" length="8" required="false" format="yyyyMMdd" default="00000000"/>-->
     <field name="ZREN" length="8" required="true"/>
     <field name="ZLTG" length="2" required="true"/>
     <field name="WG" length="1" required="false"/>

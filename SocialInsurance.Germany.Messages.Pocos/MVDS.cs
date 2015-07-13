@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
-    /// Datensatz: MVDS - Datensatz Kommunikation
+    /// Datensatz: MVDS - Multifunktionaler Verdienstdatensatz
     /// </summary>    
     public class MVDS : IDatensatz
     {
