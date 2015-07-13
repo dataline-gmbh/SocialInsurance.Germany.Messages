@@ -12,7 +12,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     public class DBQK : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBQK"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="DBQK"/> Klasse
         /// </summary>
         public DBQK()
         {
@@ -24,7 +24,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
-        /// Kennung, um welchen Datenbaustein es sich handelt.
+        /// Kennung, um welchen Datenbaustein es sich handelt
         /// </remarks>
         public string KE { get; set; }
 

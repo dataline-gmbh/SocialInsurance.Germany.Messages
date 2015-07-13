@@ -12,7 +12,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     public class VOSZ : IDatensatz
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="VOSZ"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="VOSZ"/> Klasse
         /// </summary>
         /// <remarks>
         /// Beim Initialisieren wird die Konstante Kennung gesetzt

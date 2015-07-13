@@ -12,7 +12,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     public class DBZU : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBZU"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="DBZU"/> Klasse
         /// </summary>
         public DBZU()
         {
@@ -23,7 +23,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
-        /// Kennung, um welchen Datenbaustein es sich handelt.
+        /// Kennung, um welchen Datenbaustein es sich handelt
         /// </remarks>
         public string KE { get; set; }
 

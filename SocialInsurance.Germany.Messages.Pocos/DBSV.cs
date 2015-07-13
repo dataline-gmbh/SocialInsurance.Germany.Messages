@@ -12,7 +12,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     public class DBSV : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBSV"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="DBSV"/> Klasse
         /// </summary>
         public DBSV()
         {
@@ -23,7 +23,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
-        /// Kennung, um welchen Datenbaustein es sich handelt.
+        /// Kennung, um welchen Datenbaustein es sich handelt
         /// </remarks>
         public string KE { get; set; }
 

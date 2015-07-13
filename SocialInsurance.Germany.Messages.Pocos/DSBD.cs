@@ -18,10 +18,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         private bool? _hatDbtn;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DSBD"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="DSBD"/> Klasse
         /// </summary>
         /// <remarks>
-        /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt.
+        /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt
         /// </remarks>
         public DSBD()
         {
@@ -33,7 +33,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
-        /// Kennung, um welchen Datensatz es sich handelt.
+        /// Kennung, um welchen Datensatz es sich handelt
         /// </remarks>
         public string KE { get; set; }
 
@@ -210,7 +210,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Hinweis: Wenn die Hausnummer nicht separat abgelegt
         /// werden kann, ist es zulässig, die Hausnummer in
         /// das Feld Straße zu übernehmen. In solchen Fällen
-        /// muss dann das Feld Hausnummer auf Grundstellung (Leerzeichen) stehen.
+        /// muss dann das Feld Hausnummer auf Grundstellung (Leerzeichen) stehen
         /// </remarks>
         public string HNR { get; set; }
 
@@ -251,7 +251,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// wird die Betriebsstätte, welche die Meldungen zur
         /// Sozialversicherung erstattet, als „meldende Stelle“
         /// bezeichnet. Dies ist somit kein externer Dienstleister
-        /// wie zum Beispiel ein Steuerberater.
+        /// wie zum Beispiel ein Steuerberater
         /// </remarks>
         public string BBNRME { get; set; }
 
@@ -341,7 +341,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// N = Nein
         /// J = Ja
         /// Hinweis: Die Korrespondenzanschrift muss zum Unternehmen
-        /// gehören. Sie gehört somit nicht zu einem Dienstleister wie zum Beispiel einem Steuerberater.
+        /// gehören. Sie gehört somit nicht zu einem Dienstleister wie zum Beispiel einem Steuerberater
         /// </remarks>
         public bool MMKA
         {

@@ -12,7 +12,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     public class NCSZ
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="NCSZ"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="NCSZ"/> Klasse
         /// </summary>
         /// <remarks>
         /// Beim Initialisieren wird die Konstante Kennung gesetzt

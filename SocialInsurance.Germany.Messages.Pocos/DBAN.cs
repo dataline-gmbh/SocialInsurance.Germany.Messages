@@ -8,7 +8,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     public class DBAN : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBAN"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="DBAN"/> Klasse
         /// </summary>
         public DBAN()
         {
@@ -19,7 +19,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
-        /// Kennung, um welchen Datenbaustein es sich handelt.
+        /// Kennung, um welchen Datenbaustein es sich handelt
         /// </remarks>
         public string KE { get; set; }
 

@@ -14,10 +14,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         private FehlerKennzeichen? _fekz;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DSVV"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="DSVV"/> Klasse
         /// </summary>
         /// <remarks>
-        /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt.
+        /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt
         /// </remarks>
         public DSVV()
         {
@@ -30,7 +30,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
-        /// Kennung, um welchen Datensatz es sich handelt.
+        /// Kennung, um welchen Datensatz es sich handelt
         /// </remarks>
         public string KE { get; set; }
 
@@ -122,7 +122,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Betriebsnummer des Verursachers des Datensatzes, Länge 15, Mussangabe
         /// Bei Meldungen zwischen dem Arbeitgeber und der ZSS ist hier 
-        /// die Betriebsnummer des Beschäftigungsbetriebes anzugeben. 
+        /// die Betriebsnummer des Beschäftigungsbetriebes anzugeben
         /// </remarks>
         public string BBNRVU { get; set; }
 

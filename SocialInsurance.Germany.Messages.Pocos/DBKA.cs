@@ -12,7 +12,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     public class DBKA : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBKA"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="DBKA"/> Klasse
         /// </summary>
         public DBKA()
         {

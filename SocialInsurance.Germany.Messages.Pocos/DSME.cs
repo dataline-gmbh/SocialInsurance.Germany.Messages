@@ -36,10 +36,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         private FehlerKennzeichen? _fekz;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DSME"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="DSME"/> Klasse
         /// </summary>
         /// <remarks>
-        /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt.
+        /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt
         /// </remarks>
         public DSME()
         {
@@ -52,7 +52,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
-        /// Kennung, um welchen Datensatz es sich handelt.
+        /// Kennung, um welchen Datensatz es sich handelt
         /// </remarks>
         public string KE { get; set; }
 
@@ -142,7 +142,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// BBNR-VU BBNRVU, Betriebsnummer des Verursachers des Datensatzes, Länge 15, (8 Stellen linksbündig mit nachfolgenden Leerzeichen), Mussangabe
-        /// Bei der Datenübermittlung zwischen dem Arbeitgeber und der Datenannahmestelle ist hier die Betriebsnummer des Beschäftigungsbetriebes anzugeben. 
+        /// Bei der Datenübermittlung zwischen dem Arbeitgeber und der Datenannahmestelle ist hier die Betriebsnummer des Beschäftigungsbetriebes anzugeben
         /// </remarks>
         public string BBNRVU { get; set; }
 
@@ -152,7 +152,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Dieses Feld steht dem Verursacher zur Verfügung, Länge 20, Kannangabe
         /// Bei der Datenübermittlung zwischen dem Arbeitgeber
-        /// und der Datenannahmestelle: z. B. Aktenzeichen / Personalnummer
+        /// und der Datenannahmestelle: z
+        /// B. Aktenzeichen / Personalnummer
         /// des Beschäftigten 
         /// </remarks>
         public string AZVU { get; set; }
@@ -163,7 +164,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Betriebsnummer, Länge 15, Mussangabe
         /// Betriebsnummer der für den Beschäftigten zuständigen
-        /// Einzugsstelle oder der berufsständischen Versorgungseinrichtung.
+        /// Einzugsstelle oder der berufsständischen Versorgungseinrichtung
         /// Bei Sofortmeldungen ist die Betriebsnummer
         /// der Datenstelle der Träger der Rentenversicherung
         /// anzugeben. (8 Stellen linksbündig mit nachfolgenden Leerzeichen) 
@@ -178,7 +179,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Bei Meldungen nach § 28a Abs. 10 SGB IV an die Datenannahmestelle
         /// der berufsständischen Versorgungseinrichtungen
         /// ist hier die Mitgliedsnummer des Beschäftigten
-        /// bei der Versorgungseinrichtung anzugeben. 
+        /// bei der Versorgungseinrichtung anzugeben
         /// </remarks>
         public string AZKK { get; set; }
 
@@ -421,7 +422,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// J = Überwachungsdatenvorhanden
         /// Anmerkung: Bei diesem Merkmalsfeld für den Datenbaustein „Überwachung Einzugsvergütung“ handelt es sich um       
         /// eine Information, die ausschließlich die Rentenversicherung intern nutzt. Die Prüfungen mit Ausnahme DSME500
-        /// sind nicht im gemeinsamen Kernprüfprogramm realisiert, sondern hier nur dokumentiert, damit mögliche Inhalte transparent sind.
+        /// sind nicht im gemeinsamen Kernprüfprogramm realisiert, sondern hier nur dokumentiert, damit mögliche Inhalte transparent sind
         /// </remarks>
         public bool? MMUE { get; set; }
 

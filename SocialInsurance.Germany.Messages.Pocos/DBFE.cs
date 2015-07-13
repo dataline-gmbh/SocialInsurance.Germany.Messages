@@ -13,7 +13,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     {
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBFE"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="DBFE"/> Klasse
         /// </summary>
         public DBFE()
         {
@@ -24,7 +24,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
-        /// Kennung, um welchen Datensatz es sich handelt.
+        /// Kennung, um welchen Datensatz es sich handelt
         /// </remarks>
         public string KE { get; set; }
 

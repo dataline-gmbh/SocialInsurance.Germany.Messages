@@ -12,7 +12,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     public class DBGZ : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBGZ"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="DBGZ"/> Klasse
         /// </summary>
         public DBGZ()
         {

@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <beanio xmlns="http://www.beanio.org/2015/06">
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBRGP.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <template name="DBRG">
     <field name="KE" length="4" literal="DBRG" required="true"/>
     <field name="ZRBG" length="8" required="true" format="yyyyMMdd"/>

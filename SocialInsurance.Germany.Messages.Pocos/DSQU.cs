@@ -20,7 +20,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         private FehlerKennzeichen? _fekz;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DSQU"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="DSQU"/> Klasse
         /// </summary>
         /// <remarks>
         /// Beim Initialisieren wird die Konstante Kennung gesetzt
@@ -35,7 +35,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
-        /// Kennung, um welchen Datensatz es sich handelt.
+        /// Kennung, um welchen Datensatz es sich handelt
         /// </remarks>
         public string KE { get; set; }
 

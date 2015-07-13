@@ -28,10 +28,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         private FehlerKennzeichen? _fekz;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DSKK"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="DSKK"/> Klasse
         /// </summary>
         /// <remarks>
-        /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt.
+        /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt
         /// </remarks>
         public DSKK()
         {
@@ -44,7 +44,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
-        /// Kennung, um welchen Datensatz es sich handelt.
+        /// Kennung, um welchen Datensatz es sich handelt
         /// </remarks>
         public string KE { get; set; }
 
@@ -151,7 +151,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Betriebsnummer des Beschäftigungsbetriebes (8 Stellen linksbündig mit nachfolgenden Leerzeichen), Länge 15, Mussangabe
-        /// Entspricht der Betriebsnummer aus dem Feld BBNR-VU des DSME der Anmeldung oder der GKV-Monatsmeldung des Arbeitgebers.
+        /// Entspricht der Betriebsnummer aus dem Feld BBNR-VU des DSME der Anmeldung oder der GKV-Monatsmeldung des Arbeitgebers
         /// </remarks>
         public string BBNRAG { get; set; }
 
@@ -161,7 +161,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Aktenzeichen Arbeitgeber, Länge 20, Pflichtangabe, soweit bekannt
         /// Sofern der Arbeitgeber in einer GKVMonatsmeldung im DSME im Feld Aktenzeichen-Verursacher (AZ-VU) ein
-        /// Aktenzeichen bzw. eine Personalnummer des / der Beschäftigten angegeben hat, ist diese hier zurück zu melden.
+        /// Aktenzeichen bzw. eine Personalnummer des / der Beschäftigten angegeben hat, ist diese hier zurück zu melden
         /// </remarks>
         public string AZAG { get; set; }
 
@@ -169,7 +169,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Betriebsnummer der Abrechnungsstelle
         /// </summary>
         /// <remarks>
-        /// Betriebsnummer der Abrechnungsstelle (z.B. Steuerberater - 8 Stellen linksbündig mit nachfolgenden Leerzeichen), Länge 15, Mussangabe
+        /// Betriebsnummer der Abrechnungsstelle (z
+        /// B. Steuerberater - 8 Stellen linksbündig mit nachfolgenden Leerzeichen), Länge 15, Mussangabe
         /// </remarks>
         public string BBNRAS { get; set; }
 

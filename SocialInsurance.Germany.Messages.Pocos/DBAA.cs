@@ -20,7 +20,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt die Kennung
+        /// Holt oder setzt die Kennung.
         /// </summary>
         /// <remarks>
         /// Kennung, um welchen Datenbaustein es sich handelt.

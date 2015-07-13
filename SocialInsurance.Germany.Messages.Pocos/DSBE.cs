@@ -18,10 +18,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         private bool? _hatDbhb;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DSBE"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="DSBE"/> Klasse
         /// </summary>
         /// <remarks>
-        /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt.
+        /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt
         /// </remarks>
         public DSBE()
         {
@@ -34,7 +34,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
-        /// Kennung, um welchen Datensatz es sich handelt.
+        /// Kennung, um welchen Datensatz es sich handelt
         /// </remarks>
         public string KE { get; set; }
 

@@ -12,7 +12,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     public class DBVR : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBVR"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="DBVR"/> Klasse
         /// </summary>
         public DBVR()
         {

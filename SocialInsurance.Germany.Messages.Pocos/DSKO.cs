@@ -14,10 +14,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         private FehlerKennzeichen? _fekz;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DSKO"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="DSKO"/> Klasse
         /// </summary>
         /// <remarks>
-        /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt.
+        /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt
         /// </remarks>
         public DSKO()
         {
@@ -30,7 +30,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
-        /// Kennung, um welchen Datensatz es sich handelt.
+        /// Kennung, um welchen Datensatz es sich handelt
         /// </remarks>
         public string KE { get; set; }
 
@@ -106,7 +106,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Betriebsnummer des Erstellers der Datei, Länge 15, Mussangabe
         /// Sie ist auf dem Weg zur Datenannahmestelle der Einzugsstelle identisch
         /// mit der Betriebsnummer des Absenders der Datei; Stellen 010 bis 024 
-        /// (8 Stellen linksbündig mit nachfolgenden Leerzeichen).
+        /// (8 Stellen linksbündig mit nachfolgenden Leerzeichen)
         /// </remarks>
         public string BBNRER { get; set; }
 
@@ -217,7 +217,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Faxrufnummer des DEÜVAnsprechpartners beim Ersteller der Datei, Länge 20, Mussangabe
         /// Die Faxnummer ist funktionsbezogen durch je ein Leerzeichen zu
-        /// gliedern, vor der Durchwahlnummer steht ein Bindestrich.
+        /// gliedern, vor der Durchwahlnummer steht ein Bindestrich
         /// </remarks>
         public string FAXAP { get; set; }
 
