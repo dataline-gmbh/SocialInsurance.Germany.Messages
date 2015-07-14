@@ -42,7 +42,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         private FehlerKennzeichen? _fekz;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DSKO"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="MVDS"/> Klasse
         /// </summary>
         /// <remarks>
         /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt
@@ -377,7 +377,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorrhandensein von steuerfreien Bezügen
+        /// Holt oder setzt das Vorhandensein von steuerfreien Bezügen
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBSB, Länge 1, Mussangabe

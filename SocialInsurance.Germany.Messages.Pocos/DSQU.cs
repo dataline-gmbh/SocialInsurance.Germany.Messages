@@ -115,7 +115,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt das Reservefeld 2
         /// </summary>
         /// <remarks>
-        /// Reservefeld, kein Inhalt,Länge 105, Mussangabe
+        /// Reservefeld 2, kein Inhalt,Länge 105, Mussangabe
         /// </remarks>
         public string RESERVE2 { get; set; }
 
@@ -165,7 +165,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt das Reservefeld 3
         /// </summary>
         /// <remarks>
-        /// Reservefeld, kein Inhalt,Länge 17, Mussangabe
+        /// Reservefeld 3, kein Inhalt,Länge 17, Mussangabe
         /// </remarks>
         public string RESERVE3 { get; set; }
 

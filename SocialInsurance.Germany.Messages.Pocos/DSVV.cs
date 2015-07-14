@@ -307,7 +307,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public bool MMSE { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorrhandensein von steuerfreien Bezügen
+        /// Holt oder setzt das Vorhandensein von steuerfreien Bezügen
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBSB, Länge 1, Mussangabe

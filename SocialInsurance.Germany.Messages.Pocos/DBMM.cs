@@ -12,7 +12,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     public class DBMM : IDatenbaustein
     {
         /// <summary>
-        /// Initialisier eine neue Instanz der <see cref="DBMM"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DBMM"/> Klasse
         /// </summary>
         public DBMM() 
         {

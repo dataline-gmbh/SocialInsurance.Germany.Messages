@@ -4,7 +4,7 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBEZ.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, SocialInsurance.Germany.Messages.Mappings"/>
-  <template name="DSQUv1">
+  <template name="DSAEv1">
     <field name="KE" literal="DSAE" length="4" rid="true" required="true"/>
     <field name="VF" length="5" required="true"/>
     <field name="BBNRAB" length="15" required="true"/>

@@ -254,10 +254,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             public string NABE1NN { get; set; }
 
             /// <summary>
-            /// Holt oder setzt den Namen der verbalen Angabe zur BBNR-AG
+            /// Holt oder setzt den zweiten Namensbestandteil der verbalen Angabe zur BBNR-AG
             /// </summary>
             /// <remarks>
-            /// Verbale Angabe zur BBNR-AG-nn aus der Betriebsdatei der BA, Länge 28, Mussangabe
+            /// Verbalen Angabe zur BBNR-AG-nn aus der Betriebsdatei der BA, Länge 28, Mussangabe
             /// </remarks>
             public string NABE2NN { get; set; }
 

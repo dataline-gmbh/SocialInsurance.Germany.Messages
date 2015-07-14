@@ -64,7 +64,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Insolvenzgeldumlagepflicht
         /// </summary>
         /// <remarks>
-        /// Entscheidung, ob der Betrieb der Insolvenzgeldumlage-pflicht unterliegt, Länge 1, Mussangabe
+        /// Entscheidung, ob der Betrieb der Insolvenzgeldumlagepflicht unterliegt, Länge 1, Mussangabe
         /// J = Ja, N = Nein
         /// </remarks>
         public string INSOLVUPFL { get; set; }
@@ -73,7 +73,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt das Datum der Entscheidung zur Insolvenzgeldumlagepflicht
         /// </summary>
         /// <remarks>
-        /// Datum der Entscheidung zur Insolvenzgeldumlage-pflicht, Länge 8, Mussangabe unter Bedingungen
+        /// Datum der Entscheidung zur Insolvenzgeldumlagepflicht, Länge 8, Mussangabe unter Bedingungen
         /// </remarks>
         public DateTime DATENTIU { get; set; }
 
@@ -86,7 +86,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public DateTime GUELTIU { get; set; }
 
         /// <summary>
-        /// Holt oder setzt die Betriebsnumer der Krankenkasse, die über die Insolvenzgeldumlagepflicht entschieden hat
+        /// Holt oder setzt die Betriebsnummer der Krankenkasse, die über die Insolvenzgeldumlagepflicht entschieden hat
         /// </summary>
         /// <remarks>
         /// Betriebsnummer der Krankenkasse, die über die Insolvenzgeldumlagepflicht entschieden hat, Länge 15, Mussangabe unter Bedingungen

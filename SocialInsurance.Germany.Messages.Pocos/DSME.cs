@@ -60,7 +60,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt das Verfahren
         /// </summary>
         /// <remarks>
-        /// Verfahren, für das der Datensatz bestimmt ist, Länge 5,
+        /// Verfahren, für das der Datensatz bestimmt ist, Länge 5, Mussangabe
         /// DEUEV = DEÜV- Meldeverfahren RVSNR = Rückmeldung der Versicherungsnummer an den Arbeitgeber, Mussangabe
         /// </remarks>
         public string VF{ get; set; }

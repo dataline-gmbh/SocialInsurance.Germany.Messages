@@ -67,8 +67,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Mitgliedsnummer des Unternehmens
         /// </summary>
         /// <remarks>
-        /// Mitgliedsnummer des Unternehmens beim zuständigen UV-Träger, 
-        /// Länge 20, Mussangabe unter Bedingungen
+        /// Mitgliedsnummer des Unternehmens beim zuständigen UV-Träger, Länge 20, Mussangabe unter Bedingungen
         /// </remarks>
         public string MNR { get; set; }
 
