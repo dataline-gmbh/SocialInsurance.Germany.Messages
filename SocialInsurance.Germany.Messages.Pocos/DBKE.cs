@@ -28,12 +28,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string KE { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Ende des Arbeitsverhältnisses 
+        /// Holt oder setzt das Ende des Arbeitsverhältnisses
         /// </summary>
         /// <remarks>
         /// Ende des Arbeitsverhältnisses am, Länge 8, Mussangabe
         /// (d.h. "Kündigung zum" oder "Ende des befristeten Arbeitsverhältnisses
-        /// am oder bei Ausbildungsverhältnissen das tatsächliche Ende ")
+        /// am oder bei Ausbildungsverhältnissen das tatsächliche Ende")
         /// </remarks>
         public DateTime AVEND { get; set; }
 
@@ -101,7 +101,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Es handelt sich um eine unwiderrufliche Freistellung durch den Arbeitgeber mit tatsächlicher Weiterzahlung des Arbeitsentgeltes
-        /// J = ja, N = nein 
+        /// J = ja, N = nein
         /// </remarks>
         public string AVUWFWZ { get; set; }
 
@@ -128,7 +128,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Monat für den die letzte vollständige Entgeltabrechnung (Rechnungslauf) vor dem Ende des Beschäftigungsverhältnisses durchgeführt wurde, Länge 6, Mussangabe
-        /// (d.h. für den standardmäßig keine Änderungsdatensätze mehr zu erwarten sind) 
+        /// (d.h. für den standardmäßig keine Änderungsdatensätze mehr zu erwarten sind)
         /// </remarks>
         public int AVLETZTRL { get; set; }
 
@@ -140,7 +140,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// 1 = durch den Arbeitgeber 2 = durch den Arbeitnehmer, Arbeitgeber hätte ansonsten nicht zum selben Zeitpunkt gekündigt
         /// 3 = durch den Arbeitnehmer, Arbeitgeber hätte ansonsten zum selben Zeitpunkt gekündigt
         /// 4 = durch einen Aufhebungsvertrag, Arbeitgeber hätte ansonsten nicht zum selben Zeitpunkt gekündigt
-        /// 5 = durch einen Aufhebungsvertrag, Arbeitgeber hätte ansonsten zum selben Zeitpunkt gekündigt 
+        /// 5 = durch einen Aufhebungsvertrag, Arbeitgeber hätte ansonsten zum selben Zeitpunkt gekündigt
         /// </remarks>
         public int AVKUEDU { get; set; }
 
@@ -168,7 +168,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Wurde vom Arbeitnehmer Kündigungsschutzklage gem. § 4 KSchG erhoben? Länge 1, Mussangabe unter Bedingungen
-        /// J = ja, N = nein, U = unbekannt 
+        /// J = ja, N = nein, U = unbekannt
         /// </remarks>
         public string AVKUESCHUKL { get; set; }
 
@@ -264,7 +264,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// die maßgebende (gesetzl., tarifvertragl., vertragl.) Kündigungsfrist des Arbeitgebers, Länge 3, Mussangabe
-        /// (Zahlenwert bezogen auf die Zeiteinheit in KFZE) 
+        /// (Zahlenwert bezogen auf die Zeiteinheit in KFZE)
         /// </remarks>
         public int KF { get; set; }
 
@@ -311,7 +311,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Grund für die fristgebundene Kündigung aus wichtigem Grund, Länge 30, Mussangabe unter Bedingungen
-        /// obwohl die ordentliche Kündigung zeitlich unbegrenzt ausgeschlossen war (Freitext) 
+        /// obwohl die ordentliche Kündigung zeitlich unbegrenzt ausgeschlossen war (Freitext)
         /// </remarks>
         public string KAUAUG { get; set; }
 
@@ -357,7 +357,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt den Grund, wenn Leistungsanspruch ungewiss ist
         /// </summary>
         /// <remarks>
-        /// Grund, wenn Leistungsanspruch wie in der Variablen "Leistungszahlung bei 
+        /// Grund, wenn Leistungsanspruch wie in der Variablen "Leistungszahlung bei
         /// Beendigung des Arbeitsverhältnisses" ungewiss ist (Freitext), Länge 30, Mussangabe unter Bedingungen
         /// </remarks>
         public string AVENLZG { get; set; }
@@ -392,7 +392,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Dauer des Urlaubs bei Inanspruchnahme im Anschluss an das Arbeitsverhältnis
         /// </summary>
         /// <remarks>
-        /// Bei Inanspruchnahme des Urlaubs im Anschluss an das Arbeitsverhältnis betrüge seine 
+        /// Bei Inanspruchnahme des Urlaubs im Anschluss an das Arbeitsverhältnis betrüge seine
         /// Dauer nach den gesetzlichen / (tarif-) vertraglichen Bestimmungen, Länge 8, Mussangabe
         /// </remarks>
         public int BVENUR { get; set; }
@@ -406,7 +406,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// J = ja, N = nein
         /// </remarks>
         public string AVENVL { get; set; }
-        
+
         /// <summary>
         /// Holt oder setzt den Beginn der Vorruhestandsgeldzahlung bei Beendigung des Arbeitsverhältnisses
         /// </summary>

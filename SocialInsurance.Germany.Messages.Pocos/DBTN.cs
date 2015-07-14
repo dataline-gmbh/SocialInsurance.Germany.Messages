@@ -51,7 +51,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Datum, ab wann die Verpflichtung zur Abgabe einer Sofortmeldung besteht bzw. nicht besteht, Länge 8, Mussangabe unter Bedingungen
         /// </remarks>
         public DateTime GUELTSO { get; set; }
-        
+
         /// <summary>
         /// Holt oder setzt die Betriebsnummer der Krankenkasse, die über die Sofortmeldepflicht entschieden hat
         /// </summary>

@@ -55,7 +55,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Verfahren, für das der Datensatz bestimmt ist, Länge 5, Mussangabe
         /// DEUEV = DEÜV- Meldeverfahren
         /// </remarks>
-        public string VF{ get; set; }
+        public string VF { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Betriebsnummer des Erstellers des Datensatzes
@@ -102,14 +102,14 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt die Anzahl der Fehler des Datensatzes
+        /// Holt die Anzahl der Fehler des Datensatzes
         /// </summary>
         /// <remarks>
         /// Anzahl der Fehler des Datensatzes, Länge 1, Mussangabe
         /// </remarks>
-        public int FEAN 
+        public int FEAN
         {
-            get { return DBFE == null ? 0 : DBFE.Count; } 
+            get { return DBFE == null ? 0 : DBFE.Count; }
             private set { }
         }
 
@@ -139,7 +139,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string RESERVE1 { get; set; }
 
         /// <summary>
-        /// Dieses Feld steht der Krankenkasse zur Verfügung
+        /// Holt oder setzt ein der Krankenkasse zur Verfügung stehendes Feld
         /// </summary>
         /// <remarks>
         /// Dieses Feld steht der Krankenkasse zur Verfügung, Länge 20, Kannangabe
@@ -181,7 +181,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Reservefeld, Länge 3, Mussangabe
         /// </remarks>
         public string RESERVE2 { get; set; }
-        
+
         /// <summary>
         /// Holt oder setzt den Abgabegrund
         /// </summary>
@@ -193,7 +193,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string GD { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von GKV-Monatsmeldung
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein GKV-Monatsmeldung vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBMM, Länge 1, Mussangabe
@@ -207,7 +207,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Sozialausgleich
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Sozialausgleich vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBMS, Länge 1, Mussangabe
@@ -221,7 +221,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Gleitzone
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Gleitzone vorhanden
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBGZ, Länge 1, Mussangabe
@@ -235,7 +235,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Beitragsbemessungsgrenze
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Beitragsbemessungsgrenze vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBBG, Länge 1, Mussangabe
@@ -249,7 +249,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein des DBNA
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Name vorhanden ist
         /// </summary>
         /// <remarks>
         /// Name vorhanden, Länge 1, Mussangabe
@@ -263,7 +263,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein des DBGB
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Geburtsangaben vorhanden ist
         /// </summary>
         /// <remarks>
         /// Geburtsangaben vorhanden, Länge 1, Mussangabe
@@ -277,7 +277,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt  das Vorhandensein der Anschrift
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Anschrift vorhanden ist
         /// </summary>
         /// <remarks>
         /// Anschrift vorhanden:, Länge 1, Mussangabe
@@ -291,7 +291,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// GVK Monatsmeldung
+        /// Holt oder setzt den Datenbaustein für GVK Monatsmeldung
         /// </summary>
         public DBMM DBMM
         {
@@ -307,7 +307,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Sozialausgleich
+        /// Holt oder setzt den Datenbaustein für Sozialausgleich
         /// </summary>
         public DBMS DBMS
         {
@@ -323,7 +323,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Gleitzone
+        /// Holt oder setzt den Datenbaustein für Gleitzone
         /// </summary>
         public DBGZ DBGZ
         {
@@ -339,7 +339,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Beitragsbemessungsgrenze
+        /// Holt oder setzt den Datenbaustein für Beitragsbemessungsgrenze
         /// </summary>
         public DBBG DBBG
         {
@@ -355,7 +355,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Name
+        /// Holt oder setzt den Datenbaustein für Holt oder setzt den Datenbaustein für Name
         /// </summary>
         public DBNA DBNA
         {
@@ -371,7 +371,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Geburtsangaben
+        /// Holt oder setzt den Datenbaustein für Geburtsangaben
         /// </summary>
         public DBGB DBGB
         {
@@ -387,7 +387,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Anschrift
+        /// Holt oder setzt den Datenbaustein für Anschrift
         /// </summary>
         public DBAN DBAN
         {
@@ -402,10 +402,15 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
+        /// <summary>
+        /// Holt oder setzt eine Liste von Fehlern
+        /// </summary>
+        public IList<DBFE> DBFE { get; set; }
+
         private IList<DBMM> ListeDBMM { get; set; }
 
         private IList<DBMS> ListeDBMS { get; set; }
-        
+
         private IList<DBGZ> ListeDBGZ { get; set; }
 
         private IList<DBBG> ListeDBBG { get; set; }
@@ -415,10 +420,5 @@ namespace SocialInsurance.Germany.Messages.Pocos
         private IList<DBGB> ListeDBGB { get; set; }
 
         private IList<DBAN> ListeDBAN { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt eine Liste von Fehlern
-        /// </summary>
-        public IList<DBFE> DBFE { get; set; }
     }
 }

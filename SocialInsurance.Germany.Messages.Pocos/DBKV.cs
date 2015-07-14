@@ -14,7 +14,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DBKV"/> Klasse
         /// </summary>
-        public DBKV() 
+        public DBKV()
         {
             KE = "DBKV";
         }
@@ -156,7 +156,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public string KENNZRK { get; set; }
 
-        
         /// <summary>
         /// Holt oder setzt das Reservefeld 3
         /// </summary>

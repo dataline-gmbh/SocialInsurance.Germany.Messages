@@ -10,7 +10,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DBUV"/> Klasse
         /// </summary>
-        public DBUV() 
+        public DBUV()
         {
             KE = "DBUV";
         }
@@ -38,7 +38,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Reservefeld, Länge 15, Mussangabe
         /// </remarks>
         public string RESERVE { get; set; }
-        
+
         /// <summary>
         /// Holt oder setzt den Grund bei Abgabe von UV-Daten
         /// </summary>
@@ -75,7 +75,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Betriebsnummer des UV-Trägers, dessen Gefahrtarif angewendet wird
         /// </summary>
         /// <remarks>
-        /// Betriebsnummer des UV-Trägers, dessen Gefahrtarif angewendet wird, 
+        /// Betriebsnummer des UV-Trägers, dessen Gefahrtarif angewendet wird,
         /// Länge 15(8 Stellen linksbündig mit nachfolgenden Leerzeichen), Mussangabe unter Bedingungen
         /// </remarks>
         public string BBNRGT { get; set; }
@@ -103,6 +103,5 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Geleistete Arbeitsstunden, Länge 4, Mussangabe
         /// </remarks>
         public string ARBSTD { get; set; }
-
     }
 }

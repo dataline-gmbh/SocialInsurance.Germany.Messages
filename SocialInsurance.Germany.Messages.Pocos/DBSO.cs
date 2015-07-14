@@ -14,7 +14,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DBSO"/> Klasse
         /// </summary>
-        public DBSO() 
+        public DBSO()
         {
             KE = "DBSO";
         }
@@ -31,10 +31,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt das Kennzeichen Stornierung
         /// </summary>
         /// <remarks>
-        /// Kennzeichen, Länge 1, Stornierung einer bereits abgegebenen 
+        /// Kennzeichen, Länge 1, Stornierung einer bereits abgegebenen
         /// Sofortmeldung, N = keine Stornierung J = Stornierung, Mussangabe
         /// </remarks>
-        public string KENNZSTSO{ get; set; }
+        public string KENNZSTSO { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beginn des Zeitraums

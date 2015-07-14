@@ -64,8 +64,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Postleitzahl, Länge 10, Mussangabe
-        /// Bei inländischen Anschriften muss die Postleitzahl 5 
-        /// Stellen numerisch sein (linksbündig mit nachfolgenden Leerzeichen). 
+        /// Bei inländischen Anschriften muss die Postleitzahl 5
+        /// Stellen numerisch sein (linksbündig mit nachfolgenden Leerzeichen)
         /// </remarks>
         public string AGPLZ { get; set; }
 

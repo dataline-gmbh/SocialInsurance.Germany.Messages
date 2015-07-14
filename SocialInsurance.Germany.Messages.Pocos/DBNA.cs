@@ -14,7 +14,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DBNA"/> Klasse
         /// </summary>
-        public DBNA() 
+        public DBNA()
         {
             KE = "DBNA";
         }

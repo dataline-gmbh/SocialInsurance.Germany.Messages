@@ -10,7 +10,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// Datenbaustein: DBKS - Knappschaft
     /// </summary>
     public class DBKSK : DBKS
-    {                
+    {
         /// <summary>
         /// Holt oder setzt den Stand der Ausbildung
         /// </summary>

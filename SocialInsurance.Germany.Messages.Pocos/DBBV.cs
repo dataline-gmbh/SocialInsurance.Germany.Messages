@@ -32,7 +32,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Überweisung oder Verrechnung/Gutschrift mit Beitragskonto, Länge 1, Mussangabe
-        /// 0 = Überweisung, 1 = Verrechnung, 2 = Gutschrift 
+        /// 0 = Überweisung, 1 = Verrechnung, 2 = Gutschrift
         /// </remarks>
         public int ÜBVER { get; set; }
 

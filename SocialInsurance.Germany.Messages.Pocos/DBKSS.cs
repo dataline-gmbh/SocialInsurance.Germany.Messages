@@ -65,7 +65,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Angabe der VKNR zur Speicherung im Rentenversicherungskonto(BQ-Format), Länge 2, Mussangabe
         /// Feld wirdvon der See-KK vor Weiterleitung an die RV gefüllt.
         /// </remarks>
-        private int VKNR { get; set; }
+        public int VKNR { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Reservefeld

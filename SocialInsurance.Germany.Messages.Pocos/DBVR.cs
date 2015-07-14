@@ -24,7 +24,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Kennung, um welchen Datenbaustein es sich handelt
-        /// </remarks>        
+        /// </remarks>
         public string KE { get; set; }
 
         /// <summary>
@@ -33,8 +33,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Grund der Abgabe, Länge 2, Mussangabe
         /// </remarks>
-        public int GDMQ{ get; set; }
-        
+        public int GDMQ { get; set; }
+
         /// <summary>
         /// Holt oder setzt die Betriebsnummer der Vergabeanstalt
         /// </summary>

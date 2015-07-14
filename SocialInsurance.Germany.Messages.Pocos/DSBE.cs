@@ -102,7 +102,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt die Anzahl der Fehler des Datensatzes
+        /// Holt die Anzahl der Fehler des Datensatzes
         /// </summary>
         /// <remarks>
         /// Anzahl der Fehler des Datensatzes, Länge 1, Mussangabe
@@ -236,11 +236,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Meldevorgang, Länge 1, Mussangabe
-        /// G = Grundmeldung - die Daten stellen das Gesamtergebnis des abgerechneten Monats (ABMO) dar;
-        /// eventuell vorangegangene Meldungen zum selben ABMO werden ersetzt
-        /// 
-        /// K = Korrekturmeldung - die Daten bewirken eine Korrektur des bisherigen Meldestandes zum ABMO
-        /// (es muss zumindest bereits eine Grundmeldung vorliegen)
+        /// <list type="bullet">
+        /// <item>G = Grundmeldung - die Daten stellen das Gesamtergebnis des abgerechneten Monats (ABMO) dar;
+        /// eventuell vorangegangene Meldungen zum selben ABMO werden ersetzt</item>
+        /// <item>K = Korrekturmeldung - die Daten bewirken eine Korrektur des bisherigen Meldestandes zum ABMO
+        /// (es muss zumindest bereits eine Grundmeldung vorliegen)</item>
+        /// </list>
         /// </remarks>
         public string MEVO { get; set; }
 
@@ -353,7 +354,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public int PB { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Mitgliedsidentifikation
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Mitgliedsidentifikation vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBMI Mitgliedsidentifikation vorhanden, Länge 1, Mussangabe
@@ -367,7 +368,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Höherversicherungsbeitrag
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Höherversicherungsbeitrag vorhanden ist.
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBHB Höherversicherungsbeitrag vorhanden, Länge 1, Mussangabe
@@ -389,7 +390,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string RESERVE { get; set; }
 
         /// <summary>
-        /// Mitgliedsidentifikation
+        /// Holt oder setzt den Datenbaustein für Mitgliedsidentifikation
         /// </summary>
         public DBMI DBMI
         {
@@ -405,7 +406,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Höherversicherungsbeitrag
+        /// Holt oder setzt den Datenbaustein für Höherversicherungsbeitrag
         /// </summary>
         public DBHB DBHB
         {
@@ -420,13 +421,13 @@ namespace SocialInsurance.Germany.Messages.Pocos
             }
         }
 
-        private IList<DBMI> ListeDBMI {get;set;}
-
-        private IList<DBHB> ListeDBHB { get; set; }
-
         /// <summary>
         /// Holt oder setzt eine Liste von Fehlern
         /// </summary>
         public IList<DBFE> DBFE { get; set; }
+
+        private IList<DBMI> ListeDBMI { get; set; }
+
+        private IList<DBHB> ListeDBHB { get; set; }
     }
 }

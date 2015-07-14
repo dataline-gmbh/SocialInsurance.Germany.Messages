@@ -100,7 +100,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt die Anzahl der Fehler des Datensatzes
+        /// Holt die Anzahl der Fehler des Datensatzes
         /// </summary>
         /// <remarks>
         /// Anzahl der Fehler des Datensatzes, Länge 1, Mussangabe
@@ -138,21 +138,21 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string BBNRVU { get; set; }
 
         /// <summary>
-        /// Dieses Feld steht dem Verursacher zur Verfügung
+        /// Holt oder setzt das dem Verursacher zur Verfügung stehende Feld
         /// </summary>
         /// <remarks>
         /// Dieses Feld steht dem Verursacher zur Verfügung, Länge 20, Kannangabe
         /// Bei der Datenübermittlung zwischen dem Arbeitgeber und der Krankenkasse:
-        /// z. B. Aktenzeichen / Personalnummer des Beschäftigten 
+        /// z. B. Aktenzeichen / Personalnummer des Beschäftigten
         /// </remarks>
         public string AZVU { get; set; }
 
         /// <summary>
-        /// Dieses Feld steht der Abrechnungsstelle (z. B. Steuerberater, Rechenzentrum, Arbeitgeber) zur Verfügung 
+        /// Holt oder setzt das der Abrechnungsstelle (z. B. Steuerberater, Rechenzentrum, Arbeitgeber) zur Verfügung stehende Feld
         /// </summary>
         /// <remarks>
         /// Dieses Feld steht der Abrechnungsstelle (z. B. Steuerberater, Rechenzentrum, Arbeitgeber) zur Verfügung, Länge 20
-        /// Identifikationsnummer des Datensatzes 
+        /// Identifikationsnummer des Datensatzes
         /// </remarks>
         public string DSID { get; set; }
 
@@ -165,7 +165,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string BBNRKK { get; set; }
 
         /// <summary>
-        /// Dieses Feld steht der Krankenkasse zur Verfügung.
+        /// Holt oder setzt das der Krankenkasse zur Verfügung stehende Feld
         /// </summary>
         /// <remarks>
         /// Dieses Feld steht der Krankenkasse zur Verfügung, Länge 20, Pflichtangabe, soweit bekannt
@@ -237,7 +237,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string RESERVE { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Erstattungen Arbeitgeberaufwendungen Arbeitsunfähigkeit
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Erstattungen Arbeitgeberaufwendungen Arbeitsunfähigkeit vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBAU, Länge 1, Mussangabe
@@ -251,7 +251,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Erstattungen Beschäftigungsverbot
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Erstattungen Beschäftigungsverbot vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBBT, Länge 1, Mussangabe
@@ -265,7 +265,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Erstattungen Mutterschaft
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Erstattungen Mutterschaft vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBZU, Länge 1, Mussangabe
@@ -279,7 +279,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Bankverbindung
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Bankverbindung vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBBV, Länge 1, Mussangabe
@@ -292,7 +292,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Name
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Name vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBNA, Länge 1, Mussangabe
@@ -305,7 +305,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Ansprechpartner Arbeitgeber
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Ansprechpartner Arbeitgeber vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBAA, Länge 1, Mussangabe
@@ -318,7 +318,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Arbeitsunfähigkeit
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Arbeitsunfähigkeit vorhanden ist
         /// </summary>
         public DBAU DBAU
         {
@@ -334,7 +334,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Beschäftigungsverbot
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Beschäftigungsverbot vorhanden ist
         /// </summary>
         public DBBT DBBT
         {
@@ -350,7 +350,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Mutterschaft
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Mutterschaft vorhanden ist
         /// </summary>
         public DBZU DBZU
         {
@@ -366,7 +366,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Bankverbindung
+        /// Holt oder setzt den Datenbaustein für Bankverbindung
         /// </summary>
         public DBBV DBBV
         {
@@ -382,7 +382,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Name
+        /// Holt oder setzt den Datenbaustein für Name
         /// </summary>
         public DBNA DBNA
         {
@@ -398,7 +398,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Ansprechpartner
+        /// Holt oder setzt den Datenbaustein für Ansprechpartner
         /// </summary>
         public DBAA DBAA
         {
@@ -428,6 +428,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
 
         private IList<DBNA> ListeDBNA { get; set; }
 
-        private IList<DBAA> ListeDBAA { get; set; }        
+        private IList<DBAA> ListeDBAA { get; set; }
     }
 }

@@ -11,7 +11,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// </summary>
     public class DBFE : IDatenbaustein
     {
-
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DBFE"/> Klasse
         /// </summary>

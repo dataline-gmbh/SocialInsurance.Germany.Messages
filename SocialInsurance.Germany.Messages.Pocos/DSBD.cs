@@ -42,9 +42,9 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Verfahren, für das der Datensatz bestimmt ist, Länge 5,  Mussangabe
-        /// BTRAG = Betriebsdatenpflege durch Arbeitgeber, 
-        /// BTRKS = Betriebsdatenpflege durch die Deutsche Rentenversicherung Knappschaft-Bahn-See im selbst verwalteten Betriebsnummern- bereich 
-        /// BTRKV = Betriebsdatenpflege durch Krankenkassen, Deutsche Rentenversicherung Knappschaft-Bahn-See, Arbeitsgemeinschaft Berufsständischer Versorgungseinrichtungen, Unfallversicherung 
+        /// BTRAG = Betriebsdatenpflege durch Arbeitgeber,
+        /// BTRKS = Betriebsdatenpflege durch die Deutsche Rentenversicherung Knappschaft-Bahn-See im selbst verwalteten Betriebsnummernbereich
+        /// BTRKV = Betriebsdatenpflege durch Krankenkassen, Deutsche Rentenversicherung Knappschaft-Bahn-See, Arbeitsgemeinschaft Berufsständischer Versorgungseinrichtungen, Unfallversicherung
         /// BTRRV = Betriebsdatenpflege durch Rentenversicherung
         /// </remarks>
         public string VF { get; set; }
@@ -94,7 +94,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt die Anzahl der Fehler des Datensatzes
+        /// Holt die Anzahl der Fehler des Datensatzes
         /// </summary>
         /// <remarks>
         /// Anzahl der Fehler des Datensatzes, Länge 1, Mussangabe
@@ -297,7 +297,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string EMAILAP { get; set; }
 
         /// <summary>
-        /// Dieses Feld steht dem Verursacher zur Verfügung
+        /// Holt oder setzt das dem Verursacher zur Verfügung stehende Feld
         /// </summary>
         /// <remarks>
         /// Länge 20, Kannangabe
@@ -308,7 +308,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string AZVU { get; set; }
 
         /// <summary>
-        /// Dieses Feld steht dem Verursacher zur Verfügung
+        /// Holt oder setzt das dem Verursacher zur Verfügung stehende Feld
         /// </summary>
         /// <remarks>
         /// Länge 20, Kannangabe
@@ -331,9 +331,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public string RESERVE2 { get; set; }
 
-
         /// <summary>
-        /// Holt oder setzt das Vorhandensein der abweichenden Korrespondenzanschrift
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein abweichende Korrespondenzanschrift vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBKA, Länge 1, Mussangabe
@@ -350,11 +349,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Teilnahmepflichten
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Teilnahmepflichten vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBTN, Länge 1, Mussangabe
-        /// Teilnahmepflichten vorhanden: 
+        /// Teilnahmepflichten vorhanden:
         /// N = Nein
         /// J = Ja
         /// </remarks>
@@ -373,7 +372,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string RESERVE3 { get; set; }
 
         /// <summary>
-        /// Abweichende Korrespondenzanschrift
+        /// Holt oder setzt den Datenbaustein für Abweichende Korrespondenzanschrift
         /// </summary>
         public DBKA DBKA
         {
@@ -389,7 +388,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Teilnahmepflicht
+        /// Holt oder setzt den Datenbaustein für Teilnahmepflicht
         /// </summary>
         public DBTN DBTN
         {
@@ -403,14 +402,14 @@ namespace SocialInsurance.Germany.Messages.Pocos
                 _hatDbtn = null;
             }
         }
-        
-        private IList<DBKA> ListeDBKA { get; set; }
-
-        private IList<DBTN> ListeDBTN { get; set; }
 
         /// <summary>
         /// Holt oder setzt eine Liste von Fehlern
         /// </summary>
         public IList<DBFE> DBFE { get; set; }
+
+        private IList<DBKA> ListeDBKA { get; set; }
+
+        private IList<DBTN> ListeDBTN { get; set; }
     }
 }

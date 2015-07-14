@@ -36,7 +36,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public int ANFZ { get; set; }
 
         /// <summary>
-        /// Liste der sich wiederholenden Felder
+        /// Holt oder setzt die Liste der sich wiederholenden Felder
         /// </summary>
         public IList<DBFZ_FEHL> FEHL { get; set; }
 

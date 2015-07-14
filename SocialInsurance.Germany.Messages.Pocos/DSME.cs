@@ -63,7 +63,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Verfahren, für das der Datensatz bestimmt ist, Länge 5, Mussangabe
         /// DEUEV = DEÜV- Meldeverfahren RVSNR = Rückmeldung der Versicherungsnummer an den Arbeitgeber, Mussangabe
         /// </remarks>
-        public string VF{ get; set; }
+        public string VF { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Betriebsnummer des Erstellers des Datensatzes
@@ -110,14 +110,14 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt die Anzahl der Fehler des Datensatzes
+        /// Holt die Anzahl der Fehler des Datensatzes
         /// </summary>
         /// <remarks>
         /// Anzahl der Fehler des Datensatzes, Länge 1, Mussangabe
         /// </remarks>
-        public int FEAN 
+        public int FEAN
         {
-            get { return DBFE == null ? 0 : DBFE.Count; } 
+            get { return DBFE == null ? 0 : DBFE.Count; }
             private set { }
         }
 
@@ -154,7 +154,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Bei der Datenübermittlung zwischen dem Arbeitgeber
         /// und der Datenannahmestelle: z
         /// B. Aktenzeichen / Personalnummer
-        /// des Beschäftigten 
+        /// des Beschäftigten
         /// </remarks>
         public string AZVU { get; set; }
 
@@ -167,7 +167,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Einzugsstelle oder der berufsständischen Versorgungseinrichtung
         /// Bei Sofortmeldungen ist die Betriebsnummer
         /// der Datenstelle der Träger der Rentenversicherung
-        /// anzugeben. (8 Stellen linksbündig mit nachfolgenden Leerzeichen) 
+        /// anzugeben. (8 Stellen linksbündig mit nachfolgenden Leerzeichen)
         /// </remarks>
         public string BBNRKK { get; set; }
 
@@ -198,7 +198,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Personengruppe, Länge 3, Mussangabe
         /// </remarks>
-          
         public string PERSGR { get; set; }
 
         /// <summary>
@@ -207,10 +206,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Grund der Abgabe, Länge 2, Mussangabe
         /// </remarks>
-        public string GD{ get; set; }
+        public string GD { get; set; }
 
         /// <summary>
-        /// Holt den Schlüssel zur Staatsangehörigkeit
+        /// Holt oder setzt den Schlüssel zur Staatsangehörigkeit
         /// </summary>
         /// <remarks>
         /// Staatsangehörigkeitsschlüssel des statistischen Bundesamtes, Länge 3, Mussangabe unter Bedingungen
@@ -218,7 +217,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string SASC { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein des DBME
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Meldesachverhalt vorhanden ist
         /// </summary>
         /// <remarks>
         /// Meldesachverhalt vorhanden, Länge 1, Mussangabe
@@ -232,7 +231,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein des DBNA
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Name vorhanden ist
         /// </summary>
         /// <remarks>
         /// Name vorhanden, Länge 1, Mussangabe
@@ -246,7 +245,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein des DBGB
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Geburtsangaben vorhanden ist
         /// </summary>
         /// <remarks>
         /// Geburtsangaben vorhanden, Länge 1, Mussangabe
@@ -260,7 +259,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt  das Vorhandensein der Anschrift
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Anschrift vorhanden ist
         /// </summary>
         /// <remarks>
         /// Anschrift vorhanden:, Länge 1, Mussangabe
@@ -274,7 +273,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein der Europäischen Versicherungsnummer
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Europäischen Versicherungsnummer vorhanden ist
         /// </summary>
         /// <remarks>
         /// Europäische VSNR vorhanden, Länge 1, Mussangabe
@@ -288,7 +287,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein der Unfallversicherung
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Unfallversicherung vorhanden ist
         /// </summary>
         /// <remarks>
         /// Unfallversicherung vorhanden, Länge 1, Mussangabe
@@ -302,7 +301,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Knappschaft oder See
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Knappschaft/See vorhanden ist
         /// </summary>
         /// <remarks>
         /// Knappschaft/See vorhanden:, Länge 1, Mussangabe
@@ -314,7 +313,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Sozialversicherungsausweis
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Sozialversicherungsausweis vorhanden ist
         /// </summary>
         /// <remarks>
         /// Sozialversicherungsausweis vorhanden, Länge 1, Mussangabe
@@ -328,7 +327,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Vergabe/Rückmeldung
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Vergabe/Rückmeldung vorhanden ist
         /// </summary>
         /// <remarks>
         /// Vergabe/Rückmeldung vorhanden, Länge 1, Mussangabe
@@ -342,7 +341,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Rückmeldung gerinfügig Beschäftigte
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Rückmeldung gerinfügig Beschäftigte vorhanden ist
         /// </summary>
         /// <remarks>
         /// Rückmeldung geringfügig Beschäftigte vorhanden, Stellen 180-180, Mussangabe
@@ -373,7 +372,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// 1 = Meldung eines Arbeitgebers aus systemgeprüftem Programm (§ 18 DEÜV)
         /// 4 = Erstellung oder Änderung einer Meldung durch die Krankenkasse
         /// 5 = Meldung eines Arbeitgebers mittels maschinell erstellter Ausfüllhilfe (§ 18 DEÜV)
-        /// 9 = Meldung von der Deutschen Rentenversicherung Knappschaft-Bahn-See aufgrund einer 
+        /// 9 = Meldung von der Deutschen Rentenversicherung Knappschaft-Bahn-See aufgrund einer
         /// Meldung eines Arbeitgebers durch Meldebeleg nach§ 28a Absatz 6a SGB IV
         /// </remarks>
         public string MMUEB { get; set; }
@@ -389,7 +388,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string KENNZUP { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Sofortmeldung
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Sofortmeldung vorhanden ist
         /// </summary>
         /// <remarks>
         /// Sofortmeldung vorhanden, Länge 1, Mussangabe
@@ -403,7 +402,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Statuskennzeichen 
+        /// Holt oder setzt das Statuskennzeichen
         /// </summary>
         /// <remarks>
         /// Statuskennzeichen für Ehegatte/Lebenspartner/ Abkömmling, Länge 1, Mussangabe
@@ -413,14 +412,14 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string KENNZSTA { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Überwachung Einzugsvergütung
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Einzugsvergütung vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBUE, Länge 1, Mussangabe
         /// Überwachung Einzugsvergütung vorhanden:
         /// N = keine Überwachungsdaten
         /// J = Überwachungsdatenvorhanden
-        /// Anmerkung: Bei diesem Merkmalsfeld für den Datenbaustein „Überwachung Einzugsvergütung“ handelt es sich um       
+        /// Anmerkung: Bei diesem Merkmalsfeld für den Datenbaustein „Überwachung Einzugsvergütung“ handelt es sich um
         /// eine Information, die ausschließlich die Rentenversicherung intern nutzt. Die Prüfungen mit Ausnahme DSME500
         /// sind nicht im gemeinsamen Kernprüfprogramm realisiert, sondern hier nur dokumentiert, damit mögliche Inhalte transparent sind
         /// </remarks>
@@ -435,7 +434,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string VERNRKP { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Krankenversicherung
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Krankenversicherung vorhanden ist
         /// </summary>
         /// <remarks>
         /// Krankenversicherung vorhanden, Länge 1, Mussangabe
@@ -449,12 +448,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Reservefeld
+        /// Holt oder setzt das Reservefeld
         /// </summary>
-        private string RESERVE { get; set; }       
+        public string RESERVE { get; set; }
 
         /// <summary>
-        /// Meldesachverhalt
+        /// Holt oder setzt den Datenbaustein für Meldesachverhalt
         /// </summary>
         public DBME DBME
         {
@@ -470,7 +469,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Name
+        /// Holt oder setzt den Datenbaustein für Name
         /// </summary>
         public DBNA DBNA
         {
@@ -486,7 +485,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Geburtsangaben
+        /// Holt oder setzt den Datenbaustein für Geburtsangaben
         /// </summary>
         public DBGB DBGB
         {
@@ -502,7 +501,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Anschrift
+        /// Holt oder setzt den Datenbaustein für Anschrift
         /// </summary>
         public DBAN DBAN
         {
@@ -518,7 +517,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Europäische Versicherungsnummer
+        /// Holt oder setzt den Datenbaustein für Europäische Versicherungsnummer
         /// </summary>
         public DBEU DBEU
         {
@@ -532,13 +531,13 @@ namespace SocialInsurance.Germany.Messages.Pocos
                 _hatDbeu = null;
             }
         }
-               
+
         /// <summary>
-        /// Unfallversicherung
+        /// Holt oder setzt den Datenbaustein für Unfallversicherung
         /// </summary>
         public DBUV DBUV
         {
-            get 
+            get
             {
                 return ListeDBUV == null ? null : ListeDBUV.SingleOrDefault();
             }
@@ -548,9 +547,9 @@ namespace SocialInsurance.Germany.Messages.Pocos
                 _hatDbuv = null;
             }
         }
-                
+
         /// <summary>
-        /// Knappschaft See
+        /// Holt oder setzt den Datenbaustein für Knappschaft See
         /// </summary>
         public DBKS DBKS
         {
@@ -566,7 +565,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Sozialversicherungsausweis
+        /// Holt oder setzt den Datenbaustein für Sozialversicherungsausweis
         /// </summary>
         public DBSV DBSV
         {
@@ -582,7 +581,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Krankenversicherung
+        /// Holt oder setzt den Datenbaustein für Krankenversicherung
         /// </summary>
         public DBKV DBKV
         {
@@ -598,7 +597,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Vergabe
+        /// Holt oder setzt den Datenbaustein für Vergabe
         /// </summary>
         public DBVR DBVR
         {
@@ -614,7 +613,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Rückmeldung
+        /// Holt oder setzt den Datenbaustein für Rückmeldung
         /// </summary>
         public DBRG DBRG
         {
@@ -630,7 +629,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Sofortmeldung
+        /// Holt oder setzt den Datenbaustein für Sofortmeldung
         /// </summary>
         public DBSO DBSO
         {
@@ -644,6 +643,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
                 _hatDbso = null;
             }
         }
+
+        /// <summary>
+        /// Holt oder setzt eine Liste von Fehlern
+        /// </summary>
+        public IList<DBFE> DBFE { get; set; }
 
         private IList<DBME> ListeDBME { get; set; }
 
@@ -668,11 +672,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         private IList<DBVR> ListeDBVR { get; set; }
 
         private IList<DBRG> ListeDBRG { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt eine Liste von Fehlern
-        /// </summary>
-        public IList<DBFE> DBFE { get; set; }
 
         private class WrapperDBKS
         {

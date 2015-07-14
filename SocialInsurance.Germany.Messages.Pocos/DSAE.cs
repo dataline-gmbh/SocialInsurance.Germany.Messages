@@ -46,7 +46,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// DEUEV = DEÜV- Meldeverfahren, Mussangabe
         /// </remarks>
         public string VF { get; set; }
-        
+
         /// <summary>
         /// Holt oder setzt die Betriebsnummer des Erstellers des Datensatzes
         /// </summary>
@@ -92,7 +92,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt die Anzahl der Fehler des Datensatzes
+        /// Holt die Anzahl der Fehler des Datensatzes
         /// </summary>
         /// <remarks>
         /// Anzahl der Fehler des Datensatzes, Länge 1, Mussangabe
@@ -104,7 +104,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setut die Versicherungsnummer
+        /// Holt oder setzt die Versicherungsnummer
         /// </summary>
         /// <remarks>
         /// Versicherungsnummer in der Form: bbttmmjjassp, Länge 12, Mussangabe
@@ -128,7 +128,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string BBNRVU { get; set; }
 
         /// <summary>
-        /// Steht dem Verursacher zur Verfügung
+        /// Holt oder setzt das dem Verursacher zur Verfügung stehende Feld
         /// </summary>
         /// <remarks>
         /// Dieses Feld steht dem Verursacher zur Verfügung, Länge 20, Mussangabe unter Bedingungen
@@ -138,14 +138,14 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Holt oder setzt das Reservefeld 1
         /// </summary>
-        /// <remarks> 
+        /// <remarks>
         /// Reservefeld, Länge 58, Mussangabe
         ///  Das Feld ist aus Vereinheitlichungsgründen enthalten und hier auf Grundstellung (Leerzeichen)
         /// </remarks>
         public string RESERVE1 { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Anrechnungszeiten
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Anrechnungszeiten vorhanden ist
         /// </summary>
         /// <remarks>
         /// Merkmal, Datenbaustein DBAZ, Länge 1, Mussangabe
@@ -154,12 +154,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMAZ
         {
-            get { return _hatDbaz ?? DBAZ!= null; }
+            get { return _hatDbaz ?? DBAZ != null; }
             set { _hatDbaz = value; }
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Entgeltersatzleistungszeiten
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Entgeltersatzleistungszeiten vorhanden ist
         /// </summary>
         /// <remarks>
         /// Merkmal, Datenbaustein DBEZ, Länge 1, Mussangabe
@@ -201,7 +201,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string VERNRKP { get; set; }
 
         /// <summary>
-        /// Anrechnungszeiten
+        /// Holt oder setzt den Datenbaustein für Anrechnungszeiten
         /// </summary>
         public DBAZ DBAZ
         {
@@ -217,7 +217,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Entgeltersatzleistungszeiten
+        /// Holt oder setzt den Datenbaustein für Entgeltersatzleistungszeiten
         /// </summary>
         public DBEZ DBEZ
         {
@@ -231,14 +231,14 @@ namespace SocialInsurance.Germany.Messages.Pocos
                 _hatDbez = null;
             }
         }
-        
-        private IList<DBAZ> ListeDBAZ {get;set;}
-
-        private IList<DBEZ> ListeDBEZ { get; set; }
 
         /// <summary>
         /// Holt oder setzt eine Liste von Fehlern
         /// </summary>
         public IList<DBFE> DBFE { get; set; }
+
+        private IList<DBAZ> ListeDBAZ { get; set; }
+
+        private IList<DBEZ> ListeDBEZ { get; set; }
     }
 }

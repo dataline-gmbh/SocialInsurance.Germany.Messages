@@ -36,7 +36,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public int ANSTSOB { get; set; }
 
         /// <summary>
-        /// Liste der sich wiederholenden Felder
+        /// Holt oder setzt die Liste der sich wiederholenden Felder
         /// </summary>
         public IList<DBSE_STSOB> STSOB { get; set; }
 
@@ -50,7 +50,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
             /// </summary>
             /// <remarks>
             /// Plus (+) / Leerzeichen = positiver Betrag
-            /// Minus (-) = negativer Betrag 
+            /// Minus (-) = negativer Betrag
             /// </remarks>
             public string VSTSOB { get; set; }
 

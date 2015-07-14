@@ -36,7 +36,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public int ANSB { get; set; }
 
         /// <summary>
-        /// Liste der sich wiederholenden Felder
+        /// Holt oder setzt die Liste der sich wiederholenden Felder
         /// </summary>
         public IList<DBSB_SB> SB { get; set; }
 

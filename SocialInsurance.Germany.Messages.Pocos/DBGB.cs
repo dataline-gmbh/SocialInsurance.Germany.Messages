@@ -14,7 +14,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DBGB"/> Klasse
         /// </summary>
-        public DBGB() 
+        public DBGB()
         {
             KE = "DBGB";
         }

@@ -89,7 +89,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt die Anzahl der Fehler des Datensatzes
+        /// Holt die Anzahl der Fehler des Datensatzes
         /// </summary>
         /// <remarks>
         /// Anzahl der Fehler des Datensatzes, Länge 1, Mussangabe
@@ -101,7 +101,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Ist bei der Anforderung leer
+        /// Holt oder setzt die Versicherungsnummer/Verfahrensnummer
         /// </summary>
         /// <remarks>
         /// Ist bei der Anforderung leer, Länge 12
@@ -121,13 +121,13 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Betriebsnummer des Verursachers des Datensatzes, Länge 15, Mussangabe
-        /// Bei Meldungen zwischen dem Arbeitgeber und der ZSS ist hier 
+        /// Bei Meldungen zwischen dem Arbeitgeber und der ZSS ist hier
         /// die Betriebsnummer des Beschäftigungsbetriebes anzugeben
         /// </remarks>
         public string BBNRVU { get; set; }
 
         /// <summary>
-        /// Dieses Feld steht dem Verursacher zur Verfügung
+        /// Holt oder setzt das dem Verursacher zur Verfügung stehende Feld
         /// </summary>
         /// <remarks>
         /// Dieses Feld steht dem Verursacher zur Verfügung, Länge 20, Kannangabe
@@ -144,10 +144,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string BBNRKK { get; set; }
 
         /// <summary>
-        /// Entfällt hier
+        /// Holt oder setzt das Aktenzeichen KK
         /// </summary>
         /// <remarks>
-        /// Entfällt hier, Grundstellung liefern, Länge 20, Mussangabe 
+        /// Entfällt hier, Grundstellung liefern, Länge 20, Mussangabe
         /// </remarks>
         public string AZKK { get; set; }
 
@@ -164,12 +164,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Personengruppe gemäß Anlage 3 der Gemeinsamen Grundsätze, Länge 3, Mussangabe
-        /// für die Datenerfassung und Datenübermittlung zur Sozialversicherung nach § 28b Abs. 2 SGB IV 
+        /// für die Datenerfassung und Datenübermittlung zur Sozialversicherung nach § 28b Abs. 2 SGB IV
         /// </remarks>
         public int PERSGR { get; set; }
 
         /// <summary>
-        /// Entfällt hier
+        /// Holt oder setzt den Abgabegrund
         /// </summary>
         /// <remarks>
         /// Entfällt hier, Grundstellung liefern, Länge 2, Mussangabe
@@ -185,7 +185,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string SASC { get; set; }
 
         /// <summary>
-        /// Holt oder setzt, ob die Person als Beamter/Soldat/Richter tätig ist
+        /// Holt oder setzt einen Wert, der angibt, ob die Person als Beamter/Soldat/Richter tätig ist
         /// </summary>
         /// <remarks>
         /// Ist diese Person als Beamter / Richter / Soldat tätig? Länge 1, Mussangabe
@@ -194,31 +194,31 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public bool BEAM { get; set; }
 
         /// <summary>
-        /// Entfällt hier
+        /// Holt oder setzt das Anfangsdatum des Zeitraumes innerhalb des Meldemonats, der durch diese Meldung abgedeckt wird
         /// </summary>
         /// <remarks>
-        /// Entfällt hier, Grundstellung liefern, Länge 8, Mussangabe 
+        /// Entfällt hier, Grundstellung liefern, Länge 8, Mussangabe
         /// </remarks>
         public string MONATBEG { get; set; }
 
         /// <summary>
-        /// Entfällt hier
+        /// Holt oder setzt das Enddatum des Zeitraumes innerhalb des Meldemonats, der durch diese Meldung abgedeckt wird
         /// </summary>
         /// <remarks>
-        /// Entfällt hier, Grundstellung liefern, Länge 2, Mussangabe 
+        /// Entfällt hier, Grundstellung liefern, Länge 2, Mussangabe
         /// </remarks>
         public string MONATEND { get; set; }
 
         /// <summary>
-        /// Entfällt hier
+        /// Holt oder setzt die abweichende Betriebsnummer des Unternehmens
         /// </summary>
         /// <remarks>
-        /// Entfällt hier, Grundstellung liefern, Länge 15, Mussangabe 
+        /// Entfällt hier, Grundstellung liefern, Länge 15, Mussangabe
         /// </remarks>
         public string BBNRALT { get; set; }
 
         /// <summary>
-        /// Dieses Feld steht dem Verursacher zur Verfügung
+        /// Holt oder setzt das dem Verursacher zur Verfügung stehende Feld
         /// </summary>
         /// <remarks>
         /// Dieses Feld steht dem Verursacher zur Verfügung, Länge 20, Kannangabe
@@ -227,7 +227,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string DSID { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Kennzeichen Stornierung
+        /// Holt oder setzt einen Wert, der angibt, ob es sich um eine Stornierung handelt
         /// </summary>
         /// <remarks>
         /// Kennzeichen, Stornierung einer bereits abgegebenen Meldung
@@ -236,7 +236,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public bool KENNZST { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von ELENA Grunddaten
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein ELENA Grunddaten vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBEN, Länge 1, Mussangabe
@@ -245,7 +245,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public bool MMEN { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Name
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Name vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBNA, Länge 1, Mussangabe
@@ -254,7 +254,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public bool MMNA { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Geburtsangaben
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Geburtsangaben vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBGB, Länge 1, Mussangabe
@@ -263,33 +263,34 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public bool MMGB { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Anschrift
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Anschrift vorhanden ist
         /// </summary>
         /// <remarks>
-        /// Datenbaustein DBAN, Länge 1, 
+        /// Datenbaustein DBAN, Länge 1,
         /// J = Anschriftsangaben vorhanden
         /// </remarks>
         public bool MMAN { get; set; }
+
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Arbeitgeberangaben
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Arbeitgeberangaben vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBAG, Länge 1, Mussangabe
         /// N = keine Arbeitgeberangaben
         /// </remarks>
-        public bool  MMAG{ get; set; }
+        public bool MMAG { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von von Arbeitgeberanschrift abweichender Beschäftigungsort
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Arbeitgeberanschrift abweichender Beschäftigungsort vorhanden ist
         /// </summary>
         /// <remarks>
-        /// Datenbaustein DBAB 
+        /// Datenbaustein DBAB
         /// N = kein abweichender Beschäftigungsort
         /// </remarks>
         public bool MMAB { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Fehlzeiten
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Fehlzeiten vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBFZ, Länge 1, Mussangabe
@@ -298,7 +299,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public bool MMFZ { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von steuerpflichtigen sonstigen Bezug
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Steuerpflichtiger sonstiger Bezug vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBSE, Länge 1, Mussangabe
@@ -307,7 +308,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public bool MMSE { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von steuerfreien Bezügen
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Steuerfreie Bezüge vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBSB, Länge 1, Mussangabe
@@ -316,7 +317,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public bool MMSB { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Ausbildung
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Ausbildung vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBAS, Länge 1, Mussangabe
@@ -325,7 +326,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public bool MMAS { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Zusatzdaten
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Zusatzdaten vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBZD, Länge 1, Mussangabe
@@ -334,7 +335,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public bool MMZD { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Nebenbeschäftigung Arbeitslose
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Nebenbeschäftigung Arbeitslose vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBNB, Länge 1, Mussangabe
@@ -343,19 +344,19 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public bool MMNB { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Heimatarbeiter
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Heimatarbeiter vorhanden ist
         /// </summary>
         /// <remarks>
-        /// Datenbaustein DBHA, Länge 1, Mussangabe 
+        /// Datenbaustein DBHA, Länge 1, Mussangabe
         /// N = keine DBHA-Daten
         /// </remarks>
         public bool MMHA { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Kündigung/Entlassung
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Kündigung/Entlassung vorhanden ist
         /// </summary>
         /// <remarks>
-        /// Datenbaustein DBKE, Länge 1, Mussangabe 
+        /// Datenbaustein DBKE, Länge 1, Mussangabe
         /// N = keine DBKE-Daten
         /// </remarks>
         public bool MMKE { get; set; }
@@ -368,16 +369,15 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public string RESERVE2 { get; set; }
 
+        /// <summary>
+        /// Holt oder setzt eine Liste von Fehlern
+        /// </summary>
+        public IList<DBFE> DBFE { get; set; }
+
         private IList<DBNA> ListeDBNA { get; set; }
 
         private IList<DBGB> ListeDBGB { get; set; }
 
         private IList<DBAN> ListeDBAN { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt eine Liste von Fehlern
-        /// </summary>
-        public IList<DBFE> DBFE { get; set; }
-      
     }
 }

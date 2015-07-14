@@ -44,7 +44,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public int TATSURLTAGE { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das im  bescheinigten Bruttoarbeitsentgelt enthaltene Urlaubsentgelt 
+        /// Holt oder setzt das im  bescheinigten Bruttoarbeitsentgelt enthaltene Urlaubsentgelt
         /// </summary>
         /// <remarks>
         /// Im bescheinigten Bruttoarbeitsentgelt enthaltenes Urlaubsentgelt, Länge 10, Mussangabe

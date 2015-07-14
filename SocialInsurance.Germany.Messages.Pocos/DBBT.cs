@@ -111,7 +111,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// 0 = individuelles Beschäftigungsverbot(ärztliches Attest liegt vor)
         /// 1 = generelles Beschäftigungsverbot
         /// 2 = teilweise individuelles Beschäftigungsverbot(ärztliches Attest liegt vor)
-        /// 3 = teilweise generelles Beschäftigungsverbot 
+        /// 3 = teilweise generelles Beschäftigungsverbot
         /// </remarks>
         public int ARTBV { get; set; }
 

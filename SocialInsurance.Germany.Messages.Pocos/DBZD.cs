@@ -32,7 +32,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Fiktives Bruttoarbeitsentgelt, Länge 10, Mussangabe
-        /// das ohne Berücksichtigung von Sonderregelungen beitragspflichtig gewesen wäre 
+        /// das ohne Berücksichtigung von Sonderregelungen beitragspflichtig gewesen wäre
         /// (z. B. Gleitzone, Kug, Beschäftigungssicherungsvereinbarung nach § 421t Abs. 7 SGB III
         /// Arbeitsentgelt, welches ohne Altersteilzeitvereinbarung erzielt worden wäre)
         /// </remarks>
@@ -43,7 +43,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Plus (+) / Leerzeichen = positiver Betrag
-        /// Minus (-) = negativer Betrag 
+        /// Minus (-) = negativer Betrag
         /// </remarks>
         public string VPAULSB { get; set; }
 
@@ -60,12 +60,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Plus (+) / Leerzeichen = positiver Betrag
-        /// Minus (-) = negativer Betrag 
+        /// Minus (-) = negativer Betrag
         /// </remarks>
         public string VPAULGER { get; set; }
 
         /// <summary>
-        /// Holt oder setzt den pauschal besteuerten Arbeitslohn nach §§ 40, 40a EStG 
+        /// Holt oder setzt den pauschal besteuerten Arbeitslohn nach §§ 40, 40a EStG
         /// </summary>
         /// <remarks>
         /// pauschal besteuerter Arbeitslohn nach §§ 40, 40a EStG, Länge 10, Mussangabe
@@ -76,16 +76,16 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt das Vorzeichen sonstig pauschal besteuerter Arbeitslohn
         /// </summary>
         /// <remarks>
-        /// Plus (+) / Leerzeichen = positiver Betrag 
+        /// Plus (+) / Leerzeichen = positiver Betrag
         /// Minus (-) = negativer Betrag
         /// </remarks>
         public string VPAULSO { get; set; }
 
         /// <summary>
-        /// Holt oder setzt den pauschal besteuerten Arbeitslohn nach § 40b EStG 
+        /// Holt oder setzt den pauschal besteuerten Arbeitslohn nach § 40b EStG
         /// </summary>
         /// <remarks>
-        /// pauschal besteuerter Arbeitslohn nach § 40b EStG, Länge 10, Mussangabe 
+        /// pauschal besteuerter Arbeitslohn nach § 40b EStG, Länge 10, Mussangabe
         /// </remarks>
         public int PAULSO { get; set; }
 
@@ -152,7 +152,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Plus (+) / Leerzeichen = positiver Betrag
-        /// Minus (-) = negativer Betrag 
+        /// Minus (-) = negativer Betrag
         /// </remarks>
         public string VSOLIPAU { get; set; }
 
@@ -170,7 +170,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Plus (+) / Leerzeichen = positiver Betrag
-        /// Minus (-) = negativer Betrag 
+        /// Minus (-) = negativer Betrag
         /// </remarks>
         public string VKISTPAU { get; set; }
 
@@ -192,7 +192,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public int AZAEGR { get; set; }
 
         /// <summary>
-        /// Holt oder setzt die durchschnittliche regelmäßige Arbeitszeit eines vergleichbaren Vollzeitbeschäftigten in Stunden pro Woche 
+        /// Holt oder setzt die durchschnittliche regelmäßige Arbeitszeit eines vergleichbaren Vollzeitbeschäftigten in Stunden pro Woche
         /// </summary>
         /// <remarks>
         /// durchschnittliche regelmäßige Arbeitszeit eines vergleichbaren Vollzeitbeschäftigten in Stunden pro Woche, Länge 4, Mussangabe

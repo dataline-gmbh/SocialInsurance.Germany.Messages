@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
@@ -14,6 +15,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Holt die Liste der Fehler-Datenbausteine
         /// </summary>
-        IList<DBFE> DBFE { get;}
+        IList<DBFE> DBFE { get; }
     }
 }

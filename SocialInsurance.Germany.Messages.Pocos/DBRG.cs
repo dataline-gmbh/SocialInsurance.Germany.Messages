@@ -156,7 +156,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public int ANRG { get; set; }
 
         /// <summary>
-        /// Liste der sich wiederholenden Felder
+        /// Holt oder setzt die Liste der sich wiederholenden Felder
         /// </summary>
         public IList<DBRG_BESCH> BESCH { get; set; }
 
@@ -257,7 +257,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
             /// Holt oder setzt den zweiten Namensbestandteil der verbalen Angabe zur BBNR-AG
             /// </summary>
             /// <remarks>
-            /// Verbalen Angabe zur BBNR-AG-nn aus der Betriebsdatei der BA, Länge 28, Mussangabe
+            /// Verbale Angabe zur BBNR-AG-nn aus der Betriebsdatei der BA, Länge 28, Mussangabe
             /// </remarks>
             public string NABE2NN { get; set; }
 
@@ -293,6 +293,5 @@ namespace SocialInsurance.Germany.Messages.Pocos
             /// </remarks>
             public string PZBNN { get; set; }
         }
-
     }
 }

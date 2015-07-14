@@ -14,7 +14,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DBMS"/> Klasse
         /// </summary>
-        public DBMS() 
+        public DBMS()
         {
             KE = "DBMS";
         }

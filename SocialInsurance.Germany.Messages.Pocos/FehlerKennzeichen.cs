@@ -16,19 +16,23 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// keine Fehler, 0
         /// </summary>
         Fehlerfrei,
+
         /// <summary>
         /// enthält Fehler, 1
         /// </summary>
         Fehlerhaft,
+
         /// <summary>
         /// Manuelle Nachbearbeitung
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never)]
         ManuelleNachbearbeitung,
+
         /// <summary>
         /// Hinweis
         /// </summary>
         Hinweis,
+
         /// <summary>
         /// Ergebnis Statusfeststellung
         /// </summary>

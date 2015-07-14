@@ -75,6 +75,8 @@
     <EmbeddedResource Include="Btrag\btrag.dat" />
     <EmbeddedResource Include="Deuev\deuev10.dat" />
     <EmbeddedResource Include="Deuev\deuev20.dat" />
+    <EmbeddedResource Include="Deuev\deuev11.dat" />
+    <EmbeddedResource Include="Deuev\deuev12.dat" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

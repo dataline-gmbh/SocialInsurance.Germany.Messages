@@ -38,7 +38,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Postleitzahl, Länge 10, Mussangabe unter Bedingungen
         /// </remarks>
         public string PLZ { get; set; }
-                
+
         /// <summary>
         /// Holt oder setzt den Ort
         /// </summary>

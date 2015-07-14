@@ -83,7 +83,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Hinweis: Wenn die Hausnummer nicht separat abgelegt werden kann, ist es zulässig, die Hausnummer in das
         /// Feld Straße zu übernehmen. In solchen Fällen muss dann das Feld Hausnummer auf Grundstellung (Leerzeichen) stehen.
         /// </remarks>
-        /// 
         public string HNR { get; set; }
 
         /// <summary>

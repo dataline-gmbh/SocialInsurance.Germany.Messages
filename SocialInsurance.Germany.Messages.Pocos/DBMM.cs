@@ -14,7 +14,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DBMM"/> Klasse
         /// </summary>
-        public DBMM() 
+        public DBMM()
         {
             KE = "DBMM";
         }
@@ -28,7 +28,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string KE { get; set; }
 
         /// <summary>
-        /// Hol oder setzt das GKV-Monatsmeldung Kennzeichen
+        /// Holt oder setzt das GKV-Monatsmeldung Kennzeichen
         /// </summary>
         /// <remarks>
         /// Kennzeichen, ob eine GKVMonatsmeldung abzugeben ist, Länge 1, Mussangabe

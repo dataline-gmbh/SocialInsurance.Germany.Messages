@@ -92,7 +92,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt die Anzahl der Fehler des Datensatzes
+        /// Holt die Anzahl der Fehler des Datensatzes
         /// </summary>
         /// <remarks>
         /// Anzahl der Fehler des Datensatzes, Länge 1, Mussangabe
@@ -120,11 +120,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string RESERVE2 { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von Quittung-DEÜV
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Quittung-DEÜV vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBQD, Länge 1, Mussangabe
-        /// QUITTUNG-DEÜV vorhanden: 
+        /// QUITTUNG-DEÜV vorhanden:
         /// J = Quittung-DEÜV ist vorhanden, N = Quittung-DEÜV ist nicht vorhanden
         /// </remarks>
         public bool MMQD
@@ -134,11 +134,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von DBQK-Quittung-KVDR
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein DBQK-Quittung-KVDR vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBQK, Länge 1, Mussangabe
-        /// QUITTUNG-KVDR vorhanden: 
+        /// QUITTUNG-KVDR vorhanden:
         /// J = Quittung-KVDR ist vorhanden, N = Quittung-KVDR ist nicht vorhanden
         /// </remarks>
         public bool MMQK
@@ -148,11 +148,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Vorhandensein von DBQV-Quittung-KVNR
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein DBQV-Quittung-KVNR vorhanden ist
         /// </summary>
         /// <remarks>
         /// Datenbaustein DBQV, Länge 1, Mussangabe
-        /// QUITTUNG-KVNR vorhanden: 
+        /// QUITTUNG-KVNR vorhanden:
         /// J = Quittung-KVNR ist vorhanden, N = Quittung-KVNR ist nicht vorhanden
         /// </remarks>
         public bool MMQV
@@ -170,7 +170,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string RESERVE3 { get; set; }
 
         /// <summary>
-        /// Quittung-DEÜV
+        /// Holt oder setzt den Datenbaustein für Quittung-DEÜV
         /// </summary>
         public DBQD DBQD
         {
@@ -186,7 +186,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// DBQK-Quittung-KVDR
+        /// Holt oder setzt den Datenbaustein für DBQK-Quittung-KVDR
         /// </summary>
         public DBQK DBQK
         {
@@ -200,9 +200,9 @@ namespace SocialInsurance.Germany.Messages.Pocos
                 _hatDbqk = null;
             }
         }
-        
+
         /// <summary>
-        /// DBQV-Quittung-KVNR
+        /// Holt oder setzt den Datenbaustein für DBQV-Quittung-KVNR
         /// </summary>
         public DBQV DBQV
         {
@@ -216,16 +216,16 @@ namespace SocialInsurance.Germany.Messages.Pocos
                 _hatDbqv = null;
             }
         }
-                
-        private IList<DBQD> ListeDBQD { get; set; }
-
-        private IList<DBQK> ListeDBQK { get; set; }
-
-        private IList<DBQV> ListeDBQV { get; set; }
 
         /// <summary>
         /// Holt oder setzt eine Liste von Fehlern
         /// </summary>
         public IList<DBFE> DBFE { get; set; }
+
+        private IList<DBQD> ListeDBQD { get; set; }
+
+        private IList<DBQK> ListeDBQK { get; set; }
+
+        private IList<DBQV> ListeDBQV { get; set; }
     }
 }

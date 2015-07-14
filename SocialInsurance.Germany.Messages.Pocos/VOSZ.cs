@@ -90,6 +90,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Holt oder setzt eine Liste von Fehlern
         /// </summary>
-        public IList<DBFE> DBFE{ get; set; }
+        public IList<DBFE> DBFE { get; set; }
     }
 }

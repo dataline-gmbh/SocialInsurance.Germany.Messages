@@ -14,7 +14,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DBEU"/> Klasse
         /// </summary>
-        public DBEU() 
+        public DBEU()
         {
             KE = "DBEU";
         }
@@ -36,7 +36,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public int GBLD { get; set; }
 
         /// <summary>
-        /// HOlt oder setzt die Europäische VSNR
+        /// Holt oder setzt die Europäische VSNR
         /// </summary>
         /// <remarks>
         /// Europäische VSNR, Stellen 008-027, Pflichtangabe, soweit bekannt

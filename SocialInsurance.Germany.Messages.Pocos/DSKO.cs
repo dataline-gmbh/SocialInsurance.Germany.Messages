@@ -8,7 +8,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
     /// Datensatz: DSKO - Datensatz Kommunikation
-    /// </summary>    
+    /// </summary>
     public class DSKO : IDatensatz
     {
         private FehlerKennzeichen? _fekz;
@@ -88,7 +88,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt die Anzahl der Fehler des Datensatzes
+        /// Holt die Anzahl der Fehler des Datensatzes
         /// </summary>
         /// <remarks>
         /// Anzahl der Fehler des Datensatzes, Länge 1, Mussangabe
@@ -105,7 +105,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Betriebsnummer des Erstellers der Datei, Länge 15, Mussangabe
         /// Sie ist auf dem Weg zur Datenannahmestelle der Einzugsstelle identisch
-        /// mit der Betriebsnummer des Absenders der Datei; Stellen 010 bis 024 
+        /// mit der Betriebsnummer des Absenders der Datei; Stellen 010 bis 024
         /// (8 Stellen linksbündig mit nachfolgenden Leerzeichen)
         /// </remarks>
         public string BBNRER { get; set; }

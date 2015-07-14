@@ -9,7 +9,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// NCSZ - Nachlaufsatz
     /// </summary>
-    public class NCSZ
+    public class NCSZ : IDatensatz
     {
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="NCSZ"/> Klasse
@@ -86,5 +86,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Versionsnummer des Nachlaufsatzes, 01 - 99, Länge 2, Mussangabe
         /// </remarks>
         public int VERNR { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt eine Liste von Fehlern
+        /// </summary>
+        public IList<DBFE> DBFE { get; set; }
     }
 }

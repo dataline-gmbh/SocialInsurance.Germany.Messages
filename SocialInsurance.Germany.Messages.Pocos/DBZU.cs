@@ -113,7 +113,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt das kalendertägliche Nettoarbeitsentgelt aus anderer(auch geringfügiger) Beschäftigung
         /// </summary>
         /// <remarks>
-        /// Kalendertägliches Nettoarbeitsentgelt aus anderer (auch geringfügiger) Beschäftigung, Länge 9, Pflichtangabe, soweit bekannt 
+        /// Kalendertägliches Nettoarbeitsentgelt aus anderer (auch geringfügiger) Beschäftigung, Länge 9, Pflichtangabe, soweit bekannt
         /// </remarks>
         public int NETBESCH { get; set; }
 

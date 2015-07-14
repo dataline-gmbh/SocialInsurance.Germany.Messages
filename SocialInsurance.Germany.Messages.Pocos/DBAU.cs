@@ -66,7 +66,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Entgelt, Länge 9, Mussangabe
-        /// EURO/CENT mit zwei Nachkommastellen, Angabe in Abhängigkeit vom Feld ARTENTGELT 
+        /// EURO/CENT mit zwei Nachkommastellen, Angabe in Abhängigkeit vom Feld ARTENTGELT
         /// </remarks>
         public int EG { get; set; }
 
@@ -94,7 +94,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Ausgefallene Kalendertage/Arbeitstage/Arbeitsstunden, Länge 5, Mussangabe
         /// mit zwei Nachkommastellen
-        /// </remarks>  
+        /// </remarks>
         public int AUSFALLZ { get; set; }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Angabe der wöchentlichen Arbeitszeit in Stunden und Industrieminuten, Länge 4, Mussangabe unter Bedingungen
-        /// mit zwei Nachkommastellen in der Form: 0000 (z. B. 3750) 
+        /// mit zwei Nachkommastellen in der Form: 0000 (z. B. 3750)
         /// </remarks>
         public int AZWOECH { get; set; }
 
@@ -120,7 +120,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Angabe der täglichen Arbeitszeit in Stunden und Industrieminuten, Länge 4, Mussangabe unter Bedingungen
-        /// mit zwei Nachkommastellen in der Form: 0000 (z. B. 3750) 
+        /// mit zwei Nachkommastellen in der Form: 0000 (z. B. 3750)
         /// </remarks>
         public int AZTGL { get; set; }
 
@@ -129,7 +129,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Fortgezahltes Bruttoarbeitsentgelt(ohne Einmalzahlung), Länge 9, Mussangabe
-        /// in der Form: EURO/CENT 
+        /// in der Form: EURO/CENT
         /// </remarks>
         public int FBRUTAU { get; set; }
 
@@ -138,7 +138,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Fortgezahlte Arbeitgeberanteile(ohne Einmalzahlung), Länge 9, Pflichtangabe, soweit bekannt
-        /// in der Form: EURO/CENT 
+        /// in der Form: EURO/CENT
         /// </remarks>
         public int FAGANT { get; set; }
 
@@ -147,7 +147,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Prozentsatz der Erstattung, Länge 5, Mussangabe
-        /// in der Form: 00000 (80% = 08000) 
+        /// in der Form: 00000 (80% = 08000)
         /// </remarks>
         public int ESATZ { get; set; }
 
@@ -156,7 +156,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Erstattungsbetrag, Länge 9, Mussangabe
-        /// in der Form: EURO/CENT 
+        /// in der Form: EURO/CENT
         /// </remarks>
         public int EBU { get; set; }
 

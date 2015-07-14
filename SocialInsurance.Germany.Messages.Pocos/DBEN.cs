@@ -40,7 +40,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Steuerklasse des Arbeitnehmers bzw. Grundstellung, Länge 1, Mussangabe
-        /// 1-6: gemäß der Steuerklassen-Definition oder 0 (keine) 
+        /// 1-6: gemäß der Steuerklassen-Definition oder 0 (keine)
         /// </remarks>
         public int STKL { get; set; }
 
@@ -85,8 +85,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt den Beitragsgruppenschlüssel
         /// </summary>
         /// <remarks>
-        /// Beitragsgruppenschlüssel gemäß Anlage 1 der Gemeinsamen Grundsätze 
-        /// für die Datenerfassung und Datenübermittlung zur Sozialversicherung 
+        /// Beitragsgruppenschlüssel gemäß Anlage 1 der Gemeinsamen Grundsätze
+        /// für die Datenerfassung und Datenübermittlung zur Sozialversicherung
         /// </remarks>
         public int BYGR { get; set; }
 
@@ -96,7 +96,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// vereinbarte Wochenarbeitszeit in Stunden, Länge 4, Mussangabe
         /// Steht die Wochenarbeitszeit nicht fest, ist ein Durchschnittswert
-        /// für die im Abrechnungszeitraum geleistete Wochenstundenzahl zu errechnen. 
+        /// für die im Abrechnungszeitraum geleistete Wochenstundenzahl zu errechnen
         /// </remarks>
         public int AZWOECH { get; set; }
 
@@ -123,7 +123,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Plus (+) / Leerzeichen = positiver Betrag
-        /// Minus (-) = negativer Betrag 
+        /// Minus (-) = negativer Betrag
         /// </remarks>
         public string VSTBREGSO { get; set; }
 
@@ -140,7 +140,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// laufendes Sozialversicherungsbruttoentgelt, Länge 10, Mussangabe
-        /// begrenzt auf die Beitragsbemessungsgrenze der Allgemeinen Rentenversicherung 
+        /// begrenzt auf die Beitragsbemessungsgrenze der Allgemeinen Rentenversicherung
         /// </remarks>
         public int SVBREGLF { get; set; }
 
@@ -234,7 +234,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Plus (+) / Leerzeichen = positiver Betrag
-        /// Minus (-) = negativer Betrag 
+        /// Minus (-) = negativer Betrag
         /// </remarks>
         public string VLSTLF { get; set; }
 
@@ -251,7 +251,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Plus (+) / Leerzeichen = positiver Betrag
-        /// Minus (-) = negativer Betrag 
+        /// Minus (-) = negativer Betrag
         /// </remarks>
         public string VLSTSOB { get; set; }
 
@@ -268,7 +268,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Plus (+) / Leerzeichen = positiver Betrag
-        /// Minus (-) = negativer Betrag 
+        /// Minus (-) = negativer Betrag
         /// </remarks>
         public string VSOLILF { get; set; }
 
@@ -302,7 +302,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Plus (+) / Leerzeichen = positiver Betrag
-        /// Minus (-) = negativer Betrag 
+        /// Minus (-) = negativer Betrag
         /// </remarks>
         public string VKISTLF { get; set; }
 
@@ -319,7 +319,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         /// <remarks>
         /// Plus (+) / Leerzeichen = positiver Betrag
-        /// Minus (-) = negativer Betrag 
+        /// Minus (-) = negativer Betrag
         /// </remarks>
         public string VKISTSOB { get; set; }
 
