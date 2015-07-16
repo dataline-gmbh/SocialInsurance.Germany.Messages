@@ -77,6 +77,16 @@
     <EmbeddedResource Include="Deuev\deuev20.dat" />
     <EmbeddedResource Include="Deuev\deuev11.dat" />
     <EmbeddedResource Include="Deuev\deuev12.dat" />
+    <EmbeddedResource Include="Deuev\deuev30.dat" />
+    <EmbeddedResource Include="Deuev\deuev32.dat" />
+    <EmbeddedResource Include="Deuev\deuev31.dat" />
+    <EmbeddedResource Include="Deuev\deuev34.dat" />
+    <EmbeddedResource Include="Deuev\deuev57.dat" />
+    <EmbeddedResource Include="Deuev\deuev51.dat" />
+    <EmbeddedResource Include="Deuev\deuev13.dat" />
+    <EmbeddedResource Include="Deuev\deuev33.dat" />
+    <EmbeddedResource Include="Deuev\deuev36.dat" />
+    <EmbeddedResource Include="Deuev\deuev49.dat" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
