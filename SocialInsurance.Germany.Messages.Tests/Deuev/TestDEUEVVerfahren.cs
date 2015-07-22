@@ -10,6 +10,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
 {
     public class TestDEUEVVerfahren : TestBasis
     {
+        /// <summary>
+        /// Anmeldung
+        /// </summary>
         [Fact]
         public void TestDEUEVMeldung10()
         {
@@ -28,12 +31,16 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 streamObject = reader.Read();
                 var dsme = Assert.IsType<DSME>(streamObject);
                 Assert.Equal(dsme.GD, "10");
+                Assert.DoesNotContain(dsme.PERSGR, new List<string> { "103", "900", "901" });
                 Assert.NotNull(dsme.DBME);
                 Assert.NotNull(dsme.DBNA);
                 Assert.NotNull(dsme.DBAN);
                 Assert.Null(dsme.DBUV);
                 Assert.Null(dsme.DBSV);
+                Assert.Null(dsme.DBVR);
+                Assert.Null(dsme.DBRG);
                 Assert.Null(dsme.DBSO);
+                Assert.Null(dsme.DBKV);
                 if (string.IsNullOrWhiteSpace(dsme.VSNR))
                 {
                     Assert.NotNull(dsme.DBGB);
@@ -51,6 +58,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             }
         }
 
+        /// <summary>
+        /// Anmeldung
+        /// </summary>
         [Fact]
         public void TestDEUEVMeldung11()
         {
@@ -69,15 +79,17 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 streamObject = reader.Read();
                 var dsme = Assert.IsType<DSME>(streamObject);
                 Assert.Equal(dsme.GD, "11");
+                Assert.DoesNotContain(dsme.PERSGR, new List<string> { "103", "900", "901" });
                 Assert.NotNull(dsme.DBME);
                 Assert.NotNull(dsme.DBNA);
-                Assert.Null(dsme.DBGB);
                 Assert.NotNull(dsme.DBAN);
                 Assert.Null(dsme.DBEU);
                 Assert.Null(dsme.DBUV);
-                Assert.Null(dsme.DBKS);
-                Assert.Null(dsme.DBSO);
                 Assert.Null(dsme.DBSV);
+                Assert.Null(dsme.DBVR);
+                Assert.Null(dsme.DBRG);
+                Assert.Null(dsme.DBSO);
+                Assert.Null(dsme.DBKV);
                 writer.Write(dsme);
                 CheckDSMEEntrys(reader, writer);
                 writer.Close();
@@ -89,6 +101,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             }
         }
 
+        /// <summary>
+        /// Anmeldung
+        /// </summary>
         [Fact]
         public void TestDEUEVMeldung12()
         {
@@ -107,8 +122,17 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 streamObject = reader.Read();
                 var dsme = Assert.IsType<DSME>(streamObject);
                 Assert.Equal(dsme.GD, "12");
+                Assert.DoesNotContain(dsme.PERSGR, new List<string> { "103", "900", "901" });
                 writer.Write(dsme);
                 Assert.NotNull(dsme.DBME);
+                Assert.NotNull(dsme.DBNA);
+                Assert.NotNull(dsme.DBAN);
+                Assert.Null(dsme.DBUV);
+                Assert.Null(dsme.DBSV);
+                Assert.Null(dsme.DBVR);
+                Assert.Null(dsme.DBRG);
+                Assert.Null(dsme.DBSO);
+                Assert.Null(dsme.DBKV);
                 CheckDSMEEntrys(reader, writer);
                 writer.Close();
                 Assert.Equal(input, output.ToString());
@@ -119,6 +143,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             }
         }
 
+        /// <summary>
+        /// Anmeldung
+        /// </summary>
         [Fact]
         public void TestDEUEVMeldung13()
         {
@@ -137,6 +164,15 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 streamObject = reader.Read();
                 var dsme = Assert.IsType<DSME>(streamObject);
                 Assert.Equal(dsme.GD, "13");
+                Assert.NotNull(dsme.DBME);
+                Assert.NotNull(dsme.DBNA);
+                Assert.NotNull(dsme.DBAN);
+                Assert.Null(dsme.DBUV);
+                Assert.Null(dsme.DBSV);
+                Assert.Null(dsme.DBVR);
+                Assert.Null(dsme.DBRG);
+                Assert.Null(dsme.DBSO);
+                Assert.Null(dsme.DBKV);
                 writer.Write(dsme);
                 CheckDSMEEntrys(reader, writer);
                 writer.Close();
@@ -148,6 +184,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             }
         }
 
+        /// <summary>
+        /// Sofortmeldung für Beschäftigte
+        /// </summary>
         [Fact]
         public void TestDEUEVMeldung20()
         {
@@ -166,11 +205,13 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 streamObject = reader.Read();
                 var dsme = Assert.IsType<DSME>(streamObject);
                 Assert.Equal(dsme.GD, "20");
-                Assert.NotNull(dsme.DBNA);
+                Assert.Null(dsme.DBME);
                 Assert.NotNull(dsme.DBSO);
                 Assert.Null(dsme.DBUV);
                 Assert.Null(dsme.DBKS);
                 Assert.Null(dsme.DBSV);
+                Assert.Null(dsme.DBRG);
+                Assert.Null(dsme.DBKV);
                 if (string.IsNullOrWhiteSpace(dsme.VSNR))
                 {
                     Assert.NotNull(dsme.DBGB);
@@ -189,6 +230,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             }
         }
 
+        /// <summary>
+        /// Abmeldung
+        /// </summary>
         [Fact]
         public void TestDEUEVMeldung30()
         {
@@ -207,6 +251,14 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 streamObject = reader.Read();
                 var dsme = Assert.IsType<DSME>(streamObject);
                 Assert.Equal(dsme.GD, "30");
+                Assert.NotNull(dsme.DBME);
+                Assert.Null(dsme.DBGB);
+                Assert.Null(dsme.DBEU);
+                Assert.Null(dsme.DBSV);
+                Assert.Null(dsme.DBVR);
+                Assert.Null(dsme.DBRG);
+                Assert.Null(dsme.DBSO);
+                Assert.Null(dsme.DBKV);
                 writer.Write(dsme);
                 CheckDSMEEntrys(reader, writer);
                 writer.Close();
@@ -218,6 +270,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             }
         }
 
+        /// <summary>
+        /// Abmeldung, Wechsel der Krankenkasse/Einzugsstelle
+        /// </summary>
         [Fact]
         public void TestDEUEVMeldung31()
         {
@@ -236,6 +291,14 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 streamObject = reader.Read();
                 var dsme = Assert.IsType<DSME>(streamObject);
                 Assert.Equal(dsme.GD, "31");
+                Assert.NotNull(dsme.DBME);
+                Assert.Null(dsme.DBGB);
+                Assert.Null(dsme.DBEU);
+                Assert.Null(dsme.DBSV);
+                Assert.Null(dsme.DBVR);
+                Assert.Null(dsme.DBRG);
+                Assert.Null(dsme.DBSO);
+                Assert.Null(dsme.DBKV);
                 writer.Write(dsme);
                 CheckDSMEEntrys(reader, writer);
                 writer.Close();
@@ -247,6 +310,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             }
         }
 
+        /// <summary>
+        /// Abmeldung
+        /// </summary>
         [Fact]
         public void TestDEUEVMeldung32()
         {
@@ -265,6 +331,14 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 streamObject = reader.Read();
                 var dsme = Assert.IsType<DSME>(streamObject);
                 Assert.Equal(dsme.GD, "32");
+                Assert.NotNull(dsme.DBME);
+                Assert.Null(dsme.DBGB);
+                Assert.Null(dsme.DBEU);
+                Assert.Null(dsme.DBSV);
+                Assert.Null(dsme.DBVR);
+                Assert.Null(dsme.DBRG);
+                Assert.Null(dsme.DBSO);
+                Assert.Null(dsme.DBKV);
                 writer.Write(dsme);
                 CheckDSMEEntrys(reader, writer);
                 writer.Close();
@@ -276,6 +350,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             }
         }
 
+        /// <summary>
+        /// Abmeldung
+        /// </summary>
         [Fact]
         public void TestDEUEVMeldung33()
         {
@@ -294,6 +371,14 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 streamObject = reader.Read();
                 var dsme = Assert.IsType<DSME>(streamObject);
                 Assert.Equal(dsme.GD, "33");
+                Assert.NotNull(dsme.DBME);
+                Assert.Null(dsme.DBGB);
+                Assert.Null(dsme.DBEU);
+                Assert.Null(dsme.DBSV);
+                Assert.Null(dsme.DBVR);
+                Assert.Null(dsme.DBRG);
+                Assert.Null(dsme.DBSO);
+                Assert.Null(dsme.DBKV);
                 writer.Write(dsme);
                 CheckDSMEEntrys(reader, writer);
                 writer.Close();
@@ -305,6 +390,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             }
         }
 
+        /// <summary>
+        /// Abmeldung
+        /// </summary>
         [Fact]
         public void TestDEUEVMeldung34()
         {
@@ -323,6 +411,14 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 streamObject = reader.Read();
                 var dsme = Assert.IsType<DSME>(streamObject);
                 Assert.Equal(dsme.GD, "34");
+                Assert.NotNull(dsme.DBME);
+                Assert.Null(dsme.DBGB);
+                Assert.Null(dsme.DBEU);
+                Assert.Null(dsme.DBSV);
+                Assert.Null(dsme.DBVR);
+                Assert.Null(dsme.DBRG);
+                Assert.Null(dsme.DBSO);
+                Assert.Null(dsme.DBKV);
                 writer.Write(dsme);
                 CheckDSMEEntrys(reader, writer);
                 writer.Close();
@@ -334,6 +430,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             }
         }
 
+        /// <summary>
+        /// Wechsel des Entgeltabrechnungssystems
+        /// </summary>
         [Fact]
         public void TestDEUEVMeldung36()
         {
@@ -351,9 +450,15 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 writer.Write(dsko);
                 streamObject = reader.Read();
                 var dsme = Assert.IsType<DSME>(streamObject);
-                Assert.NotNull(dsme.DBME);
-                Assert.NotNull(dsme.DBUV);
                 Assert.Equal(dsme.GD, "36");
+                Assert.NotNull(dsme.DBME);
+                Assert.Null(dsme.DBGB);
+                Assert.Null(dsme.DBEU);
+                Assert.Null(dsme.DBSV);
+                Assert.Null(dsme.DBVR);
+                Assert.Null(dsme.DBRG);
+                Assert.Null(dsme.DBSO);
+                Assert.Null(dsme.DBKV);
                 writer.Write(dsme);
                 CheckDSMEEntrys(reader, writer);
                 writer.Close();
@@ -365,6 +470,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             }
         }
 
+        /// <summary>
+        /// Abmeldung, Ende der Beschäftigung wegen Tod
+        /// </summary>
         [Fact]
         public void TestDEUEVMeldung49()
         {
@@ -382,9 +490,15 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 writer.Write(dsko);
                 streamObject = reader.Read();
                 var dsme = Assert.IsType<DSME>(streamObject);
-                Assert.NotNull(dsme.DBME);
-                Assert.NotNull(dsme.DBUV);
                 Assert.Equal(dsme.GD, "49");
+                Assert.NotNull(dsme.DBME);
+                Assert.Null(dsme.DBGB);
+                Assert.Null(dsme.DBEU);
+                Assert.Null(dsme.DBSV);
+                Assert.Null(dsme.DBVR);
+                Assert.Null(dsme.DBRG);
+                Assert.Null(dsme.DBSO);
+                Assert.Null(dsme.DBKV);
                 writer.Write(dsme);
                 CheckDSMEEntrys(reader, writer);
                 writer.Close();
@@ -396,6 +510,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             }
         }
 
+        /// <summary>
+        /// Unterbrechung der Beschäftigung ohne Fortzahlung des Arbeitsentgelts
+        /// </summary>
         [Fact]
         public void TestDEUEVMeldung51()
         {
@@ -415,7 +532,13 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 var dsme = Assert.IsType<DSME>(streamObject);
                 Assert.Equal(dsme.GD, "51");
                 Assert.NotNull(dsme.DBME);
-                Assert.NotNull(dsme.DBUV);
+                Assert.Null(dsme.DBGB);
+                Assert.Null(dsme.DBEU);
+                Assert.Null(dsme.DBSV);
+                Assert.Null(dsme.DBVR);
+                Assert.Null(dsme.DBRG);
+                Assert.Null(dsme.DBSO);
+                Assert.Null(dsme.DBKV);
                 writer.Write(dsme);
                 CheckDSMEEntrys(reader, writer);
                 writer.Close();
@@ -427,6 +550,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             }
         }
 
+        /// <summary>
+        /// Sondermeldung
+        /// </summary>
         [Fact]
         public void TestDEUEVMeldung57()
         {
@@ -446,7 +572,13 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 var dsme = Assert.IsType<DSME>(streamObject);
                 Assert.Equal(dsme.GD, "57");
                 Assert.NotNull(dsme.DBME);
-                Assert.NotNull(dsme.DBUV);
+                Assert.Null(dsme.DBGB);
+                Assert.Null(dsme.DBEU);
+                Assert.Null(dsme.DBSV);
+                Assert.Null(dsme.DBVR);
+                Assert.Null(dsme.DBRG);
+                Assert.Null(dsme.DBSO);
+                Assert.Null(dsme.DBKV);
                 writer.Write(dsme);
                 CheckDSMEEntrys(reader, writer);
                 writer.Close();
