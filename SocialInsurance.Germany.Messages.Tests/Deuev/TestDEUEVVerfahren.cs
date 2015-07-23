@@ -16,45 +16,27 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         [Fact]
         public void TestDEUEVMeldung10()
         {
-            var input = LoadData("deuev10.dat").ReadToEnd();
-            var output = new StringWriter();
-            var writer = StreamFactory.CreateWriter("deuev", output);
-            var reader = StreamFactory.CreateReader("deuev", new StringReader(input));
-            try
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10.dat");
+            foreach (var dsme in deuevMessage.DSME)
             {
-                var streamObject = reader.Read();
-                var vosz = Assert.IsType<VOSZ>(streamObject);
-                writer.Write(vosz);
-                streamObject = reader.Read();
-                var dsko = Assert.IsType<DSKO>(streamObject);
-                writer.Write(dsko);
-                streamObject = reader.Read();
-                var dsme = Assert.IsType<DSME>(streamObject);
-                Assert.Equal(dsme.GD, "10");
-                Assert.DoesNotContain(dsme.PERSGR, new List<string> { "103", "900", "901" });
-                Assert.NotNull(dsme.DBME);
-                Assert.NotNull(dsme.DBNA);
-                Assert.NotNull(dsme.DBAN);
-                Assert.Null(dsme.DBUV);
-                Assert.Null(dsme.DBSV);
-                Assert.Null(dsme.DBVR);
-                Assert.Null(dsme.DBRG);
-                Assert.Null(dsme.DBSO);
-                Assert.Null(dsme.DBKV);
-                if (string.IsNullOrWhiteSpace(dsme.VSNR))
+                if (dsme.GD == "10")
                 {
-                    Assert.NotNull(dsme.DBGB);
-                    Assert.NotNull(dsme.DBEU);
+                    Assert.DoesNotContain(dsme.PERSGR, new List<string> { "103", "900", "901" });
+                    Assert.NotNull(dsme.DBME);
+                    Assert.NotNull(dsme.DBNA);
+                    Assert.NotNull(dsme.DBAN);
+                    Assert.Null(dsme.DBUV);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                    if (string.IsNullOrWhiteSpace(dsme.VSNR))
+                    {
+                        Assert.NotNull(dsme.DBGB);
+                        Assert.NotNull(dsme.DBEU);
+                    }
                 }
-
-                writer.Write(dsme);
-                CheckDSMEEntrys(reader, writer);
-                writer.Close();
-                Assert.Equal(input, output.ToString());
-            }
-            finally
-            {
-                reader.Close();
             }
         }
 
@@ -64,40 +46,23 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         [Fact]
         public void TestDEUEVMeldung11()
         {
-            var input = LoadData("deuev11.dat").ReadToEnd();
-            var output = new StringWriter();
-            var writer = StreamFactory.CreateWriter("deuev", output);
-            var reader = StreamFactory.CreateReader("deuev", new StringReader(input));
-            try
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev11.dat");
+            foreach (var dsme in deuevMessage.DSME)
             {
-                var streamObject = reader.Read();
-                var vosz = Assert.IsType<VOSZ>(streamObject);
-                writer.Write(vosz);
-                streamObject = reader.Read();
-                var dsko = Assert.IsType<DSKO>(streamObject);
-                writer.Write(dsko);
-                streamObject = reader.Read();
-                var dsme = Assert.IsType<DSME>(streamObject);
-                Assert.Equal(dsme.GD, "11");
-                Assert.DoesNotContain(dsme.PERSGR, new List<string> { "103", "900", "901" });
-                Assert.NotNull(dsme.DBME);
-                Assert.NotNull(dsme.DBNA);
-                Assert.NotNull(dsme.DBAN);
-                Assert.Null(dsme.DBEU);
-                Assert.Null(dsme.DBUV);
-                Assert.Null(dsme.DBSV);
-                Assert.Null(dsme.DBVR);
-                Assert.Null(dsme.DBRG);
-                Assert.Null(dsme.DBSO);
-                Assert.Null(dsme.DBKV);
-                writer.Write(dsme);
-                CheckDSMEEntrys(reader, writer);
-                writer.Close();
-                Assert.Equal(input, output.ToString());
-            }
-            finally
-            {
-                reader.Close();
+                if (dsme.GD == "11")
+                {
+                    Assert.DoesNotContain(dsme.PERSGR, new List<string> { "103", "900", "901" });
+                    Assert.NotNull(dsme.DBME);
+                    Assert.NotNull(dsme.DBNA);
+                    Assert.NotNull(dsme.DBAN);
+                    Assert.Null(dsme.DBEU);
+                    Assert.Null(dsme.DBUV);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                }
             }
         }
 
@@ -107,39 +72,22 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         [Fact]
         public void TestDEUEVMeldung12()
         {
-            var input = LoadData("deuev12.dat").ReadToEnd();
-            var output = new StringWriter();
-            var writer = StreamFactory.CreateWriter("deuev", output);
-            var reader = StreamFactory.CreateReader("deuev", new StringReader(input));
-            try
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev12.dat");
+            foreach (var dsme in deuevMessage.DSME)
             {
-                var streamObject = reader.Read();
-                var vosz = Assert.IsType<VOSZ>(streamObject);
-                writer.Write(vosz);
-                streamObject = reader.Read();
-                var dsko = Assert.IsType<DSKO>(streamObject);
-                writer.Write(dsko);
-                streamObject = reader.Read();
-                var dsme = Assert.IsType<DSME>(streamObject);
-                Assert.Equal(dsme.GD, "12");
-                Assert.DoesNotContain(dsme.PERSGR, new List<string> { "103", "900", "901" });
-                writer.Write(dsme);
-                Assert.NotNull(dsme.DBME);
-                Assert.NotNull(dsme.DBNA);
-                Assert.NotNull(dsme.DBAN);
-                Assert.Null(dsme.DBUV);
-                Assert.Null(dsme.DBSV);
-                Assert.Null(dsme.DBVR);
-                Assert.Null(dsme.DBRG);
-                Assert.Null(dsme.DBSO);
-                Assert.Null(dsme.DBKV);
-                CheckDSMEEntrys(reader, writer);
-                writer.Close();
-                Assert.Equal(input, output.ToString());
-            }
-            finally
-            {
-                reader.Close();
+                if (dsme.GD == "12")
+                {
+                    Assert.DoesNotContain(dsme.PERSGR, new List<string> { "103", "900", "901" });
+                    Assert.NotNull(dsme.DBME);
+                    Assert.NotNull(dsme.DBNA);
+                    Assert.NotNull(dsme.DBAN);
+                    Assert.Null(dsme.DBUV);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                }
             }
         }
 
@@ -149,38 +97,21 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         [Fact]
         public void TestDEUEVMeldung13()
         {
-            var input = LoadData("deuev13.dat").ReadToEnd();
-            var output = new StringWriter();
-            var writer = StreamFactory.CreateWriter("deuev", output);
-            var reader = StreamFactory.CreateReader("deuev", new StringReader(input));
-            try
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev13.dat");
+            foreach (var dsme in deuevMessage.DSME)
             {
-                var streamObject = reader.Read();
-                var vosz = Assert.IsType<VOSZ>(streamObject);
-                writer.Write(vosz);
-                streamObject = reader.Read();
-                var dsko = Assert.IsType<DSKO>(streamObject);
-                writer.Write(dsko);
-                streamObject = reader.Read();
-                var dsme = Assert.IsType<DSME>(streamObject);
-                Assert.Equal(dsme.GD, "13");
-                Assert.NotNull(dsme.DBME);
-                Assert.NotNull(dsme.DBNA);
-                Assert.NotNull(dsme.DBAN);
-                Assert.Null(dsme.DBUV);
-                Assert.Null(dsme.DBSV);
-                Assert.Null(dsme.DBVR);
-                Assert.Null(dsme.DBRG);
-                Assert.Null(dsme.DBSO);
-                Assert.Null(dsme.DBKV);
-                writer.Write(dsme);
-                CheckDSMEEntrys(reader, writer);
-                writer.Close();
-                Assert.Equal(input, output.ToString());
-            }
-            finally
-            {
-                reader.Close();
+                if (dsme.GD == "13")
+                {
+                    Assert.NotNull(dsme.DBME);
+                    Assert.NotNull(dsme.DBNA);
+                    Assert.NotNull(dsme.DBAN);
+                    Assert.Null(dsme.DBUV);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                }
             }
         }
 
@@ -190,44 +121,27 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         [Fact]
         public void TestDEUEVMeldung20()
         {
-            var input = LoadData("deuev20.dat").ReadToEnd();
-            var output = new StringWriter();
-            var writer = StreamFactory.CreateWriter("deuev", output);
-            var reader = StreamFactory.CreateReader("deuev", new StringReader(input));
-            try
-            {
-                var streamObject = reader.Read();
-                var vosz = Assert.IsType<VOSZ>(streamObject);
-                writer.Write(vosz);
-                streamObject = reader.Read();
-                var dsko = Assert.IsType<DSKO>(streamObject);
-                writer.Write(dsko);
-                streamObject = reader.Read();
-                var dsme = Assert.IsType<DSME>(streamObject);
-                Assert.Equal(dsme.GD, "20");
-                Assert.Null(dsme.DBME);
-                Assert.NotNull(dsme.DBSO);
-                Assert.Null(dsme.DBUV);
-                Assert.Null(dsme.DBKS);
-                Assert.Null(dsme.DBSV);
-                Assert.Null(dsme.DBRG);
-                Assert.Null(dsme.DBKV);
-                if (string.IsNullOrWhiteSpace(dsme.VSNR))
-                {
-                    Assert.NotNull(dsme.DBGB);
-                    Assert.NotNull(dsme.DBAN);
-                    Assert.NotNull(dsme.DBEU);
-                }
-
-                writer.Write(dsme);
-                CheckDSMEEntrys(reader, writer);
-                writer.Close();
-                Assert.Equal(input, output.ToString());
-            }
-            finally
-            {
-                reader.Close();
-            }
+           var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev20.dat");
+           foreach (var dsme in deuevMessage.DSME)
+           {
+               if (dsme.GD == "20")
+               {
+                   Assert.Equal(dsme.GD, "20");
+                   Assert.Null(dsme.DBME);
+                   Assert.NotNull(dsme.DBSO);
+                   Assert.Null(dsme.DBUV);
+                   Assert.Null(dsme.DBKS);
+                   Assert.Null(dsme.DBSV);
+                   Assert.Null(dsme.DBRG);
+                   Assert.Null(dsme.DBKV);
+                   if (string.IsNullOrWhiteSpace(dsme.VSNR))
+                   {
+                       Assert.NotNull(dsme.DBGB);
+                       Assert.NotNull(dsme.DBAN);
+                       Assert.NotNull(dsme.DBEU);
+                   }
+               }
+           }
         }
 
         /// <summary>
@@ -236,37 +150,21 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         [Fact]
         public void TestDEUEVMeldung30()
         {
-            var input = LoadData("deuev30.dat").ReadToEnd();
-            var output = new StringWriter();
-            var writer = StreamFactory.CreateWriter("deuev", output);
-            var reader = StreamFactory.CreateReader("deuev", new StringReader(input));
-            try
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev30.dat");
+            foreach (var dsme in deuevMessage.DSME)
             {
-                var streamObject = reader.Read();
-                var vosz = Assert.IsType<VOSZ>(streamObject);
-                writer.Write(vosz);
-                streamObject = reader.Read();
-                var dsko = Assert.IsType<DSKO>(streamObject);
-                writer.Write(dsko);
-                streamObject = reader.Read();
-                var dsme = Assert.IsType<DSME>(streamObject);
-                Assert.Equal(dsme.GD, "30");
-                Assert.NotNull(dsme.DBME);
-                Assert.Null(dsme.DBGB);
-                Assert.Null(dsme.DBEU);
-                Assert.Null(dsme.DBSV);
-                Assert.Null(dsme.DBVR);
-                Assert.Null(dsme.DBRG);
-                Assert.Null(dsme.DBSO);
-                Assert.Null(dsme.DBKV);
-                writer.Write(dsme);
-                CheckDSMEEntrys(reader, writer);
-                writer.Close();
-                Assert.Equal(input, output.ToString());
-            }
-            finally
-            {
-                reader.Close();
+                if (dsme.GD == "30")
+                {
+                    Assert.Equal(dsme.GD, "30");
+                    Assert.NotNull(dsme.DBME);
+                    Assert.Null(dsme.DBGB);
+                    Assert.Null(dsme.DBEU);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                }
             }
         }
 
@@ -276,37 +174,21 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         [Fact]
         public void TestDEUEVMeldung31()
         {
-            var input = LoadData("deuev31.dat").ReadToEnd();
-            var output = new StringWriter();
-            var writer = StreamFactory.CreateWriter("deuev", output);
-            var reader = StreamFactory.CreateReader("deuev", new StringReader(input));
-            try
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev31.dat");
+            foreach (var dsme in deuevMessage.DSME)
             {
-                var streamObject = reader.Read();
-                var vosz = Assert.IsType<VOSZ>(streamObject);
-                writer.Write(vosz);
-                streamObject = reader.Read();
-                var dsko = Assert.IsType<DSKO>(streamObject);
-                writer.Write(dsko);
-                streamObject = reader.Read();
-                var dsme = Assert.IsType<DSME>(streamObject);
-                Assert.Equal(dsme.GD, "31");
-                Assert.NotNull(dsme.DBME);
-                Assert.Null(dsme.DBGB);
-                Assert.Null(dsme.DBEU);
-                Assert.Null(dsme.DBSV);
-                Assert.Null(dsme.DBVR);
-                Assert.Null(dsme.DBRG);
-                Assert.Null(dsme.DBSO);
-                Assert.Null(dsme.DBKV);
-                writer.Write(dsme);
-                CheckDSMEEntrys(reader, writer);
-                writer.Close();
-                Assert.Equal(input, output.ToString());
-            }
-            finally
-            {
-                reader.Close();
+                if (dsme.GD == "31")
+                {
+                    Assert.Equal(dsme.GD, "31");
+                    Assert.NotNull(dsme.DBME);
+                    Assert.Null(dsme.DBGB);
+                    Assert.Null(dsme.DBEU);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                }
             }
         }
 
@@ -316,37 +198,21 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         [Fact]
         public void TestDEUEVMeldung32()
         {
-            var input = LoadData("deuev32.dat").ReadToEnd();
-            var output = new StringWriter();
-            var writer = StreamFactory.CreateWriter("deuev", output);
-            var reader = StreamFactory.CreateReader("deuev", new StringReader(input));
-            try
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev32.dat");
+            foreach (var dsme in deuevMessage.DSME)
             {
-                var streamObject = reader.Read();
-                var vosz = Assert.IsType<VOSZ>(streamObject);
-                writer.Write(vosz);
-                streamObject = reader.Read();
-                var dsko = Assert.IsType<DSKO>(streamObject);
-                writer.Write(dsko);
-                streamObject = reader.Read();
-                var dsme = Assert.IsType<DSME>(streamObject);
-                Assert.Equal(dsme.GD, "32");
-                Assert.NotNull(dsme.DBME);
-                Assert.Null(dsme.DBGB);
-                Assert.Null(dsme.DBEU);
-                Assert.Null(dsme.DBSV);
-                Assert.Null(dsme.DBVR);
-                Assert.Null(dsme.DBRG);
-                Assert.Null(dsme.DBSO);
-                Assert.Null(dsme.DBKV);
-                writer.Write(dsme);
-                CheckDSMEEntrys(reader, writer);
-                writer.Close();
-                Assert.Equal(input, output.ToString());
-            }
-            finally
-            {
-                reader.Close();
+                if (dsme.GD == "32")
+                {
+                    Assert.Equal(dsme.GD, "32");
+                    Assert.NotNull(dsme.DBME);
+                    Assert.Null(dsme.DBGB);
+                    Assert.Null(dsme.DBEU);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                }
             }
         }
 
@@ -356,37 +222,21 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         [Fact]
         public void TestDEUEVMeldung33()
         {
-            var input = LoadData("deuev33.dat").ReadToEnd();
-            var output = new StringWriter();
-            var writer = StreamFactory.CreateWriter("deuev", output);
-            var reader = StreamFactory.CreateReader("deuev", new StringReader(input));
-            try
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev33.dat");
+            foreach (var dsme in deuevMessage.DSME)
             {
-                var streamObject = reader.Read();
-                var vosz = Assert.IsType<VOSZ>(streamObject);
-                writer.Write(vosz);
-                streamObject = reader.Read();
-                var dsko = Assert.IsType<DSKO>(streamObject);
-                writer.Write(dsko);
-                streamObject = reader.Read();
-                var dsme = Assert.IsType<DSME>(streamObject);
-                Assert.Equal(dsme.GD, "33");
-                Assert.NotNull(dsme.DBME);
-                Assert.Null(dsme.DBGB);
-                Assert.Null(dsme.DBEU);
-                Assert.Null(dsme.DBSV);
-                Assert.Null(dsme.DBVR);
-                Assert.Null(dsme.DBRG);
-                Assert.Null(dsme.DBSO);
-                Assert.Null(dsme.DBKV);
-                writer.Write(dsme);
-                CheckDSMEEntrys(reader, writer);
-                writer.Close();
-                Assert.Equal(input, output.ToString());
-            }
-            finally
-            {
-                reader.Close();
+                if (dsme.GD == "33")
+                {
+                    Assert.Equal(dsme.GD, "33");
+                    Assert.NotNull(dsme.DBME);
+                    Assert.Null(dsme.DBGB);
+                    Assert.Null(dsme.DBEU);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                }
             }
         }
 
@@ -396,37 +246,21 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         [Fact]
         public void TestDEUEVMeldung34()
         {
-            var input = LoadData("deuev34.dat").ReadToEnd();
-            var output = new StringWriter();
-            var writer = StreamFactory.CreateWriter("deuev", output);
-            var reader = StreamFactory.CreateReader("deuev", new StringReader(input));
-            try
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev34.dat");
+            foreach (var dsme in deuevMessage.DSME)
             {
-                var streamObject = reader.Read();
-                var vosz = Assert.IsType<VOSZ>(streamObject);
-                writer.Write(vosz);
-                streamObject = reader.Read();
-                var dsko = Assert.IsType<DSKO>(streamObject);
-                writer.Write(dsko);
-                streamObject = reader.Read();
-                var dsme = Assert.IsType<DSME>(streamObject);
-                Assert.Equal(dsme.GD, "34");
-                Assert.NotNull(dsme.DBME);
-                Assert.Null(dsme.DBGB);
-                Assert.Null(dsme.DBEU);
-                Assert.Null(dsme.DBSV);
-                Assert.Null(dsme.DBVR);
-                Assert.Null(dsme.DBRG);
-                Assert.Null(dsme.DBSO);
-                Assert.Null(dsme.DBKV);
-                writer.Write(dsme);
-                CheckDSMEEntrys(reader, writer);
-                writer.Close();
-                Assert.Equal(input, output.ToString());
-            }
-            finally
-            {
-                reader.Close();
+                if (dsme.GD == "34")
+                {
+                    Assert.Equal(dsme.GD, "34");
+                    Assert.NotNull(dsme.DBME);
+                    Assert.Null(dsme.DBGB);
+                    Assert.Null(dsme.DBEU);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                }
             }
         }
 
@@ -436,37 +270,21 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         [Fact]
         public void TestDEUEVMeldung36()
         {
-            var input = LoadData("deuev36.dat").ReadToEnd();
-            var output = new StringWriter();
-            var writer = StreamFactory.CreateWriter("deuev", output);
-            var reader = StreamFactory.CreateReader("deuev", new StringReader(input));
-            try
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev36.dat");
+            foreach (var dsme in deuevMessage.DSME)
             {
-                var streamObject = reader.Read();
-                var vosz = Assert.IsType<VOSZ>(streamObject);
-                writer.Write(vosz);
-                streamObject = reader.Read();
-                var dsko = Assert.IsType<DSKO>(streamObject);
-                writer.Write(dsko);
-                streamObject = reader.Read();
-                var dsme = Assert.IsType<DSME>(streamObject);
-                Assert.Equal(dsme.GD, "36");
-                Assert.NotNull(dsme.DBME);
-                Assert.Null(dsme.DBGB);
-                Assert.Null(dsme.DBEU);
-                Assert.Null(dsme.DBSV);
-                Assert.Null(dsme.DBVR);
-                Assert.Null(dsme.DBRG);
-                Assert.Null(dsme.DBSO);
-                Assert.Null(dsme.DBKV);
-                writer.Write(dsme);
-                CheckDSMEEntrys(reader, writer);
-                writer.Close();
-                Assert.Equal(input, output.ToString());
-            }
-            finally
-            {
-                reader.Close();
+                if (dsme.GD == "36")
+                {
+                    Assert.Equal(dsme.GD, "36");
+                    Assert.NotNull(dsme.DBME);
+                    Assert.Null(dsme.DBGB);
+                    Assert.Null(dsme.DBEU);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                }
             }
         }
 
@@ -476,37 +294,21 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         [Fact]
         public void TestDEUEVMeldung49()
         {
-            var input = LoadData("deuev49.dat").ReadToEnd();
-            var output = new StringWriter();
-            var writer = StreamFactory.CreateWriter("deuev", output);
-            var reader = StreamFactory.CreateReader("deuev", new StringReader(input));
-            try
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev49.dat");
+            foreach (var dsme in deuevMessage.DSME)
             {
-                var streamObject = reader.Read();
-                var vosz = Assert.IsType<VOSZ>(streamObject);
-                writer.Write(vosz);
-                streamObject = reader.Read();
-                var dsko = Assert.IsType<DSKO>(streamObject);
-                writer.Write(dsko);
-                streamObject = reader.Read();
-                var dsme = Assert.IsType<DSME>(streamObject);
-                Assert.Equal(dsme.GD, "49");
-                Assert.NotNull(dsme.DBME);
-                Assert.Null(dsme.DBGB);
-                Assert.Null(dsme.DBEU);
-                Assert.Null(dsme.DBSV);
-                Assert.Null(dsme.DBVR);
-                Assert.Null(dsme.DBRG);
-                Assert.Null(dsme.DBSO);
-                Assert.Null(dsme.DBKV);
-                writer.Write(dsme);
-                CheckDSMEEntrys(reader, writer);
-                writer.Close();
-                Assert.Equal(input, output.ToString());
-            }
-            finally
-            {
-                reader.Close();
+                if (dsme.GD == "49")
+                {
+                    Assert.Equal(dsme.GD, "49");
+                    Assert.NotNull(dsme.DBME);
+                    Assert.Null(dsme.DBGB);
+                    Assert.Null(dsme.DBEU);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                }
             }
         }
 
@@ -516,37 +318,21 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         [Fact]
         public void TestDEUEVMeldung51()
         {
-            var input = LoadData("deuev51.dat").ReadToEnd();
-            var output = new StringWriter();
-            var writer = StreamFactory.CreateWriter("deuev", output);
-            var reader = StreamFactory.CreateReader("deuev", new StringReader(input));
-            try
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev51.dat");
+            foreach (var dsme in deuevMessage.DSME)
             {
-                var streamObject = reader.Read();
-                var vosz = Assert.IsType<VOSZ>(streamObject);
-                writer.Write(vosz);
-                streamObject = reader.Read();
-                var dsko = Assert.IsType<DSKO>(streamObject);
-                writer.Write(dsko);
-                streamObject = reader.Read();
-                var dsme = Assert.IsType<DSME>(streamObject);
-                Assert.Equal(dsme.GD, "51");
-                Assert.NotNull(dsme.DBME);
-                Assert.Null(dsme.DBGB);
-                Assert.Null(dsme.DBEU);
-                Assert.Null(dsme.DBSV);
-                Assert.Null(dsme.DBVR);
-                Assert.Null(dsme.DBRG);
-                Assert.Null(dsme.DBSO);
-                Assert.Null(dsme.DBKV);
-                writer.Write(dsme);
-                CheckDSMEEntrys(reader, writer);
-                writer.Close();
-                Assert.Equal(input, output.ToString());
-            }
-            finally
-            {
-                reader.Close();
+                if (dsme.GD == "51")
+                {
+                    Assert.Equal(dsme.GD, "51");
+                    Assert.NotNull(dsme.DBME);
+                    Assert.Null(dsme.DBGB);
+                    Assert.Null(dsme.DBEU);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                }
             }
         }
 
@@ -556,33 +342,74 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         [Fact]
         public void TestDEUEVMeldung57()
         {
-            var input = LoadData("deuev57.dat").ReadToEnd();
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev57.dat");
+            foreach (var dsme in deuevMessage.DSME)
+            {
+                if (dsme.GD == "57")
+                {
+                    Assert.Equal(dsme.GD, "57");
+                    Assert.NotNull(dsme.DBME);
+                    Assert.Null(dsme.DBGB);
+                    Assert.Null(dsme.DBEU);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                }
+            }
+        }
+
+        private DeuevMessageData GetAndCheckDeuevMessageFromFile(string fileName)
+        {
+            var input = LoadData(fileName).ReadToEnd();
             var output = new StringWriter();
             var writer = StreamFactory.CreateWriter("deuev", output);
             var reader = StreamFactory.CreateReader("deuev", new StringReader(input));
+            var deuevMessage = new DeuevMessageData();
             try
             {
                 var streamObject = reader.Read();
                 var vosz = Assert.IsType<VOSZ>(streamObject);
+                deuevMessage.VOSZ = new List<VOSZ> { vosz };
                 writer.Write(vosz);
                 streamObject = reader.Read();
+                if (streamObject is VOSZ)
+                {
+                    deuevMessage.VOSZ.Add(streamObject as VOSZ);
+                    streamObject = reader.Read();
+                }
                 var dsko = Assert.IsType<DSKO>(streamObject);
+                deuevMessage.DSKO = dsko;
                 writer.Write(dsko);
                 streamObject = reader.Read();
                 var dsme = Assert.IsType<DSME>(streamObject);
-                Assert.Equal(dsme.GD, "57");
-                Assert.NotNull(dsme.DBME);
-                Assert.Null(dsme.DBGB);
-                Assert.Null(dsme.DBEU);
-                Assert.Null(dsme.DBSV);
-                Assert.Null(dsme.DBVR);
-                Assert.Null(dsme.DBRG);
-                Assert.Null(dsme.DBSO);
-                Assert.Null(dsme.DBKV);
+                deuevMessage.DSME = new List<DSME> { dsme };
                 writer.Write(dsme);
-                CheckDSMEEntrys(reader, writer);
+                while (true)
+                {
+                    streamObject = reader.Read();
+                    if (streamObject is NCSZ)
+                    {
+                        writer.Write(streamObject);
+                        deuevMessage.NCSZ = new List<NCSZ> { streamObject as NCSZ };
+                        streamObject = reader.Read();
+                        if (streamObject is NCSZ)
+                        {
+                            deuevMessage.NCSZ.Add(streamObject as NCSZ);
+                        }
+                        break;
+                    }
+                    else
+                    {
+                        Assert.IsType<DSME>(streamObject);
+                        deuevMessage.DSME.Add(streamObject as DSME);
+                    }
+                    writer.Write(streamObject);
+                }
                 writer.Close();
                 Assert.Equal(input, output.ToString());
+                return deuevMessage;
             }
             finally
             {
@@ -590,23 +417,15 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             }
         }
 
-        private void CheckDSMEEntrys(BeanIO.IBeanReader reader, BeanIO.IBeanWriter writer)
+        private class DeuevMessageData
         {
-            while (true)
-            {
-                var streamObject = reader.Read();
-                if (streamObject is NCSZ)
-                {
-                    writer.Write(streamObject);
-                    break;
-                }
-                else
-                {
-                    Assert.IsType<DSME>(streamObject);
-                }
+            public List<VOSZ> VOSZ { get; set; }
 
-                writer.Write(streamObject);
-            }
+            public DSKO DSKO { get; set; }
+
+            public List<DSME> DSME { get; set; }
+
+            public List<NCSZ> NCSZ { get; set; }
         }
     }
 }
