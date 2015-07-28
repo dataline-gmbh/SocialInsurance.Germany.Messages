@@ -377,8 +377,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 if (streamObject is VOSZ)
                 {
                     deuevMessage.VOSZ.Add(streamObject as VOSZ);
+                    writer.Write(vosz);
                     streamObject = reader.Read();
                 }
+
                 var dsko = Assert.IsType<DSKO>(streamObject);
                 deuevMessage.DSKO = dsko;
                 writer.Write(dsko);
@@ -397,7 +399,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                         if (streamObject is NCSZ)
                         {
                             deuevMessage.NCSZ.Add(streamObject as NCSZ);
+                            writer.Write(streamObject);
                         }
+
                         break;
                     }
                     else
@@ -405,8 +409,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                         Assert.IsType<DSME>(streamObject);
                         deuevMessage.DSME.Add(streamObject as DSME);
                     }
+
                     writer.Write(streamObject);
                 }
+
                 writer.Close();
                 Assert.Equal(input, output.ToString());
                 return deuevMessage;
