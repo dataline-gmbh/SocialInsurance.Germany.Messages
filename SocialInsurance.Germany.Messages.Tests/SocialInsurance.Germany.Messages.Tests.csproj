@@ -73,7 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Btrag\btrag.dat" />
-    <EmbeddedResource Include="Deuev\deuev10.dat" />
+    <EmbeddedResource Include="Deuev\deuev10_1.dat" />
     <EmbeddedResource Include="Deuev\deuev20.dat" />
     <EmbeddedResource Include="Deuev\deuev11.dat" />
     <EmbeddedResource Include="Deuev\deuev12.dat" />
@@ -87,6 +87,15 @@
     <EmbeddedResource Include="Deuev\deuev33.dat" />
     <EmbeddedResource Include="Deuev\deuev36.dat" />
     <EmbeddedResource Include="Deuev\deuev49.dat" />
+    <EmbeddedResource Include="Deuev\deuev10_2.dat" />
+    <EmbeddedResource Include="Deuev\deuev10_3.dat" />
+    <EmbeddedResource Include="Deuev\deuev10_4.dat" />
+    <EmbeddedResource Include="Deuev\deuev10_5.dat" />
+    <EmbeddedResource Include="Deuev\deuev10_6.dat" />
+    <EmbeddedResource Include="Deuev\deuev10_7.dat" />
+    <EmbeddedResource Include="Deuev\deuev10_8.dat" />
+    <EmbeddedResource Include="Deuev\deuev10_10.dat" />
+    <EmbeddedResource Include="Deuev\deuev10_9.dat" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

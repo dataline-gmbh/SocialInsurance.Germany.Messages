@@ -11,17 +11,22 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
     public class TestDEUEVVerfahren : TestBasis
     {
         /// <summary>
-        /// Anmeldung
+        /// Anmeldung - Beginn der Versicherungs- und/oder Beitragspflicht
+        /// wegen Aufnahme einer Beschäftigung (VSNR liegt vor)
         /// </summary>
         [Fact]
-        public void TestDEUEVMeldung10()
+        public void TestDEUEVMeldung10_1()
         {
-            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10.dat");
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_1.dat");
             foreach (var dsme in deuevMessage.DSME)
             {
                 if (dsme.GD == "10")
                 {
-                    Assert.DoesNotContain(dsme.PERSGR, new List<string> { "103", "900", "901" });
+                    Assert.Contains(
+                        dsme.PERSGR,
+                        new List<string> { "101", "102", "104", "105", "106", "107", "108", "109", "111",
+                        "112", "113", "114", "116", "118", "119", "121", "122", "123", "124", "127", "190" });
+                    Assert.NotEqual(string.Empty, dsme.VSNR);
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -31,11 +36,279 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                     Assert.Null(dsme.DBRG);
                     Assert.Null(dsme.DBSO);
                     Assert.Null(dsme.DBKV);
-                    if (string.IsNullOrWhiteSpace(dsme.VSNR))
-                    {
-                        Assert.NotNull(dsme.DBGB);
-                        Assert.NotNull(dsme.DBEU);
-                    }
+                    Assert.Null(dsme.DBGB);
+                    Assert.Null(dsme.DBEU);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Anmeldung - Beginn der Versicherungs- und/oder Beitragspflicht
+        /// wegen Aufnahme einer Beschäftigung (VSNR wurde noch nicht vergeben
+        /// oder liegt dem Arbeitgeber nicht vor)
+        /// </summary>
+        [Fact]
+        public void TestDEUEVMeldung10_2()
+        {
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_2.dat");
+            foreach (var dsme in deuevMessage.DSME)
+            {
+                if (dsme.GD == "10")
+                {
+                    Assert.Contains(
+                        dsme.PERSGR,
+                        new List<string> { "101", "102", "104", "105", "106", "107", "109", "111",
+                        "112", "113", "114", "116", "118", "119", "121", "122", "123", "124", "127", "190" });
+                    Assert.Equal(string.Empty, dsme.VSNR);
+                    Assert.NotNull(dsme.DBME);
+                    Assert.NotNull(dsme.DBNA);
+                    Assert.NotNull(dsme.DBGB);
+                    Assert.NotNull(dsme.DBAN);
+                    Assert.Null(dsme.DBUV);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                    Assert.Null(dsme.DBEU);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Anmeldung - Beginn einer geringfügigen Beschäftigung nach
+        /// § 8 Abs. 1 Nr. 2 SGB IV (kurzfristige Beschäftigung)
+        /// -VSNR liegt vor-
+        /// </summary>
+        [Fact]
+        public void TestDEUEVMeldung10_3()
+        {
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_3.dat");
+            foreach (var dsme in deuevMessage.DSME)
+            {
+                if (dsme.GD == "10")
+                {
+                    Assert.Equal(dsme.PERSGR, "110");
+                    Assert.NotEqual(string.Empty, dsme.VSNR);
+                    Assert.NotNull(dsme.DBME);
+                    Assert.NotNull(dsme.DBNA);
+                    Assert.NotNull(dsme.DBAN);
+                    Assert.Null(dsme.DBGB);
+                    Assert.Null(dsme.DBUV);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                    Assert.Null(dsme.DBEU);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Beginn einer geringfügigen Beschäftigung nach
+        /// § 8 Abs. 1 Nr. 2 SGB IV (kurzfristige Beschäftigung)
+        /// -VSNR wurde noch nicht vergeben oder liegt dem Arbeitgeber nicht vor-
+        /// </summary>
+        [Fact]
+        public void TestDEUEVMeldung10_4()
+        {
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_4.dat");
+            foreach (var dsme in deuevMessage.DSME)
+            {
+                if (dsme.GD == "10")
+                {
+                    Assert.Equal(dsme.PERSGR, "110");
+                    Assert.Equal(string.Empty, dsme.VSNR);
+                    Assert.NotNull(dsme.DBME);
+                    Assert.NotNull(dsme.DBNA);
+                    Assert.NotNull(dsme.DBGB);
+                    Assert.NotNull(dsme.DBAN);
+                    Assert.Null(dsme.DBUV);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Aufnahme der Beschäftigung nach Ende einer vollständigen Freistellung
+        /// von der Arbeitsleistung durch Inanspruchnahme einer Pflegezeit
+        /// nach § 3 Pflegezeitgesetz (PflegeZG)
+        /// </summary>
+        [Fact]
+        public void TestDEUEVMeldung10_5()
+        {
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_5.dat");
+            foreach (var dsme in deuevMessage.DSME)
+            {
+                if (dsme.GD == "10")
+                {
+                    Assert.Contains(
+                        dsme.PERSGR,
+                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "109", "111",
+                        "112", "113", "114", "119", "121", "122", "124", "127", "190" });
+                    Assert.NotNull(dsme.DBME);
+                    Assert.NotNull(dsme.DBNA);
+                    Assert.NotNull(dsme.DBAN);
+                    Assert.Null(dsme.DBGB);
+                    Assert.Null(dsme.DBUV);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                    Assert.Null(dsme.DBEU);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Wechsel der Krankenkasse bei fortbestehendem Beschäftigungsverhältnis
+        /// </summary>
+        [Fact]
+        public void TestDEUEVMeldung10_6()
+        {
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_6.dat");
+            foreach (var dsme in deuevMessage.DSME)
+            {
+                if (dsme.GD == "11")
+                {
+                    Assert.Contains(
+                        dsme.PERSGR,
+                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "108", "109", "111",
+                        "112", "113", "114", "116", "118", "119", "121", "122", "123", "124", "127", "190" });
+                    Assert.NotNull(dsme.DBME);
+                    Assert.NotNull(dsme.DBNA);
+                    Assert.NotNull(dsme.DBAN);
+                    Assert.Null(dsme.DBGB);
+                    Assert.Null(dsme.DBUV);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                    Assert.Null(dsme.DBEU);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Wechsel der Beitragsgruppe bei fortbestehendem Beschäftigungsverhältnis
+        /// </summary>
+        [Fact]
+        public void TestDEUEVMeldung10_7()
+        {
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_7.dat");
+            foreach (var dsme in deuevMessage.DSME)
+            {
+                if (dsme.GD == "12")
+                {
+                    Assert.Contains(
+                        dsme.PERSGR,
+                        new List<string> { "101", "102", "103", "104", "105", "106", "108", "109",
+                        "112", "113", "114", "118", "119", "121", "122", "123", "124", "127", "190" });
+                    Assert.NotNull(dsme.DBME);
+                    Assert.NotNull(dsme.DBNA);
+                    Assert.NotNull(dsme.DBAN);
+                    Assert.Null(dsme.DBGB);
+                    Assert.Null(dsme.DBUV);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                    Assert.Null(dsme.DBEU);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Beginn einer Beschäftigung nach Beendigung einer
+        /// Berufsausbildung (beim gleichen Arbeitgeber
+        /// und/oder ggf. ohne Beitragsgruppenwechsel)
+        /// </summary>
+        [Fact]
+        public void TestDEUEVMeldung10_8()
+        {
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_8.dat");
+            foreach (var dsme in deuevMessage.DSME)
+            {
+                if (dsme.GD == "13")
+                {
+                    Assert.Contains(
+                        dsme.PERSGR,
+                        new List<string> { "101", "104", "112", "113", "114", "118", "123", "124", "190" });
+                    Assert.NotNull(dsme.DBME);
+                    Assert.NotNull(dsme.DBNA);
+                    Assert.NotNull(dsme.DBAN);
+                    Assert.Null(dsme.DBGB);
+                    Assert.Null(dsme.DBUV);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                    Assert.Null(dsme.DBEU);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Beginn einer geringfügigen Beschäftigung nach Beendigung
+        /// einer Berufsausbildung(ohne Arbeitgeberwechsel)
+        /// </summary>
+        [Fact]
+        public void TestDEUEVMeldung10_9()
+        {
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_9.dat");
+            foreach (var dsme in deuevMessage.DSME)
+            {
+                if (dsme.GD == "11")
+                {
+                    Assert.Contains(dsme.PERSGR, new List<string> { "109", "110", "190" });
+                    Assert.NotNull(dsme.DBME);
+                    Assert.NotNull(dsme.DBNA);
+                    Assert.NotNull(dsme.DBAN);
+                    Assert.Null(dsme.DBGB);
+                    Assert.Null(dsme.DBUV);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                    Assert.Null(dsme.DBEU);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Beginn einer Berufsausbildung nach Beendigung einer Beschäftigung
+        /// (beim gleichen Arbeitgeber und/oder ggf. ohne Beitragsgruppenwechsel)
+        /// </summary>
+        [Fact]
+        public void TestDEUEVMeldung10_10()
+        {
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_10.dat");
+            foreach (var dsme in deuevMessage.DSME)
+            {
+                if (dsme.GD == "13")
+                {
+                    Assert.Contains(dsme.PERSGR, new List<string> { "102", "121", "122" });
+                    Assert.NotNull(dsme.DBME);
+                    Assert.NotNull(dsme.DBNA);
+                    Assert.NotNull(dsme.DBAN);
+                    Assert.Null(dsme.DBGB);
+                    Assert.Null(dsme.DBUV);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                    Assert.Null(dsme.DBEU);
                 }
             }
         }
