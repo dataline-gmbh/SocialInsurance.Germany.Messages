@@ -18,6 +18,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung10_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_1.dat");
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "10"));
             foreach (var dsme in deuevMessage.DSME)
             {
                 if (dsme.GD == "10")
@@ -51,6 +52,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung10_2()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_2.dat");
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "10"));
             foreach (var dsme in deuevMessage.DSME)
             {
                 if (dsme.GD == "10")
@@ -84,6 +86,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung10_3()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_3.dat");
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "10"));
             foreach (var dsme in deuevMessage.DSME)
             {
                 if (dsme.GD == "10")
@@ -114,6 +117,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung10_4()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_4.dat");
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "10"));
             foreach (var dsme in deuevMessage.DSME)
             {
                 if (dsme.GD == "10")
@@ -143,6 +147,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung10_5()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_5.dat");
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "10"));
             foreach (var dsme in deuevMessage.DSME)
             {
                 if (dsme.GD == "10")
@@ -170,9 +175,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         /// Wechsel der Krankenkasse bei fortbestehendem Beschäftigungsverhältnis
         /// </summary>
         [Fact]
-        public void TestDEUEVMeldung10_6()
+        public void TestDEUEVMeldung11_1()
         {
-            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_6.dat");
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev11_1.dat");
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "11"));
             foreach (var dsme in deuevMessage.DSME)
             {
                 if (dsme.GD == "11")
@@ -200,9 +206,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         /// Wechsel der Beitragsgruppe bei fortbestehendem Beschäftigungsverhältnis
         /// </summary>
         [Fact]
-        public void TestDEUEVMeldung10_7()
+        public void TestDEUEVMeldung12_1()
         {
-            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_7.dat");
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev12_1.dat");
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "12"));
             foreach (var dsme in deuevMessage.DSME)
             {
                 if (dsme.GD == "12")
@@ -232,9 +239,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         /// und/oder ggf. ohne Beitragsgruppenwechsel)
         /// </summary>
         [Fact]
-        public void TestDEUEVMeldung10_8()
+        public void TestDEUEVMeldung13_1()
         {
-            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_8.dat");
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev13_1.dat");
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "13"));
             foreach (var dsme in deuevMessage.DSME)
             {
                 if (dsme.GD == "13")
@@ -262,9 +270,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         /// einer Berufsausbildung(ohne Arbeitgeberwechsel)
         /// </summary>
         [Fact]
-        public void TestDEUEVMeldung10_9()
+        public void TestDEUEVMeldung11_2()
         {
-            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_9.dat");
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev11_2.dat");
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "11"));
             foreach (var dsme in deuevMessage.DSME)
             {
                 if (dsme.GD == "11")
@@ -290,9 +299,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         /// (beim gleichen Arbeitgeber und/oder ggf. ohne Beitragsgruppenwechsel)
         /// </summary>
         [Fact]
-        public void TestDEUEVMeldung10_10()
+        public void TestDEUEVMeldung13_2()
         {
-            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_10.dat");
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev13_2.dat");
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "13"));
             foreach (var dsme in deuevMessage.DSME)
             {
                 if (dsme.GD == "13")
@@ -320,6 +330,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung11()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev11.dat");
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "11"));
             foreach (var dsme in deuevMessage.DSME)
             {
                 if (dsme.GD == "11")
@@ -633,6 +644,15 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             }
         }
 
+        /// <summary>
+        /// Ruft die Meldedatei mit einem bestimmten Dateinamen aus dem Deuev-Ordner ab
+        /// </summary>
+        /// <param name="fileName">
+        /// Dateiname der Meldedatei
+        /// </param>
+        /// <returns>
+        /// Meldedatei als DeuevMessageData-Objekt
+        /// </returns>
         private DeuevMessageData GetAndCheckDeuevMessageFromFile(string fileName)
         {
             var input = LoadData(fileName).ReadToEnd();
@@ -696,6 +716,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             }
         }
 
+        /// <summary>
+        /// Hilfsklasse der Meldedatei, die eine Meldedatei im Deuev-Format
+        /// mit den Datensätzen als Objekte enthält
+        /// </summary>
         private class DeuevMessageData
         {
             public List<VOSZ> VOSZ { get; set; }

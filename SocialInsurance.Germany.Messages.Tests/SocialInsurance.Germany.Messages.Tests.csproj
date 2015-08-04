@@ -91,11 +91,11 @@
     <EmbeddedResource Include="Deuev\deuev10_3.dat" />
     <EmbeddedResource Include="Deuev\deuev10_4.dat" />
     <EmbeddedResource Include="Deuev\deuev10_5.dat" />
-    <EmbeddedResource Include="Deuev\deuev10_6.dat" />
-    <EmbeddedResource Include="Deuev\deuev10_7.dat" />
-    <EmbeddedResource Include="Deuev\deuev10_8.dat" />
-    <EmbeddedResource Include="Deuev\deuev10_10.dat" />
-    <EmbeddedResource Include="Deuev\deuev10_9.dat" />
+    <EmbeddedResource Include="Deuev\deuev11_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev12_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev13_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev13_2.dat" />
+    <EmbeddedResource Include="Deuev\deuev11_2.dat" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
