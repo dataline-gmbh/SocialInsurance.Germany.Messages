@@ -66,27 +66,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Btrag\TestBTRAGVerfahren.cs" />
     <Compile Include="Deuev\TestDEUEVVerfahren.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestBasis.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Btrag\btrag.dat" />
     <EmbeddedResource Include="Deuev\deuev10_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev20.dat" />
-    <EmbeddedResource Include="Deuev\deuev11.dat" />
-    <EmbeddedResource Include="Deuev\deuev12.dat" />
-    <EmbeddedResource Include="Deuev\deuev30.dat" />
-    <EmbeddedResource Include="Deuev\deuev32.dat" />
-    <EmbeddedResource Include="Deuev\deuev31.dat" />
-    <EmbeddedResource Include="Deuev\deuev34.dat" />
-    <EmbeddedResource Include="Deuev\deuev57.dat" />
-    <EmbeddedResource Include="Deuev\deuev51.dat" />
-    <EmbeddedResource Include="Deuev\deuev13.dat" />
-    <EmbeddedResource Include="Deuev\deuev33.dat" />
-    <EmbeddedResource Include="Deuev\deuev36.dat" />
-    <EmbeddedResource Include="Deuev\deuev49.dat" />
     <EmbeddedResource Include="Deuev\deuev10_2.dat" />
     <EmbeddedResource Include="Deuev\deuev10_3.dat" />
     <EmbeddedResource Include="Deuev\deuev10_4.dat" />
@@ -96,6 +81,50 @@
     <EmbeddedResource Include="Deuev\deuev13_1.dat" />
     <EmbeddedResource Include="Deuev\deuev13_2.dat" />
     <EmbeddedResource Include="Deuev\deuev11_2.dat" />
+    <EmbeddedResource Include="Deuev\deuev11_3.dat" />
+    <EmbeddedResource Include="Deuev\deuev11_4.dat" />
+    <EmbeddedResource Include="Deuev\deuev11_5.dat" />
+    <EmbeddedResource Include="Deuev\deuev12_2.dat" />
+    <EmbeddedResource Include="Deuev\deuev13_3.dat" />
+    <EmbeddedResource Include="Deuev\deuev13_4.dat" />
+    <EmbeddedResource Include="Deuev\deuev12_3.dat" />
+    <EmbeddedResource Include="Deuev\deuev13_5.dat" />
+    <EmbeddedResource Include="Deuev\deuev13_6.dat" />
+    <EmbeddedResource Include="Deuev\deuev13_7.dat" />
+    <EmbeddedResource Include="Deuev\deuev30_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev30_2.dat" />
+    <EmbeddedResource Include="Deuev\deuev31_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev32_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev33_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev31_2.dat" />
+    <EmbeddedResource Include="Deuev\deuev33_2.dat" />
+    <EmbeddedResource Include="Deuev\deuev31_3.dat" />
+    <EmbeddedResource Include="Deuev\deuev31_4.dat" />
+    <EmbeddedResource Include="Deuev\deuev31_5.dat" />
+    <EmbeddedResource Include="Deuev\deuev32_2.dat" />
+    <EmbeddedResource Include="Deuev\deuev33_3.dat" />
+    <EmbeddedResource Include="Deuev\deuev32_3.dat" />
+    <EmbeddedResource Include="Deuev\deuev36_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev34_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev30_3.dat" />
+    <EmbeddedResource Include="Deuev\deuev33_4.dat" />
+    <EmbeddedResource Include="Deuev\deuev50_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev54_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev91_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev57_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev34_3.dat" />
+    <EmbeddedResource Include="Deuev\deuev35_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev34_4.dat" />
+    <EmbeddedResource Include="Deuev\deuev51_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev52_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev30_4.dat" />
+    <EmbeddedResource Include="Deuev\deuev10_6.dat" />
+    <EmbeddedResource Include="Deuev\deuev30_5.dat" />
+    <EmbeddedResource Include="Deuev\deuev33_5.dat" />
+    <EmbeddedResource Include="Deuev\deuev60_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev61_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev63_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev49_1.dat" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
