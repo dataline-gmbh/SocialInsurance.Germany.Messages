@@ -198,7 +198,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Personengruppe, Länge 3, Mussangabe
         /// </remarks>
-        public string PERSGR { get; set; }
+        public int PERSGR { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Abgabegrund

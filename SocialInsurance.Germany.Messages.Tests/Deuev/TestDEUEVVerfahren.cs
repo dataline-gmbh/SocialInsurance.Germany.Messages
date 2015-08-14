@@ -25,8 +25,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "104", "105", "106", "107", "108", "109", "111",
-                        "112", "113", "114", "116", "118", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 104, 105, 106, 107, 108, 109, 111,
+                        112, 113, 114, 116, 118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotEqual(string.Empty, dsme.VSNR);
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
@@ -59,8 +59,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "104", "105", "106", "107", "109", "111",
-                        "112", "113", "114", "116", "118", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 104, 105, 106, 107, 109, 111,
+                        112, 113, 114, 116, 118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.Equal(string.Empty, dsme.VSNR);
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
@@ -91,7 +91,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             {
                 if (dsme.GD == "10")
                 {
-                    Assert.Equal(dsme.PERSGR, "110");
+                    Assert.Equal(dsme.PERSGR, 110);
                     Assert.NotEqual(string.Empty, dsme.VSNR);
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
@@ -122,7 +122,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             {
                 if (dsme.GD == "10")
                 {
-                    Assert.Equal(dsme.PERSGR, "110");
+                    Assert.Equal(dsme.PERSGR, 110);
                     Assert.Equal(string.Empty, dsme.VSNR);
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
@@ -154,8 +154,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "109", "111",
-                        "112", "113", "114", "119", "121", "122", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 109, 111,
+                        112, 113, 114, 119, 121, 122, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -185,8 +185,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "108", "109", "111",
-                        "112", "113", "114", "116", "118", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 108, 109, 111,
+                        112, 113, 114, 116, 118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -216,8 +216,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "108", "109",
-                        "112", "113", "114", "118", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 108, 109,
+                        112, 113, 114, 118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -249,7 +249,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "104", "112", "113", "114", "118", "123", "124", "190" });
+                        new List<int> { 101, 104, 112, 113, 114, 118, 123, 124, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -278,7 +278,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             {
                 if (dsme.GD == "11")
                 {
-                    Assert.Contains(dsme.PERSGR, new List<string> { "109", "110", "190" });
+                    Assert.Contains(dsme.PERSGR, new List<int> { 109, 110, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -307,7 +307,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             {
                 if (dsme.GD == "13")
                 {
-                    Assert.Contains(dsme.PERSGR, new List<string> { "102", "121", "122" });
+                    Assert.Contains(dsme.PERSGR, new List<int> { 102, 121, 122 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -336,7 +336,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             {
                 if (dsme.GD == "11")
                 {
-                    Assert.Contains(dsme.PERSGR, new List<string> { "102", "121", "122" });
+                    Assert.Contains(dsme.PERSGR, new List<int> { 102, 121, 122 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -367,7 +367,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "104", "105", "106", "107", "111", "112", "113", "114", "116", "118", "119", "123", "124", "127" });
+                        new List<int> { 101, 104, 105, 106, 107, 111, 112, 113, 114, 116, 118, 119, 123, 124, 127 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -396,7 +396,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             {
                 if (dsme.GD == "11")
                 {
-                    Assert.Contains(dsme.PERSGR, new List<string> { "109", "110", "190" });
+                    Assert.Contains(dsme.PERSGR, new List<int> { 109, 110, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -425,7 +425,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             {
                 if (dsme.GD == "12")
                 {
-                    Assert.Contains(dsme.PERSGR, new List<string> { "109", "110", "190" });
+                    Assert.Contains(dsme.PERSGR, new List<int> { 109, 110, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -458,7 +458,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "109", "110", "111", "112", "113", "114", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 109, 110, 111, 112, 113, 114, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -492,7 +492,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "109", "111", "112", "113", "114", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 109, 111, 112, 113, 114, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -523,7 +523,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "109" });
+                        new List<int> { 109 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -553,7 +553,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "108", "109", "111", "112", "113", "114", "118", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 108, 109, 111, 112, 113, 114, 118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -585,7 +585,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "112", "113", "114", "118", "121", "122", "123", "124", "127" });
+                        new List<int> { 101, 102, 103, 112, 113, 114, 118, 121, 122, 123, 124, 127 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -616,7 +616,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "105", "106", "107", "108", "109", "111", "112", "113", "114", "118", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 105, 106, 107, 108, 109, 111, 112, 113, 114, 118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -647,8 +647,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "108", "109", "111",
-                            "112", "113", "114", "116", "118", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 108, 109, 111,
+                            112, 113, 114, 116, 118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -679,7 +679,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "110" });
+                        new List<int> { 110 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -709,8 +709,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "108", "109",
-                            "110", "111",  "113", "114", "116", "118", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 108, 109,
+                            110, 111,  113, 114, 116, 118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -740,7 +740,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "108", "109", "111", "112", "113", "114", "116", "118", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 108, 109, 111, 112, 113, 114, 116, 118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -770,7 +770,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "108", "109", "111", "112", "113", "114", "118", "119", "121", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 108, 109, 111, 112, 113, 114, 118, 119, 121, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -801,7 +801,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "104", "105", "106", "107", "111", "112", "113", "114", "123", "114", "123", "124", "127", "190" });
+                        new List<int> { 101, 104, 105, 106, 107, 111, 112, 113, 114, 123, 114, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -831,7 +831,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "109", "110", "190" });
+                        new List<int> { 109, 110, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -863,7 +863,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "102", "121", "122" });
+                        new List<int> { 102, 121, 122 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -894,7 +894,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "102", "121", "122" });
+                        new List<int> { 102, 121, 122 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -925,7 +925,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "109", "110", "190" });
+                        new List<int> { 109, 110, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -956,7 +956,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "103", "104", "105", "106", "107", "111", "112", "113", "114", "116", "118", "119", "123", "124", "127" });
+                        new List<int> { 101, 103, 104, 105, 106, 107, 111, 112, 113, 114, 116, 118, 119, 123, 124, 127 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -987,7 +987,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "109", "110", "190" });
+                        new List<int> { 109, 110, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1020,7 +1020,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "109", "111", "112", "113", "114", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 109, 111, 112, 113, 114, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1051,7 +1051,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "109" });
+                        new List<int> { 109 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1081,8 +1081,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "108", "109", "111",
-                            "112", "113", "114", "118", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 108, 109, 111,
+                            112, 113, 114, 118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1119,7 +1119,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "107", "112", "113", "114", "118", "121", "122", "123", "124", "127" });
+                        new List<int> { 101, 102, 103, 107, 112, 113, 114, 118, 121, 122, 123, 124, 127 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1158,7 +1158,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "107", "112", "113", "114", "118", "121", "122", "123", "124", "127" });
+                        new List<int> { 101, 102, 103, 107, 112, 113, 114, 118, 121, 122, 123, 124, 127 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1195,7 +1195,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "107", "112", "113", "114", "118", "121", "122", "123", "124", "127" });
+                        new List<int> { 101, 102, 103, 107, 112, 113, 114, 118, 121, 122, 123, 124, 127 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1226,8 +1226,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "108", "109", "111",
-                            "112", "113", "114", "118", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 108, 109, 111,
+                            112, 113, 114, 118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1257,8 +1257,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111",
-                            "113", "114", "116", "118", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111,
+                            113, 114, 116, 118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1290,8 +1290,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "108", "109", "111",
-                            "112", "113", "114", "118", "119", "121", "122", "123", "124", "127" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 108, 109, 111,
+                            112, 113, 114, 118, 119, 121, 122, 123, 124, 127 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1323,8 +1323,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "109", "110",
-                            "112", "113", "114", "116", "118", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 109, 110,
+                            112, 113, 114, 116, 118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1356,8 +1356,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "109", "111", "112",
-                            "113", "114", "116", "118", "119", "121", "122", "123", "124", "127" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 109, 111, 112,
+                            113, 114, 116, 118, 119, 121, 122, 123, 124, 127 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1389,8 +1389,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "109", "110", "112",
-                            "113", "114", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 109, 110, 112,
+                            113, 114, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1422,8 +1422,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "105", "106", "107", "109", "112", "113",
-                            "114", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 105, 106, 107, 109, 112, 113,
+                            114, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1457,7 +1457,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "109", "110", "190" });
+                        new List<int> { 109, 110, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1491,8 +1491,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "109", "112", "113",
-                            "114", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 109, 112, 113,
+                            114, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1526,8 +1526,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "109", "112",
-                            "113", "114", "119", "121", "122", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 109, 112,
+                            113, 114, 119, 121, 122, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1557,8 +1557,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "109", "112",
-                            "113", "114", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 109, 112,
+                            113, 114, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1590,8 +1590,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "105", "106", "109", "112", "113", "114",
-                            "118", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 105, 106, 109, 112, 113, 114,
+                            118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1623,8 +1623,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "105", "106", "109", "112", "113", "114",
-                            "118", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 105, 106, 109, 112, 113, 114,
+                            118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1656,8 +1656,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "105", "106", "109", "112", "113", "114",
-                            "118", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 105, 106, 109, 112, 113, 114,
+                            118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1687,8 +1687,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111",
-                            "113", "114", "116", "118", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111,
+                            113, 114, 116, 118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.Null(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.Null(dsme.DBAN);
@@ -1718,8 +1718,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112",
-                            "113", "114", "116", "118", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112,
+                            113, 114, 116, 118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.Null(dsme.DBME);
                     Assert.Null(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -1749,8 +1749,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 {
                     Assert.Contains(
                         dsme.PERSGR,
-                        new List<string> { "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112",
-                            "113", "114", "116", "118", "119", "121", "122", "123", "124", "127", "190" });
+                        new List<int> { 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112,
+                            113, 114, 116, 118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.Null(dsme.DBME);
                     Assert.Null(dsme.DBNA);
                     Assert.Null(dsme.DBAN);
@@ -1760,6 +1760,68 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                     Assert.Null(dsme.DBVR);
                     Assert.Null(dsme.DBRG);
                     Assert.Null(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                    Assert.Null(dsme.DBEU);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Sofortmeldung für Beschäftigte, VSNR ist bekannt
+        /// </summary>
+        [Fact(DisplayName = "Sofortmeldung 20: Sofortmeldung für Beschäftigte, VSNR ist bekannt")]
+        public void TestDEUEVMeldung20_1()
+        {
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev20_1.dat");
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "20"));
+            foreach (var dsme in deuevMessage.DSME)
+            {
+                if (dsme.GD == "20")
+                {
+                    Assert.Contains(
+                        dsme.PERSGR,
+                        new List<int> { 101, 102, 103, 105, 106, 109, 110, 112, 113,
+                            114, 118, 119, 121, 122, 123, 124, 127, 190 });
+                    Assert.Null(dsme.DBME);
+                    Assert.NotNull(dsme.DBNA);
+                    Assert.Null(dsme.DBAN);
+                    Assert.Null(dsme.DBGB);
+                    Assert.Null(dsme.DBUV);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.NotNull(dsme.DBSO);
+                    Assert.Null(dsme.DBKV);
+                    Assert.Null(dsme.DBEU);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Sofortmeldung für Beschäftigte, VSNR ist bekannt
+        /// </summary>
+        [Fact(DisplayName = "Sofortmeldung 20: Sofortmeldung für Beschäftigte, VSNR ist nicht bekannt")]
+        public void TestDEUEVMeldung20_2()
+        {
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev20_2.dat");
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "20"));
+            foreach (var dsme in deuevMessage.DSME)
+            {
+                if (dsme.GD == "20")
+                {
+                    Assert.Contains(
+                        dsme.PERSGR,
+                        new List<int> { 101, 102, 103, 105, 106, 109, 110, 112, 113,
+                            114, 118, 119, 121, 122, 123, 124, 127, 190 });
+                    Assert.Null(dsme.DBME);
+                    Assert.NotNull(dsme.DBNA);
+                    Assert.NotNull(dsme.DBAN);
+                    Assert.NotNull(dsme.DBGB);
+                    Assert.Null(dsme.DBUV);
+                    Assert.Null(dsme.DBSV);
+                    Assert.Null(dsme.DBVR);
+                    Assert.Null(dsme.DBRG);
+                    Assert.NotNull(dsme.DBSO);
                     Assert.Null(dsme.DBKV);
                     Assert.Null(dsme.DBEU);
                 }

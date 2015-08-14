@@ -125,6 +125,8 @@
     <EmbeddedResource Include="Deuev\deuev61_1.dat" />
     <EmbeddedResource Include="Deuev\deuev63_1.dat" />
     <EmbeddedResource Include="Deuev\deuev49_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev20_1.dat" />
+    <EmbeddedResource Include="Deuev\deuev20_2.dat" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
