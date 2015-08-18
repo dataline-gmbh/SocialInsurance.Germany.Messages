@@ -431,7 +431,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Versionsnummer des Kernprüfungsprogramms mit der der Datensatz geprüft wurde, Länge 1, Mussangabe
         /// </remarks>
-        public string VERNRKP { get; set; }
+        public int? VERNRKP { get; set; }
 
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Krankenversicherung vorhanden ist

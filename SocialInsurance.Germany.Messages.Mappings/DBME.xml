@@ -6,10 +6,10 @@
     <field name="KENNZGLE" length="1" regex="[NJ]|[0-2]" required="false"/>
     <field name="ZRBG" length="8" required="true" format="yyyyMMdd"/>
     <field name="ZREN" length="8" required="true"/>
-    <field name="ZLTG" length="2" required="true"/>
+    <field name="ZLTG" length="2" required="true" type="int" format="00"/>
     <field name="WG" length="1" required="false"/>
-    <field name="EG" length="6" required="true"/>
-    <field name="BYGR" length="4" required="true"/>
+    <field name="EG" length="6" required="true" type="int" format="000000"/>
+    <field name="BYGR" length="4" required="true" />
     <field name="TTSC" length="9" required="false"/>
     <field name="KENNZRK" length="1" required="false" regex="[WO]"/>
     <field name="KENNZMF" length="1" required="true" regex="[JN]"/>

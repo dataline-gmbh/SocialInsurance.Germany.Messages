@@ -48,7 +48,7 @@
     <field name="MMSO" length="1" typeHandler="jn" required="true"/>
     <field name="KENNZSTA" length="1" regex="[12]" required="false" />
     <field name="MMUE"  length="1" typeHandler="jn" required="false"/>
-    <field name="VERNRKP" length="2" required="false" />
+    <field name="VERNRKP" length="2" required="false" type="int" format="00" />
     <field name="MMKV" length="1" typeHandler="jn" required="true"/>
     <field name="RESERVE" length="1" required="false"/>
     <segment name="ListeDBME" class="SocialInsurance.Germany.Messages.Pocos.DBME, SocialInsurance.Germany.Messages.Pocos" occursRef="MMME" collection="list">

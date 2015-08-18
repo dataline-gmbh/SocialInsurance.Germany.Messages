@@ -81,7 +81,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Beitragsgruppenschlüssel, Länge 4, Stelle 1 = KV Stelle 2 = RV Stelle 3 = ALV Stelle 4 = PV
         /// </remarks>
-        public int BYGR { get; set; }
+        public string BYGR { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Betriebsnummer des Arbeitgebers
@@ -219,7 +219,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
             /// <remarks>
             /// Beitragsgruppenschlüssel, Länge 4, Stelle 1 = KV Stelle 2 = RV Stelle 3 = ALV Stelle 4 = PV
             /// </remarks>
-            public int BYGRNN { get; set; }
+            public string BYGRNN { get; set; }
 
             /// <summary>
             /// Holt oder setzt die Betriebsnummer des Arbeitgebers

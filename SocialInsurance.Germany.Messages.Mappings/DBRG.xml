@@ -8,7 +8,7 @@
     <field name="ZLTG" length="2" required="true" type="int" format="00"/>
     <field name="WG" length="1" required="true"/>
     <field name="EG" length="6" required="true" type="int" format="000000"/>
-    <field name="BYGR" length="4" required="true" type="int" format="0000"/>
+    <field name="BYGR" length="4" required="true" />
     <field name="BBNRAG" length="15" required="true"/>
     <field name="BBNRKK" length="15" required="true"/>
     <field name="NABE1" length="28" required="true"/>
@@ -25,7 +25,7 @@
       <field name="ZLTGNN" length="2" required="true" type="int" format="00"/>
       <field name="WGNN" length="1" required="true"/>
       <field name="EGNN" length="6" required="true" type="int" format="000000"/>
-      <field name="BYGRNN" length="4" required="true" type="int" format="0000"/>
+      <field name="BYGRNN" length="4" required="true" />
       <field name="BBNRAGNN" length="15" required="true"/>
       <field name="EPNRNN" length="15" required="true"/>
       <field name="HWNN" length="15" required="true"/>

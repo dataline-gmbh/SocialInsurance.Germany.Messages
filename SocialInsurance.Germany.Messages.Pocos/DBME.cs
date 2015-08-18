@@ -68,7 +68,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Holt oder setzt die Anzahl der Tage für kurzfristig Beschäftigte
         /// </summary>
-        public string ZLTG { get; set; }
+        public int ZLTG { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Währungskennzeichen
@@ -84,7 +84,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Entgelt in vollen Euro, Länge 6, Mussangabe
         /// </remarks>
-        public string EG { get; set; }
+        public int EG { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beitragsgruppenschlüssel

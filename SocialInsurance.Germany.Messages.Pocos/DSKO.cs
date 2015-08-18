@@ -117,7 +117,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Produkt-Identifier des geprüften Softwareproduktes, das beim Ersteller der Datei eingesetzt wird, Länge 7, Mussangabe
         /// Sie wird von der ITSG, eindeutig für jedes systemuntersuchte Programm, vergeben
         /// </remarks>
-        public string PRODID { get; set; }
+        public int PRODID { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Modifikations-Identifier des geprüften Softwareproduktes
@@ -126,7 +126,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Modifikations-Identifier des geprüften Softwareproduktes, das beim Ersteller der Datei eingesetzt wird, Länge 8, Mussangabe
         /// Sie wird je geprüfter Produktversion von der ITSG vergeben
         /// </remarks>
-        public string MODID { get; set; }
+        public int MODID { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Namen des Erstellers der Datei

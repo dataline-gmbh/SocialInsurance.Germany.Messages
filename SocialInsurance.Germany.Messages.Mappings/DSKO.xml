@@ -12,8 +12,8 @@
     <field name="FEKZ" regex="[0-4]" length="1" required="true" />
     <field name="FEAN" length="1" required="true" />
     <field name="BBNRER" length="15" required="true"/>
-    <field name="PRODID" length="7" required="true"/>
-    <field name="MODID" length="8" required="true"/>
+    <field name="PRODID" length="7" required="true" type="int" format="0000000"/>
+    <field name="MODID" length="8" required="true" type="int" format="00000000"/>
     <field name="NAME1" length="30" required="true"/>
     <field name="NAME2" length="30" required="false"/>
     <field name="NAME3" length="30" required="false"/>
