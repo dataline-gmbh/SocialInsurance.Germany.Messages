@@ -1841,8 +1841,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         {
             var input = LoadData(fileName).ReadToEnd();
             var output = new StringWriter();
-            var writer = StreamFactory.CreateWriter("deuev", output);
-            var reader = StreamFactory.CreateReader("deuev", new StringReader(input));
+            var writer = StreamFactory.CreateWriter("dsme-deuev", output);
+            var reader = StreamFactory.CreateReader("dsme-deuev", new StringReader(input));
             var deuevMessage = new DeuevMessageData();
             try
             {
