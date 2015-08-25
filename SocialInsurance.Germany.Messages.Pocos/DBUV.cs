@@ -31,7 +31,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Anzahl angehängter UV-Daten(maximal 9), Länge 1, Mussangabe
         /// </remarks>
         public int ANUV { get; set; }
-        
+
         /// <summary>
         /// Holt oder setzt die Liste der sich wiederholenden UV-Daten
         /// </summary>

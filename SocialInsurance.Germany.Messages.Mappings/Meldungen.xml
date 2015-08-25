@@ -3,10 +3,8 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.VOSZ.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKO.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBD.xml, SocialInsurance.Germany.Messages.Mappings"/>
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSME.xml, SocialInsurance.Germany.Messages.Mappings"/>
-  <!--
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKK.xml, SocialInsurance.Germany.Messages.Mappings"/>
-  -->
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSME.xml, SocialInsurance.Germany.Messages.Mappings"/>  
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKK.xml, SocialInsurance.Germany.Messages.Mappings"/>  
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.NCSZ.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <stream name="dsme-deuev" format="fixedlength">
     <record order="1" name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
@@ -35,8 +33,7 @@
     <record order="4" name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, SocialInsurance.Germany.Messages.Pocos">
       <include template="NCSZv1"/>
     </record>
-  </stream>
-  <!--
+  </stream>  
   <stream name="dskk-deuev" format="fixedlength">
     <record order="1" name="VOSZ" minOccurs="1"  maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
       <include template="VOSZv1"/>
@@ -50,6 +47,5 @@
     <record order="4" name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, SocialInsurance.Germany.Messages.Pocos">
       <include template="NCSZv1"/>
     </record>
-  </stream>
-  -->
+  </stream>  
 </beanio>

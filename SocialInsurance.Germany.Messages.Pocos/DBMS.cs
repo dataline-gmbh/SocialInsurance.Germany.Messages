@@ -42,7 +42,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Kennzeichen, ob und wie der Sozialausgleich durch den Arbeitgeber durchzuführen ist, Länge 1, Mussangabe
         /// </remarks>
-        public string KENNZSOZA { get; set; }
+        public int KENNZSOZA { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beginn des Zeitraums, für den die Meldung gelten soll

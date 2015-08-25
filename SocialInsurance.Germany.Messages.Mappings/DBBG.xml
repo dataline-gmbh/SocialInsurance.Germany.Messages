@@ -2,13 +2,13 @@
 <beanio xmlns="http://www.beanio.org/2015/06">
   <template name="DBBG">
     <field name="KE" length="4" literal="DBBG" required="true"/>
-    <field name="KENNZST" length="1" required="true"/>
-    <field name="GAEGKV" length="7" required="true"/>
-    <field name="GAEGRV" length="7" required="true"/>
-    <field name="GAEGALV" length="7" required="true"/>
-    <field name="EGAKV" length="7" required="true"/>
-    <field name="EGARV" length="7" required="true"/>
-    <field name="EGALV" length="7" required="true"/>
+    <field name="KENNZST" length="1" required="true" type="int" format="0"/>
+    <field name="GAEGKV" length="7" required="true" type="int" format="0000000"/>
+    <field name="GAEGRV" length="7" required="true" type="int" format="0000000"/>
+    <field name="GAEGALV" length="7" required="true" type="int" format="0000000"/>
+    <field name="EGAKV" length="7" required="true" type="int" format="0000000"/>
+    <field name="EGARV" length="7" required="true" type="int" format="0000000"/>
+    <field name="EGALV" length="7" required="true" type="int" format="0000000"/>
     <field name="ZRBG" length="8" required="true" format="yyyyMMdd"/>
     <field name="ZREN" length="8" required="true" format="yyyyMMdd"/>
     <field name="KENNZRK" length="1" required="true"/>

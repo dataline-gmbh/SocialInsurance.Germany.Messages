@@ -28,12 +28,21 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string KE { get; set; }
 
         /// <summary>
+        /// Holt oder setzt das Kennzeichen Stornierung
+        /// </summary>
+        /// <remarks>
+        /// Kennzeichen, Stornierung einer bereits abgegebenen Meldung:
+        /// N = keine Stornierung, J = Stornierung
+        /// </remarks>
+        public string KENNZST { get; set;}
+
+        /// <summary>
         /// Holt oder setzt das GKV-Monatsmeldung Kennzeichen
         /// </summary>
         /// <remarks>
         /// Kennzeichen, ob eine GKVMonatsmeldung abzugeben ist, Länge 1, Mussangabe
         /// </remarks>
-        public string KENNZMOME { get; set; }
+        public int KENNZMOME { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beginn des Zeitraums, für den die Meldung gelten soll

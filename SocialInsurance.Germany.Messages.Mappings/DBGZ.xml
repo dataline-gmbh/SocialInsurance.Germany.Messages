@@ -3,10 +3,10 @@
   <template name="DBGZ">
     <field name="KE" length="4" literal="DBGZ" required="true"/>
     <field name="KENNZST" length="1" required="true"/>
-    <field name ="KENNZGLZ" length="1" required="true" regex="[1-4]" />
-    <field name="GAEG" length="6" required="true"/>
-    <field name="EGAEG" length="6" required="true"/>
-    <field name="SVTG" length="2" required="true"/>
+    <field name ="KENNZGLZ" length="1" required="true" regex="[1-4]" type="int" format="0"/>
+    <field name="GAEG" length="6" required="true" type="int" format="000000"/>
+    <field name="EGAEG" length="6" required="true" type="int" format="000000"/>
+    <field name="SVTG" length="2" required="true" type="int" format="00"/>
     <field name="RESERVE" length="4" required="false" ignore="true"/>
     <field name="ZRBG" length="8" required="true" format="yyyyMMdd"/>
     <field name="ZREN" length="8" required="true" format="yyyyMMdd"/>

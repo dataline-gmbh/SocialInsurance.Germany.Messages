@@ -34,7 +34,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Kennzeichen, Stornierung einer bereits abgegebenen Meldung, Länge 1, Mussangabe
         /// N = keine Stornierung, J = Stornierung
         /// </remarks>
-        public string KENNZST { get; set; }
+        public int KENNZST { get; set; }
 
         /// <summary>
         /// Holt oder setzt das laufende beitragspflichtige Gesamtentgelt KV
@@ -42,7 +42,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Laufendes beitragspflichtiges Gesamtentgelt KV in Eurocent, Länge 7, Mussangabe
         /// </remarks>
-        public string GAEGKV { get; set; }
+        public int GAEGKV { get; set; }
 
         /// <summary>
         /// Holt oder setzt das laufende beitragspflichtige Gesamtentgelt RV
@@ -50,7 +50,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Laufendes beitragspflichtiges Gesamtentgelt RV in Eurocent, Länge 7, Mussangabe
         /// </remarks>
-        public string GAEGRV { get; set; }
+        public int GAEGRV { get; set; }
 
         /// <summary>
         /// Holt oder setzt das laufende beitragspflichtige Gesamtentgelt AV
@@ -58,7 +58,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Laufendes beitragspflichtiges Gesamtentgelt AIV in Eurocent, Länge 7, Mussangabe
         /// </remarks>
-        public string GAEGALV { get; set; }
+        public int GAEGALV { get; set; }
 
         /// <summary>
         /// Holt oder setzt den beitragspflichtigen Teil des einmalig gezahlten Entgelts KV
@@ -66,7 +66,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Beitragspflichtiger Teil des einmalig gezahlten Entgelts KV in Eurocent, Länge 7, Mussangabe
         /// </remarks>
-        public string EGAKV { get; set; }
+        public int EGAKV { get; set; }
 
         /// <summary>
         /// Holt oder setzt den beitragspflichtigen Teil des einmalig gezahlten Entgelts KV
@@ -74,7 +74,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Beitragspflichtiger Teil des einmalig gezahlten Entgelts RV in Eurocent, Länge 7, Mussangabe
         /// </remarks>
-        public string EGARV { get; set; }
+        public int EGARV { get; set; }
 
         /// <summary>
         /// Holt oder setzt den beitragspflichtigen Teil des einmalig gezahlten Entgelts KV
@@ -82,7 +82,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Beitragspflichtiger Teil des einmalig gezahlten Entgelts AIV in Eurocent, Länge 7, Mussangabe
         /// </remarks>
-        public string EGALV { get; set; }
+        public int EGALV { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beginn des Zeitraums, für den die Meldung gelten soll

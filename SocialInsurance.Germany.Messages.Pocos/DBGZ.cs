@@ -42,7 +42,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Kennzeichen, ob die Beiträge nach den besonderen Vorschriften der Gleitzone berechnet werden, Länge 1, Mussangabe
         /// </remarks>
-        public string KENNZGLZ { get; set; }
+        public int KENNZGLZ { get; set; }
 
         /// <summary>
         /// Holt oder setzt das laufende Gesamtentgelt
@@ -50,7 +50,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Laufendes Gesamtetgelt in Eurocent
         /// </remarks>
-        public string GAEG { get; set; }
+        public int GAEG { get; set; }
 
         /// <summary>
         /// Holt oder setzt das einmalig gezahlte Gesamtentgelt in Eurocent
@@ -58,7 +58,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Einmalig gezahltes Gesamtentgelt in Eurocent, Länge 6, Mussangabe
         /// </remarks>
-        public string EGAEG { get; set; }
+        public int EGAEG { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Anzahl der zur Sozialversicherung beitragspflichtigen Tage
@@ -66,7 +66,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Anzahl der Tage, für die eine Beitragspflicht zur Sozialversicherung im Abrechnungsmonat besteht(SV-Tage), Länge 2, Mussangabe
         /// </remarks>
-        public string SVTG { get; set; }
+        public int SVTG { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beginn des Zeitraums, für den die Meldung gelten soll
