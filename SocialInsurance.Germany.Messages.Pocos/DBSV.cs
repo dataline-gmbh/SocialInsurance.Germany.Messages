@@ -17,6 +17,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public DBSV()
         {
             KE = "DBSV";
+            KENNZSVA = "J";
         }
 
         /// <summary>
