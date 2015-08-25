@@ -136,14 +136,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string VSNRVFNR { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld 1
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, Länge 2, Mussangab
-        /// </remarks>
-        public string RESERVE1 { get; set; }
-
-        /// <summary>
         /// Holt oder setzt die Betriebsnummer des Verursachers
         /// </summary>
         /// <remarks>
@@ -456,14 +448,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
             get { return _hatDbke ?? DBKE != null; }
             set { _hatDbke = value; }
         }
-
-        /// <summary>
-        /// Holt oder setzt das Reservefeld 2
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld 2, Blank = Grundstellung, Länge 14, Mussangabe
-        /// </remarks>
-        public string RESERVE2 { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Datenbaustein für ELENA-Grunddaten

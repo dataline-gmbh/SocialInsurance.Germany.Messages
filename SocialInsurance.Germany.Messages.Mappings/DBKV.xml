@@ -11,12 +11,12 @@
     <field name="EZEG" length="8" required="true" type="int" format="00000000"/>
     <field name="BBGRUKUG" length="8" required="true" type="int" format="00000000"/>
     <field name="KENNZGLESV" length="1" required="true" type="int" format="0"/>
-    <field name="RESERVE1" length="1" required="false"/>
-    <field name="RESERVE2" length="1" required="false"/>
+    <field name="RESERVE1" length="1" required="false" ignore="true"/>
+    <field name="RESERVE2" length="1" required="false" ignore="true"/>
     <field name="RJEG" length="8" required="false"/>
     <field name="BBGRUATG" length="8" required="false"/>
     <field name="BYGR" length="4" required="false"/>
     <field name="KENNZRK" length="1" required="false"/>
-    <field name="RESERVE3" length="9" required="false"/>
+    <field name="RESERVE3" length="9" required="false" ignore="true"/>
   </template>
 </beanio>

@@ -66,13 +66,5 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Feld wirdvon der See-KK vor Weiterleitung an die RV gefüllt.
         /// </remarks>
         public int VKNR { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt das Reservefeld
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, Länge 168, Mussangabe
-        /// </remarks>
-        public string RESERVE { get; set; }
     }
 }

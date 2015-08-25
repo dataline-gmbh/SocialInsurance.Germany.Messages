@@ -11,6 +11,6 @@
     <field name="HNR" length="9" required="false"/>
     <field name="PLZPO" length="10" required="false"/>
     <field name="POSTFACH" length="10" required="false"/>
-    <field name="RESERVE" length="8" required="false"/>
+    <field name="RESERVE" length="8" required="false" ignore="true"/>
   </template>
 </beanio>

@@ -448,11 +448,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld
-        /// </summary>
-        public string RESERVE { get; set; }
-
-        /// <summary>
         /// Holt oder setzt den Datenbaustein für Meldesachverhalt
         /// </summary>
         public DBME DBME

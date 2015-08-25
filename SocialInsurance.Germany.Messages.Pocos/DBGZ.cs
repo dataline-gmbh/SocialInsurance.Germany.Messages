@@ -69,14 +69,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string SVTG { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, Leerzeichen, Länge 4, Mussangabe
-        /// </remarks>
-        public string RESERVE { get; set; }
-
-        /// <summary>
         /// Holt oder setzt den Beginn des Zeitraums, für den die Meldung gelten soll
         /// </summary>
         /// <remarks>

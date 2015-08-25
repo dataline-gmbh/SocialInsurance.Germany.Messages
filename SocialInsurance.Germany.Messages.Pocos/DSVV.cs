@@ -109,14 +109,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string VSNRVFNR { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld 1
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld 1, Blank = Grundstellung, Länge 2, Mussangabe
-        /// </remarks>
-        public string RESERVE1 { get; set; }
-
-        /// <summary>
         /// Holt oder setzt die Betriebsnummer des Verursachers des Datensatzes
         /// </summary>
         /// <remarks>
@@ -360,14 +352,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// N = keine DBKE-Daten
         /// </remarks>
         public bool MMKE { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt das Reservefeld 2
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld 2, Blank = Grundstellung, Länge 14, Mussangabe
-        /// </remarks>
-        public string RESERVE2 { get; set; }
 
         /// <summary>
         /// Holt oder setzt eine Liste von Fehlern

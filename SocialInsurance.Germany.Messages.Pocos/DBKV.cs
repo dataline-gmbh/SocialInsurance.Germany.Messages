@@ -106,22 +106,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public int KENNZGLESV { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld 1
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld 1, Länge 1, Mussangabe
-        /// </remarks>
-        public string RESERVE1 { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt das Reservefeld 2
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld 2, Länge 1, Mussangabe
-        /// </remarks>
-        public string RESERVE2 { get; set; }
-
-        /// <summary>
         /// Holt oder setzt das regelmäßige Jahresentgelt
         /// </summary>
         /// <remarks>
@@ -155,13 +139,5 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// W = altes Bundesland, O = neues Bundesland einschließlich Ost-Berlin
         /// </remarks>
         public string KENNZRK { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt das Reservefeld 3
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld 3, Länge 53, Mussangabe
-        /// </remarks>
-        public string RESERVE3 { get; set; }
     }
 }

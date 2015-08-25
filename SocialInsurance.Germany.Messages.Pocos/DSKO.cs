@@ -249,14 +249,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string FERUECK { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, Blank = Grundstellung, Länge 3, Mussangabe
-        /// </remarks>
-        public string RESERVE { get; set; }
-
-        /// <summary>
         /// Holt oder setzt eine Liste von Fehlern
         /// </summary>
         public IList<DBFE> DBFE { get; set; }

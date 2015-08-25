@@ -114,14 +114,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string BBNRBS { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld 1
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, Länge 11, Mussangabe
-        /// </remarks>
-        public string RESERVE1 { get; set; }
-
-        /// <summary>
         /// Holt oder setzt die Betriebsnummer der Abrechnungsstelle
         /// </summary>
         /// <remarks>
@@ -324,14 +316,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string BBNRKK { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld 2
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, Länge 15, Mussangabe
-        /// </remarks>
-        public string RESERVE2 { get; set; }
-
-        /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein abweichende Korrespondenzanschrift vorhanden ist
         /// </summary>
         /// <remarks>
@@ -362,14 +346,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
             get { return _hatDbtn ?? DBTN != null; }
             set { _hatDbtn = value; }
         }
-
-        /// <summary>
-        /// Holt oder setzt das Reservefeld 3
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, Länge 5, Mussangabe
-        /// </remarks>
-        public string RESERVE3 { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Datenbaustein für Abweichende Korrespondenzanschrift

@@ -382,14 +382,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, Länge 2, Mussangabe
-        /// </remarks>
-        public string RESERVE { get; set; }
-
-        /// <summary>
         /// Holt oder setzt den Datenbaustein für Mitgliedsidentifikation
         /// </summary>
         public DBMI DBMI

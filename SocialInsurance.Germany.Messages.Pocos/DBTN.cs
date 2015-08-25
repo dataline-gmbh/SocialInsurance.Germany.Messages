@@ -125,13 +125,5 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Betriebsnummer der Krankenkasse, die über die Umlagepflicht U1 entschieden hat, Länge 15, Mussangabe unter Bedingungen
         /// </remarks>
         public string BBNRENTU1 { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt das Reservefeld
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, Länge 8, Mussangabe
-        /// </remarks>
-        public string RESERVE { get; set; }
     }
 }

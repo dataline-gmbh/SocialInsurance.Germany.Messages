@@ -6,6 +6,6 @@
     <field name="ENDEVS" length="8" required="true"/>
     <field name="ABKGDKNV" length="2" required="true"/>
     <field name="BPUT" length="24" required="true"/>
-    <field name="RESERVE" length="36" required="false"/>
+    <field name="RESERVE" length="36" required="false" ignore="true"/>
   </template>
 </beanio>

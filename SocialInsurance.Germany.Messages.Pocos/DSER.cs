@@ -229,14 +229,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public int APRO { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, Blank = Grundstellung, Länge 16, Mussangabe
-        /// </remarks>
-        public string RESERVE { get; set; }
-
-        /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Erstattungen Arbeitgeberaufwendungen Arbeitsunfähigkeit vorhanden ist
         /// </summary>
         /// <remarks>

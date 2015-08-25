@@ -19,7 +19,7 @@
     <field name="EBU" length="9" required="true"/>
     <field name="URAU" length="1" required="false" regex="[0-2]"/>
     <field name="AUTG" length="1" required="true" regex="[JN]"/>
-    <field name="RESERVE" length="4" required="false"/>
+    <field name="RESERVE" length="4" required="false" ignore="true"/>
     <field name="LAT" length="8" required="true" format="yyyyMMdd"/>
   </template>
 </beanio>

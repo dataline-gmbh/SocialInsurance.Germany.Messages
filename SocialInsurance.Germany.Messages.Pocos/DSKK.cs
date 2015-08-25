@@ -131,14 +131,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string MG { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld 1
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld 1, Leerzeichen, Länge 15, Mussangabe
-        /// </remarks>
-        public string RESERVE1 { get; set; }
-
-        /// <summary>
         /// Holt oder setzt ein der Krankenkasse zur Verfügung stehendes Feld
         /// </summary>
         /// <remarks>
@@ -173,14 +165,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// B. Steuerberater - 8 Stellen linksbündig mit nachfolgenden Leerzeichen), Länge 15, Mussangabe
         /// </remarks>
         public string BBNRAS { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt das Reservefeld
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, Länge 3, Mussangabe
-        /// </remarks>
-        public string RESERVE2 { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Abgabegrund

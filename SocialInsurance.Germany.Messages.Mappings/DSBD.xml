@@ -14,7 +14,7 @@
     <field name="FEKZ" regex="[0-4]" length="1" required="true" />
     <field name="FEAN" length="1" required="true" />
     <field name="BBNRBS" length="15" required="true"/>
-    <field name="RESERVE1" length="11" required="false"/>
+    <field name="RESERVE1" length="11" required="false" ignore="true"/>
     <field name="BBNRAS" length="15" required="false"/>
     <field name="GD" length="2" required="true"/>
     <field name="WUKL" length="5" required="false"/>
@@ -37,10 +37,10 @@
     <field name="AZVU" length="20" required="false"/>
     <field name="DATENSATZID" length="20" required="false"/>
     <field name="BBNRKK" length="15" required="false"/>
-    <field name="RESERVE2" length="15" required="false"/>
+    <field name="RESERVE2" length="15" required="false" ignore="true"/>
     <field name="MMKA" length="1" typeHandler="jn" required="true"/>
     <field name="MMTN" length="1" typeHandler="jn" required="true"/>
-    <field name="RESERVE3" length="5" required="false"/>
+    <field name="RESERVE3" length="5" required="false" ignore="true"/>
     <segment name="ListeDBKA" class="SocialInsurance.Germany.Messages.Pocos.DBKA, SocialInsurance.Germany.Messages.Pocos" occursRef="MMKA" collection="list">
       <include template="DBKA"/>
     </segment>

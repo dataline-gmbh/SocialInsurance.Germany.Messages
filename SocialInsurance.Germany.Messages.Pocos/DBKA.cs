@@ -100,13 +100,5 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Postfach, Länge 10, Pflichtangabe, soweit bekannt
         /// </remarks>
         public string POSTFACH { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt das Reservefeld
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, Länge 8, Mussangabe
-        /// </remarks>
-        public string RESERVE { get; set; }
     }
 }

@@ -180,15 +180,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string AUTG { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, Länge 4, Mussangabe
-        /// Blank = Grundstellung
-        /// </remarks>
-        public string RESERVE { get; set; }
-
-        /// <summary>
         /// Holt oder setzt den letzten Arbeitstag/von Bord am
         /// </summary>
         /// <remarks>

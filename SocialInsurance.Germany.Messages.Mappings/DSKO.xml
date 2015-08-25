@@ -28,7 +28,7 @@
     <field name="EMAILAP" length="70" required="true"/>
     <field name="VERBEST" length="1" required="true" />
     <field name="FERUECK" length="1" required="true"/>
-    <field name="RESERVE" length="3" required="false"/>
+    <field name="RESERVE" length="3" required="false" ignore="true"/>
     <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
       <include template="DBFE" />
     </segment>

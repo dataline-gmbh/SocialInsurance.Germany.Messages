@@ -62,14 +62,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public int ARTAB { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, Blank = Grundstellung, Länge 8, Mussangabe
-        /// </remarks>
-        public string RESERVE { get; set; }
-
-        /// <summary>
         /// Holt oder setzt das fortgezahlte Bruttoarbeitsentgelt
         /// </summary>
         /// <remarks>

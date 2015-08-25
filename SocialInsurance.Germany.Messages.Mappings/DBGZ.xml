@@ -7,7 +7,7 @@
     <field name="GAEG" length="6" required="true"/>
     <field name="EGAEG" length="6" required="true"/>
     <field name="SVTG" length="2" required="true"/>
-    <field name="RESERVE" length="4" required="false"/>
+    <field name="RESERVE" length="4" required="false" ignore="true"/>
     <field name="ZRBG" length="8" required="true" format="yyyyMMdd"/>
     <field name="ZREN" length="8" required="true" format="yyyyMMdd"/>
   </template>

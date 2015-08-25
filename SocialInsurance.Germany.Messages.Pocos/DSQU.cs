@@ -40,14 +40,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string KE { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld 1
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, ohne Inhalt, Länge 5, Mussangabe
-        /// </remarks>
-        public string RESERVE1 { get; set; }
-
-        /// <summary>
         /// Holt oder setzt die Betriebsnummer des Erstellers des Datensatzes
         /// </summary>
         /// <remarks>
@@ -112,14 +104,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public int VERKP { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld 2
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld 2, kein Inhalt,Länge 105, Mussangabe
-        /// </remarks>
-        public string RESERVE2 { get; set; }
-
-        /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Quittung-DEÜV vorhanden ist
         /// </summary>
         /// <remarks>
@@ -160,14 +144,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
             get { return _hatDbqv ?? DBQV != null; }
             set { _hatDbqv = value; }
         }
-
-        /// <summary>
-        /// Holt oder setzt das Reservefeld 3
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld 3, kein Inhalt,Länge 17, Mussangabe
-        /// </remarks>
-        public string RESERVE3 { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Datenbaustein für Quittung-DEÜV

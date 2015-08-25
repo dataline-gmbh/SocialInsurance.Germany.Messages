@@ -43,7 +43,7 @@
     <field name="PB" length="8" required="true" type="int" format="00000000"/>
     <field name="DBMIV" length="1" required="true" typeHandler="jn"/>
     <field name="DBHBV" length="1" required="true" typeHandler="jn"/>
-    <field name="RESERVE" length="2" required="false"/>
+    <field name="RESERVE" length="2" required="false" ignore="true"/>
     <segment name="ListeDBMI" class="SocialInsurance.Germany.Messages.Pocos.DBMI, SocialInsurance.Germany.Messages.Pocos" occursRef="DBMIV" collection="list">
       <include template="DBMI" />
     </segment>

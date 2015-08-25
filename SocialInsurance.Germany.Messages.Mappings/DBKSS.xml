@@ -7,6 +7,6 @@
     <field name="PAT" length="2" required="false"/>
     <field name="AQRVB" length="1" required="true"/>
     <field name="VKNR" length="2" required="true" type="int" format="00"/>
-    <field name="RESERVE" length="168" required="false"/>
+    <field name="RESERVE" length="168" required="false" ignore="true"/>
   </template>
 </beanio>

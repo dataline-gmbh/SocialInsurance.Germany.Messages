@@ -53,7 +53,5 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Bergmannsprämienbezug/Schichten unter Tage, Länge 24, Mussangabe unter Bedingungen
         /// </remarks>
         public string BPUT { get; set; }
-
-        private string RESERVE { get; set; }
     }
 }

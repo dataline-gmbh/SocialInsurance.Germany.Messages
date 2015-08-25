@@ -25,7 +25,7 @@
     <field name="FEKZ" regex="[0-4]" length="1" required="true" />
     <field name="FEAN" length="1" required="true" />
     <field name="VSNRVFNR" length="12" required="false"/>
-    <field name="RESERVE1" length="2" required="false"/>
+    <field name="RESERVE1" length="2" required="false" ignore="true"/>
     <field name="BBNRVU" length="15" required="true"/>
     <field name="AZVU" length="20" required="false"/>
     <field name="BBNRKK" length="15" required="false"/>
@@ -54,7 +54,7 @@
     <field name="MMNB" length="1" required="true" typeHandler="jn"/>
     <field name="MMHA" length="1" required="true" typeHandler="jn"/>
     <field name="MMKE" length="1" required="true" typeHandler="jn"/>
-    <field name="RESERVE" length="14" required="false"/>
+    <field name="RESERVE" length="14" required="false" ignore="true"/>
     <segment name="ListeDBEN" class="SocialInsurance.Germany.Messages.Pocos.DBEN, SocialInsurance.Germany.Messages.Pocos" occursRef="MMEN" collection="list">
       <include template="DBEN" />
     </segment>

@@ -136,15 +136,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string AZVU { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld 1
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, Länge 58, Mussangabe
-        ///  Das Feld ist aus Vereinheitlichungsgründen enthalten und hier auf Grundstellung (Leerzeichen)
-        /// </remarks>
-        public string RESERVE1 { get; set; }
-
-        /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Anrechnungszeiten vorhanden ist
         /// </summary>
         /// <remarks>
@@ -173,27 +164,9 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt das Reservefeld 2
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, Länge 8, Mussangabe
-        /// Feld nicht belegt (Grundstellung)
-        /// </remarks>
-        public string RESERVE2 { get; set; }
-
-        /// <summary>
         /// Holt oder setzt das Kennzeichen,aus welchem Verfahren der Bundesagentur für Arbeit die Meldung erstellt wurde
         /// </summary>
         public string KENNZUE { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt das Reservefeld 3
-        /// </summary>
-        /// <remarks>
-        /// Reservefeld, Länge 5, Mussangabe
-        /// Feld nicht belegt (Grundstellung)
-        /// </remarks>
-        public string RESERVE3 { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Versionsnummer des

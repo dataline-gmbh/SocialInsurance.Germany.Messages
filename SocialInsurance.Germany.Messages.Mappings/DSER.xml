@@ -30,7 +30,7 @@
     <field name="ARTVERS" length="1" required="true" regex="[0-3]" type="int" />
     <field name="GE" length="1" required="true" regex="[MW]"/>
     <field name="APRO" length="1" required="true" regex="[12]"/>
-    <field name="RESERVE" length="16" required="false"/>
+    <field name="RESERVE" length="16" required="false" ignore="true"/>
     <field name="MMDBAU" length="1" required="true" typeHandler="jn"/>
     <field name="MMDBBT" length="1" required="true" typeHandler="jn"/>
     <field name="MMDBZU" length="1" required="true" typeHandler="jn"/>

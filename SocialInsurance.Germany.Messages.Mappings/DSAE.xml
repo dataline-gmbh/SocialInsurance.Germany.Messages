@@ -17,14 +17,14 @@
     <field name="VSTR" length="2" required="true"/>
     <field name="BBNRVU" length="15" required="true"/>
     <field name="AZVU" length="20" required="true"/>
-    <field name="RESERVE1" length="58" required="false"/>
+    <field name="RESERVE1" length="58" required="false" ignore="true"/>
     <field name="MMAZ" length="1" required="true" typeHandler="jn"/>
     <field name="MMEZ" length="1" required="true" typeHandler="jn"/>
-    <field name="RESERVE2" length="8" required="false"/>
+    <field name="RESERVE2" length="8" required="false" ignore="true"/>
     <field name="KENNZUE" length="1" required="true"/>
-    <field name="RESERVE3" length="5" required="false"/>
+    <field name="RESERVE3" length="5" required="false" ignore="true"/>
     <field name="VERNRKP" length="2" required="true"/>
-    <field name="RESERVE4" length="2" required="false"/>
+    <field name="RESERVE4" length="2" required="false" ignore="true"/>
     <segment name="DBAZ" class="SocialInsurance.Germany.Messages.Pocos.DBAZ, SocialInsurance.Germany.Messages.Pocos" occursRef="MMAZ" collection="list">
       <include template="DBAZ" />
     </segment>
