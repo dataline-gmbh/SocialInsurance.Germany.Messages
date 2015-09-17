@@ -54,6 +54,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
             /// B01 = Entsparung von ausschließlich sozialversicherungspflichtigem Wertguthaben
             /// B02 = Keine UV-Pflicht wegen Auslandsbeschäftigung
             /// B03 = Versicherungsfreiheit in der UV gemäß SGB VII
+            /// B04 = Erreichen des Höchstjahresarbeitsentgeltes in einer vorangegangenen Entgeltmeldung
+            /// B05 = UV-Entgelt wird in einer nachfolgenden Entgeltmeldung oder in einer weiteren Entgeltmeldung mit Abgabegrund 91 gemeldet
+            /// B06 = UV-Entgelt wird in einer anderen Gefahrtarifstelle dieser Entgeltmeldung angegeben
+            /// B09 = Sonstige Sachverhalte, die kein UV-Entgelt in der Meldung erfordern
             /// C01 = Entsparung von übertragenem Wertguthaben durch die DRV Bund
             /// </remarks>
             public string UVGD { get; set; }

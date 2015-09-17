@@ -30,7 +30,7 @@
     <field name="AZKK" length="20" required="false" />
     <field name="BBNRAS" length="15" required="false" />
     <field name="PERSGR" length="3" required="true" type="int" format="000" />
-    <field name="GD" length="2" required="true" />
+    <field name="GD" length="2" required="true" type="int" format="0" />
     <field name="SASC" length="3" required="false" />
     <field name="MMME" length="1" typeHandler="jn" required="true"/>    
     <field name="MMNA" length="1" typeHandler="jn" required="true"/>    
