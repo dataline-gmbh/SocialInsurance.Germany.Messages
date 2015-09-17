@@ -1,39 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SocialInsurance.Germany.Messages.Pocos;
 using Xunit;
-using System.IO;
 
-namespace SocialInsurance.Germany.Messages.Tests.bwna
+namespace SocialInsurance.Germany.Messages.Tests.bwnac
 {
     public class Test : TestBasis
     {
-
-
-        [Fact(DisplayName = "TestXmlTotalFieldLength")]
-        public void TestXmlTotalFieldLength()
-        {
-            var xmlTest = System.Xml.Linq.XDocument.Load(LoadData("test.xml"));
-            int length = 0;
-            int count = 0;
-            foreach (var eleField in xmlTest.Root.Element(xmlTest.Root.GetDefaultNamespace() + "template").Elements(xmlTest.Root.GetDefaultNamespace() + "field"))
-            {
-                count++;
-                length += Convert.ToInt32(eleField.Attribute("length").Value);
-            }
-
-        }
-
         /// <summary>
         /// BW02
         /// </summary>
         [Fact(DisplayName = "TestBW02")]
         public void TestBW02()
         {
-            var deuevMessage = GetMessageFromFile("ebna0091.a35", "bw02-bwnac", typeof(BW02));
+            var deuevMessage = GetMessageFromFile("ebna0091.a35", "bw02-bwnac");
             Assert.True(deuevMessage.BW02.Count() > 0);
         }
 
@@ -43,10 +27,13 @@ namespace SocialInsurance.Germany.Messages.Tests.bwna
         /// <param name="fileName">
         /// Dateiname der Meldedatei
         /// </param>
+        /// <param name="name">
+        /// Name in der Meldungen.xml
+        /// </param>
         /// <returns>
         /// Meldedatei als DeuevMessageData-Objekt
         /// </returns>
-        private BwnaMessageData GetMessageFromFile(string fileName, string name, Type type)
+        private BwnaMessageData GetMessageFromFile(string fileName, string name)
         {
             var input = LoadData(fileName).ReadToEnd();
             var output = new StringWriter();

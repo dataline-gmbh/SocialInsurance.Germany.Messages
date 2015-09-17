@@ -116,7 +116,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Betriebsnummer des Arbeitgebers (8 STellen linksbündig mit nachfolgenden Leerzeichen), Länge 15, Mussangabe
         /// </remarks>
-        public string BBNRAG {get; set;}
+        public string BBNRAG { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beginn des Nachweiszeitraums
@@ -186,7 +186,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt das Vorzeichen zum PV-Beitrag
         /// </summary>
         /// <remarks>
-        /// Kennzeichen, ob positiver oder negativer Beitrag, Länge 1, Mussangabe 
+        /// Kennzeichen, ob positiver oder negativer Beitrag, Länge 1, Mussangabe
         /// </remarks>
         public string VZPV { get; set; }
 
@@ -194,7 +194,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt den PV-Beitrag
         /// </summary>
         /// <remarks>
-        /// Beitrag zur Pflegeversicherung (Beitragsgruppen 0001 und 0002) mit Centangaben, Länge 11, Mussangabe 
+        /// Beitrag zur Pflegeversicherung (Beitragsgruppen 0001 und 0002) mit Centangaben, Länge 11, Mussangabe
         /// </remarks>
         public int PVBEITR { get; set; }
 
@@ -202,7 +202,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt das Vorzeichen zum RV-Beitrag
         /// </summary>
         /// <remarks>
-        /// Kennzeichen, ob positiver oder negativer Beitrag, Länge 1, Mussangabe 
+        /// Kennzeichen, ob positiver oder negativer Beitrag, Länge 1, Mussangabe
         /// </remarks>
         public string VZRV1 { get; set; }
 
@@ -210,7 +210,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt den RV-Beitrag
         /// </summary>
         /// <remarks>
-        /// Beitrag zur Rentenversicherung (Beitragsgruppen 0100) mit Centangaben, Länge 11, Mussangabe 
+        /// Beitrag zur Rentenversicherung (Beitragsgruppen 0100) mit Centangaben, Länge 11, Mussangabe
         /// </remarks>
         public int RVBEITR1 { get; set; }
 
@@ -522,7 +522,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Postleitzahl des Arbeitgebers
         /// </summary>
         /// <remarks>
-        /// Postleitzahl des Arbeigebers/Zahlstelle (bei inländischen Anschriften muss die Postleitzahl 5 Stellen 
+        /// Postleitzahl des Arbeigebers/Zahlstelle (bei inländischen Anschriften muss die Postleitzahl 5 Stellen
         /// nummerisch linksbündig mit nachfolgenden Leerzeichen sein)
         /// Länge 10, Mussangabe
         /// </remarks>
@@ -645,7 +645,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string WG { get; set; }
 
         /// <summary>
-        /// Holt das Vorzeichen zur einheitlichen Pauschalsteuer
+        /// Holt oder setzt das Vorzeichen zur einheitlichen Pauschalsteuer
         /// </summary>
         /// <remarks>
         /// Kennzeiche, ob positiver oder negativer Betrag
@@ -678,6 +678,5 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Die Anzahl der Fehler-Datenbausteine ergibt sich aus dem Feld FEAN.
         /// </remarks>
         public List<DBFE> DBFE { get; set; }
-
     }
 }

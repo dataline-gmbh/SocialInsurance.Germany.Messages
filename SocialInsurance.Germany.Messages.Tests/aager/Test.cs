@@ -1,32 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SocialInsurance.Germany.Messages.Pocos;
 using Xunit;
-using System.IO;
 
 namespace SocialInsurance.Germany.Messages.Tests.aager
 {
     public class Test : TestBasis
     {
-
-
-        [Fact(DisplayName = "TestXmlTotalFieldLength")]
-        public void TestXmlTotalFieldLength()
-        {
-            var xmlTest = System.Xml.Linq.XDocument.Load(LoadData("test.xml"));
-            int length = 0;
-            int count = 0;
-            foreach (var eleField in xmlTest.Root.Element(xmlTest.Root.GetDefaultNamespace() + "template").Elements(xmlTest.Root.GetDefaultNamespace() + "field"))
-            {
-                count++;
-                length += Convert.ToInt32(eleField.Attribute("length").Value);
-            }
-
-        }
-
         /// <summary>
         /// DSER
         /// </summary>
@@ -42,6 +26,9 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
         /// </summary>
         /// <param name="fileName">
         /// Dateiname der Meldedatei
+        /// </param>
+        /// <param name="name">
+        /// Name in der Meldungen.xml
         /// </param>
         /// <returns>
         /// Meldedatei als DeuevMessageData-Objekt

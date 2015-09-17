@@ -154,7 +154,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt das Vorzeichen zum PV-Beitrag
         /// </summary>
         /// <remarks>
-        /// Kennzeichen, ob positiver oder negativer Beitrag, Länge 1, Mussangabe 
+        /// Kennzeichen, ob positiver oder negativer Beitrag, Länge 1, Mussangabe
         /// </remarks>
         public string VZPV { get; set; }
 
@@ -162,7 +162,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt den PV-Beitrag
         /// </summary>
         /// <remarks>
-        /// Beitrag zur Pflegeversicherung (Beitragsgruppen 0001 und 0002) mit Centangaben, Länge 11, Mussangabe 
+        /// Beitrag zur Pflegeversicherung (Beitragsgruppen 0001 und 0002) mit Centangaben, Länge 11, Mussangabe
         /// </remarks>
         public int PVBEITR { get; set; }
 
@@ -250,7 +250,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Postleitzahl des Arbeitgebers
         /// </summary>
         /// <remarks>
-        /// Postleitzahl des Arbeigebers/Zahlstelle (bei inländischen Anschriften muss die Postleitzahl 5 Stellen 
+        /// Postleitzahl des Arbeigebers/Zahlstelle (bei inländischen Anschriften muss die Postleitzahl 5 Stellen
         /// nummerisch linksbündig mit nachfolgenden Leerzeichen sein)
         /// Länge 10, Mussangabe
         /// </remarks>
