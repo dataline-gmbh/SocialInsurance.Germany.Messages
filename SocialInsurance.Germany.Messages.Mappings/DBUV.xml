@@ -4,7 +4,7 @@
     <field name="KE" length="4" literal="DBUV" required="true"/>
     <field name="ANUV" length="1" required="true" type="int" format="0"/>
     <field name="RESERVE" length="15" required="false" ignore="true"/>
-    <segment name="UV" class="SocialInsurance.Germany.Messages.Pocos.DBUV+DBUV_UV, SocialInsurance.Germany.Messages.Pocos" occursRef="ANUV" collection="list">
+    <segment name="UV" class="SocialInsurance.Germany.Messages.Pocos.DBUV+DBUV_UV, SocialInsurance.Germany.Messages.Pocos" occursRef="ANUV" collection="list"  maxOccurs="9">
       <field name="UVGD" length="3" required="false"/>
       <field name="BBNRUV" length="15" required="false"/>
       <field name="MNR" length="20" required="false"/>

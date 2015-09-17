@@ -18,10 +18,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung10_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "10"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 10));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "10")
+                if (dsme.GD == 10)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -52,10 +52,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung10_2()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_2.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "10"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 10));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "10")
+                if (dsme.GD == 10)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -86,10 +86,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung10_3()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_3.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "10"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 10));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "10")
+                if (dsme.GD == 10)
                 {
                     Assert.Equal(dsme.PERSGR, 110);
                     Assert.NotEqual(string.Empty, dsme.VSNR);
@@ -117,10 +117,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung10_4()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_4.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "10"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 10));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "10")
+                if (dsme.GD == 10)
                 {
                     Assert.Equal(dsme.PERSGR, 110);
                     Assert.Equal(string.Empty, dsme.VSNR);
@@ -147,10 +147,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung10_5()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_5.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "10"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 10));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "10")
+                if (dsme.GD == 10)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -178,10 +178,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung11_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev11_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "11"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 11));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "11")
+                if (dsme.GD == 11)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -209,10 +209,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung12_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev12_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "12"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 12));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "12")
+                if (dsme.GD == 12)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -242,10 +242,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung13_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev13_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "13"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 13));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "13")
+                if (dsme.GD == 13)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -269,14 +269,14 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         /// Beginn einer geringfügigen Beschäftigung nach Beendigung
         /// einer Berufsausbildung(ohne Arbeitgeberwechsel)
         /// </summary>
-        [Fact(DisplayName = "Anmeldung 11: Beschäftigung nach Ausbildung (ohne Arbeitgeberwechsel)")]
+        [Fact(DisplayName = "Anmeldung 11: geringfügige Beschäftigung nach Ausbildung (ohne Arbeitgeberwechsel)")]
         public void TestDEUEVMeldung11_2()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev11_2.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "11"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 11));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "11")
+                if (dsme.GD == 11)
                 {
                     Assert.Contains(dsme.PERSGR, new List<int> { 109, 110, 190 });
                     Assert.NotNull(dsme.DBME);
@@ -298,14 +298,14 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         /// Beginn einer Berufsausbildung nach Beendigung einer Beschäftigung
         /// (beim gleichen Arbeitgeber und/oder ggf. ohne Beitragsgruppenwechsel)
         /// </summary>
-        [Fact(DisplayName = "Anmeldung 13: Ausbildungsbeginn nach Beschäftigungsende (beim gleichen Arbeitgeber)")]
+        [Fact(DisplayName = "Anmeldung 13: Ausbildungsbeginn nach Beschäftigung (beim gleichen Arbeitgeber)")]
         public void TestDEUEVMeldung13_2()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev13_2.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "13"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 13));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "13")
+                if (dsme.GD == 13)
                 {
                     Assert.Contains(dsme.PERSGR, new List<int> { 102, 121, 122 });
                     Assert.NotNull(dsme.DBME);
@@ -327,14 +327,14 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         /// Beginn einer Berufsausbildung nach Beendigung einer
         /// geringfügigen Beschäftigung (ohne Arbeitgeberwechsel)
         /// </summary>
-        [Fact(DisplayName = "Anmeldung 11: Ausbildungsbeginn nach Beschäftigungsende (ohne Arbeitgeberwechsel)")]
+        [Fact(DisplayName = "Anmeldung 11: Ausbildungsbeginn nach geringfügiger Beschäftigung(ohne Arbeitgeberwechsel)")]
         public void TestDEUEVMeldung11_3()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev11_3.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "11"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 11));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "11")
+                if (dsme.GD == 11)
                 {
                     Assert.Contains(dsme.PERSGR, new List<int> { 102, 121, 122 });
                     Assert.NotNull(dsme.DBME);
@@ -360,10 +360,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung11_4()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev11_4.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "11"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 11));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "11")
+                if (dsme.GD == 11)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -391,10 +391,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung11_5()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev11_5.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "11"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 11));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "11")
+                if (dsme.GD == 11)
                 {
                     Assert.Contains(dsme.PERSGR, new List<int> { 109, 110, 190 });
                     Assert.NotNull(dsme.DBME);
@@ -420,10 +420,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung12_2()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev12_2.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "12"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 12));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "12")
+                if (dsme.GD == 12)
                 {
                     Assert.Contains(dsme.PERSGR, new List<int> { 109, 110, 190 });
                     Assert.NotNull(dsme.DBME);
@@ -451,10 +451,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung13_3()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev13_3.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "13"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 13));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "13")
+                if (dsme.GD == 13)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -485,10 +485,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung13_4()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev13_4.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "13"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 13));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "13")
+                if (dsme.GD == 13)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -516,10 +516,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung12_3()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev12_3.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "12"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 12));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "12")
+                if (dsme.GD == 12)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -546,10 +546,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung13_5()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev13_5.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "13"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 13));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "13")
+                if (dsme.GD == 13)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -578,10 +578,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung13_6()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev13_6.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "13"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 13));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "13")
+                if (dsme.GD == 13)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -609,10 +609,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung13_7()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev13_7.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "13"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 13));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "13")
+                if (dsme.GD == 13)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -640,10 +640,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung30_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev30_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "30"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 30));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "30")
+                if (dsme.GD == 30)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -672,10 +672,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung30_2()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev30_2.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "30"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 30));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "30")
+                if (dsme.GD == 30)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -702,15 +702,15 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung49_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev49_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "49"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 49));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "49")
+                if (dsme.GD == 49)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
                         new List<int> { 101, 102, 103, 104, 105, 106, 107, 108, 109,
-                            110, 111,  113, 114, 116, 118, 119, 121, 122, 123, 124, 127, 190 });
+                            110, 111, 112, 113, 114, 116, 118, 119, 121, 122, 123, 124, 127, 190 });
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
                     Assert.NotNull(dsme.DBAN);
@@ -733,10 +733,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung31_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev31_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "31"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 31));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "31")
+                if (dsme.GD == 31)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -763,10 +763,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung32_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev32_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "32"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 32));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "32")
+                if (dsme.GD == 32)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -794,10 +794,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung33_1()
         {
              var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev33_1.dat");
-             Assert.True(deuevMessage.DSME.Exists(x => x.GD == "33"));
+             Assert.True(deuevMessage.DSME.Exists(x => x.GD == 33));
              foreach (var dsme in deuevMessage.DSME)
              {
-                if (dsme.GD == "33")
+                if (dsme.GD == 33)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -824,10 +824,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung31_2()
         {
              var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev31_2.dat");
-             Assert.True(deuevMessage.DSME.Exists(x => x.GD == "31"));
+             Assert.True(deuevMessage.DSME.Exists(x => x.GD == 31));
              foreach (var dsme in deuevMessage.DSME)
              {
-                if (dsme.GD == "31")
+                if (dsme.GD == 31)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -856,10 +856,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung33_2()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev33_2.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "33"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 33));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "33")
+                if (dsme.GD == 33)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -887,10 +887,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung31_3()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev31_3.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "31"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 31));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "31")
+                if (dsme.GD == 31)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -918,10 +918,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung31_4()
         {
              var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev31_4.dat");
-             Assert.True(deuevMessage.DSME.Exists(x => x.GD == "31"));
+             Assert.True(deuevMessage.DSME.Exists(x => x.GD == 31));
              foreach (var dsme in deuevMessage.DSME)
              {
-                if (dsme.GD == "31")
+                if (dsme.GD == 31)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -949,10 +949,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung31_5()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev31_5.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "31"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 31));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "31")
+                if (dsme.GD == 31)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -980,10 +980,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung32_2()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev32_2.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "32"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 32));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "32")
+                if (dsme.GD == 32)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1013,10 +1013,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung33_3()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev33_3.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "33"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 33));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "33")
+                if (dsme.GD == 33)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1044,10 +1044,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung32_3()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev32_3.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "32"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 32));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "32")
+                if (dsme.GD == 32)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1074,10 +1074,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung36_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev36_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "36"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 36));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "36")
+                if (dsme.GD == 36)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1112,10 +1112,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung34_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev34_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "34"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 34));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "34")
+                if (dsme.GD == 34)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1151,10 +1151,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung34_2()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev34_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "34"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 34));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "34")
+                if (dsme.GD == 34)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1188,10 +1188,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung30_3()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev30_3.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "30"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 30));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "30")
+                if (dsme.GD == 30)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1219,10 +1219,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung33_4()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev33_4.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "33"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 33));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "33")
+                if (dsme.GD == 33)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1250,10 +1250,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung50_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev50_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "50"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 50));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "50")
+                if (dsme.GD == 50)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1283,10 +1283,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung54_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev54_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "54"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 54));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "54")
+                if (dsme.GD == 54)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1311,15 +1311,15 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         /// Einmalig gezahltes, ausschließlich in der Unfallversicherung
         /// beitragspflichtiges Arbeitsentgelt als Sondermeldung
         /// </summary>
-        [Fact(DisplayName = "Sondermeldung 91:  Einmalig gezahltes, ausschließlich in der Unfallversicherung" +
+        [Fact(DisplayName = "Sondermeldung 91:  Einmalig gezahltes, ausschließlich in der Unfallversicherung " +
         "beitragspflichtiges Arbeitsentgelt als Sondermeldung")]
         public void TestDEUEVMeldung91_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev91_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "91"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 91));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "91")
+                if (dsme.GD == 91)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1342,18 +1342,23 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
 
         /// <summary>
         /// "Gesonderte Meldung über die beitragspflichtigen Einnahmen vor Rentenbeginn nach § 194 Abs. 1 SGB VI
-        /// Auf Verlangen des Rentenantragsstellers ist eine ""Gesonderte Meldung"" über die beitragspflichtigen
+        /// Auf Verlangen des Rentenantragsstellers ist eine "Gesonderte Meldung" über die beitragspflichtigen
         /// Einnahmen frühestens drei Monate vor Rentenbeginn zu erstatten"
         /// </summary>
+        /// <remarks>
+        /// Meldung an Rentenversicherung
+        /// </remarks>
         [Fact(DisplayName = "Sondermeldung 57: Gesonderte Meldung über die beitragspflichtigen Einnahmen vor Rentenbeginn nach § 194 Abs. 1 SGB VI")]
         public void TestDEUEVMeldung57_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev57_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "57"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 57));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "57")
+                if (dsme.GD == 57)
                 {
+                    var uv = dsme.DBUV.UV[0] as DBUV.DBUV_UV;
+                    var bla = uv.BBNRGT;
                     Assert.Contains(
                         dsme.PERSGR,
                         new List<int> { 101, 102, 103, 104, 105, 106, 107, 109, 111, 112,
@@ -1382,10 +1387,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung34_3()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev34_3.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "34"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 34));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "34")
+                if (dsme.GD == 34)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1415,10 +1420,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung35_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev35_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "35"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 35));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "35")
+                if (dsme.GD == 35)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1450,10 +1455,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung34_4()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev34_4.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "34"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 34));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "34")
+                if (dsme.GD == 34)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1484,10 +1489,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung51_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev51_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "51"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 51));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "51")
+                if (dsme.GD == 51)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1519,10 +1524,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung52_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev52_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "52"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 52));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "52")
+                if (dsme.GD == 52)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1550,10 +1555,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung30_4()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev30_4.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "30"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 30));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "30")
+                if (dsme.GD == 30)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1578,15 +1583,15 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         /// Weiterbeschäftigung/Anmeldung nach Eröffnung des Insolvenzverfahrens oder Abweisung mangels Masse
         /// mit Verwendung einer neuen Betriebsnummer
         /// </summary>
-        [Fact(DisplayName = "Abmeldung 10: Weiterbeschäftigung/Anmeldung nach Eröffnung des Insolvenzverfahrens" +
+        [Fact(DisplayName = "Anmeldung 10: Weiterbeschäftigung/Anmeldung nach Eröffnung des Insolvenzverfahrens" +
         "oder Abweisung mangels Masse mit Verwendung einer neuen Betriebsnummer")]
         public void TestDEUEVMeldung10_6()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_6.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "10"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 10));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "10")
+                if (dsme.GD == 10)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1616,10 +1621,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung30_5()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev30_5.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "30"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 30));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "30")
+                if (dsme.GD == 30)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1649,10 +1654,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung33_5()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev33_5.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "33"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 33));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "33")
+                if (dsme.GD == 33)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1680,10 +1685,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung60_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev60_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "60"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 60));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "60")
+                if (dsme.GD == 60)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1711,10 +1716,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung61_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev61_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "61"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 61));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "61")
+                if (dsme.GD == 61)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1742,10 +1747,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestDEUEVMeldung63_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev63_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "63"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 63));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "63")
+                if (dsme.GD == 63)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1769,14 +1774,17 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         /// <summary>
         /// Sofortmeldung für Beschäftigte, VSNR ist bekannt
         /// </summary>
+        /// <remarks>
+        /// Meldung an Rentenversicherung
+        /// </remarks>
         [Fact(DisplayName = "Sofortmeldung 20: Sofortmeldung für Beschäftigte, VSNR ist bekannt")]
         public void TestDEUEVMeldung20_1()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev20_1.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "20"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 20));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "20")
+                if (dsme.GD == 20)
                 {
                     Assert.Contains(
                         dsme.PERSGR,
@@ -1800,14 +1808,17 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         /// <summary>
         /// Sofortmeldung für Beschäftigte, VSNR ist bekannt
         /// </summary>
+        /// <remarks>
+        /// Meldung an Rentenversicherung
+        /// </remarks>
         [Fact(DisplayName = "Sofortmeldung 20: Sofortmeldung für Beschäftigte, VSNR ist nicht bekannt")]
         public void TestDEUEVMeldung20_2()
         {
             var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev20_2.dat");
-            Assert.True(deuevMessage.DSME.Exists(x => x.GD == "20"));
+            Assert.True(deuevMessage.DSME.Exists(x => x.GD == 20));
             foreach (var dsme in deuevMessage.DSME)
             {
-                if (dsme.GD == "20")
+                if (dsme.GD == 20)
                 {
                     Assert.Contains(
                         dsme.PERSGR,

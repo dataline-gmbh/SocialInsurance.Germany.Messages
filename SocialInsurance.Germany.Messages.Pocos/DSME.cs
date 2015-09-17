@@ -206,7 +206,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Grund der Abgabe, Länge 2, Mussangabe
         /// </remarks>
-        public string GD { get; set; }
+        public int GD { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Schlüssel zur Staatsangehörigkeit
