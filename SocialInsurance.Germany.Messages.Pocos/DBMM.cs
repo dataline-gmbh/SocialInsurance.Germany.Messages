@@ -34,7 +34,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Kennzeichen, Stornierung einer bereits abgegebenen Meldung:
         /// N = keine Stornierung, J = Stornierung
         /// </remarks>
-        public string KENNZST { get; set;}
+        public string KENNZST { get; set; }
 
         /// <summary>
         /// Holt oder setzt das GKV-Monatsmeldung Kennzeichen

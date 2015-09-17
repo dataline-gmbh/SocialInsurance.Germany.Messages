@@ -45,22 +45,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public int VERMO { get; set; }
 
         /// <summary>
-        /// Holt oder setzt die Kontonummer
-        /// </summary>
-        /// <remarks>
-        /// Kontonummer, Länge 10, Mussangabe unter Bedingungen
-        /// </remarks>
-        public int KTO { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt die Bankleitzahl
-        /// </summary>
-        /// <remarks>
-        /// Bankleitzahl, Länge 8, Mussangabe unter Bedingungen
-        /// </remarks>
-        public int BLZ { get; set; }
-
-        /// <summary>
         /// Holt oder setzt die Kontonummer/IBAN des Vertragspartners
         /// </summary>
         /// <remarks>

@@ -50,7 +50,9 @@
     <EmbeddedResource Include="DSME.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Meldungen.xml" />
+    <EmbeddedResource Include="Meldungen.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Types.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -137,7 +139,9 @@
   <ItemGroup>
     <EmbeddedResource Include="DBHB.xml" />
     <EmbeddedResource Include="DBMI.xml" />
-    <EmbeddedResource Include="DSBE.xml" />
+    <EmbeddedResource Include="DSBE.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DSER.xml" />
@@ -185,6 +189,12 @@
   <ItemGroup>
     <EmbeddedResource Include="DSVV.xml" />
     <EmbeddedResource Include="MVDS.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BW03.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BW02.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

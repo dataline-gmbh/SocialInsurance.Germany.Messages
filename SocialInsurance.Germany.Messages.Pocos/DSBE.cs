@@ -159,7 +159,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Postleitzahl der Betriebsstätte der Beschäftigung, Länge 5, Mussangabe
         /// </remarks>
-        public int PLT { get; set; }
+        public int PLZ { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Ort der Betriebsstätte der Beschäftigung

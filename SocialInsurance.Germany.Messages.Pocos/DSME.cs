@@ -44,7 +44,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public DSME()
         {
             KE = "DSME";
-            VF = "DEUEV";
             VERNR = 2;
         }
 

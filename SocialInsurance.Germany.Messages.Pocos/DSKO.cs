@@ -22,7 +22,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public DSKO()
         {
             KE = "DSKO";
-            VF = "DEUEV";
             VERNR = 2;
         }
 
