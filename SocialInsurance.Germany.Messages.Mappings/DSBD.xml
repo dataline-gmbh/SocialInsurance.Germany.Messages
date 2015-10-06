@@ -16,7 +16,7 @@
     <field name="BBNRBS" length="15" required="true"/>
     <field name="RESERVE1" length="11" required="false" ignore="true"/>
     <field name="BBNRAS" length="15" required="false"/>
-    <field name="GD" length="2" required="true"/>
+    <field name="GD" length="2" required="true" type="int" format="00"/>
     <field name="WUKL" length="5" required="false"/>
     <field name="NAME1" length="30" required="true"/>
     <field name="NAME2" length="30" required="false"/>

@@ -136,7 +136,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// 18 = Kombination aus 11 mit mindestens einem
         /// weiteren Grund aus 12-16
         /// </remarks>
-        public string GD { get; set; }
+        public int GD { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Wirtschaftsunterklasse

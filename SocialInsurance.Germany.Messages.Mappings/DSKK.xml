@@ -19,14 +19,14 @@
     <field name="FEKZ" regex="[0-4]" length="1" required="true" />
     <field name="FEAN" length="1" required="true" />
     <field name="VSNR" length="12" required="true" />
-    <field name="MG" length="2" required="true"/>
+    <field name="MG" length="2" required="true" type="int" format="00"/>
     <field name="RESERVE1" length="15" required="false" ignore="true"/>
     <field name="AZKK" length="20" required="false"/>
     <field name="BBNRAG" length="15" required="true"/>
     <field name="AZAG" length="20" required="false"/>
     <field name="BBNRAS" length="15" required="true"/>
     <field name="RESERVE2" length="3" required="false" ignore="true"/>
-    <field name="GD" length="2" required="true"/>
+    <field name="GD" length="2" required="true" type="int" format="00"/>
     <field name="RESERVE3" length="3" required="false" ignore="true"/>
     <field name="MMMM" length="1" typeHandler="jn" required="true"/>
     <field name="MMMS" length="1" typeHandler="jn" required="true"/>

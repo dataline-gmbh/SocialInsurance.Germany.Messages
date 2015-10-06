@@ -123,9 +123,9 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt das Geburtsdatum des Versicherten im Format
         /// </summary>
         /// <remarks>
-        /// Geburtsdatum des Versicherten im Format, Länge 8, Mussangabe
+        /// Geburtsdatum des Versicherten , Länge 8, Mussangabe
         /// </remarks>
-        public string GEBDA { get; set; }
+        public DateTime GEBDA { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Betriebsnummer des Verursachers des Datensatzes

@@ -122,13 +122,13 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string VSNR { get; set; }
 
         /// <summary>
-        /// Holt oder setzt das Meldegrund
+        /// Holt oder setzt den Meldegrund
         /// </summary>
         /// <remarks>
         /// Meldegrund, Länge 2, Mussangabe
         /// 10 = Beginn, 30 = Ende, 40 = Beginn und Ende
         /// </remarks>
-        public string MG { get; set; }
+        public int MG { get; set; }
 
         /// <summary>
         /// Holt oder setzt ein der Krankenkasse zur Verfügung stehendes Feld
@@ -174,7 +174,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// 01 = Mitteilung über weitere beitragspflichtige Einnahmen, 02 = Prüfergebnis Sozialausgleich
         /// 03 = Prüfergebnis Gleitzone, 04 = Prüfergebnis Beitragsbemessungsgrenze
         /// </remarks>
-        public string GD { get; set; }
+        public int GD { get; set; }
 
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein GKV-Monatsmeldung vorhanden ist

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace SocialInsurance.Germany.Messages.Pocos
 {
+    /// <summary>
+    /// BW03 - Datensatz Beitragsnachweis der Zahlstellen
+    /// </summary>
     public class BW03 : IDatenbaustein
     {
         public BW03()
