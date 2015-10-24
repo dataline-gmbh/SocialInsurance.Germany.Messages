@@ -1,4 +1,8 @@
-﻿using System;
+﻿// <copyright file="BW03.cs" company="DATALINE GmbH &amp; Co. KG">
+// Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
+// </copyright>
+
+using System;
 using System.Collections.Generic;
 
 namespace SocialInsurance.Germany.Messages.Pocos
@@ -8,11 +12,14 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// </summary>
     public class BW03 : IDatenbaustein
     {
+        /// <summary>
+        /// Initialisiert eine neue Instanz der <see cref="BW03"/> Klasse.
+        /// </summary>
         public BW03()
         {
-            this.KE = "BW03";
-            this.VF = "BWBNV";
-            this.DBFE = new List<DBFE>();
+            KE = "BW03";
+            VF = "BWBNV";
+            DBFE = new List<DBFE>();
         }
 
         /// <summary>

@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 using SocialInsurance.Germany.Messages.Pocos;
 using Xunit;
 
-namespace SocialInsurance.Germany.Messages.Tests.Bvbei
+namespace SocialInsurance.Germany.Messages.Tests.aager
 {
-    public class Test : TestBasis
+    public class AagTests : TestBasis
     {
         /// <summary>
-        /// DSBE
+        /// DSER
         /// </summary>
-        [Fact(DisplayName = "TestDSBE")]
-        public void TestDSBE()
+        [Fact(DisplayName = "TestDSER")]
+        public void TestDSER()
         {
-            var deuevMessage = GetMessageFromFile("ebea0023.a22", "dsbe-bvbei");
-            Assert.True(deuevMessage.DSBE.Count() > 0);
+            var deuevMessage = GetMessageFromFile("eaag0004.a15", "dser-agger");
+            Assert.True(deuevMessage.DSER.Count() > 0);
         }
 
         /// <summary>
@@ -58,9 +58,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
                 deuevMessage.DSKO = dsko;
                 writer.Write(dsko);
                 streamObject = reader.Read();
-                var DSBE = Assert.IsType<DSBE>(streamObject);
-                deuevMessage.DSBE = new List<DSBE> { DSBE };
-                writer.Write(DSBE);
+                var DSER = Assert.IsType<DSER>(streamObject);
+                deuevMessage.DSER = new List<DSER> { DSER };
+                writer.Write(DSER);
                 while (true)
                 {
                     streamObject = reader.Read();
@@ -79,8 +79,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
                     }
                     else
                     {
-                        Assert.IsType<DSBE>(streamObject);
-                        deuevMessage.DSBE.Add(streamObject as DSBE);
+                        Assert.IsType<DSER>(streamObject);
+                        deuevMessage.DSER.Add(streamObject as DSER);
                     }
 
                     writer.Write(streamObject);
@@ -107,7 +107,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
 
             public DSKO DSKO { get; set; }
 
-            public List<DSBE> DSBE { get; set; }
+            public List<DSER> DSER { get; set; }
 
             public List<NCSZ> NCSZ { get; set; }
         }

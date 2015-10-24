@@ -1,4 +1,8 @@
-﻿using System.Reflection;
+﻿// <copyright file="GlobalAssemblyInfo.cs" company="DATALINE GmbH &amp; Co. KG">
+// Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
+// </copyright>
+
+using System.Reflection;
 using System.Resources;
 
 // Allgemeine Informationen über eine Assembly werden über folgende

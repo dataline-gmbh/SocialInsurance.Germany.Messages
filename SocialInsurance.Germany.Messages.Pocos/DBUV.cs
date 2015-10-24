@@ -1,4 +1,7 @@
-﻿using System;
+﻿// <copyright file="DBUV.cs" company="DATALINE GmbH &amp; Co. KG">
+// Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
+// </copyright>
+
 using System.Collections.Generic;
 
 namespace SocialInsurance.Germany.Messages.Pocos

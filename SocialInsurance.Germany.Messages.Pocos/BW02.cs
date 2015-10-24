@@ -1,15 +1,25 @@
-﻿using System;
+﻿// <copyright file="BW02.cs" company="DATALINE GmbH &amp; Co. KG">
+// Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
+// </copyright>
+
+using System;
 using System.Collections.Generic;
 
 namespace SocialInsurance.Germany.Messages.Pocos
 {
+    /// <summary>
+    /// Beitragsnachweis-Datensatz
+    /// </summary>
     public class BW02
     {
+        /// <summary>
+        /// Initialisiert eine neue Instanz der <see cref="BW02"/> Klasse.
+        /// </summary>
         public BW02()
         {
-            this.KE = "BW02";
-            this.VF = "BWNAC";
-            this.DBFE = new List<DBFE>();
+            KE = "BW02";
+            VF = "BWNAC";
+            DBFE = new List<DBFE>();
         }
 
         /// <summary>

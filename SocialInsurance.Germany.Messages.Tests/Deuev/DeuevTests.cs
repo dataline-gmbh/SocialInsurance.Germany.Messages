@@ -8,7 +8,7 @@ using Xunit;
 
 namespace SocialInsurance.Germany.Messages.Tests.Deuev
 {
-    public class TestDEUEVVerfahren : TestBasis
+    public class DeuevTests : TestBasis
     {
         /// <summary>
         /// Beginn der Versicherungs- und/oder Beitragspflicht

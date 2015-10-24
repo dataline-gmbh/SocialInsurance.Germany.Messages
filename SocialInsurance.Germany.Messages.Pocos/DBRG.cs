@@ -1,8 +1,9 @@
-﻿using System;
+﻿// <copyright file="DBRG.cs" company="DATALINE GmbH &amp; Co. KG">
+// Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
+// </copyright>
+
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SocialInsurance.Germany.Messages.Pocos
 {

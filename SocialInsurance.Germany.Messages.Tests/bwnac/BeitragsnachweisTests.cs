@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 using SocialInsurance.Germany.Messages.Pocos;
 using Xunit;
 
-namespace SocialInsurance.Germany.Messages.Tests.aager
+namespace SocialInsurance.Germany.Messages.Tests.bwnac
 {
-    public class Test : TestBasis
+    public class BeitragsnachweisTests : TestBasis
     {
         /// <summary>
-        /// DSER
+        /// BW02
         /// </summary>
-        [Fact(DisplayName = "TestDSER")]
-        public void TestDSER()
+        [Fact(DisplayName = "TestBW02")]
+        public void TestBW02()
         {
-            var deuevMessage = GetMessageFromFile("eaag0004.a15", "dser-agger");
-            Assert.True(deuevMessage.DSER.Count() > 0);
+            var deuevMessage = GetMessageFromFile("ebna0091.a35", "bw02-bwnac");
+            Assert.True(deuevMessage.BW02.Count() > 0);
         }
 
         /// <summary>
@@ -58,9 +58,9 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
                 deuevMessage.DSKO = dsko;
                 writer.Write(dsko);
                 streamObject = reader.Read();
-                var DSER = Assert.IsType<DSER>(streamObject);
-                deuevMessage.DSER = new List<DSER> { DSER };
-                writer.Write(DSER);
+                var bw02 = Assert.IsType<BW02>(streamObject);
+                deuevMessage.BW02 = new List<BW02> { bw02 };
+                writer.Write(bw02);
                 while (true)
                 {
                     streamObject = reader.Read();
@@ -79,8 +79,8 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
                     }
                     else
                     {
-                        Assert.IsType<DSER>(streamObject);
-                        deuevMessage.DSER.Add(streamObject as DSER);
+                        Assert.IsType<BW02>(streamObject);
+                        deuevMessage.BW02.Add(streamObject as BW02);
                     }
 
                     writer.Write(streamObject);
@@ -107,7 +107,7 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
 
             public DSKO DSKO { get; set; }
 
-            public List<DSER> DSER { get; set; }
+            public List<BW02> BW02 { get; set; }
 
             public List<NCSZ> NCSZ { get; set; }
         }

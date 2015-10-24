@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 using SocialInsurance.Germany.Messages.Pocos;
 using Xunit;
 
-namespace SocialInsurance.Germany.Messages.Tests.bwnac
+namespace SocialInsurance.Germany.Messages.Tests.Bvbei
 {
-    public class Test : TestBasis
+    public class BeitragserhebungTests : TestBasis
     {
         /// <summary>
-        /// BW02
+        /// DSBE
         /// </summary>
-        [Fact(DisplayName = "TestBW02")]
-        public void TestBW02()
+        [Fact(DisplayName = "TestDSBE")]
+        public void TestDSBE()
         {
-            var deuevMessage = GetMessageFromFile("ebna0091.a35", "bw02-bwnac");
-            Assert.True(deuevMessage.BW02.Count() > 0);
+            var deuevMessage = GetMessageFromFile("ebea0023.a22", "dsbe-bvbei");
+            Assert.True(deuevMessage.DSBE.Count() > 0);
         }
 
         /// <summary>
@@ -58,9 +58,9 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
                 deuevMessage.DSKO = dsko;
                 writer.Write(dsko);
                 streamObject = reader.Read();
-                var bw02 = Assert.IsType<BW02>(streamObject);
-                deuevMessage.BW02 = new List<BW02> { bw02 };
-                writer.Write(bw02);
+                var DSBE = Assert.IsType<DSBE>(streamObject);
+                deuevMessage.DSBE = new List<DSBE> { DSBE };
+                writer.Write(DSBE);
                 while (true)
                 {
                     streamObject = reader.Read();
@@ -79,8 +79,8 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
                     }
                     else
                     {
-                        Assert.IsType<BW02>(streamObject);
-                        deuevMessage.BW02.Add(streamObject as BW02);
+                        Assert.IsType<DSBE>(streamObject);
+                        deuevMessage.DSBE.Add(streamObject as DSBE);
                     }
 
                     writer.Write(streamObject);
@@ -107,7 +107,7 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
 
             public DSKO DSKO { get; set; }
 
-            public List<BW02> BW02 { get; set; }
+            public List<DSBE> DSBE { get; set; }
 
             public List<NCSZ> NCSZ { get; set; }
         }

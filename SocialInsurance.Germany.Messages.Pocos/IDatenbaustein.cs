@@ -1,4 +1,8 @@
-﻿namespace SocialInsurance.Germany.Messages.Pocos
+﻿// <copyright file="IDatenbaustein.cs" company="DATALINE GmbH &amp; Co. KG">
+// Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
+// </copyright>
+
+namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
     /// Schnittstelle für Datenbausteine

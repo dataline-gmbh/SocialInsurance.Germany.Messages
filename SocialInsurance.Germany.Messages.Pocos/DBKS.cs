@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// <copyright file="DBKS.cs" company="DATALINE GmbH &amp; Co. KG">
+// Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
+// </copyright>
 
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
     /// Datenbaustein: DBKS - Knappschaft/See
     /// </summary>
-    public class DBKS : IDatenbaustein
+    public abstract class DBKS : IDatenbaustein
     {
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DBKS"/> Klasse

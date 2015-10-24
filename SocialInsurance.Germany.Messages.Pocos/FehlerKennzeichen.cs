@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿// <copyright file="FehlerKennzeichen.cs" company="DATALINE GmbH &amp; Co. KG">
+// Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
+// </copyright>
+
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SocialInsurance.Germany.Messages.Pocos
 {
