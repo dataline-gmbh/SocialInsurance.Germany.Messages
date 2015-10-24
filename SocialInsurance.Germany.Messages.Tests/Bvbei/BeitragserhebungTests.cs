@@ -18,7 +18,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
         public void TestDSBE()
         {
             var deuevMessage = GetMessageFromFile("ebea0023.a22", "dsbe-bvbei");
-            Assert.True(deuevMessage.DSBE.Count() > 0);
+            Assert.True(deuevMessage.DSBEv01.Count > 0);
+            var dsbe = deuevMessage.DSBEv01.Single();
+            Assert.Equal("Hauptstraße 23", dsbe.STR);
         }
 
         /// <summary>
@@ -43,48 +45,48 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
             try
             {
                 var streamObject = reader.Read();
-                var vosz = Assert.IsType<VOSZ>(streamObject);
-                deuevMessage.VOSZ = new List<VOSZ> { vosz };
-                writer.Write(vosz);
-                streamObject = reader.Read();
-                if (streamObject is VOSZ)
+
+                do
                 {
-                    deuevMessage.VOSZ.Add(streamObject as VOSZ);
+                    var vosz = Assert.IsType<VOSZ>(streamObject);
+                    deuevMessage.VOSZ = new List<VOSZ> { vosz };
                     writer.Write(vosz);
                     streamObject = reader.Read();
                 }
+                while (reader.RecordName == "VOSZ");
 
                 var dsko = Assert.IsType<DSKO>(streamObject);
                 deuevMessage.DSKO = dsko;
                 writer.Write(dsko);
                 streamObject = reader.Read();
-                var DSBE = Assert.IsType<DSBE>(streamObject);
-                deuevMessage.DSBE = new List<DSBE> { DSBE };
-                writer.Write(DSBE);
-                while (true)
+
+                while (reader.RecordName == "DSBEv01")
                 {
+                    var record = Assert.IsType<DSBEv01>(streamObject);
+                    deuevMessage.DSBEv01 = new List<DSBEv01> { record };
+                    writer.Write(record);
                     streamObject = reader.Read();
-                    if (streamObject is NCSZ)
-                    {
-                        writer.Write(streamObject);
-                        deuevMessage.NCSZ = new List<NCSZ> { streamObject as NCSZ };
-                        streamObject = reader.Read();
-                        if (streamObject is NCSZ)
-                        {
-                            deuevMessage.NCSZ.Add(streamObject as NCSZ);
-                            writer.Write(streamObject);
-                        }
-
-                        break;
-                    }
-                    else
-                    {
-                        Assert.IsType<DSBE>(streamObject);
-                        deuevMessage.DSBE.Add(streamObject as DSBE);
-                    }
-
-                    writer.Write(streamObject);
                 }
+
+                while (reader.RecordName == "DSBEv0101")
+                {
+                    var record = Assert.IsType<DSBEv0101>(streamObject);
+                    deuevMessage.DSBEv0101 = new List<DSBEv0101> { record };
+                    writer.Write(record);
+                    streamObject = reader.Read();
+                }
+
+                do
+                {
+                    var ncsz = Assert.IsType<NCSZ>(streamObject);
+                    writer.Write(streamObject);
+                    deuevMessage.NCSZ = new List<NCSZ> { ncsz };
+                    streamObject = reader.Read();
+                }
+                while (reader.RecordName != null && reader.RecordName == "NCSZ");
+                
+                Assert.Null(reader.RecordName);
+                Assert.Equal(deuevMessage.VOSZ.Count, deuevMessage.NCSZ.Count);
 
                 writer.Close();
                 string output2 = output.ToString();
@@ -107,7 +109,9 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
 
             public DSKO DSKO { get; set; }
 
-            public List<DSBE> DSBE { get; set; }
+            public List<DSBEv01> DSBEv01 { get; set; }
+
+            public List<DSBEv0101> DSBEv0101 { get; set; }
 
             public List<NCSZ> NCSZ { get; set; }
         }

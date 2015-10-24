@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <template name="DBBF">
+    <field name="KE" length="4" literal="DBBF" required="true"/>
+    <field name="ANBF" length="1" type="int" required="true" />
+    <field name="RESERVE" length="15" required="false" ignore="true"/>
+    <field name="BF" length="72" occursRef="ANBF" collection="list" />
+  </template>
+</beanio>

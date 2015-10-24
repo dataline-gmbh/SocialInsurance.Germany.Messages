@@ -63,6 +63,7 @@
     <Compile Include="DBEN.cs" />
     <Compile Include="DBEU.cs" />
     <Compile Include="DBEZ.cs" />
+    <Compile Include="DBBF.cs" />
     <Compile Include="DBFE.cs" />
     <Compile Include="DBFZ.cs" />
     <Compile Include="DBGB.cs" />
@@ -96,7 +97,8 @@
     <Compile Include="DBZU.cs" />
     <Compile Include="DSAE.cs" />
     <Compile Include="DSBD.cs" />
-    <Compile Include="DSBE.cs" />
+    <Compile Include="DSBEv0101.cs" />
+    <Compile Include="DSBEv01.cs" />
     <Compile Include="DSER.cs" />
     <Compile Include="DSKK.cs" />
     <Compile Include="DSKO.cs" />

@@ -1,4 +1,4 @@
-﻿// <copyright file="DSBE.cs" company="DATALINE GmbH &amp; Co. KG">
+﻿// <copyright file="DSBEv01.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
@@ -11,7 +11,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datensatz: DSBE - Datensatz BV Beitragserhebung
     /// </summary>
-    public class DSBE : IDatensatz
+    public class DSBEv01 : IDatensatz
     {
         private FehlerKennzeichen? _fekz;
 
@@ -20,12 +20,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         private bool? _hatDbhb;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DSBE"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DSBEv01"/> Klasse
         /// </summary>
         /// <remarks>
         /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt
         /// </remarks>
-        public DSBE()
+        public DSBEv01()
         {
             KE = "DSBE";
             VF = "BVBEI";

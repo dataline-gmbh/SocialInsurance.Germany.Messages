@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.CompilerServices;
+using System.Text;
 
 using BeanIO;
 
@@ -13,6 +14,8 @@ namespace SocialInsurance.Germany.Messages.Tests
 {
     public abstract class TestBasis
     {
+        private static readonly Encoding _iso8859_15 = Encoding.GetEncoding("ISO-8859-15");
+
         private readonly StreamFactory _factory;
 
         private readonly string _namespace;
@@ -29,7 +32,23 @@ namespace SocialInsurance.Germany.Messages.Tests
             get { return _factory; }
         }
 
+        protected string ReadData(string resourceName)
+        {
+            return ReadData(resourceName, _iso8859_15);
+        }
+
+        protected string ReadData(string resourceName, Encoding encoding)
+        {
+            using (var reader = LoadData(resourceName, encoding))
+                return reader.ReadToEnd();
+        }
+
         protected TextReader LoadData(string resourceName)
+        {
+            return LoadData(resourceName, _iso8859_15);
+        }
+
+        protected TextReader LoadData(string resourceName, Encoding encoding)
         {
             //var frame = new StackTrace(1).GetFrame(0);
             //var method = frame.GetMethod();
@@ -40,7 +59,7 @@ namespace SocialInsurance.Germany.Messages.Tests
             //var asm = method.DeclaringType.Assembly;
             var resStream = asm.GetManifestResourceStream(resName);
             Assert.NotNull(resStream);
-            return new StreamReader(resStream);
+            return new StreamReader(resStream, encoding);
         }
     }
 }
