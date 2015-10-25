@@ -134,10 +134,6 @@
     <EmbeddedResource Include="DSAE-v01.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DBBG.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="DBGZ.xml" />
     <EmbeddedResource Include="DSKK-v01.xml" />
     <EmbeddedResource Include="DBMM.xml" />
     <EmbeddedResource Include="DBMS.xml" />
@@ -280,6 +276,21 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DBKV-v03.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DSKK-v02.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DBGZ-v01.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DBGZ-v02.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DBBG-v01.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DBBG-v02.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\StyleCop.Analyzers.1.0.0-beta014\build\StyleCop.Analyzers.targets" Condition="Exists('..\packages\StyleCop.Analyzers.1.0.0-beta014\build\StyleCop.Analyzers.targets')" />

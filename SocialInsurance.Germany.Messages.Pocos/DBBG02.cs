@@ -1,4 +1,4 @@
-﻿// <copyright file="DBBG.cs" company="DATALINE GmbH &amp; Co. KG">
+﻿// <copyright file="DBBG02.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
@@ -9,12 +9,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datenbaustein: DBBG - Meldesachverhalt Beitragsbemessungsgrenze
     /// </summary>
-    public class DBBG : IDatenbaustein
+    public class DBBG02 : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBBG"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DBBG02"/> Klasse
         /// </summary>
-        public DBBG()
+        public DBBG02()
         {
             KE = "DBBG";
         }
@@ -34,7 +34,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Kennzeichen, Stornierung einer bereits abgegebenen Meldung, Länge 1, Mussangabe
         /// N = keine Stornierung, J = Stornierung
         /// </remarks>
-        public int KENNZST { get; set; }
+        public bool KENNZST { get; set; }
 
         /// <summary>
         /// Holt oder setzt das laufende beitragspflichtige Gesamtentgelt KV
@@ -82,7 +82,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Beitragspflichtiger Teil des einmalig gezahlten Entgelts AIV in Eurocent, Länge 7, Mussangabe
         /// </remarks>
-        public int EGALV { get; set; }
+        public int EGAALV { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beginn des Zeitraums, für den die Meldung gelten soll
@@ -115,6 +115,70 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Anzahl der Tage, für die eine Beitragspflicht zur Sozialversicherung im Abrechnungsmonat besteht(SV-Tage), Länge 2, Mussangabe
         /// </remarks>
-        public string SVTG { get; set; }
+        public int SVTG { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Kennzeichen ob/wie das laufende Arbeitsentgelt Beitragsbemessungsgrenze für die Krankenversicherung überschritten wurde
+        /// </summary>
+        /// <remarks>
+        /// N = BBG in der KV wurde nicht überschritten
+        /// J = BBG in der KV wurde überschritten
+        /// </remarks>
+        public string KENNZKVL
+        { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Kennzeichen ob/wie das laufende Arbeitsentgelt Beitragsbemessungsgrenze für die Rentenversicherung überschritten wurde
+        /// </summary>
+        /// <remarks>
+        /// N = BBG in der RV wurde nicht überschritten
+        /// J = BBG in der RV wurde überschritten
+        /// V = Versicherungsfreiheit/Befreiung von der Versicherungspflicht
+        /// </remarks>
+        public string KENNZRVL
+        { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Kennzeichen ob/wie das laufende Arbeitsentgelt Beitragsbemessungsgrenze für die Arbeitslosenversicherung überschritten wurde
+        /// </summary>
+        /// <remarks>
+        /// N = BBG in der ALV wurde nicht überschritten
+        /// J = BBG in der ALV wurde überschritten
+        /// V = Versicherungsfreiheit/Befreiung von der Versicherungspflicht
+        /// </remarks>
+        public string KENNZALVL
+        { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Kennzeichen ob/wie die Einmalzahungs-Beitragsbemessungsgrenze für die Krankenversicherung überschritten wurde
+        /// </summary>
+        /// <remarks>
+        /// N = BBG in der KV wurde nicht überschritten
+        /// J = BBG in der KV wurde überschritten
+        /// </remarks>
+        public string KENNZKVE
+        { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Kennzeichen ob/wie die Einmalzahungs-Beitragsbemessungsgrenze für die Rentenversicherung überschritten wurde
+        /// </summary>
+        /// <remarks>
+        /// N = BBG in der RV wurde nicht überschritten
+        /// J = BBG in der RV wurde überschritten
+        /// V = Versicherungsfreiheit/Befreiung von der Versicherungspflicht
+        /// </remarks>
+        public string KENNZRVE
+        { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Kennzeichen ob/wie die Einmalzahungs-Beitragsbemessungsgrenze für die Arbeitslosenversicherung überschritten wurde
+        /// </summary>
+        /// <remarks>
+        /// N = BBG in der ALV wurde nicht überschritten
+        /// J = BBG in der ALV wurde überschritten
+        /// V = Versicherungsfreiheit/Befreiung von der Versicherungspflicht
+        /// </remarks>
+        public string KENNZALVE
+        { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿// <copyright file="DBGZ.cs" company="DATALINE GmbH &amp; Co. KG">
+﻿// <copyright file="DBGZ02.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
@@ -9,12 +9,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datenbaustein: DBGZ - Meldesachverhalt Gleitzone
     /// </summary>
-    public class DBGZ : IDatenbaustein
+    public class DBGZ02 : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBGZ"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DBGZ02"/> Klasse
         /// </summary>
-        public DBGZ()
+        public DBGZ02()
         {
             KE = "DBGZ";
         }
@@ -34,7 +34,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Kennzeichen, Stornierung einer bereits abgegebenen Meldung, Länge 1, Mussangabe
         /// N = keine Stornierung, J = Stornierung
         /// </remarks>
-        public string KENNZST { get; set; }
+        public bool KENNZST { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen Gleitzone

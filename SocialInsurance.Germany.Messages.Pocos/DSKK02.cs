@@ -1,4 +1,4 @@
-﻿// <copyright file="DSKK.cs" company="DATALINE GmbH &amp; Co. KG">
+﻿// <copyright file="DSKK02.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
@@ -11,35 +11,27 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datensatz: DSKK - Datensatz Krankenkassenmeldung
     /// </summary>
-    public class DSKK : IDatensatz
+    public class DSKK02 : IDatensatz
     {
         private bool? _hatDbmm;
-
-        private bool? _hatDbms;
-
-        private bool? _hatDbgz;
 
         private bool? _hatDbbg;
 
         private bool? _hatDbna;
 
-        private bool? _hatDbgb;
-
-        private bool? _hatDban;
-
         private FehlerKennzeichen? _fekz;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DSKK"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DSKK01"/> Klasse
         /// </summary>
         /// <remarks>
         /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt
         /// </remarks>
-        public DSKK()
+        public DSKK02()
         {
             KE = "DSME";
             VF = "DEUEV";
-            VERNR = 1;
+            VERNR = 2;
         }
 
         /// <summary>
@@ -193,34 +185,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Sozialausgleich vorhanden ist
-        /// </summary>
-        /// <remarks>
-        /// Datenbaustein DBMS, Länge 1, Mussangabe
-        /// Meldesachverhalt Sozialausgleichvorhanden:
-        /// N = keine Meldesachverhaltsdaten, J = Meldesachverhaltsdaten vorhanden
-        /// </remarks>
-        public bool MMMS
-        {
-            get { return _hatDbms ?? DBMS != null; }
-            set { _hatDbms = value; }
-        }
-
-        /// <summary>
-        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Gleitzone vorhanden
-        /// </summary>
-        /// <remarks>
-        /// Datenbaustein DBGZ, Länge 1, Mussangabe
-        /// Meldesachverhalt Gleitzone vorhanden:
-        /// N = keine Meldesachverhaltsdaten, J = Meldesachverhaltsdaten vorhanden
-        /// </remarks>
-        public bool MMMZ
-        {
-            get { return _hatDbgz ?? DBGZ != null; }
-            set { _hatDbgz = value; }
-        }
-
-        /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Beitragsbemessungsgrenze vorhanden ist
         /// </summary>
         /// <remarks>
@@ -244,36 +208,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMNA
         {
-            get { return _hatDbna ?? DBAN != null; }
+            get { return _hatDbna ?? DBNA != null; }
             set { _hatDbna = value; }
-        }
-
-        /// <summary>
-        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Geburtsangaben vorhanden ist
-        /// </summary>
-        /// <remarks>
-        /// Geburtsangaben vorhanden, Länge 1, Mussangabe
-        /// N = keine Geburtsangaben
-        /// J = Geburtsangaben vorhanden
-        /// </remarks>
-        public bool MMGB
-        {
-            get { return _hatDbgb ?? DBGB != null; }
-            set { _hatDbgb = value; }
-        }
-
-        /// <summary>
-        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Anschrift vorhanden ist
-        /// </summary>
-        /// <remarks>
-        /// Anschrift vorhanden:, Länge 1, Mussangabe
-        /// N = keine Anschrift
-        /// J = Anschrift vorhanden
-        /// </remarks>
-        public bool MMAN
-        {
-            get { return _hatDban ?? DBAN != null; }
-            set { _hatDban = value; }
         }
 
         /// <summary>
@@ -293,41 +229,9 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt den Datenbaustein für Sozialausgleich
-        /// </summary>
-        public DBMS DBMS
-        {
-            get
-            {
-                return ListeDBMS == null ? null : ListeDBMS.SingleOrDefault();
-            }
-            set
-            {
-                ListeDBMS = ListeDBMS.Set(value);
-                _hatDbms = null;
-            }
-        }
-
-        /// <summary>
-        /// Holt oder setzt den Datenbaustein für Gleitzone
-        /// </summary>
-        public DBGZ DBGZ
-        {
-            get
-            {
-                return ListeDBGZ == null ? null : ListeDBGZ.SingleOrDefault();
-            }
-            set
-            {
-                ListeDBGZ = ListeDBGZ.Set(value);
-                _hatDbgz = null;
-            }
-        }
-
-        /// <summary>
         /// Holt oder setzt den Datenbaustein für Beitragsbemessungsgrenze
         /// </summary>
-        public DBBG DBBG
+        public DBBG01 DBBG
         {
             get
             {
@@ -357,54 +261,14 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt den Datenbaustein für Geburtsangaben
-        /// </summary>
-        public DBGB DBGB
-        {
-            get
-            {
-                return ListeDBGB == null ? null : ListeDBGB.SingleOrDefault();
-            }
-            set
-            {
-                ListeDBGB = ListeDBGB.Set(value);
-                _hatDbgb = null;
-            }
-        }
-
-        /// <summary>
-        /// Holt oder setzt den Datenbaustein für Anschrift
-        /// </summary>
-        public DBAN DBAN
-        {
-            get
-            {
-                return ListeDBAN == null ? null : ListeDBAN.SingleOrDefault();
-            }
-            set
-            {
-                ListeDBAN = ListeDBAN.Set(value);
-                _hatDban = null;
-            }
-        }
-
-        /// <summary>
         /// Holt oder setzt eine Liste von Fehlern
         /// </summary>
         public IList<DBFE> DBFE { get; set; }
 
         private IList<DBMM> ListeDBMM { get; set; }
 
-        private IList<DBMS> ListeDBMS { get; set; }
-
-        private IList<DBGZ> ListeDBGZ { get; set; }
-
-        private IList<DBBG> ListeDBBG { get; set; }
+        private IList<DBBG01> ListeDBBG { get; set; }
 
         private IList<DBNA> ListeDBNA { get; set; }
-
-        private IList<DBGB> ListeDBGB { get; set; }
-
-        private IList<DBAN> ListeDBAN { get; set; }
     }
 }

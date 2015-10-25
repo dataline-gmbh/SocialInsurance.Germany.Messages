@@ -3,7 +3,7 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <template name="DBKV-v02">
     <field name="KE" length="4" literal="DBKV" required="true"/>
-    <field name="KENNZST" length="1" required="true"/>
+    <field name="KENNZST" length="1" required="true" typeHandler="jn"/>
     <field name="KVGD" length="2" required="true" type="int" format="00"/>
     <field name="SVTG" length="2" required="true" type="int" format="00"/>
     <field name="ZRBGKV" length="8" required="true" format="yyyyMMdd"/>
@@ -17,7 +17,7 @@
     <field name="RJEG" length="8" required="false"/>
     <field name="BBGRUATG" length="8" required="false"/>
     <field name="BYGR" length="4" required="false"/>
-    <field name="KENNZRK" length="1" required="false"/>
+    <field name="KENNZRK" length="1" required="false" regex="[WO]"/>
     <field name="RESERVE" length="9" required="false" ignore="true"/>
   </template>
 </beanio>

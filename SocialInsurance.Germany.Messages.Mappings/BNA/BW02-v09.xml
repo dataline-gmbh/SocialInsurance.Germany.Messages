@@ -84,7 +84,7 @@
 		<field name="BEITRSA" length="4" required="true" />
 		<field name="BEITRSE" length="4" required="true" format="d4" default="0" type="int"/>
 		<field name="BEITRSH" length="4" required="true" format="d4" default="0" type="int"/>
-		<field name="KENNZRK" regex="[W,O]" length="1" required="true"/>
+		<field name="KENNZRK" regex="[WO]" length="1" required="true"/>
 		<field name="KENNUML" length="1" required="true" type="int"/>
 		<field name="LFDNR" length="3" required="true" type="int" format="d3"/>
 		<field name="WG" length="1" required="true" />

@@ -35,7 +35,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// N = keine Stornierung
         /// J = Stornierung
         /// </remarks>
-        public string KENNZST { get; set; }
+        public bool KENNZST { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Grund für Besonderheiten bei der Abgabe der KV-Daten

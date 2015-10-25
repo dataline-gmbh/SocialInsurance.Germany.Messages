@@ -34,7 +34,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Kennzeichen Stornierung, Länge 1, Mussangabe
         /// N = keine Stornierung, J = Stornierung
         /// </remarks>
-        public string KENNZST { get; set; }
+        public bool KENNZST { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Angaben zur Leistungsart

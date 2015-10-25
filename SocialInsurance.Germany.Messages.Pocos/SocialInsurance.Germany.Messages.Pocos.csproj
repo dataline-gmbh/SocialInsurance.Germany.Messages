@@ -69,7 +69,8 @@
     <Compile Include="DBAS.cs" />
     <Compile Include="AAG\DBAU02.cs" />
     <Compile Include="DBAZ.cs" />
-    <Compile Include="DBBG.cs" />
+    <Compile Include="DBBG02.cs" />
+    <Compile Include="DBBG01.cs" />
     <Compile Include="AAG\DBBT02.cs" />
     <Compile Include="DBBV.cs" />
     <Compile Include="DBEN.cs" />
@@ -79,7 +80,7 @@
     <Compile Include="DBFE.cs" />
     <Compile Include="DBFZ.cs" />
     <Compile Include="DBGB.cs" />
-    <Compile Include="DBGZ.cs" />
+    <Compile Include="DBGZ02.cs" />
     <Compile Include="DBHA.cs" />
     <Compile Include="DBHB.cs" />
     <Compile Include="DBKA.cs" />
@@ -114,7 +115,8 @@
     <Compile Include="DSBE0101.cs" />
     <Compile Include="DSBE01.cs" />
     <Compile Include="AAG\DSER02.cs" />
-    <Compile Include="DSKK.cs" />
+    <Compile Include="DSKK02.cs" />
+    <Compile Include="DSKK01.cs" />
     <Compile Include="DSKO04.cs" />
     <Compile Include="DSKO02.cs" />
     <Compile Include="DSME03.cs" />

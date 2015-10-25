@@ -33,7 +33,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Kennzeichen Stornierung, Länge 1, Stornierung einer bereits abgegebenen Meldung: N = keine Stornierung;J = Stornierung, Mussangabe
         /// </remarks>
-        public string KENNZST { get; set; }
+        public bool KENNZST { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen Gleitzone
