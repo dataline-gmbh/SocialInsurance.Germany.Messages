@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <beanio xmlns="http://www.beanio.org/2015/06">
-  <template name="DBME">
+  <template name="DBME-v03">
     <field name="KE" length="4" literal="DBME" required="true"/>
     <field name="KENNZST" length="1" regex="[JN]" required="true"/>
     <field name="KENNZGLE" length="1" regex="[NJ]|[0-2]" required="false"/>
@@ -13,5 +13,7 @@
     <field name="TTSC" length="9" required="false"/>
     <field name="KENNZRK" length="1" required="false" regex="[WO]"/>
     <field name="KENNZMF" length="1" required="true" regex="[JN]"/>
+    <field name="INTERN1" length="1" />
+    <field name="RESERVE1" length="100" required="false" ignore="true"/>
   </template>
 </beanio>

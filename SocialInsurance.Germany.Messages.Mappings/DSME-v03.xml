@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <beanio xmlns="http://www.beanio.org/2015/06">
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBME-v02.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBME-v03.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBNA.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBGB.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBAN.xml, SocialInsurance.Germany.Messages.Mappings"/>
@@ -10,20 +10,20 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBVR.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBRG.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBSO.xml, SocialInsurance.Germany.Messages.Mappings"/>
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBKV-v02.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBKV-v03.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, SocialInsurance.Germany.Messages.Mappings"/>
-  <template name="DSME-v02">
+  <template name="DSME-v03">
     <field name="KE" literal="DSME" length="4" rid="true" required="true" />
     <field name="VF" length="5" required="true" />
     <field name="BBNRAB" length="15" required="true" />
     <field name="BBNREP" length="15" required="true" />
-    <field name="VERNR" length="2" literal="02" rid="true" type="int" format="00" />
+    <field name="VERNR" length="2" literal="03" rid="true" type="int" format="00" />
     <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
     <field name="FEKZ" regex="[0-4]" length="1" required="true" />
     <field name="FEAN" length="1" required="true" />
     <field name="VSNR" length="12" required="false" />
-    <field name="VSTR" length="2" required="false"/>
+    <field name="RESERVE2" length="2" required="false" ignore="true"/>
     <field name="BBNRVU" length="15" required="false" />
     <field name="AZVU" length="20" required="false" />
     <field name="BBNRKK" length="15" required="false" />
@@ -42,17 +42,24 @@
     <field name="MMSV" length="1" typeHandler="jn" required="true"/>
     <field name="MMVR" length="1" typeHandler="jn" required="true"/>
     <field name="MMRG" length="1" typeHandler="jn" required="true"/>
-    <field name="KENNZUE" length="1" required="false" />
-    <field name="MMUEB" length="1" required="false"/>
-    <field name="KENNZUP" length="1" required="false"/>
+    <field name="INTERN1" length="3" />
     <field name="MMSO" length="1" typeHandler="jn" required="true"/>
     <field name="KENNZSTA" length="1" regex="[12]" required="false" />
-    <field name="MMUE"  length="1" typeHandler="jn" required="false"/>
+    <field name="RESERVE2" length="1" required="false" ignore="true"/>
     <field name="VERNRKP" length="2" required="false" type="int" format="00" />
     <field name="MMKV" length="1" typeHandler="jn" required="true"/>
-    <field name="RESERVE" length="1" required="false" ignore="true"/>
-    <segment name="ListeDBME" class="SocialInsurance.Germany.Messages.Pocos.DBME02, SocialInsurance.Germany.Messages.Pocos" occursRef="MMME" collection="list">
-      <include template="DBME-v02" />
+    <field name="RESERVE3" length="1" required="false" ignore="true"/>
+    <field name="INTERN2" length="20" />
+    <field name="NEVERNR" length="2" required="true" type="int" format="d2" />
+    <field name="PRODID" length="7" required="true" />
+    <field name="MODID" length="8" required="true" />
+    <field name="DSID" length="32" />
+    <field name="RESERVE4" length="100" required="false" ignore="true"/>
+    <field name="MMBF" length="1" required="true" typeHandler="jn"/>
+    <field name="RESERVE5" length="99" required="false" ignore="true"/>
+    <field name="RESERVE6" length="100" required="false" ignore="true"/>
+    <segment name="ListeDBME" class="SocialInsurance.Germany.Messages.Pocos.DBME03, SocialInsurance.Germany.Messages.Pocos" occursRef="MMME" collection="list">
+      <include template="DBME-v03" />
     </segment>
     <segment name="ListeDBNA" class="SocialInsurance.Germany.Messages.Pocos.DBNA, SocialInsurance.Germany.Messages.Pocos" occursRef="MMNA" collection="list">
       <include template="DBNA" />
@@ -69,7 +76,7 @@
     <segment name="ListeDBUV" class="SocialInsurance.Germany.Messages.Pocos.DBUV, SocialInsurance.Germany.Messages.Pocos" occursRef="MMUV" collection="list">
       <include template="DBUV" />
     </segment>
-    <segment name="ListeDBKS" class="SocialInsurance.Germany.Messages.Pocos.DSME02+WrapperDBKS, SocialInsurance.Germany.Messages.Pocos" occursRef="MMKS" collection="list">
+    <segment name="ListeDBKS" class="SocialInsurance.Germany.Messages.Pocos.DSME03+WrapperDBKS, SocialInsurance.Germany.Messages.Pocos" occursRef="MMKS" collection="list">
       <!--
       Wir können hier nicht das Template benutzen, weil wir eine eigene Typ-Konvertierung nutzen müssen
       um zwischen DBKSS und DBKSK unterscheiden zu können.
@@ -81,8 +88,8 @@
     <segment name="ListeDBSO" class="SocialInsurance.Germany.Messages.Pocos.DBSO, SocialInsurance.Germany.Messages.Pocos" occursRef="MMSO" collection="list">
       <include template="DBSO" />
     </segment>
-    <segment name="ListeDBKV" class="SocialInsurance.Germany.Messages.Pocos.DBKV02, SocialInsurance.Germany.Messages.Pocos" occursRef="MMKV" collection="list">
-      <include template="DBKV-v02" />
+    <segment name="ListeDBKV" class="SocialInsurance.Germany.Messages.Pocos.DBKV03, SocialInsurance.Germany.Messages.Pocos" occursRef="MMKV" collection="list">
+      <include template="DBKV-v03" />
     </segment>
     <segment name="ListeDBVR" class="SocialInsurance.Germany.Messages.Pocos.DBVR, SocialInsurance.Germany.Messages.Pocos" occursRef="MMVR" collection="list">
       <include template="DBVR" />
@@ -92,6 +99,9 @@
     </segment>
     <segment name="ListeDBSV" class="SocialInsurance.Germany.Messages.Pocos.DBSV, SocialInsurance.Germany.Messages.Pocos" occursRef="MMSV" collection="list">
       <include template="DBSV" />
+    </segment>
+    <segment name="ListeDBBF" class="SocialInsurance.Germany.Messages.Pocos.DBBF, SocialInsurance.Germany.Messages.Pocos" occursRef="MMBF" collection="list">
+      <include template="DBBF" />
     </segment>
     <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
       <include template="DBFE" />

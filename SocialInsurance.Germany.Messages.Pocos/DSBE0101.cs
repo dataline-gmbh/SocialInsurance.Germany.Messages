@@ -465,11 +465,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt eine Liste von Fehlern
-        /// </summary>
-        public IList<DBFE> DBFE { get; set; }
-
-        /// <summary>
         /// Holt oder setzt den Datenbaustein für Bestandsfehler
         /// </summary>
         public DBBF DBBF
@@ -484,6 +479,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
                 _hatDbbf = null;
             }
         }
+
+        /// <summary>
+        /// Holt oder setzt eine Liste von Fehlern
+        /// </summary>
+        public IList<DBFE> DBFE { get; set; }
 
         private IList<DBBF> ListeDBBF { get; set; }
 

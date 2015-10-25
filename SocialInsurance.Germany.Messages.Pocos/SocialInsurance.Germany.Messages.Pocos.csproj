@@ -87,8 +87,10 @@
     <Compile Include="DBKS.cs" />
     <Compile Include="DBKSK.cs" />
     <Compile Include="DBKSS.cs" />
-    <Compile Include="DBKV.cs" />
-    <Compile Include="DBME.cs" />
+    <Compile Include="DBKV03.cs" />
+    <Compile Include="DBKV02.cs" />
+    <Compile Include="DBME03.cs" />
+    <Compile Include="DBME02.cs" />
     <Compile Include="DBMI.cs" />
     <Compile Include="DBMM.cs" />
     <Compile Include="DBMS.cs" />
@@ -115,7 +117,8 @@
     <Compile Include="DSKK.cs" />
     <Compile Include="DSKO04.cs" />
     <Compile Include="DSKO02.cs" />
-    <Compile Include="DSME.cs" />
+    <Compile Include="DSME03.cs" />
+    <Compile Include="DSME02.cs" />
     <Compile Include="DSQU.cs" />
     <Compile Include="DSVV.cs" />
     <Compile Include="FehlerKennzeichen.cs" />

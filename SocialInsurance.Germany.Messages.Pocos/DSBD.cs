@@ -146,6 +146,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Wirtschaftsunterklasse nach der Klassifikation WZ2008
         /// </remarks>
+        [Obsolete]
         public string WUKL { get; set; }
 
         /// <summary>

@@ -1,4 +1,4 @@
-﻿// <copyright file="DBKV.cs" company="DATALINE GmbH &amp; Co. KG">
+﻿// <copyright file="DBKV02.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
@@ -9,12 +9,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datenbaustein: DBKV - Krankenversicherung (GKV-Monatsmeldung)
     /// </summary>
-    public class DBKV : IDatenbaustein
+    public class DBKV02 : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBKV"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DBKV02"/> Klasse
         /// </summary>
-        public DBKV()
+        public DBKV02()
         {
             KE = "DBKV";
         }
@@ -139,5 +139,17 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// W = altes Bundesland, O = neues Bundesland einschließlich Ost-Berlin
         /// </remarks>
         public string KENNZRK { get; set; }
+
+        /// <summary>
+        /// Kennzeichen, ob die Elterneigenschaft beim Arbeitgeber nachgewiesen wurde
+        /// </summary>
+        [Obsolete]
+        public bool? EENW { get; set; }
+
+        /// <summary>
+        /// Kennzeichen, ob für die Beschäftigung die Sonderregelung nach § 58 Absatz 3 SGB XI anzuwenden ist
+        /// </summary>
+        [Obsolete]
+        public bool? SOSA { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿// <copyright file="DBME.cs" company="DATALINE GmbH &amp; Co. KG">
+﻿// <copyright file="DBME03.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
@@ -9,12 +9,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datenbaustein: DBME - Meldesachverhalt
     /// </summary>
-    public class DBME : IDatenbaustein
+    public class DBME03 : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBME"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DBME03"/> Klasse
         /// </summary>
-        public DBME()
+        public DBME03()
         {
             KE = "DBME";
         }
@@ -120,5 +120,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Kennzeichen Mehrfachbeschäftigter, Länge 1, Mussangabe
         /// </remarks>
         public string KENNZMF { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt interne Daten
+        /// </summary>
+        public string INTERN1 { get; set; }
     }
 }

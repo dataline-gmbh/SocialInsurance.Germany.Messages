@@ -1,4 +1,4 @@
-﻿// <copyright file="BW02v11.cs" company="DATALINE GmbH &amp; Co. KG">
+﻿// <copyright file="BW0211.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 

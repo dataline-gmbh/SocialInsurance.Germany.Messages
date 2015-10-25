@@ -1852,8 +1852,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         {
             var input = LoadData(fileName).ReadToEnd();
             var output = new StringWriter();
-            var writer = StreamFactory.CreateWriter("dsme-deuev", output);
-            var reader = StreamFactory.CreateReader("dsme-deuev", new StringReader(input));
+            var writer = StreamFactory.CreateWriter("dsme-deuev-v02", output);
+            var reader = StreamFactory.CreateReader("dsme-deuev-v02", new StringReader(input));
             var deuevMessage = new DeuevMessageData();
             try
             {
@@ -1875,7 +1875,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
 
                 while (reader.RecordName == "DSME")
                 {
-                    var record = Assert.IsType<DSME>(streamObject);
+                    var record = Assert.IsType<DSME02>(streamObject);
                     deuevMessage.DSME.Add(record);
                     writer.Write(record);
                     streamObject = reader.Read();
@@ -1920,7 +1920,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             public DeuevMessageData()
             {
                 VOSZ = new List<VOSZ>();
-                DSME = new List<DSME>();
+                DSME = new List<DSME02>();
                 DSBD = new List<DSBD>();
                 NCSZ = new List<NCSZ>();
             }
@@ -1929,7 +1929,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
 
             public DSKO02 DSKO { get; set; }
 
-            public List<DSME> DSME { get; set; }
+            public List<DSME02> DSME { get; set; }
 
             public List<DSBD> DSBD { get; set; }
 

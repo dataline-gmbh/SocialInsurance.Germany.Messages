@@ -1,4 +1,4 @@
-﻿// <copyright file="DSME.cs" company="DATALINE GmbH &amp; Co. KG">
+﻿// <copyright file="DSME02.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
@@ -11,7 +11,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datensatz: DSME - Meldung
     /// </summary>
-    public class DSME : IDatensatz
+    public class DSME02 : IDatensatz
     {
         private bool? _hatDbme;
 
@@ -40,12 +40,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         private FehlerKennzeichen? _fekz;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DSME"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DSME02"/> Klasse
         /// </summary>
         /// <remarks>
         /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt
         /// </remarks>
-        public DSME()
+        public DSME02()
         {
             KE = "DSME";
             VERNR = 2;
@@ -453,7 +453,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Holt oder setzt den Datenbaustein für Meldesachverhalt
         /// </summary>
-        public DBME DBME
+        public DBME02 DBME
         {
             get
             {
@@ -581,7 +581,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Holt oder setzt den Datenbaustein für Krankenversicherung
         /// </summary>
-        public DBKV DBKV
+        public DBKV02 DBKV
         {
             get
             {
@@ -647,7 +647,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public IList<DBFE> DBFE { get; set; }
 
-        private IList<DBME> ListeDBME { get; set; }
+        private IList<DBME02> ListeDBME { get; set; }
 
         private IList<DBNA> ListeDBNA { get; set; }
 
@@ -663,7 +663,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
 
         private IList<DBSO> ListeDBSO { get; set; }
 
-        private IList<DBKV> ListeDBKV { get; set; }
+        private IList<DBKV02> ListeDBKV { get; set; }
 
         private IList<DBSV> ListeDBSV { get; set; }
 

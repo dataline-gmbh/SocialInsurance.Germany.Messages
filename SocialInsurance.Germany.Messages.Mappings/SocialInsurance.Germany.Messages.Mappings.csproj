@@ -44,7 +44,7 @@
     <EmbeddedResource Include="DBEU.xml" />
     <EmbeddedResource Include="DBGB.xml" />
     <EmbeddedResource Include="DBKS.xml" />
-    <EmbeddedResource Include="DBME.xml">
+    <EmbeddedResource Include="DBME-v02.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DBNA.xml" />
@@ -118,7 +118,7 @@
     <EmbeddedResource Include="DSKO-v02.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DBKV.xml" />
+    <EmbeddedResource Include="DBKV-v02.xml" />
     <EmbeddedResource Include="DBEZ.xml" />
     <EmbeddedResource Include="DBQD.xml" />
     <EmbeddedResource Include="DBQK.xml" />
@@ -265,6 +265,19 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DBAP-v01.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DSME-v03.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DBME-v03.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DBKV-v03.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\StyleCop.Analyzers.1.0.0-beta014\build\StyleCop.Analyzers.targets" Condition="Exists('..\packages\StyleCop.Analyzers.1.0.0-beta014\build\StyleCop.Analyzers.targets')" />
