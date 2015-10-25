@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <template name="DSKOv02">
+    <field name="KE" literal="DSKO" length="4" rid="true" required="true" />
+    <field name="VF" length="5" required="true" />
+    <field name="BBNRAB" length="15" required="true" />
+    <field name="BBNREP" length="15" required="true" />
+    <field name="VERNR" length="2" literal="02" rid="true" type="int" format="00" />
+    <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
+    <field name="FEKZ" regex="[0-4]" length="1" required="true" />
+    <field name="FEAN" length="1" required="true" />
+    <field name="BBNRER" length="15" required="true"/>
+    <field name="PRODID" length="7" required="true" type="int" format="0000000"/>
+    <field name="MODID" length="8" required="true" type="int" format="00000000"/>
+    <field name="NAME1" length="30" required="true"/>
+    <field name="NAME2" length="30" required="false"/>
+    <field name="NAME3" length="30" required="false"/>
+    <field name="PLZ" length="10" required="true"/>
+    <field name="ORT" length="34" required="true"/>
+    <field name="STR" length="33" required="false"/>
+    <field name="NR" length="9" required="false"/>
+    <field name="ANRAP" length="1" required="true"/>
+    <field name="NAMEAP" length="30" required="true"/>
+    <field name="TELAP" length="20" required="true"/>
+    <field name="FAXAP" length="20" required="false"/>
+    <field name="EMAILAP" length="70" required="true"/>
+    <field name="VERBEST" length="1" required="true" />
+    <field name="FERUECK" length="1" required="true"/>
+    <field name="RESERVE" length="3" required="false" ignore="true"/>
+    <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
+      <include template="DBFE" />
+    </segment>
+  </template>
+</beanio>

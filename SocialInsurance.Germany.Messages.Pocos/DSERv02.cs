@@ -1,4 +1,4 @@
-﻿// <copyright file="DSER.cs" company="DATALINE GmbH &amp; Co. KG">
+﻿// <copyright file="DSERv02.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
@@ -11,7 +11,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datensatz: DSER - Erstattungen der Arbeitgeberaufwendungen
     /// </summary>
-    public class DSER : IDatensatz
+    public class DSERv02 : IDatensatz
     {
         private bool? _hatDbau;
 
@@ -28,12 +28,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         private FehlerKennzeichen? _fekz;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DSER"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DSERv02"/> Klasse
         /// </summary>
         /// <remarks>
         /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt
         /// </remarks>
-        public DSER()
+        public DSERv02()
         {
             KE = "DSER";
             VF = "AAGER";

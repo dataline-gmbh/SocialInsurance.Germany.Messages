@@ -115,7 +115,7 @@
     <EmbeddedResource Include="DSBD.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DSKO.xml" />
+    <EmbeddedResource Include="DSKOv02.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DBKV.xml" />
@@ -150,7 +150,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DSER.xml" />
+    <EmbeddedResource Include="DSERv02.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DBAU.xml" />
@@ -235,6 +237,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BNA\BW02v10.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DSKOv04.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\StyleCop.Analyzers.1.0.0-beta014\build\StyleCop.Analyzers.targets" Condition="Exists('..\packages\StyleCop.Analyzers.1.0.0-beta014\build\StyleCop.Analyzers.targets')" />

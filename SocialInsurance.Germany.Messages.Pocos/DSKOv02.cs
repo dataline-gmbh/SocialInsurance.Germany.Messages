@@ -1,4 +1,4 @@
-﻿// <copyright file="DSKO.cs" company="DATALINE GmbH &amp; Co. KG">
+﻿// <copyright file="DSKOv02.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
@@ -10,17 +10,17 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datensatz: DSKO - Datensatz Kommunikation
     /// </summary>
-    public class DSKO : IDatensatz
+    public class DSKOv02 : IDatensatz
     {
         private FehlerKennzeichen? _fekz;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DSKO"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DSKOv02"/> Klasse
         /// </summary>
         /// <remarks>
         /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt
         /// </remarks>
-        public DSKO()
+        public DSKOv02()
         {
             KE = "DSKO";
             VERNR = 2;

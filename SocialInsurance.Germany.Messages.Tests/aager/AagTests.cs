@@ -17,8 +17,8 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
         [Fact(DisplayName = "TestDSER")]
         public void TestDSER()
         {
-            var deuevMessage = GetMessageFromFile("eaag0004.a15", "dser-agger");
-            Assert.True(deuevMessage.DSER.Count() > 0);
+            var deuevMessage = GetMessageFromFile("eaag0004.a15", "dser-agger-v02");
+            Assert.True(deuevMessage.DSER.Count > 0);
         }
 
         /// <summary>
@@ -43,48 +43,40 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
             try
             {
                 var streamObject = reader.Read();
-                var vosz = Assert.IsType<VOSZ>(streamObject);
-                deuevMessage.VOSZ = new List<VOSZ> { vosz };
-                writer.Write(vosz);
-                streamObject = reader.Read();
-                if (streamObject is VOSZ)
+
+                do
                 {
-                    deuevMessage.VOSZ.Add(streamObject as VOSZ);
+                    var vosz = Assert.IsType<VOSZ>(streamObject);
+                    deuevMessage.VOSZ.Add(vosz);
                     writer.Write(vosz);
                     streamObject = reader.Read();
                 }
+                while (reader.RecordName == "VOSZ");
 
-                var dsko = Assert.IsType<DSKO>(streamObject);
+                var dsko = Assert.IsType<DSKOv02>(streamObject);
                 deuevMessage.DSKO = dsko;
                 writer.Write(dsko);
                 streamObject = reader.Read();
-                var DSER = Assert.IsType<DSER>(streamObject);
-                deuevMessage.DSER = new List<DSER> { DSER };
-                writer.Write(DSER);
-                while (true)
+
+                while (reader.RecordName == "DSER")
                 {
+                    var record = Assert.IsType<DSERv02>(streamObject);
+                    deuevMessage.DSER.Add(record);
+                    writer.Write(record);
                     streamObject = reader.Read();
-                    if (streamObject is NCSZ)
-                    {
-                        writer.Write(streamObject);
-                        deuevMessage.NCSZ = new List<NCSZ> { streamObject as NCSZ };
-                        streamObject = reader.Read();
-                        if (streamObject is NCSZ)
-                        {
-                            deuevMessage.NCSZ.Add(streamObject as NCSZ);
-                            writer.Write(streamObject);
-                        }
-
-                        break;
-                    }
-                    else
-                    {
-                        Assert.IsType<DSER>(streamObject);
-                        deuevMessage.DSER.Add(streamObject as DSER);
-                    }
-
-                    writer.Write(streamObject);
                 }
+
+                do
+                {
+                    var ncsz = Assert.IsType<NCSZ>(streamObject);
+                    writer.Write(streamObject);
+                    deuevMessage.NCSZ.Add(ncsz);
+                    streamObject = reader.Read();
+                }
+                while (reader.RecordName != null && reader.RecordName == "NCSZ");
+
+                Assert.Null(reader.RecordName);
+                Assert.Equal(deuevMessage.VOSZ.Count, deuevMessage.NCSZ.Count);
 
                 writer.Close();
                 string output2 = output.ToString();
@@ -103,11 +95,18 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
         /// </summary>
         private class BwnaMessageData
         {
+            public BwnaMessageData()
+            {
+                VOSZ = new List<VOSZ>();
+                DSER = new List<DSERv02>();
+                NCSZ = new List<NCSZ>();
+            }
+
             public List<VOSZ> VOSZ { get; set; }
 
-            public DSKO DSKO { get; set; }
+            public DSKOv02 DSKO { get; set; }
 
-            public List<DSER> DSER { get; set; }
+            public List<DSERv02> DSER { get; set; }
 
             public List<NCSZ> NCSZ { get; set; }
         }

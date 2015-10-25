@@ -1858,48 +1858,48 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             try
             {
                 var streamObject = reader.Read();
-                var vosz = Assert.IsType<VOSZ>(streamObject);
-                deuevMessage.VOSZ = new List<VOSZ> { vosz };
-                writer.Write(vosz);
-                streamObject = reader.Read();
-                if (streamObject is VOSZ)
+
+                do
                 {
-                    deuevMessage.VOSZ.Add(streamObject as VOSZ);
+                    var vosz = Assert.IsType<VOSZ>(streamObject);
+                    deuevMessage.VOSZ.Add(vosz);
                     writer.Write(vosz);
                     streamObject = reader.Read();
                 }
+                while (reader.RecordName == "VOSZ");
 
-                var dsko = Assert.IsType<DSKO>(streamObject);
+                var dsko = Assert.IsType<DSKOv02>(streamObject);
                 deuevMessage.DSKO = dsko;
                 writer.Write(dsko);
                 streamObject = reader.Read();
-                var dsme = Assert.IsType<DSME>(streamObject);
-                deuevMessage.DSME = new List<DSME> { dsme };
-                writer.Write(dsme);
-                while (true)
+
+                while (reader.RecordName == "DSME")
                 {
+                    var record = Assert.IsType<DSME>(streamObject);
+                    deuevMessage.DSME.Add(record);
+                    writer.Write(record);
                     streamObject = reader.Read();
-                    if (streamObject is NCSZ)
-                    {
-                        writer.Write(streamObject);
-                        deuevMessage.NCSZ = new List<NCSZ> { streamObject as NCSZ };
-                        streamObject = reader.Read();
-                        if (streamObject is NCSZ)
-                        {
-                            deuevMessage.NCSZ.Add(streamObject as NCSZ);
-                            writer.Write(streamObject);
-                        }
-
-                        break;
-                    }
-                    else
-                    {
-                        Assert.IsType<DSME>(streamObject);
-                        deuevMessage.DSME.Add(streamObject as DSME);
-                    }
-
-                    writer.Write(streamObject);
                 }
+
+                while (reader.RecordName == "DSBD")
+                {
+                    var record = Assert.IsType<DSBD>(streamObject);
+                    deuevMessage.DSBD.Add(record);
+                    writer.Write(record);
+                    streamObject = reader.Read();
+                }
+
+                do
+                {
+                    var ncsz = Assert.IsType<NCSZ>(streamObject);
+                    writer.Write(streamObject);
+                    deuevMessage.NCSZ.Add(ncsz);
+                    streamObject = reader.Read();
+                }
+                while (reader.RecordName != null && reader.RecordName == "NCSZ");
+
+                Assert.Null(reader.RecordName);
+                Assert.Equal(deuevMessage.VOSZ.Count, deuevMessage.NCSZ.Count);
 
                 writer.Close();
                 Assert.Equal(input, output.ToString());
@@ -1917,11 +1917,21 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         /// </summary>
         private class DeuevMessageData
         {
+            public DeuevMessageData()
+            {
+                VOSZ = new List<VOSZ>();
+                DSME = new List<DSME>();
+                DSBD = new List<DSBD>();
+                NCSZ = new List<NCSZ>();
+            }
+
             public List<VOSZ> VOSZ { get; set; }
 
-            public DSKO DSKO { get; set; }
+            public DSKOv02 DSKO { get; set; }
 
             public List<DSME> DSME { get; set; }
+
+            public List<DSBD> DSBD { get; set; }
 
             public List<NCSZ> NCSZ { get; set; }
         }

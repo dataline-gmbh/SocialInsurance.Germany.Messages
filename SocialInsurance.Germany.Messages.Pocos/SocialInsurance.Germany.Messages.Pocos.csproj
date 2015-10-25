@@ -102,9 +102,10 @@
     <Compile Include="DSBD.cs" />
     <Compile Include="DSBEv0101.cs" />
     <Compile Include="DSBEv01.cs" />
-    <Compile Include="DSER.cs" />
+    <Compile Include="DSERv02.cs" />
     <Compile Include="DSKK.cs" />
-    <Compile Include="DSKO.cs" />
+    <Compile Include="DSKOv04.cs" />
+    <Compile Include="DSKOv02.cs" />
     <Compile Include="DSME.cs" />
     <Compile Include="DSQU.cs" />
     <Compile Include="DSVV.cs" />

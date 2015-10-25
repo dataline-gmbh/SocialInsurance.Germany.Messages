@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <beanio xmlns="http://www.beanio.org/2015/06">
 	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.VOSZ.xml, SocialInsurance.Germany.Messages.Mappings"/>
-	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKO.xml, SocialInsurance.Germany.Messages.Mappings"/>
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKOv02.xml, SocialInsurance.Germany.Messages.Mappings"/>
 	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBD.xml, SocialInsurance.Germany.Messages.Mappings"/>
 	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSME.xml, SocialInsurance.Germany.Messages.Mappings"/>
 	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKK.xml, SocialInsurance.Germany.Messages.Mappings"/>
@@ -10,15 +10,15 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.BW02v11.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.NCSZv06.xml, SocialInsurance.Germany.Messages.Mappings"/>
 	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.BW03.xml, SocialInsurance.Germany.Messages.Mappings"/>
-	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSER.xml, SocialInsurance.Germany.Messages.Mappings"/>
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSERv02.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBEv01.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBEv0101.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <stream name="dsme-deuev" format="fixedlength">
 		<record order="1" name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
 			<include template="VOSZv1"/>
 		</record>
-		<record order="2" name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKO, SocialInsurance.Germany.Messages.Pocos">
-			<include template="DSKOv2"/>
+		<record order="2" name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKOv02, SocialInsurance.Germany.Messages.Pocos">
+			<include template="DSKOv02"/>
 		</record>
 		<record order="3" name="DSME" minOccurs="1" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSME, SocialInsurance.Germany.Messages.Pocos">
 			<include template="DSMEv2"/>
@@ -31,8 +31,8 @@
 		<record order="1" name="VOSZ" minOccurs="1"  maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
 			<include template="VOSZv1"/>
 		</record>
-		<record order="2" name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKO, SocialInsurance.Germany.Messages.Pocos">
-			<include template="DSKOv2"/>
+		<record order="2" name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKOv02, SocialInsurance.Germany.Messages.Pocos">
+			<include template="DSKOv02"/>
 		</record>
 		<record order="3" name="DSBD" minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSBD, SocialInsurance.Germany.Messages.Pocos">
 			<include template="DSBDv1"/>
@@ -45,8 +45,8 @@
 		<record order="1" name="VOSZ" minOccurs="1"  maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
 			<include template="VOSZv1"/>
 		</record>
-		<record order="2" name="DSKO"  minOccurs="0" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKO, SocialInsurance.Germany.Messages.Pocos">
-			<include template="DSKOv2"/>
+		<record order="2" name="DSKO"  minOccurs="0" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKOv02, SocialInsurance.Germany.Messages.Pocos">
+			<include template="DSKOv02"/>
 		</record>
 		<record order="3" name="DSKK" minOccurs="1" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSKK, SocialInsurance.Germany.Messages.Pocos">
 			<include template="DSKKv1"/>
@@ -59,8 +59,8 @@
 		<record order="1" name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
 			<include template="VOSZv1"/>
 		</record>
-		<record order="2" name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKO, SocialInsurance.Germany.Messages.Pocos">
-			<include template="DSKOv2"/>
+		<record order="2" name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKOv02, SocialInsurance.Germany.Messages.Pocos">
+			<include template="DSKOv02"/>
 		</record>
 		<record order="3" name="BW03" minOccurs="1" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.BW03, SocialInsurance.Germany.Messages.Pocos">
 			<include template="BW03v1"/>
@@ -73,8 +73,8 @@
 		<record order="1" name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.BNA.VOSZv06, SocialInsurance.Germany.Messages.Pocos">
 			<include template="VOSZ-BNA-v06"/>
 		</record>
-		<record order="2" name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKO, SocialInsurance.Germany.Messages.Pocos">
-			<include template="DSKOv2"/>
+		<record order="2" name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKOv02, SocialInsurance.Germany.Messages.Pocos">
+			<include template="DSKOv02"/>
 		</record>
 		<record order="3" name="BW02" minOccurs="1" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.BNA.BW02v11, SocialInsurance.Germany.Messages.Pocos">
 			<include template="BW02v11"/>
@@ -83,31 +83,28 @@
 			<include template="NCSZ-BNA-v06"/>
 		</record>
 	</stream>
-	<stream name="dser-agger" format="fixedlength">
+	<stream name="dser-agger-v02" format="fixedlength">
 		<record order="1" name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
 			<include template="VOSZv1"/>
 		</record>
-		<record order="2" name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKO, SocialInsurance.Germany.Messages.Pocos">
-			<include template="DSKOv2"/>
+		<record order="2" name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKOv02, SocialInsurance.Germany.Messages.Pocos">
+			<include template="DSKOv02"/>
 		</record>
-		<record order="3" name="DSER" minOccurs="1" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSER, SocialInsurance.Germany.Messages.Pocos">
-			<include template="DSERv2"/>
+		<record order="3" name="DSER" minOccurs="1" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSERv02, SocialInsurance.Germany.Messages.Pocos">
+			<include template="DSERv02"/>
 		</record>
 		<record order="4" name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, SocialInsurance.Germany.Messages.Pocos">
 			<include template="NCSZv1"/>
 		</record>
 	</stream>
-	<stream name="dsbe-bvbei" format="fixedlength">
+	<stream name="dsbe-bvbei-v01" format="fixedlength">
 		<record name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
 			<include template="VOSZv1"/>
 		</record>
-		<record name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKO, SocialInsurance.Germany.Messages.Pocos">
-			<include template="DSKOv2"/>
+		<record name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKOv02, SocialInsurance.Germany.Messages.Pocos">
+			<include template="DSKOv02"/>
 		</record>
-    <record name="DSBEv0101" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBEv0101, SocialInsurance.Germany.Messages.Pocos">
-      <include template="DSBEv0101"/>
-    </record>
-    <record name="DSBEv01" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBEv01, SocialInsurance.Germany.Messages.Pocos">
+    <record name="DSBE" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBEv01, SocialInsurance.Germany.Messages.Pocos">
 			<include template="DSBEv1"/>
 		</record>
 		<record name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, SocialInsurance.Germany.Messages.Pocos">

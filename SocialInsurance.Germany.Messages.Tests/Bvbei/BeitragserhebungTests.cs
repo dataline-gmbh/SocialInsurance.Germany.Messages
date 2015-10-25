@@ -17,7 +17,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
         [Fact(DisplayName = "TestDSBE")]
         public void TestDSBE()
         {
-            var deuevMessage = GetMessageFromFile("ebea0023.a22", "dsbe-bvbei");
+            var deuevMessage = GetMessageFromFile("ebea0023.a22", "dsbe-bvbei-v01");
             Assert.True(deuevMessage.DSBEv01.Count > 0);
             var dsbe = deuevMessage.DSBEv01.Single();
             Assert.Equal("Hauptstraße 23", dsbe.STR);
@@ -55,23 +55,15 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
                 }
                 while (reader.RecordName == "VOSZ");
 
-                var dsko = Assert.IsType<DSKO>(streamObject);
+                var dsko = Assert.IsType<DSKOv02>(streamObject);
                 deuevMessage.DSKO = dsko;
                 writer.Write(dsko);
                 streamObject = reader.Read();
 
-                while (reader.RecordName == "DSBEv01")
+                while (reader.RecordName == "DSBE")
                 {
                     var record = Assert.IsType<DSBEv01>(streamObject);
                     deuevMessage.DSBEv01.Add(record);
-                    writer.Write(record);
-                    streamObject = reader.Read();
-                }
-
-                while (reader.RecordName == "DSBEv0101")
-                {
-                    var record = Assert.IsType<DSBEv0101>(streamObject);
-                    deuevMessage.DSBEv0101.Add(record);
                     writer.Write(record);
                     streamObject = reader.Read();
                 }
@@ -109,17 +101,14 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
             {
                 VOSZ = new List<VOSZ>();
                 DSBEv01 = new List<DSBEv01>();
-                DSBEv0101 = new List<DSBEv0101>();
                 NCSZ = new List<NCSZ>();
             }
 
             public List<VOSZ> VOSZ { get; set; }
 
-            public DSKO DSKO { get; set; }
+            public DSKOv02 DSKO { get; set; }
 
             public List<DSBEv01> DSBEv01 { get; set; }
-
-            public List<DSBEv0101> DSBEv0101 { get; set; }
 
             public List<NCSZ> NCSZ { get; set; }
         }
