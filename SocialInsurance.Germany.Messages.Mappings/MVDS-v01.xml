@@ -15,7 +15,7 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBKE.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, SocialInsurance.Germany.Messages.Mappings"/>
-  <template name="MVDSv1">
+  <template name="MVDS-v01">
     <field name="KE" literal="MVDS" length="4" rid="true" required="true" />
     <field name="VF" literal="ELENA" length="5" required="true" />
     <field name="BBNRAB" length="15" required="true" />

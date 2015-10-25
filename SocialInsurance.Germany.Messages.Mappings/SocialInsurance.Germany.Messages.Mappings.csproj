@@ -196,7 +196,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DSVV-v01.xml" />
-    <EmbeddedResource Include="MVDS.xml" />
+    <EmbeddedResource Include="MVDS-v01.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BW03-v01.xml" />
