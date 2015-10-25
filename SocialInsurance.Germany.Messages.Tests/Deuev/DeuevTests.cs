@@ -1868,7 +1868,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 }
                 while (reader.RecordName == "VOSZ");
 
-                var dsko = Assert.IsType<DSKOv02>(streamObject);
+                var dsko = Assert.IsType<DSKO02>(streamObject);
                 deuevMessage.DSKO = dsko;
                 writer.Write(dsko);
                 streamObject = reader.Read();
@@ -1927,7 +1927,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
 
             public List<VOSZ> VOSZ { get; set; }
 
-            public DSKOv02 DSKO { get; set; }
+            public DSKO02 DSKO { get; set; }
 
             public List<DSME> DSME { get; set; }
 

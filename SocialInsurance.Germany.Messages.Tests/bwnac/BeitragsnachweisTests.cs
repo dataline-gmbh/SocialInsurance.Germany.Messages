@@ -48,21 +48,21 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
 
                 do
                 {
-                    var vosz = Assert.IsType<VOSZv06>(streamObject);
+                    var vosz = Assert.IsType<VOSZ06>(streamObject);
                     deuevMessage.VOSZ.Add(vosz);
                     writer.Write(vosz);
                     streamObject = reader.Read();
                 }
                 while (reader.RecordName == "VOSZ");
 
-                var dsko = Assert.IsType<DSKOv02>(streamObject);
+                var dsko = Assert.IsType<DSKO02>(streamObject);
                 deuevMessage.DSKO = dsko;
                 writer.Write(dsko);
                 streamObject = reader.Read();
 
                 while (reader.RecordName == "BW02")
                 {
-                    var record = Assert.IsType<BW02v11>(streamObject);
+                    var record = Assert.IsType<BW0211>(streamObject);
                     deuevMessage.BW02.Add(record);
                     writer.Write(record);
                     streamObject = reader.Read();
@@ -70,7 +70,7 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
 
                 do
                 {
-                    var ncsz = Assert.IsType<NCSZv06>(streamObject);
+                    var ncsz = Assert.IsType<NCSZ06>(streamObject);
                     writer.Write(streamObject);
                     deuevMessage.NCSZ.Add(ncsz);
                     streamObject = reader.Read();
@@ -99,18 +99,18 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
         {
             public BwnaMessageData()
             {
-                VOSZ = new List<VOSZv06>();
-                BW02 = new List<BW02v11>();
-                NCSZ = new List<NCSZv06>();
+                VOSZ = new List<VOSZ06>();
+                BW02 = new List<BW0211>();
+                NCSZ = new List<NCSZ06>();
             }
 
-            public List<VOSZv06> VOSZ { get; set; }
+            public List<VOSZ06> VOSZ { get; set; }
 
-            public DSKOv02 DSKO { get; set; }
+            public DSKO02 DSKO { get; set; }
 
-            public List<BW02v11> BW02 { get; set; }
+            public List<BW0211> BW02 { get; set; }
 
-            public List<NCSZv06> NCSZ { get; set; }
+            public List<NCSZ06> NCSZ { get; set; }
         }
     }
 }

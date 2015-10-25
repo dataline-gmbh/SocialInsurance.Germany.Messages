@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <template name="DBRA-v01">
+    <field name="KE" length="4" literal="DBBT" required="true"/>
+    <field name="EZEITVOM" length="8" required="true" format="yyyyMMdd"/>
+    <field name="EZEITBIS" length="8" required="true" format="yyyyMMdd"/>
+    <field name="BEBU" length="9" required="true" type="int" format="D9"/>
+    <field name="FEBU" length="9" required="true" type="int" format="D9"/>
+    <field name="GAB" length="2" required="true" type="int" format="D2"/>
+    <field name="RESERVE" length="100" required="false" ignore="true"/>
+  </template>
+</beanio>

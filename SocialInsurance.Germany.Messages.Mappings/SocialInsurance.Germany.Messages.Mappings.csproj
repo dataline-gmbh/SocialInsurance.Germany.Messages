@@ -52,7 +52,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DBUV.xml" />
-    <EmbeddedResource Include="DSME.xml">
+    <EmbeddedResource Include="DSME-v02.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Meldungen.xml">
@@ -112,10 +112,10 @@
   <ItemGroup>
     <EmbeddedResource Include="DBKA.xml" />
     <EmbeddedResource Include="DBTN.xml" />
-    <EmbeddedResource Include="DSBD.xml" />
+    <EmbeddedResource Include="DSBD-v01.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DSKOv02.xml" />
+    <EmbeddedResource Include="DSKO-v02.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DBKV.xml" />
@@ -123,45 +123,45 @@
     <EmbeddedResource Include="DBQD.xml" />
     <EmbeddedResource Include="DBQK.xml" />
     <EmbeddedResource Include="DBQV.xml" />
-    <EmbeddedResource Include="DSQU.xml" />
-    <EmbeddedResource Include="NCSZ.xml" />
-    <EmbeddedResource Include="VOSZ.xml" />
+    <EmbeddedResource Include="DSQU-v01.xml" />
+    <EmbeddedResource Include="NCSZ-v01.xml" />
+    <EmbeddedResource Include="VOSZ-v01.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DBAZ.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DSAE.xml" />
+    <EmbeddedResource Include="DSAE-v01.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DBBG.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DBGZ.xml" />
-    <EmbeddedResource Include="DSKK.xml" />
+    <EmbeddedResource Include="DSKK-v01.xml" />
     <EmbeddedResource Include="DBMM.xml" />
     <EmbeddedResource Include="DBMS.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DBHB.xml" />
     <EmbeddedResource Include="DBMI.xml" />
-    <EmbeddedResource Include="DSBEv01.xml">
+    <EmbeddedResource Include="DSBE-v01.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AAG\DSERv02.xml">
+    <EmbeddedResource Include="AAG\DSER-v02.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AAG\DBAUv02.xml" />
+    <EmbeddedResource Include="AAG\DBAU-v02.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AAG\DBBTv02.xml" />
+    <EmbeddedResource Include="AAG\DBBT-v02.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AAG\DBZUv02.xml" />
+    <EmbeddedResource Include="AAG\DBZU-v02.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DBBV.xml" />
@@ -195,14 +195,14 @@
     <EmbeddedResource Include="DBKE.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DSVV.xml" />
+    <EmbeddedResource Include="DSVV-v01.xml" />
     <EmbeddedResource Include="MVDS.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BW03.xml" />
+    <EmbeddedResource Include="BW03-v01.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BNA\BW02v11.xml" />
+    <EmbeddedResource Include="BNA\BW02-v11.xml" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0-beta014\analyzers\dotnet\cs\Newtonsoft.Json.dll" />
@@ -212,59 +212,59 @@
     <EmbeddedResource Include="DBBF.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BNA\VOSZv05.xml">
+    <EmbeddedResource Include="BNA\VOSZ-v05.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BNA\VOSZv06.xml" />
+    <EmbeddedResource Include="BNA\VOSZ-v06.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DSBEv0101.xml">
+    <EmbeddedResource Include="DSBE-v0101.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BNA\NCSZv05.xml">
+    <EmbeddedResource Include="BNA\NCSZ-v05.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BNA\NCSZv06.xml" />
+    <EmbeddedResource Include="BNA\NCSZ-v06.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BNA\BW02v09.xml" />
+    <EmbeddedResource Include="BNA\BW02-v09.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BNA\BW02v10.xml" />
+    <EmbeddedResource Include="BNA\BW02-v10.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DSKOv04.xml" />
+    <EmbeddedResource Include="DSKO-v04.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AAG\DSERv04.xml">
+    <EmbeddedResource Include="AAG\DSER-v04.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AAG\DBAUv04.xml" />
+    <EmbeddedResource Include="AAG\DBAU-v04.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AAG\DBBTv04.xml" />
+    <EmbeddedResource Include="AAG\DBBT-v04.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AAG\DBZUv04.xml" />
+    <EmbeddedResource Include="AAG\DBZU-v04.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AAG\DSRA01.xml">
+    <EmbeddedResource Include="AAG\DSRA-v01.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AAG\DBRA01.xml" />
+    <EmbeddedResource Include="AAG\DBRA-v01.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DBAP01.xml" />
+    <EmbeddedResource Include="DBAP-v01.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\StyleCop.Analyzers.1.0.0-beta014\build\StyleCop.Analyzers.targets" Condition="Exists('..\packages\StyleCop.Analyzers.1.0.0-beta014\build\StyleCop.Analyzers.targets')" />

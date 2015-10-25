@@ -55,14 +55,14 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
                 }
                 while (reader.RecordName == "VOSZ");
 
-                var dsko = Assert.IsType<DSKOv02>(streamObject);
+                var dsko = Assert.IsType<DSKO02>(streamObject);
                 deuevMessage.DSKO = dsko;
                 writer.Write(dsko);
                 streamObject = reader.Read();
 
                 while (reader.RecordName == "DSER")
                 {
-                    var record = Assert.IsType<DSERv02>(streamObject);
+                    var record = Assert.IsType<DSER02>(streamObject);
                     deuevMessage.DSER.Add(record);
                     writer.Write(record);
                     streamObject = reader.Read();
@@ -100,15 +100,15 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
             public BwnaMessageData()
             {
                 VOSZ = new List<VOSZ>();
-                DSER = new List<DSERv02>();
+                DSER = new List<DSER02>();
                 NCSZ = new List<NCSZ>();
             }
 
             public List<VOSZ> VOSZ { get; set; }
 
-            public DSKOv02 DSKO { get; set; }
+            public DSKO02 DSKO { get; set; }
 
-            public List<DSERv02> DSER { get; set; }
+            public List<DSER02> DSER { get; set; }
 
             public List<NCSZ> NCSZ { get; set; }
         }

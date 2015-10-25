@@ -55,14 +55,14 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
                 }
                 while (reader.RecordName == "VOSZ");
 
-                var dsko = Assert.IsType<DSKOv02>(streamObject);
+                var dsko = Assert.IsType<DSKO02>(streamObject);
                 deuevMessage.DSKO = dsko;
                 writer.Write(dsko);
                 streamObject = reader.Read();
 
                 while (reader.RecordName == "DSBE")
                 {
-                    var record = Assert.IsType<DSBEv01>(streamObject);
+                    var record = Assert.IsType<DSBE01>(streamObject);
                     deuevMessage.DSBEv01.Add(record);
                     writer.Write(record);
                     streamObject = reader.Read();
@@ -100,15 +100,15 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
             public BwnaMessageData()
             {
                 VOSZ = new List<VOSZ>();
-                DSBEv01 = new List<DSBEv01>();
+                DSBEv01 = new List<DSBE01>();
                 NCSZ = new List<NCSZ>();
             }
 
             public List<VOSZ> VOSZ { get; set; }
 
-            public DSKOv02 DSKO { get; set; }
+            public DSKO02 DSKO { get; set; }
 
-            public List<DSBEv01> DSBEv01 { get; set; }
+            public List<DSBE01> DSBEv01 { get; set; }
 
             public List<NCSZ> NCSZ { get; set; }
         }
