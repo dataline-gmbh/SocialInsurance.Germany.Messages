@@ -9,10 +9,12 @@
     <field name="DTNR" length="6" required="true" type="int" format="d6"/>
     <field name="ZLSZ" length="8" required="true" type="int" format="d8"/>
     <field name="VORZEGES" length="1" required="true" regex="[ +-]" />
-    <field name="SUMZAHL" length="13" required="true" type="int" format="d13" />
+    <field name="SUMZAHL" length="13" required="true" type="long" format="d13" />
     <field name="RESERVE" length="472" required="false" ignore="true"/>
-    <field name="VERNR" length="2" literal="05" required="true" type="long" format="00" rid="true" />
+    <field name="VERNR" length="2" literal="05" required="true" type="int" format="00" rid="true" />
     <field name="SE" length="1" required="true"/>
-    <field name="DBFE" length="7" collection="list" minOccurs="0" maxOccurs="unbounded" />
+    <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, SocialInsurance.Germany.Messages.Pocos" collection="list" occurs="0+">
+      <include template="DBFE"/>
+    </segment>
   </template>
 </beanio>

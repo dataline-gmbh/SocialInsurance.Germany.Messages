@@ -3,22 +3,27 @@
 	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.VOSZ-v01.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKO-v02.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKO-v04.xml, SocialInsurance.Germany.Messages.Mappings"/>
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBD-v01.xml, SocialInsurance.Germany.Messages.Mappings"/>
 	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSME-v02.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSME-v03.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBD-v01.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKK-v01.xml, SocialInsurance.Germany.Messages.Mappings"/>
-	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.NCSZ-v01.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSER-v02.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSER-v04.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSRA-v01.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBE-v01.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBE-v0101.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.NCSZ-v01.xml, SocialInsurance.Germany.Messages.Mappings"/>
+
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.VOSZ-v05.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.VOSZ-v06.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.BW02-v09.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.BW02-v10.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.BW02-v11.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.NCSZ-v06.xml, SocialInsurance.Germany.Messages.Mappings"/>
-	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.BW03-v01.xml, SocialInsurance.Germany.Messages.Mappings"/>
-	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSER-v02.xml, SocialInsurance.Germany.Messages.Mappings"/>
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSER-v04.xml, SocialInsurance.Germany.Messages.Mappings"/>
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSRA-v01.xml, SocialInsurance.Germany.Messages.Mappings"/>
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBE-v01.xml, SocialInsurance.Germany.Messages.Mappings"/>
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBE-v0101.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.NCSZ-v05.xml, SocialInsurance.Germany.Messages.Mappings"/>
+
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BW03-v01.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  
   <stream name="dsme-deuev-v02" format="fixedlength">
 		<record name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
 			<include template="VOSZ-v01"/>
@@ -36,6 +41,7 @@
 			<include template="NCSZ-v01"/>
 		</record>
 	</stream>
+  
   <stream name="dsme-deuev-v03" format="fixedlength">
     <record name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
       <include template="VOSZ-v01"/>
@@ -53,6 +59,7 @@
       <include template="NCSZ-v01"/>
     </record>
   </stream>
+  
   <stream name="dskk-deuev" format="fixedlength">
 		<record order="1" name="VOSZ" minOccurs="1"  maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
 			<include template="VOSZ-v01"/>
@@ -67,6 +74,7 @@
 			<include template="NCSZ-v01"/>
 		</record>
 	</stream>
+  
 	<stream name="bw03-bwbnv" format="fixedlength">
 		<record order="1" name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
 			<include template="VOSZ-v01"/>
@@ -81,6 +89,7 @@
 			<include template="NCSZ-v01"/>
 		</record>
 	</stream>
+  
   <stream name="bw02-bwnac-v09" format="fixedlength">
     <record order="1" name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.BNA.VOSZ06, SocialInsurance.Germany.Messages.Pocos">
       <include template="VOSZ-BNA-v06"/>
@@ -95,6 +104,7 @@
       <include template="NCSZ-BNA-v06"/>
     </record>
   </stream>
+  
   <stream name="bw02-bwnac-v10" format="fixedlength">
     <record order="1" name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.BNA.VOSZ06, SocialInsurance.Germany.Messages.Pocos">
       <include template="VOSZ-BNA-v06"/>
@@ -109,6 +119,7 @@
       <include template="NCSZ-BNA-v06"/>
     </record>
   </stream>
+  
   <stream name="bw02-bwnac-v11" format="fixedlength">
 		<record order="1" name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.BNA.VOSZ06, SocialInsurance.Germany.Messages.Pocos">
 			<include template="VOSZ-BNA-v06"/>
@@ -123,6 +134,7 @@
 			<include template="NCSZ-BNA-v06"/>
 		</record>
 	</stream>
+  
 	<stream name="dser-agger-v02" format="fixedlength">
 		<record order="1" name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
 			<include template="VOSZ-v01"/>
@@ -137,6 +149,7 @@
 			<include template="NCSZ-v01"/>
 		</record>
 	</stream>
+  
   <stream name="dser-agger-v04" format="fixedlength">
     <record order="1" name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
       <include template="VOSZ-v01"/>
@@ -151,6 +164,7 @@
       <include template="NCSZ-v01"/>
     </record>
   </stream>
+  
   <stream name="dsra-agger-v01" format="fixedlength">
     <record order="1" name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
       <include template="VOSZ-v01"/>
@@ -165,6 +179,7 @@
       <include template="NCSZ-v01"/>
     </record>
   </stream>
+  
   <stream name="dsbe-bvbei-v01" format="fixedlength">
 		<record name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
 			<include template="VOSZ-v01"/>
@@ -179,6 +194,7 @@
 			<include template="NCSZ-v01"/>
 		</record>
 	</stream>
+  
   <stream name="dsbe-bvbei-v0101" format="fixedlength">
     <record name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
       <include template="VOSZ-v01"/>
@@ -192,5 +208,79 @@
     <record name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, SocialInsurance.Germany.Messages.Pocos">
       <include template="NCSZ-v01"/>
     </record>
+  </stream>
+  
+  <!-- Wird verwendet, damit man auf allgemeingültige Art und Weise an die VOSZ/DSKO/NCSZ-Datensätze kommen kann -->
+  <stream name="envelope-request-generic" format="fixedlength" ignoreUnidentifiedRecords="true">
+    <group name="VOSZ" order="1">
+      <!-- <include template="VOSZ-generic"/> -->
+      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
+        <include template="VOSZ-v01"/>
+      </record>
+      <record name="VOSZ-BNA-v05" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.VOSZ05, SocialInsurance.Germany.Messages.Pocos">
+        <include template="VOSZ-BNA-v05"/>
+      </record>
+      <record name="VOSZ-BNA-v06" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.VOSZ06, SocialInsurance.Germany.Messages.Pocos">
+        <include template="VOSZ-BNA-v06"/>
+      </record>
+    </group>
+    <group name="DSKO" order="2">
+      <!-- <include template="DSKO-generic"/> -->
+      <record name="DSKO-v02" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO02, SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSKO-v02"/>
+      </record>
+      <record name="DSKO-v04" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO04, SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSKO-v04"/>
+      </record>
+    </group>
+    <group name="NCSZ" order="3">
+      <!-- <include template="VOSZ-generic"/> -->
+      <record name="NCSZ-BNA-v06" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.NCSZ06, SocialInsurance.Germany.Messages.Pocos">
+        <include template="NCSZ-BNA-v06"/>
+      </record>
+      <record name="NCSZ-BNA-v05" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.NCSZ05, SocialInsurance.Germany.Messages.Pocos">
+        <include template="NCSZ-BNA-v05"/>
+      </record>
+      <record name="NCSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, SocialInsurance.Germany.Messages.Pocos">
+        <include template="NCSZ-v01"/>
+      </record>
+    </group>
+  </stream>
+
+  <!-- Wird verwendet, damit man auf allgemeingültige Art und Weise an die VOSZ/DSKO/NCSZ-Datensätze kommen kann -->
+  <stream name="envelope-response-generic" format="fixedlength" ignoreUnidentifiedRecords="true">
+    <group name="VOSZ" order="1" occurs="2">
+      <!-- <include template="VOSZ-generic"/> -->
+      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
+        <include template="VOSZ-v01"/>
+      </record>
+      <record name="VOSZ-BNA-v05" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.VOSZ05, SocialInsurance.Germany.Messages.Pocos">
+        <include template="VOSZ-BNA-v05"/>
+      </record>
+      <record name="VOSZ-BNA-v06" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.VOSZ06, SocialInsurance.Germany.Messages.Pocos">
+        <include template="VOSZ-BNA-v06"/>
+      </record>
+    </group>
+    <group name="DSKO" order="2">
+      <!-- <include template="DSKO-generic"/> -->
+      <record name="DSKO-v02" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO02, SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSKO-v02"/>
+      </record>
+      <record name="DSKO-v04" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO04, SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSKO-v04"/>
+      </record>
+    </group>
+    <group name="NCSZ" order="3" occurs="2">
+      <!-- <include template="VOSZ-generic"/> -->
+      <record name="NCSZ-BNA-v06" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.NCSZ06, SocialInsurance.Germany.Messages.Pocos">
+        <include template="NCSZ-BNA-v06"/>
+      </record>
+      <record name="NCSZ-BNA-v05" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.NCSZ05, SocialInsurance.Germany.Messages.Pocos">
+        <include template="NCSZ-BNA-v05"/>
+      </record>
+      <record name="NCSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, SocialInsurance.Germany.Messages.Pocos">
+        <include template="NCSZ-v01"/>
+      </record>
+    </group>
   </stream>
 </beanio>

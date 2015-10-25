@@ -9,6 +9,8 @@
     <field name="DTNR" length="6" required="true" type="int" format="000000"/>
     <field name="NAAB" length="50" required="false"/>
     <field name="VERNR" length="2" required="true" literal="06" type="int" format="00" rid="true" />
-    <field name="DBFE" length="7" collection="list" minOccurs="0" maxOccurs="unbounded" />
+    <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, SocialInsurance.Germany.Messages.Pocos" collection="list" occurs="0+">
+      <include template="DBFE"/>
+    </segment>
   </template>
 </beanio>

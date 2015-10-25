@@ -217,7 +217,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BNA\VOSZ-v06.xml" />
+    <EmbeddedResource Include="BNA\VOSZ-v06.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DSBE-v0101.xml">

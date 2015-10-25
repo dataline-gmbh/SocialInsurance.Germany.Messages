@@ -19,15 +19,59 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
         [Fact(DisplayName = "TestBW02")]
         public void TestBW02()
         {
-            var deuevMessage = GetMessageFromFile("ebna0091.a35", "bw02-bwnac-v11");
+            var data = ReadData("ebna0091.a35");
+            var deuevMessage = GetMessageFromFile(data, "bw02-bwnac-v11");
             Assert.True(deuevMessage.BW02.Count > 0);
+            Assert.Equal(data, GetStringFromMessage(deuevMessage, "bw02-bwnac-v11"));
+        }
+
+        [Fact]
+        public void TestGenericEnvelopeRequest()
+        {
+            var data = ReadData("ebna0091.a35");
+            var deuevMessage = GetMessageFromFile(data, "envelope-request-generic");
+            Assert.Equal(0, deuevMessage.BW02.Count);
+            Assert.Equal(1, deuevMessage.VOSZ.Count);
+            Assert.Equal(1, deuevMessage.NCSZ.Count);
+        }
+
+        [Fact(Skip = "Keine Kundenunabhängigen Testdaten vorhanden")]
+        public void TestGenericEnvelopeResponse()
+        {
+            //var data = ReadData("ebna0091.a35");
+            var data = File.ReadAllText(@"D:\temp\arbeit\meldungen\ebna02457-response.a18");
+            var deuevMessage = GetMessageFromFile(data, "envelope-response-generic");
+            Assert.Equal(0, deuevMessage.BW02.Count);
+            Assert.Equal(2, deuevMessage.VOSZ.Count);
+            Assert.Equal(2, deuevMessage.NCSZ.Count);
+        }
+
+        /// <summary>
+        /// Erstellt die Meldedatei anhand von <paramref name="data"/> neu.
+        /// </summary>
+        /// <param name="data">Die Daten die zur Erstellung der Meldedatei benutzt werden sollen</param>
+        /// <param name="streamName">Der Name des Streams der für die Erstellung der Meldedatei benutzt werden soll</param>
+        /// <returns>Die Meldedatei</returns>
+        private string GetStringFromMessage(BwnaMessageData data, string streamName)
+        {
+            var output = new StringWriter();
+            var writer = StreamFactory.CreateWriter(streamName, output);
+            foreach (var record in data.VOSZ)
+                writer.Write(record);
+            writer.Write(data.DSKO);
+            foreach (var record in data.BW02)
+                writer.Write(record);
+            foreach (var record in data.NCSZ)
+                writer.Write(record);
+            writer.Close();
+            return output.ToString();
         }
 
         /// <summary>
         /// Ruft die Meldedatei mit einem bestimmten Dateinamen aus dem Deuev-Ordner ab
         /// </summary>
-        /// <param name="fileName">
-        /// Dateiname der Meldedatei
+        /// <param name="input">
+        /// Die Meldedatei
         /// </param>
         /// <param name="name">
         /// Name in der Meldungen.xml
@@ -35,11 +79,8 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
         /// <returns>
         /// Meldedatei als DeuevMessageData-Objekt
         /// </returns>
-        private BwnaMessageData GetMessageFromFile(string fileName, string name)
+        private BwnaMessageData GetMessageFromFile(string input, string name)
         {
-            var input = ReadData(fileName);
-            var output = new StringWriter();
-            var writer = StreamFactory.CreateWriter(name, output);
             var reader = StreamFactory.CreateReader(name, new StringReader(input));
             var deuevMessage = new BwnaMessageData();
             try
@@ -50,39 +91,32 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
                 {
                     var vosz = Assert.IsType<VOSZ06>(streamObject);
                     deuevMessage.VOSZ.Add(vosz);
-                    writer.Write(vosz);
                     streamObject = reader.Read();
                 }
-                while (reader.RecordName == "VOSZ");
+                while (reader.RecordName == "VOSZ-BNA-v06");
 
                 var dsko = Assert.IsType<DSKO02>(streamObject);
                 deuevMessage.DSKO = dsko;
-                writer.Write(dsko);
                 streamObject = reader.Read();
 
                 while (reader.RecordName == "BW02")
                 {
                     var record = Assert.IsType<BW0211>(streamObject);
                     deuevMessage.BW02.Add(record);
-                    writer.Write(record);
                     streamObject = reader.Read();
                 }
 
                 do
                 {
                     var ncsz = Assert.IsType<NCSZ06>(streamObject);
-                    writer.Write(streamObject);
                     deuevMessage.NCSZ.Add(ncsz);
                     streamObject = reader.Read();
                 }
-                while (reader.RecordName != null && reader.RecordName == "NCSZ");
+                while (reader.RecordName != null && reader.RecordName == "NCSZ-BNA-v06");
 
                 Assert.Null(reader.RecordName);
                 Assert.Equal(deuevMessage.VOSZ.Count, deuevMessage.NCSZ.Count);
 
-                writer.Close();
-                string output2 = output.ToString();
-                Assert.Equal(input, output2);
                 return deuevMessage;
             }
             finally
