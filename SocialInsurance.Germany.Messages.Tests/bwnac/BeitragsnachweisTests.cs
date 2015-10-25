@@ -20,7 +20,7 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
         public void TestBW02()
         {
             var data = ReadData("ebna0091.a35");
-            var deuevMessage = GetMessageFromFile(data, "bw02-bwnac-v11");
+            var deuevMessage = GetMessageFromString(data, "bw02-bwnac-v11");
             Assert.True(deuevMessage.BW02.Count > 0);
             Assert.Equal(data, GetStringFromMessage(deuevMessage, "bw02-bwnac-v11"));
         }
@@ -29,18 +29,18 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
         public void TestGenericEnvelopeRequest()
         {
             var data = ReadData("ebna0091.a35");
-            var deuevMessage = GetMessageFromFile(data, "envelope-request-generic");
+            var deuevMessage = GetMessageFromString(data, "envelope-request-generic");
             Assert.Equal(0, deuevMessage.BW02.Count);
             Assert.Equal(1, deuevMessage.VOSZ.Count);
             Assert.Equal(1, deuevMessage.NCSZ.Count);
         }
 
         [Fact(Skip = "Keine Kundenunabhängigen Testdaten vorhanden")]
+        //[Fact]
         public void TestGenericEnvelopeResponse()
         {
-            //var data = ReadData("ebna0091.a35");
             var data = File.ReadAllText(@"D:\temp\arbeit\meldungen\ebna02457-response.a18");
-            var deuevMessage = GetMessageFromFile(data, "envelope-response-generic");
+            var deuevMessage = GetMessageFromString(data, "envelope-response-generic");
             Assert.Equal(0, deuevMessage.BW02.Count);
             Assert.Equal(2, deuevMessage.VOSZ.Count);
             Assert.Equal(2, deuevMessage.NCSZ.Count);
@@ -70,16 +70,10 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
         /// <summary>
         /// Ruft die Meldedatei mit einem bestimmten Dateinamen aus dem Deuev-Ordner ab
         /// </summary>
-        /// <param name="input">
-        /// Die Meldedatei
-        /// </param>
-        /// <param name="name">
-        /// Name in der Meldungen.xml
-        /// </param>
-        /// <returns>
-        /// Meldedatei als DeuevMessageData-Objekt
-        /// </returns>
-        private BwnaMessageData GetMessageFromFile(string input, string name)
+        /// <param name="input">Die Meldedatei</param>
+        /// <param name="name">Name in der Meldungen.xml</param>
+        /// <returns>Meldedatei als DeuevMessageData-Objekt</returns>
+        private BwnaMessageData GetMessageFromString(string input, string name)
         {
             var reader = StreamFactory.CreateReader(name, new StringReader(input));
             var deuevMessage = new BwnaMessageData();
@@ -93,7 +87,7 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
                     deuevMessage.VOSZ.Add(vosz);
                     streamObject = reader.Read();
                 }
-                while (reader.RecordName == "VOSZ-BNA-v06");
+                while (reader.RecordName == "VOSZ" || reader.RecordName == "VOSZ-BNA-v06");
 
                 var dsko = Assert.IsType<DSKO02>(streamObject);
                 deuevMessage.DSKO = dsko;
@@ -112,7 +106,7 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
                     deuevMessage.NCSZ.Add(ncsz);
                     streamObject = reader.Read();
                 }
-                while (reader.RecordName != null && reader.RecordName == "NCSZ-BNA-v06");
+                while (reader.RecordName != null && (reader.RecordName == "NCSZ" || reader.RecordName == "NCSZ-BNA-v06"));
 
                 Assert.Null(reader.RecordName);
                 Assert.Equal(deuevMessage.VOSZ.Count, deuevMessage.NCSZ.Count);

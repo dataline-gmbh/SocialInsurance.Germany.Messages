@@ -32,9 +32,14 @@ namespace SocialInsurance.Germany.Messages.Tests
             get { return _factory; }
         }
 
+        protected Encoding DefaultEncoding
+        {
+            get { return _iso8859_15; }
+        }
+
         protected string ReadData(string resourceName)
         {
-            return ReadData(resourceName, _iso8859_15);
+            return ReadData(resourceName, DefaultEncoding);
         }
 
         protected string ReadData(string resourceName, Encoding encoding)
@@ -45,7 +50,7 @@ namespace SocialInsurance.Germany.Messages.Tests
 
         protected TextReader LoadData(string resourceName)
         {
-            return LoadData(resourceName, _iso8859_15);
+            return LoadData(resourceName, DefaultEncoding);
         }
 
         protected TextReader LoadData(string resourceName, Encoding encoding)

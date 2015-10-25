@@ -53,7 +53,7 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
                     writer.Write(vosz);
                     streamObject = reader.Read();
                 }
-                while (reader.RecordName == "VOSZ");
+                while (reader.RecordName == "VOSZ" || reader.RecordName == "VOSZ-v01");
 
                 var dsko = Assert.IsType<DSKO02>(streamObject);
                 deuevMessage.DSKO = dsko;
@@ -75,7 +75,7 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
                     deuevMessage.NCSZ.Add(ncsz);
                     streamObject = reader.Read();
                 }
-                while (reader.RecordName != null && reader.RecordName == "NCSZ");
+                while (reader.RecordName != null && (reader.RecordName == "NCSZ" || reader.RecordName == "NCSZ-v01"));
 
                 Assert.Null(reader.RecordName);
                 Assert.Equal(deuevMessage.VOSZ.Count, deuevMessage.NCSZ.Count);
