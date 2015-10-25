@@ -1,20 +1,20 @@
-﻿// <copyright file="DBZU.cs" company="DATALINE GmbH &amp; Co. KG">
+﻿// <copyright file="DBZUv04.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
 using System;
 
-namespace SocialInsurance.Germany.Messages.Pocos
+namespace SocialInsurance.Germany.Messages.Pocos.AAG
 {
     /// <summary>
     /// Datenbaustein: DBZU - Erstattung der Arbeitgeberzuschusses Mutterschaft
     /// </summary>
-    public class DBZU : IDatenbaustein
+    public class DBZUv04 : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBZU"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DBZUv04"/> Klasse
         /// </summary>
-        public DBZU()
+        public DBZUv04()
         {
             KE = "DBZU";
         }

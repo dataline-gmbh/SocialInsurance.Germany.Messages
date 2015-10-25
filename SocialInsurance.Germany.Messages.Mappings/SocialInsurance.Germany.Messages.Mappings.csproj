@@ -150,18 +150,18 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DSERv02.xml">
+    <EmbeddedResource Include="AAG\DSERv02.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DBAU.xml" />
+    <EmbeddedResource Include="AAG\DBAUv02.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DBBT.xml" />
+    <EmbeddedResource Include="AAG\DBBTv02.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DBZU.xml" />
+    <EmbeddedResource Include="AAG\DBZUv02.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DBBV.xml" />
@@ -240,6 +240,20 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DSKOv04.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AAG\DSERv04.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AAG\DBAUv04.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AAG\DBBTv04.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AAG\DBZUv04.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\StyleCop.Analyzers.1.0.0-beta014\build\StyleCop.Analyzers.targets" Condition="Exists('..\packages\StyleCop.Analyzers.1.0.0-beta014\build\StyleCop.Analyzers.targets')" />

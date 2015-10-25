@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SocialInsurance.Germany.Messages.Pocos;
+using SocialInsurance.Germany.Messages.Pocos.AAG;
+
 using Xunit;
 
 namespace SocialInsurance.Germany.Messages.Tests.aager

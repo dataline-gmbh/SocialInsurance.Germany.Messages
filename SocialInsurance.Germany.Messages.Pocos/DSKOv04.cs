@@ -15,7 +15,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         private FehlerKennzeichen? _fekz;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DSKOv02"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DSKOv04"/> Klasse
         /// </summary>
         /// <remarks>
         /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt

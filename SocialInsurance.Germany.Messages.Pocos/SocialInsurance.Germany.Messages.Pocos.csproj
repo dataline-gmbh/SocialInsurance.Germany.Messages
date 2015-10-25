@@ -48,6 +48,12 @@
     <Compile Include="..\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="AAG\DBAUv04.cs" />
+    <Compile Include="AAG\DBBTv04.cs" />
+    <Compile Include="AAG\DBZUv04.cs" />
+    <Compile Include="AAG\DSERv04.cs" />
+    <Compile Include="BNA\BW02v09.cs" />
+    <Compile Include="BNA\BW02v10.cs" />
     <Compile Include="BNA\NCSZv05.cs" />
     <Compile Include="BNA\NCSZv06.cs" />
     <Compile Include="BNA\VOSZv06.cs" />
@@ -58,10 +64,10 @@
     <Compile Include="DBAG.cs" />
     <Compile Include="DBAN.cs" />
     <Compile Include="DBAS.cs" />
-    <Compile Include="DBAU.cs" />
+    <Compile Include="AAG\DBAUv02.cs" />
     <Compile Include="DBAZ.cs" />
     <Compile Include="DBBG.cs" />
-    <Compile Include="DBBT.cs" />
+    <Compile Include="AAG\DBBTv02.cs" />
     <Compile Include="DBBV.cs" />
     <Compile Include="DBEN.cs" />
     <Compile Include="DBEU.cs" />
@@ -97,12 +103,12 @@
     <Compile Include="DBUV.cs" />
     <Compile Include="DBVR.cs" />
     <Compile Include="DBZD.cs" />
-    <Compile Include="DBZU.cs" />
+    <Compile Include="AAG\DBZUv02.cs" />
     <Compile Include="DSAE.cs" />
     <Compile Include="DSBD.cs" />
     <Compile Include="DSBEv0101.cs" />
     <Compile Include="DSBEv01.cs" />
-    <Compile Include="DSERv02.cs" />
+    <Compile Include="AAG\DSERv02.cs" />
     <Compile Include="DSKK.cs" />
     <Compile Include="DSKOv04.cs" />
     <Compile Include="DSKOv02.cs" />

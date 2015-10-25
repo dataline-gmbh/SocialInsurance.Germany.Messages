@@ -2,10 +2,9 @@
 <beanio xmlns="http://www.beanio.org/2015/06">
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBMI.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBHB.xml, SocialInsurance.Germany.Messages.Mappings"/>
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBBF.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, SocialInsurance.Germany.Messages.Mappings"/>
-  <template name="DSBEv1">
+  <template name="DSBEv01">
     <field name="KE" literal="DSBE" length="4" rid="true" required="true" />
     <field name="VF" literal="BVBEI" length="5" rid="true" required="true" />
     <field name="BBNRAB" length="15" required="true" />

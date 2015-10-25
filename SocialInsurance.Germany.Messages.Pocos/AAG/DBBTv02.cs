@@ -1,20 +1,20 @@
-﻿// <copyright file="DBBT.cs" company="DATALINE GmbH &amp; Co. KG">
+﻿// <copyright file="DBBTv02.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
 using System;
 
-namespace SocialInsurance.Germany.Messages.Pocos
+namespace SocialInsurance.Germany.Messages.Pocos.AAG
 {
     /// <summary>
     /// Datenbaustein: DBBT - Erstattung der Arbeitgeberaufwendungen Beschäftigungsverbot
     /// </summary>
-    public class DBBT : IDatenbaustein
+    public class DBBTv02 : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBBT"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DBBTv02"/> Klasse
         /// </summary>
-        public DBBT()
+        public DBBTv02()
         {
             KE = "DBBT";
         }

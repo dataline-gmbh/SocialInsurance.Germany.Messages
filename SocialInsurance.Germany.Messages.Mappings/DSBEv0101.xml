@@ -57,11 +57,11 @@
     <segment name="ListeDBHB" class="SocialInsurance.Germany.Messages.Pocos.DBHB, SocialInsurance.Germany.Messages.Pocos" occursRef="MMHB" collection="list">
       <include template="DBHB" />
     </segment>
-    <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
-      <include template="DBFE" />
-    </segment>
     <segment name="ListeDBBF" class="SocialInsurance.Germany.Messages.Pocos.DBBF, SocialInsurance.Germany.Messages.Pocos" occursRef="MMBF" collection="list">
       <include template="DBBF" />
+    </segment>
+    <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
+      <include template="DBFE" />
     </segment>
   </template>
 </beanio>

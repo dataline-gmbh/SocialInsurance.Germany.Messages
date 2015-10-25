@@ -1,20 +1,20 @@
-﻿// <copyright file="DBAU.cs" company="DATALINE GmbH &amp; Co. KG">
+﻿// <copyright file="DBAUv02.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
 using System;
 
-namespace SocialInsurance.Germany.Messages.Pocos
+namespace SocialInsurance.Germany.Messages.Pocos.AAG
 {
     /// <summary>
     /// Datenbaustein: DBAU - Erstattung der Arbeitgeberaufwendungen Arbeitsunfähigkeit
     /// </summary>
-    public class DBAU : IDatenbaustein
+    public class DBAUv02 : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBAU"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DBAUv02"/> Klasse
         /// </summary>
-        public DBAU()
+        public DBAUv02()
         {
             KE = "DBAU";
         }

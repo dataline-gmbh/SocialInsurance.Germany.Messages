@@ -1,4 +1,4 @@
-﻿// <copyright file="BW02v11.cs" company="DATALINE GmbH &amp; Co. KG">
+﻿// <copyright file="BW02v10.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
@@ -10,17 +10,17 @@ namespace SocialInsurance.Germany.Messages.Pocos.BNA
     /// <summary>
     /// Beitragsnachweis-Datensatz
     /// </summary>
-    public class BW02v11
+    public class BW02v10
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="BW02v11"/> Klasse.
+        /// Initialisiert eine neue Instanz der <see cref="BW02v10"/> Klasse.
         /// </summary>
-        public BW02v11()
+        public BW02v10()
         {
             KE = "BW02";
             VF = "BWNAC";
             DBFE = new List<DBFE>();
-            VERNR = 11;
+            VERNR = 10;
         }
 
         /// <summary>
@@ -224,22 +224,6 @@ namespace SocialInsurance.Germany.Messages.Pocos.BNA
         /// Beitrag zur Rentenversicherung (Beitragsgruppen 0100) mit Centangaben, Länge 11, Mussangabe
         /// </remarks>
         public int RVBEITR1 { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt das Vorzeichen zum Zusatzbeitrag/Pflichtbeitrag
-        /// </summary>
-        /// <remarks>
-        /// Kennzeichen, ob positiver oder negativer Beitrag, Länge 1, Mussangabe
-        /// </remarks>
-        public string VZZBP { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt den/die Zusatzbeitrag/Pflichtbeiträge
-        /// </summary>
-        /// <remarks>
-        /// Zusatzbeitrag zur Krankversicherung für Pflichtversicherte mit Centangabe, Länge 11, Mussangabe
-        /// </remarks>
-        public int ZBP { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Vorzeichen zur Arbeitslosenversicherung
@@ -496,6 +480,36 @@ namespace SocialInsurance.Germany.Messages.Pocos.BNA
         /// Zahlbetrag/Guthaben (Summe Stellen 318-401) mit Centeingabe, Länge 11, Mussangabe
         /// </remarks>
         public int SUM { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Vorzeichen
+        /// </summary>
+        public string VZKV1SA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt den Betrag
+        /// </summary>
+        public int KVBEITR1SA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Vorzeichen
+        /// </summary>
+        public string VZKV3SA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt den Betrag
+        /// </summary>
+        public int KVBEITR3SA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Vorzeichen
+        /// </summary>
+        public string VZKVFSA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt den Betrag
+        /// </summary>
+        public int KVBEITRFSA { get; set; }
 
         /// <summary>
         /// Holt oder setzt Name 1 des Arbeitgebers

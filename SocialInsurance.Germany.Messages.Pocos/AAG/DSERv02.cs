@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SocialInsurance.Germany.Messages.Pocos
+namespace SocialInsurance.Germany.Messages.Pocos.AAG
 {
     /// <summary>
     /// Datensatz: DSER - Erstattungen der Arbeitgeberaufwendungen
@@ -314,7 +314,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Arbeitsunfähigkeit vorhanden ist
         /// </summary>
-        public DBAU DBAU
+        public DBAUv02 DBAU
         {
             get
             {
@@ -330,7 +330,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Beschäftigungsverbot vorhanden ist
         /// </summary>
-        public DBBT DBBT
+        public DBBTv02 DBBT
         {
             get
             {
@@ -346,7 +346,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Mutterschaft vorhanden ist
         /// </summary>
-        public DBZU DBZU
+        public DBZUv02 DBZU
         {
             get
             {
@@ -412,11 +412,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public IList<DBFE> DBFE { get; set; }
 
-        private IList<DBAU> ListeDBAU { get; set; }
+        private IList<DBAUv02> ListeDBAU { get; set; }
 
-        private IList<DBBT> ListeDBBT { get; set; }
+        private IList<DBBTv02> ListeDBBT { get; set; }
 
-        private IList<DBZU> ListeDBZU { get; set; }
+        private IList<DBZUv02> ListeDBZU { get; set; }
 
         private IList<DBBV> ListeDBBV { get; set; }
 
