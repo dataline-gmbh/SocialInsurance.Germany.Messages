@@ -100,6 +100,7 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
             public BwnaMessageData()
             {
                 VOSZ = new List<VOSZv06>();
+                BW02 = new List<BW02v11>();
                 NCSZ = new List<NCSZv06>();
             }
 
