@@ -10,7 +10,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// BW03 - Datensatz Beitragsnachweis der Zahlstellen
     /// </summary>
-    public class BW03 : IDatenbaustein
+    public class BW03 : IDatensatz
     {
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="BW03"/> Klasse.
@@ -352,6 +352,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Es folgen ggf. ein oder mehrere Datenbausteine DBFE-Fehler gemäß den Angaben in dem FEKZ.
         /// Die Anzahl der Fehler-Datenbausteine ergibt sich aus dem Feld FEAN.
         /// </remarks>
-        public List<DBFE> DBFE { get; set; }
+        public IList<DBFE> DBFE { get; set; }
     }
 }

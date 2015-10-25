@@ -10,7 +10,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.BNA
     /// <summary>
     /// Beitragsnachweis-Datensatz
     /// </summary>
-    public class BW0209
+    public class BW0209 : IDatensatz
     {
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="BW0209"/> Klasse.
@@ -707,6 +707,6 @@ namespace SocialInsurance.Germany.Messages.Pocos.BNA
         /// Es folgen ggf. ein oder mehrere Datenbausteine DBFE-Fehler gemäß den Angaben in dem FEKZ.
         /// Die Anzahl der Fehler-Datenbausteine ergibt sich aus dem Feld FEAN.
         /// </remarks>
-        public List<DBFE> DBFE { get; set; }
+        public IList<DBFE> DBFE { get; set; }
     }
 }
