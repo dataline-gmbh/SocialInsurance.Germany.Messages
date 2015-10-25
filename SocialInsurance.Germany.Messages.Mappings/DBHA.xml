@@ -4,7 +4,7 @@
     <field name="KE" length="4" literal="DBHA" required="true"/>
     <field name="URLTAGE" length="3" required="true" type="int" format="000"/>
     <field name="TATSURLTAGE" length="3" required="true" type="int" format="000"/>
-    <field name="URLEG" length="10" required="true" type="int" format="0000000000"/>
+    <field name="URLEG" length="10" required="true" type="long" format="D10"/>
     <field name="URLEGGEZ" length="1" required="true" type="int" regex="[0-2]"/>
   </template> 
 </beanio>

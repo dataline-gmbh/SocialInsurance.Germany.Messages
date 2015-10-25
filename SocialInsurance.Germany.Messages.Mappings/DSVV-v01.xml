@@ -22,12 +22,12 @@
     <field name="AZKK" length="20" required="false"/>
     <field name="BBNRAS" length="15" required="false"/>
     <field name="PERSGR" length="3" required="true" type="int" format="000"/>
-    <field name="GD" length="2" required="false" type="int" format="00"/>
+    <field name="GD" length="2" required="false" type="int" format="00" ignore="true"/>
     <field name="SASC" length="3" required="true"/>
     <field name="BEAM" length="1" required="true" typeHandler="jn"/>
-    <field name="MONATBEG" length="8" required="false" type="int" format="00000000"/>
-    <field name="MONATEND" length="8" required="false" type="int" format="00000000"/>
-    <field name="BBNRALT" length="15" required="false"/>
+    <field name="MONATBEG" length="8" required="false" ignore="true" format="D8" type="int" />
+    <field name="MONATEND" length="2" required="false" ignore="true" format="D2" type="int" />
+    <field name="BBNRALT" length="15" required="false" ignore="true"/>
     <field name="DSID" length="20" required="false"/>
     <field name="KENNZST" length="1" required="true" literal="N" typeHandler="jn"/>
     <field name="MMEN" length="1" required="true" literal="N" typeHandler="jn"/>

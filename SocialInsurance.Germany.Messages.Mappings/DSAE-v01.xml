@@ -25,10 +25,10 @@
     <field name="RESERVE3" length="5" required="false" ignore="true"/>
     <field name="VERNRKP" length="2" required="true"/>
     <field name="RESERVE4" length="2" required="false" ignore="true"/>
-    <segment name="DBAZ" class="SocialInsurance.Germany.Messages.Pocos.DBAZ, SocialInsurance.Germany.Messages.Pocos" occursRef="MMAZ" collection="list">
+    <segment name="ListeDBAZ" class="SocialInsurance.Germany.Messages.Pocos.DBAZ, SocialInsurance.Germany.Messages.Pocos" occursRef="MMAZ" collection="list">
       <include template="DBAZ" />
     </segment>
-    <segment name="DBEZ" class="SocialInsurance.Germany.Messages.Pocos.DBEZ, SocialInsurance.Germany.Messages.Pocos" occursRef="MMEZ" collection="list">
+    <segment name="ListeDBEZ" class="SocialInsurance.Germany.Messages.Pocos.DBEZ, SocialInsurance.Germany.Messages.Pocos" occursRef="MMEZ" collection="list">
       <include template="DBEZ" />
     </segment>
     <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">

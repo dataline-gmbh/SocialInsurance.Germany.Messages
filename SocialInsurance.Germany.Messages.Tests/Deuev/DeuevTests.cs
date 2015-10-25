@@ -1846,7 +1846,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestGenericEnvelopeResponse()
         {
             var data = File.ReadAllText(@"D:\temp\arbeit\meldungen\edua01045-response.a07", DefaultEncoding);
-            var deuevMessage = GetMessageFromString(data, "envelope-response-generic");
+            var deuevMessage = GetMessageFromString(data, "super-message");
             Assert.Equal(2, deuevMessage.VOSZ.Count);
             Assert.Equal(0, deuevMessage.DSME.Count);
             Assert.Equal(0, deuevMessage.DSBD.Count);
@@ -1866,7 +1866,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         public void TestErrorResponse()
         {
             var data = File.ReadAllText(@"D:\temp\arbeit\meldungen\edua01055-response.a07", DefaultEncoding);
-            var deuevMessage = GetMessageFromString(data, "dsme-deuev-v02");
+            var deuevMessage = GetMessageFromString(data, "super-message");
             Assert.Equal(2, deuevMessage.VOSZ.Count);
             Assert.Equal(1, deuevMessage.DSME.Count);
             Assert.Equal(0, deuevMessage.DSBD.Count);
@@ -1924,14 +1924,14 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 deuevMessage.DSKO = dsko;
                 streamObject = reader.Read();
 
-                while (reader.RecordName == "DSME")
+                while (reader.RecordName == "DSME" || reader.RecordName == "DSME-v02")
                 {
                     var record = Assert.IsType<DSME02>(streamObject);
                     deuevMessage.DSME.Add(record);
                     streamObject = reader.Read();
                 }
 
-                while (reader.RecordName == "DSBD")
+                while (reader.RecordName == "DSBD" || reader.RecordName == "DSBD-v01")
                 {
                     var record = Assert.IsType<DSBD>(streamObject);
                     deuevMessage.DSBD.Add(record);

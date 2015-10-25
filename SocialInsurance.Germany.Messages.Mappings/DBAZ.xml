@@ -2,7 +2,7 @@
 <beanio xmlns="http://www.beanio.org/2015/06">
   <template name="DBAZ">
     <field name="KE" length="4" literal="DBAZ" required="true"/>
-    <field name="KENNZST" length="1" required="true"/>
+    <field name="KENNZST" length="1" required="true" typeHandler="jn"/>
     <field name="LEAT" length="2" required="true" type="int" format="00"/>
     <field name="ZRBG" length="8" required="true" format="yyyyMMdd"/>
     <field name="ZREN" length="8" required="true" format="yyyyMMdd"/>

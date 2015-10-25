@@ -351,7 +351,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// mit der Beendigung des Arbeitsverhältnisses bzw. Heimarbeitsverhältnisses? Länge 1, Mussangabe
         /// 1 = ja, 2 = nein, 3 = ungewiss
         /// </remarks>
-        public int AVENZL { get; set; }
+        public int AVENLZ { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Grund, wenn Leistungsanspruch ungewiss ist

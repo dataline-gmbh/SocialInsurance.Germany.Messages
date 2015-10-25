@@ -28,6 +28,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string KE { get; set; }
 
         /// <summary>
+        /// Holt oder setzt einen Wert, der angibt, ob eine Stornierung vorliegt
+        /// </summary>
+        public bool KENNZST { get; set; }
+
+        /// <summary>
         /// Holt oder setzt die Angaben zu der gemeldeten Zeit
         /// </summary>
         /// <remarks>

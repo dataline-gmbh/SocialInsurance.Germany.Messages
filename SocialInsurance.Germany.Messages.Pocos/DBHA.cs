@@ -47,7 +47,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Im bescheinigten Bruttoarbeitsentgelt enthaltenes Urlaubsentgelt, Länge 10, Mussangabe
         /// </remarks>
-        public int URLEG { get; set; }
+        public long URLEG { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Art der Zahlung des Urlaubsentgelt
@@ -56,6 +56,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Art der Zahlung des Urlaubsentgelt, Länge 1, Mussangabe
         /// 1 = bei Urlaubsantritt, 2 = als laufender Entgeltzuschlag
         /// </remarks>
-        public int ULEGGEZ { get; set; }
+        public int URLEGGEZ { get; set; }
     }
 }

@@ -14,6 +14,7 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBHA.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBKE.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBEN.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <template name="MVDS-v01">
     <field name="KE" literal="MVDS" length="4" rid="true" required="true" />
@@ -36,7 +37,7 @@
     <field name="SASC" length="3" required="false"/>
     <field name="BEAM" length="1" required="true" typeHandler="jn"/>
     <field name="MONATBEG" length="8" required="true" format="yyyyMMdd"/>
-    <field name="MONATEND" length="8" required="true" format="dd"/>
+    <field name="MONATEND" length="2" required="true" type="int" format="D2"/>
     <field name="BBNRALT" length="15" required="false"/>
     <field name="DSID" length="20" required="false"/>
     <field name="KENNZST" length="1" required="true" typeHandler="jn"/>

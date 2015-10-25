@@ -10,6 +10,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datensatz: DSVV - Vergabe einer Versicherungs-/Verfahrensnummer
     /// </summary>
+    [Obsolete("ELENA-Verfahren")]
     public class DSVV : IDatensatz
     {
         private FehlerKennzeichen? _fekz;
@@ -162,14 +163,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public int PERSGR { get; set; }
 
         /// <summary>
-        /// Holt oder setzt den Abgabegrund
-        /// </summary>
-        /// <remarks>
-        /// Entfällt hier, Grundstellung liefern, Länge 2, Mussangabe
-        /// </remarks>
-        public int GD { get; set; }
-
-        /// <summary>
         /// Holt oder setzt den Staatsangehörigkeitsschlüssel
         /// </summary>
         /// <remarks>
@@ -185,30 +178,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// J = j, N = nein
         /// </remarks>
         public bool BEAM { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt das Anfangsdatum des Zeitraumes innerhalb des Meldemonats, der durch diese Meldung abgedeckt wird
-        /// </summary>
-        /// <remarks>
-        /// Entfällt hier, Grundstellung liefern, Länge 8, Mussangabe
-        /// </remarks>
-        public string MONATBEG { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt das Enddatum des Zeitraumes innerhalb des Meldemonats, der durch diese Meldung abgedeckt wird
-        /// </summary>
-        /// <remarks>
-        /// Entfällt hier, Grundstellung liefern, Länge 2, Mussangabe
-        /// </remarks>
-        public string MONATEND { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt die abweichende Betriebsnummer des Unternehmens
-        /// </summary>
-        /// <remarks>
-        /// Entfällt hier, Grundstellung liefern, Länge 15, Mussangabe
-        /// </remarks>
-        public string BBNRALT { get; set; }
 
         /// <summary>
         /// Holt oder setzt das dem Verursacher zur Verfügung stehende Feld

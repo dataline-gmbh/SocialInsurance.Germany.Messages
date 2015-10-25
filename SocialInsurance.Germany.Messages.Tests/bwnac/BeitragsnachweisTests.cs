@@ -40,7 +40,7 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
         public void TestGenericEnvelopeResponse()
         {
             var data = File.ReadAllText(@"D:\temp\arbeit\meldungen\ebna02457-response.a18");
-            var deuevMessage = GetMessageFromString(data, "envelope-response-generic");
+            var deuevMessage = GetMessageFromString(data, "super-message");
             Assert.Equal(0, deuevMessage.BW02.Count);
             Assert.Equal(2, deuevMessage.VOSZ.Count);
             Assert.Equal(2, deuevMessage.NCSZ.Count);
@@ -93,7 +93,7 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
                 deuevMessage.DSKO = dsko;
                 streamObject = reader.Read();
 
-                while (reader.RecordName == "BW02")
+                while (reader.RecordName == "BW02" || reader.RecordName == "BW02-v11")
                 {
                     var record = Assert.IsType<BW0211>(streamObject);
                     deuevMessage.BW02.Add(record);

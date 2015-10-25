@@ -11,6 +11,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datensatz: MVDS - Multifunktionaler Verdienstdatensatz
     /// </summary>
+    [Obsolete("ELENA-Verfahren")]
     public class MVDS : IDatensatz
     {
         private bool? _hatDben;
@@ -237,7 +238,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Enddatum des Zeitraumes innerhalb des Meldemonats, Länge 2, Mussangabe
         /// der durch diese Meldung abgedeckt wird (in der Regel der 1. des Monats)
         /// </remarks>
-        public DateTime MONATEND { get; set; }
+        public int MONATEND { get; set; }
 
         /// <summary>
         /// Holt oder setzt die abweichende Betriebsnummer des Unternehmens, mit der die Meldung des Vormonats gemeldet wurde

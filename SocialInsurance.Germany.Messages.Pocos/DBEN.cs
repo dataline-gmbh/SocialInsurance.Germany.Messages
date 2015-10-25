@@ -133,7 +133,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// sonstiges steuerpflichtiges Bruttoarbeitsentgelt, Länge 10, Mussangabe
         /// </remarks>
-        public int STRBEGSO { get; set; }
+        public long STBREGSO { get; set; }
 
         /// <summary>
         /// Holt oder setzt das laufende Sozialversicherungsbruttoengtgelt
@@ -142,7 +142,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// laufendes Sozialversicherungsbruttoentgelt, Länge 10, Mussangabe
         /// begrenzt auf die Beitragsbemessungsgrenze der Allgemeinen Rentenversicherung
         /// </remarks>
-        public int SVBREGLF { get; set; }
+        public long SVBREGLF { get; set; }
 
         /// <summary>
         /// Holt oder setzt das einmalig gezahlte Sozialversicherungsbruttoentgelt
@@ -150,7 +150,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// einmalig gezahltes Sozialversicherungsbruttoentgelt, Länge 10, Mussangabe
         /// </remarks>
-        public int SVBREGE { get; set; }
+        public long SVBREGE { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Vorzeichen Gesamtbruttoentgelt
@@ -167,7 +167,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Gesamtbruttoentgelt gem. § 1 Abs. 2 EBeschRiLi, Länge 10, Mussangabe
         /// </remarks>
-        public int GSBREG { get; set; }
+        public long GSBREG { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Abzüge SV bei Pflichtversicherten, KV laufend
@@ -175,12 +175,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Abzüge SV bei Pflichtversicherten, KV laufend, Länge 10, Mussangabe
         /// </remarks>
-        public int KVLF { get; set; }
+        public long KVLF { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Abzüge SV bei Pflichtversicherten, KV Einmalentgelte
         /// </summary>
-        public int KVE { get; set; }
+        public long KVE { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Abzüge SV bei Pflichtversicherten, RV laufend
@@ -189,7 +189,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Abzüge SV bei Pflichtversicherten, Länge 10, Mussangabe
         /// RV laufend bzw. Pflichtbeiträge an berufsständische Versorgungseinrichtungen
         /// </remarks>
-        public int RVLF { get; set; }
+        public long RVLF { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Abzüge SV bei Pflichtversicherten, RV Einmalentgelte
@@ -198,7 +198,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Abzüge SV bei Pflichtversicherten, Länge 10, Mussangabe
         /// RV Einmalentgelte bzw. Pflichtbeiträge an berufsständische Versorgungseinrichtungen
         /// </remarks>
-        public int RVE { get; set; }
+        public long RVE { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Abzüge SV bei Pflichtversicherten, ALV laufen
@@ -206,7 +206,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Abzüge SV bei Pflichtversicherten,ALV laufend, Länge 10, Mussangabe
         /// </remarks>
-        public int AVLF { get; set; }
+        public long AVLF { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Abzüge SV bei Pflichtversicherten, ALV Einmalentgelte
@@ -214,7 +214,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Abzüge SV bei Pflichtversicherten, ALV Einmalentgelte, Länge 10, Mussangabe
         /// </remarks>
-        public int AVE { get; set; }
+        public long AVE { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Abzüge SV bei Pflichtversicherten, PV laufend
@@ -222,12 +222,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Abzüge SV bei Pflichtversicherten, PV laufend, Länge 10, Mussangabe
         /// </remarks>
-        public int PVLF { get; set; }
+        public long PVLF { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Abzüge SV bei Pflichtversicherten, PV Einmalentgelte
         /// </summary>
-        public int PVE { get; set; }
+        public long PVE { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Vorzeichen Lohnsteuer
@@ -244,7 +244,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Lohnsteuer laufend, Länge 10, Mussangabe
         /// </remarks>
-        public int LSTLF { get; set; }
+        public long LSTLF { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Vorzeichen Lohnsteuer sonstiger Bezug
@@ -261,7 +261,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Lohnsteuer sonstiger Bezug, Länge 10, Mussangabe
         /// </remarks>
-        public int LSTSOB { get; set; }
+        public long LSTSOB { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Vorzeichen Solidaritätszuschlag LFD
@@ -278,7 +278,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Solidaritätszuschlag laufend, Länge 10, Mussangabe
         /// </remarks>
-        public int SOLILF { get; set; }
+        public long SOLILF { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Vorzeichen Solidaritätszuschlag Sonstiger Bezug
@@ -295,7 +295,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Solidaritätszuschlag sonstiger Bezug, Länge 10, Mussangabe
         /// </remarks>
-        public int SOLISOB { get; set; }
+        public long SOLISOB { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Vorzeichen Kirchensteuer LFD
@@ -312,7 +312,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Kirchensteuer laufend, Länge 10, Mussangabe
         /// </remarks>
-        public int KISTLF { get; set; }
+        public long KISTLF { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Vorzeichen Kirchensteuer sonstiger Bezug
@@ -329,6 +329,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Kirchensteuer sonstiger Bezug, Länge 10, Mussangabe
         /// </remarks>
-        public int KISTSOB { get; set; }
+        public long KISTSOB { get; set; }
     }
 }
