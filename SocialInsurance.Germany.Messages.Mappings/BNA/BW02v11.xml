@@ -2,12 +2,12 @@
 <beanio xmlns="http://www.beanio.org/2015/06">
 	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, SocialInsurance.Germany.Messages.Mappings"/>
 	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, SocialInsurance.Germany.Messages.Mappings"/>
-	<template name="BW02v1">
+	<template name="BW02v11">
 		<field name="KE" literal="BW02" length="4" rid="true" required="true" />
 		<field name="VF" literal="BWNAC" length="5" required="true" />
 		<field name="BBNRAB" length="15" required="true" />
 		<field name="BBNREP" length="15" required="true" />
-		<field name="VERNR" length="2" regex="[0-9]" rid="true" type="int" format="d2" />
+		<field name="VERNR" length="2" regex="[0-9]" rid="true" type="int" format="d2" literal="11" />
 		<field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
 		<field name="FEKZ" regex="[0-3]" type="int" length="1" required="true" />
 		<field name="FEAN" length="1" regex="[0-9]" type="int" required="true" />

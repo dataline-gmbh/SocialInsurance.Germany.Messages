@@ -37,7 +37,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
         /// </returns>
         private BwnaMessageData GetMessageFromFile(string fileName, string name)
         {
-            var input = LoadData(fileName).ReadToEnd();
+            var input = ReadData(fileName);
             var output = new StringWriter();
             var writer = StreamFactory.CreateWriter(name, output);
             var reader = StreamFactory.CreateReader(name, new StringReader(input));
@@ -49,7 +49,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
                 do
                 {
                     var vosz = Assert.IsType<VOSZ>(streamObject);
-                    deuevMessage.VOSZ = new List<VOSZ> { vosz };
+                    deuevMessage.VOSZ.Add(vosz);
                     writer.Write(vosz);
                     streamObject = reader.Read();
                 }
@@ -63,7 +63,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
                 while (reader.RecordName == "DSBEv01")
                 {
                     var record = Assert.IsType<DSBEv01>(streamObject);
-                    deuevMessage.DSBEv01 = new List<DSBEv01> { record };
+                    deuevMessage.DSBEv01.Add(record);
                     writer.Write(record);
                     streamObject = reader.Read();
                 }
@@ -71,7 +71,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
                 while (reader.RecordName == "DSBEv0101")
                 {
                     var record = Assert.IsType<DSBEv0101>(streamObject);
-                    deuevMessage.DSBEv0101 = new List<DSBEv0101> { record };
+                    deuevMessage.DSBEv0101.Add(record);
                     writer.Write(record);
                     streamObject = reader.Read();
                 }
@@ -80,7 +80,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
                 {
                     var ncsz = Assert.IsType<NCSZ>(streamObject);
                     writer.Write(streamObject);
-                    deuevMessage.NCSZ = new List<NCSZ> { ncsz };
+                    deuevMessage.NCSZ.Add(ncsz);
                     streamObject = reader.Read();
                 }
                 while (reader.RecordName != null && reader.RecordName == "NCSZ");
@@ -105,6 +105,14 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
         /// </summary>
         private class BwnaMessageData
         {
+            public BwnaMessageData()
+            {
+                VOSZ = new List<VOSZ>();
+                DSBEv01 = new List<DSBEv01>();
+                DSBEv0101 = new List<DSBEv0101>();
+                NCSZ = new List<NCSZ>();
+            }
+
             public List<VOSZ> VOSZ { get; set; }
 
             public DSKO DSKO { get; set; }

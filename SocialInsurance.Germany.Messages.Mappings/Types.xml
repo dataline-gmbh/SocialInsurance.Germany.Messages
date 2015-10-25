@@ -13,4 +13,5 @@
     format="fixedlength"
     type="SocialInsurance.Germany.Messages.Pocos.FehlerKennzeichen, SocialInsurance.Germany.Messages.Pocos">
   </typeHandler>
+  <typeHandler name="01" class="BeanIO.Types.BooleanIntegerTypeHandler, BeanIO" />
 </beanio>

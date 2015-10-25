@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SocialInsurance.Germany.Messages.Pocos;
+using SocialInsurance.Germany.Messages.Pocos.BNA;
+
 using Xunit;
 
 namespace SocialInsurance.Germany.Messages.Tests.bwnac
@@ -17,8 +19,8 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
         [Fact(DisplayName = "TestBW02")]
         public void TestBW02()
         {
-            var deuevMessage = GetMessageFromFile("ebna0091.a35", "bw02-bwnac");
-            Assert.True(deuevMessage.BW02.Count() > 0);
+            var deuevMessage = GetMessageFromFile("ebna0091.a35", "bw02-bwnac-v11");
+            Assert.True(deuevMessage.BW02.Count > 0);
         }
 
         /// <summary>
@@ -35,7 +37,7 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
         /// </returns>
         private BwnaMessageData GetMessageFromFile(string fileName, string name)
         {
-            var input = LoadData(fileName).ReadToEnd();
+            var input = ReadData(fileName);
             var output = new StringWriter();
             var writer = StreamFactory.CreateWriter(name, output);
             var reader = StreamFactory.CreateReader(name, new StringReader(input));
@@ -43,48 +45,40 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
             try
             {
                 var streamObject = reader.Read();
-                var vosz = Assert.IsType<VOSZ>(streamObject);
-                deuevMessage.VOSZ = new List<VOSZ> { vosz };
-                writer.Write(vosz);
-                streamObject = reader.Read();
-                if (streamObject is VOSZ)
+
+                do
                 {
-                    deuevMessage.VOSZ.Add(streamObject as VOSZ);
+                    var vosz = Assert.IsType<VOSZv06>(streamObject);
+                    deuevMessage.VOSZ.Add(vosz);
                     writer.Write(vosz);
                     streamObject = reader.Read();
                 }
+                while (reader.RecordName == "VOSZ");
 
                 var dsko = Assert.IsType<DSKO>(streamObject);
                 deuevMessage.DSKO = dsko;
                 writer.Write(dsko);
                 streamObject = reader.Read();
-                var bw02 = Assert.IsType<BW02>(streamObject);
-                deuevMessage.BW02 = new List<BW02> { bw02 };
-                writer.Write(bw02);
-                while (true)
+
+                while (reader.RecordName == "BW02")
                 {
+                    var record = Assert.IsType<BW02v11>(streamObject);
+                    deuevMessage.BW02.Add(record);
+                    writer.Write(record);
                     streamObject = reader.Read();
-                    if (streamObject is NCSZ)
-                    {
-                        writer.Write(streamObject);
-                        deuevMessage.NCSZ = new List<NCSZ> { streamObject as NCSZ };
-                        streamObject = reader.Read();
-                        if (streamObject is NCSZ)
-                        {
-                            deuevMessage.NCSZ.Add(streamObject as NCSZ);
-                            writer.Write(streamObject);
-                        }
-
-                        break;
-                    }
-                    else
-                    {
-                        Assert.IsType<BW02>(streamObject);
-                        deuevMessage.BW02.Add(streamObject as BW02);
-                    }
-
-                    writer.Write(streamObject);
                 }
+
+                do
+                {
+                    var ncsz = Assert.IsType<NCSZv06>(streamObject);
+                    writer.Write(streamObject);
+                    deuevMessage.NCSZ.Add(ncsz);
+                    streamObject = reader.Read();
+                }
+                while (reader.RecordName != null && reader.RecordName == "NCSZ");
+
+                Assert.Null(reader.RecordName);
+                Assert.Equal(deuevMessage.VOSZ.Count, deuevMessage.NCSZ.Count);
 
                 writer.Close();
                 string output2 = output.ToString();
@@ -103,13 +97,19 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
         /// </summary>
         private class BwnaMessageData
         {
-            public List<VOSZ> VOSZ { get; set; }
+            public BwnaMessageData()
+            {
+                VOSZ = new List<VOSZv06>();
+                NCSZ = new List<NCSZv06>();
+            }
+
+            public List<VOSZv06> VOSZ { get; set; }
 
             public DSKO DSKO { get; set; }
 
-            public List<BW02> BW02 { get; set; }
+            public List<BW02v11> BW02 { get; set; }
 
-            public List<NCSZ> NCSZ { get; set; }
+            public List<NCSZv06> NCSZ { get; set; }
         }
     }
 }

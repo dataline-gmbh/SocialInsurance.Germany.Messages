@@ -145,7 +145,7 @@
   <ItemGroup>
     <EmbeddedResource Include="DBHB.xml" />
     <EmbeddedResource Include="DBMI.xml" />
-    <EmbeddedResource Include="DSBE.xml">
+    <EmbeddedResource Include="DSBEv01.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
@@ -200,7 +200,7 @@
     <EmbeddedResource Include="BW03.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BW02.xml" />
+    <EmbeddedResource Include="BNA\BW02v11.xml" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0-beta014\analyzers\dotnet\cs\Newtonsoft.Json.dll" />
@@ -208,6 +208,33 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DBBF.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BNA\VOSZv05.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BNA\VOSZv06.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DSBEv0101.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BNA\NCSZv05.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BNA\NCSZv06.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BNA\BW02v09.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BNA\BW02v10.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\StyleCop.Analyzers.1.0.0-beta014\build\StyleCop.Analyzers.targets" Condition="Exists('..\packages\StyleCop.Analyzers.1.0.0-beta014\build\StyleCop.Analyzers.targets')" />

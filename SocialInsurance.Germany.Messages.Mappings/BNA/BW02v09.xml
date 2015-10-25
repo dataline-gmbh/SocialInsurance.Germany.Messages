@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, SocialInsurance.Germany.Messages.Mappings"/>
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, SocialInsurance.Germany.Messages.Mappings"/>
+	<template name="BW02v09">
+		<field name="KE" literal="BW02" length="4" rid="true" required="true" />
+		<field name="VF" literal="BWNAC" length="5" required="true" rid="true" />
+		<field name="BBNRAB" length="15" required="true" />
+		<field name="BBNREP" length="15" required="true" />
+		<field name="VERNR" length="2" regex="[0-9]" rid="true" type="int" format="d2" literal="09" />
+		<field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
+		<field name="FEKZ" regex="[0-3]" type="int" length="1" required="true" />
+		<field name="FEAN" length="1" regex="[0-9]" type="int" required="true" />
+		<field name="DSID" length="20" required="false" />
+		<field name="AZKK" length="20" required="false" />
+		<field name="KEART" regex="[0-1]" type="int" length="1" required="true" />
+		<field name="KEKORR" length="1" required="true" default="0" type="bool" typeHandler="01"/>
+		<field name="RESERVE1" length="1" required="false" default="0" ignore="true" type="int"/>
+		<field name="BBNRAG" length="15" required="true" />
+		<field name="ZRBEG" length="8" required="true" format="yyyyMMdd"/>
+		<field name="ZREND" length="8" required="true" format="yyyyMMdd"/>
+		<field name="VZKV1" length="1" required="true" />
+		<field name="KVBEITR1" length="11" required="true" format="d11" default="0" type="int"/>
+		<field name="VZKV2" length="1" required="true" />
+		<field name="KVBEITR2" length="11" required="true" format="d11" type="int"/>
+		<field name="VZKV3" length="1" required="true" />
+		<field name="KVBEITR3" length="11" required="true" format="d11" default="0" type="int"/>
+		<field name="VZPV" length="1" required="true" />
+		<field name="PVBEITR" length="11" required="true" format="d11" default="0" type="int"/>
+		<field name="VZRV1" length="1" required="true" />
+		<field name="RVBEITR1" length="11" required="true" format="d11" default="0" type="int"/>
+    <field name="VZRESERVE2" length="1" required="false" ignore="true" default="+"/>
+    <field name="RESERVE2" length="11" format="d11" default="0" type="int" ignore="true" />
+		<field name="VZAV1" length="1" required="true" />
+		<field name="AVBEITR1" length="11" required="true" format="d11" default="0" type="int"/>
+		<field name="VZRV3" length="1" required="true" />
+		<field name="RVBEITR3" length="11" required="true" format="d11" default="0" type="int"/>
+		<field name="VZINSG" length="1" required="true" />
+		<field name="INSGU" length="11" required="true" format="d11" default="0" type="int"/>
+		<field name="VZAV2" length="1" required="true" />
+		<field name="AVBEITR2" length="11" required="true" format="d11" default="0" type="int"/>
+		<field name="VZU1" length="1" required="true" />
+		<field name="U1" length="11" required="true" format="d11" default="0" type="int"/>
+		<field name="VZU2" length="1" required="true" />
+		<field name="U2" length="11" required="true" format="d11" default="0" type="int"/>
+		<field name="VZKV6" length="1" required="true" />
+		<field name="KVBEITR6" length="11" required="true" format="d11" default="0" type="int"/>
+		<field name="VZRV5" length="1" required="true" />
+		<field name="RVBEITR5" length="11" required="true" format="d11" default="0" type="int"/>
+		<field name="VZRESERVE3" length="1" required="false" ignore="true" default="+"/>
+		<field name="RESERVE3" length="11" required="false" ignore="true" type="int" default="0" format="d11"/>
+		<field name="VZZWS" length="1" required="true" />
+		<field name="ZWS" length="11" required="true" format="d11" default="0" type="int"/>
+		<field name="VZKVF" length="1" required="true" />
+		<field name="KVBEITRF" length="11" required="true" format="d11" default="0" type="int"/>
+		<field name="VZPVF" length="1" required="true" />
+		<field name="PVBEITRF" length="11" required="true" format="d11" default="0" type="int"/>
+		<field name="VZERSTU1" length="1" required="true" />
+		<field name="ERSTAAG" length="11" required="true" format="d11" default="0" type="int"/>
+    <field name="VZRESERVE4" length="1" required="false" ignore="true" default="+"/>
+    <field name="RESERVE4" length="11" required="false" ignore="true" type="int" default="0" format="d11"/>
+    <field name="VZBEITR2" length="1" required="true" />
+		<field name="BEITR2" length="11" required="true" format="d11" default="0" type="int"/>
+		<field name="VZBEITR3" length="1" required="true" />
+		<field name="BEITR3" length="11" required="true" format="d11" default="0" type="int"/>
+		<field name="VZSUM" length="1" required="true" />
+		<field name="SUM" length="11" required="true" format="d11" default="0" type="int"/>
+		<field name="VZKV1SA" length="1" required="true" default="+" />
+		<field name="KVBEITR1SA" length="11" required="true" type="int" default="0" format="d11"/>
+    <field name="VZKV3SA" length="1" required="true" default="+" />
+    <field name="KVBEITR3SA" length="11" required="true" type="int" default="0" format="d11"/>
+    <field name="VZKVFSA" length="1" required="true" default="+" />
+    <field name="KVBEITRFSA" length="11" required="true" type="int" default="0" format="d11"/>
+    <field name="NAME1" length="30" required="true"/>
+		<field name="NAME2" length="30" required="false"/>
+		<field name="STR" length="30" required="false"/>
+		<field name="LDKZ" length="3" required="false" />
+		<field name="PLZ" length="10" required="true"/>
+		<field name="ORT" length="25" required="true"/>
+		<field name="ABRECHN1" length="15" required="true" />
+		<field name="ABRECHN2" length="15" required="true" />
+		<field name="ORDN" length="20" required="false" />
+		<field name="VAMM" length="1" required="false"/>
+		<field name="BEITRSA" length="4" required="true" />
+		<field name="BEITRSE" length="4" required="true" format="d4" default="0" type="int"/>
+		<field name="BEITRSH" length="4" required="true" format="d4" default="0" type="int"/>
+		<field name="KENNZRK" regex="[W,O]" length="1" required="true"/>
+		<field name="KENNUML" length="1" required="true" type="int"/>
+		<field name="LFDNR" length="3" required="true" type="int" format="d3"/>
+		<field name="WG" length="1" required="true" />
+		<field name="VZBEITR" length="1" required="true" />
+		<field name="BEITR" length="11" required="true" format="d11" type="int"/>
+		<field name="STNR" length="20" required="false"/>
+		<segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
+			<include template="DBFE" />
+		</segment>
+	</template>
+</beanio>

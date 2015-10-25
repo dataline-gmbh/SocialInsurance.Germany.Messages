@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <template name="NCSZ-BNA-v06">
+    <field name="KE" length="4" literal="NCSZ" rid="true" required="true"/>
+    <field name="VFMM" length="5" required="true"/>
+    <field name="BBNRAB" length="15" required="true"/>
+    <field name="BBNREP" length="15" required="true"/>
+    <field name="ED" length="8" required="true" format="yyyyMMdd"/>
+    <field name="DTNR" length="6" required="true" type="int" format="000000"/>
+    <field name="ZLSZ" length="8" required="true" type="int" format="00000000"/> 
+    <field name="VERNR" length="2" required="true" type="int" format="00" literal="06" rid="true" />
+    <field name="DBFE" length="7" collection="list" minOccurs="0" maxOccurs="unbounded" />
+  </template>
+</beanio>
