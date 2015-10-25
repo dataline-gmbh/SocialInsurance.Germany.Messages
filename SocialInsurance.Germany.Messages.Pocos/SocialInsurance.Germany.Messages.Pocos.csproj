@@ -49,9 +49,11 @@
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="AAG\DBAUv04.cs" />
+    <Compile Include="AAG\DBRA01.cs" />
     <Compile Include="AAG\DBBTv04.cs" />
     <Compile Include="AAG\DBZUv04.cs" />
     <Compile Include="AAG\DSERv04.cs" />
+    <Compile Include="AAG\DSRA01.cs" />
     <Compile Include="BNA\BW02v09.cs" />
     <Compile Include="BNA\BW02v10.cs" />
     <Compile Include="BNA\NCSZv05.cs" />
@@ -63,6 +65,7 @@
     <Compile Include="DBAB.cs" />
     <Compile Include="DBAG.cs" />
     <Compile Include="DBAN.cs" />
+    <Compile Include="DBAP01.cs" />
     <Compile Include="DBAS.cs" />
     <Compile Include="AAG\DBAUv02.cs" />
     <Compile Include="DBAZ.cs" />

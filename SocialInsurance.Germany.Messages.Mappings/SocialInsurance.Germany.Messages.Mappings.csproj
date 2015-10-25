@@ -255,6 +255,17 @@
   <ItemGroup>
     <EmbeddedResource Include="AAG\DBZUv04.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AAG\DSRA01.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AAG\DBRA01.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DBAP01.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\StyleCop.Analyzers.1.0.0-beta014\build\StyleCop.Analyzers.targets" Condition="Exists('..\packages\StyleCop.Analyzers.1.0.0-beta014\build\StyleCop.Analyzers.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

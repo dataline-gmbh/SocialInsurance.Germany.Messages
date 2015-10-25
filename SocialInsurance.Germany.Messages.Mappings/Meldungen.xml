@@ -15,6 +15,7 @@
 	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.BW03.xml, SocialInsurance.Germany.Messages.Mappings"/>
 	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSERv02.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSERv04.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSRA01.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBEv01.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBEv0101.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <stream name="dsme-deuev" format="fixedlength">
@@ -127,6 +128,20 @@
     </record>
     <record order="3" name="DSER" minOccurs="1" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSERv04, SocialInsurance.Germany.Messages.Pocos">
       <include template="DSERv04"/>
+    </record>
+    <record order="4" name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, SocialInsurance.Germany.Messages.Pocos">
+      <include template="NCSZv1"/>
+    </record>
+  </stream>
+  <stream name="dsra-agger-v01" format="fixedlength">
+    <record order="1" name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
+      <include template="VOSZv1"/>
+    </record>
+    <record order="2" name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKOv02, SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSKOv02"/>
+    </record>
+    <record order="3" name="DSRA" minOccurs="1" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSRA01, SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSRA01"/>
     </record>
     <record order="4" name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, SocialInsurance.Germany.Messages.Pocos">
       <include template="NCSZv1"/>
