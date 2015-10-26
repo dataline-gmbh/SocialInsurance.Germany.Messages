@@ -20,5 +20,10 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt die Liste der Fehler-Datenbausteine
         /// </summary>
         IList<DBFE> DBFE { get; }
+
+        /// <summary>
+        /// Holt die Datenbausteine eines Datensatzes
+        /// </summary>
+        IEnumerable<IDatenbaustein> Datenbausteine { get; }
     }
 }

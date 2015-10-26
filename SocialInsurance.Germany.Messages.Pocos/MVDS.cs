@@ -681,6 +681,18 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public IList<DBFE> DBFE { get; set; }
 
+        /// <summary>
+        /// Holt die Datenbausteine eines Datensatzes
+        /// </summary>
+        public IEnumerable<IDatenbaustein> Datenbausteine
+        {
+            get
+            {
+                foreach (var datenbaustein in ListExtensions.Enumerate(ListeDBEN, ListeDBNA, ListeDBGB, ListeDBAN, ListeDBAG, ListeDBAB, ListeDBFZ, ListeDBSE, ListeDBSB, ListeDBAS, ListeDBZD, ListeDBNB, ListeDBHA, ListeDBKE, DBFE))
+                    yield return datenbaustein;
+            }
+        }
+
         private IList<DBEN> ListeDBEN { get; set; }
 
         private IList<DBNA> ListeDBNA { get; set; }

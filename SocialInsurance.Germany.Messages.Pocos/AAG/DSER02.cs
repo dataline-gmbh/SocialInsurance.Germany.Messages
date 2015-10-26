@@ -5,6 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace SocialInsurance.Germany.Messages.Pocos.AAG
 {
@@ -411,6 +412,18 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// Holt oder setzt eine Liste von Fehlern
         /// </summary>
         public IList<DBFE> DBFE { get; set; }
+
+        /// <summary>
+        /// Holt die Datenbausteine eines Datensatzes
+        /// </summary>
+        public IEnumerable<IDatenbaustein> Datenbausteine
+        {
+            get
+            {
+                foreach (var datenbaustein in ListExtensions.Enumerate(ListeDBAU, ListeDBBT, ListeDBZU, ListeDBBV, ListeDBNA, ListeDBAA, DBFE))
+                    yield return datenbaustein;
+            }
+        }
 
         private IList<DBAU02> ListeDBAU { get; set; }
 

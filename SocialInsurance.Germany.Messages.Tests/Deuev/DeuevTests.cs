@@ -1890,17 +1890,18 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         private string GetStringFromMessage(DeuevMessageData data, string streamName)
         {
             var output = new StringWriter();
-            var writer = StreamFactory.CreateWriter(streamName, output);
-            foreach (var record in data.VOSZ)
-                writer.Write(record);
-            writer.Write(data.DSKO);
-            foreach (var record in data.DSME)
-                writer.Write(record);
-            foreach (var record in data.DSBD)
-                writer.Write(record);
-            foreach (var record in data.NCSZ)
-                writer.Write(record);
-            writer.Close();
+            using (var writer = StreamFactory.CreateWriter(streamName, output))
+            {
+                foreach (var record in data.VOSZ)
+                    writer.Write(record);
+                writer.Write(data.DSKO);
+                foreach (var record in data.DSME)
+                    writer.Write(record);
+                foreach (var record in data.DSBD)
+                    writer.Write(record);
+                foreach (var record in data.NCSZ)
+                    writer.Write(record);
+            }
             return output.ToString();
         }
 

@@ -37,5 +37,24 @@ namespace SocialInsurance.Germany.Messages.Pocos
                 list.Add(newValue);
             return list;
         }
+
+        /// <summary>
+        /// Enumeriert alle Listen durch und liefert die enthaltenen Datenbausteine zurück.
+        /// </summary>
+        /// <param name="bausteineListe">Die Listen die die Datenbausteine enthalten</param>
+        /// <returns>Die flache Liste an Datenbausteinen</returns>
+        public static IEnumerable<IDatenbaustein> Enumerate(params IEnumerable<IDatenbaustein>[] bausteineListe)
+        {
+            foreach (var datenbausteinListe in bausteineListe)
+            {
+                if (datenbausteinListe != null)
+                {
+                    foreach (var datenbaustein in datenbausteinListe)
+                    {
+                        yield return datenbaustein;
+                    }
+                }
+            }
+        }
     }
 }

@@ -4,6 +4,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SocialInsurance.Germany.Messages.Pocos
 {
@@ -353,5 +354,18 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Die Anzahl der Fehler-Datenbausteine ergibt sich aus dem Feld FEAN.
         /// </remarks>
         public IList<DBFE> DBFE { get; set; }
+
+        /// <summary>
+        /// Holt die Datenbausteine eines Datensatzes
+        /// </summary>
+        public IEnumerable<IDatenbaustein> Datenbausteine
+        {
+            get
+            {
+                if (DBFE != null)
+                    return DBFE;
+                return Enumerable.Empty<IDatenbaustein>();
+            }
+        }
     }
 }

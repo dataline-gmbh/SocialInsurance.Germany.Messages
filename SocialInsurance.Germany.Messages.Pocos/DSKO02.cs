@@ -252,5 +252,17 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt eine Liste von Fehlern
         /// </summary>
         public IList<DBFE> DBFE { get; set; }
+
+        /// <summary>
+        /// Holt die Datenbausteine eines Datensatzes
+        /// </summary>
+        public IEnumerable<IDatenbaustein> Datenbausteine
+        {
+            get
+            {
+                foreach (var datenbaustein in ListExtensions.Enumerate(DBFE))
+                    yield return datenbaustein;
+            }
+        }
     }
 }

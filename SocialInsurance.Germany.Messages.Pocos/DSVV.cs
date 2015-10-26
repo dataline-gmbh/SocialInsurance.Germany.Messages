@@ -4,6 +4,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SocialInsurance.Germany.Messages.Pocos
 {
@@ -14,6 +15,34 @@ namespace SocialInsurance.Germany.Messages.Pocos
     public class DSVV : IDatensatz
     {
         private FehlerKennzeichen? _fekz;
+
+        private bool? _hatDben;
+
+        private bool? _hatDbna;
+
+        private bool? _hatDbgb;
+
+        private bool? _hatDban;
+
+        private bool? _hatDbag;
+
+        private bool? _hatDbab;
+
+        private bool? _hatDbfz;
+
+        private bool? _hatDbse;
+
+        private bool? _hatDbsb;
+
+        private bool? _hatDbas;
+
+        private bool? _hatDbzd;
+
+        private bool? _hatDbnb;
+
+        private bool? _hatDbha;
+
+        private bool? _hatDbke;
 
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DSVV"/> Klasse
@@ -204,7 +233,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Datenbaustein DBEN, Länge 1, Mussangabe
         /// N = keine Grunddaten
         /// </remarks>
-        public bool MMEN { get; set; }
+        public bool MMEN
+        {
+            get { return _hatDben ?? DBEN != null; }
+            set { _hatDben = value; }
+        }
 
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Name vorhanden ist
@@ -213,7 +246,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Datenbaustein DBNA, Länge 1, Mussangabe
         /// J = Namensdaten vorhanden
         /// </remarks>
-        public bool MMNA { get; set; }
+        public bool MMNA
+        {
+            get { return _hatDbna ?? DBNA != null; }
+            set { _hatDbna = value; }
+        }
 
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Geburtsangaben vorhanden ist
@@ -222,7 +259,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Datenbaustein DBGB, Länge 1, Mussangabe
         /// J = Geburtsangaben vorhanden
         /// </remarks>
-        public bool MMGB { get; set; }
+        public bool MMGB
+        {
+            get { return _hatDbgb ?? DBGB != null; }
+            set { _hatDbgb = value; }
+        }
 
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Anschrift vorhanden ist
@@ -231,7 +272,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Datenbaustein DBAN, Länge 1,
         /// J = Anschriftsangaben vorhanden
         /// </remarks>
-        public bool MMAN { get; set; }
+        public bool MMAN
+        {
+            get { return _hatDban ?? DBAN != null; }
+            set { _hatDban = value; }
+        }
 
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Arbeitgeberangaben vorhanden ist
@@ -240,7 +285,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Datenbaustein DBAG, Länge 1, Mussangabe
         /// N = keine Arbeitgeberangaben
         /// </remarks>
-        public bool MMAG { get; set; }
+        public bool MMAG
+        {
+            get { return _hatDbag ?? DBAG != null; }
+            set { _hatDbag = value; }
+        }
 
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Arbeitgeberanschrift abweichender Beschäftigungsort vorhanden ist
@@ -249,7 +298,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Datenbaustein DBAB
         /// N = kein abweichender Beschäftigungsort
         /// </remarks>
-        public bool MMAB { get; set; }
+        public bool MMAB
+        {
+            get { return _hatDbab ?? DBAB != null; }
+            set { _hatDbab = value; }
+        }
 
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Fehlzeiten vorhanden ist
@@ -258,7 +311,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Datenbaustein DBFZ, Länge 1, Mussangabe
         /// N = keine Fehlzeiten
         /// </remarks>
-        public bool MMFZ { get; set; }
+        public bool MMFZ
+        {
+            get { return _hatDbfz ?? DBFZ != null; }
+            set { _hatDbfz = value; }
+        }
 
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Steuerpflichtiger sonstiger Bezug vorhanden ist
@@ -267,7 +324,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Datenbaustein DBSE, Länge 1, Mussangabe
         /// N = keine Beträge
         /// </remarks>
-        public bool MMSE { get; set; }
+        public bool MMSE
+        {
+            get { return _hatDbse ?? DBSE != null; }
+            set { _hatDbse = value; }
+        }
 
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Steuerfreie Bezüge vorhanden ist
@@ -276,7 +337,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Datenbaustein DBSB, Länge 1, Mussangabe
         /// N = keine Beträge
         /// </remarks>
-        public bool MMSB { get; set; }
+        public bool MMSB
+        {
+            get { return _hatDbsb ?? DBSB != null; }
+            set { _hatDbsb = value; }
+        }
 
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Ausbildung vorhanden ist
@@ -285,7 +350,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Datenbaustein DBAS, Länge 1, Mussangabe
         /// N = keine DBAS-Daten
         /// </remarks>
-        public bool MMAS { get; set; }
+        public bool MMAS
+        {
+            get { return _hatDbas ?? DBAS != null; }
+            set { _hatDbas = value; }
+        }
 
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Zusatzdaten vorhanden ist
@@ -294,7 +363,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Datenbaustein DBZD, Länge 1, Mussangabe
         /// N = keine Zusatzdaten
         /// </remarks>
-        public bool MMZD { get; set; }
+        public bool MMZD
+        {
+            get { return _hatDbzd ?? DBZD != null; }
+            set { _hatDbzd = value; }
+        }
 
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Nebenbeschäftigung Arbeitslose vorhanden ist
@@ -303,7 +376,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Datenbaustein DBNB, Länge 1, Mussangabe
         /// N = keine DBNB-Daten
         /// </remarks>
-        public bool MMNB { get; set; }
+        public bool MMNB
+        {
+            get { return _hatDbnb ?? DBNB != null; }
+            set { _hatDbnb = value; }
+        }
 
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Heimatarbeiter vorhanden ist
@@ -312,7 +389,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Datenbaustein DBHA, Länge 1, Mussangabe
         /// N = keine DBHA-Daten
         /// </remarks>
-        public bool MMHA { get; set; }
+        public bool MMHA
+        {
+            get { return _hatDbha ?? DBHA != null; }
+            set { _hatDbha = value; }
+        }
 
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Kündigung/Entlassung vorhanden ist
@@ -321,17 +402,289 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Datenbaustein DBKE, Länge 1, Mussangabe
         /// N = keine DBKE-Daten
         /// </remarks>
-        public bool MMKE { get; set; }
+        public bool MMKE
+        {
+            get { return _hatDbke ?? DBKE != null; }
+            set { _hatDbke = value; }
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein <code>DBEN</code>
+        /// </summary>
+        public DBEN DBEN
+        {
+            get
+            {
+                return ListeDBEN == null ? null : ListeDBEN.SingleOrDefault();
+            }
+            set
+            {
+                ListeDBEN = ListeDBEN.Set(value);
+                _hatDben = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein <code>DBNA</code>
+        /// </summary>
+        public DBNA DBNA
+        {
+            get
+            {
+                return ListeDBNA == null ? null : ListeDBNA.SingleOrDefault();
+            }
+            set
+            {
+                ListeDBNA = ListeDBNA.Set(value);
+                _hatDbna = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein <code>DBGB</code>
+        /// </summary>
+        public DBGB DBGB
+        {
+            get
+            {
+                return ListeDBGB == null ? null : ListeDBGB.SingleOrDefault();
+            }
+            set
+            {
+                ListeDBGB = ListeDBGB.Set(value);
+                _hatDbgb = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein <code>DBAN</code>
+        /// </summary>
+        public DBAN DBAN
+        {
+            get
+            {
+                return ListeDBAN == null ? null : ListeDBAN.SingleOrDefault();
+            }
+            set
+            {
+                ListeDBAN = ListeDBAN.Set(value);
+                _hatDban = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein <code>DBAG</code>
+        /// </summary>
+        public DBAG DBAG
+        {
+            get
+            {
+                return ListeDBAG == null ? null : ListeDBAG.SingleOrDefault();
+            }
+            set
+            {
+                ListeDBAG = ListeDBAG.Set(value);
+                _hatDbag = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein <code>DBAB</code>
+        /// </summary>
+        public DBAB DBAB
+        {
+            get
+            {
+                return ListeDBAB == null ? null : ListeDBAB.SingleOrDefault();
+            }
+            set
+            {
+                ListeDBAB = ListeDBAB.Set(value);
+                _hatDbab = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein <code>DBFZ</code>
+        /// </summary>
+        public DBFZ DBFZ
+        {
+            get
+            {
+                return ListeDBFZ == null ? null : ListeDBFZ.SingleOrDefault();
+            }
+            set
+            {
+                ListeDBFZ = ListeDBFZ.Set(value);
+                _hatDbfz = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein <code>DBSE</code>
+        /// </summary>
+        public DBSE DBSE
+        {
+            get
+            {
+                return ListeDBSE == null ? null : ListeDBSE.SingleOrDefault();
+            }
+            set
+            {
+                ListeDBSE = ListeDBSE.Set(value);
+                _hatDbse = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein <code>DBSB</code>
+        /// </summary>
+        public DBSB DBSB
+        {
+            get
+            {
+                return ListeDBSB == null ? null : ListeDBSB.SingleOrDefault();
+            }
+            set
+            {
+                ListeDBSB = ListeDBSB.Set(value);
+                _hatDbsb = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein <code>DBEN</code>
+        /// </summary>
+        public DBAS DBAS
+        {
+            get
+            {
+                return ListeDBAS == null ? null : ListeDBAS.SingleOrDefault();
+            }
+            set
+            {
+                ListeDBAS = ListeDBAS.Set(value);
+                _hatDbas = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein <code>DBZD</code>
+        /// </summary>
+        public DBZD DBZD
+        {
+            get
+            {
+                return ListeDBZD == null ? null : ListeDBZD.SingleOrDefault();
+            }
+            set
+            {
+                ListeDBZD = ListeDBZD.Set(value);
+                _hatDbzd = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein <code>DBNB</code>
+        /// </summary>
+        public DBNB DBNB
+        {
+            get
+            {
+                return ListeDBNB == null ? null : ListeDBNB.SingleOrDefault();
+            }
+            set
+            {
+                ListeDBNB = ListeDBNB.Set(value);
+                _hatDbnb = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein <code>DBHA</code>
+        /// </summary>
+        public DBHA DBHA
+        {
+            get
+            {
+                return ListeDBHA == null ? null : ListeDBHA.SingleOrDefault();
+            }
+            set
+            {
+                ListeDBHA = ListeDBHA.Set(value);
+                _hatDbha = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein <code>DBKE</code>
+        /// </summary>
+        public DBKE DBKE
+        {
+            get
+            {
+                return ListeDBKE == null ? null : ListeDBKE.SingleOrDefault();
+            }
+            set
+            {
+                ListeDBKE = ListeDBKE.Set(value);
+                _hatDbke = null;
+            }
+        }
 
         /// <summary>
         /// Holt oder setzt eine Liste von Fehlern
         /// </summary>
         public IList<DBFE> DBFE { get; set; }
 
+        /// <summary>
+        /// Holt die Datenbausteine eines Datensatzes
+        /// </summary>
+        public IEnumerable<IDatenbaustein> Datenbausteine
+        {
+            get
+            {
+                foreach (var datenbaustein in ListExtensions.Enumerate(ListeDBEN, ListeDBNA, ListeDBGB, ListeDBAN, ListeDBAG, ListeDBAB, ListeDBFZ, ListeDBSE, ListeDBSB, ListeDBAS, ListeDBZD, ListeDBNB, ListeDBHA, ListeDBKE, DBFE))
+                    yield return datenbaustein;
+            }
+        }
+
+        private IList<DBEN> ListeDBEN { get; set; }
+
         private IList<DBNA> ListeDBNA { get; set; }
 
         private IList<DBGB> ListeDBGB { get; set; }
 
         private IList<DBAN> ListeDBAN { get; set; }
+
+        private IList<DBAG> ListeDBAG
+        { get; set; }
+
+        private IList<DBAB> ListeDBAB
+        { get; set; }
+
+        private IList<DBFZ> ListeDBFZ
+        { get; set; }
+
+        private IList<DBSE> ListeDBSE
+        { get; set; }
+
+        private IList<DBSB> ListeDBSB
+        { get; set; }
+
+        private IList<DBAS> ListeDBAS
+        { get; set; }
+
+        private IList<DBZD> ListeDBZD
+        { get; set; }
+
+        private IList<DBNB> ListeDBNB
+        { get; set; }
+
+        private IList<DBHA> ListeDBHA
+        { get; set; }
+
+        private IList<DBKE> ListeDBKE
+        { get; set; }
     }
 }
