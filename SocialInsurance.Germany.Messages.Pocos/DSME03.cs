@@ -573,7 +573,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Holt oder setzt den Datenbaustein für Krankenversicherung
         /// </summary>
-        public DBKV02 DBKV
+        public DBKV03 DBKV
         {
             get
             {
@@ -687,7 +687,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
 
         private IList<DBSO> ListeDBSO { get; set; }
 
-        private IList<DBKV02> ListeDBKV { get; set; }
+        private IList<DBKV03> ListeDBKV { get; set; }
 
         private IList<DBSV> ListeDBSV { get; set; }
 
