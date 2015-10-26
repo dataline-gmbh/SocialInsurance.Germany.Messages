@@ -231,7 +231,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Holt oder setzt den Datenbaustein für Beitragsbemessungsgrenze
         /// </summary>
-        public DBBG01 DBBG
+        public DBBG02 DBBG
         {
             get
             {
@@ -279,7 +279,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
 
         private IList<DBMM> ListeDBMM { get; set; }
 
-        private IList<DBBG01> ListeDBBG { get; set; }
+        private IList<DBBG02> ListeDBBG { get; set; }
 
         private IList<DBNA> ListeDBNA { get; set; }
     }
