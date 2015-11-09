@@ -13,6 +13,6 @@
     <field name="NETMON" length="9" required="true" type="int" format="000000000"/>
     <field name="ZUMUG" length="9" required="true" type="int" format="000000000"/>
     <field name="NETBESCH" length="9" required="false" type="int" format="000000000"/>
-    <field name="MUTEN" length="8" required="false" type="int" format="00000000"/>
+    <field name="MUTEN" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false"/>
   </template>
 </beanio>

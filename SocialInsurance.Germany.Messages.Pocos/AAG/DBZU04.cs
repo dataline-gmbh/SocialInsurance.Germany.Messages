@@ -67,7 +67,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Beginn der Schutzfrist, Länge 8, Mussangabe
         /// </remarks>
-        public int SFRISTVOM { get; set; }
+        public DateTime SFRISTVOM { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Ende der Schutzfrist
@@ -123,6 +123,6 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Mutmaßlicher Entbindungstag, Länge 8, Pflichtangabe, soweit bekannt
         /// </remarks>
-        public int MUTEN { get; set; }
+        public DateTime? MUTEN { get; set; }
     }
 }

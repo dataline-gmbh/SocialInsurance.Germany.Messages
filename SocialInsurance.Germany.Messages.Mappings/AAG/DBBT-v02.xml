@@ -12,6 +12,6 @@
     <field name="ESATZ" length="5" required="true" type="int" format="00000"/>
     <field name="EBU" length="9" required="true" type ="int" format="000000000"/>
     <field name="ARTBV" length="1" required="true" regex="[0-3]" type="int"/>
-    <field name="MUTEN" length="8" required="false" type="int" format="00000"/>
+    <field name="MUTEN" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false"/>
   </template>
 </beanio>

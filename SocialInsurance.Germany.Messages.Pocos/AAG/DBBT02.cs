@@ -113,6 +113,6 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Mutmaßlicher Entbindungstag, Länge 8, Pflichtangabe, soweit bekannt
         /// </remarks>
-        public int MUTEN { get; set; }
+        public DateTime? MUTEN { get; set; }
     }
 }
