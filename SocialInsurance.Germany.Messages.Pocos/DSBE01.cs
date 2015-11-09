@@ -336,7 +336,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// 2 = Firmenzahler, Sammelzahlung mit BBNRVU, 3 = Firmenzahler, Sammelzahlung mit BBNRAS
         /// 4 = Firmenzahler, Sammelzahlung mit BBNR Zentrale, 5 = Firmenzahler, Lastschrift
         /// </remarks>
-        public string BZ { get; set; }
+        public int BZ { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Vorzeichen für Pflichtbetrag im ABMO

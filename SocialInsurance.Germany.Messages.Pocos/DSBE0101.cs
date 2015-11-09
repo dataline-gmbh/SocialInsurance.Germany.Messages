@@ -33,7 +33,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
             VF = "BVBEI";
             VERNRDS = 1;
             NEVERNR = 1;
-            IK = 0;
         }
 
         /// <summary>
@@ -333,13 +332,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public int LGA { get; set; }
 
         /// <summary>
-        /// Holt oder setzt die Internkennung
+        /// Laufendes gezahltes Entgelt (LGA) - ausschließlich fiktives Entgelt
         /// </summary>
         /// <remarks>
-        /// Internkennung, Länge 1, Mussangabe
-        /// Fix 0
+        /// LGAF-FIKTIV, Länge 1, Mussangabe
         /// </remarks>
-        public int IK { get; set; }
+        public bool LGAF { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Vorzeichen für Einmalzahlung im ABMO
@@ -385,7 +383,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// 2 = Firmenzahler, Sammelzahlung mit BBNRVU, 3 = Firmenzahler, Sammelzahlung mit BBNRAS
         /// 4 = Firmenzahler, Sammelzahlung mit BBNR Zentrale, 5 = Firmenzahler, Lastschrift
         /// </remarks>
-        public string BZ { get; set; }
+        public int BZ { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Vorzeichen für Pflichtbetrag im ABMO
