@@ -317,6 +317,9 @@
       <record name="VOSZ-BNA-v06" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.VOSZ06, SocialInsurance.Germany.Messages.Pocos">
         <include template="VOSZ-BNA-v06"/>
       </record>
+      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
+        <include template="VOSZ-v01"/>
+      </record>
     </group>
     <group name="kommunikation" order="2">
       <!-- <include template="DSKO-generic"/> -->
@@ -382,6 +385,9 @@
     </group>
     <group name="nachlauf" order="4" occurs="1-2">
       <!-- <include template="VOSZ-generic"/> -->
+      <record name="NCSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, SocialInsurance.Germany.Messages.Pocos">
+        <include template="NCSZ-v01"/>
+      </record>
       <record name="NCSZ-BNA-v06" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.NCSZ06, SocialInsurance.Germany.Messages.Pocos">
         <include template="NCSZ-BNA-v06"/>
       </record>
