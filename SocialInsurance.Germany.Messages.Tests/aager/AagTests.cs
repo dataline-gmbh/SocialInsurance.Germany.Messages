@@ -89,7 +89,7 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
                             }
                             break;
                         default:
-                            throw new InvalidOperationException($"Unsupported stream {name}");
+                            throw new InvalidOperationException(string.Format("Unsupported stream {0}", name));
                     }
                     streamObject = reader.Read();
                 }
