@@ -78,6 +78,7 @@
     <Compile Include="TestBasis.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="aager\eaag0001.a15" />
     <EmbeddedResource Include="Deuev\deuev10_1.dat" />
     <EmbeddedResource Include="Deuev\deuev10_2.dat" />
     <EmbeddedResource Include="Deuev\deuev10_3.dat" />

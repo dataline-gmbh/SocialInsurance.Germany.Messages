@@ -52,6 +52,7 @@
     <Compile Include="AAG\DBRA01.cs" />
     <Compile Include="AAG\DBBT04.cs" />
     <Compile Include="AAG\DBZU04.cs" />
+    <Compile Include="AAG\DSER03.cs" />
     <Compile Include="AAG\DSER04.cs" />
     <Compile Include="AAG\DSRA01.cs" />
     <Compile Include="BNA\BW0209.cs" />

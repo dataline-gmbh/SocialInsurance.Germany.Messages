@@ -16,11 +16,21 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
         /// <summary>
         /// DSER
         /// </summary>
-        [Fact(DisplayName = "TestDSER")]
-        public void TestDSER()
+        [Fact(DisplayName = "TestDSER v02")]
+        public void TestDSER02()
         {
             var deuevMessage = GetMessageFromFile("eaag0004.a15", "dser-agger-v02");
-            Assert.True(deuevMessage.DSER.Count > 0);
+            Assert.True(deuevMessage.DSER02.Count > 0);
+        }
+
+        /// <summary>
+        /// DSER
+        /// </summary>
+        [Fact(DisplayName = "TestDSER v03")]
+        public void TestDSER03()
+        {
+            var deuevMessage = GetMessageFromFile("eaag0001.a15", "dser-agger-v03");
+            Assert.True(deuevMessage.DSER03.Count > 0);
         }
 
         /// <summary>
@@ -62,9 +72,25 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
 
                 while (reader.RecordName == "DSER")
                 {
-                    var record = Assert.IsType<DSER02>(streamObject);
-                    deuevMessage.DSER.Add(record);
-                    writer.Write(record);
+                    switch (name)
+                    {
+                        case "dser-agger-v02":
+                            {
+                                var record = Assert.IsType<DSER02>(streamObject);
+                                deuevMessage.DSER02.Add(record);
+                                writer.Write(record);
+                            }
+                            break;
+                        case "dser-agger-v03":
+                            {
+                                var record = Assert.IsType<DSER03>(streamObject);
+                                deuevMessage.DSER03.Add(record);
+                                writer.Write(record);
+                            }
+                            break;
+                        default:
+                            throw new InvalidOperationException($"Unsupported stream {name}");
+                    }
                     streamObject = reader.Read();
                 }
 
@@ -100,7 +126,8 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
             public BwnaMessageData()
             {
                 VOSZ = new List<VOSZ>();
-                DSER = new List<DSER02>();
+                DSER02 = new List<DSER02>();
+                DSER03 = new List<DSER03>();
                 NCSZ = new List<NCSZ>();
             }
 
@@ -108,7 +135,9 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
 
             public DSKO02 DSKO { get; set; }
 
-            public List<DSER02> DSER { get; set; }
+            public List<DSER02> DSER02 { get; set; }
+
+            public List<DSER03> DSER03 { get; set; }
 
             public List<NCSZ> NCSZ { get; set; }
         }
