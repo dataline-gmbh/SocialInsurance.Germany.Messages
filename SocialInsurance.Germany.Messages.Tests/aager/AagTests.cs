@@ -29,7 +29,7 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
         [Fact(DisplayName = "TestDSER v03")]
         public void TestDSER03()
         {
-            var deuevMessage = GetMessageFromFile("eaag0001.a15", "dser-agger-v03");
+            var deuevMessage = GetMessageFromFile("eaag0001.a15", "super-message");
             Assert.True(deuevMessage.DSER03.Count > 0);
         }
 
@@ -70,7 +70,7 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
                 writer.Write(dsko);
                 streamObject = reader.Read();
 
-                while (reader.RecordName == "DSER")
+                while (reader.RecordName == "DSER" || reader.RecordName == "DSER-v02" || reader.RecordName == "DSER-v03")
                 {
                     switch (name)
                     {
@@ -86,6 +86,27 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
                                 var record = Assert.IsType<DSER03>(streamObject);
                                 deuevMessage.DSER03.Add(record);
                                 writer.Write(record);
+                            }
+                            break;
+                        case "super-message":
+                            switch (reader.RecordName)
+                            {
+                                case "DSER-v02":
+                                    {
+                                        var record = Assert.IsType<DSER02>(streamObject);
+                                        deuevMessage.DSER02.Add(record);
+                                        writer.Write(record);
+                                    }
+                                    break;
+                                case "DSER-v03":
+                                    {
+                                        var record = Assert.IsType<DSER03>(streamObject);
+                                        deuevMessage.DSER03.Add(record);
+                                        writer.Write(record);
+                                    }
+                                    break;
+                                default:
+                                    throw new InvalidOperationException(string.Format("Unsupported record {0}", reader.RecordName));
                             }
                             break;
                         default:
