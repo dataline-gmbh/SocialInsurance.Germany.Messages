@@ -26,10 +26,13 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
         /// <summary>
         /// DSER
         /// </summary>
-        [Fact(DisplayName = "TestDSER v03")]
-        public void TestDSER03()
+        [Theory(DisplayName = "TestDSER v03")]
+        [InlineData("eaag0001.a15", "super-message")]
+        [InlineData("eaag0007.a15", "dser-aager-v02")]
+        [InlineData("eaag0007.a15", "super-message")]
+        public void TestDSER03(string fileName, string streamName)
         {
-            var deuevMessage = GetMessageFromFile("eaag0001.a15", "super-message");
+            var deuevMessage = GetMessageFromFile(fileName, streamName);
             Assert.True(deuevMessage.DSER03.Count > 0);
         }
 

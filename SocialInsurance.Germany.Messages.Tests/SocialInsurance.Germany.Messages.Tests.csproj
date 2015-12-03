@@ -138,6 +138,7 @@
     <EmbeddedResource Include="aager\eaag0004.a15" />
     <EmbeddedResource Include="Bvbei\ebea0023.a22" />
     <EmbeddedResource Include="bwnac\ebna0091.a35" />
+    <EmbeddedResource Include="aager\eaag0007.a15" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
