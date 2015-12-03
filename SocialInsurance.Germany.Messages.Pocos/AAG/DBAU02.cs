@@ -86,7 +86,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// Die Abtretung nach § 5 AAG wird erklärt, Länge 1, Mussangabe
         /// J = Ja N = Nein
         /// </remarks>
-        public string ABTG { get; set; }
+        public bool ABTG { get; set; }
 
         /// <summary>
         /// Holt oder setzt die ausgefallene Kalenderzeit
@@ -177,7 +177,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// Wurde am 1. Arbeitsunfähigkeitstag noch gearbeitet? Länge 1, Mussangabe
         /// J = Ja, N = Nein
         /// </remarks>
-        public string AUTG { get; set; }
+        public bool AUTG { get; set; }
 
         /// <summary>
         /// Holt oder setzt den letzten Arbeitstag/von Bord am
