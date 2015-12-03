@@ -28,7 +28,7 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
         /// </summary>
         [Theory(DisplayName = "TestDSER v03")]
         [InlineData("eaag0001.a15", "super-message")]
-        [InlineData("eaag0007.a15", "dser-aager-v02")]
+        [InlineData("eaag0007.a15", "dser-agger-v03")]
         [InlineData("eaag0007.a15", "super-message")]
         public void TestDSER03(string fileName, string streamName)
         {
