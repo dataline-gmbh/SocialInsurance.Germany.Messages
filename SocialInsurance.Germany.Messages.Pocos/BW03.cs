@@ -23,6 +23,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
             KE = "BW03";
             VF = "BWBNV";
             DBFE = new List<DBFE>();
+            VERNR = 1;
         }
 
         /// <summary>
