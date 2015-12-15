@@ -4,6 +4,8 @@
 
 using System;
 
+using NodaTime;
+
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
@@ -57,7 +59,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Geburtsdatum, Länge 8, im Format: jhjjmmtt, Mussangabe
         /// </remarks>
-        public DateTime GBDT { get; set; }
+        public LocalDate GBDT { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Geschlecht

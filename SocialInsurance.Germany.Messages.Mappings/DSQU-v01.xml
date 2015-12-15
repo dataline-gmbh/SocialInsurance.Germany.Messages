@@ -13,7 +13,7 @@
     <field name="VERNR" length="2" literal="01" required="true" type="int" format="00" rid="true" />
     <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff"/>
     <field name="FEKZ" regex="[0-4]" length="1" required="true" />
-    <field name="FEAN" length="1" required="true" type="int"/>
+    <field name="FEAN" length="1" required="true" type="int" regex="[0-9]" />
     <field name="VERKP" length="2" required="true" type="int" format="00"/>
     <field name="RESERVE2" length="105" required="true" ignore="true"/>
     <field name="MMQD" length="1" required="true" typeHandler="jn"/>

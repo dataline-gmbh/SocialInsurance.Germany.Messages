@@ -4,6 +4,8 @@
 
 using System;
 
+using NodaTime;
+
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
@@ -53,7 +55,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Beginn des Zeitraums, Länge 8, für den die Meldung gelten soll
         /// (Beschäftigungsbeginn), in der Form: jhjjmmtt, Mussangabe
         /// </remarks>
-        public DateTime ZRBG { get; set; }
+        public LocalDate ZRBG { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Ende des Zeitraums
@@ -63,7 +65,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// (Beschäftigungsende), in der Form: jhjjmmtt
         /// Das ZREN muss für Anmeldungen (GD im DSME = 10 - 13) Nullen sein, Mussangabe
         /// </remarks>
-        public string ZREN { get; set; }
+        public LocalDate? ZREN { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Anzahl der Tage für kurzfristig Beschäftigte

@@ -15,7 +15,7 @@
     <field name="BBNREP" length="15" required="true" />
     <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
     <field name="FEKZ" regex="[0-1]" length="1" required="true" />
-    <field name="FEAN" length="1" required="true" />
+    <field name="FEAN" length="1" required="true" regex="[0-9]" />
     <field name="MMBF" length="1" required="true" typeHandler="jn"/>
     <field name="PRODID" length="7" required="true" />
     <field name="MODID" length="8" required="true" />

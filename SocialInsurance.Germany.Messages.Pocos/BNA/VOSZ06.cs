@@ -20,6 +20,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.BNA
         /// </remarks>
         public VOSZ06()
         {
+            KE = "VOSZ";
             VERNR = 6;
         }
 

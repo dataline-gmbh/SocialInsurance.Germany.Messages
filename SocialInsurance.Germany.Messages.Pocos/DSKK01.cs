@@ -37,7 +37,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public DSKK01()
         {
-            KE = "DSME";
+            KE = "DSKK";
             VF = "DEUEV";
             VERNR = 1;
         }

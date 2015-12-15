@@ -4,6 +4,8 @@
 
 using System;
 
+using NodaTime;
+
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
@@ -42,6 +44,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Beginn des Zeitraums, Länge 8,  in der Form: jhjjmmtt, Mussangabe
         /// </remarks>
-        public DateTime ZRBGSO { get; set; }
+        public LocalDate ZRBGSO { get; set; }
     }
 }

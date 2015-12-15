@@ -34,7 +34,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Entscheidung, ob der Betrieb der Sofortmeldepflicht unterliegt, Länge 1, Mussangabe
         /// J = Ja, N = Nein
         /// </remarks>
-        public string SOFOPFL { get; set; }
+        public bool SOFOPFL { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Datum der Entscheidung zur Sofortmeldepflicht
@@ -67,7 +67,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Entscheidung, ob der Betrieb der Insolvenzgeldumlagepflicht unterliegt, Länge 1, Mussangabe
         /// J = Ja, N = Nein
         /// </remarks>
-        public string INSOLVUPFL { get; set; }
+        public bool INSOLVUPFL { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Datum der Entscheidung zur Insolvenzgeldumlagepflicht
@@ -100,7 +100,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Entscheidung, ob der Betrieb der Umlagepflicht U1unterliegt, Länge 1, Mussangabe
         /// J = Ja, N = Nein
         /// </remarks>
-        public string U1PFL { get; set; }
+        public bool U1PFL { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Datum der Entscheidung zur Umlagepflicht U1

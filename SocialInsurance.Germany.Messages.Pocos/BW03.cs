@@ -13,6 +13,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// </summary>
     public class BW03 : IDatensatz
     {
+        private FehlerKennzeichen? _fekz;
+
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="BW03"/> Klasse.
         /// </summary>
@@ -82,7 +84,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// 3 = Hinweis für die Zahlstellen und die Krankenkasse
         /// Länge 1, Mussangabe
         /// </remarks>
-        public int FEKZ { get; set; }
+        public FehlerKennzeichen FEKZ
+        {
+            get { return _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft); }
+            set { _fekz = value; }
+        }
 
         /// <summary>
         /// Holt oder setzt die Fehleranzahl
@@ -90,7 +96,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Anzahl der Fehler des Datensatzes in der Form: n, Länge 1, Mussangabe
         /// </remarks>
-        public int FEAN { get; set; }
+        public int FEAN
+        {
+            get { return DBFE == null ? 0 : DBFE.Count; }
+            private set { }
+        }
 
         /// <summary>
         /// Holt oder setzt die Datensatz-ID

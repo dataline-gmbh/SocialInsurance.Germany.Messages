@@ -2,7 +2,7 @@
 <beanio xmlns="http://www.beanio.org/2015/06">
   <template name="DBUV">
     <field name="KE" length="4" literal="DBUV" required="true"/>
-    <field name="ANUV" length="1" required="true" type="int" format="0"/>
+    <field name="ANUV" length="1" required="true" type="int" format="0" regex="[0-9]"/>
     <field name="RESERVE" length="15" required="false" ignore="true"/>
     <segment name="UV" class="SocialInsurance.Germany.Messages.Pocos.DBUV+DBUV_UV, SocialInsurance.Germany.Messages.Pocos" occursRef="ANUV" collection="list"  maxOccurs="9">
       <field name="UVGD" length="3" required="false"/>

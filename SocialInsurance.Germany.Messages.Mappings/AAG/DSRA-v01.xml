@@ -13,7 +13,7 @@
 		<field name="VERNR" literal="01" rid="true" length="2"  type="int" format="00" />
 		<field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
 		<field name="FEKZ" regex="[0-4]" length="1" required="true" />
-		<field name="FEAN" length="1" required="true" />
+		<field name="FEAN" length="1" required="true" regex="[0-9]" />
 		<field name="VSNR" length="12" required="false"/>
     <field name="AZKK" length="20" required="false"/>
     <field name="BBNRAG" length="15" required="true"/>

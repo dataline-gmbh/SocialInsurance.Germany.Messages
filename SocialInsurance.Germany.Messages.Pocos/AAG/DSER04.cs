@@ -6,6 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+using NodaTime;
+
 namespace SocialInsurance.Germany.Messages.Pocos.AAG
 {
     /// <summary>
@@ -192,7 +194,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Beschäftigungsbeginn in der Form: jhjjmmtt, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime BESCHSEIT { get; set; }
+        public LocalDate BESCHSEIT { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Art der Versicherung

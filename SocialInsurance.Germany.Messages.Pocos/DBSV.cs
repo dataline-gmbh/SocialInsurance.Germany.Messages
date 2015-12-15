@@ -15,7 +15,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public DBSV()
         {
             KE = "DBSV";
-            KENNZSVA = "J";
+            KENNZSVA = true;
         }
 
         /// <summary>
@@ -33,6 +33,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Kennzeichen, ob ein SV-Ausweis zu erstellen ist, Länge 1, Mussangabe
         /// J = SV-Ausweis ausstellen
         /// </remarks>
-        public string KENNZSVA { get; set; }
+        public bool KENNZSVA { get; set; }
     }
 }

@@ -27,7 +27,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public DSAE()
         {
-            KE = "DSME";
+            KE = "DSAE";
             VF = "DEUEV";
             VERNR = 1;
         }

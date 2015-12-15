@@ -2,6 +2,6 @@
 <beanio xmlns="http://www.beanio.org/2015/06">
   <template name="DBSV">
     <field name="KE" length="4" literal="DBSV" required="true"/>
-    <field name="KENNZSVA" length="1" required="true"/>
+    <field name="KENNZSVA" length="1" required="true" typeHandler="jn"/>
   </template>
 </beanio>

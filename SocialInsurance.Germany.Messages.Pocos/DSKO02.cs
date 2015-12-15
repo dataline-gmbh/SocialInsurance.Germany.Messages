@@ -236,7 +236,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Wird eine Bestätigung der fehlerfreien Verarbeitung gewünscht? Länge 1, Mussangabe
         /// J = Ja, N = Nein
         /// </remarks>
-        public string VERBEST { get; set; }
+        public bool VERBEST { get; set; }
 
         /// <summary>
         /// Holt oder setzt die verschlüsselte Rückgabe fehlerhafter Datensätze/Datenbausteine
@@ -246,7 +246,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Fehlerdatenbausteinen und sonstigen Rückmeldungen mittels Datensatz erwünscht, Länge 1, Mussangabe
         /// J = Ja, über E-Mail, K = Rückmeldungen über den Kommunikationsserver der Datenannahmestellen
         /// </remarks>
-        public string FERUECK { get; set; }
+        public bool? FERUECK { get; set; }
 
         /// <summary>
         /// Holt oder setzt eine Liste von Fehlern

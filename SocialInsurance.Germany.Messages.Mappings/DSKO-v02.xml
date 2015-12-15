@@ -10,7 +10,7 @@
     <field name="VERNR" length="2" literal="02" rid="true" type="int" format="00" required="true" />
     <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
     <field name="FEKZ" regex="[0-4]" length="1" required="true" />
-    <field name="FEAN" length="1" required="true" />
+    <field name="FEAN" length="1" required="true" regex="[0-9]" />
     <field name="BBNRER" length="15" required="true"/>
     <field name="PRODID" length="7" required="true" type="int" format="0000000"/>
     <field name="MODID" length="8" required="true" type="int" format="00000000"/>
@@ -26,8 +26,8 @@
     <field name="TELAP" length="20" required="true"/>
     <field name="FAXAP" length="20" required="false"/>
     <field name="EMAILAP" length="70" required="true"/>
-    <field name="VERBEST" length="1" required="true" />
-    <field name="FERUECK" length="1" required="true"/>
+    <field name="VERBEST" length="1" required="true" regex="[JN]" typeHandler="jn"/>
+    <field name="FERUECK" length="1" required="false" regex="[JNK]" typeHandler="jn" default="K" parseDefault="false"/>
     <field name="RESERVE" length="3" required="false" ignore="true"/>
     <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
       <include template="DBFE" />

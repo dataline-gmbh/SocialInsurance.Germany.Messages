@@ -10,7 +10,7 @@
 		<field name="VERNR" length="2" literal="02" rid="true" type="int" format="00" />
 		<field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
 		<field name="FEKZ" regex="[0-3]" length="1" required="true" />
-		<field name="FEAN" length="1" required="true" />
+		<field name="FEAN" length="1" required="true" regex="[0-9]" type="int" />
 		<field name="DSID" length="20" required="false" />
 		<field name="AZKK" length="20" required="true" />
 		<field name="KEART" regex="[0-1]" length="1" required="false" />

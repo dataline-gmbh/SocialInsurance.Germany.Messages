@@ -9,7 +9,7 @@
 		<field name="BBNREP" length="15" required="true" />
 		<field name="VERNR" length="2" regex="[0-9]" rid="true" type="int" format="d2" literal="11" />
 		<field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
-		<field name="FEKZ" regex="[0-3]" type="int" length="1" required="true" />
+		<field name="FEKZ" regex="[0-3]" length="1" required="true" />
 		<field name="FEAN" length="1" regex="[0-9]" type="int" required="true" />
 		<field name="DSID" length="20" required="false" />
 		<field name="AZKK" length="20" required="false" />
