@@ -14,10 +14,12 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
         /// <summary>
         /// DSBE
         /// </summary>
-        [Fact(DisplayName = "TestDSBE")]
-        public void TestDSBE()
+        [Theory(DisplayName = "TestDSBE")]
+        [InlineData("dsbe-bvbei-v01")]
+        [InlineData("super-message")]
+        public void TestDSBE(string streamName)
         {
-            var deuevMessage = GetMessageFromFile("ebea0023.a22", "dsbe-bvbei-v01");
+            var deuevMessage = GetMessageFromFile("ebea0023.a22", streamName);
             Assert.True(deuevMessage.DSBEv01.Count > 0);
             var dsbe = deuevMessage.DSBEv01.Single();
             Assert.Equal("Hauptstraße 23", dsbe.STR);
@@ -26,18 +28,11 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
         /// <summary>
         /// Ruft die Meldedatei mit einem bestimmten Dateinamen aus dem Deuev-Ordner ab
         /// </summary>
-        /// <param name="fileName">
-        /// Dateiname der Meldedatei
-        /// </param>
-        /// <param name="name">
-        /// Name in der Meldungen.xml
-        /// </param>
-        /// <returns>
-        /// Meldedatei als DeuevMessageData-Objekt
-        /// </returns>
-        private BwnaMessageData GetMessageFromFile(string fileName, string name)
+        /// <param name="input">Die Meldedatei</param>
+        /// <param name="name">Name in der Meldungen.xml</param>
+        /// <returns>Meldedatei als DeuevMessageData-Objekt</returns>
+        private BwnaMessageData GetMessageFromString(string input, string name)
         {
-            var input = ReadData(fileName);
             var output = new StringWriter();
             var writer = StreamFactory.CreateWriter(name, output);
             var reader = StreamFactory.CreateReader(name, new StringReader(input));
@@ -60,7 +55,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
                 writer.Write(dsko);
                 streamObject = reader.Read();
 
-                while (reader.RecordName == "DSBE")
+                while (reader.RecordName == "DSBE" || reader.RecordName == "DSBE-v01")
                 {
                     var record = Assert.IsType<DSBE01>(streamObject);
                     deuevMessage.DSBEv01.Add(record);
@@ -76,7 +71,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
                     streamObject = reader.Read();
                 }
                 while (reader.RecordName != null && (reader.RecordName == "NCSZ" || reader.RecordName == "NCSZ-v01"));
-                
+
                 Assert.Null(reader.RecordName);
                 Assert.Equal(deuevMessage.VOSZ.Count, deuevMessage.NCSZ.Count);
 
@@ -89,6 +84,24 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
             {
                 reader.Close();
             }
+        }
+
+        /// <summary>
+        /// Ruft die Meldedatei mit einem bestimmten Dateinamen aus dem Deuev-Ordner ab
+        /// </summary>
+        /// <param name="fileName">
+        /// Dateiname der Meldedatei
+        /// </param>
+        /// <param name="name">
+        /// Name in der Meldungen.xml
+        /// </param>
+        /// <returns>
+        /// Meldedatei als DeuevMessageData-Objekt
+        /// </returns>
+        private BwnaMessageData GetMessageFromFile(string fileName, string name)
+        {
+            var input = ReadData(fileName);
+            return GetMessageFromString(input, name);
         }
 
         /// <summary>
