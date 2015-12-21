@@ -374,10 +374,10 @@
       <record name="DSBD-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSBD, SocialInsurance.Germany.Messages.Pocos">
         <include template="DSBD-v01"/>
       </record>
-      <record name="DSBE-v01" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBE01, SocialInsurance.Germany.Messages.Pocos">
+      <record name="DSBE-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSBE01, SocialInsurance.Germany.Messages.Pocos">
         <include template="DSBE-v01"/>
       </record>
-      <record name="DSBE-v0101" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBE0101, SocialInsurance.Germany.Messages.Pocos">
+      <record name="DSBE-v0101" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSBE0101, SocialInsurance.Germany.Messages.Pocos">
         <include template="DSBE-v0101"/>
       </record>
       <record name="DSER-v02" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSER02, SocialInsurance.Germany.Messages.Pocos">
