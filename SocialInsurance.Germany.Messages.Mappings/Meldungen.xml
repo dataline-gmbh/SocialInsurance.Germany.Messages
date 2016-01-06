@@ -151,7 +151,7 @@
 		<record order="3" name="BW02" minOccurs="1" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.BNA.BW0211, SocialInsurance.Germany.Messages.Pocos">
 			<include template="BW02-v11"/>
 		</record>
-		<record order="4" name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
+		<record order="4" name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, SocialInsurance.Germany.Messages.Pocos">
 			<include template="NCSZ-v01"/>
 		</record>
 	</stream>
