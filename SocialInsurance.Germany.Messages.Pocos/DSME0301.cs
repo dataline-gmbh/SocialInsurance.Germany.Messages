@@ -407,11 +407,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt interne Daten
-        /// </summary>
-        public string INTERN2 { get; set; }
-
-        /// <summary>
         /// Holt oder setzt die Nebenversionsnummer
         /// </summary>
         public int NEVERNR { get; set; }

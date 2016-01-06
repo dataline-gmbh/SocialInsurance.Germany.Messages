@@ -278,6 +278,9 @@
   <ItemGroup>
     <EmbeddedResource Include="bwnac\test.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Deuev\DeuevMappings.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
