@@ -13,7 +13,7 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBKV-v03.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, SocialInsurance.Germany.Messages.Mappings"/>
-  <template name="DSME-v03">
+  <template name="DSME-v0301">
     <field name="KE" literal="DSME" length="4" rid="true" required="true" />
     <field name="VF" length="5" required="true" />
     <field name="BBNRAB" length="15" required="true" />
@@ -76,7 +76,7 @@
     <segment name="ListeDBUV" class="SocialInsurance.Germany.Messages.Pocos.DBUV, SocialInsurance.Germany.Messages.Pocos" occursRef="MMUV" collection="list">
       <include template="DBUV" />
     </segment>
-    <segment name="ListeDBKS" class="SocialInsurance.Germany.Messages.Pocos.DSME03+WrapperDBKS, SocialInsurance.Germany.Messages.Pocos" occursRef="MMKS" collection="list">
+    <segment name="ListeDBKS" class="SocialInsurance.Germany.Messages.Pocos.DSME0301+WrapperDBKS, SocialInsurance.Germany.Messages.Pocos" occursRef="MMKS" collection="list">
       <!--
       Wir können hier nicht das Template benutzen, weil wir eine eigene Typ-Konvertierung nutzen müssen
       um zwischen DBKSS und DBKSK unterscheiden zu können.
