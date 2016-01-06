@@ -120,7 +120,7 @@
     <Compile Include="DSKK01.cs" />
     <Compile Include="DSKO04.cs" />
     <Compile Include="DSKO02.cs" />
-    <Compile Include="DSME03.cs" />
+    <Compile Include="DSME0301.cs" />
     <Compile Include="DSME02.cs" />
     <Compile Include="DSQU.cs" />
     <Compile Include="DSVV.cs" />

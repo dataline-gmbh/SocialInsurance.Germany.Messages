@@ -261,7 +261,7 @@
     <EmbeddedResource Include="DBAP-v01.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DSME-v03.xml">
+    <EmbeddedResource Include="DSME-v0301.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

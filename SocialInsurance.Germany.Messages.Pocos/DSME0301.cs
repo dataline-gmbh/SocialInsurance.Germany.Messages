@@ -1,4 +1,4 @@
-﻿// <copyright file="DSME03.cs" company="DATALINE GmbH &amp; Co. KG">
+﻿// <copyright file="DSME0301.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
@@ -11,7 +11,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datensatz: DSME - Meldung
     /// </summary>
-    public class DSME03 : IDatensatz
+    public class DSME0301 : IDatensatz
     {
         private bool? _hatDbme;
 
@@ -42,15 +42,16 @@ namespace SocialInsurance.Germany.Messages.Pocos
         private bool? _hatDbbf;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DSME03"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DSME0301"/> Klasse
         /// </summary>
         /// <remarks>
         /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt
         /// </remarks>
-        public DSME03()
+        public DSME0301()
         {
             KE = "DSME";
             VERNR = 3;
+            NEVERNR = 1;
         }
 
         /// <summary>
@@ -123,6 +124,9 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public int FEAN
         {
             get { return DBFE == null ? 0 : DBFE.Count; }
+
+            // ReSharper disable once UnusedMember.Local
+            // ReSharper disable once ValueParameterNotUsed
             private set { }
         }
 
@@ -401,11 +405,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
             get { return _hatDbkv ?? DBKV != null; }
             set { _hatDbkv = value; }
         }
-
-        /// <summary>
-        /// Holt oder setzt interne Daten
-        /// </summary>
-        public string INTERN2 { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Nebenversionsnummer

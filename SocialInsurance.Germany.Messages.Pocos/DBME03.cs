@@ -126,6 +126,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Holt oder setzt interne Daten
         /// </summary>
-        public string INTERN1 { get; set; }
+        public int INTERN { get; set; }
     }
 }

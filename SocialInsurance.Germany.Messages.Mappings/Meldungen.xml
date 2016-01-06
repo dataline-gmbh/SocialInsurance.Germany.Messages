@@ -4,7 +4,7 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKO-v02.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKO-v04.xml, SocialInsurance.Germany.Messages.Mappings"/>
 	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSME-v02.xml, SocialInsurance.Germany.Messages.Mappings"/>
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSME-v03.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSME-v0301.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBD-v01.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKK-v01.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKK-v02.xml, SocialInsurance.Germany.Messages.Mappings"/>
@@ -48,15 +48,15 @@
 		</record>
 	</stream>
   
-  <stream name="dsme-deuev-v03" format="fixedlength">
+  <stream name="dsme-deuev-v0301" format="fixedlength">
     <record name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
       <include template="VOSZ-v01"/>
     </record>
-    <record name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKO02, SocialInsurance.Germany.Messages.Pocos">
-      <include template="DSKO-v02"/>
+    <record name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKO04, SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSKO-v04"/>
     </record>
-    <record name="DSME" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSME03, SocialInsurance.Germany.Messages.Pocos">
-      <include template="DSME-v03"/>
+    <record name="DSME" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSME0301, SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSME-v0301"/>
     </record>
     <record name="DSBD" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBD, SocialInsurance.Germany.Messages.Pocos">
       <include template="DSBD-v01"/>
@@ -398,8 +398,8 @@
       <record name="DSME-v02" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSME02, SocialInsurance.Germany.Messages.Pocos">
         <include template="DSME-v02"/>
       </record>
-      <record name="DSME-v03" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSME03, SocialInsurance.Germany.Messages.Pocos">
-        <include template="DSME-v03"/>
+      <record name="DSME-v0301" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSME0301, SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSME-v0301"/>
       </record>
       <record name="DSQU-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSQU, SocialInsurance.Germany.Messages.Pocos">
         <include template="DSQU-v01"/>

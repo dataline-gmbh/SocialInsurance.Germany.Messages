@@ -37,6 +37,128 @@
       <HintPath>..\packages\FubarDev.BeanIO.3.1.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\BeanIO.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Dsrv.Kernpruefung.Deuev-1.6, Version=1.6.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dsrv.Kernpruefung.Deuev-1.6.1.6.1.2\lib\net40\Dsrv.Kernpruefung.Deuev-1.6.dll</HintPath>
+      <Private>True</Private>
+      <Aliases>deuev16</Aliases>
+    </Reference>
+    <Reference Include="Dsrv.Kernpruefung.Deuev-1.7, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dsrv.Kernpruefung.Deuev-1.7.1.7.0.2\lib\net40\Dsrv.Kernpruefung.Deuev-1.7.dll</HintPath>
+      <Private>True</Private>
+      <Aliases>deuev17</Aliases>
+    </Reference>
+    <Reference Include="IKVM.AWT.WinForms, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.AWT.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Beans, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.Beans.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Charsets, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.Charsets.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Cldrdata, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.Cldrdata.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Corba, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.Corba.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Jdbc, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.Jdbc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Localedata, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.Localedata.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Management, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.Management.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Media, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.Media.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Misc, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.Misc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Naming, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.Naming.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Nashorn, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.Nashorn.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Remoting, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.Remoting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Security, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.SwingAWT, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.SwingAWT.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Text, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Tools, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.Tools.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.Util.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.API, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.XML.API.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Bind, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.XML.Bind.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Crypto, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.XML.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Parse, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.XML.Parse.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Transform, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.XML.Transform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.WebServices, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.XML.WebServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.XPath, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.OpenJDK.XML.XPath.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.Runtime, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.Runtime.JNI, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.Runtime.JNI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -73,72 +195,77 @@
     <Compile Include="aager\AagTests.cs" />
     <Compile Include="Bvbei\BeitragserhebungTests.cs" />
     <Compile Include="bwnac\BeitragsnachweisTests.cs" />
-    <Compile Include="Deuev\DeuevTests.cs" />
+    <Compile Include="ErrorInfo.cs" />
+    <Compile Include="Deuev\DeuevTests02.cs" />
+    <Compile Include="Deuev\DeuevTests0301.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestBasis.cs" />
+    <Compile Include="ErrorInfoValidationException.cs" />
+    <Compile Include="ValidationException.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="aager\eaag0001.a15" />
-    <EmbeddedResource Include="Deuev\deuev10_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev10_2.dat" />
-    <EmbeddedResource Include="Deuev\deuev10_3.dat" />
-    <EmbeddedResource Include="Deuev\deuev10_4.dat" />
-    <EmbeddedResource Include="Deuev\deuev10_5.dat" />
-    <EmbeddedResource Include="Deuev\deuev11_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev12_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev13_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev13_2.dat" />
-    <EmbeddedResource Include="Deuev\deuev11_2.dat" />
-    <EmbeddedResource Include="Deuev\deuev11_3.dat" />
-    <EmbeddedResource Include="Deuev\deuev11_4.dat" />
-    <EmbeddedResource Include="Deuev\deuev11_5.dat" />
-    <EmbeddedResource Include="Deuev\deuev12_2.dat" />
-    <EmbeddedResource Include="Deuev\deuev13_3.dat" />
-    <EmbeddedResource Include="Deuev\deuev13_4.dat" />
-    <EmbeddedResource Include="Deuev\deuev12_3.dat" />
-    <EmbeddedResource Include="Deuev\deuev13_5.dat" />
-    <EmbeddedResource Include="Deuev\deuev13_6.dat" />
-    <EmbeddedResource Include="Deuev\deuev13_7.dat" />
-    <EmbeddedResource Include="Deuev\deuev30_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev30_2.dat" />
-    <EmbeddedResource Include="Deuev\deuev31_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev32_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev33_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev31_2.dat" />
-    <EmbeddedResource Include="Deuev\deuev33_2.dat" />
-    <EmbeddedResource Include="Deuev\deuev31_3.dat" />
-    <EmbeddedResource Include="Deuev\deuev31_4.dat" />
-    <EmbeddedResource Include="Deuev\deuev31_5.dat" />
-    <EmbeddedResource Include="Deuev\deuev32_2.dat" />
-    <EmbeddedResource Include="Deuev\deuev33_3.dat" />
-    <EmbeddedResource Include="Deuev\deuev32_3.dat" />
-    <EmbeddedResource Include="Deuev\deuev36_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev34_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev30_3.dat" />
-    <EmbeddedResource Include="Deuev\deuev33_4.dat" />
-    <EmbeddedResource Include="Deuev\deuev50_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev54_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev91_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev57_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev34_3.dat" />
-    <EmbeddedResource Include="Deuev\deuev35_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev34_4.dat" />
-    <EmbeddedResource Include="Deuev\deuev51_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev52_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev30_4.dat" />
-    <EmbeddedResource Include="Deuev\deuev10_6.dat" />
-    <EmbeddedResource Include="Deuev\deuev30_5.dat" />
-    <EmbeddedResource Include="Deuev\deuev33_5.dat" />
-    <EmbeddedResource Include="Deuev\deuev60_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev61_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev63_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev49_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev20_1.dat" />
-    <EmbeddedResource Include="Deuev\deuev20_2.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev10_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev10_2.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev10_3.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev10_4.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev10_5.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev11_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev12_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev13_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev13_2.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev11_2.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev11_3.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev11_4.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev11_5.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev12_2.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev13_3.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev13_4.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev12_3.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev13_5.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev13_6.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev13_7.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev30_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev30_2.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev31_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev32_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev33_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev31_2.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev33_2.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev31_3.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev31_4.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev31_5.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev32_2.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev33_3.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev32_3.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev36_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev34_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev30_3.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev33_4.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev50_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev54_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev91_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev57_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev34_3.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev35_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev34_4.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev51_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev52_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev30_4.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev10_6.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev30_5.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev33_5.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev60_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev61_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev63_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev49_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev20_1.dat" />
+    <EmbeddedResource Include="Deuev\DSME02\deuev20_2.dat" />
     <EmbeddedResource Include="aager\eaag0004.a15" />
     <EmbeddedResource Include="Bvbei\ebea0023.a22" />
     <EmbeddedResource Include="bwnac\ebna0091.a35" />
     <EmbeddedResource Include="aager\eaag0007.a15" />
+    <EmbeddedResource Include="Deuev\DSME0301\edua00000.dat" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +283,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="bwnac\test.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Deuev\DeuevMappings.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
