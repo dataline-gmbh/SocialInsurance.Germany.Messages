@@ -123,7 +123,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public int FEAN
         {
-            get { return DBFE?.Count ?? 0; }
+            get { return DBFE == null ? 0 : DBFE.Count; }
 
             // ReSharper disable once UnusedMember.Local
             // ReSharper disable once ValueParameterNotUsed

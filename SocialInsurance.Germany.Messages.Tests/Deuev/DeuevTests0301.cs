@@ -20,7 +20,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         [InlineData("edua00000.dat")]
         public void Validate(string fileName)
         {
-            var input = ReadData($"DSME0301.{fileName}");
+            var input = ReadData(string.Format("DSME0301.{0}", fileName));
             var exception = Assert.Throws<ErrorInfoValidationException>(() => ValidateContents(input));
             Assert.Collection(
                 exception.Errors,
@@ -192,7 +192,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         /// <returns>Meldedatei als DeuevMessageData-Objekt</returns>
         private DeuevMessageData GetAndCheckDeuevMessageFromFile(string fileName)
         {
-            var input = ReadData($"DSME0301.{fileName}");
+            var input = ReadData(string.Format("DSME0301.{0}", fileName));
             ValidateContents(input);
 
             var deuevMessage = GetMessageFromString(input, "dsme-deuev-v0301");
