@@ -1,4 +1,6 @@
-﻿using System;
+﻿extern alias deuev16;
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,6 +9,8 @@ using System.Text;
 using SocialInsurance.Germany.Messages.Pocos;
 
 using Xunit;
+
+using adapter = deuev16::de.drv.dsrv.kernpruefung.adapter;
 
 namespace SocialInsurance.Germany.Messages.Tests.Deuev
 {
@@ -19,7 +23,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         [Fact(DisplayName = "Anmeldung 10: Aufnahme einer Beschäftigung (VSNR liegt vor)")]
         public void TestDEUEVMeldung10_1()
         {
-            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_1.dat");
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev10_1.dat", false);
             Assert.True(deuevMessage.DSME.Exists(x => x.GD == 10));
             foreach (var dsme in deuevMessage.DSME)
             {
@@ -703,7 +707,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         [Fact(DisplayName = "Abmeldung 49: Ende der Beschäftigung wegen Tod")]
         public void TestDEUEVMeldung49_1()
         {
-            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev49_1.dat");
+            var deuevMessage = GetAndCheckDeuevMessageFromFile("deuev49_1.dat", false);
             Assert.True(deuevMessage.DSME.Exists(x => x.GD == 49));
             foreach (var dsme in deuevMessage.DSME)
             {
@@ -1959,13 +1963,57 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         }
 
         /// <summary>
+        /// Prüfung durch die Kernprüfung der DSRV
+        /// </summary>
+        /// <param name="fileContents">Text-Inhalt der Datei</param>
+        private void ValidateContents(string fileContents)
+        {
+            var lines = fileContents.Split(new[]
+            {
+                '\r', '\n'
+            }, StringSplitOptions.RemoveEmptyEntries);
+
+            var errorMessages = new List<ErrorInfo>();
+            var validator = new adapter.impl.KernpruefungAufrufImpl();
+            string voszLine = null;
+            foreach (var line in lines)
+            {
+                string testLine = null;
+                if (line.StartsWith("VOSZ"))
+                {
+                    voszLine = line;
+                }
+                else if (line.StartsWith("DSKO") || line.StartsWith("DSME") || line.StartsWith("DSBD"))
+                {
+                    testLine = line;
+                }
+
+                if (testLine != null)
+                {
+                    var result = validator.pruefe(line, voszLine);
+                    if (result.getReturnCode() != adapter.Returncodes.RC_OK.getReturnCode()
+                        && result.getReturnCode() != adapter.Returncodes.RC_HINWEIS.getReturnCode())
+                    {
+                        errorMessages.AddRange(result.getRueckgabeMeldungen().Select(x => new ErrorInfo(x)));
+                    }
+                }
+            }
+
+            if (errorMessages.Count != 0)
+                throw new ErrorInfoValidationException(errorMessages);
+        }
+
+        /// <summary>
         /// Ruft die Meldedatei mit einem bestimmten Dateinamen aus dem Deuev-Ordner ab
         /// </summary>
         /// <param name="fileName">Dateiname der Meldedatei</param>
         /// <returns>Meldedatei als DeuevMessageData-Objekt</returns>
-        private DeuevMessageData GetAndCheckDeuevMessageFromFile(string fileName)
+        private DeuevMessageData GetAndCheckDeuevMessageFromFile(string fileName, bool validate = true)
         {
             var input = ReadData(string.Format("DSME02.{0}", fileName));
+            if (validate)
+                ValidateContents(input);
+
             var deuevMessage = GetMessageFromString(input, "dsme-deuev-v02");
             var output = GetStringFromMessage(deuevMessage, "dsme-deuev-v02");
             Assert.Equal(input, output);

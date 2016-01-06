@@ -1,14 +1,15 @@
-﻿using System;
+﻿extern alias deuev17;
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-
-using BeanIO.Builder;
 
 using SocialInsurance.Germany.Messages.Pocos;
 
 using Xunit;
+
+using adapter = deuev17::de.drv.dsrv.kernpruefung.adapter;
 
 namespace SocialInsurance.Germany.Messages.Tests.Deuev
 {
@@ -169,6 +170,10 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             }
         }
 
+        /// <summary>
+        /// Prüfung durch die Kernprüfung der DSRV
+        /// </summary>
+        /// <param name="fileContents">Text-Inhalt der Datei</param>
         private void ValidateContents(string fileContents)
         {
             var lines = fileContents.Split(new[]
@@ -177,7 +182,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             }, StringSplitOptions.RemoveEmptyEntries);
 
             var errorMessages = new List<ErrorInfo>();
-            var validator = new de.drv.dsrv.kernpruefung.adapter.impl.KernpruefungAufrufImpl();
+            var validator = new adapter.impl.KernpruefungAufrufImpl();
             string voszLine = null;
             foreach (var line in lines)
             {
@@ -194,8 +199,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
                 if (testLine != null)
                 {
                     var result = validator.pruefe(line, voszLine);
-                    if (result.getReturnCode() != de.drv.dsrv.kernpruefung.adapter.Returncodes.RC_OK.getReturnCode()
-                        && result.getReturnCode() != de.drv.dsrv.kernpruefung.adapter.Returncodes.RC_HINWEIS.getReturnCode())
+                    if (result.getReturnCode() != adapter.Returncodes.RC_OK.getReturnCode()
+                        && result.getReturnCode() != adapter.Returncodes.RC_HINWEIS.getReturnCode())
                     {
                         errorMessages.AddRange(result.getRueckgabeMeldungen().Select(x => new ErrorInfo(x)));
                     }

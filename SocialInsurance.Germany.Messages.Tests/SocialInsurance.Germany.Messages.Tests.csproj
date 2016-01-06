@@ -37,9 +37,15 @@
       <HintPath>..\packages\FubarDev.BeanIO.3.1.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\BeanIO.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Dsrv.Kernpruefung.Deuev, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dsrv.Kernpruefung.Deuev.3.1.119.1\lib\net40\Dsrv.Kernpruefung.Deuev.dll</HintPath>
+    <Reference Include="Dsrv.Kernpruefung.Deuev-1.6, Version=1.6.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dsrv.Kernpruefung.Deuev-1.6.1.6.1.2\lib\net40\Dsrv.Kernpruefung.Deuev-1.6.dll</HintPath>
       <Private>True</Private>
+      <Aliases>deuev16</Aliases>
+    </Reference>
+    <Reference Include="Dsrv.Kernpruefung.Deuev-1.7, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dsrv.Kernpruefung.Deuev-1.7.1.7.0.2\lib\net40\Dsrv.Kernpruefung.Deuev-1.7.dll</HintPath>
+      <Private>True</Private>
+      <Aliases>deuev17</Aliases>
     </Reference>
     <Reference Include="IKVM.AWT.WinForms, Version=8.0.5449.1, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
       <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.AWT.WinForms.dll</HintPath>
