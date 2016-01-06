@@ -48,12 +48,12 @@
 		</record>
 	</stream>
   
-  <stream name="dsme-deuev-v03" format="fixedlength">
+  <stream name="dsme-deuev-v0301" format="fixedlength">
     <record name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
       <include template="VOSZ-v01"/>
     </record>
-    <record name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKO02, SocialInsurance.Germany.Messages.Pocos">
-      <include template="DSKO-v02"/>
+    <record name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKO04, SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSKO-v04"/>
     </record>
     <record name="DSME" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSME0301, SocialInsurance.Germany.Messages.Pocos">
       <include template="DSME-v0301"/>

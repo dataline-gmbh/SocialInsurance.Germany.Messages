@@ -10,7 +10,7 @@ using Xunit;
 
 namespace SocialInsurance.Germany.Messages.Tests.Deuev
 {
-    public class DeuevTests : TestBasis
+    public class DeuevTests02 : TestBasis
     {
         /// <summary>
         /// Beginn der Versicherungs- und/oder Beitragspflicht
@@ -1965,7 +1965,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         /// <returns>Meldedatei als DeuevMessageData-Objekt</returns>
         private DeuevMessageData GetAndCheckDeuevMessageFromFile(string fileName)
         {
-            var input = ReadData(fileName);
+            var input = ReadData($"DSME02.{fileName}");
             var deuevMessage = GetMessageFromString(input, "dsme-deuev-v02");
             var output = GetStringFromMessage(deuevMessage, "dsme-deuev-v02");
             Assert.Equal(input, output);
