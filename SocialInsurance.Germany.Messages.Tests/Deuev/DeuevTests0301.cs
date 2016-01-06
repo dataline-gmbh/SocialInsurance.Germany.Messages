@@ -2,10 +2,7 @@
 
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-
-using SocialInsurance.Germany.Messages.Pocos;
 
 using Xunit;
 
@@ -28,7 +25,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         [InlineData("edua00000.dat")]
         public void Validate(string fileName)
         {
-            var input = ReadData(string.Format("DSME0301.{0}", fileName));
+            var input = ReadData($"DSME0301.{fileName}");
             var exception = Assert.Throws<ErrorInfoValidationException>(() => ValidateContents(input));
             Assert.Collection(
                 exception.Errors,
@@ -94,83 +91,6 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         }
 
         /// <summary>
-        /// Erstellt die Meldedatei anhand von <paramref name="data"/> neu.
-        /// </summary>
-        /// <param name="data">Die Daten die zur Erstellung der Meldedatei benutzt werden sollen</param>
-        /// <param name="streamName">Der Name des Streams der für die Erstellung der Meldedatei benutzt werden soll</param>
-        /// <returns>Die Meldedatei</returns>
-        private string GetStringFromMessage(DeuevMessageData data, string streamName)
-        {
-            var output = new StringWriter();
-            using (var writer = StreamFactory.CreateWriter(streamName, output))
-            {
-                foreach (var record in data.VOSZ)
-                    writer.Write(record);
-                writer.Write(data.DSKO);
-                foreach (var record in data.DSME)
-                    writer.Write(record);
-                foreach (var record in data.DSBD)
-                    writer.Write(record);
-                foreach (var record in data.NCSZ)
-                    writer.Write(record);
-            }
-            return output.ToString();
-        }
-
-        private DeuevMessageData GetMessageFromString(string input, string streamName)
-        {
-            var reader = StreamFactory.CreateReader(streamName, new StringReader(input));
-            var deuevMessage = new DeuevMessageData();
-            try
-            {
-                var streamObject = reader.Read();
-
-                do
-                {
-                    var vosz = Assert.IsType<VOSZ>(streamObject);
-                    deuevMessage.VOSZ.Add(vosz);
-                    streamObject = reader.Read();
-                }
-                while (reader.RecordName == "VOSZ" || reader.RecordName == "VOSZ-v01");
-
-                var dsko = Assert.IsType<DSKO04>(streamObject);
-                deuevMessage.DSKO = dsko;
-                streamObject = reader.Read();
-
-                while (reader.RecordName == "DSME" || reader.RecordName == "DSME-v0301")
-                {
-                    var record = Assert.IsType<DSME0301>(streamObject);
-                    deuevMessage.DSME.Add(record);
-                    streamObject = reader.Read();
-                }
-
-                while (reader.RecordName == "DSBD" || reader.RecordName == "DSBD-v01")
-                {
-                    var record = Assert.IsType<DSBD>(streamObject);
-                    deuevMessage.DSBD.Add(record);
-                    streamObject = reader.Read();
-                }
-
-                do
-                {
-                    var ncsz = Assert.IsType<NCSZ>(streamObject);
-                    deuevMessage.NCSZ.Add(ncsz);
-                    streamObject = reader.Read();
-                }
-                while (reader.RecordName != null && (reader.RecordName == "NCSZ-v01" || reader.RecordName == "NCSZ"));
-
-                Assert.Null(reader.RecordName);
-                Assert.Equal(deuevMessage.VOSZ.Count, deuevMessage.NCSZ.Count);
-
-                return deuevMessage;
-            }
-            finally
-            {
-                reader.Close();
-            }
-        }
-
-        /// <summary>
         /// Prüfung durch die Kernprüfung der DSRV
         /// </summary>
         /// <param name="fileContents">Text-Inhalt der Datei</param>
@@ -209,47 +129,6 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
 
             if (errorMessages.Count != 0)
                 throw new ErrorInfoValidationException(errorMessages);
-        }
-
-        /// <summary>
-        /// Ruft die Meldedatei mit einem bestimmten Dateinamen aus dem Deuev-Ordner ab
-        /// </summary>
-        /// <param name="fileName">Dateiname der Meldedatei</param>
-        /// <returns>Meldedatei als DeuevMessageData-Objekt</returns>
-        private DeuevMessageData GetAndCheckDeuevMessageFromFile(string fileName)
-        {
-            var input = ReadData(string.Format("DSME0301.{0}", fileName));
-            ValidateContents(input);
-
-            var deuevMessage = GetMessageFromString(input, "dsme-deuev-v0301");
-            var output = GetStringFromMessage(deuevMessage, "dsme-deuev-v0301");
-            Assert.Equal(input, output);
-            return deuevMessage;
-        }
-
-        /// <summary>
-        /// Hilfsklasse der Meldedatei, die eine Meldedatei im Deuev-Format
-        /// mit den Datensätzen als Objekte enthält
-        /// </summary>
-        private class DeuevMessageData
-        {
-            public DeuevMessageData()
-            {
-                VOSZ = new List<VOSZ>();
-                DSME = new List<DSME0301>();
-                DSBD = new List<DSBD>();
-                NCSZ = new List<NCSZ>();
-            }
-
-            public List<VOSZ> VOSZ { get; set; }
-
-            public DSKO04 DSKO { get; set; }
-
-            public List<DSME0301> DSME { get; set; }
-
-            public List<DSBD> DSBD { get; set; }
-
-            public List<NCSZ> NCSZ { get; set; }
         }
     }
 }
