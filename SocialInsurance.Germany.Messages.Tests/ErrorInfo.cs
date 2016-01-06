@@ -21,8 +21,8 @@ namespace SocialInsurance.Germany.Messages.Tests
             Message = parts.Length < 2 ? string.Empty : parts[1].TrimEnd();
         }
 
-        public string Code { get; }
-        public string Message { get; }
+        public string Code { get; private set; }
+        public string Message { get; private set; }
 
         private static DBFE Parse(string dbfe)
         {

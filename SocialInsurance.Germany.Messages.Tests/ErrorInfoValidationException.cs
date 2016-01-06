@@ -10,6 +10,6 @@ namespace SocialInsurance.Germany.Messages.Tests
             Errors = errors;
         }
 
-        public IReadOnlyCollection<ErrorInfo> Errors { get; }
+        public IReadOnlyCollection<ErrorInfo> Errors { get; private set; }
     }
 }

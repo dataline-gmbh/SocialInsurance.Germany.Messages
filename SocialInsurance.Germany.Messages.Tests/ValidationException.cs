@@ -10,6 +10,6 @@ namespace SocialInsurance.Germany.Messages.Tests
             Messages = messages;
         }
 
-        public IReadOnlyCollection<string> Messages { get; }
+        public IReadOnlyCollection<string> Messages { get; private set; }
     }
 }
