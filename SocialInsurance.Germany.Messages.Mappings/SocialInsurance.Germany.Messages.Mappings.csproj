@@ -214,7 +214,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DSBE-v0101.xml">
+    <EmbeddedResource Include="DSBE-v0201.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

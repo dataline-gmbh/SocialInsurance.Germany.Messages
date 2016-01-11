@@ -5,9 +5,9 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBBF.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, SocialInsurance.Germany.Messages.Mappings"/>
-  <template name="DSBE-v0101">
+  <template name="DSBE-v0201">
     <field name="KE" literal="DSBE" length="4" rid="true" required="true" />
-    <field name="VERNRDS" literal="01" length="2" rid="true" required="true" type="int" format="d2" />
+    <field name="VERNRDS" literal="02" length="2" rid="true" required="true" type="int" format="d2" />
     <field name="NEVERNR" literal="01" length="2" rid="true" required="true" type="int" format="d2" />
     <field name="VERNRKP" length="2" required="true" type="int" format="d2" />
     <field name="VF" literal="BVBEI" length="5" required="true" rid="true" />

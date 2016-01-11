@@ -17,7 +17,7 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSER-v04.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSRA-v01.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBE-v01.xml, SocialInsurance.Germany.Messages.Mappings"/>
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBE-v0101.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBE-v0201.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.NCSZ-v01.xml, SocialInsurance.Germany.Messages.Mappings"/>
 
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.VOSZ-v05.xml, SocialInsurance.Germany.Messages.Mappings"/>
@@ -256,8 +256,8 @@
     <record name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKO02, SocialInsurance.Germany.Messages.Pocos">
       <include template="DSKO-v02"/>
     </record>
-    <record name="DSBE" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBE0101, SocialInsurance.Germany.Messages.Pocos">
-      <include template="DSBE-v0101"/>
+    <record name="DSBE" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBE0201, SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSBE-v0201"/>
     </record>
     <record name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, SocialInsurance.Germany.Messages.Pocos">
       <include template="NCSZ-v01"/>
@@ -395,8 +395,8 @@
       <record name="DSBE-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSBE01, SocialInsurance.Germany.Messages.Pocos">
         <include template="DSBE-v01"/>
       </record>
-      <record name="DSBE-v0101" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSBE0101, SocialInsurance.Germany.Messages.Pocos">
-        <include template="DSBE-v0101"/>
+      <record name="DSBE-v0201" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSBE0201, SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSBE-v0201"/>
       </record>
       <record name="DSER-v02" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSER02, SocialInsurance.Germany.Messages.Pocos">
         <include template="DSER-v02"/>
