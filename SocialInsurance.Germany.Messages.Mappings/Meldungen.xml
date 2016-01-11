@@ -249,7 +249,7 @@
 		</record>
 	</stream>
   
-  <stream name="dsbe-bvbei-v0101" format="fixedlength">
+  <stream name="dsbe-bvbei-v0201" format="fixedlength">
     <record name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
       <include template="VOSZ-v01"/>
     </record>
