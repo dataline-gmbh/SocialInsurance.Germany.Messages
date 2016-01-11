@@ -20,7 +20,7 @@
     <field name="PRODID" length="7" required="true" />
     <field name="MODID" length="8" required="true" />
     <field name="DSID" length="32" />
-    <field name="VD" length="20" format="yyyyMMddHHmmssffffff" />
+    <field name="VD" length="20" format="yyyyMMddHHmmssffffff" parseDefault="false" default="00000000000000000000" />
     <field name="NA1" length="30" required="true"/>
     <field name="NA2" length="30" required="false"/>
     <field name="NA3" length="30" required="false"/>
