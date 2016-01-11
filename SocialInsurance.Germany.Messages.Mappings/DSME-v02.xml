@@ -5,7 +5,7 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBGB.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBAN.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBEU.xml, SocialInsurance.Germany.Messages.Mappings"/>
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBUV.xml, SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBUV-v02.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBSV.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBVR.xml, SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBRG.xml, SocialInsurance.Germany.Messages.Mappings"/>
@@ -66,8 +66,8 @@
     <segment name="ListeDBEU" class="SocialInsurance.Germany.Messages.Pocos.DBEU, SocialInsurance.Germany.Messages.Pocos" occursRef="MMEU" collection="list">
       <include template="DBEU" />
     </segment>
-    <segment name="ListeDBUV" class="SocialInsurance.Germany.Messages.Pocos.DBUV, SocialInsurance.Germany.Messages.Pocos" occursRef="MMUV" collection="list">
-      <include template="DBUV" />
+    <segment name="ListeDBUV" class="SocialInsurance.Germany.Messages.Pocos.DBUV02, SocialInsurance.Germany.Messages.Pocos" occursRef="MMUV" collection="list">
+      <include template="DBUV-v02" />
     </segment>
     <segment name="ListeDBKS" class="SocialInsurance.Germany.Messages.Pocos.DSME02+WrapperDBKS, SocialInsurance.Germany.Messages.Pocos" occursRef="MMKS" collection="list">
       <!--

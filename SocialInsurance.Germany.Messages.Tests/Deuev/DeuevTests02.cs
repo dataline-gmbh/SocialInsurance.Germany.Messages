@@ -1362,7 +1362,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             {
                 if (dsme.GD == 57)
                 {
-                    var uv = dsme.DBUV.UV[0] as DBUV.DBUV_UV;
+                    var uv = dsme.DBUV.UV[0] as DBUV02.DBUV_UV;
                     var bla = uv.BBNRGT;
                     Assert.Contains(
                         dsme.PERSGR,

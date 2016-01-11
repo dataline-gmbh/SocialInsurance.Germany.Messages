@@ -524,7 +524,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Holt oder setzt den Datenbaustein für Unfallversicherung
         /// </summary>
-        public DBUV DBUV
+        public DBUV0301 DBUV
         {
             get
             {
@@ -680,7 +680,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
 
         private IList<DBEU> ListeDBEU { get; set; }
 
-        private IList<DBUV> ListeDBUV { get; set; }
+        private IList<DBUV0301> ListeDBUV { get; set; }
 
         private IList<WrapperDBKS> ListeDBKS { get; set; }
 

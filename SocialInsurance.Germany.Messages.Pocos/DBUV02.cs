@@ -1,4 +1,4 @@
-﻿// <copyright file="DBUV.cs" company="DATALINE GmbH &amp; Co. KG">
+﻿// <copyright file="DBUV02.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
@@ -9,12 +9,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datenbaustein: DBUV - Unfallversicherung
     /// </summary>
-    public class DBUV : IDatenbaustein
+    public class DBUV02 : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBUV"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DBUV02"/> Klasse
         /// </summary>
-        public DBUV()
+        public DBUV02()
         {
             KE = "DBUV";
         }
@@ -116,7 +116,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
             /// <remarks>
             /// Geleistete Arbeitsstunden, Länge 4, Mussangabe
             /// </remarks>
-            public string ARBSTD { get; set; }
+            public int ARBSTD { get; set; }
         }
     }
 }
