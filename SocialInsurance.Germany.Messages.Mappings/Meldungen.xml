@@ -154,10 +154,16 @@
         <include template="VOSZ-v01"/>
       </record>
     </group>
-		<record order="2" name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKO02, SocialInsurance.Germany.Messages.Pocos">
-			<include template="DSKO-v02"/>
-		</record>
-		<record order="3" name="BW02" minOccurs="1" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.BNA.BW0211, SocialInsurance.Germany.Messages.Pocos">
+    <group name="DSKO" order="2">
+      <!-- <include template="DSKO-generic"/> -->
+      <record name="DSKO-v02" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO02, SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSKO-v02"/>
+      </record>
+      <record name="DSKO-v04" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO04, SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSKO-v04"/>
+      </record>
+    </group>
+    <record order="3" name="BW02" minOccurs="1" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.BNA.BW0211, SocialInsurance.Germany.Messages.Pocos">
 			<include template="BW02-v11"/>
 		</record>
     <group name="NCSZ" order="4" occurs="1">
