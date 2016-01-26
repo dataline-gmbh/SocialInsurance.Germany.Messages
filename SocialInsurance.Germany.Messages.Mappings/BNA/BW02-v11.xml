@@ -81,7 +81,7 @@
 		<field name="ABRECHN2" length="15" required="true" />
 		<field name="ORDN" length="20" required="false" />
 		<field name="VAMM" length="1" required="false"/>
-		<field name="BEITRSA" length="4" required="true" />
+		<field name="BEITRSA" length="4" required="true" format="d4" default="0" type="int"/>
 		<field name="BEITRSE" length="4" required="true" format="d4" default="0" type="int"/>
 		<field name="BEITRSH" length="4" required="true" format="d4" default="0" type="int"/>
 		<field name="KENNZRK" regex="[WO]" length="1" required="true"/>
