@@ -10,9 +10,9 @@ using adapter = deuev17::de.drv.dsrv.kernpruefung.adapter;
 
 namespace SocialInsurance.Germany.Messages.Tests.Deuev
 {
-    public class DeuevTests0301 : TestBasis
+    public class DeuevDsmeTests0301 : TestBasis
     {
-        public DeuevTests0301()
+        public DeuevDsmeTests0301()
         {
             StreamFactory.Load(new Uri("resource:SocialInsurance.Germany.Messages.Tests.Deuev.DeuevMappings.xml, SocialInsurance.Germany.Messages.Tests"));
         }

@@ -195,9 +195,10 @@
     <Compile Include="aager\AagTests.cs" />
     <Compile Include="Bvbei\BeitragserhebungTests.cs" />
     <Compile Include="bwnac\BeitragsnachweisTests.cs" />
+    <Compile Include="Deuev\DeuevDskkTests02.cs" />
     <Compile Include="ErrorInfo.cs" />
-    <Compile Include="Deuev\DeuevTests02.cs" />
-    <Compile Include="Deuev\DeuevTests0301.cs" />
+    <Compile Include="Deuev\DeuevDsmeTests02.cs" />
+    <Compile Include="Deuev\DeuevDsmeTests0301.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestBasis.cs" />
     <Compile Include="ErrorInfoValidationException.cs" />
@@ -266,6 +267,7 @@
     <EmbeddedResource Include="bwnac\ebna0091.a35" />
     <EmbeddedResource Include="aager\eaag0007.a15" />
     <EmbeddedResource Include="Deuev\DSME0301\edua00000.dat" />
+    <EmbeddedResource Include="Deuev\DSKK02\TSAG0417" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -287,6 +289,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Deuev\DeuevMappings.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

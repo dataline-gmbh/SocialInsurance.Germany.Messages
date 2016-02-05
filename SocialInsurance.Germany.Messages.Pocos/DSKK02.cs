@@ -122,7 +122,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Meldegrund, Länge 2, Mussangabe
         /// 10 = Beginn, 30 = Ende, 40 = Beginn und Ende
         /// </remarks>
-        public int MG { get; set; }
+        public int? MG { get; set; }
 
         /// <summary>
         /// Holt oder setzt ein der Krankenkasse zur Verfügung stehendes Feld
