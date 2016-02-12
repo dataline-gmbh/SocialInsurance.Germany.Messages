@@ -13,12 +13,12 @@
     <field name="ZREN" length="8" required="true" format="yyyyMMdd"/>
     <field name="KENNZRK" length="1" regex="[WO]" required="true"/>
     <field name="SVTG" length="2" required="true" type="int" format="00"/>
-    <field name="KENNZKVL" length="1" required="true" regex="[JN]"/>
-    <field name="KENNZRVL" length="1" required="true" regex="[JNV]"/>
-    <field name="KENNZALVL" length="1" required="true" regex="[JNV]"/>
-    <field name="KENNZKVE" length="1" required="true" regex="[JN]"/>
-    <field name="KENNZRVE" length="1" required="true" regex="[JNV]"/>
-    <field name="KENNZALVE" length="1" required="true" regex="[JNV]"/>
+    <field name="KENNZKVL" length="1" required="false" regex="[JN]"/>
+    <field name="KENNZRVL" length="1" required="false" regex="[JNV]"/>
+    <field name="KENNZALVL" length="1" required="false" regex="[JNV]"/>
+    <field name="KENNZKVE" length="1" required="false" regex="[JN]"/>
+    <field name="KENNZRVE" length="1" required="false" regex="[JNV]"/>
+    <field name="KENNZALVE" length="1" required="false" regex="[JNV]"/>
     <field name="RESERVE1" length="23" required="false" ignore="true"/>
   </template>
 </beanio>
