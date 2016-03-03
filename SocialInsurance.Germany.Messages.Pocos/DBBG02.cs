@@ -124,8 +124,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// N = BBG in der KV wurde nicht überschritten
         /// J = BBG in der KV wurde überschritten
         /// </remarks>
-        public string KENNZKVL
-        { get; set; }
+        public string KENNZKVL { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen ob/wie das laufende Arbeitsentgelt Beitragsbemessungsgrenze für die Rentenversicherung überschritten wurde
@@ -135,8 +134,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// J = BBG in der RV wurde überschritten
         /// V = Versicherungsfreiheit/Befreiung von der Versicherungspflicht
         /// </remarks>
-        public string KENNZRVL
-        { get; set; }
+        public string KENNZRVL { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen ob/wie das laufende Arbeitsentgelt Beitragsbemessungsgrenze für die Arbeitslosenversicherung überschritten wurde
@@ -146,8 +144,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// J = BBG in der ALV wurde überschritten
         /// V = Versicherungsfreiheit/Befreiung von der Versicherungspflicht
         /// </remarks>
-        public string KENNZALVL
-        { get; set; }
+        public string KENNZALVL { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen ob/wie die Einmalzahungs-Beitragsbemessungsgrenze für die Krankenversicherung überschritten wurde
@@ -156,8 +153,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// N = BBG in der KV wurde nicht überschritten
         /// J = BBG in der KV wurde überschritten
         /// </remarks>
-        public string KENNZKVE
-        { get; set; }
+        public string KENNZKVE { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen ob/wie die Einmalzahungs-Beitragsbemessungsgrenze für die Rentenversicherung überschritten wurde
@@ -167,8 +163,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// J = BBG in der RV wurde überschritten
         /// V = Versicherungsfreiheit/Befreiung von der Versicherungspflicht
         /// </remarks>
-        public string KENNZRVE
-        { get; set; }
+        public string KENNZRVE { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen ob/wie die Einmalzahungs-Beitragsbemessungsgrenze für die Arbeitslosenversicherung überschritten wurde
@@ -178,7 +173,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// J = BBG in der ALV wurde überschritten
         /// V = Versicherungsfreiheit/Befreiung von der Versicherungspflicht
         /// </remarks>
-        public string KENNZALVE
-        { get; set; }
+        public string KENNZALVE { get; set; }
     }
 }

@@ -42,7 +42,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Kennzeichen, ob eine GKVMonatsmeldung abzugeben ist, Länge 1, Mussangabe
         /// </remarks>
-        public int KENNZMOME { get; set; }
+        public int? KENNZMOME { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beginn des Zeitraums, für den die Meldung gelten soll

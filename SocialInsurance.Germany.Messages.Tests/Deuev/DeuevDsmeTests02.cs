@@ -13,7 +13,7 @@ using adapter = deuev16::de.drv.dsrv.kernpruefung.adapter;
 
 namespace SocialInsurance.Germany.Messages.Tests.Deuev
 {
-    public class DeuevTests02 : TestBasis
+    public class DeuevDsmeTests02 : TestBasis
     {
         /// <summary>
         /// Beginn der Versicherungs- und/oder Beitragspflicht
