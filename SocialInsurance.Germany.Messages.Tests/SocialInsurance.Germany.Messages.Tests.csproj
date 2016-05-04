@@ -192,6 +192,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="aager\AakTests.cs" />
     <Compile Include="aager\AagTests.cs" />
     <Compile Include="Bvbei\BeitragserhebungTests.cs" />
     <Compile Include="bwnac\BeitragsnachweisTests.cs" />
