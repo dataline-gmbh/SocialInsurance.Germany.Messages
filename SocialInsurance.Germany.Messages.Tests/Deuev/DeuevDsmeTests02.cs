@@ -1845,7 +1845,6 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         }
 
         [Fact(Skip = "Keine Kundenunabhängigen Testdaten vorhanden")]
-        //[Fact]
         public void TestGenericEnvelopeResponse()
         {
             var data = File.ReadAllText(@"D:\temp\arbeit\meldungen\edua01045-response.a07", DefaultEncoding);
@@ -1865,7 +1864,6 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         }
 
         [Fact(Skip = "Keine Kundenunabhängigen Testdaten vorhanden")]
-        //[Fact]
         public void TestErrorResponse()
         {
             var data = File.ReadAllText(@"D:\temp\arbeit\meldungen\edua01055-response.a07", DefaultEncoding);

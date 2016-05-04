@@ -36,7 +36,6 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
         }
 
         [Fact(Skip = "Keine Kundenunabhängigen Testdaten vorhanden")]
-        //[Fact]
         public void TestGenericEnvelopeResponse()
         {
             var data = File.ReadAllText(@"D:\temp\arbeit\meldungen\ebna02457-response.a18");
