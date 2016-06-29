@@ -3,21 +3,16 @@
   <template name="DBBG-v01">
     <field name="KE" length="4" literal="DBBG" required="true"/>
     <field name="KENNZST" length="1" required="true" typeHandler="jn" />
-    <field name="KENNZBBGUE" length="1" regex="[0-2]" required="true" type="int" format="0"/>
-    <field name="VKVEG" length="6" required="true" type="int" format="D6"/>
-    <field name="VRVEG" length="6" required="true" type="int" format="D6"/>
-    <field name="VAVEG" length="6" required="true" type="int" format="D6"/>
+    <field name="GAEGKV" length="7" required="true" type="int" format="D7"/>
+    <field name="GAEGRV" length="7" required="true" type="int" format="D7"/>
+    <field name="GAEGALV" length="7" required="true" type="int" format="D7"/>
+    <field name="EGAKV" length="7" required="true" type="int" format="D7"/>
+    <field name="EGARV" length="7" required="true" type="int" format="D7"/>
+    <field name="EGAALV" length="7" required="true" type="int" format="D7"/>
     <field name="ZRBG" length="8" required="true" format="yyyyMMdd"/>
-    <field name="ZREN" length="8" required="true" format="yyyyMMdd"/>
-    <field name="KVAG" length="6" required="true" type="int" format="D6"/>
-    <field name="KVAN" length="6" required="true" type="int" format="D6"/>
-    <field name="KVSO" length="6" required="true" type="int" format="D6"/>
-    <field name="PVAG" length="6" required="true" type="int" format="D6"/>
-    <field name="PVAN" length="6" required="true" type="int" format="D6"/>
-    <field name="RVAG" length="6" required="true" type="int" format="D6"/>
-    <field name="RVAN" length="6" required="true" type="int" format="D6"/>
-    <field name="AVAG" length="6" required="true" type="int" format="D6"/>
-    <field name="AVAN" length="6" required="true" type="int" format="D6"/>
+    <field name="ZREN" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false"/>
     <field name="KENNZRK" length="1" regex="[WO]" required="true"/>
+    <field name="SVTG" length="2" required="false" type="int" format="00"/>
+    <field name="RESERVE1" length="29" required="false" ignore="true"/>
   </template>
 </beanio>
