@@ -74,12 +74,14 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="SocialInsurance.Germany.Messages.Mappings.nuspec" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <AdditionalFiles Include="stylecop.json" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="BeanIO, Version=3.1.2.0, Culture=neutral, PublicKeyToken=68d7bb5a0c3d6728, processorArchitecture=MSIL">
-      <HintPath>..\packages\FubarDev.BeanIO.3.1.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\BeanIO.dll</HintPath>
+    <Reference Include="BeanIO, Version=3.1.3.0, Culture=neutral, PublicKeyToken=68d7bb5a0c3d6728, processorArchitecture=MSIL">
+      <HintPath>..\packages\FubarDev.BeanIO.3.1.3\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\BeanIO.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
@@ -125,7 +127,9 @@
     <EmbeddedResource Include="DBQV.xml" />
     <EmbeddedResource Include="DSQU-v01.xml" />
     <EmbeddedResource Include="NCSZ-v01.xml" />
-    <EmbeddedResource Include="VOSZ-v01.xml" />
+    <EmbeddedResource Include="VOSZ-v01.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DBAZ.xml" />
@@ -289,17 +293,20 @@
     <EmbeddedResource Include="DBBG-v02.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0-rc1\analyzers\dotnet\cs\Newtonsoft.Json.dll" />
-    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0-rc1\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
-    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0-rc1\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="AAG\DSER-v03.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DBUV-v0301.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DBFE-LANG.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\Newtonsoft.Json.dll" />
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

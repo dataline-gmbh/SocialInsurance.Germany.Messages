@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <beanio xmlns="http://www.beanio.org/2015/06">
   <template name="DBFE">
-    <field name="KE" length="4" literal="DBFE" required="true"/>
-    <field name="FE" length="72" required="true" />
+    <field name="KE" length="4" literal="DBFE" required="true" />
+    <field name="FE" length="72" required="true" lenientPadding="true" />
   </template>
 </beanio>

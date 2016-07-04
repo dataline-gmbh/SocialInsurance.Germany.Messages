@@ -1,18 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+using BeanIO;
+
 using SocialInsurance.Germany.Messages.Pocos;
 using SocialInsurance.Germany.Messages.Pocos.AAG;
 
 using Xunit;
+using Xunit.Abstractions;
 
 namespace SocialInsurance.Germany.Messages.Tests.aager
 {
     public class AagTests : TestBasis
     {
+        private readonly ITestOutputHelper _output;
+
+        public AagTests(ITestOutputHelper output)
+        {
+            _output = output;
+        }
+
         /// <summary>
         /// DSER
         /// </summary>
@@ -37,6 +49,18 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
         }
 
         /// <summary>
+        /// Test mit Kundendaten
+        /// </summary>
+        [SkippableTheory(DisplayName = "(De-)serialisierung einer AAG-Rückmeldung (Kunden-Daten)")]
+        [InlineData(@"d:\temp\EAAG0000026.txt", "super-message")]
+        [InlineData(@"d:\temp\EAAG0000026.txt", "dser-agger-v04")]
+        public void TestAagCustomerData(string fileName, string streamName)
+        {
+            Skip.IfNot(File.Exists(fileName), $"Die Kunden-Datei {fileName} existiert nicht.");
+            var deuevMessage = GetMessageFromFile(fileName, streamName, true);
+        }
+
+        /// <summary>
         /// Ruft die Meldedatei mit einem bestimmten Dateinamen aus dem Deuev-Ordner ab
         /// </summary>
         /// <param name="fileName">
@@ -45,16 +69,36 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
         /// <param name="name">
         /// Name in der Meldungen.xml
         /// </param>
+        /// <param name="isCustomerFile">Ist der Dateiname eine echte Kundendatei?</param>
         /// <returns>
         /// Meldedatei als DeuevMessageData-Objekt
         /// </returns>
-        private BwnaMessageData GetMessageFromFile(string fileName, string name)
+        private AagMessageData GetMessageFromFile(string fileName, string name, bool isCustomerFile = false)
         {
-            var input = LoadData(fileName).ReadToEnd();
+            var input = isCustomerFile ? File.ReadAllText(fileName, Encoding.Default) : LoadData(fileName).ReadToEnd();
+            try
+            {
+                return GetMessageFromString(input, name);
+            }
+            catch (InvalidRecordException ex) when (LogInvalidRecordException(ex))
+            {
+                Debug.Assert(false, "Darf hier niemals landen");
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Erstellt ein Meldungsobjekt anhand eines Textes und Stream-Namens
+        /// </summary>
+        /// <param name="input">Der Text anhand dessen das Meldungsobjekt erstellt werden soll</param>
+        /// <param name="streamName">Der Name des Streams, der für die Deserialisierung verwendet werden soll</param>
+        /// <returns></returns>
+        private AagMessageData GetMessageFromString(string input, string streamName)
+        {
             var output = new StringWriter();
-            var writer = StreamFactory.CreateWriter(name, output);
-            var reader = StreamFactory.CreateReader(name, new StringReader(input));
-            var deuevMessage = new BwnaMessageData();
+            var writer = StreamFactory.CreateWriter(streamName, output);
+            var reader = StreamFactory.CreateReader(streamName, new StringReader(input));
+            var deuevMessage = new AagMessageData();
             try
             {
                 var streamObject = reader.Read();
@@ -65,55 +109,64 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
                     deuevMessage.VOSZ.Add(vosz);
                     writer.Write(vosz);
                     streamObject = reader.Read();
-                }
-                while (reader.RecordName == "VOSZ" || reader.RecordName == "VOSZ-v01");
+                } while (reader.RecordName == "VOSZ" || reader.RecordName == "VOSZ-v01");
 
-                var dsko = Assert.IsType<DSKO02>(streamObject);
-                deuevMessage.DSKO = dsko;
-                writer.Write(dsko);
-                streamObject = reader.Read();
+                if (reader.RecordName == "DSKO-v04" || streamName == "dser-agger-v04")
+                {
+                    var dsko = Assert.IsType<DSKO04>(streamObject);
+                    deuevMessage.DSKO04 = dsko;
+                    writer.Write(dsko);
+                    streamObject = reader.Read();
+                }
+                else if (reader.RecordName == "DSKO" || reader.RecordName == "DSKO-v02")
+                {
+                    var dsko = Assert.IsType<DSKO02>(streamObject);
+                    deuevMessage.DSKO02 = dsko;
+                    writer.Write(dsko);
+                    streamObject = reader.Read();
+                }
 
                 while (reader.RecordName == "DSER" || reader.RecordName == "DSER-v02" || reader.RecordName == "DSER-v03")
                 {
-                    switch (name)
+                    switch (streamName)
                     {
                         case "dser-agger-v02":
-                            {
-                                var record = Assert.IsType<DSER02>(streamObject);
-                                deuevMessage.DSER02.Add(record);
-                                writer.Write(record);
-                            }
+                        {
+                            var record = Assert.IsType<DSER02>(streamObject);
+                            deuevMessage.DSER02.Add(record);
+                            writer.Write(record);
+                        }
                             break;
                         case "dser-agger-v03":
-                            {
-                                var record = Assert.IsType<DSER03>(streamObject);
-                                deuevMessage.DSER03.Add(record);
-                                writer.Write(record);
-                            }
+                        {
+                            var record = Assert.IsType<DSER03>(streamObject);
+                            deuevMessage.DSER03.Add(record);
+                            writer.Write(record);
+                        }
                             break;
                         case "super-message":
                             switch (reader.RecordName)
                             {
                                 case "DSER-v02":
-                                    {
-                                        var record = Assert.IsType<DSER02>(streamObject);
-                                        deuevMessage.DSER02.Add(record);
-                                        writer.Write(record);
-                                    }
+                                {
+                                    var record = Assert.IsType<DSER02>(streamObject);
+                                    deuevMessage.DSER02.Add(record);
+                                    writer.Write(record);
+                                }
                                     break;
                                 case "DSER-v03":
-                                    {
-                                        var record = Assert.IsType<DSER03>(streamObject);
-                                        deuevMessage.DSER03.Add(record);
-                                        writer.Write(record);
-                                    }
+                                {
+                                    var record = Assert.IsType<DSER03>(streamObject);
+                                    deuevMessage.DSER03.Add(record);
+                                    writer.Write(record);
+                                }
                                     break;
                                 default:
                                     throw new InvalidOperationException(string.Format("Unsupported record {0}", reader.RecordName));
                             }
                             break;
                         default:
-                            throw new InvalidOperationException(string.Format("Unsupported stream {0}", name));
+                            throw new InvalidOperationException(string.Format("Unsupported stream {0}", streamName));
                     }
                     streamObject = reader.Read();
                 }
@@ -124,15 +177,17 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
                     writer.Write(streamObject);
                     deuevMessage.NCSZ.Add(ncsz);
                     streamObject = reader.Read();
-                }
-                while (reader.RecordName != null && (reader.RecordName == "NCSZ" || reader.RecordName == "NCSZ-v01"));
+                } while (reader.RecordName != null && (reader.RecordName == "NCSZ" || reader.RecordName == "NCSZ-v01"));
 
                 Assert.Null(reader.RecordName);
                 Assert.Equal(deuevMessage.VOSZ.Count, deuevMessage.NCSZ.Count);
 
                 writer.Close();
+
+                var inputLines = input.Split(new[] {'\r', '\n'}, StringSplitOptions.RemoveEmptyEntries).Select(x => x.TrimEnd());
                 string output2 = output.ToString();
-                Assert.Equal(input, output2);
+                var outputLines = output2.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Select(x => x.TrimEnd());
+                Assert.Equal(inputLines, outputLines);
                 return deuevMessage;
             }
             finally
@@ -141,13 +196,30 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
             }
         }
 
+        private bool LogInvalidRecordException(InvalidRecordException ex)
+        {
+            _output.WriteLine(ex.ToString());
+            foreach (var recordError in ex.RecordContext.RecordErrors)
+            {
+                _output.WriteLine($"Record error: {recordError}");
+            }
+            foreach (var fieldErrors in ex.RecordContext.GetFieldErrors())
+            {
+                foreach (var fieldError in fieldErrors)
+                {
+                    _output.WriteLine($"Field error for field {fieldErrors.Key}: {fieldError}");
+                }
+            }
+            return false;
+        }
+
         /// <summary>
         /// Hilfsklasse der Meldedatei, die eine Meldedatei im Deuev-Format
         /// mit den Datensätzen als Objekte enthält
         /// </summary>
-        private class BwnaMessageData
+        private class AagMessageData
         {
-            public BwnaMessageData()
+            public AagMessageData()
             {
                 VOSZ = new List<VOSZ>();
                 DSER02 = new List<DSER02>();
@@ -157,7 +229,8 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
 
             public List<VOSZ> VOSZ { get; set; }
 
-            public DSKO02 DSKO { get; set; }
+            public DSKO02 DSKO02 { get; set; }
+            public DSKO04 DSKO04 { get; set; }
 
             public List<DSER02> DSER02 { get; set; }
 

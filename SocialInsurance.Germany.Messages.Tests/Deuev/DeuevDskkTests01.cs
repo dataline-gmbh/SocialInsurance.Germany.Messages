@@ -8,11 +8,19 @@ using BeanIO;
 using SocialInsurance.Germany.Messages.Pocos;
 
 using Xunit;
+using Xunit.Abstractions;
 
 namespace SocialInsurance.Germany.Messages.Tests.Deuev
 {
     public class DeuevDskkTests01 : TestBasis
     {
+        private readonly ITestOutputHelper _output;
+
+        public DeuevDskkTests01(ITestOutputHelper output)
+        {
+            _output = output;
+        }
+
         /// <summary>
         /// Beginn der Versicherungs- und/oder Beitragspflicht
         /// wegen Aufnahme einer Beschäftigung (VSNR liegt vor)
@@ -95,16 +103,16 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
 
         private bool LogInvalidRecordException(InvalidRecordException ex)
         {
-            Debug.WriteLine(ex.ToString());
+            _output.WriteLine(ex.ToString());
             foreach (var recordError in ex.RecordContext.RecordErrors)
             {
-                Debug.WriteLine($"Record error: {recordError}");
+                _output.WriteLine($"Record error: {recordError}");
             }
             foreach (var fieldErrors in ex.RecordContext.GetFieldErrors())
             {
                 foreach (var fieldError in fieldErrors)
                 {
-                    Debug.WriteLine($"Field error for field {fieldErrors.Key}: {fieldError}");
+                    _output.WriteLine($"Field error for field {fieldErrors.Key}: {fieldError}");
                 }
             }
             return false;
