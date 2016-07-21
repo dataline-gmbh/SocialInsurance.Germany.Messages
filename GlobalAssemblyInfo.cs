@@ -16,7 +16,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("Release")]
 #endif
 [assembly: AssemblyCompany("DATALINE GmbH")]
-[assembly: AssemblyCopyright("Copyright © 2015 DATALINE GmbH")]
+[assembly: AssemblyCopyright("Copyright © 2015-2016 DATALINE GmbH")]
 //// [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: NeutralResourcesLanguage("de")]
@@ -31,8 +31,8 @@ using System.Resources;
 // Sie können alle Werte angeben oder die standardmäßigen Build- und Revisionsnummern
 // durch Einsatz von '*', wie in nachfolgendem Beispiel:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.3.0")]
-[assembly: AssemblyFileVersion("0.3.0")]
-[assembly: AssemblyInformationalVersion("0.3.0")]
+[assembly: AssemblyVersion("0.4.0")]
+[assembly: AssemblyFileVersion("0.4.0")]
+[assembly: AssemblyInformationalVersion("0.4.0")]
 
 [assembly: CLSCompliant(true)]

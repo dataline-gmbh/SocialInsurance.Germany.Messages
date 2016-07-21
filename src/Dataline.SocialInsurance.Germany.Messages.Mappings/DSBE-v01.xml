@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBMI.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBHB.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <template name="DSBE-v01">
+    <field name="KE" literal="DSBE" length="4" rid="true" required="true" />
+    <field name="VF" literal="BVBEI" length="5" rid="true" required="true" />
+    <field name="BBNRAB" length="15" required="true" />
+    <field name="BBNREP" length="15" required="true" />
+    <field name="VERNRDS" length="2" literal="01" rid="true" type="int" format="d2" required="true"/>
+    <field name="VERNRKP" length="2" type="int" format="00"/>
+    <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
+    <field name="FEKZ" regex="[0-4]" length="1" required="true" />
+    <field name="FEAN" length="1" required="true" regex="[0-9]" />
+    <field name="NA1" length="30" required="true"/>
+    <field name="NA2" length="30" required="false"/>
+    <field name="NA3" length="30" required="false"/>
+    <field name="STR" length="33" required="false"/>
+    <field name="HNR" length="9" required="false"/>
+    <field name="PLZ" length="5" required="true" type="int" format="d5"/>
+    <field name="ORT" length="34" required="true"/>
+    <field name="AZVU" length="20" required="false"/>
+    <field name="BBNRVU" length="15" required="true"/>
+    <field name="BBNRAS" length="15" required="false"/>
+    <field name="BBNRBV" length="15" required="true"/>
+    <field name="MNRBV" length="17" required="true"/>
+    <field name="ABMO" length="6" required="true" format="yyyyMM"/>
+    <field name="VEMO" length="6" required="true" format="yyyyMM"/>
+    <field name="MEVO" length="1" required="true"/>
+    <field name="VZSVTG" length="1" required="true" regex="[ +-]"/>
+    <field name="SVTG" length="2" required="true" regex="([0-2][0-9])|(3[01])" type="int" format="00"/>
+    <field name="VZLGA" length="1" required="true" regex="[ +-]"/>
+    <field name="LGA" length="8" required="true" type="int" format="d8"/>
+    <field name="IK" length="1" required="true" type="int" literal="0"/>
+    <field name="VZEGA" length="1" required="true" regex="[ +-]"/>
+    <field name="EGA" length="9" required="true" type="int" format="d9"/>
+    <field name="VZEGAB" length="1" required="true" regex="[ +-]"/>
+    <field name="EGAB" length="8" required="true" type="int" format="d8"/>
+    <field name="BZ" length="1" required="true" regex="[0-5]"/>
+    <field name="VZPB" length="1" required="true" regex="[ +-]"/>
+    <field name="PB" length="8" required="true" type="int" format="d8"/>
+    <field name="DBMIV" length="1" required="true" typeHandler="jn"/>
+    <field name="DBHBV" length="1" required="true" typeHandler="jn"/>
+    <field name="RESERVE" length="2" required="false" ignore="true"/>
+    <segment name="ListeDBMI" class="SocialInsurance.Germany.Messages.Pocos.DBMI, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="DBMIV" collection="list">
+      <include template="DBMI" />
+    </segment>
+    <segment name="ListeDBHB" class="SocialInsurance.Germany.Messages.Pocos.DBHB, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="DBHBV" collection="list">
+      <include template="DBHB" />
+    </segment>
+    <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
+      <include template="DBFE" />
+    </segment>
+  </template>
+</beanio>

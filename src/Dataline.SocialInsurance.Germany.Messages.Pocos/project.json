@@ -1,0 +1,64 @@
+﻿{
+  "version": "0.4.0-*",
+  "authors": [ "DATALINE GmbH & Co. KG" ],
+  "title": "Klassen für SV-Meldungen",
+  "description": "Bibliothek, die alle Klassen für SV-Meldungen enthält",
+  "copyright": "DATALINE GmbH & Co. KG 2015-2016",
+
+  "configurations": {
+    "Debug": {
+      "buildOptions": {
+        "define": [ "DEBUG" ],
+        "debugType": "portable"
+      }
+    },
+    "Release": {
+      "buildOptions": {
+        "debugType": "none",
+        "xmlDoc": true
+      }
+    }
+  },
+
+  "buildOptions": {
+    "additionalArguments": [ "/ruleset:../../Dataline.ruleset", "/additionalfile:stylecop.json" ],
+    "compile": [ "../../GlobalAssemblyInfo.cs" ]
+  },
+
+  "packOptions": {
+    "summary": "Klassen für SV-Meldungen",
+    "owners": [ "dataline" ],
+    "licenseUrl": "http://opensource.org/licenses/MIT",
+    "projectUrl": "https://github.com/dataline-gmbh/SocialInsurance.Germany.Messages",
+    "tags": [ "SV", "Meldung", "poco", "classes", "klassen", "Sozialversicherung", "DEUEV", "DEÜV" ],
+    "iconUrl": "https://raw.githubusercontent.com/dataline-gmbh/SocialInsurance.Germany.Messages/master/dataline-64.png",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dataline-gmbh/SocialInsurance.Germany.Messages"
+    },
+    "files": {
+      "mappings": {
+        "/": [ "../../*.md", "../../dataline-64.png" ],
+        "lib/native/": [ "../../packaging/_._" ],
+        "tools/native/": [ "../../packaging/*-pocos.ps1" ]
+      }
+    }
+  },
+
+  "dependencies": {
+    "NodaTime": "2.0.0-alpha20160707",
+    "StyleCop.Analyzers": {
+      "version": "1.0.0",
+      "type": "build"
+    }
+  },
+
+  "frameworks": {
+    "netstandard1.1": {
+      "dependencies": {
+        "NETStandard.Library": "1.6.0"
+      }
+    },
+    "net45": {}
+  }
+}
