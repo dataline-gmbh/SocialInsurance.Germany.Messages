@@ -47,11 +47,11 @@
   },
 
   "dependencies": {
-    "FubarDev.BeanIO": "4.0.0-beta1-0008",
     "StyleCop.Analyzers": {
       "version": "1.0.0",
       "type": "build"
     },
+    "FubarDev.BeanIO": "4.0.0-beta1-0009",
     "Dataline.SocialInsurance.Germany.Messages.Pocos": {
       "target": "project"
     }
@@ -60,7 +60,7 @@
   "frameworks": {
     "netstandard1.1": {
       "dependencies": {
-        "NETStandard.Library": "1.6.0"
+        "System.Runtime": "4.1.0"
       }
     },
     "net45": {}
