@@ -51,7 +51,7 @@
       "version": "1.0.0",
       "type": "build"
     },
-    "FubarDev.BeanIO": "4.0.0-beta1-0009",
+    "FubarDev.BeanIO": "4.0.0-*",
     "Dataline.SocialInsurance.Germany.Messages.Pocos": {
       "target": "project"
     }
