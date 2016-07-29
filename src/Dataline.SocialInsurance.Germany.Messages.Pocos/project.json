@@ -40,13 +40,13 @@
       "mappings": {
         "/": [ "../../*.md", "../../dataline-64.png" ],
         "lib/native/": [ "../../packaging/_._" ],
-        "tools/native/": [ "../../packaging/*-pocos.ps1" ]
+        "build/": "../../packaging/Dataline.SocialInsurance.Germany.Messages.Pocos.targets"
       }
     }
   },
 
   "dependencies": {
-    "NodaTime": "2.0.0-alpha20160707",
+    "NodaTime": "2.0.0-alpha20160729",
     "StyleCop.Analyzers": {
       "version": "1.0.0",
       "type": "build"

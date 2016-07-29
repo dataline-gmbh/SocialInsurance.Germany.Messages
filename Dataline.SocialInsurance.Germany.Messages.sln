@@ -20,10 +20,11 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Dataline.SocialInsurance.Ge
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packaging", "packaging", "{E8987361-D53E-437C-B8EF-56CD24450978}"
 	ProjectSection(SolutionItems) = preProject
-		packaging\install-mappings.ps1 = packaging\install-mappings.ps1
-		packaging\install-pocos.ps1 = packaging\install-pocos.ps1
-		packaging\uninstall-mappings.ps1 = packaging\uninstall-mappings.ps1
-		packaging\uninstall-pocos.ps1 = packaging\uninstall-pocos.ps1
+		packaging\Dataline.SocialInsurance.Germany.Messages.Mappings.nuspec = packaging\Dataline.SocialInsurance.Germany.Messages.Mappings.nuspec
+		packaging\Dataline.SocialInsurance.Germany.Messages.Mappings.targets = packaging\Dataline.SocialInsurance.Germany.Messages.Mappings.targets
+		packaging\Dataline.SocialInsurance.Germany.Messages.Pocos.nuspec = packaging\Dataline.SocialInsurance.Germany.Messages.Pocos.nuspec
+		packaging\Dataline.SocialInsurance.Germany.Messages.Pocos.targets = packaging\Dataline.SocialInsurance.Germany.Messages.Pocos.targets
+		packaging\NuGet.exe = packaging\NuGet.exe
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Dataline.SocialInsurance.Germany.Messages.Mappings", "src\Dataline.SocialInsurance.Germany.Messages.Mappings\Dataline.SocialInsurance.Germany.Messages.Mappings.xproj", "{F5F18191-CFF2-4CEE-B4D1-E814DDCD21F0}"

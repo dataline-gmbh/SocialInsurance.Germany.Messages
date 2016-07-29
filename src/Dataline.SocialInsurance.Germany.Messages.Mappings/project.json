@@ -41,7 +41,7 @@
       "mappings": {
         "/": [ "../../*.md", "../../dataline-64.png" ],
         "lib/native/": [ "../../packaging/_._" ],
-        "tools/native/": [ "../../packaging/*-mappings.ps1" ]
+        "build/": "../../packaging/Dataline.SocialInsurance.Germany.Messages.Mappings.targets"
       }
     }
   },
@@ -51,7 +51,7 @@
       "version": "1.0.0",
       "type": "build"
     },
-    "FubarDev.BeanIO": "4.0.0-*",
+    "FubarDev.BeanIO": "4.0.0-beta2-0016",
     "Dataline.SocialInsurance.Germany.Messages.Pocos": {
       "target": "project"
     }
