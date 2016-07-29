@@ -338,13 +338,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Die laufende Nummer (01 - 999) ist anzugeben, wenn innerhalb eines Entgeltabrechungszeitraums mehr als ein Datensatz je Betriebsstätte übermittelt wird.
         /// Wird in Stelle 628 "S" angegeben, ist die laufende des zu stornierenden Datensatzes anzugeben.
         /// Länge 3, Mussangabe
-        /// </remarks> /// <summary>
-        /// Holt oder setzt die laufende Nummer
-        /// </summary>
-        /// <remarks>
-        /// Die laufende Nummer (01 - 999) ist anzugeben, wenn innerhalb eines Entgeltabrechungszeitraums mehr als ein Datensatz je Betriebsstätte übermittelt wird.
-        /// Wird in Stelle 628 "S" angegeben, ist die laufende des zu stornierenden Datensatzes anzugeben.
-        /// Länge 3, Mussangabe
         /// </remarks>
         public int LFDNR { get; set; }
 

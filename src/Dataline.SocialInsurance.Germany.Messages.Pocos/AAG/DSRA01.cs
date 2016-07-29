@@ -8,6 +8,9 @@ using System.Linq;
 
 namespace SocialInsurance.Germany.Messages.Pocos.AAG
 {
+    /// <summary>
+    /// DSRA-Datensatz Version 1
+    /// </summary>
     public class DSRA01 : IDatensatz
     {
         private bool? _hatDbra;
