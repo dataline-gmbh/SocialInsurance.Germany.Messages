@@ -4,6 +4,8 @@
 
 using System;
 
+using NodaTime;
+
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
@@ -33,7 +35,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Beginn des Arbeits-/Dienstverhältnisses, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime AVBEG { get; set; }
+        public LocalDate AVBEG { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Steuerklasse des Arbeitnehmers

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<beanio xmlns="http://www.beanio.org/2015/06">
+<beanio xmlns="http://www.beanio.org/2016/07">
   <template name="DBAP-v01">
     <field name="KE" length="4" literal="DBAP" required="true"/>
     <field name="ANRAP" length="1" required="true" regex="[MWS]"/>

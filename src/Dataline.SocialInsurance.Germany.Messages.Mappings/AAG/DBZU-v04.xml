@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<beanio xmlns="http://www.beanio.org/2015/06">
+<beanio xmlns="http://www.beanio.org/2016/07">
   <template name="DBZU-v04">
     <field name="KE" length="4" literal="DBZU" required="true"/>
     <field name="KENNZV" length="1" required="true" regex="[0-1]" type="int"/>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<beanio xmlns="http://www.beanio.org/2015/06">
+<beanio xmlns="http://www.beanio.org/2016/07">
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBNA.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBGB.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBAN.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
@@ -16,9 +16,9 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBEN.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
-  <template name="MVDS-v01">
+  <template name="ELENA-MVDS-v01">
     <field name="KE" literal="MVDS" length="4" rid="true" required="true" />
-    <field name="VF" literal="ELENA" length="5" required="true" />
+    <field name="VF" literal="ELENA" length="5" required="true" rid="true" />
     <field name="BBNRAB" length="15" required="true" />
     <field name="BBNREP" length="15" required="true" />
     <field name="VERNR" length="2" literal="01" rid="true" type="int" format="00" required="true" />

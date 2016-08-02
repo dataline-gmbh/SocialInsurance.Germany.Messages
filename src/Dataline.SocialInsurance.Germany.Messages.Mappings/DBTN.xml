@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<beanio xmlns="http://www.beanio.org/2015/06">
+<beanio xmlns="http://www.beanio.org/2016/07">
   <template name="DBTN">
     <field name="KE" length="4" literal="DBTN" required="true"/>
     <field name="SOFOPFL" length="1" required="true" typeHandler="jn"/>
     <field name="DATENTSO" length="8" required="true"/>
-    <field name="GUELTSO" length="8" required="true" format="yyyyMMdd"/>
+    <field name="GUELTSO" length="8" required="false" format="yyyyMMdd" parseDefault="false" default="00000000"/>
     <field name="BBNRENTSO" length="15" required="true"/>
     <field name="INSOLVUPFL" length="1" required="true" typeHandler="jn"/>
-    <field name="DATENTIU" length="8" required="true" format="yyyyMMdd"/>
-    <field name="GUELTIU" length="8" required="true" format="yyyyMMdd"/>
+    <field name="DATENTIU" length="8" required="false" format="yyyyMMdd" parseDefault="false" default="00000000"/>
+    <field name="GUELTIU" length="8" required="false" format="yyyyMMdd" parseDefault="false" default="00000000"/>
     <field name="U1PFL" length="1" required="true" typeHandler="jn"/>
-    <field name="DATENTU1" length="8" required="true" format="yyyyMMdd"/>
-    <field name="GUELTU1" length="8" required="true" format="yyyyMMdd"/>
+    <field name="DATENTU1" length="8" required="false" format="yyyyMMdd" parseDefault="false" default="00000000"/>
+    <field name="GUELTU1" length="8" required="false" format="yyyyMMdd" parseDefault="false" default="00000000"/>
     <field name="BBNRENTU1" length="15" required="true"/>
     <field name="RESERVE" length="8" required="false" ignore="true"/>
   </template>

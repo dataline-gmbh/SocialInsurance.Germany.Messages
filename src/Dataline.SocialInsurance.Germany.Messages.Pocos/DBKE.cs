@@ -4,6 +4,8 @@
 
 using System;
 
+using NodaTime;
+
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
@@ -35,7 +37,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// (d.h. "Kündigung zum" oder "Ende des befristeten Arbeitsverhältnisses
         /// am oder bei Ausbildungsverhältnissen das tatsächliche Ende")
         /// </remarks>
-        public DateTime AVEND { get; set; }
+        public LocalDate AVEND { get; set; }
 
         /// <summary>
         /// Holt oder setzt, ob es sich umn ein befristetes Arbeitsverhältnis hält
@@ -94,7 +96,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Entlassung / Kündigung des Arbeitsverhältnisses oder Abschluss des Aufhebungsvertrages am, Länge 8, Mussangabe
         /// </remarks>
-        public int AVKUEAM { get; set; }
+        public LocalDate? AVKUEAM { get; set; }
 
         /// <summary>
         /// Holt oder setzt, ob es sich um eine unwiderrufliche Freistellung mit Weiterzahlung des Arbeitsentgelts handelt
@@ -112,7 +114,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Datum des Beginns der unwiderruflichen Freistellung durch den Arbeitgeber, Länge 8, Mussangabe
         /// mit tatsächlicher Weiterzahlung des Arbeitsentgeltes
         /// </remarks>
-        public DateTime AVUWFWZBEG { get; set; }
+        public LocalDate AVUWFWZBEG { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Datum des Endes der unwiderruflichen Freistellung mit Weiterzahlung des Arbeitsentgelts
@@ -121,7 +123,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Datum des Endes der unwiderruflichen Freistellung durch den Arbeitgeber, Länge 8, Mussangabe
         /// mit tatsächlicher Weiterzahlung des Arbeitsentgeltes
         /// </remarks>
-        public DateTime AVUWFWZEND { get; set; }
+        public LocalDate AVUWFWZEND { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Monat für den die letzte volsst#ndige Entgeltabrechnung durchgeführt wurde

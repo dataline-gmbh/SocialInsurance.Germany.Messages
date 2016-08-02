@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<beanio xmlns="http://www.beanio.org/2015/06">
+<beanio xmlns="http://www.beanio.org/2016/07">
 	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.VOSZ-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKO-v02.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKO-v04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
@@ -10,8 +10,8 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKK-v02.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSAE-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSQU-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSVV-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.MVDS-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.ELENA.DSVV-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.ELENA.MVDS-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSER-v02.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSER-v03.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSER-v04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
@@ -405,11 +405,11 @@
       <record name="DSQU-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSQU, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSQU-v01"/>
       </record>
-      <record name="DSVV-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSVV, Dataline.SocialInsurance.Germany.Messages.Pocos">
-        <include template="DSVV-v01"/>
+      <record name="ELENA-DSVV-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.ELENA.DSVV, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="ELENA-DSVV-v01"/>
       </record>
-      <record name="MVDS-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.MVDS, Dataline.SocialInsurance.Germany.Messages.Pocos">
-        <include template="MVDS-v01"/>
+      <record name="ELENA-MVDS-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.ELENA.MVDS, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="ELENA-MVDS-v01"/>
       </record>
       <record name="DSRA-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSRA01, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSRA-v01"/>

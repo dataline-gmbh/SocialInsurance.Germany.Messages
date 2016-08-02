@@ -131,7 +131,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Geburtsdatum des Versicherten , Länge 8, Mussangabe
         /// </remarks>
-        public DateTime GEBDA { get; set; }
+        public LocalDate GEBDA { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Betriebsnummer des Verursachers des Datensatzes

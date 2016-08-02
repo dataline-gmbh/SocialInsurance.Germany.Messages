@@ -5,6 +5,8 @@
 using System;
 using System.Collections.Generic;
 
+using NodaTime;
+
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
@@ -34,7 +36,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Zeitraumbeginn der eingegangenen Meldung, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime ZRBG { get; set; }
+        public LocalDate ZRBG { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Ende des Zeitraums der eingegangenen Meldung
@@ -42,7 +44,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Zeitraumende der eingegangenen Meldung, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime ZREN { get; set; }
+        public LocalDate ZREN { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Personengruppenkennzeichen
@@ -172,7 +174,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
             /// <remarks>
             /// Zeitraumbeginn der eingegangenen Meldung, Länge 8, Mussangabe
             /// </remarks>
-            public DateTime ZRBGNN { get; set; }
+            public LocalDate ZRBGNN { get; set; }
 
             /// <summary>
             /// Holt oder setzt das Ende des Zeitraums der eingegangenen Meldung
@@ -180,7 +182,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
             /// <remarks>
             /// Zeitraumende der eingegangenen Meldung, Länge 8, Mussangabe
             /// </remarks>
-            public DateTime ZRENNN { get; set; }
+            public LocalDate ZRENNN { get; set; }
 
             /// <summary>
             /// Holt oder setzt das Personengruppenkennzeichen

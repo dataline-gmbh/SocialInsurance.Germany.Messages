@@ -4,6 +4,8 @@
 
 using System;
 
+using NodaTime;
+
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
@@ -51,7 +53,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Beginn des Zeitraums, für den die Meldung gelten soll(Beschäftigungsbeginn oder Beginn des Abrechnungszeitraums), Länge 8, Mussangabe
         /// </remarks>
-        public DateTime ZRBGKV { get; set; }
+        public LocalDate ZRBGKV { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Ende des Zeitraums der Meldung
@@ -59,7 +61,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Ende des Zeitraums, für den die Meldung gelten soll(Beschäftigungsende oder Ende des Abrechnungszeitraums), Länge 8, Mussangabe
         /// </remarks>
-        public DateTime ZRENKV { get; set; }
+        public LocalDate ZRENKV { get; set; }
 
         /// <summary>
         /// Holt oder setzt das einmalig gezahlte Entgelt

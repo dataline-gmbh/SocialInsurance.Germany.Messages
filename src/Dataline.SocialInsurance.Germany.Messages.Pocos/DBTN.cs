@@ -4,6 +4,8 @@
 
 using System;
 
+using NodaTime;
+
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
@@ -42,7 +44,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Entscheidung zur Sofortmeldepflicht, Länge 8, Mussangabe unter Bedingungen
         /// </remarks>
-        public DateTime DATENTSO { get; set; }
+        public LocalDate? DATENTSO { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Datum der Verpflichtung zur Abgabe einer Sofortmeldung
@@ -50,7 +52,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Datum, ab wann die Verpflichtung zur Abgabe einer Sofortmeldung besteht bzw. nicht besteht, Länge 8, Mussangabe unter Bedingungen
         /// </remarks>
-        public DateTime GUELTSO { get; set; }
+        public LocalDate? GUELTSO { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Betriebsnummer der Krankenkasse, die über die Sofortmeldepflicht entschieden hat
@@ -75,7 +77,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Datum der Entscheidung zur Insolvenzgeldumlagepflicht, Länge 8, Mussangabe unter Bedingungen
         /// </remarks>
-        public DateTime DATENTIU { get; set; }
+        public LocalDate? DATENTIU { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Datum der Insolvenzgeldumlagepflicht
@@ -83,7 +85,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Datum, ab wann die Teilnahme an der Insolvenzgeldumlagepflicht besteht oder nicht, Länge 8, Mussangabe unter Bedingungen
         /// </remarks>
-        public DateTime GUELTIU { get; set; }
+        public LocalDate? GUELTIU { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Betriebsnummer der Krankenkasse, die über die Insolvenzgeldumlagepflicht entschieden hat
@@ -108,7 +110,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Datum der Entscheidung zur Umlagepflicht U1, Länge 8, Mussangabe unter Bedingungen
         /// </remarks>
-        public DateTime DATENTU1 { get; set; }
+        public LocalDate? DATENTU1 { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Datum, ab wann die Teilnahme an der Umlage 1 besteht oder nicht
@@ -116,7 +118,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Datum, ab wann die Teilnahme an der Umlage 1 besteht oder nicht, Länge 8, Mussangabe unter Bedingungen
         /// </remarks>
-        public DateTime GUELTU1 { get; set; }
+        public LocalDate? GUELTU1 { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Betriebsnummer der Krankenkasse, die über die Umlagepflicht U1 entschieden hat
