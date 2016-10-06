@@ -30,7 +30,8 @@
       "Deuev/DSKK02/*",
       "**/ebna*.a*",
       "**/ebea*.a*",
-      "**/eaag*.a*"
+      "**/eaag*.a*",
+      "Generic/Data/*"
     ]
   },
 
