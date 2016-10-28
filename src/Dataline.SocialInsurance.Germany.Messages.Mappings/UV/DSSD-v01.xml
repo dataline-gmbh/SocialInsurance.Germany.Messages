@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.UV.DBFU.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBAP-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+	<template name="DSSD-v01">
+		<field name="KE" literal="DSSD" length="4" rid="true" required="true" />
+		<field name="VF" literal="UVELN" length="5" required="true" />
+		<field name="BBNRAB" length="15" required="true" />
+		<field name="BBNREP" length="15" required="true" />
+		<field name="VERNRSD" literal="01" rid="true" length="2" type="int" format="00" />
+    
+    <field name="RESERVE1" length="2" required="false" ignore="true"/>
+    <field name="RESERVE2" length="2" required="false" ignore="true"/>
+
+    <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
+    
+    <field name="RESERVE3" length="100" required="false" ignore="true"/>
+    
+    <field name="DSID" length="32" required="true"/>
+    <field name="VOID" length="32" required="true"/>
+    
+    <field name="RESERVE4" length="100" required="false" ignore="true"/>
+
+    <field name="BBNRLB" length="15" required="true" />
+    <field name="BBNRAS" length="15" required="true" />
+    <field name="LFDNR" length="3" required="true" format="D3"/>
+    <field name="BBNRUV" length="15" required="true" />
+    <field name="MNR" length="20" required="true" />
+    <field name="MNRGVON" length="8" required="true" format="yyyyMMdd"/>
+    <field name="MNRGBIS" length="8" required="true" format="yyyyMMdd"/>
+    <field name="JAHR" length="4" required="true" format="D4"/>
+    <field name="UVNAME1" length="30"/>
+    <field name="UVNAME2" length="30"/>
+    <field name="UVNAME3" length="30"/>
+    <field name="UVNAME4" length="30"/>
+    <field name="UVORT" length="30"/>
+    <field name="BEITRAG" length="1" required="true"/>
+    <field name="ANZGTST" length="2" format="D2" required="true"/>
+
+    <segment name="GTST" class="SocialInsurance.Germany.Messages.Pocos.UV.DSSD01+Gefahrentarifstelle, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="ANZGTST" collection="list">
+      <field name="BBNRGT" length="15" required="true"/>
+      <field name="GTST" length="8" required="true"/>
+      <field name="GTSTNAME" length="50" required="true"/>
+      <field name="GTSTVON" length="8" required="true" format="yyyyMMdd"/>
+      <field name="GTSTBIS" length="8" required="true" format="yyyyMMdd"/>
+    </segment>
+	</template>
+</beanio>

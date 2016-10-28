@@ -19,26 +19,17 @@ namespace SocialInsurance.Germany.Messages.Mappings.Types
     /// </summary>
     public class DBKSTypeHandler : ITypeHandler
     {
-        private StreamFactory _factory;
+        private static readonly Lazy<StreamFactory> _factory = new Lazy<StreamFactory>(() =>
+        {
+            var factory = StreamFactory.NewInstance();
+            factory.Load(Meldungen.LoadMeldungen());
+            return factory;
+        });
 
         /// <inheritdoc/>
-        public Type TargetType
-        {
-            get { return typeof(DBKS); }
-        }
+        public Type TargetType => typeof(DBKS);
 
-        private StreamFactory Factory
-        {
-            get
-            {
-                if (_factory == null)
-                {
-                    _factory = StreamFactory.NewInstance();
-                    _factory.Load(Meldungen.LoadMeldungen());
-                }
-                return _factory;
-            }
-        }
+        private StreamFactory Factory => _factory.Value;
 
         /// <inheritdoc/>
         public string Format(object value)

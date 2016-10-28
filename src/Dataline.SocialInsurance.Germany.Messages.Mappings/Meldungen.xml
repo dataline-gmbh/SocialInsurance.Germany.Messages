@@ -3,7 +3,8 @@
 	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.VOSZ-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKO-v02.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKO-v04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
-	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSME-v02.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BW03-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSME-v02.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSME-v0301.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBD-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKK-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
@@ -11,16 +12,22 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSAE-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSQU-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSVV-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.ELENA.DSVV-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.ELENA.MVDS-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSER-v02.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSER-v03.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSER-v04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSRA-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBE-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBE-v0201.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.NCSZ-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
 
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.UV.DSLN-v0101.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.UV.DSAS-v0101.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.UV.DSSD-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.ELENA.DSVV-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.ELENA.MVDS-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSER-v02.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSER-v03.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSER-v04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSRA-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.VOSZ-v05.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.VOSZ-v06.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.BW02-v09.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
@@ -29,8 +36,6 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.NCSZ-v06.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.NCSZ-v05.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
 
-  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BW03-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
-  
   <stream name="dsme-deuev-v02" format="fixedlength">
 		<record name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
 			<include template="VOSZ-v01"/>
@@ -439,6 +444,15 @@
       </record>
       <record name="DSRA-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSRA01, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSRA-v01"/>
+      </record>
+      <record name="DSLN-v0101" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.UV.DSLN0101, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSLN-v0101"/>
+      </record>
+      <record name="DSAS-v0101" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.UV.DSAS0101, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSAS-v0101"/>
+      </record>
+      <record name="DSSD-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.UV.DSSD01, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSSD-v01"/>
       </record>
     </group>
     <group name="nachlauf" order="4" occurs="1-2">

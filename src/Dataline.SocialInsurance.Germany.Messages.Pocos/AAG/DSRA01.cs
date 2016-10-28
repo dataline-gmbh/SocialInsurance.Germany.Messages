@@ -193,7 +193,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         }
 
         /// <summary>
-        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Arbeitsunfähigkeit vorhanden ist
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Rückmeldung AAG vorhanden ist
         /// </summary>
         public DBRA01 DBRA
         {
@@ -209,7 +209,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         }
 
         /// <summary>
-        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Beschäftigungsverbot vorhanden ist
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Ansprechpartner vorhanden ist
         /// </summary>
         public DBAP01 DBAP
         {

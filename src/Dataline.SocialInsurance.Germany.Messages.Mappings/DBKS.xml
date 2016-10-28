@@ -1,16 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <beanio xmlns="http://www.beanio.org/2016/07">
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBKSK.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBKSS.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <stream name="DBKS" format="fixedlength">
     <!--
-    Wird zur Laufzeit von Typ-Konverter für DBKS benutzt.
+    Wird zur Laufzeit vom Typ-Konverter für DBKS benutzt.
     -->
-    <record name="DBKSS" minOccurs="0">
+    <record name="DBKSS" minOccurs="0" class="SocialInsurance.Germany.Messages.Pocos.DBKSS, Dataline.SocialInsurance.Germany.Messages.Pocos">
       <field name="Kennung" length="4" literal="DBKS" required="true" rid="true"/>
       <field name="KENNZKS" length="1" literal="S" required="true" rid="true"/>
+      <include template="DBKSS"/>
     </record>
-    <record name="DBKSK" minOccurs="0">
+    <record name="DBKSK" minOccurs="0" class="SocialInsurance.Germany.Messages.Pocos.DBKSK, Dataline.SocialInsurance.Germany.Messages.Pocos">
       <field name="Kennung" length="4" literal="DBKS" required="true" rid="true"/>
       <field name="KENNZKS" length="1" literal="K" required="true" rid="true"/>
+      <include template="DBKSK"/>
     </record>
   </stream>
 </beanio>

@@ -10,20 +10,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
     public abstract class DBKS : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBKS"/> Klasse
-        /// </summary>
-        public DBKS()
-        {
-            KE = "DBKS";
-        }
-
-        /// <summary>
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
         /// Kennung, um welchen Datenbaustein es sich handelt
         /// </remarks>
-        public string KE { get; set; }
+        public string KE { get; set; } = "DBKS";
 
         /// <summary>
         /// Holt oder setzt die Kennzeichen-Daten für S = See oder K = Knappschaft

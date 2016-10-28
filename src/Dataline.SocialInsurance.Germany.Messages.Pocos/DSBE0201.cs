@@ -469,7 +469,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         {
             get
             {
-                return ListeDBBF == null ? null : ListeDBBF.SingleOrDefault();
+                return ListeDBBF?.SingleOrDefault();
             }
             set
             {
