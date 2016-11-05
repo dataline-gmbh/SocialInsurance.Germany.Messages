@@ -26,7 +26,7 @@
     <field name="KENNZST" length="1" required="true" typeHandler="jn"/>
     <field name="RESERVE2" length="32" required="false" ignore="true"/>
     
-    <field name="MMUEB" length="1" required="true" format="0" />
+    <field name="MMUEB" length="1" required="true" />
     <field name="RESERVE3" length="100" required="false" ignore="true"/>
     
     <field name="BBNRUV" length="15" required="true" />

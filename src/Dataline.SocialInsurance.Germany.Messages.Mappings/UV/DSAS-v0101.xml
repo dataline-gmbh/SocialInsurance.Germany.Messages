@@ -31,7 +31,7 @@
     <field name="BBNRUV" length="15" required="true" />
     <field name="MNR" length="20" required="true" />
     <field name="PIN" length="5" required="true" format="D5"/>
-    <field name="LFDNR" length="3" required="true" format="D3"/>
+    <field name="LFDNR" length="3" format="D3"/>
     <field name="JAHR" length="4" required="true" format="D4"/>
     <field name="BBNRLB" length="15" required="true" />
     <field name="BBNRAS" length="15" required="true" />

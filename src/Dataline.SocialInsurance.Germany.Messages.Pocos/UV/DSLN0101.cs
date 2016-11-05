@@ -204,7 +204,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.UV
         /// Zusätzlicher Zähler für mehrfach vorkommende meldende / abrechnende Stellen.
         /// Länge 3, Mussangabe
         /// </remarks>
-        public int LFDNR { get; set; }
+        public int? LFDNR { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Jahr, für welches der (Teil-) Lohnnachweis gemeldet wird.

@@ -1,6 +1,7 @@
 ﻿{
   "version": "1.0.0-*",
   "authors": [ "DATALINE GmbH & Co. KG" ],
+  "userSecretsId": "dataline-dev-sv-tests",
 
   "configurations": {
     "Debug": {
@@ -19,9 +20,10 @@
   "buildOptions": {
     "additionalArguments": [
       "/ruleset:../../Dataline.ruleset",
-      "/r:deuev16=../../packages/Dsrv.Kernpruefung.Deuev-1.6/1.6.1.7/lib/net40/Dsrv.Kernpruefung.Deuev-1.6.dll",
-      "/r:deuev17=../../packages/Dsrv.Kernpruefung.Deuev-1.7/1.7.0.7/lib/net40/Dsrv.Kernpruefung.Deuev-1.7.dll",
-      "/r:deuev18=../../packages/Dsrv.Kernpruefung.Deuev-1.8/1.8.0.7/lib/net40/Dsrv.Kernpruefung.Deuev-1.8.dll"
+      "/r:deuev16=../../packages/Dsrv.Kernpruefung.Deuev-1.6/1.6.1.8/lib/net40/Dsrv.Kernpruefung.Deuev-1.6.dll",
+      "/r:deuev17=../../packages/Dsrv.Kernpruefung.Deuev-1.7/1.7.0.8/lib/net40/Dsrv.Kernpruefung.Deuev-1.7.dll",
+      "/r:deuev18=../../packages/Dsrv.Kernpruefung.Deuev-1.8/1.8.0.8/lib/net40/Dsrv.Kernpruefung.Deuev-1.8.dll",
+      "/r:uv10=../../packages/Dguv.Kernpruefung.Uv-1.0/1.0.5/lib/net40/Dguv.Kernpruefung.Uv-1.0.dll"
     ],
     "define": [ "TEST" ],
     "embed": [
@@ -32,25 +34,47 @@
       "**/ebea*.a*",
       "**/eaag*.a*",
       "Generic/Data/*"
+    ],
+    "copyToOutput": [
+      "project.json"
     ]
+  },
+
+  "tools": {
+    "Microsoft.Extensions.SecretManager.Tools": "1.0.0-preview2-final"
   },
 
   "testRunner": "xunit",
 
   "dependencies": {
-    "NETStandard.Library": "1.6.0",
-    "Dataline.SocialInsurance.Germany.Messages.Pocos": { "target": "project" },
+    "CodeTiger.Core": "1.1.0",
+    "Dataline.ExtraStandard.Compression": "0.4.6",
+    "Dataline.ExtraStandard.Encryption": "0.4.6",
+    "Dataline.ExtraStandard.Extra14": "0.4.6",
+    "Dataline.ExtraStandard.GkvKomServer": "0.4.6",
+    "Dataline.ExtraStandard.GkvKomServer.Extra14": "0.4.6",
+    "Dataline.ExtraStandard.GkvKomServer.Validation.Extra14": "0.4.6",
     "Dataline.SocialInsurance.Germany.Messages.Mappings": { "target": "project" },
-    "xunit": "2.2.0-beta2-build3300",
+    "Dataline.SocialInsurance.Germany.Messages.Pocos": { "target": "project" },
+    "Dguv.Kernpruefung.Uv-1.0": "1.0.5",
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
-    "Xunit.SkippableFact": "1.2.14",
-    "Dsrv.Kernpruefung.Deuev-1.8": "1.8.0.7",
-    "Dsrv.Kernpruefung.Deuev-1.7": "1.7.0.7",
-    "Dsrv.Kernpruefung.Deuev-1.6": "1.6.1.7"
+    "Dsrv.Kernpruefung.Deuev-1.6": "1.6.1.8",
+    "Dsrv.Kernpruefung.Deuev-1.7": "1.7.0.8",
+    "Dsrv.Kernpruefung.Deuev-1.8": "1.8.0.8",
+    "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0",
+    "NETStandard.Library": "1.6.0",
+    "Portable.BouncyCastle": "1.8.1.1",
+    "RT.Comb": "1.4.2",
+    "System.Interactive.Async": "3.0.0",
+    "xunit": "2.2.0-beta2-build3300",
+    "Xunit.SkippableFact": "1.2.14"
   },
 
   "frameworks": {
-    "net451": {
+    "net46": {
+      "frameworkAssemblies": {
+        "System.Net.Http.WebRequest": "4.0.0.0"
+      }
     }
   }
 }

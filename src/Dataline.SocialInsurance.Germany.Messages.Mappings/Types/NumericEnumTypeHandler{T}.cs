@@ -38,7 +38,7 @@ namespace SocialInsurance.Germany.Messages.Mappings.Types
         /// <inheritdoc/>
         public string Format(object value)
         {
-            return value == null ? null : string.Format(_format, value);
+            return value == null ? null : string.Format(_format, (int)value);
         }
 
         /// <inheritdoc/>
