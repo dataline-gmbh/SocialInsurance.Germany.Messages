@@ -138,28 +138,27 @@ namespace SocialInsurance.Germany.Messages.Tests.Uv
                 }
             });
 
-            var failedPackages = response
-                .Packages
-                .Where(x =>
-                {
-                    try
-                    {
-                        var records = x.Decode();
-                        if (records.Any(rec => rec.DBFE.Any()))
-                            return true;
-                        if (records.OfType<DSAS0101>().Any(rec => (rec.DBFU?.ANFU ?? 0) != 0))
-                            return true;
-                        return false;
-                    }
-                    catch
-                    {
-                        return true;
-                    }
-                })
-                .ToList();
-            await ServerConfirmation.Confirm(response.Packages.Select(x => x.ResponseId).ToList());
-
-
+            //var failedPackages = response
+            //    .Packages
+            //    .Where(x =>
+            //    {
+            //        try
+            //        {
+            //            var records = x.Decode();
+            //            if (records.Any(rec => rec.DBFE.Any()))
+            //                return true;
+            //            if (records.OfType<DSAS0101>().Any(rec => (rec.DBFU?.ANFU ?? 0) != 0))
+            //                return true;
+            //            return false;
+            //        }
+            //        catch
+            //        {
+            //            return true;
+            //        }
+            //    })
+            //    .ToList();
+            if (response.Packages.Count != 0)
+                await ServerConfirmation.Confirm(response.Packages.Select(x => x.ResponseId).ToList());
         }
     }
 }
