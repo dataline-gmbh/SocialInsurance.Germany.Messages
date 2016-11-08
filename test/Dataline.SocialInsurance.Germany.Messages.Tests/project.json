@@ -48,12 +48,12 @@
 
   "dependencies": {
     "CodeTiger.Core": "1.1.0",
-    "Dataline.ExtraStandard.Compression": "0.4.6",
-    "Dataline.ExtraStandard.Encryption": "0.4.6",
-    "Dataline.ExtraStandard.Extra14": "0.4.6",
-    "Dataline.ExtraStandard.GkvKomServer": "0.4.6",
-    "Dataline.ExtraStandard.GkvKomServer.Extra14": "0.4.6",
-    "Dataline.ExtraStandard.GkvKomServer.Validation.Extra14": "0.4.6",
+    "Dataline.ExtraStandard.Compression": "0.4.8",
+    "Dataline.ExtraStandard.Encryption": "0.4.8",
+    "Dataline.ExtraStandard.Extra14": "0.4.8",
+    "Dataline.ExtraStandard.GkvKomServer": "0.4.8",
+    "Dataline.ExtraStandard.GkvKomServer.Extra14": "0.4.8",
+    "Dataline.ExtraStandard.GkvKomServer.Validation.Extra14": "0.4.8",
     "Dataline.SocialInsurance.Germany.Messages.Mappings": { "target": "project" },
     "Dataline.SocialInsurance.Germany.Messages.Pocos": { "target": "project" },
     "Dguv.Kernpruefung.Uv-1.0": "1.0.5",
