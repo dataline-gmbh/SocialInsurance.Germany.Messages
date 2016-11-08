@@ -16,6 +16,20 @@ using SocialInsurance.Germany.Messages.Tests.Support;
 
 namespace SocialInsurance.Germany.Messages.Tests
 {
+    /// <summary>
+    /// Informationen über den Absender
+    /// </summary>
+    /// <remarks>
+    /// <para>Folgende Daten werden aus den "user-secrets" geladen:</para>
+    /// <list type="bullet">
+    /// <item>prod-id: Produkt-ID</item>
+    /// <item>mod-id: Modifikations-ID</item>
+    /// <item>tel: Telefonnummer</item>
+    /// <item>email: E-Mail-Adresse</item>
+    /// <item>cert: Zertifikat (P12/PFX)</item>
+    /// </list>
+    /// <para>Im Zertifikatsspeicher des Benutzers (unter Windows) müssen sowohl das Zertifikat als auch die Aussteller-Zertifikate hinterlegt sein.</para> 
+    /// </remarks>
     public sealed class AbsenderInformation
     {
         public AbsenderInformation()
