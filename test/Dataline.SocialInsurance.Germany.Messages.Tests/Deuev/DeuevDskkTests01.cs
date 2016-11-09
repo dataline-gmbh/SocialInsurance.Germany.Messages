@@ -25,11 +25,15 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         /// Beginn der Versicherungs- und/oder Beitragspflicht
         /// wegen Aufnahme einer Beschäftigung (VSNR liegt vor)
         /// </summary>
-        [SkippableTheory(DisplayName = "(De-)serialisierung von DSKK v01 (Kunden-Daten)")]
+        [Theory(DisplayName = "(De-)serialisierung von DSKK v01 (Kunden-Daten)")]
         [InlineData(@"d:\temp\ESAG0023.txt")]
         public void TestSagDskk01(string fileName)
         {
-            Skip.IfNot(File.Exists(fileName), $"Die Datei {fileName} wurde nicht gefunden.");
+            if (!File.Exists(fileName))
+            {
+                _output.WriteLine($"Die Datei {fileName} wurde nicht gefunden.");
+                return;
+            }
             var deuevMessage = GetAndCheckDeuevMessageFromFile(fileName);
             Assert.NotNull(deuevMessage);
             Assert.NotEmpty(deuevMessage.DSKK);

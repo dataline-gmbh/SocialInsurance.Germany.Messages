@@ -51,12 +51,16 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
         /// <summary>
         /// Test mit Kundendaten
         /// </summary>
-        [SkippableTheory(DisplayName = "(De-)serialisierung einer AAG-Rückmeldung (Kunden-Daten)")]
+        [Theory(DisplayName = "(De-)serialisierung einer AAG-Rückmeldung (Kunden-Daten)")]
         [InlineData(@"d:\temp\EAAG0000026.txt", "super-message")]
         [InlineData(@"d:\temp\EAAG0000026.txt", "dser-agger-v04")]
         public void TestAagCustomerData(string fileName, string streamName)
         {
-            Skip.IfNot(File.Exists(fileName), $"Die Kunden-Datei {fileName} existiert nicht.");
+            if (!File.Exists(fileName))
+            {
+                _output.WriteLine($"Die Kunden-Datei {fileName} existiert nicht.");
+                return;
+            }
             var deuevMessage = GetMessageFromFile(fileName, streamName, true);
         }
 
