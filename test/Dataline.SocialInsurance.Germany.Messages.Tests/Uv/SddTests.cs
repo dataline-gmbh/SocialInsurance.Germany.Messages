@@ -35,9 +35,13 @@ namespace SocialInsurance.Germany.Messages.Tests.Uv
         [Fact]
         public async Task Sdd10Supply()
         {
-            Skip.If(!Absender.IstKonfiguriert, "PROD-ID, MOD-ID und Zertifikat müssen als Benutzer-Secret gesetzt sein.");
+            if (!Absender.IstKonfiguriert)
+            {
+                _output.WriteLine("PROD-ID, MOD-ID und Zertifikat müssen als Benutzer-Secret gesetzt sein.");
+                return;
+            }
 
-            var fileNumber = 1;
+            var fileNumber = 2;
             var ed = DateTime.Now;
             var request = new List<IDatensatz>()
             {
@@ -103,9 +107,13 @@ namespace SocialInsurance.Germany.Messages.Tests.Uv
         }
 
         [Fact]
-        public async Task Sdd10Query()
+        public async Task Sdd10QueryUvs()
         {
-            Skip.If(!Absender.IstKonfiguriert, "PROD-ID, MOD-ID und Zertifikat müssen als Benutzer-Secret gesetzt sein.");
+            if (!Absender.IstKonfiguriert)
+            {
+                _output.WriteLine("PROD-ID, MOD-ID und Zertifikat müssen als Benutzer-Secret gesetzt sein.");
+                return;
+            }
 
             var response = await ServerQuery.Query(new ServerQuery.QueryInfo(Info.DSAS.Dateikennung, "95783331"));
             Assert.All(response.Flags, flag => Assert.NotEqual(ExtraFlagWeight.Error, flag.Weight));
@@ -157,6 +165,50 @@ namespace SocialInsurance.Germany.Messages.Tests.Uv
             //        }
             //    })
             //    .ToList();
+            if (response.Packages.Count != 0)
+                await ServerConfirmation.Confirm(response.Packages.Select(x => x.ResponseId).ToList());
+        }
+
+        [Fact]
+        public async Task Sdd10QueryUvd()
+        {
+            if (!Absender.IstKonfiguriert)
+            {
+                _output.WriteLine("PROD-ID, MOD-ID und Zertifikat müssen als Benutzer-Secret gesetzt sein.");
+                return;
+            }
+
+            var response = await ServerQuery.Query(new ServerQuery.QueryInfo(Info.DSSD.Dateikennung, "95783331"));
+            Assert.All(response.Flags, flag => Assert.NotEqual(ExtraFlagWeight.Error, flag.Weight));
+            Assert.All(response.Packages, package =>
+            {
+                Assert.All(package.Flags, flag => Assert.NotEqual(ExtraFlagWeight.Error, flag.Weight));
+                try
+                {
+                    foreach (var record in package.Decode())
+                    {
+                        if (record.DBFE.Count != 0)
+                        {
+                            foreach (var dbfe in record.DBFE)
+                            {
+                                _output.WriteLine($"{package.DataName}: {record.KE}: {dbfe.FE}");
+                            }
+                        }
+                    }
+                }
+                catch (InvalidRecordException ex)
+                {
+                    _output.WriteLine(ex.ToString());
+                    foreach (var fieldError in ex.RecordContext.GetFieldErrors())
+                    {
+                        foreach (var fieldErrorMessage in fieldError)
+                        {
+                            _output.WriteLine($"\t{fieldError.Key}: {fieldErrorMessage}");
+                        }
+                    }
+                }
+            });
+
             if (response.Packages.Count != 0)
                 await ServerConfirmation.Confirm(response.Packages.Select(x => x.ResponseId).ToList());
         }
