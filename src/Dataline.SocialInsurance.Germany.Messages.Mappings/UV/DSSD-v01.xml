@@ -44,7 +44,7 @@
       <field name="GTST" length="8" required="true"/>
       <field name="GTSTNAME" length="50" required="true"/>
       <field name="GTSTVON" length="8" required="true" format="yyyyMMdd"/>
-      <field name="GTSTBIS" length="8" required="true" format="yyyyMMdd"/>
+      <field name="GTSTBIS" length="8" required="false" format="yyyyMMdd"/>
     </segment>
 	</template>
 </beanio>
