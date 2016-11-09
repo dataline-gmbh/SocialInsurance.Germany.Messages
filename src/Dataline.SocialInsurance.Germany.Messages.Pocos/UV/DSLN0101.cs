@@ -323,6 +323,9 @@ namespace SocialInsurance.Germany.Messages.Pocos.UV
 
         private IList<DBAP01> ListeDBAP { get; set; }
 
+        /// <summary>
+        /// Datenblock für GTST-Informationen
+        /// </summary>
         public class UVInfo
         {
             /// <summary>

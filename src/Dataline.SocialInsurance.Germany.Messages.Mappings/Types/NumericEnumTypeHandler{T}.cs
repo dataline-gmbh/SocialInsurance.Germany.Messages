@@ -20,6 +20,7 @@ namespace SocialInsurance.Germany.Messages.Mappings.Types
         /// <inheritdoc/>
         public Type TargetType => typeof(T);
 
+        /// <inheritdoc />
         public void Configure(Properties properties)
         {
             foreach (var property in properties)

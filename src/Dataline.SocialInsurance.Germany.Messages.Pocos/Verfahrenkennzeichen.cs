@@ -4,6 +4,9 @@
 
 namespace SocialInsurance.Germany.Messages.Pocos
 {
+    /// <summary>
+    /// Implementation der <see cref="IVerfahrenkennzeichen"/>-Schnittstelle
+    /// </summary>
     internal sealed class Verfahrenkennzeichen : IVerfahrenkennzeichen
     {
         /// <summary>

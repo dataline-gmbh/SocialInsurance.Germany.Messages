@@ -7,6 +7,9 @@ using System.Collections.Generic;
 
 namespace SocialInsurance.Germany.Messages.Pocos.UV
 {
+    /// <summary>
+    /// Datenblock für UV-Fehlermeldungen
+    /// </summary>
     public class DBFU : IDatenbaustein
     {
         /// <inheritdoc />
