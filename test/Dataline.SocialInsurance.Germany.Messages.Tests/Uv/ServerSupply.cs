@@ -22,6 +22,7 @@ using RT;
 using RT.CombByteOrder;
 
 using SocialInsurance.Germany.Messages.Pocos;
+using SocialInsurance.Germany.Messages.Pocos.UV;
 using SocialInsurance.Germany.Messages.Tests.Support;
 
 using ExtraDataType = ExtraStandard.GkvKomServer.ExtraDataType;
@@ -45,12 +46,12 @@ namespace SocialInsurance.Germany.Messages.Tests.Uv
 
         private static StreamFactory StreamFactory => _streamFactory.Value;
 
-        public Task<ResponseInfo> SupplyData(int fileNumber, IReadOnlyCollection<IDatensatz> records)
+        public Task<ResponseInfo> SupplyData(int fileNumber, IReadOnlyCollection<IDatensatz> records, IVerfahrenkennzeichen verfahrenkennzeichen)
         {
-            return SupplyData(fileNumber, records, _combProvider.Create());
+            return SupplyData(fileNumber, records, verfahrenkennzeichen, _combProvider.Create());
         }
 
-        public async Task<ResponseInfo> SupplyData(int fileNumber, IReadOnlyCollection<IDatensatz> records, Guid requestId)
+        public async Task<ResponseInfo> SupplyData(int fileNumber, IReadOnlyCollection<IDatensatz> records, IVerfahrenkennzeichen verfahrenkennzeichen, Guid requestId)
         {
             var requestTimestamp = DateTime.Now;
 
@@ -63,7 +64,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Uv
 
             var packages = new List<PackageRequestType>
             {
-                CreatePackage(fileNumber, records, _combProvider.Create(), requestTimestamp, receiverCert)
+                CreatePackage(fileNumber, records, _combProvider.Create(), requestTimestamp, receiverCert, verfahrenkennzeichen)
             };
 
             var request = new TransportRequestType()
@@ -136,7 +137,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Uv
             return _validatorFactory.Create(ExtraMessageType.SupplyData, ExtraTransportDirection.Request, false);
         }
 
-        private PackageRequestType CreatePackage(int fileNumber, IReadOnlyCollection<IDatensatz> records, Guid packageRequestId, DateTime requestTimestamp, X509Certificate2 receiverCert)
+        private PackageRequestType CreatePackage(int fileNumber, IReadOnlyCollection<IDatensatz> records, Guid packageRequestId, DateTime requestTimestamp, X509Certificate2 receiverCert, IVerfahrenkennzeichen verfahrenkennzeichen)
         {
             var data = CreateData(records);
             var vosz = (VOSZ)records.First();
@@ -151,18 +152,35 @@ namespace SocialInsurance.Germany.Messages.Tests.Uv
             if (dskoResult.getReturnCode() >= 2)
                 throw new Exception(string.Join(Environment.NewLine, dskoResult.getRueckgabeMeldungen()));
 
-            var validatorData = new KernpruefungDSAS();
-            foreach (var dataLine in lines.Skip(2).Take(lines.Count - 3))
+            if (Info.DSAS.Merkmal == verfahrenkennzeichen.Merkmal)
             {
-                var dataResult = validatorData.pruefe(dataLine, voszLine);
-                if (dataResult.getReturnCode() >= 2)
-                    throw new Exception(string.Join(Environment.NewLine, dataResult.getRueckgabeMeldungen()));
+                var validatorData = new KernpruefungDSAS();
+                foreach (var dataLine in lines.Skip(2).Take(lines.Count - 3))
+                {
+                    var dataResult = validatorData.pruefe(dataLine, voszLine);
+                    if (dataResult.getReturnCode() >= 2)
+                        throw new Exception(string.Join(Environment.NewLine, dataResult.getRueckgabeMeldungen()));
+                }
+            }
+            else if (Info.DSLN.Merkmal == verfahrenkennzeichen.Merkmal)
+            {
+                var validatorData = new KernpruefungDSLN();
+                foreach (var dataLine in lines.Skip(2).Take(lines.Count - 3))
+                {
+                    var dataResult = validatorData.pruefe(dataLine, voszLine);
+                    if (dataResult.getReturnCode() >= 2)
+                        throw new Exception(string.Join(Environment.NewLine, dataResult.getRueckgabeMeldungen()));
+                }
+            }
+            else
+            {
+                throw new NotSupportedException();
             }
 
             var extraEncodingId = "I1";
             var encoding = ExtraEncodingFactory.Standard.GetEncoding(extraEncodingId);
 
-            var fileId = Pocos.UV.Info.DSAS.Dateikennung;
+            var fileId = verfahrenkennzeichen.Dateikennung;
             var dataName = $"T{fileId}0{fileNumber:D6}";
 
             var inputData = encoding.GetBytes(data);
@@ -197,7 +215,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Uv
                         },
                         TimeStamp = requestTimestamp,
                         TimeStampSpecified = true,
-                        Procedure = Pocos.UV.Info.DSAS.Dateikennung,
+                        Procedure = verfahrenkennzeichen.Dateikennung,
                         DataType = ExtraDataType.Meldung,
                         Scenario = ExtraScenario.RequestWithAcknowledgement,
                     }

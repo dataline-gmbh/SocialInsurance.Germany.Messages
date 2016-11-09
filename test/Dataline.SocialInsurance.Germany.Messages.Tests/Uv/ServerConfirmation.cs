@@ -17,7 +17,6 @@ using RT.CombByteOrder;
 
 using SocialInsurance.Germany.Messages.Tests.Support;
 
-using ExtraDataType = ExtraStandard.ExtraDataType;
 using ExtraTransportProcedure = ExtraStandard.ExtraTransportProcedure;
 using ExtraUtilities = ExtraStandard.ExtraUtilities;
 using ValueType = ExtraStandard.Extra14.ValueType;
