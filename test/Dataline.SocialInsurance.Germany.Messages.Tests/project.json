@@ -48,12 +48,12 @@
 
   "dependencies": {
     "CodeTiger.Core": "1.1.0",
-    "Dataline.ExtraStandard.Compression": "0.4.6",
-    "Dataline.ExtraStandard.Encryption": "0.4.6",
-    "Dataline.ExtraStandard.Extra14": "0.4.6",
-    "Dataline.ExtraStandard.GkvKomServer": "0.4.6",
-    "Dataline.ExtraStandard.GkvKomServer.Extra14": "0.4.6",
-    "Dataline.ExtraStandard.GkvKomServer.Validation.Extra14": "0.4.6",
+    "Dataline.ExtraStandard.Compression": "0.4.9",
+    "Dataline.ExtraStandard.Encryption": "0.4.9",
+    "Dataline.ExtraStandard.Extra14": "0.4.9",
+    "Dataline.ExtraStandard.GkvKomServer": "0.4.9",
+    "Dataline.ExtraStandard.GkvKomServer.Extra14": "0.4.9",
+    "Dataline.ExtraStandard.GkvKomServer.Validation.Extra14": "0.4.9",
     "Dataline.SocialInsurance.Germany.Messages.Mappings": { "target": "project" },
     "Dataline.SocialInsurance.Germany.Messages.Pocos": { "target": "project" },
     "Dguv.Kernpruefung.Uv-1.0": "1.0.5",
@@ -66,8 +66,7 @@
     "Portable.BouncyCastle": "1.8.1.1",
     "RT.Comb": "1.4.2",
     "System.Interactive.Async": "3.0.0",
-    "xunit": "2.2.0-beta2-build3300",
-    "Xunit.SkippableFact": "1.2.14"
+    "xunit": "2.2.0-beta2-build3300"
   },
 
   "frameworks": {

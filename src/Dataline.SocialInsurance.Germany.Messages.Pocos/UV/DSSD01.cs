@@ -212,7 +212,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.UV
             /// <summary>
             /// Holt oder setzt die Gültigkeit der Gefahrtarifstelle
             /// </summary>
-            public LocalDate GTSTBIS { get; set; }
+            public LocalDate? GTSTBIS { get; set; }
         }
     }
 }

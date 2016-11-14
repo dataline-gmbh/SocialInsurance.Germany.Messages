@@ -130,7 +130,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.UV
         /// Sie wird von der ITSG, eindeutig für jedes systemuntersuchte Programm, vergeben.
         /// Länge 7, Mussangabe
         /// </remarks>
-        public string PRODID { get; set; }
+        public int PRODID { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Modifikations-Identifier des geprüften Softwareproduktes, das beim Ersteller der Datei eingesetzt wird.
@@ -139,7 +139,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.UV
         /// Sie wird von der ITSG, eindeutig für jedes systemuntersuchte Programm, vergeben.
         /// Länge 8, Mussangabe
         /// </remarks>
-        public string MODID { get; set; }
+        public int MODID { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Datensatz-ID des übermittelten Datensatzes
@@ -323,6 +323,9 @@ namespace SocialInsurance.Germany.Messages.Pocos.UV
 
         private IList<DBAP01> ListeDBAP { get; set; }
 
+        /// <summary>
+        /// Datenblock für GTST-Informationen
+        /// </summary>
         public class UVInfo
         {
             /// <summary>
