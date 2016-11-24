@@ -226,16 +226,16 @@
   </stream>
   
   <stream name="dsra-agger-v01" format="fixedlength">
-    <record order="1" name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
+    <record order="1" name="VOSZ" occurs="1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, SocialInsurance.Germany.Messages.Pocos">
       <include template="VOSZ-v01"/>
     </record>
-    <record order="2" name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKO02, SocialInsurance.Germany.Messages.Pocos">
-      <include template="DSKO-v02"/>
+    <record order="2" name="DSKO" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO04, SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSKO-v04"/>
     </record>
-    <record order="3" name="DSRA" minOccurs="1" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSRA01, SocialInsurance.Germany.Messages.Pocos">
+    <record order="3" name="DSRA" occurs="1+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSRA01, SocialInsurance.Germany.Messages.Pocos">
       <include template="DSRA-v01"/>
     </record>
-    <record order="4" name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, SocialInsurance.Germany.Messages.Pocos">
+    <record order="4" name="NCSZ" occurs="1" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, SocialInsurance.Germany.Messages.Pocos">
       <include template="NCSZ-v01"/>
     </record>
   </stream>

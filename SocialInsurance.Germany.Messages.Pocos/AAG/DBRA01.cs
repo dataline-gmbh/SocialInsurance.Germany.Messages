@@ -7,7 +7,7 @@ using System;
 namespace SocialInsurance.Germany.Messages.Pocos.AAG
 {
     /// <summary>
-    /// Datenbaustein: DBBT - Erstattung der Arbeitgeberaufwendungen Beschäftigungsverbot
+    /// Datenbaustein: DBRA - Rückmeldung AAG
     /// </summary>
     public class DBRA01 : IDatenbaustein
     {

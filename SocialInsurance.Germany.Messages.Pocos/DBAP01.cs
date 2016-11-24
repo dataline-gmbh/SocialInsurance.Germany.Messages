@@ -4,6 +4,9 @@
 
 namespace SocialInsurance.Germany.Messages.Pocos
 {
+    /// <summary>
+    /// DBAB - Ansprechpartner
+    /// </summary>
     public class DBAP01 : IDatenbaustein
     {
         /// <summary>

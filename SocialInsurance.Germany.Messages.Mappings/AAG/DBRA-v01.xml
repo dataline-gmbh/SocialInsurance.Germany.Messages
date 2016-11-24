@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <beanio xmlns="http://www.beanio.org/2015/06">
   <template name="DBRA-v01">
-    <field name="KE" length="4" literal="DBBT" required="true"/>
+    <field name="KE" length="4" literal="DBRA" required="true"/>
     <field name="EZEITVOM" length="8" required="true" format="yyyyMMdd"/>
     <field name="EZEITBIS" length="8" required="true" format="yyyyMMdd"/>
     <field name="BEBU" length="9" required="true" type="int" format="D9"/>

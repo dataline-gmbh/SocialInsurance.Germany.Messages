@@ -21,10 +21,11 @@
     <field name="BBNRAS" length="15" required="false"/>
     <field name="GD" length="2" required="true" type="int" format="00" />
     <field name="KENNZST" length="1" required="true" typeHandler="jn"/>
+    <field name="RESERVE1" length="100" required="false" ignore="true"/>
     <field name="MMRM" length="1" required="true" typeHandler="jn"/>
     <field name="MMAP" length="1" required="true" typeHandler="jn"/>
     <field name="MMNA" length="1" required="true" typeHandler="jn"/>
-    <field name="RESERVE" length="100" required="false" ignore="true"/>
+    <field name="RESERVE2" length="100" required="false" ignore="true"/>
 		<segment name="ListeDBRA" class="SocialInsurance.Germany.Messages.Pocos.AAG.DBRA01, SocialInsurance.Germany.Messages.Pocos" occursRef="MMRM" collection="list">
 			<include template="DBRA-v01" />
 		</segment>
