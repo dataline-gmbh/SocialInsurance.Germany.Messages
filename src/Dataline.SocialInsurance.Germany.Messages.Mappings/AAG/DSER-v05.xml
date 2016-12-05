@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DBAU-v05.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DBBT-v05.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DBZU-v04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBBV.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBNA.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBAA.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBBF.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBBF.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+	<template name="DSER-v05">
+		<field name="KE" length="4" literal="DSER" rid="true" required="true" />
+		<field name="VF" length="5" literal="AAGER" required="true" />
+		<field name="BBNRAB" length="15" required="true" />
+		<field name="BBNREP" length="15" required="true" />
+		<field name="VERNR" length="2" literal="05" rid="true" type="int" format="00" />
+		<field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
+		<field name="FEKZ" length="1" regex="[0-1]" required="true" typeHandler="01" />
+		<field name="FEAN" length="1" required="true" regex="[0-9]" />
+		<field name="VSNR" length="12" required="false"/>
+		<field name="GEBDA" length="8" required="true" format="yyyyMMdd"/>
+		<field name="BBNRVU" length="15" required="true"/>
+		<field name="AZVU" length="20" required="false"/>
+		<field name="RESERVE1" length="20" ignore="true"/>
+		<field name="BBNRKK" length="15" required="true"/>
+		<field name="AZKK" length="20" required="false"/>
+		<field name="BBNRAS" length="15" required="false"/>
+		<field name="GD" length="2" required="true" type="int" format="00" regex="0[1-3]" />
+		<field name="BESCHSEIT" length="8" required="true" format="yyyyMMdd"/>
+		<field name="ARTVERS" length="1" required="true" regex="[0-3]" />
+		<field name="GE" length="1" required="true" regex="[MW]"/>
+		<field name="APRO" length="1" required="true" regex="[12]" />
+    <field name="PRODID" length="7" required="true" />
+    <field name="MODID" length="8" required="true" />
+		<field name="DSID" length="32" required="false"/>
+		<field name="RESERVE2" length="100" required="false" ignore="true"/>
+		<field name="MMDBAU" length="1" required="true" typeHandler="jn"/>
+		<field name="MMDBBT" length="1" required="true" typeHandler="jn"/>
+		<field name="MMDBZU" length="1" required="true" typeHandler="jn"/>
+		<field name="MMDBBV" length="1" required="true" typeHandler="jn"/>
+		<field name="MMDBNA" length="1" required="true" typeHandler="jn"/>
+		<field name="MMDBAA" length="1" required="true" typeHandler="jn"/>
+		<field name="MMBF" length="1" required="true" typeHandler="jn"/>
+		<field name="RESERVE3" length="100" required="false" ignore="true"/>
+		<segment name="ListeDBAU" class="SocialInsurance.Germany.Messages.Pocos.AAG.DBAU05, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMDBAU" collection="list">
+			<include template="DBAU-v05" />
+		</segment>
+		<segment name="ListeDBBT" class="SocialInsurance.Germany.Messages.Pocos.AAG.DBBT05, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMDBBT" collection="list">
+			<include template="DBBT-v05" />
+		</segment>
+		<segment name="ListeDBZU" class="SocialInsurance.Germany.Messages.Pocos.AAG.DBZU04, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMDBZU" collection="list">
+			<include template="DBZU-v04" />
+		</segment>
+		<segment name="ListeDBBV" class="SocialInsurance.Germany.Messages.Pocos.DBBV, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMDBBV" collection="list">
+			<include template="DBBV" />
+		</segment>
+		<segment name="ListeDBNA" class="SocialInsurance.Germany.Messages.Pocos.DBNA, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMDBNA" collection="list">
+			<include template="DBNA" />
+		</segment>
+		<segment name="ListeDBAA" class="SocialInsurance.Germany.Messages.Pocos.DBAA, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMDBAA" collection="list">
+			<include template="DBAA" />
+		</segment>
+    <segment name="ListeDBBF" class="SocialInsurance.Germany.Messages.Pocos.DBBF, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMBF" collection="list">
+      <include template="DBBF" />
+    </segment>
+		<segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
+			<include template="DBFE" />
+		</segment>
+	</template>
+</beanio>

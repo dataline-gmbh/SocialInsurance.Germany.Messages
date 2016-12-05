@@ -26,8 +26,10 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSER-v02.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSER-v03.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSER-v04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSER-v05.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSRA-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
-  
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DSRA-v02.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.VOSZ-v05.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.VOSZ-v06.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.BW02-v09.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
@@ -150,97 +152,81 @@
   <stream name="bw02-bwnac-v11" format="fixedlength">
     <group name="VOSZ" order="1" occurs="1">
       <!-- <include template="VOSZ-generic"/> -->
-      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
-        <include template="VOSZ-v01"/>
-      </record>
-      <record name="VOSZ-BNA-v06" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.VOSZ06, Dataline.SocialInsurance.Germany.Messages.Pocos">
-        <include template="VOSZ-BNA-v06"/>
-      </record>
-      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
-        <include template="VOSZ-v01"/>
-      </record>
+      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
+      <record name="VOSZ-BNA-v06" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.VOSZ06, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-BNA-v06"/>
+      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01"/>
     </group>
     <group name="DSKO" order="2">
       <!-- <include template="DSKO-generic"/> -->
-      <record name="DSKO-v02" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO02, Dataline.SocialInsurance.Germany.Messages.Pocos">
-        <include template="DSKO-v02"/>
-      </record>
-      <record name="DSKO-v04" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO04, Dataline.SocialInsurance.Germany.Messages.Pocos">
-        <include template="DSKO-v04"/>
-      </record>
+      <record name="DSKO-v02" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO02, Dataline.SocialInsurance.Germany.Messages.Pocos" template="DSKO-v02"/>
+      <record name="DSKO-v04" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO04, Dataline.SocialInsurance.Germany.Messages.Pocos" template="DSKO-v04"/>
     </group>
-    <record order="3" name="BW02" minOccurs="1" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.BNA.BW0211, Dataline.SocialInsurance.Germany.Messages.Pocos">
-			<include template="BW02-v11"/>
-		</record>
+    <record order="3" name="BW02" minOccurs="1" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.BNA.BW0211, Dataline.SocialInsurance.Germany.Messages.Pocos" template="BW02-v11"/>
     <group name="NCSZ" order="4" occurs="1">
       <!-- <include template="VOSZ-generic"/> -->
-      <record name="NCSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
-        <include template="NCSZ-v01"/>
-      </record>
-      <record name="NCSZ-BNA-v06" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.NCSZ06, Dataline.SocialInsurance.Germany.Messages.Pocos">
-        <include template="NCSZ-BNA-v06"/>
-      </record>
-      <record name="NCSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
-        <include template="NCSZ-v01"/>
-      </record>
+      <record name="NCSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="NCSZ-v01"/>
+      <record name="NCSZ-BNA-v06" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.NCSZ06, Dataline.SocialInsurance.Germany.Messages.Pocos" template="NCSZ-BNA-v06"/>
+      <record name="NCSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="NCSZ-v01"/>
     </group>
   </stream>
   
 	<stream name="dser-agger-v02" format="fixedlength">
     <group name="vorlauf" order="1" occurs="1-2">
-      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
       <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ_FELANG, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-DBFELANG-v01" />
+      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
     </group>
-    <record order="2" name="DSKO"  occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO02, Dataline.SocialInsurance.Germany.Messages.Pocos">
-			<include template="DSKO-v02"/>
-		</record>
-		<record order="3" name="DSER" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSER02, Dataline.SocialInsurance.Germany.Messages.Pocos">
-			<include template="DSER-v02"/>
-		</record>
-		<record order="4" name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
-			<include template="NCSZ-v01"/>
-		</record>
+    <record order="2" name="DSKO"  occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO02, Dataline.SocialInsurance.Germany.Messages.Pocos" template="DSKO-v02"/>
+		<record order="3" name="DSER" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSER02, Dataline.SocialInsurance.Germany.Messages.Pocos" template="DSER-v02"/>
+		<record order="4" name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="NCSZ-v01"/>
 	</stream>
 
   <stream name="dser-agger-v03" format="fixedlength">
     <group name="vorlauf" order="1" occurs="1-2">
-      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
       <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ_FELANG, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-DBFELANG-v01" />
+      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
     </group>
-    <record order="2" name="DSKO"  occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO02, Dataline.SocialInsurance.Germany.Messages.Pocos">
-      <include template="DSKO-v02"/>
-    </record>
-    <record order="3" name="DSER" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSER03, Dataline.SocialInsurance.Germany.Messages.Pocos">
-      <include template="DSER-v03"/>
-    </record>
-    <record order="4" name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
-      <include template="NCSZ-v01"/>
-    </record>
+    <record order="2" name="DSKO"  occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO02, Dataline.SocialInsurance.Germany.Messages.Pocos" template="DSKO-v02" />
+    <record order="3" name="DSER" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSER03, Dataline.SocialInsurance.Germany.Messages.Pocos" template="DSER-v03" />
+    <record order="4" name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="NCSZ-v01" />
   </stream>
 
   <stream name="dser-agger-v04" format="fixedlength">
     <group name="vorlauf" order="1" occurs="1-2">
-      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
       <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ_FELANG, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-DBFELANG-v01" />
+      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
     </group>
-    <record order="2" name="DSKO"  occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO04, Dataline.SocialInsurance.Germany.Messages.Pocos">
-      <include template="DSKO-v04"/>
-    </record>
-    <record order="3" name="DSER" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSER04, Dataline.SocialInsurance.Germany.Messages.Pocos">
-      <include template="DSER-v04"/>
-    </record>
-    <record order="4" name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
-      <include template="NCSZ-v01"/>
-    </record>
+    <record order="2" name="DSKO"  occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO04, Dataline.SocialInsurance.Germany.Messages.Pocos" template="DSKO-v04" />
+    <record order="3" name="DSER" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSER04, Dataline.SocialInsurance.Germany.Messages.Pocos" template="DSER-v04" />
+    <record order="4" name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="NCSZ-v01" />
   </stream>
-  
+
+  <stream name="dser-agger-v05" format="fixedlength">
+    <group name="vorlauf" order="1" occurs="1-2">
+      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ_FELANG, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-DBFELANG-v01" />
+      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
+    </group>
+    <record order="2" name="DSKO"  occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO04, Dataline.SocialInsurance.Germany.Messages.Pocos" template="DSKO-v04" />
+    <record order="3" name="DSER" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSER05, Dataline.SocialInsurance.Germany.Messages.Pocos" template="DSER-v05" />
+    <record order="4" name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="NCSZ-v01" />
+  </stream>
+
   <stream name="dsra-agger-v01" format="fixedlength">
     <group name="vorlauf" order="1" occurs="1-2">
-      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
       <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ_FELANG, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-DBFELANG-v01" />
+      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
     </group>
     <record order="2" name="DSKO" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO04, Dataline.SocialInsurance.Germany.Messages.Pocos" template="DSKO-v04" />
     <record order="3" name="DSRA" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSRA01, Dataline.SocialInsurance.Germany.Messages.Pocos" template="DSRA-v01" />
+    <record order="4" name="NCSZ" occurs="1-2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="NCSZ-v01" />
+  </stream>
+
+  <stream name="dsra-agger-v02" format="fixedlength">
+    <group name="vorlauf" order="1" occurs="1-2">
+      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ_FELANG, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-DBFELANG-v01" />
+      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
+    </group>
+    <record order="2" name="DSKO" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO04, Dataline.SocialInsurance.Germany.Messages.Pocos" template="DSKO-v04" />
+    <record order="3" name="DSRA" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSRA02, Dataline.SocialInsurance.Germany.Messages.Pocos" template="DSRA-v02" />
     <record order="4" name="NCSZ" occurs="1-2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="NCSZ-v01" />
   </stream>
 
@@ -256,15 +242,9 @@
 
   <stream name="dsbe-bvbei-v01" format="fixedlength">
     <record order="1" name="VOSZ" occurs="1-2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
-    <record name="DSKO" order="2" minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKO02, Dataline.SocialInsurance.Germany.Messages.Pocos">
-			<include template="DSKO-v02"/>
-		</record>
-    <record name="DSBE" order="3" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBE01, Dataline.SocialInsurance.Germany.Messages.Pocos">
-			<include template="DSBE-v01"/>
-		</record>
-		<record name="NCSZ" order="4" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
-			<include template="NCSZ-v01"/>
-		</record>
+    <record name="DSKO" order="2" minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKO02, Dataline.SocialInsurance.Germany.Messages.Pocos" template="DSKO-v02" />
+    <record name="DSBE" order="3" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBE01, Dataline.SocialInsurance.Germany.Messages.Pocos" template="DSBE-v01" />
+		<record name="NCSZ" order="4" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="NCSZ-v01" />
 	</stream>
   
   <stream name="dsbe-bvbei-v0201" format="fixedlength">
@@ -290,8 +270,8 @@
   <stream name="envelope-request-generic" format="fixedlength" ignoreUnidentifiedRecords="true">
     <group name="VOSZ" order="1">
       <!-- <include template="VOSZ-generic"/> -->
-      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
       <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ_FELANG, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-DBFELANG-v01" />
+      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
       <record name="VOSZ-BNA-v05" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.VOSZ05, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="VOSZ-BNA-v05"/>
       </record>
@@ -326,16 +306,14 @@
   <stream name="envelope-response-generic" format="fixedlength" ignoreUnidentifiedRecords="true">
     <group name="VOSZ" order="1" occurs="2">
       <!-- <include template="VOSZ-generic"/> -->
-      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
       <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ_FELANG, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-DBFELANG-v01" />
+      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
       <record name="VOSZ-BNA-v05" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.VOSZ05, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="VOSZ-BNA-v05"/>
       </record>
       <record name="VOSZ-BNA-v06" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.VOSZ06, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="VOSZ-BNA-v06"/>
       </record>
-      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
-      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ_FELANG, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-DBFELANG-v01" />
     </group>
     <group name="DSKO" order="2">
       <!-- <include template="DSKO-generic"/> -->
@@ -357,9 +335,6 @@
       <record name="NCSZ-BNA-v05" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.NCSZ05, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="NCSZ-BNA-v05"/>
       </record>
-      <record name="NCSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
-        <include template="NCSZ-v01"/>
-      </record>
     </group>
   </stream>
 
@@ -367,16 +342,16 @@
   <stream name="super-message" format="fixedlength" ignoreUnidentifiedRecords="true">
     <group name="vorlauf" order="1" occurs="1-2">
       <!-- <include template="VOSZ-generic"/> -->
-      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
       <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ_FELANG, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-DBFELANG-v01" />
+      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
       <record name="VOSZ-BNA-v05" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.VOSZ05, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="VOSZ-BNA-v05"/>
       </record>
       <record name="VOSZ-BNA-v06" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.VOSZ06, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="VOSZ-BNA-v06"/>
       </record>
-      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
       <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ_FELANG, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-DBFELANG-v01" />
+      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
     </group>
     <group name="kommunikation" order="2" occurs="0-1">
       <!-- <include template="DSKO-generic"/> -->
@@ -409,15 +384,6 @@
       <record name="DSBE-v0201" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSBE0201, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSBE-v0201"/>
       </record>
-      <record name="DSER-v02" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSER02, Dataline.SocialInsurance.Germany.Messages.Pocos">
-        <include template="DSER-v02"/>
-      </record>
-      <record name="DSER-v03" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSER03, Dataline.SocialInsurance.Germany.Messages.Pocos">
-        <include template="DSER-v03"/>
-      </record>
-      <record name="DSER-v04" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSER04, Dataline.SocialInsurance.Germany.Messages.Pocos">
-        <include template="DSER-v04"/>
-      </record>
       <record name="DSKK-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSKK01, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSKK-v01"/>
       </record>
@@ -442,8 +408,23 @@
       <record name="ELENA-MVDS-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.ELENA.MVDS, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="ELENA-MVDS-v01"/>
       </record>
+      <record name="DSER-v02" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSER02, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSER-v02"/>
+      </record>
+      <record name="DSER-v03" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSER03, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSER-v03"/>
+      </record>
+      <record name="DSER-v04" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSER04, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSER-v04"/>
+      </record>
+      <record name="DSER-v05" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSER05, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSER-v05"/>
+      </record>
       <record name="DSRA-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSRA01, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSRA-v01"/>
+      </record>
+      <record name="DSRA-v02" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.AAG.DSRA02, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSRA-v02"/>
       </record>
       <record name="DSLN-v0101" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.UV.DSLN0101, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSLN-v0101"/>

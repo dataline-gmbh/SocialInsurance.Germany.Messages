@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <beanio xmlns="http://www.beanio.org/2016/07">
-	<template name="DBAU-v02">
+	<template name="DBAU-v05">
 		<field name="KE" length="4" literal="DBAU" required="true"/>
 		<field name="KENNZV" length="1" required="true" regex="[01]" type="int"/>
 		<field name="EZEITVOM" length="8" required="true" format="yyyyMMdd"/>
@@ -19,7 +19,10 @@
 		<field name="EBU" length="9" required="true" type="int" format="D9" />
 		<field name="URAU" length="1" required="false" regex="[0-2]"/>
 		<field name="AUTG" length="1" required="true" regex="[JN]" typeHandler="jn"/>
-		<field name="RESERVE" length="4" required="false" ignore="true"/>
+		<field name="RESERVE1" length="4" required="false" ignore="true"/>
 		<field name="LAT" length="8" required="true" format="yyyyMMdd"/>
-	</template>
+    <field name="EZB" length="9" required="false" default="0" type="int" format="D9" />
+    <field name="SVAE" length="9" required="false" default="0" type="int" format="D9" />
+    <field name="RESERVE2" length="91" required="false" ignore="true" />
+  </template>
 </beanio>

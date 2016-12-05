@@ -10,7 +10,7 @@
     <field name="DTNR" length="6" required="true" type="int" format="000000"/>
     <field name="NAAB" length="50" required="false"/>
     <field name="VERNR" length="2" required="true" literal="01" type="int" format="00" rid="true"/>
-    <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, Dataline.SocialInsurance.Germany.Messages.Pocos" collection="list" occurs="0+" template="DBFE" />
+    <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, Dataline.SocialInsurance.Germany.Messages.Pocos" collection="list" occurs="0-1" template="DBFE" />
   </template>
   <template name="VOSZ-DBFELANG-v01">
     <field name="KE" length="4" literal="VOSZ" rid="true" required="true"/>

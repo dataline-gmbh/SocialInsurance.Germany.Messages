@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.AAG.DBRA-v02.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBAP-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBNA.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+	<import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+	<template name="DSRA-v02">
+		<field name="KE" length="4" literal="DSRA" rid="true" required="true" />
+		<field name="VF" length="5" literal="AAGER" required="true" />
+		<field name="BBNRAB" length="15" required="true" />
+		<field name="BBNREP" length="15" required="true" />
+		<field name="VERNR" length="2" literal="02" rid="true" type="int" format="00" />
+		<field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
+		<field name="FEKZ" length="1" regex="[0-1]" required="true" typeHandler="01" />
+		<field name="FEAN" length="1" required="true" regex="[0-9]" />
+		<field name="VSNR" length="12" required="false"/>
+    <field name="AZKK" length="20" required="false"/>
+    <field name="BBNRAG" length="15" required="true"/>
+    <field name="AZAG" length="20" required="false"/>
+    <field name="BBNRAS" length="15" required="false"/>
+    <field name="GD" length="2" required="true" type="int" format="00" regex="0[1-3]" />
+    <field name="KENNZST" length="1" required="true" typeHandler="jn"/>
+    <field name="DSID" length="32" required="false" />
+    <field name="RESERVE1" length="68" required="false" ignore="true"/>
+    <field name="MMRM" length="1" required="true" typeHandler="jn"/>
+    <field name="MMAP" length="1" required="true" typeHandler="jn"/>
+    <field name="MMNA" length="1" required="true" typeHandler="jn"/>
+    <field name="RESERVE2" length="100" required="false" ignore="true"/>
+		<segment name="ListeDBRA" class="SocialInsurance.Germany.Messages.Pocos.AAG.DBRA02, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMRM" collection="list">
+			<include template="DBRA-v02" />
+		</segment>
+		<segment name="ListeDBAP" class="SocialInsurance.Germany.Messages.Pocos.DBAP01, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMAP" collection="list">
+			<include template="DBAP-v01" />
+		</segment>
+		<segment name="ListeDBNA" class="SocialInsurance.Germany.Messages.Pocos.DBNA, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMNA" collection="list">
+			<include template="DBNA" />
+		</segment>
+		<segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
+			<include template="DBFE" />
+		</segment>
+	</template>
+</beanio>
