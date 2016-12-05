@@ -14,20 +14,12 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
     public class DBBT04 : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBBT04"/> Klasse
-        /// </summary>
-        public DBBT04()
-        {
-            KE = "DBBT";
-        }
-
-        /// <summary>
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
         /// Kennung, um welchen Datenbaustein es sich handelt
         /// </remarks>
-        public string KE { get; set; }
+        public string KE { get; set; } = "DBBT";
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen Verarbeitung

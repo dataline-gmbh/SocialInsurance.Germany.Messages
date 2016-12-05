@@ -14,20 +14,12 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
     public class DBRA02 : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBRA02"/> Klasse
-        /// </summary>
-        public DBRA02()
-        {
-            KE = "DBRA";
-        }
-
-        /// <summary>
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
         /// Kennung, um welchen Datenbaustein es sich handelt
         /// </remarks>
-        public string KE { get; set; }
+        public string KE { get; set; } = "DBRA";
 
         /// <summary>
         /// Holt oder setzt den Beginn des Erstattungszeitraums

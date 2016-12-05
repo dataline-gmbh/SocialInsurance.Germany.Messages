@@ -14,20 +14,12 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
     public class DBAU02 : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBAU02"/> Klasse
-        /// </summary>
-        public DBAU02()
-        {
-            KE = "DBAU";
-        }
-
-        /// <summary>
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
         /// Kennung, um welchen Datenbaustein es sich handelt
         /// </remarks>
-        public string KE { get; set; }
+        public string KE { get; set; } = "DBAU";
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen Verarbeitung
