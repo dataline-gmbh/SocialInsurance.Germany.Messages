@@ -6,7 +6,7 @@
     <field name="GBVORSA" length="20" required="false"/>
     <field name="GBNAZU" length="20" required="false"/>
     <field name="GBDT" length="8" required="true" format="yyyyMMdd"/>
-    <field name="GE" length="1" regex="[MW]" required="true"/>
+    <field name="GE" length="1" regex="[MWX]" required="true"/>
     <field name="GBOT" length="34" required="false"/>
   </template>
 </beanio>
