@@ -43,7 +43,9 @@
     <field name="MMSV" length="1" typeHandler="jn" required="true"/>
     <field name="MMVR" length="1" typeHandler="jn" required="true"/>
     <field name="MMRG" length="1" typeHandler="jn" required="true"/>
-    <field name="INTERN1" length="3" />
+    <field name="KENNZUE" length="1" regex="[1-8A]" />
+    <field name="MMUEB" length="1" regex="[124569]"/>
+    <field name="KENNZUP" length="1" regex="[D]"/>
     <field name="MMSO" length="1" typeHandler="jn" required="true"/>
     <field name="KENNZSTA" length="1" regex="[12]" required="false" />
     <field name="RESERVE2" length="1" required="false" ignore="true"/>

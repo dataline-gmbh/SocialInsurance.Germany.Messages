@@ -356,9 +356,42 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt interne Daten
+        /// Holt oder setzt das Kennzeichen für das Verfahren über das die BfA die Meldung versandt hat
         /// </summary>
-        public string INTERN1 { get; set; }
+        /// <remarks>
+        /// Länge 1, Mussangabe, akzeptiert aber Grundstellung
+        /// 1 = coLei
+        /// 2 = COLIBRI
+        /// 3 = A2LL
+        /// 4 = VAM
+        /// 5 = MAZ
+        /// 6 = BAB/Reha
+        /// 7 = zPDV
+        /// 8 = Kommunen (Alg II)
+        /// A = ALLEGRO
+        /// </remarks>
+        public string KENNZUE { get; set; } = " ";
+
+        /// <summary>
+        /// Holt oder setzt den Übermittlungsweg der angegebenen Anmeldung
+        /// </summary>
+        /// <remarks>
+        /// 1 = Meldung eines Arbeitgebers aus systemgeprüftem Programm (§ 18 DEÜV)
+        /// 2 = ???
+        /// 4 = Erstellung oder Änderung einer Meldung durch die Krankenkasse
+        /// 5 = Meldung eines Arbeitgebers mittels maschinell erstellter Ausfüllhilfe (§ 18 DEÜV)
+        /// 6 = Meldekorrektur aus der Betriebsprüfung
+        /// 9 = Meldung von der Deutschen Rentenversicherung Knappschaft Bahn See aufgrund einer Meldung eines Arbeitgebers durch Meldebeleg nach § 28a Absatz 6a SGB IV
+        /// </remarks>
+        public int? MMUEB { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Kennzeichen, dass die Anschrift nach Prüfung durch die Sachbearbeitung der Krankenkasse trotz UNIPOST-Abweisung durch die Datenstelle der Rentenversicherung zuzulassen ist.
+        /// </summary>
+        /// <remarks>
+        /// D = Anschrift ist zuzulassen
+        /// </remarks>
+        public string KENNZUP { get; set; }
 
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Sofortmeldung vorhanden ist
@@ -409,6 +442,9 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Holt oder setzt die Nebenversionsnummer
         /// </summary>
+        /// <remarks>
+        /// Die Nebenversionsnummer wird nicht mehr geprüft.
+        /// </remarks>
         public int NEVERNR { get; set; }
 
         /// <summary>
