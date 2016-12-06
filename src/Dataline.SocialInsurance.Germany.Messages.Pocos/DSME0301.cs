@@ -448,7 +448,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         {
             get
             {
-                return ListeDBME == null ? null : ListeDBME.SingleOrDefault();
+                return ListeDBME?.SingleOrDefault();
             }
             set
             {
@@ -464,7 +464,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         {
             get
             {
-                return ListeDBNA == null ? null : ListeDBNA.SingleOrDefault();
+                return ListeDBNA?.SingleOrDefault();
             }
             set
             {
@@ -480,7 +480,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         {
             get
             {
-                return ListeDBGB == null ? null : ListeDBGB.SingleOrDefault();
+                return ListeDBGB?.SingleOrDefault();
             }
             set
             {
@@ -496,7 +496,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         {
             get
             {
-                return ListeDBAN == null ? null : ListeDBAN.SingleOrDefault();
+                return ListeDBAN?.SingleOrDefault();
             }
             set
             {
@@ -512,7 +512,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         {
             get
             {
-                return ListeDBEU == null ? null : ListeDBEU.SingleOrDefault();
+                return ListeDBEU?.SingleOrDefault();
             }
             set
             {
@@ -528,7 +528,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         {
             get
             {
-                return ListeDBUV == null ? null : ListeDBUV.SingleOrDefault();
+                return ListeDBUV?.SingleOrDefault();
             }
             set
             {
@@ -544,7 +544,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         {
             get
             {
-                return ListeDBKS == null ? null : ListeDBKS.Select(x => x.Value).SingleOrDefault();
+                return ListeDBKS?.Select(x => x.Value).SingleOrDefault();
             }
             set
             {
@@ -560,7 +560,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         {
             get
             {
-                return ListeDBSV == null ? null : ListeDBSV.SingleOrDefault();
+                return ListeDBSV?.SingleOrDefault();
             }
             set
             {
@@ -576,7 +576,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         {
             get
             {
-                return ListeDBKV == null ? null : ListeDBKV.SingleOrDefault();
+                return ListeDBKV?.SingleOrDefault();
             }
             set
             {
@@ -592,7 +592,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         {
             get
             {
-                return ListeDBVR == null ? null : ListeDBVR.SingleOrDefault();
+                return ListeDBVR?.SingleOrDefault();
             }
             set
             {
@@ -608,7 +608,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         {
             get
             {
-                return ListeDBRG == null ? null : ListeDBRG.SingleOrDefault();
+                return ListeDBRG?.SingleOrDefault();
             }
             set
             {
@@ -624,7 +624,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         {
             get
             {
-                return ListeDBSO == null ? null : ListeDBSO.SingleOrDefault();
+                return ListeDBSO?.SingleOrDefault();
             }
             set
             {
@@ -640,7 +640,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         {
             get
             {
-                return ListeDBBF == null ? null : ListeDBBF.SingleOrDefault();
+                return ListeDBBF?.SingleOrDefault();
             }
             set
             {
@@ -698,6 +698,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
 
         private class WrapperDBKS
         {
+            // ReSharper disable once MemberCanBePrivate.Local
             public DBKS Value { get; set; }
 
             public static WrapperDBKS Create(DBKS value)

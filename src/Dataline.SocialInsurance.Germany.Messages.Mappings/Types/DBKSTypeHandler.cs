@@ -3,13 +3,11 @@
 // </copyright>
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using BeanIO;
 using BeanIO.Types;
+
 using SocialInsurance.Germany.Messages.Pocos;
 
 namespace SocialInsurance.Germany.Messages.Mappings.Types
