@@ -9,8 +9,13 @@ using Xunit;
 
 namespace SocialInsurance.Germany.Messages.Tests.Bvbei
 {
-    public class BeitragserhebungTests : TestBasis
+    public class BeitragserhebungTests : TestBasis, IClassFixture<DefaultStreamFactoryFixture>
     {
+        public BeitragserhebungTests(DefaultStreamFactoryFixture fixture)
+            : base(fixture.Factory)
+        {
+        }
+
         /// <summary>
         /// DSBE
         /// </summary>

@@ -8,8 +8,13 @@ using Xunit;
 
 namespace SocialInsurance.Germany.Messages.Tests.Deuev
 {
-    public class DeuevDskkTests02 : TestBasis
+    public class DeuevDskkTests02 : TestBasis, IClassFixture<DefaultStreamFactoryFixture>
     {
+        public DeuevDskkTests02(DefaultStreamFactoryFixture fixture)
+            : base(fixture.Factory)
+        {
+        }
+
         /// <summary>
         /// Beginn der Versicherungs- und/oder Beitragspflicht
         /// wegen Aufnahme einer Beschäftigung (VSNR liegt vor)

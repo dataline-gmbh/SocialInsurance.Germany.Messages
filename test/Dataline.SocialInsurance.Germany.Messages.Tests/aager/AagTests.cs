@@ -5,7 +5,6 @@ using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 using BeanIO;
 
@@ -17,11 +16,12 @@ using Xunit.Abstractions;
 
 namespace SocialInsurance.Germany.Messages.Tests.aager
 {
-    public class AagTests : TestBasis
+    public class AagTests : TestBasis, IClassFixture<DefaultStreamFactoryFixture>
     {
         private readonly ITestOutputHelper _output;
 
-        public AagTests(ITestOutputHelper output)
+        public AagTests(DefaultStreamFactoryFixture fixture, ITestOutputHelper output)
+            : base(fixture.Factory)
         {
             _output = output;
         }

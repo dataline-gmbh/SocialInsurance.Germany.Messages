@@ -11,8 +11,12 @@ using Xunit;
 
 namespace SocialInsurance.Germany.Messages.Tests.bwnac
 {
-    public class BeitragsnachweisTests : TestBasis
+    public class BeitragsnachweisTests : TestBasis, IClassFixture<DefaultStreamFactoryFixture>
     {
+        public BeitragsnachweisTests(DefaultStreamFactoryFixture fixture) : base(fixture.Factory)
+        {
+        }
+
         /// <summary>
         /// BW02
         /// </summary>

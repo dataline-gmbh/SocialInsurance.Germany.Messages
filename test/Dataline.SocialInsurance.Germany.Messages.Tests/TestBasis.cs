@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
-using System.Runtime.CompilerServices;
 using System.Text;
 
 using BeanIO;
-
-using SocialInsurance.Germany.Messages.Mappings;
 
 using Xunit;
 
@@ -16,21 +12,15 @@ namespace SocialInsurance.Germany.Messages.Tests
     {
         private static readonly Encoding _iso8859_15 = Encoding.GetEncoding("ISO-8859-15");
 
-        private readonly StreamFactory _factory;
-
         private readonly string _namespace;
 
-        protected TestBasis()
+        protected TestBasis(StreamFactory factory)
         {
-            _factory = StreamFactory.NewInstance();
-            _factory.Load(Meldungen.LoadMeldungen());
+            StreamFactory = factory;
             _namespace = GetType().Namespace;
         }
 
-        protected StreamFactory StreamFactory
-        {
-            get { return _factory; }
-        }
+        protected StreamFactory StreamFactory { get; }
 
         protected Encoding DefaultEncoding
         {

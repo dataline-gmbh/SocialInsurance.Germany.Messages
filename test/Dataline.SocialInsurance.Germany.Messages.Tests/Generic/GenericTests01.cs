@@ -17,11 +17,12 @@ using adapter = deuev18::de.drv.dsrv.kernpruefung.adapter;
 
 namespace SocialInsurance.Germany.Messages.Tests.Generic
 {
-    public class GenericTests01 : TestBasis
+    public class GenericTests01 : TestBasis, IClassFixture<DefaultStreamFactoryFixture>
     {
         private readonly ITestOutputHelper _output;
 
-        public GenericTests01(ITestOutputHelper output)
+        public GenericTests01(DefaultStreamFactoryFixture fixture, ITestOutputHelper output)
+            : base(fixture.Factory)
         {
             _output = output;
         }

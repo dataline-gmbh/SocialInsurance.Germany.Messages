@@ -13,8 +13,13 @@ using Xunit;
 
 namespace SocialInsurance.Germany.Messages.Tests.aager
 {
-    public class AakTests : TestBasis
+    public class AakTests : TestBasis, IClassFixture<DefaultStreamFactoryFixture>
     {
+        public AakTests(DefaultStreamFactoryFixture fixture)
+            : base(fixture.Factory)
+        {
+        }
+
         /// <summary>
         /// DSRA
         /// </summary>

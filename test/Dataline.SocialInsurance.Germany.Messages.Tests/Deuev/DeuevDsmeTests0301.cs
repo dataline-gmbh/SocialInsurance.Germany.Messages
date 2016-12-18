@@ -13,11 +13,10 @@ using adapter = deuev17::de.drv.dsrv.kernpruefung.adapter;
 
 namespace SocialInsurance.Germany.Messages.Tests.Deuev
 {
-    public class DeuevDsmeTests0301 : TestBasis
+    public class DeuevDsmeTests0301 : TestBasis, IClassFixture<DeuevStreamFactoryFixture>
     {
-        public DeuevDsmeTests0301()
+        public DeuevDsmeTests0301(DeuevStreamFactoryFixture fixture) : base(fixture.Factory)
         {
-            StreamFactory.Load(new Uri("resource:SocialInsurance.Germany.Messages.Tests.Deuev.DeuevMappings.xml, Dataline.SocialInsurance.Germany.Messages.Tests"));
         }
 
         /// <summary>

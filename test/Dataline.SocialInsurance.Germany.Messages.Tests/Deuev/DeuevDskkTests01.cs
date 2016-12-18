@@ -12,11 +12,12 @@ using Xunit.Abstractions;
 
 namespace SocialInsurance.Germany.Messages.Tests.Deuev
 {
-    public class DeuevDskkTests01 : TestBasis
+    public class DeuevDskkTests01 : TestBasis, IClassFixture<DefaultStreamFactoryFixture>
     {
         private readonly ITestOutputHelper _output;
 
-        public DeuevDskkTests01(ITestOutputHelper output)
+        public DeuevDskkTests01(DefaultStreamFactoryFixture fixture, ITestOutputHelper output)
+            : base(fixture.Factory)
         {
             _output = output;
         }

@@ -13,8 +13,13 @@ using adapter = deuev16::de.drv.dsrv.kernpruefung.adapter;
 
 namespace SocialInsurance.Germany.Messages.Tests.Deuev
 {
-    public class DeuevDsmeTests02 : TestBasis
+    public class DeuevDsmeTests02 : TestBasis, IClassFixture<DefaultStreamFactoryFixture>
     {
+        public DeuevDsmeTests02(DefaultStreamFactoryFixture fixture)
+            : base(fixture.Factory)
+        {
+        }
+
         /// <summary>
         /// Beginn der Versicherungs- und/oder Beitragspflicht
         /// wegen Aufnahme einer Beschäftigung (VSNR liegt vor)
