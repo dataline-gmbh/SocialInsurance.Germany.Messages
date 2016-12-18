@@ -33,7 +33,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
         /// <returns>Meldedatei als DeuevMessageData-Objekt</returns>
         private BwnaMessageData GetMessageFromString(string input, string name)
         {
-            var output = new StringWriter();
+            var output = new StringWriter() {NewLine = "\n"};
             var writer = StreamFactory.CreateWriter(name, output);
             var reader = StreamFactory.CreateReader(name, new StringReader(input));
             var deuevMessage = new BwnaMessageData();

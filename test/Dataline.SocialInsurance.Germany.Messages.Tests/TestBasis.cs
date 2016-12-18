@@ -45,7 +45,7 @@ namespace SocialInsurance.Germany.Messages.Tests
         protected string ReadData(string resourceName, Encoding encoding)
         {
             using (var reader = LoadData(resourceName, encoding))
-                return reader.ReadToEnd();
+                return reader.ReadToEnd().Replace("\r\n", "\n");
         }
 
         protected TextReader LoadData(string resourceName)

@@ -1890,7 +1890,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
         /// <returns>Die Meldedatei</returns>
         private string GetStringFromMessage(DeuevMessageData data, string streamName)
         {
-            var output = new StringWriter();
+            var output = new StringWriter() {NewLine = "\n"};
             using (var writer = StreamFactory.CreateWriter(streamName, output))
             {
                 foreach (var record in data.VOSZ)

@@ -53,7 +53,7 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
         /// <returns>Die Meldedatei</returns>
         private string GetStringFromMessage(BwnaMessageData data, string streamName)
         {
-            var output = new StringWriter();
+            var output = new StringWriter() {NewLine = "\n"};
             var writer = StreamFactory.CreateWriter(streamName, output);
             foreach (var record in data.VOSZ)
                 writer.Write(record);
