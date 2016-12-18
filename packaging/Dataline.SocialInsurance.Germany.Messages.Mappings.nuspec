@@ -18,16 +18,16 @@
     <tags>SV Meldung BeanIO mapping Sozialversicherung DEUEV DEÜV</tags>
     <dependencies>
 		<group targetFramework="native">
-			<dependency id="FubarDev.BeanIO" version="4.0.0-beta2-0018" />
+			<dependency id="FubarDev.BeanIO" version="4.1.0-beta1-0023" />
       <dependency id="Dataline.SocialInsurance.Germany.Messages.Pocos" version="$version$" />
     </group>
 		<group targetFramework=".NETFramework4.5">
-			<dependency id="FubarDev.BeanIO" version="4.0.0-beta2-0018" />
+			<dependency id="FubarDev.BeanIO" version="4.1.0-beta1-0023" />
       <dependency id="Dataline.SocialInsurance.Germany.Messages.Pocos" version="$version$" />
     </group>
 		<group targetFramework=".NETStandard1.1">
-			<dependency id="System.Runtime" version="4.1.0" />
-			<dependency id="FubarDev.BeanIO" version="4.0.0-beta2-0018" />
+			<dependency id="System.Runtime" version="4.3.0" />
+			<dependency id="FubarDev.BeanIO" version="4.1.0-beta1-0023" />
       <dependency id="Dataline.SocialInsurance.Germany.Messages.Pocos" version="$version$" />
     </group>
     </dependencies>

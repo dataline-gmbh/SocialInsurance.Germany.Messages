@@ -24,7 +24,7 @@
 			<dependency id="NodaTime" version="2.0.0-alpha20160729" />
 		</group>
 		<group targetFramework=".NETStandard1.1">
-			<dependency id="System.Runtime" version="4.1.0" />
+			<dependency id="System.Runtime" version="4.3.0" />
 			<dependency id="NodaTime" version="2.0.0-alpha20160729" />
 		</group>
     </dependencies>
