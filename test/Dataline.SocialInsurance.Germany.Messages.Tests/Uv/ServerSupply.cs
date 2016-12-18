@@ -19,7 +19,7 @@ using ExtraStandard.GkvKomServer.Validation.Extra14;
 using ExtraStandard.Validation;
 
 using RT;
-using RT.CombByteOrder;
+using RT.Comb;
 
 using SocialInsurance.Germany.Messages.Pocos;
 using SocialInsurance.Germany.Messages.Pocos.UV;
@@ -31,7 +31,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Uv
 {
     public class ServerSupply : ServerCommunication
     {
-        private static readonly ICombProvider _combProvider = new CombProvider();
+        private static readonly ICombProvider _combProvider = new PostgreSqlCombProvider(new UnixDateTimeStrategy());
 
         private static readonly IGkvExtra14ValidatorFactory _validatorFactory = new GkvExtraValidatorFactory();
 
