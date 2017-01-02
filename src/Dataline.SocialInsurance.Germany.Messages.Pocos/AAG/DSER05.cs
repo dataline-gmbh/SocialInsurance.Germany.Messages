@@ -342,7 +342,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Beschäftigungsverbot vorhanden ist
         /// </summary>
-        public DBBT04 DBBT
+        public DBBT05 DBBT
         {
             get
             {
@@ -454,7 +454,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
 
         private IList<DBAU05> ListeDBAU { get; set; }
 
-        private IList<DBBT04> ListeDBBT { get; set; }
+        private IList<DBBT05> ListeDBBT { get; set; }
 
         private IList<DBZU04> ListeDBZU { get; set; }
 
