@@ -41,7 +41,7 @@
 		<field name="MMDBBV" length="1" required="true" typeHandler="jn"/>
 		<field name="MMDBNA" length="1" required="true" typeHandler="jn"/>
 		<field name="MMDBAA" length="1" required="true" typeHandler="jn"/>
-		<field name="MMBF" length="1" required="true" typeHandler="jn"/>
+		<field name="RESERVE_MMBF" length="1" required="false" ignore="true"/>
 		<field name="RESERVE3" length="100" required="false" ignore="true"/>
 		<segment name="ListeDBAU" class="SocialInsurance.Germany.Messages.Pocos.AAG.DBAU05, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMDBAU" collection="list">
 			<include template="DBAU-v05" />
@@ -61,9 +61,6 @@
 		<segment name="ListeDBAA" class="SocialInsurance.Germany.Messages.Pocos.DBAA, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMDBAA" collection="list">
 			<include template="DBAA" />
 		</segment>
-    <segment name="ListeDBBF" class="SocialInsurance.Germany.Messages.Pocos.DBBF, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMBF" collection="list">
-      <include template="DBBF" />
-    </segment>
 		<segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
 			<include template="DBFE" />
 		</segment>

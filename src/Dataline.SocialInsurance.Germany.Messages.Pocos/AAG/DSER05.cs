@@ -27,8 +27,6 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
 
         private bool? _hatDbaa;
 
-        private bool? _hatDbbf;
-
         private bool? _fekz;
 
         /// <summary>
@@ -315,15 +313,6 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         }
 
         /// <summary>
-        /// Holt oder setzt einen Wert der angibt, ob der Datenbaustein DBBF - Bestandsfehler vorhanden ist
-        /// </summary>
-        public bool MMBF
-        {
-            get { return _hatDbbf ?? DBBF != null; }
-            set { _hatDbbf = value; }
-        }
-
-        /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Arbeitsunfähigkeit vorhanden ist
         /// </summary>
         public DBAU05 DBAU
@@ -420,22 +409,6 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         }
 
         /// <summary>
-        /// Holt oder setzt den Datenbaustein für Bestandsfehler
-        /// </summary>
-        public DBBF DBBF
-        {
-            get
-            {
-                return ListeDBBF?.SingleOrDefault();
-            }
-            set
-            {
-                ListeDBBF = ListeDBBF.Set(value);
-                _hatDbbf = null;
-            }
-        }
-
-        /// <summary>
         /// Holt oder setzt eine Liste von Fehlern
         /// </summary>
         public IList<DBFE> DBFE { get; set; }
@@ -447,7 +420,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         {
             get
             {
-                foreach (var datenbaustein in ListExtensions.Enumerate(ListeDBAU, ListeDBBT, ListeDBZU, ListeDBBV, ListeDBNA, ListeDBAA, ListeDBBF, DBFE))
+                foreach (var datenbaustein in ListExtensions.Enumerate(ListeDBAU, ListeDBBT, ListeDBZU, ListeDBBV, ListeDBNA, ListeDBAA, DBFE))
                     yield return datenbaustein;
             }
         }
@@ -463,7 +436,5 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         private IList<DBNA> ListeDBNA { get; set; }
 
         private IList<DBAA> ListeDBAA { get; set; }
-
-        private IList<DBBF> ListeDBBF { get; set; }
     }
 }
