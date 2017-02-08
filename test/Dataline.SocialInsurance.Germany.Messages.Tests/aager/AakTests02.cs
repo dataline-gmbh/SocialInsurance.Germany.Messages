@@ -13,9 +13,9 @@ using Xunit;
 
 namespace SocialInsurance.Germany.Messages.Tests.aager
 {
-    public class AakTests : TestBasis, IClassFixture<DefaultStreamFactoryFixture>
+    public class AakTests02 : TestBasis, IClassFixture<DefaultStreamFactoryFixture>
     {
-        public AakTests(DefaultStreamFactoryFixture fixture)
+        public AakTests02(DefaultStreamFactoryFixture fixture)
             : base(fixture.Factory)
         {
         }
@@ -23,17 +23,17 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
         /// <summary>
         /// DSRA
         /// </summary>
-        [Theory(DisplayName = "TestDSRA v1", Skip = "Keine Kundenunabhängigen Testdaten vorhanden")]
-        [InlineData(@"d:\temp\package-1.txt", "super-message")]
-        [InlineData(@"d:\temp\package-1.txt", "dsra-agger-v01")]
-        public void TestDSRA01(string fileName, string streamName)
+        [Theory(DisplayName = "TestDSRA v2", Skip = "Keine Kundenunabhängigen Testdaten vorhanden")]
+        [InlineData(@"d:\temp\aak-test-01.txt", "super-message")]
+        [InlineData(@"d:\temp\aak-test-01.txt", "dsra-agger-v02")]
+        public void TestDSRA02(string fileName, string streamName)
         {
             try
             {
                 var deuevMessage = GetMessageFromFile(fileName, streamName);
-                Assert.True(deuevMessage.DSRA01.Count > 0);
+                Assert.True(deuevMessage.DSRA02.Count > 0);
             }
-            catch (BeanIO.BeanReaderException ex) when(DumpFieldExceptions(ex))
+            catch (BeanReaderException ex) when(DumpFieldExceptions(ex))
             {
                 
             }
@@ -90,10 +90,10 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
                     streamObject = reader.Read();
                 }
 
-                while (reader.RecordName == "DSRA" || reader.RecordName == "DSRA-v01")
+                while (reader.RecordName == "DSRA" || reader.RecordName == "DSRA-v02")
                 {
-                    var record = Assert.IsType<DSRA01>(streamObject);
-                    deuevMessage.DSRA01.Add(record);
+                    var record = Assert.IsType<DSRA02>(streamObject);
+                    deuevMessage.DSRA02.Add(record);
                     writer.Write(record);
                     streamObject = reader.Read();
                 }
@@ -130,13 +130,13 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
             public DsraMessageData()
             {
                 VOSZ = new List<VOSZ>();
-                DSRA01 = new List<DSRA01>();
+                DSRA02 = new List<DSRA02>();
                 NCSZ = new List<NCSZ>();
             }
 
             public List<VOSZ> VOSZ { get; }
 
-            public List<DSRA01> DSRA01 { get; }
+            public List<DSRA02> DSRA02 { get; }
 
             public List<NCSZ> NCSZ { get; }
         }
