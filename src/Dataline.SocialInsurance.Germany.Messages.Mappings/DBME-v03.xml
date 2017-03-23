@@ -14,7 +14,7 @@
     <field name="KENNZRK" length="1" required="false" regex="[WO]"/>
     <field name="KENNZMF" length="1" required="true" regex="[JN]"/>
     <!-- Information über gültige Werte aus dem SV-Check Version 66 -->
-    <field name="INTERN" length="1" required="true" regex="[029]" />
+    <field name="KENNZAP" length="1" required="true" regex="[02-9]" />
     <field name="RESERVE1" length="100" required="false" ignore="true"/>
   </template>
 </beanio>
