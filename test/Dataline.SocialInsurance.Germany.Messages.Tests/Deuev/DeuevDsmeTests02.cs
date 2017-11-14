@@ -101,7 +101,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             {
                 if (dsme.GD == 10)
                 {
-                    Assert.Equal(dsme.PERSGR, 110);
+                    Assert.Equal(110, dsme.PERSGR);
                     Assert.NotEqual(string.Empty, dsme.VSNR);
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
@@ -132,7 +132,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             {
                 if (dsme.GD == 10)
                 {
-                    Assert.Equal(dsme.PERSGR, 110);
+                    Assert.Equal(110, dsme.PERSGR);
                     Assert.Equal(string.Empty, dsme.VSNR);
                     Assert.NotNull(dsme.DBME);
                     Assert.NotNull(dsme.DBNA);
@@ -1855,8 +1855,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             var data = File.ReadAllText(@"D:\temp\arbeit\meldungen\edua01045-response.a07", DefaultEncoding);
             var deuevMessage = GetMessageFromString(data, "super-message");
             Assert.Equal(2, deuevMessage.VOSZ.Count);
-            Assert.Equal(0, deuevMessage.DSME.Count);
-            Assert.Equal(0, deuevMessage.DSBD.Count);
+            Assert.Empty(deuevMessage.DSME);
+            Assert.Empty(deuevMessage.DSBD);
             Assert.Equal(2, deuevMessage.NCSZ.Count);
             Assert.Collection(
                 deuevMessage.VOSZ.Last().DBFE,
@@ -1874,8 +1874,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             var data = File.ReadAllText(@"D:\temp\arbeit\meldungen\edua01055-response.a07", DefaultEncoding);
             var deuevMessage = GetMessageFromString(data, "super-message");
             Assert.Equal(2, deuevMessage.VOSZ.Count);
-            Assert.Equal(1, deuevMessage.DSME.Count);
-            Assert.Equal(0, deuevMessage.DSBD.Count);
+            Assert.Single(deuevMessage.DSME);
+            Assert.Empty(deuevMessage.DSBD);
             Assert.Equal(2, deuevMessage.NCSZ.Count);
             Assert.Collection(
                 deuevMessage.DSME.Single().DBFE,

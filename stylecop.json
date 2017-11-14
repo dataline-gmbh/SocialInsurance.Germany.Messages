@@ -3,6 +3,9 @@
   "settings": {
     "documentationRules": {
       "companyName": "DATALINE GmbH & Co. KG"
+    },
+    "orderingRules": {
+      "usingDirectivesPlacement": "outsideNamespace"
     }
   }
 }

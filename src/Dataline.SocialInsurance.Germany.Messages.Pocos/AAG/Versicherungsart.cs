@@ -27,6 +27,6 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <summary>
         /// Geringfügige Beschaeftigung
         /// </summary>
-        GeringfuegigeBeschaeftigung
+        GeringfuegigeBeschaeftigung,
     }
 }

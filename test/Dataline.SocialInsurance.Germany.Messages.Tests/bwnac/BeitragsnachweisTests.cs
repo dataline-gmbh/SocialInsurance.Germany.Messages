@@ -34,9 +34,9 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
         {
             var data = ReadData("ebna0091.a35");
             var deuevMessage = GetMessageFromString(data, "envelope-request-generic");
-            Assert.Equal(0, deuevMessage.BW02.Count);
-            Assert.Equal(1, deuevMessage.VOSZ.Count);
-            Assert.Equal(1, deuevMessage.NCSZ.Count);
+            Assert.Empty(deuevMessage.BW02);
+            Assert.Single(deuevMessage.VOSZ);
+            Assert.Single(deuevMessage.NCSZ);
         }
 
         [Fact(Skip = "Keine Kundenunabhängigen Testdaten vorhanden")]
@@ -44,7 +44,7 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
         {
             var data = File.ReadAllText(@"D:\temp\arbeit\meldungen\ebna02457-response.a18");
             var deuevMessage = GetMessageFromString(data, "super-message");
-            Assert.Equal(0, deuevMessage.BW02.Count);
+            Assert.Empty(deuevMessage.BW02);
             Assert.Equal(2, deuevMessage.VOSZ.Count);
             Assert.Equal(2, deuevMessage.NCSZ.Count);
         }

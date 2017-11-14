@@ -37,6 +37,6 @@ namespace SocialInsurance.Germany.Messages.Pocos.UV
         /// <summary>
         /// Sonstige Unternehmen ohne Meldepflicht (es wird kein Lohnnachweis erwartet)
         /// </summary>
-        SonstigeUnternehmenOhneMeldepflicht
+        SonstigeUnternehmenOhneMeldepflicht,
     }
 }
