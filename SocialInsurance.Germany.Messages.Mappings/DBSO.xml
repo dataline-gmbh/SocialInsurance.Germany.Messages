@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<beanio xmlns="http://www.beanio.org/2015/06">
-  <template name="DBSO">
-    <field name="KE" length="4" literal="DBSO" required="true"/>
-    <field name="KENNZSTSO" length="1" required="true"/>
-    <field name="ZRBGSO" length="8" required="true" format="yyyyMMdd"/>
-  </template>
-</beanio>

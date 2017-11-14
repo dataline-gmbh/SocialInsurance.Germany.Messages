@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBBV">
+    <field name="KE" length="4" literal="DBBV" required="true"/>
+    <field name="ÜBVER" length="1" required="true" regex="[0-2]" type="int"/>
+	  <field name="VERMO" length="6" required="false" type="int" format="000000"/>
+    <field name="RESERVE1" length="10" required="false" ignore="true"/>
+	  <field name="RESERVE2" length="8" required="false" ignore="true"/>
+    <field name="IBAN" length="34" required="false"/>
+    <field name="BIC" length="11" required="false"/>
+    <field name="KTOINH" length="50" required="false"/>
+    <field name="VERWZWECK" length="50" required="false"/>
+  </template>
+</beanio>

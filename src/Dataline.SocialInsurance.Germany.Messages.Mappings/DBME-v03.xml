@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBME-v03">
+    <field name="KE" length="4" literal="DBME" required="true"/>
+    <field name="KENNZST" length="1" required="true" typeHandler="jn" />
+    <field name="KENNZGLE" length="1" regex="[NJ]|[0-2]" required="false"/>
+    <field name="ZRBG" length="8" required="true" format="yyyyMMdd"/>
+    <field name="ZREN" length="8" required="false" parseDefault="false" default="00000000" format="yyyyMMdd" />
+    <field name="ZLTG" length="2" required="true" type="int" format="00"/>
+    <field name="WG" length="1" required="false"/>
+    <field name="EG" length="6" required="true" type="int" format="000000"/>
+    <field name="BYGR" length="4" required="true" />
+    <field name="TTSC" length="9" required="false"/>
+    <field name="KENNZRK" length="1" required="false" regex="[WO]"/>
+    <field name="KENNZMF" length="1" required="true" regex="[JN]"/>
+    <!-- Information über gültige Werte aus dem SV-Check Version 66 -->
+    <field name="KENNZAP" length="1" required="true" regex="[02-9]" />
+    <field name="RESERVE1" length="100" required="false" ignore="true"/>
+  </template>
+</beanio>

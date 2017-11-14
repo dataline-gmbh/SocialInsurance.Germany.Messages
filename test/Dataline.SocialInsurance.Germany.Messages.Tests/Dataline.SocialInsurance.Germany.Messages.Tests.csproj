@@ -1,0 +1,81 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Authors>DATALINE GmbH &amp; Co. KG</Authors>
+    <TargetFramework>net47</TargetFramework>
+    <DefineConstants>$(DefineConstants);TEST</DefineConstants>
+    <AssemblyName>Dataline.SocialInsurance.Germany.Messages.Tests</AssemblyName>
+    <PackageId>Dataline.SocialInsurance.Germany.Messages.Tests</PackageId>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <UserSecretsId>dataline-dev-sv-tests</UserSecretsId>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="**\*.xml;**\*.dat;Deuev\DSKK02\*;**\ebna*.a*;**\ebea*.a*;**\eaag*.a*;Generic\Data\*" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
+    <None Update="project.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Dataline.SocialInsurance.Germany.Messages.Mappings\Dataline.SocialInsurance.Germany.Messages.Mappings.csproj" />
+    <ProjectReference Include="..\..\src\Dataline.SocialInsurance.Germany.Messages.Pocos\Dataline.SocialInsurance.Germany.Messages.Pocos.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+    <PackageReference Include="CodeTiger.Core" Version="1.2.0" />
+    <PackageReference Include="Dataline.ExtraStandard.Compression" Version="0.4.10" />
+    <PackageReference Include="Dataline.ExtraStandard.Encryption" Version="0.4.10" />
+    <PackageReference Include="Dataline.ExtraStandard.Extra14" Version="0.4.10" />
+    <PackageReference Include="Dataline.ExtraStandard.GkvKomServer" Version="0.4.10" />
+    <PackageReference Include="Dataline.ExtraStandard.GkvKomServer.Validation.Extra14" Version="0.4.10" />
+    <PackageReference Include="Dguv.Kernpruefung.Uv-1.0" Version="1.0.10" />
+    <PackageReference Include="Dsrv.Kernpruefung.Deuev-1.6" Version="1.6.1.13" />
+    <PackageReference Include="Dsrv.Kernpruefung.Deuev-1.7" Version="1.7.0.13" />
+    <PackageReference Include="Dsrv.Kernpruefung.Deuev-1.8" Version="1.8.0.13" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.0.0" />
+    <PackageReference Include="RT.Comb" Version="2.3.0" />
+    <PackageReference Include="System.Interactive.Async" Version="3.1.1" />
+    <PackageReference Include="xunit" Version="2.3.1" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <Target Name="ChangeAliasesOfStrongNameAssemblies" BeforeTargets="FindReferenceAssembliesForReferences;ResolveReferences">
+    <ItemGroup>
+      <ReferencePath Condition="'%(FileName)' == 'Dguv.Kernpruefung.Uv-1.0'">
+        <Aliases>uv10</Aliases>
+      </ReferencePath>
+      <ReferencePath Condition="'%(FileName)' == 'Dsrv.Kernpruefung.Deuev-1.6'">
+        <Aliases>deuev16</Aliases>
+      </ReferencePath>
+      <ReferencePath Condition="'%(FileName)' == 'Dsrv.Kernpruefung.Deuev-1.7'">
+        <Aliases>deuev17</Aliases>
+      </ReferencePath>
+      <ReferencePath Condition="'%(FileName)' == 'Dsrv.Kernpruefung.Deuev-1.8'">
+        <Aliases>deuev18</Aliases>
+      </ReferencePath>
+    </ItemGroup>
+  </Target>
+  
+</Project>

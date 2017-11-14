@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBFU">
+    <field name="KE" length="4" literal="DBFU" required="true"/>
+    <field name="ANFU" length="1" required="true" regex="[0-9]" />
+    <field name="RESERVE" length="15" required="false" ignore="true"/>
+    <segment name="Meldungen" class="SocialInsurance.Germany.Messages.Pocos.UV.DBFU+DBFUMeldung, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="ANFU" collection="list">
+      <field name="FU" length="72" required="true" />
+      <field name="QMDB" length="1" required="true" regex="[01]" typeHandler="01"/>
+    </segment>
+  </template>
+</beanio>

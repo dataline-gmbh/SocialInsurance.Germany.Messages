@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBNA">
+    <field name="KE" length="4" literal="DBNA" required="true"/>
+    <field name="FMNA" length="30" required="true" />
+    <field name="VONA" length="30" required="true" />
+    <field name="VOSA" length="20" required="false" />
+    <field name="NAZU" length="20" required="false" />
+    <field name="TITEL" length="20" required="false" />
+    <field name="KENNZAB" length="1" regex="[AM]" required="false" />
+  </template>
+</beanio>

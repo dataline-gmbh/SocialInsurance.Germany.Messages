@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <template name="VOSZ-v01">
+    <field name="KE" length="4" literal="VOSZ" rid="true" required="true"/>
+    <field name="VFMM" length="5" required="true"/>
+    <field name="BBNRAB" length="15" required="true"/>
+    <field name="BBNREP" length="15" required="true"/>
+    <field name="ED" length="8" required="true" format="yyyyMMdd"/>
+    <field name="DTNR" length="6" required="true" type="int" format="000000"/>
+    <field name="NAAB" length="50" required="false"/>
+    <field name="VERNR" length="2" required="true" literal="01" type="int" format="00" rid="true"/>
+    <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, Dataline.SocialInsurance.Germany.Messages.Pocos" collection="list" occurs="0-1" template="DBFE" />
+  </template>
+  <template name="VOSZ-DBFELANG-v01">
+    <field name="KE" length="4" literal="VOSZ" rid="true" required="true"/>
+    <field name="VFMM" length="5" required="true"/>
+    <field name="BBNRAB" length="15" required="true"/>
+    <field name="BBNREP" length="15" required="true"/>
+    <field name="ED" length="8" required="true" format="yyyyMMdd"/>
+    <field name="DTNR" length="6" required="true" type="int" format="000000"/>
+    <field name="NAAB" length="50" required="false"/>
+    <field name="VERNR" length="2" required="true" literal="01" type="int" format="00" rid="true"/>
+    <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFELANG, Dataline.SocialInsurance.Germany.Messages.Pocos" collection="list" occurs="1" template="DBFE" />
+    <field name="FELANG" length="278" rid="true" lenientPadding="true" regex=" +" required="false" ignore="true" />
+  </template>
+</beanio>

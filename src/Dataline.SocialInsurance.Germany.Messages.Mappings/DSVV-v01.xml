@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBNA.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBGB.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBAN.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <template name="DSVV-v01">
+    <field name="KE" literal="DSVV" length="4" rid="true" required="true" />
+    <field name="VF" literal="DEUEV" length="5" rid="true" required="true" />
+    <field name="BBNRAB" length="15" required="true" />
+    <field name="BBNREP" length="15" required="true" />
+    <field name="VERNR" length="2" literal="01" rid="true" type="int" format="00" required="true" />
+    <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
+    <field name="FEKZ" regex="[0-4]" length="1" required="true" />
+    <field name="FEAN" length="1" required="true" regex="[0-9]" />
+    <field name="VSNR" length="12" required="false"/>
+    <field name="KENNZRM" length="1" required="true" />
+    <field name="RESERVE1" length="1" required="false" ignore="true"/>
+    <field name="BBNRVU" length="15" required="true"/>
+    <field name="AZVU" length="20" required="false"/>
+    <field name="DSID" length="32" required="true" />
+    <field name="RESERVE2" length="2" required="false" ignore="true"/>
+    <field name="MMUEB" length="1" type="int" format="0" required="false" />
+    <field name="RESERVE3" length="24" required="false" ignore="true"/>
+    <field name="MMNA" length="1" required="true" literal="J" typeHandler="jn"/>
+    <field name="MMGB" length="1" required="true" literal="J" typeHandler="jn"/>
+    <field name="MMAN" length="1" required="true" literal="J" typeHandler="jn"/>
+    <field name="RESERVE4" length="26" required="false" ignore="true"/>
+     <segment name="ListeDBNA" class="SocialInsurance.Germany.Messages.Pocos.DBNA, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMNA" collection="list">
+      <include template="DBNA" />
+    </segment>
+    <segment name="ListeDBGB" class="SocialInsurance.Germany.Messages.Pocos.DBGB, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMGB" collection="list">
+      <include template="DBGB" />
+    </segment>
+    <segment name="ListeDBAN" class="SocialInsurance.Germany.Messages.Pocos.DBAN, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMAN" collection="list">
+      <include template="DBAN" />
+    </segment>
+    <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
+      <include template="DBFE" />
+    </segment>
+  </template>
+</beanio>
