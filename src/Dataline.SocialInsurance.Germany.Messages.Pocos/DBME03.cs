@@ -124,8 +124,11 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string KENNZMF { get; set; }
 
         /// <summary>
-        /// Holt oder setzt interne Daten
+        /// Holt oder setzt das Kennzeichen Additionspflege
         /// </summary>
-        public int INTERN { get; set; }
+        /// <remarks>
+        /// Zulässig ist die Grundstellung (Null) oder „2“ – „9“. Länge 1. Mussangabe.
+        /// </remarks>
+        public int KENNZAP { get; set; }
     }
 }

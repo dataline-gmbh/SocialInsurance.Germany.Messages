@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<beanio xmlns="http://www.beanio.org/2015/06">
+<beanio xmlns="http://www.beanio.org/2016/07">
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <template name="DSKO-v04">
@@ -12,8 +12,8 @@
     <field name="FEKZ" regex="[0-4]" length="1" required="true" />
     <field name="FEAN" length="1" required="true" regex="[0-9]" />
     <field name="BBNRER" length="15" required="true"/>
-    <field name="PRODID" length="7" required="true" type="int" format="d7"/>
-    <field name="MODID" length="8" required="true" type="int" format="d8"/>
+    <field name="PRODID" length="7" required="true" type="int" />
+    <field name="MODID" length="8" required="true" type="int" />
     <field name="NAME1" length="30" required="true"/>
     <field name="NAME2" length="30" required="false"/>
     <field name="NAME3" length="30" required="false"/>

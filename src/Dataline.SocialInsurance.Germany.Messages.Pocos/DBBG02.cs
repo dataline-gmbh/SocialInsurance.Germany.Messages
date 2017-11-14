@@ -4,6 +4,8 @@
 
 using System;
 
+using NodaTime;
+
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
@@ -90,7 +92,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Beginn des Zeitraums, für den die Meldung gelten soll, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime ZRBG { get; set; }
+        public LocalDate ZRBG { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Ende des Zeitraums, für den die Meldung gelten soll
@@ -98,7 +100,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Ende des Zeitraums, für den die Meldung gelten soll, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime ZREN { get; set; }
+        public LocalDate ZREN { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen Rechtskreis

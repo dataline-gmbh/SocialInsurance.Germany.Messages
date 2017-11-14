@@ -5,6 +5,8 @@
 using System;
 using System.Collections.Generic;
 
+using NodaTime;
+
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
@@ -52,7 +54,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
             /// <remarks>
             /// Beginn einer Fehlzeit, Länge 8, Mussangabe
             /// </remarks>
-            public DateTime FEHLBEG { get; set; }
+            public LocalDate FEHLBEG { get; set; }
 
             /// <summary>
             /// Holt oder setzt die Art der Fehlzeit

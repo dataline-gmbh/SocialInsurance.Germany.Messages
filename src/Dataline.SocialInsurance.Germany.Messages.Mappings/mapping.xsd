@@ -1,18 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <schema
   xmlns="http://www.w3.org/2001/XMLSchema"
-  xmlns:tns="http://www.beanio.org/2015/06"
+  xmlns:tns="http://www.beanio.org/2016/07"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   elementFormDefault="qualified"
-  targetNamespace="http://www.beanio.org/2015/06"
+  targetNamespace="http://www.beanio.org/2016/07"
   xml:lang="en"
-  version="2.2.0">
+  version="4.0.0">
 
   <annotation>
     <documentation>
       The BeanIO stream mapping configuration XML schema.
 
       Copyright 2011-2013 Kevin Seim
+	  Copyright 2015-2016 Fubar Development Junker, Kevin Seim
 
       Licensed under the Apache License, Version 2.0 (the "License");
       you may not use this file except in compliance with the License.
@@ -936,22 +937,6 @@
         </documentation>
       </annotation>
     </attribute>
-    <attribute name="jsonName" type="xsd:string" use="optional">
-      <annotation>
-        <documentation>
-          The JSON field name.  Defaults to the field name.
-        </documentation>
-      </annotation>
-    </attribute>
-    <attribute name="jsonType" type="xsd:string" use="optional">
-      <annotation>
-        <documentation>
-          The JSON field type.  Set to 'string', 'number' or 'boolean'.  Use a
-          '[]' suffix to indicate an array.  Defaults to 'string', or 'string[]'
-          if maxOccurs is greater than 1.
-        </documentation>
-      </annotation>
-    </attribute>
   </complexType>
 
   <complexType name="Segment">
@@ -1121,22 +1106,6 @@
         <documentation>
           Set to true if this element is nillable.  If 'true', null bean values
           are marshalled as nil.
-        </documentation>
-      </annotation>
-    </attribute>
-    <attribute name="jsonName" type="xsd:string" use="optional">
-      <annotation>
-        <documentation>
-          The JSON field name.  Defaults to the segment name.
-        </documentation>
-      </annotation>
-    </attribute>
-    <attribute name="jsonType" type="xsd:string" use="optional">
-      <annotation>
-        <documentation>
-          The JSON type.  Set to 'object', 'array' or 'none'.  Use a
-          '[]' suffix to indicate an array.  Defaults to 'object', or 'object[]'
-          if maxOccurs is greater than 1.
         </documentation>
       </annotation>
     </attribute>

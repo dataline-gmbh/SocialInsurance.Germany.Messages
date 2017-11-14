@@ -4,6 +4,8 @@
 
 using System;
 
+using NodaTime;
+
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
@@ -50,7 +52,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Datum, an dem laut Ausbildungsvertrag die Ausbildung beendet wird, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime ASVOREND { get; set; }
+        public LocalDate ASVOREND { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Datum, an dem die Ausbildung tatsächlich geendet hat
@@ -58,6 +60,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Datum, an dem die Ausbildung tatsächlich geendet hat, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime TATASEND { get; set; }
+        public LocalDate TATASEND { get; set; }
     }
 }

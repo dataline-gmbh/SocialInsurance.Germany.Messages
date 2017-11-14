@@ -3,6 +3,8 @@
 // </copyright>
 
 using System;
+
+using BeanIO.Config;
 using BeanIO.Types;
 
 namespace SocialInsurance.Germany.Messages.Mappings.Types
@@ -11,20 +13,33 @@ namespace SocialInsurance.Germany.Messages.Mappings.Types
     /// Eine <see cref="ITypeHandler"/>-Implementation, die das <see cref="Enum"/> in Zahlen konvertiert (und umgekehrt)
     /// </summary>
     /// <typeparam name="T">Der Enum-Typ</typeparam>
-    public class NumericEnumTypeHandler<T> : ITypeHandler
+    public class NumericEnumTypeHandler<T> : IConfigurableTypeHandler
     {
+        private string _format = "{0:D}";
+
         /// <inheritdoc/>
-        public Type TargetType
+        public Type TargetType => typeof(T);
+
+        /// <inheritdoc />
+        public void Configure(Properties properties)
         {
-            get { return typeof(T); }
+            foreach (var property in properties)
+            {
+                var propName = property.Key;
+                var propValue = property.Value;
+                switch (propName)
+                {
+                    case "format":
+                        _format = $"{{0:{propValue}}}";
+                        break;
+                }
+            }
         }
 
         /// <inheritdoc/>
         public string Format(object value)
         {
-            if (value == null)
-                return null;
-            return string.Format("{0:D}", value);
+            return value == null ? null : string.Format(_format, (int)value);
         }
 
         /// <inheritdoc/>

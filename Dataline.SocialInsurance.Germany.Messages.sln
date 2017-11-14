@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5019D85A-D77F-466A-9FB5-1BEEDFD68469}"
 EndProject
@@ -9,28 +9,29 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		dataline-64.png = dataline-64.png
 		Dataline.ruleset = Dataline.ruleset
-		global.json = global.json
 		GlobalAssemblyInfo.cs = GlobalAssemblyInfo.cs
 		LICENSE.md = LICENSE.md
 		NuGet.Config = NuGet.Config
 		README.md = README.md
+		stylecop.json = stylecop.json
 	EndProjectSection
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Dataline.SocialInsurance.Germany.Messages.Pocos", "src\Dataline.SocialInsurance.Germany.Messages.Pocos\Dataline.SocialInsurance.Germany.Messages.Pocos.xproj", "{A339BC4F-175B-4E44-BC93-56F5F8873DCC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packaging", "packaging", "{E8987361-D53E-437C-B8EF-56CD24450978}"
 	ProjectSection(SolutionItems) = preProject
-		packaging\install-mappings.ps1 = packaging\install-mappings.ps1
-		packaging\install-pocos.ps1 = packaging\install-pocos.ps1
-		packaging\uninstall-mappings.ps1 = packaging\uninstall-mappings.ps1
-		packaging\uninstall-pocos.ps1 = packaging\uninstall-pocos.ps1
+		packaging\Dataline.SocialInsurance.Germany.Messages.Mappings.nuspec = packaging\Dataline.SocialInsurance.Germany.Messages.Mappings.nuspec
+		packaging\Dataline.SocialInsurance.Germany.Messages.Mappings.targets = packaging\Dataline.SocialInsurance.Germany.Messages.Mappings.targets
+		packaging\Dataline.SocialInsurance.Germany.Messages.Pocos.nuspec = packaging\Dataline.SocialInsurance.Germany.Messages.Pocos.nuspec
+		packaging\Dataline.SocialInsurance.Germany.Messages.Pocos.targets = packaging\Dataline.SocialInsurance.Germany.Messages.Pocos.targets
+		packaging\NuGet.exe = packaging\NuGet.exe
 	EndProjectSection
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Dataline.SocialInsurance.Germany.Messages.Mappings", "src\Dataline.SocialInsurance.Germany.Messages.Mappings\Dataline.SocialInsurance.Germany.Messages.Mappings.xproj", "{F5F18191-CFF2-4CEE-B4D1-E814DDCD21F0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F6F82EC3-28EA-498E-9995-A4B89677991B}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Dataline.SocialInsurance.Germany.Messages.Tests", "test\Dataline.SocialInsurance.Germany.Messages.Tests\Dataline.SocialInsurance.Germany.Messages.Tests.xproj", "{C81BF012-5E86-429C-87EC-B3CE22905088}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dataline.SocialInsurance.Germany.Messages.Pocos", "src\Dataline.SocialInsurance.Germany.Messages.Pocos\Dataline.SocialInsurance.Germany.Messages.Pocos.csproj", "{A339BC4F-175B-4E44-BC93-56F5F8873DCC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dataline.SocialInsurance.Germany.Messages.Mappings", "src\Dataline.SocialInsurance.Germany.Messages.Mappings\Dataline.SocialInsurance.Germany.Messages.Mappings.csproj", "{F5F18191-CFF2-4CEE-B4D1-E814DDCD21F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dataline.SocialInsurance.Germany.Messages.Tests", "test\Dataline.SocialInsurance.Germany.Messages.Tests\Dataline.SocialInsurance.Germany.Messages.Tests.csproj", "{C81BF012-5E86-429C-87EC-B3CE22905088}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,9 +56,12 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{A339BC4F-175B-4E44-BC93-56F5F8873DCC} = {5019D85A-D77F-466A-9FB5-1BEEDFD68469}
 		{E8987361-D53E-437C-B8EF-56CD24450978} = {D619F13F-2813-4F47-B348-F97DBD84513A}
+		{A339BC4F-175B-4E44-BC93-56F5F8873DCC} = {5019D85A-D77F-466A-9FB5-1BEEDFD68469}
 		{F5F18191-CFF2-4CEE-B4D1-E814DDCD21F0} = {5019D85A-D77F-466A-9FB5-1BEEDFD68469}
 		{C81BF012-5E86-429C-87EC-B3CE22905088} = {F6F82EC3-28EA-498E-9995-A4B89677991B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D74A87E0-DF3A-4115-9CBF-D2676370F8DA}
 	EndGlobalSection
 EndGlobal

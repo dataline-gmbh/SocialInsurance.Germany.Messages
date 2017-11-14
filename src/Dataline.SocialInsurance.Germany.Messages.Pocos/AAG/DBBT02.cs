@@ -4,6 +4,8 @@
 
 using System;
 
+using NodaTime;
+
 namespace SocialInsurance.Germany.Messages.Pocos.AAG
 {
     /// <summary>
@@ -12,20 +14,12 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
     public class DBBT02 : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBBT02"/> Klasse
-        /// </summary>
-        public DBBT02()
-        {
-            KE = "DBBT";
-        }
-
-        /// <summary>
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
         /// Kennung, um welchen Datenbaustein es sich handelt
         /// </remarks>
-        public string KE { get; set; }
+        public string KE { get; set; } = "DBBT";
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen Verarbeitung
@@ -42,7 +36,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Beginn des Erstattungszeitraums, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime EZEITVOM { get; set; }
+        public LocalDate EZEITVOM { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Ende des Erstattungszeitraums
@@ -50,7 +44,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Ende des Erstattungszeitraums, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime EZEITBIS { get; set; }
+        public LocalDate EZEITBIS { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen der Art der Abrechnung
@@ -113,6 +107,6 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Mutmaßlicher Entbindungstag, Länge 8, Pflichtangabe, soweit bekannt
         /// </remarks>
-        public DateTime? MUTEN { get; set; }
+        public LocalDate? MUTEN { get; set; }
     }
 }

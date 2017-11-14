@@ -4,6 +4,8 @@
 
 using System;
 
+using NodaTime;
+
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
@@ -42,7 +44,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Datum der Verarbeitung der quittierten Datei, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime VD { get; set; }
+        public LocalDate VD { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Datum der Erstellung der quittierten Datei
@@ -50,7 +52,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Datum der Erstellung der quittierten Datei, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime ED { get; set; }
+        public LocalDate ED { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Dateinummer der Sendung

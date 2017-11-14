@@ -30,25 +30,12 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         private FehlerKennzeichen? _fekz;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DSER02"/> Klasse
-        /// </summary>
-        /// <remarks>
-        /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt
-        /// </remarks>
-        public DSER02()
-        {
-            KE = "DSER";
-            VF = "AAGER";
-            VERNR = 2;
-        }
-
-        /// <summary>
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
         /// Kennung, um welchen Datensatz es sich handelt
         /// </remarks>
-        public string KE { get; set; }
+        public string KE { get; set; } = "DSER";
 
         /// <summary>
         /// Holt oder setzt das Verfahren
@@ -57,7 +44,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// Verfahren, für das der Datensatz bestimmt ist, Länge 5, Mussangabe
         /// DEUEV = DEÜV- Meldeverfahren
         /// </remarks>
-        public string VF { get; set; }
+        public string VF { get; set; } = Info.DSER.Verfahren;
 
         /// <summary>
         /// Holt oder setzt die Betriebsnummer des Erstellers des Datensatzes
@@ -81,7 +68,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Versionsnummer des übermittelten Datensatzes, Länge 2, Mussangabe
         /// </remarks>
-        public int VERNR { get; set; }
+        public int VERNR { get; set; } = 2;
 
         /// <summary>
         /// Holt oder setzt den Zeitpunkt der Erstellung des Dateznsatzes
@@ -129,7 +116,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Geburtsdatum des Versicherten , Länge 8, Mussangabe
         /// </remarks>
-        public DateTime GEBDA { get; set; }
+        public LocalDate GEBDA { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Betriebsnummer des Verursachers des Datensatzes

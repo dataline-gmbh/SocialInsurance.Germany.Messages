@@ -5,6 +5,8 @@
 using System;
 using System.Collections.Generic;
 
+using NodaTime;
+
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
@@ -62,7 +64,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Datum der Erstellung der Datei, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime ED { get; set; }
+        public LocalDate ED { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Dateifolgenummer

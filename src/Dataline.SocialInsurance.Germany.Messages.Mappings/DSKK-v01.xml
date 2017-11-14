@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<beanio xmlns="http://www.beanio.org/2015/06">
+<beanio xmlns="http://www.beanio.org/2016/07">
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBMM.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBMS.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBGZ-v02.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>

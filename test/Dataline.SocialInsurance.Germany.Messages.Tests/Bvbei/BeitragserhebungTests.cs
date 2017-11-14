@@ -9,8 +9,13 @@ using Xunit;
 
 namespace SocialInsurance.Germany.Messages.Tests.Bvbei
 {
-    public class BeitragserhebungTests : TestBasis
+    public class BeitragserhebungTests : TestBasis, IClassFixture<DefaultStreamFactoryFixture>
     {
+        public BeitragserhebungTests(DefaultStreamFactoryFixture fixture)
+            : base(fixture.Factory)
+        {
+        }
+
         /// <summary>
         /// DSBE
         /// </summary>
@@ -33,7 +38,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
         /// <returns>Meldedatei als DeuevMessageData-Objekt</returns>
         private BwnaMessageData GetMessageFromString(string input, string name)
         {
-            var output = new StringWriter();
+            var output = new StringWriter() {NewLine = "\n"};
             var writer = StreamFactory.CreateWriter(name, output);
             var reader = StreamFactory.CreateReader(name, new StringReader(input));
             var deuevMessage = new BwnaMessageData();

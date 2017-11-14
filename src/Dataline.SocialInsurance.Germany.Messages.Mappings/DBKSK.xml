@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<beanio xmlns="http://www.beanio.org/2015/06">
+<beanio xmlns="http://www.beanio.org/2016/07">
   <template name="DBKSK">
     <field name="AUSBKNV" length="1" required="false"/>
     <field name="TTSCKNV" length="144" required="true"/>

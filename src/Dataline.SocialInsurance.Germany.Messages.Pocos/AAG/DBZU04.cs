@@ -4,6 +4,8 @@
 
 using System;
 
+using NodaTime;
+
 namespace SocialInsurance.Germany.Messages.Pocos.AAG
 {
     /// <summary>
@@ -12,20 +14,12 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
     public class DBZU04 : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBZU04"/> Klasse
-        /// </summary>
-        public DBZU04()
-        {
-            KE = "DBZU";
-        }
-
-        /// <summary>
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
         /// Kennung, um welchen Datenbaustein es sich handelt
         /// </remarks>
-        public string KE { get; set; }
+        public string KE { get; set; } = "DBZU";
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen Verarbeitung
@@ -42,7 +36,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Beginn des Erstattungszeitraums, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime EZEITVOM { get; set; }
+        public LocalDate EZEITVOM { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Ende des Erstattungszeitraums
@@ -50,7 +44,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Ende des Erstattungszeitraums, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime EZEITBIS { get; set; }
+        public LocalDate EZEITBIS { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen Art der Abrechnung
@@ -67,7 +61,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Beginn der Schutzfrist, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime SFRISTVOM { get; set; }
+        public LocalDate SFRISTVOM { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Ende der Schutzfrist
@@ -75,7 +69,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Ende der Schutzfrist, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime SFRISTBIS { get; set; }
+        public LocalDate SFRISTBIS { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Höhe des monatlichen Bruttoentgelts
@@ -123,6 +117,6 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Mutmaßlicher Entbindungstag, Länge 8, Pflichtangabe, soweit bekannt
         /// </remarks>
-        public DateTime? MUTEN { get; set; }
+        public LocalDate? MUTEN { get; set; }
     }
 }

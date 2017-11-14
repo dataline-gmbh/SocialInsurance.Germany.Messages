@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<beanio xmlns="http://www.beanio.org/2015/06">
+<beanio xmlns="http://www.beanio.org/2016/07">
   <template name="DBRA-v01">
     <field name="KE" length="4" literal="DBRA" required="true"/>
     <field name="EZEITVOM" length="8" required="true" format="yyyyMMdd"/>

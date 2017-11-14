@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<beanio xmlns="http://www.beanio.org/2015/06">
+<beanio xmlns="http://www.beanio.org/2016/07">
   <template name="DBUV-v0301">
     <field name="KE" length="4" literal="DBUV" required="true"/>
     <field name="ANUV" length="1" required="true" type="int" format="0" regex="[0-9]"/>

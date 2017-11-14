@@ -4,6 +4,8 @@
 
 using System;
 
+using NodaTime;
+
 namespace SocialInsurance.Germany.Messages.Pocos
 {
     /// <summary>
@@ -89,6 +91,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Geburtsdatum, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime GBDT { get; set; }
+        public LocalDate GBDT { get; set; }
     }
 }

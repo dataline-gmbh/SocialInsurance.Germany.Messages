@@ -1,0 +1,5 @@
+VOSZKVAAG15451439       12345676       20160929000050vdek, Berlin                                      01
+VOSZAGAAG12345676       15451439       20160928000049Test                                              01DBFEVOSZE52 LFD-DATEI-NR nicht lückenlos aufsteigend; endgültig abgewiesen  
+DSKOAAGER12345676       15451439       04201609281649383450140012345676       135694960377000Test                                                                                      12345     Berlin                            Strasse 55                                MTheo Tester                   01234/5678          01234/5678          theo@tester.de                                                             
+NCSZAGAAG12345676       15451439       201609280000490000000201
+NCSZKVAAG15451439       12345676       201609290000500000000101

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 using BeanIO;
 
@@ -16,11 +16,12 @@ using Xunit.Abstractions;
 
 namespace SocialInsurance.Germany.Messages.Tests.aager
 {
-    public class AagTests : TestBasis
+    public class AagTests : TestBasis, IClassFixture<DefaultStreamFactoryFixture>
     {
         private readonly ITestOutputHelper _output;
 
-        public AagTests(ITestOutputHelper output)
+        public AagTests(DefaultStreamFactoryFixture fixture, ITestOutputHelper output)
+            : base(fixture.Factory)
         {
             _output = output;
         }
@@ -51,12 +52,17 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
         /// <summary>
         /// Test mit Kundendaten
         /// </summary>
-        [SkippableTheory(DisplayName = "(De-)serialisierung einer AAG-Rückmeldung (Kunden-Daten)")]
+        [Theory(DisplayName = "(De-)serialisierung einer AAG-Rückmeldung (Kunden-Daten)")]
         [InlineData(@"d:\temp\EAAG0000026.txt", "super-message")]
         [InlineData(@"d:\temp\EAAG0000026.txt", "dser-agger-v04")]
+        [InlineData(@"d:\temp\EAAG0000026.txt", "envelope-response-generic")]
         public void TestAagCustomerData(string fileName, string streamName)
         {
-            Skip.IfNot(File.Exists(fileName), $"Die Kunden-Datei {fileName} existiert nicht.");
+            if (!File.Exists(fileName))
+            {
+                _output.WriteLine($"Die Kunden-Datei {fileName} existiert nicht.");
+                return;
+            }
             var deuevMessage = GetMessageFromFile(fileName, streamName, true);
         }
 
@@ -161,12 +167,26 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
                                     writer.Write(record);
                                 }
                                     break;
+                                case "DSER-v04":
+                                    {
+                                        var record = Assert.IsType<DSER04>(streamObject);
+                                        deuevMessage.DSER04.Add(record);
+                                        writer.Write(record);
+                                    }
+                                    break;
+                                case "DSER-v05":
+                                    {
+                                        var record = Assert.IsType<DSER05>(streamObject);
+                                        deuevMessage.DSER05.Add(record);
+                                        writer.Write(record);
+                                    }
+                                    break;
                                 default:
-                                    throw new InvalidOperationException(string.Format("Unsupported record {0}", reader.RecordName));
+                                    throw new InvalidOperationException($"Unsupported record {reader.RecordName}");
                             }
                             break;
                         default:
-                            throw new InvalidOperationException(string.Format("Unsupported stream {0}", streamName));
+                            throw new InvalidOperationException($"Unsupported stream {streamName}");
                     }
                     streamObject = reader.Read();
                 }
@@ -184,10 +204,15 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
 
                 writer.Close();
 
-                var inputLines = input.Split(new[] {'\r', '\n'}, StringSplitOptions.RemoveEmptyEntries).Select(x => x.TrimEnd());
-                string output2 = output.ToString();
-                var outputLines = output2.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Select(x => x.TrimEnd());
-                Assert.Equal(inputLines, outputLines);
+                var isGenericEnvelopeStream = streamName.StartsWith("envelope-") && streamName.EndsWith("-generic");
+                if (!isGenericEnvelopeStream)
+                {
+                    var inputLines = input.Split(new[] {'\r', '\n'}, StringSplitOptions.RemoveEmptyEntries).Select(x => x.TrimEnd());
+                    string output2 = output.ToString();
+                    var outputLines = output2.Split(new[] {'\r', '\n'}, StringSplitOptions.RemoveEmptyEntries).Select(x => x.TrimEnd());
+                    Assert.Equal(inputLines, outputLines);
+                }
+
                 return deuevMessage;
             }
             finally
@@ -217,6 +242,9 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
         /// Hilfsklasse der Meldedatei, die eine Meldedatei im Deuev-Format
         /// mit den Datensätzen als Objekte enthält
         /// </summary>
+        [SuppressMessage("ReSharper", "AutoPropertyCanBeMadeGetOnly.Local")]
+        [SuppressMessage("ReSharper", "MemberCanBePrivate.Local")]
+        [SuppressMessage("ReSharper", "UnusedAutoPropertyAccessor.Local")]
         private class AagMessageData
         {
             public AagMessageData()
@@ -224,6 +252,8 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
                 VOSZ = new List<VOSZ>();
                 DSER02 = new List<DSER02>();
                 DSER03 = new List<DSER03>();
+                DSER04 = new List<DSER04>();
+                DSER05 = new List<DSER05>();
                 NCSZ = new List<NCSZ>();
             }
 
@@ -233,8 +263,9 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
             public DSKO04 DSKO04 { get; set; }
 
             public List<DSER02> DSER02 { get; set; }
-
             public List<DSER03> DSER03 { get; set; }
+            public List<DSER04> DSER04 { get; set; }
+            public List<DSER05> DSER05 { get; set; }
 
             public List<NCSZ> NCSZ { get; set; }
         }

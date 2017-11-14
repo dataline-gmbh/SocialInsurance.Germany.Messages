@@ -8,6 +8,9 @@ using System.Linq;
 
 namespace SocialInsurance.Germany.Messages.Pocos.AAG
 {
+    /// <summary>
+    /// DSRA-Datensatz Version 1
+    /// </summary>
     public class DSRA01 : IDatensatz
     {
         private bool? _hatDbra;
@@ -19,25 +22,12 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         private FehlerKennzeichen? _fekz;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DSRA01"/> Klasse
-        /// </summary>
-        /// <remarks>
-        /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt
-        /// </remarks>
-        public DSRA01()
-        {
-            KE = "DSRA";
-            VF = "AAGER";
-            VERNR = 1;
-        }
-
-        /// <summary>
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
         /// Kennung, um welchen Datensatz es sich handelt
         /// </remarks>
-        public string KE { get; set; }
+        public string KE { get; set; } = "DSRA";
 
         /// <summary>
         /// Holt oder setzt das Verfahren
@@ -46,7 +36,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// Verfahren, für das der Datensatz bestimmt ist, Länge 5, Mussangabe
         /// DEUEV = DEÜV- Meldeverfahren
         /// </remarks>
-        public string VF { get; set; }
+        public string VF { get; set; } = Info.DSRA.Verfahren;
 
         /// <summary>
         /// Holt oder setzt die Betriebsnummer des Erstellers des Datensatzes
@@ -70,7 +60,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Versionsnummer des übermittelten Datensatzes, Länge 2, Mussangabe
         /// </remarks>
-        public int VERNR { get; set; }
+        public int VERNR { get; set; } = 1;
 
         /// <summary>
         /// Holt oder setzt den Zeitpunkt der Erstellung des Dateznsatzes
@@ -190,7 +180,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         }
 
         /// <summary>
-        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Arbeitsunfähigkeit vorhanden ist
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Rückmeldung AAG vorhanden ist
         /// </summary>
         public DBRA01 DBRA
         {
@@ -206,7 +196,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         }
 
         /// <summary>
-        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Beschäftigungsverbot vorhanden ist
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Ansprechpartner vorhanden ist
         /// </summary>
         public DBAP01 DBAP
         {

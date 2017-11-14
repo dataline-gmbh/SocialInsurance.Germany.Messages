@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<beanio xmlns="http://www.beanio.org/2015/06">
+<beanio xmlns="http://www.beanio.org/2016/07">
   <template name="DBQV">
     <field name="KE" length="4" literal="DBQV" required="true"/>
     <field name="VF" length="5" literal="KVNR" required="true"/>

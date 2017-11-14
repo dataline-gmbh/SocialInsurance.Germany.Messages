@@ -6,6 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+using NodaTime;
+
 namespace SocialInsurance.Germany.Messages.Pocos.BNA
 {
     /// <summary>
@@ -146,7 +148,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.BNA
         /// <remarks>
         /// Beginn des Nachweiszeitraums, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime ZRBEG { get; set; }
+        public LocalDate ZRBEG { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Ende des Nachweiszeitraums
@@ -154,7 +156,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.BNA
         /// <remarks>
         /// Ende des Nachweiszeitraums, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime ZREND { get; set; }
+        public LocalDate ZREND { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Vorzeichen des KV-Beitrags

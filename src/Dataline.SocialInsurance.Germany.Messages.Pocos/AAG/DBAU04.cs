@@ -4,6 +4,8 @@
 
 using System;
 
+using NodaTime;
+
 namespace SocialInsurance.Germany.Messages.Pocos.AAG
 {
     /// <summary>
@@ -12,20 +14,12 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
     public class DBAU04 : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBAU04"/> Klasse
-        /// </summary>
-        public DBAU04()
-        {
-            KE = "DBAU";
-        }
-
-        /// <summary>
         /// Holt oder setzt die Kennung
         /// </summary>
         /// <remarks>
         /// Kennung, um welchen Datenbaustein es sich handelt
         /// </remarks>
-        public string KE { get; set; }
+        public string KE { get; set; } = "DBAU";
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen Verarbeitung
@@ -42,7 +36,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Beginn des Erstattungszeitraums, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime EZEITVOM { get; set; }
+        public LocalDate EZEITVOM { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Ende des Erstattungszeitraums
@@ -50,7 +44,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Ende des Erstattungszeitraums, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime EZEITBIS { get; set; }
+        public LocalDate EZEITBIS { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen der Art der Abrechnung
@@ -185,7 +179,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Letzter Arbeitstag/von Bord am, Länge 8, Mussangabe
         /// </remarks>
-        public DateTime LAT { get; set; }
+        public LocalDate LAT { get; set; }
 
         /// <summary>
         /// Erstattungsfähige Arbeitgeberzuwendungen zur betrieblichen Altersvorsorge
