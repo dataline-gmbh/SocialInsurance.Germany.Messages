@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBKA">
+    <field name="KE" length="4" literal="DBKA" required="true"/>
+    <field name="NAME1" length="30" required="true"/>
+    <field name="NAME2" length="30" required="false"/>
+    <field name="NAME3" length="30" required="false"/>
+    <field name="PLZZU" length="10" required="true"/>
+    <field name="ORT" length="34" required="true"/>
+    <field name="STR" length="33" required="false"/>
+    <field name="HNR" length="9" required="false"/>
+    <field name="PLZPO" length="10" required="false"/>
+    <field name="POSTFACH" length="10" required="false"/>
+    <field name="RESERVE" length="8" required="false" ignore="true"/>
+  </template>
+</beanio>

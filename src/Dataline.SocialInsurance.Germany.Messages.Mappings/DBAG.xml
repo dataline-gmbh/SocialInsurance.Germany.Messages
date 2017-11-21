@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBAG">
+    <field name="KE" length="4" literal="DBAG" required="true"/>
+    <field name="NAME1AG" length="30" required="true"/>
+    <field name="NAME2AG" length="30" required="false"/>
+    <field name="NAME3AG" length="30" required="false"/>
+    <field name="AGLDKZ" length="3" required="false"/>
+    <field name="AGPLZ" length="10" required="true"/>
+    <field name="AGORT" length="34" required="true"/>
+    <field name="AGSTR" length="33" required="false"/>
+    <field name="AGHAUSNR" length="9" required="false"/>
+    <field name="AGADRZU" length="40" required="false"/>
+    <field name="AGAP" length="60" required="true"/>
+    <field name="AGTEL" length="25" required="true"/>
+    <field name="AGEMAIL" length="40" required="false"/>
+  </template>
+</beanio>

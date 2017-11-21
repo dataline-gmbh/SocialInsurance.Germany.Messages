@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Bibliothek, die alle Klassen für SV-Meldungen enthält</Description>
+    <Copyright>DATALINE GmbH &amp; Co. KG 2015-2016</Copyright>
+    <AssemblyTitle>Klassen für SV-Meldungen</AssemblyTitle>
+    <VersionPrefix>0.4.0</VersionPrefix>
+    <Authors>DATALINE GmbH &amp; Co. KG</Authors>
+    <TargetFrameworks>netstandard1.3;net45</TargetFrameworks>
+    <AssemblyName>Dataline.SocialInsurance.Germany.Messages.Pocos</AssemblyName>
+    <PackageId>Dataline.SocialInsurance.Germany.Messages.Pocos</PackageId>
+    <PackageTags>SV;Meldung;poco;classes;klassen;Sozialversicherung;DEUEV;DEÜV</PackageTags>
+    <PackageIconUrl>https://raw.githubusercontent.com/dataline-gmbh/SocialInsurance.Germany.Messages/master/dataline-64.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/dataline-gmbh/SocialInsurance.Germany.Messages</PackageProjectUrl>
+    <PackageLicenseUrl>http://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/dataline-gmbh/SocialInsurance.Germany.Messages</RepositoryUrl>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+    <GenerateNeutralResourcesLanguageAttribute>false</GenerateNeutralResourcesLanguageAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+    <CodeAnalysisRuleSet>..\..\Dataline.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\GlobalAssemblyInfo.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**" />
+    <AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
+    <None Update="..\..\packaging\Dataline.SocialInsurance.Germany.Messages.Pocos.targets">
+      <PackagePath>build/</PackagePath>
+      <Pack>true</Pack>
+    </None>
+    <None Update="..\..\packaging\_._">
+      <PackagePath>lib/native/</PackagePath>
+      <Pack>true</Pack>
+    </None>
+    <None Update="..\..\*.md;..\..\dataline-64.png">
+      <PackagePath>/</PackagePath>
+      <Pack>true</Pack>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NodaTime" Version="2.2.2" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta004">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
+    <PackageReference Include="System.Runtime" Version="4.3.0" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugType>none</DebugType>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+</Project>
