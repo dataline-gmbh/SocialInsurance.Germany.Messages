@@ -35,6 +35,7 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.BW02-v09.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.BW02-v10.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.BW02-v11.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.BW02-v12.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.NCSZ-v06.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.NCSZ-v05.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
 
@@ -162,6 +163,27 @@
       <record name="DSKO-v04" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO04, Dataline.SocialInsurance.Germany.Messages.Pocos" template="DSKO-v04"/>
     </group>
     <record order="3" name="BW02" minOccurs="1" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.BNA.BW0211, Dataline.SocialInsurance.Germany.Messages.Pocos" template="BW02-v11"/>
+    <group name="NCSZ" order="4" occurs="1">
+      <!-- <include template="VOSZ-generic"/> -->
+      <record name="NCSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="NCSZ-v01"/>
+      <record name="NCSZ-BNA-v06" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.NCSZ06, Dataline.SocialInsurance.Germany.Messages.Pocos" template="NCSZ-BNA-v06"/>
+      <record name="NCSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="NCSZ-v01"/>
+    </group>
+  </stream>
+
+  <stream name="bw02-bwnac-v12" format="fixedlength">
+    <group name="VOSZ" order="1" occurs="1">
+      <!-- <include template="VOSZ-generic"/> -->
+      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
+      <record name="VOSZ-BNA-v06" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.BNA.VOSZ06, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-BNA-v06"/>
+      <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01"/>
+    </group>
+    <group name="DSKO" order="2">
+      <!-- <include template="DSKO-generic"/> -->
+      <record name="DSKO-v02" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO02, Dataline.SocialInsurance.Germany.Messages.Pocos" template="DSKO-v02"/>
+      <record name="DSKO-v04" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO04, Dataline.SocialInsurance.Germany.Messages.Pocos" template="DSKO-v04"/>
+    </group>
+    <record order="3" name="BW02" minOccurs="1" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.BNA.BW0212, Dataline.SocialInsurance.Germany.Messages.Pocos" template="BW02-v12"/>
     <group name="NCSZ" order="4" occurs="1">
       <!-- <include template="VOSZ-generic"/> -->
       <record name="NCSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="NCSZ-v01"/>
@@ -371,6 +393,9 @@
       </record>
       <record name="BW02-v11" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.BNA.BW0211, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="BW02-v11"/>
+      </record>
+      <record name="BW02-v12" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.BNA.BW0212, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="BW02-v12"/>
       </record>
       <record name="DSAE-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSAE, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSAE-v01"/>
