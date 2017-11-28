@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBBM">
+    <field name="KE" length="4" literal="DBBM" required="true"/>
+    <field name="KENNZST" length="1" required="true" typeHandler="jn" />
+    <!--
+    Format: bbttmmjjassp
+    bb      = Bereichsnummer. Gültige Werte: 02-04,08-21,23-26,28,29,38,39,42-44,48-61,63-66,68,69,78-82,89
+    ttmmjj  = Geburtsdatum
+    a       = ??
+    ss      = ??
+    p       = Prüfziffer
+    -->
+    <field name="AVSNR" length="12" required="false" />
+    <field name="APERSGR" length="3" format="D3" required="false" type="int" />
+    <field name="AGD" length="2" format="D2" required="false" type="int" />
+    <field name="ASASC" length="3" required="false" />
+    <field name="AKENNZGLE" length="1" required="false" type="int" default=" " parseDefault="false" />
+    <field name="AZRBG" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="AZREN" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="AEG" length="6" required="false" type="int" default="      " parseDefault="false" />
+    <field name="ABYGR" length="4" required="false" />
+    <field name="ATTSC" length="9" required="false" />
+    <field name="AKENNZRK" length="1" required="false" regex="[WO]"/>
+    <field name="AKENNZMF" length="1" required="false" typeHandler="jn" default=" " parseDefault="false" />
+    <field name="AZRBGKV" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="AZRENKV" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="AEZEG" length="8" required="false" type="int" default="        " parseDefault="false" />
+    <field name="ALFDKV" length="8" required="false" type="int" default="        " parseDefault="false" />
+    <field name="ALFDRV" length="8" required="false" type="int" default="        " parseDefault="false" />
+    <field name="ALFDAV" length="8" required="false" type="int" default="        " parseDefault="false" />
+    <field name="RESERVE" length="500" required="false" ignore="true" />
+  </template>
+</beanio>

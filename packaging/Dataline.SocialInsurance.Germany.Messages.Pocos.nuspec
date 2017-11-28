@@ -17,16 +17,19 @@
     <copyright>Copyright © DATALINE GmbH &amp; Co. KG 2015-2016</copyright>
     <tags>SV Meldung poco classes klassen Sozialversicherung DEUEV DEÜV</tags>
     <dependencies>
-		<group targetFramework="native">
-			<dependency id="NodaTime" version="2.0.0-alpha20160729" />
-		</group>
-		<group targetFramework=".NETFramework4.5">
-			<dependency id="NodaTime" version="2.0.0-alpha20160729" />
-		</group>
-		<group targetFramework=".NETStandard1.1">
-			<dependency id="System.Runtime" version="4.3.0" />
-			<dependency id="NodaTime" version="2.0.0-alpha20160729" />
-		</group>
+		  <group targetFramework="native">
+			  <dependency id="NodaTime" version="2.2.3" />
+		  </group>
+		  <group targetFramework=".NETFramework4.5">
+			  <dependency id="NodaTime" version="2.2.3" />
+		  </group>
+		  <group targetFramework=".NETStandard1.1">
+			  <dependency id="System.Runtime" version="4.3.0" />
+			  <dependency id="NodaTime" version="2.2.3" />
+		  </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="NodaTime" version="2.2.3" />
+      </group>
     </dependencies>
   </metadata>
   <files>
@@ -35,6 +38,8 @@
     <file src="..\src\$id$\bin\$configuration$\net45\$id$.xml" target="lib\net45\" />
     <file src="..\src\$id$\bin\$configuration$\netstandard1.1\$id$.dll" target="lib\netstandard1.1\" />
     <file src="..\src\$id$\bin\$configuration$\netstandard1.1\$id$.xml" target="lib\netstandard1.1\" />
-	  <file src="$id$.targets" target="build\native\" />
+    <file src="..\src\$id$\bin\$configuration$\netstandard2.0\$id$.dll" target="lib\netstandard2.0\" />
+    <file src="..\src\$id$\bin\$configuration$\netstandard2.0\$id$.xml" target="lib\netstandard2.0\" />
+    <file src="$id$.targets" target="build\native\" />
   </files>
 </package>
