@@ -17,27 +17,31 @@
     <copyright>Copyright © DATALINE GmbH &amp; Co. KG 2015-2016</copyright>
     <tags>SV Meldung BeanIO mapping Sozialversicherung DEUEV DEÜV</tags>
     <dependencies>
-		<group targetFramework="native">
-			<dependency id="FubarDev.BeanIO" version="4.1.0-beta1-0023" />
-      <dependency id="Dataline.SocialInsurance.Germany.Messages.Pocos" version="$version$" />
-    </group>
-		<group targetFramework=".NETFramework4.5">
-			<dependency id="FubarDev.BeanIO" version="4.1.0-beta1-0023" />
-      <dependency id="Dataline.SocialInsurance.Germany.Messages.Pocos" version="$version$" />
-    </group>
-		<group targetFramework=".NETStandard1.1">
-			<dependency id="System.Runtime" version="4.3.0" />
-			<dependency id="FubarDev.BeanIO" version="4.1.0-beta1-0023" />
-      <dependency id="Dataline.SocialInsurance.Germany.Messages.Pocos" version="$version$" />
-    </group>
+		  <group targetFramework="native">
+			  <dependency id="FubarDev.BeanIO" version="4.1.2" />
+        <dependency id="Dataline.SocialInsurance.Germany.Messages.Pocos" version="$version$" />
+      </group>
+		  <group targetFramework=".NETFramework4.5">
+			  <dependency id="FubarDev.BeanIO" version="4.1.2" />
+        <dependency id="Dataline.SocialInsurance.Germany.Messages.Pocos" version="$version$" />
+      </group>
+		  <group targetFramework=".NETStandard1.1">
+			  <dependency id="System.Runtime" version="4.3.0" />
+			  <dependency id="FubarDev.BeanIO" version="4.1.2" />
+        <dependency id="Dataline.SocialInsurance.Germany.Messages.Pocos" version="$version$" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="FubarDev.BeanIO" version="4.1.2" />
+        <dependency id="Dataline.SocialInsurance.Germany.Messages.Pocos" version="$version$" />
+      </group>
     </dependencies>
   </metadata>
   <files>
     <file src="_._" target="lib\native\" />
     <file src="..\src\$id$\bin\$configuration$\net45\$id$.dll" target="lib\net45\" />
     <file src="..\src\$id$\bin\$configuration$\net45\$id$.xml" target="lib\net45\" />
-    <file src="..\src\$id$\bin\$configuration$\netstandard1.1\$id$.dll" target="lib\netstandard1.1\" />
-    <file src="..\src\$id$\bin\$configuration$\netstandard1.1\$id$.xml" target="lib\netstandard1.1\" />
+    <file src="..\src\$id$\bin\$configuration$\netstandard1.3\$id$.dll" target="lib\netstandard1.3\" />
+    <file src="..\src\$id$\bin\$configuration$\netstandard1.3\$id$.xml" target="lib\netstandard1.3\" />
     <file src="$id$.targets" target="build\native\" />
   </files>
 </package>
