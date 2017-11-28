@@ -6,6 +6,7 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BW03-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSME-v02.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSME-v0301.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSME-v04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBD-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKK-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKK-v02.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
@@ -14,6 +15,7 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSVV-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBE-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBE-v0201.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBE-v03.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.NCSZ-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
 
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.UV.DSLN-v0101.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
@@ -74,7 +76,25 @@
       <include template="NCSZ-v01"/>
     </record>
   </stream>
-  
+
+  <stream name="dsme-deuev-v04" format="fixedlength">
+    <record name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
+      <include template="VOSZ-v01"/>
+    </record>
+    <record name="DSKO"  minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSKO04, Dataline.SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSKO-v04"/>
+    </record>
+    <record name="DSME" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSME04, Dataline.SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSME-v04"/>
+    </record>
+    <record name="DSBD" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBD, Dataline.SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSBD-v01"/>
+    </record>
+    <record name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
+      <include template="NCSZ-v01"/>
+    </record>
+  </stream>
+
   <stream name="dskk-deuev-v01" format="fixedlength">
 		<record order="1" name="VOSZ" minOccurs="1"  maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
 			<include template="VOSZ-v01"/>
@@ -287,7 +307,26 @@
       <include template="NCSZ-v01"/>
     </record>
   </stream>
-  
+
+  <stream name="dsbe-bvbei-v03" format="fixedlength">
+    <record order="1" name="VOSZ" occurs="1-2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
+    <group name="DSKO" order="2">
+      <!-- <include template="DSKO-generic"/> -->
+      <record name="DSKO-v02" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO02, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSKO-v02"/>
+      </record>
+      <record name="DSKO-v04" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO04, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSKO-v04"/>
+      </record>
+    </group>
+    <record name="DSBE" order="3" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBE03, Dataline.SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSBE-v03"/>
+    </record>
+    <record name="NCSZ" order="4" occurs="1-2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
+      <include template="NCSZ-v01"/>
+    </record>
+  </stream>
+
   <!-- Wird verwendet, damit man auf allgemeingültige Art und Weise an die VOSZ/DSKO/NCSZ-Datensätze kommen kann -->
   <stream name="envelope-request-generic" format="fixedlength" ignoreUnidentifiedRecords="true">
     <group name="VOSZ" order="1">
@@ -409,6 +448,9 @@
       <record name="DSBE-v0201" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSBE0201, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSBE-v0201"/>
       </record>
+      <record name="DSBE-v03" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSBE03, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSBE-v03"/>
+      </record>
       <record name="DSKK-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSKK01, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSKK-v01"/>
       </record>
@@ -420,6 +462,9 @@
       </record>
       <record name="DSME-v0301" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSME0301, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSME-v0301"/>
+      </record>
+      <record name="DSME-v04" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSME04, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSME-v04"/>
       </record>
       <record name="DSQU-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSQU, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSQU-v01"/>

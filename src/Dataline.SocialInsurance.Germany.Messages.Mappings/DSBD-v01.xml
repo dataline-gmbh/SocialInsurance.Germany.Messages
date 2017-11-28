@@ -7,8 +7,8 @@
   <template name="DSBD-v01">
     <field name="KE" literal="DSBD" length="4" rid="true" required="true" />
     <field name="VF" literal="BTRAG" length="5" required="true" />
-    <field name="BBNRAB" length="15" required="true" />
-    <field name="BBNREP" length="15" required="true" />
+    <field name="ABSN" length="15" required="true" />
+    <field name="EPNR" length="15" required="true" />
     <field name="VERNR" length="2" literal="01" rid="true" type="int" format="00" required="true"/>
     <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
     <field name="FEKZ" regex="[0-4]" length="1" required="true" />
@@ -37,7 +37,8 @@
     <field name="AZVU" length="20" required="false"/>
     <field name="DATENSATZID" length="20" required="false"/>
     <field name="BBNRKK" length="15" required="false"/>
-    <field name="RESERVE2" length="15" required="false" ignore="true"/>
+    <field name="PRODID" length="7" required="false" type="int" parseDefault="false" default="       " />
+    <field name="MODID" length="8" required="false" type="int" parseDefault="false" default="        " />
     <field name="MMKA" length="1" typeHandler="jn" required="true"/>
     <field name="MMTN" length="1" typeHandler="jn" required="true"/>
     <field name="RESERVE3" length="5" required="false" ignore="true"/>

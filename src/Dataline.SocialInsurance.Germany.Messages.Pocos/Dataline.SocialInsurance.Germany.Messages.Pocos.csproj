@@ -6,7 +6,7 @@
     <AssemblyTitle>Klassen für SV-Meldungen</AssemblyTitle>
     <VersionPrefix>0.4.0</VersionPrefix>
     <Authors>DATALINE GmbH &amp; Co. KG</Authors>
-    <TargetFrameworks>netstandard1.3;net45</TargetFrameworks>
+    <TargetFrameworks>netstandard1.3;net45;netstandard2.0</TargetFrameworks>
     <AssemblyName>Dataline.SocialInsurance.Germany.Messages.Pocos</AssemblyName>
     <PackageId>Dataline.SocialInsurance.Germany.Messages.Pocos</PackageId>
     <PackageTags>SV;Meldung;poco;classes;klassen;Sozialversicherung;DEUEV;DEÜV</PackageTags>
@@ -31,22 +31,22 @@
   <ItemGroup>
     <Compile Include="..\..\GlobalAssemblyInfo.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**" />
     <AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
-    <None Update="..\..\packaging\Dataline.SocialInsurance.Germany.Messages.Pocos.targets">
+    <None Include="..\..\packaging\Dataline.SocialInsurance.Germany.Messages.Pocos.targets" Link="build\native\Dataline.SocialInsurance.Germany.Messages.Pocos.targets">
       <PackagePath>build/</PackagePath>
       <Pack>true</Pack>
     </None>
-    <None Update="..\..\packaging\_._">
+    <None Include="..\..\packaging\_._" Link="lib\native\_._">
       <PackagePath>lib/native/</PackagePath>
       <Pack>true</Pack>
     </None>
-    <None Update="..\..\*.md;..\..\dataline-64.png">
+    <None Include="..\..\*.md;..\..\dataline-64.png">
       <PackagePath>/</PackagePath>
       <Pack>true</Pack>
     </None>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="NodaTime" Version="2.2.2" />
+    <PackageReference Include="NodaTime" Version="2.2.3" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta004">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
