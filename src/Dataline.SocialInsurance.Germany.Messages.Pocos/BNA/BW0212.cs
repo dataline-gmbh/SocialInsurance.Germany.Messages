@@ -106,7 +106,6 @@ namespace SocialInsurance.Germany.Messages.Pocos.BNA
             private set { }
         }
 
-
         /// <summary>
         /// Holt oder setzt das Aktenkennzeichen
         /// </summary>
