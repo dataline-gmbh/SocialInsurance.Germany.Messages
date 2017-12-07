@@ -16,7 +16,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("Release")]
 #endif
 [assembly: AssemblyCompany("DATALINE GmbH")]
-[assembly: AssemblyCopyright("Copyright © 2015-2016 DATALINE GmbH")]
+[assembly: AssemblyCopyright("Copyright © 2015-2017 DATALINE GmbH")]
 //// [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: NeutralResourcesLanguage("de")]
