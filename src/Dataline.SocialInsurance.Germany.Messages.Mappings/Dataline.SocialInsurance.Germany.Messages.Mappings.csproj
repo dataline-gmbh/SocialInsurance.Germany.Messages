@@ -29,7 +29,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\GlobalAssemblyInfo.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**" />
+    <Compile Include="..\..\GlobalAssemblyInfo.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**" Link="Properties\GlobalAssemblyInfo.cs" />
     <EmbeddedResource Include="**\*.xml" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
     <AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
     <None Include="..\..\packaging\Dataline.SocialInsurance.Germany.Messages.Mappings.targets" Link="build\native\Dataline.SocialInsurance.Germany.Messages.Mappings.targets">
