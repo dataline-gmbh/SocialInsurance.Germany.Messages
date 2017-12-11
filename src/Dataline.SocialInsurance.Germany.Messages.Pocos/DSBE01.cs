@@ -99,8 +99,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public FehlerKennzeichen FEKZ
         {
-            get { return _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft); }
-            set { _fekz = value; }
+            get => _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft);
+            set => _fekz = value;
         }
 
         /// <summary>
@@ -365,8 +365,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool DBMIV
         {
-            get { return _hatDbmi ?? DBMI != null; }
-            set { _hatDbmi = value; }
+            get => _hatDbmi ?? DBMI != null;
+            set => _hatDbmi = value;
         }
 
         /// <summary>
@@ -379,8 +379,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool DBHBV
         {
-            get { return _hatDbhb ?? DBHB != null; }
-            set { _hatDbhb = value; }
+            get => _hatDbhb ?? DBHB != null;
+            set => _hatDbhb = value;
         }
 
         /// <summary>
@@ -388,10 +388,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBMI DBMI
         {
-            get
-            {
-                return ListeDBMI == null ? null : ListeDBMI.SingleOrDefault();
-            }
+            get => ListeDBMI?.SingleOrDefault();
             set
             {
                 ListeDBMI = ListeDBMI.Set(value);
@@ -404,10 +401,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBHB DBHB
         {
-            get
-            {
-                return ListeDBHB == null ? null : ListeDBHB.SingleOrDefault();
-            }
+            get => ListeDBHB?.SingleOrDefault();
             set
             {
                 ListeDBHB = ListeDBHB.Set(value);

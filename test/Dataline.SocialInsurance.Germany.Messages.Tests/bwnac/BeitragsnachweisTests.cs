@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using SocialInsurance.Germany.Messages.Pocos;
 using SocialInsurance.Germany.Messages.Pocos.BNA;
 
@@ -13,7 +11,8 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
 {
     public class BeitragsnachweisTests : TestBasis, IClassFixture<DefaultStreamFactoryFixture>
     {
-        public BeitragsnachweisTests(DefaultStreamFactoryFixture fixture) : base(fixture.Factory)
+        public BeitragsnachweisTests(DefaultStreamFactoryFixture fixture)
+            : base(fixture.Factory)
         {
         }
 
@@ -135,13 +134,13 @@ namespace SocialInsurance.Germany.Messages.Tests.bwnac
                 NCSZ = new List<NCSZ06>();
             }
 
-            public List<VOSZ06> VOSZ { get; set; }
+            public List<VOSZ06> VOSZ { get; }
 
             public DSKO02 DSKO { get; set; }
 
-            public List<BW0211> BW02 { get; set; }
+            public List<BW0211> BW02 { get; }
 
-            public List<NCSZ06> NCSZ { get; set; }
+            public List<NCSZ06> NCSZ { get; }
         }
     }
 }

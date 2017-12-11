@@ -111,8 +111,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public FehlerKennzeichen FEKZ
         {
-            get { return _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft); }
-            set { _fekz = value; }
+            get => _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft);
+            set => _fekz = value;
         }
 
         /// <summary>
@@ -227,8 +227,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMME
         {
-            get { return _hatDbme ?? DBME != null; }
-            set { _hatDbme = value; }
+            get => _hatDbme ?? DBME != null;
+            set => _hatDbme = value;
         }
 
         /// <summary>
@@ -241,8 +241,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMNA
         {
-            get { return _hatDbna ?? DBNA != null; }
-            set { _hatDbna = value; }
+            get => _hatDbna ?? DBNA != null;
+            set => _hatDbna = value;
         }
 
         /// <summary>
@@ -255,8 +255,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMGB
         {
-            get { return _hatDbgb ?? DBGB != null; }
-            set { _hatDbgb = value; }
+            get => _hatDbgb ?? DBGB != null;
+            set => _hatDbgb = value;
         }
 
         /// <summary>
@@ -269,8 +269,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMAN
         {
-            get { return _hatDban ?? DBAN != null; }
-            set { _hatDban = value; }
+            get => _hatDban ?? DBAN != null;
+            set => _hatDban = value;
         }
 
         /// <summary>
@@ -283,8 +283,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMEU
         {
-            get { return _hatDbeu ?? DBEU != null; }
-            set { _hatDbeu = value; }
+            get => _hatDbeu ?? DBEU != null;
+            set => _hatDbeu = value;
         }
 
         /// <summary>
@@ -297,8 +297,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMUV
         {
-            get { return _hatDbuv ?? DBUV != null; }
-            set { _hatDbuv = value; }
+            get => _hatDbuv ?? DBUV != null;
+            set => _hatDbuv = value;
         }
 
         /// <summary>
@@ -309,8 +309,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMKS
         {
-            get { return _hatDbks ?? DBKS != null; }
-            set { _hatDbks = value; }
+            get => _hatDbks ?? DBKS != null;
+            set => _hatDbks = value;
         }
 
         /// <summary>
@@ -323,8 +323,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMSV
         {
-            get { return _hatDbsv ?? DBSV != null; }
-            set { _hatDbsv = value; }
+            get => _hatDbsv ?? DBSV != null;
+            set => _hatDbsv = value;
         }
 
         /// <summary>
@@ -337,8 +337,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMVR
         {
-            get { return _hatDbvr ?? DBVR != null; }
-            set { _hatDbvr = value; }
+            get => _hatDbvr ?? DBVR != null;
+            set => _hatDbvr = value;
         }
 
         /// <summary>
@@ -351,8 +351,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMRG
         {
-            get { return _hatDbrg ?? DBRG != null; }
-            set { _hatDbrg = value; }
+            get => _hatDbrg ?? DBRG != null;
+            set => _hatDbrg = value;
         }
 
         /// <summary>
@@ -403,8 +403,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMSO
         {
-            get { return _hatDbso ?? DBSO != null; }
-            set { _hatDbso = value; }
+            get => _hatDbso ?? DBSO != null;
+            set => _hatDbso = value;
         }
 
         /// <summary>
@@ -435,8 +435,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMKV
         {
-            get { return _hatDbkv ?? DBKV != null; }
-            set { _hatDbkv = value; }
+            get => _hatDbkv ?? DBKV != null;
+            set => _hatDbkv = value;
         }
 
         /// <summary>
@@ -473,8 +473,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public bool MMBF
         {
-            get { return _hatDbbf ?? DBBF != null; }
-            set { _hatDbbf = value; }
+            get => _hatDbbf ?? DBBF != null;
+            set => _hatDbbf = value;
         }
 
         /// <summary>
@@ -482,10 +482,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBME03 DBME
         {
-            get
-            {
-                return ListeDBME?.SingleOrDefault();
-            }
+            get => ListeDBME?.SingleOrDefault();
             set
             {
                 ListeDBME = ListeDBME.Set(value);
@@ -498,10 +495,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBNA DBNA
         {
-            get
-            {
-                return ListeDBNA?.SingleOrDefault();
-            }
+            get => ListeDBNA?.SingleOrDefault();
             set
             {
                 ListeDBNA = ListeDBNA.Set(value);
@@ -514,10 +508,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBGB DBGB
         {
-            get
-            {
-                return ListeDBGB?.SingleOrDefault();
-            }
+            get => ListeDBGB?.SingleOrDefault();
             set
             {
                 ListeDBGB = ListeDBGB.Set(value);
@@ -530,10 +521,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBAN DBAN
         {
-            get
-            {
-                return ListeDBAN?.SingleOrDefault();
-            }
+            get => ListeDBAN?.SingleOrDefault();
             set
             {
                 ListeDBAN = ListeDBAN.Set(value);
@@ -546,10 +534,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBEU DBEU
         {
-            get
-            {
-                return ListeDBEU?.SingleOrDefault();
-            }
+            get => ListeDBEU?.SingleOrDefault();
             set
             {
                 ListeDBEU = ListeDBEU.Set(value);
@@ -562,10 +547,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBUV0301 DBUV
         {
-            get
-            {
-                return ListeDBUV?.SingleOrDefault();
-            }
+            get => ListeDBUV?.SingleOrDefault();
             set
             {
                 ListeDBUV = ListeDBUV.Set(value);
@@ -594,10 +576,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBSV DBSV
         {
-            get
-            {
-                return ListeDBSV?.SingleOrDefault();
-            }
+            get => ListeDBSV?.SingleOrDefault();
             set
             {
                 ListeDBSV = ListeDBSV.Set(value);
@@ -610,10 +589,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBKV03 DBKV
         {
-            get
-            {
-                return ListeDBKV?.SingleOrDefault();
-            }
+            get => ListeDBKV?.SingleOrDefault();
             set
             {
                 ListeDBKV = ListeDBKV.Set(value);
@@ -626,10 +602,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBVR DBVR
         {
-            get
-            {
-                return ListeDBVR?.SingleOrDefault();
-            }
+            get => ListeDBVR?.SingleOrDefault();
             set
             {
                 ListeDBVR = ListeDBVR.Set(value);
@@ -642,10 +615,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBRG DBRG
         {
-            get
-            {
-                return ListeDBRG?.SingleOrDefault();
-            }
+            get => ListeDBRG?.SingleOrDefault();
             set
             {
                 ListeDBRG = ListeDBRG.Set(value);
@@ -658,10 +628,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBSO DBSO
         {
-            get
-            {
-                return ListeDBSO?.SingleOrDefault();
-            }
+            get => ListeDBSO?.SingleOrDefault();
             set
             {
                 ListeDBSO = ListeDBSO.Set(value);
@@ -674,10 +641,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBBF DBBF
         {
-            get
-            {
-                return ListeDBBF?.SingleOrDefault();
-            }
+            get => ListeDBBF?.SingleOrDefault();
             set
             {
                 ListeDBBF = ListeDBBF.Set(value);

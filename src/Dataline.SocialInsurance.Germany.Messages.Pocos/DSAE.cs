@@ -89,8 +89,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public FehlerKennzeichen FEKZ
         {
-            get { return _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft); }
-            set { _fekz = value; }
+            get => _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft);
+            set => _fekz = value;
         }
 
         /// <summary>
@@ -147,8 +147,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMAZ
         {
-            get { return _hatDbaz ?? DBAZ != null; }
-            set { _hatDbaz = value; }
+            get => _hatDbaz ?? DBAZ != null;
+            set => _hatDbaz = value;
         }
 
         /// <summary>
@@ -161,8 +161,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMEZ
         {
-            get { return _hatDbez ?? DBEZ != null; }
-            set { _hatDbez = value; }
+            get => _hatDbez ?? DBEZ != null;
+            set => _hatDbez = value;
         }
 
         /// <summary>
@@ -180,10 +180,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBAZ DBAZ
         {
-            get
-            {
-                return ListeDBAZ == null ? null : ListeDBAZ.SingleOrDefault();
-            }
+            get => ListeDBAZ?.SingleOrDefault();
             set
             {
                 ListeDBAZ = ListeDBAZ.Set(value);
@@ -196,10 +193,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBEZ DBEZ
         {
-            get
-            {
-                return ListeDBEZ == null ? null : ListeDBEZ.SingleOrDefault();
-            }
+            get => ListeDBEZ?.SingleOrDefault();
             set
             {
                 ListeDBEZ = ListeDBEZ.Set(value);

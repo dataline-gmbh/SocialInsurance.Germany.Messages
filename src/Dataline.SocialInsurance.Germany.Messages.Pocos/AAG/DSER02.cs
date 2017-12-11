@@ -86,8 +86,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </remarks>
         public FehlerKennzeichen FEKZ
         {
-            get { return _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft); }
-            set { _fekz = value; }
+            get => _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft);
+            set => _fekz = value;
         }
 
         /// <summary>
@@ -229,8 +229,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </remarks>
         public bool MMDBAU
         {
-            get { return _hatDbau ?? DBAU != null; }
-            set { _hatDbau = value; }
+            get => _hatDbau ?? DBAU != null;
+            set => _hatDbau = value;
         }
 
         /// <summary>
@@ -243,8 +243,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </remarks>
         public bool MMDBBT
         {
-            get { return _hatDbbt ?? DBBT != null; }
-            set { _hatDbbt = value; }
+            get => _hatDbbt ?? DBBT != null;
+            set => _hatDbbt = value;
         }
 
         /// <summary>
@@ -257,8 +257,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </remarks>
         public bool MMDBZU
         {
-            get { return _hatDbzu ?? DBZU != null; }
-            set { _hatDbzu = value; }
+            get => _hatDbzu ?? DBZU != null;
+            set => _hatDbzu = value;
         }
 
         /// <summary>
@@ -270,8 +270,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </remarks>
         public bool MMDBBV
         {
-            get { return _hatDbbv ?? DBBV != null; }
-            set { _hatDbbv = value; }
+            get => _hatDbbv ?? DBBV != null;
+            set => _hatDbbv = value;
         }
 
         /// <summary>
@@ -283,8 +283,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </remarks>
         public bool MMDBNA
         {
-            get { return _hatDbna ?? DBNA != null; }
-            set { _hatDbna = value; }
+            get => _hatDbna ?? DBNA != null;
+            set => _hatDbna = value;
         }
 
         /// <summary>
@@ -296,8 +296,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </remarks>
         public bool MMDBAA
         {
-            get { return _hatDbaa ?? DBAA != null; }
-            set { _hatDbaa = value; }
+            get => _hatDbaa ?? DBAA != null;
+            set => _hatDbaa = value;
         }
 
         /// <summary>
@@ -305,10 +305,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </summary>
         public DBAU02 DBAU
         {
-            get
-            {
-                return ListeDBAU == null ? null : ListeDBAU.SingleOrDefault();
-            }
+            get => ListeDBAU?.SingleOrDefault();
             set
             {
                 ListeDBAU = ListeDBAU.Set(value);
@@ -321,10 +318,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </summary>
         public DBBT02 DBBT
         {
-            get
-            {
-                return ListeDBBT == null ? null : ListeDBBT.SingleOrDefault();
-            }
+            get => ListeDBBT?.SingleOrDefault();
             set
             {
                 ListeDBBT = ListeDBBT.Set(value);
@@ -337,10 +331,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </summary>
         public DBZU02 DBZU
         {
-            get
-            {
-                return ListeDBZU == null ? null : ListeDBZU.SingleOrDefault();
-            }
+            get => ListeDBZU?.SingleOrDefault();
             set
             {
                 ListeDBZU = ListeDBZU.Set(value);
@@ -353,10 +344,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </summary>
         public DBBV DBBV
         {
-            get
-            {
-                return ListeDBBV == null ? null : ListeDBBV.SingleOrDefault();
-            }
+            get => ListeDBBV?.SingleOrDefault();
             set
             {
                 ListeDBBV = ListeDBBV.Set(value);
@@ -369,10 +357,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </summary>
         public DBNA DBNA
         {
-            get
-            {
-                return ListeDBNA == null ? null : ListeDBNA.SingleOrDefault();
-            }
+            get => ListeDBNA?.SingleOrDefault();
             set
             {
                 ListeDBNA = ListeDBNA.Set(value);
@@ -385,10 +370,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </summary>
         public DBAA DBAA
         {
-            get
-            {
-                return ListeDBAA == null ? null : ListeDBAA.SingleOrDefault();
-            }
+            get => ListeDBAA?.SingleOrDefault();
             set
             {
                 ListeDBAA = ListeDBAA.Set(value);

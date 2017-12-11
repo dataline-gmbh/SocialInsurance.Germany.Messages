@@ -81,8 +81,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public FehlerKennzeichen FEKZ
         {
-            get { return _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft); }
-            set { _fekz = value; }
+            get => _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft);
+            set => _fekz = value;
         }
 
         /// <summary>
@@ -115,8 +115,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMQD
         {
-            get { return _hatDbqd ?? DBQD != null; }
-            set { _hatDbqd = value; }
+            get => _hatDbqd ?? DBQD != null;
+            set => _hatDbqd = value;
         }
 
         /// <summary>
@@ -129,8 +129,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMQK
         {
-            get { return _hatDbqk ?? DBQK != null; }
-            set { _hatDbqk = value; }
+            get => _hatDbqk ?? DBQK != null;
+            set => _hatDbqk = value;
         }
 
         /// <summary>
@@ -143,8 +143,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMQV
         {
-            get { return _hatDbqv ?? DBQV != null; }
-            set { _hatDbqv = value; }
+            get => _hatDbqv ?? DBQV != null;
+            set => _hatDbqv = value;
         }
 
         /// <summary>
@@ -152,10 +152,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBQD DBQD
         {
-            get
-            {
-                return ListeDBQD == null ? null : ListeDBQD.SingleOrDefault();
-            }
+            get => ListeDBQD?.SingleOrDefault();
             set
             {
                 ListeDBQD = ListeDBQD.Set(value);
@@ -168,10 +165,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBQK DBQK
         {
-            get
-            {
-                return ListeDBQK == null ? null : ListeDBQK.SingleOrDefault();
-            }
+            get => ListeDBQK?.SingleOrDefault();
             set
             {
                 ListeDBQK = ListeDBQK.Set(value);
@@ -184,10 +178,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBQV DBQV
         {
-            get
-            {
-                return ListeDBQV == null ? null : ListeDBQV.SingleOrDefault();
-            }
+            get => ListeDBQV?.SingleOrDefault();
             set
             {
                 ListeDBQV = ListeDBQV.Set(value);

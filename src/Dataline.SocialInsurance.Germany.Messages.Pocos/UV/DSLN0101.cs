@@ -92,8 +92,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.UV
         /// </summary>
         public bool MMFU
         {
-            get { return _hatDbfu ?? DBFU != null; }
-            set { _hatDbfu = value; }
+            get => _hatDbfu ?? DBFU != null;
+            set => _hatDbfu = value;
         }
 
         /// <summary>
@@ -104,8 +104,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.UV
         /// </remarks>
         public FehlerKennzeichen FEKZ
         {
-            get { return _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft); }
-            set { _fekz = value; }
+            get => _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft);
+            set => _fekz = value;
         }
 
         /// <summary>
@@ -236,8 +236,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.UV
         /// </summary>
         public bool MMDBAP
         {
-            get { return _hatDbap ?? DBAP != null; }
-            set { _hatDbap = value; }
+            get => _hatDbap ?? DBAP != null;
+            set => _hatDbap = value;
         }
 
         /// <summary>
@@ -278,10 +278,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.UV
         /// </summary>
         public DBFU DBFU
         {
-            get
-            {
-                return ListeDBFU?.SingleOrDefault();
-            }
+            get => ListeDBFU?.SingleOrDefault();
             set
             {
                 ListeDBFU = ListeDBFU.Set(value);
@@ -294,10 +291,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.UV
         /// </summary>
         public DBAP01 DBAP
         {
-            get
-            {
-                return ListeDBAP?.SingleOrDefault();
-            }
+            get => ListeDBAP?.SingleOrDefault();
             set
             {
                 ListeDBAP = ListeDBAP.Set(value);

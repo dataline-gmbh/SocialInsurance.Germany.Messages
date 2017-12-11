@@ -22,10 +22,7 @@ namespace SocialInsurance.Germany.Messages.Tests
 
         protected StreamFactory StreamFactory { get; }
 
-        protected Encoding DefaultEncoding
-        {
-            get { return _iso8859_15; }
-        }
+        protected Encoding DefaultEncoding => _iso8859_15;
 
         protected string ReadData(string resourceName)
         {
@@ -49,7 +46,7 @@ namespace SocialInsurance.Germany.Messages.Tests
             //var method = frame.GetMethod();
             //var ns = method.DeclaringType.Namespace;
             var ns = _namespace;
-            var resName = string.Format("{0}.{1}", ns, resourceName);
+            var resName = $"{ns}.{resourceName}";
             var asm = GetType().Assembly;
             //var asm = method.DeclaringType.Assembly;
             var resStream = asm.GetManifestResourceStream(resName);

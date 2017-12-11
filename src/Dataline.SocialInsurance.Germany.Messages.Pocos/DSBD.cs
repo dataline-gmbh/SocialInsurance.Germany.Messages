@@ -115,8 +115,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public FehlerKennzeichen FEKZ
         {
-            get { return _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft); }
-            set { _fekz = value; }
+            get => _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft);
+            set => _fekz = value;
         }
 
         /// <summary>
@@ -373,8 +373,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMKA
         {
-            get { return _hatDbka ?? DBKA != null; }
-            set { _hatDbka = value; }
+            get => _hatDbka ?? DBKA != null;
+            set => _hatDbka = value;
         }
 
         /// <summary>
@@ -388,8 +388,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </remarks>
         public bool MMTN
         {
-            get { return _hatDbtn ?? DBTN != null; }
-            set { _hatDbtn = value; }
+            get => _hatDbtn ?? DBTN != null;
+            set => _hatDbtn = value;
         }
 
         /// <summary>
@@ -397,10 +397,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBKA DBKA
         {
-            get
-            {
-                return ListeDBKA == null ? null : ListeDBKA.SingleOrDefault();
-            }
+            get => ListeDBKA?.SingleOrDefault();
             set
             {
                 ListeDBKA = ListeDBKA.Set(value);
@@ -413,10 +410,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public DBTN DBTN
         {
-            get
-            {
-                return ListeDBTN == null ? null : ListeDBTN.SingleOrDefault();
-            }
+            get => ListeDBTN?.SingleOrDefault();
             set
             {
                 ListeDBTN = ListeDBTN.Set(value);

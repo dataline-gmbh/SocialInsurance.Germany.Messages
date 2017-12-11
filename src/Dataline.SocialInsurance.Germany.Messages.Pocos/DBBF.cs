@@ -34,8 +34,8 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// </summary>
         public int ANBF
         {
-            get { return _anbf ?? (BF == null ? 0 : BF.Count); }
-            set { _anbf = value; }
+            get => _anbf ?? (BF == null ? 0 : BF.Count);
+            set => _anbf = value;
         }
 
         /// <summary>

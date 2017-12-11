@@ -78,8 +78,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </remarks>
         public FehlerKennzeichen FEKZ
         {
-            get { return _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft); }
-            set { _fekz = value; }
+            get => _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft);
+            set => _fekz = value;
         }
 
         /// <summary>
@@ -153,8 +153,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </summary>
         public bool MMRM
         {
-            get { return _hatDbra ?? DBRA != null; }
-            set { _hatDbra = value; }
+            get => _hatDbra ?? DBRA != null;
+            set => _hatDbra = value;
         }
 
         /// <summary>
@@ -162,8 +162,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </summary>
         public bool MMAP
         {
-            get { return _hatDbap ?? DBAP != null; }
-            set { _hatDbap = value; }
+            get => _hatDbap ?? DBAP != null;
+            set => _hatDbap = value;
         }
 
         /// <summary>
@@ -175,8 +175,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </remarks>
         public bool MMNA
         {
-            get { return _hatDbna ?? DBNA != null; }
-            set { _hatDbna = value; }
+            get => _hatDbna ?? DBNA != null;
+            set => _hatDbna = value;
         }
 
         /// <summary>
@@ -184,10 +184,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </summary>
         public DBRA01 DBRA
         {
-            get
-            {
-                return ListeDBRA == null ? null : ListeDBRA.SingleOrDefault();
-            }
+            get => ListeDBRA?.SingleOrDefault();
             set
             {
                 ListeDBRA = ListeDBRA.Set(value);
@@ -200,10 +197,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </summary>
         public DBAP01 DBAP
         {
-            get
-            {
-                return ListeDBAP == null ? null : ListeDBAP.SingleOrDefault();
-            }
+            get => ListeDBAP?.SingleOrDefault();
             set
             {
                 ListeDBAP = ListeDBAP.Set(value);
@@ -216,10 +210,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// </summary>
         public DBNA DBNA
         {
-            get
-            {
-                return ListeDBNA == null ? null : ListeDBNA.SingleOrDefault();
-            }
+            get => ListeDBNA?.SingleOrDefault();
             set
             {
                 ListeDBNA = ListeDBNA.Set(value);

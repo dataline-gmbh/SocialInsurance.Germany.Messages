@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using SocialInsurance.Germany.Messages.Pocos;
+
 using Xunit;
 
 namespace SocialInsurance.Germany.Messages.Tests.Bvbei
@@ -122,13 +122,13 @@ namespace SocialInsurance.Germany.Messages.Tests.Bvbei
                 NCSZ = new List<NCSZ>();
             }
 
-            public List<VOSZ> VOSZ { get; set; }
+            public List<VOSZ> VOSZ { get; }
 
             public DSKO02 DSKO { get; set; }
 
-            public List<DSBE01> DSBEv01 { get; set; }
+            public List<DSBE01> DSBEv01 { get; }
 
-            public List<NCSZ> NCSZ { get; set; }
+            public List<NCSZ> NCSZ { get; }
         }
     }
 }

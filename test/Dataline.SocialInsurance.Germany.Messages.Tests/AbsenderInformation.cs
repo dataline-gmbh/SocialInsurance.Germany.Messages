@@ -9,7 +9,7 @@ using ExtraStandard.Encryption;
 using ExtraStandard.Extra14;
 
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.UserSecrets;
+
 using Org.BouncyCastle.Pkcs;
 
 using SocialInsurance.Germany.Messages.Tests.Support;

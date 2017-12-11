@@ -115,8 +115,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </remarks>
         public FehlerKennzeichen FEKZ
         {
-            get { return _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft); }
-            set { _fekz = value; }
+            get => _fekz ?? (DBFE == null || DBFE.Count == 0 ? FehlerKennzeichen.Fehlerfrei : FehlerKennzeichen.Fehlerhaft);
+            set => _fekz = value;
         }
 
         /// <summary>
@@ -235,8 +235,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </remarks>
         public bool MMEN
         {
-            get { return _hatDben ?? DBEN != null; }
-            set { _hatDben = value; }
+            get => _hatDben ?? DBEN != null;
+            set => _hatDben = value;
         }
 
         /// <summary>
@@ -248,8 +248,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </remarks>
         public bool MMNA
         {
-            get { return _hatDbna ?? DBNA != null; }
-            set { _hatDbna = value; }
+            get => _hatDbna ?? DBNA != null;
+            set => _hatDbna = value;
         }
 
         /// <summary>
@@ -261,8 +261,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </remarks>
         public bool MMGB
         {
-            get { return _hatDbgb ?? DBGB != null; }
-            set { _hatDbgb = value; }
+            get => _hatDbgb ?? DBGB != null;
+            set => _hatDbgb = value;
         }
 
         /// <summary>
@@ -274,8 +274,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </remarks>
         public bool MMAN
         {
-            get { return _hatDban ?? DBAN != null; }
-            set { _hatDban = value; }
+            get => _hatDban ?? DBAN != null;
+            set => _hatDban = value;
         }
 
         /// <summary>
@@ -287,8 +287,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </remarks>
         public bool MMAG
         {
-            get { return _hatDbag ?? DBAG != null; }
-            set { _hatDbag = value; }
+            get => _hatDbag ?? DBAG != null;
+            set => _hatDbag = value;
         }
 
         /// <summary>
@@ -300,8 +300,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </remarks>
         public bool MMAB
         {
-            get { return _hatDbab ?? DBAB != null; }
-            set { _hatDbab = value; }
+            get => _hatDbab ?? DBAB != null;
+            set => _hatDbab = value;
         }
 
         /// <summary>
@@ -313,8 +313,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </remarks>
         public bool MMFZ
         {
-            get { return _hatDbfz ?? DBFZ != null; }
-            set { _hatDbfz = value; }
+            get => _hatDbfz ?? DBFZ != null;
+            set => _hatDbfz = value;
         }
 
         /// <summary>
@@ -326,8 +326,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </remarks>
         public bool MMSE
         {
-            get { return _hatDbse ?? DBSE != null; }
-            set { _hatDbse = value; }
+            get => _hatDbse ?? DBSE != null;
+            set => _hatDbse = value;
         }
 
         /// <summary>
@@ -339,8 +339,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </remarks>
         public bool MMSB
         {
-            get { return _hatDbsb ?? DBSB != null; }
-            set { _hatDbsb = value; }
+            get => _hatDbsb ?? DBSB != null;
+            set => _hatDbsb = value;
         }
 
         /// <summary>
@@ -352,8 +352,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </remarks>
         public bool MMAS
         {
-            get { return _hatDbas ?? DBAS != null; }
-            set { _hatDbas = value; }
+            get => _hatDbas ?? DBAS != null;
+            set => _hatDbas = value;
         }
 
         /// <summary>
@@ -365,8 +365,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </remarks>
         public bool MMZD
         {
-            get { return _hatDbzd ?? DBZD != null; }
-            set { _hatDbzd = value; }
+            get => _hatDbzd ?? DBZD != null;
+            set => _hatDbzd = value;
         }
 
         /// <summary>
@@ -378,8 +378,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </remarks>
         public bool MMNB
         {
-            get { return _hatDbnb ?? DBNB != null; }
-            set { _hatDbnb = value; }
+            get => _hatDbnb ?? DBNB != null;
+            set => _hatDbnb = value;
         }
 
         /// <summary>
@@ -391,8 +391,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </remarks>
         public bool MMHA
         {
-            get { return _hatDbha ?? DBHA != null; }
-            set { _hatDbha = value; }
+            get => _hatDbha ?? DBHA != null;
+            set => _hatDbha = value;
         }
 
         /// <summary>
@@ -404,8 +404,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </remarks>
         public bool MMKE
         {
-            get { return _hatDbke ?? DBKE != null; }
-            set { _hatDbke = value; }
+            get => _hatDbke ?? DBKE != null;
+            set => _hatDbke = value;
         }
 
         /// <summary>
@@ -413,10 +413,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </summary>
         public DBEN DBEN
         {
-            get
-            {
-                return ListeDBEN?.SingleOrDefault();
-            }
+            get => ListeDBEN?.SingleOrDefault();
             set
             {
                 ListeDBEN = ListeDBEN.Set(value);
@@ -429,10 +426,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </summary>
         public DBNA DBNA
         {
-            get
-            {
-                return ListeDBNA?.SingleOrDefault();
-            }
+            get => ListeDBNA?.SingleOrDefault();
             set
             {
                 ListeDBNA = ListeDBNA.Set(value);
@@ -445,10 +439,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </summary>
         public DBGB DBGB
         {
-            get
-            {
-                return ListeDBGB?.SingleOrDefault();
-            }
+            get => ListeDBGB?.SingleOrDefault();
             set
             {
                 ListeDBGB = ListeDBGB.Set(value);
@@ -461,10 +452,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </summary>
         public DBAN DBAN
         {
-            get
-            {
-                return ListeDBAN?.SingleOrDefault();
-            }
+            get => ListeDBAN?.SingleOrDefault();
             set
             {
                 ListeDBAN = ListeDBAN.Set(value);
@@ -477,10 +465,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </summary>
         public DBAG DBAG
         {
-            get
-            {
-                return ListeDBAG?.SingleOrDefault();
-            }
+            get => ListeDBAG?.SingleOrDefault();
             set
             {
                 ListeDBAG = ListeDBAG.Set(value);
@@ -493,10 +478,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </summary>
         public DBAB DBAB
         {
-            get
-            {
-                return ListeDBAB?.SingleOrDefault();
-            }
+            get => ListeDBAB?.SingleOrDefault();
             set
             {
                 ListeDBAB = ListeDBAB.Set(value);
@@ -509,10 +491,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </summary>
         public DBFZ DBFZ
         {
-            get
-            {
-                return ListeDBFZ?.SingleOrDefault();
-            }
+            get => ListeDBFZ?.SingleOrDefault();
             set
             {
                 ListeDBFZ = ListeDBFZ.Set(value);
@@ -525,10 +504,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </summary>
         public DBSE DBSE
         {
-            get
-            {
-                return ListeDBSE?.SingleOrDefault();
-            }
+            get => ListeDBSE?.SingleOrDefault();
             set
             {
                 ListeDBSE = ListeDBSE.Set(value);
@@ -541,10 +517,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </summary>
         public DBSB DBSB
         {
-            get
-            {
-                return ListeDBSB?.SingleOrDefault();
-            }
+            get => ListeDBSB?.SingleOrDefault();
             set
             {
                 ListeDBSB = ListeDBSB.Set(value);
@@ -557,10 +530,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </summary>
         public DBAS DBAS
         {
-            get
-            {
-                return ListeDBAS?.SingleOrDefault();
-            }
+            get => ListeDBAS?.SingleOrDefault();
             set
             {
                 ListeDBAS = ListeDBAS.Set(value);
@@ -573,10 +543,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </summary>
         public DBZD DBZD
         {
-            get
-            {
-                return ListeDBZD?.SingleOrDefault();
-            }
+            get => ListeDBZD?.SingleOrDefault();
             set
             {
                 ListeDBZD = ListeDBZD.Set(value);
@@ -589,10 +556,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </summary>
         public DBNB DBNB
         {
-            get
-            {
-                return ListeDBNB?.SingleOrDefault();
-            }
+            get => ListeDBNB?.SingleOrDefault();
             set
             {
                 ListeDBNB = ListeDBNB.Set(value);
@@ -605,10 +569,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </summary>
         public DBHA DBHA
         {
-            get
-            {
-                return ListeDBHA?.SingleOrDefault();
-            }
+            get => ListeDBHA?.SingleOrDefault();
             set
             {
                 ListeDBHA = ListeDBHA.Set(value);
@@ -621,10 +582,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.ELENA
         /// </summary>
         public DBKE DBKE
         {
-            get
-            {
-                return ListeDBKE?.SingleOrDefault();
-            }
+            get => ListeDBKE?.SingleOrDefault();
             set
             {
                 ListeDBKE = ListeDBKE.Set(value);

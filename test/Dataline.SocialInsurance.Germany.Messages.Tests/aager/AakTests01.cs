@@ -33,7 +33,7 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
                 var deuevMessage = GetMessageFromFile(fileName, streamName);
                 Assert.True(deuevMessage.DSRA01.Count > 0);
             }
-            catch (BeanIO.BeanReaderException ex) when(DumpFieldExceptions(ex))
+            catch (BeanReaderException ex) when(DumpFieldExceptions(ex))
             {
                 
             }
