@@ -19,6 +19,7 @@
     <ApplicationIcon />
     <OutputType>Library</OutputType>
     <StartupObject />
+    <RootNamespace>SocialInsurance.Germany.Messages.Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

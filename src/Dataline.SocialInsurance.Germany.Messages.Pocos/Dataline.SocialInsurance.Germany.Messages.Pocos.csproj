@@ -26,6 +26,7 @@
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
     <CodeAnalysisRuleSet>..\..\Dataline.ruleset</CodeAnalysisRuleSet>
+    <RootNamespace>SocialInsurance.Germany.Messages.Pocos</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

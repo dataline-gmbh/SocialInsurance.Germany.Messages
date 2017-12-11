@@ -24,7 +24,7 @@ namespace SocialInsurance.Germany.Messages.Mappings
         public static Stream LoadMeldungen()
         {
             var asm = typeof(Meldungen).GetTypeInfo().Assembly;
-            return asm.GetManifestResourceStream("Dataline.SocialInsurance.Germany.Messages.Mappings.Meldungen.xml");
+            return asm.GetManifestResourceStream("SocialInsurance.Germany.Messages.Mappings.Meldungen.xml");
         }
     }
 }
