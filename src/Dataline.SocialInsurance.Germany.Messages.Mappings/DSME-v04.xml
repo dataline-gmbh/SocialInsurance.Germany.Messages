@@ -33,12 +33,12 @@
     <field name="PERSGR" length="3" required="true" type="int" format="000" />
     <field name="GD" length="2" required="true" type="int" format="0" />
     <field name="SASC" length="3" required="false" />
-    <field name="MMME" length="1" typeHandler="jn" required="true"/>    
-    <field name="MMNA" length="1" typeHandler="jn" required="true"/>    
-    <field name="MMGB" length="1" typeHandler="jn" required="true"/>    
-    <field name="MMAN" length="1" typeHandler="jn" required="true"/>    
-    <field name="MMEU" length="1" typeHandler="jn" required="true"/>    
-    <field name="MMUV" length="1" typeHandler="jn" required="true"/>    
+    <field name="MMME" length="1" typeHandler="jn" required="true"/>
+    <field name="MMNA" length="1" typeHandler="jn" required="true"/>
+    <field name="MMGB" length="1" typeHandler="jn" required="true"/>
+    <field name="MMAN" length="1" typeHandler="jn" required="true"/>
+    <field name="MMEU" length="1" typeHandler="jn" required="true"/>
+    <field name="MMUV" length="1" typeHandler="jn" required="true"/>
     <field name="MMKS" length="1" typeHandler="jn" required="true"/>
     <field name="MMSV" length="1" typeHandler="jn" required="true"/>
     <field name="MMVR" length="1" typeHandler="jn" required="true"/>
@@ -80,7 +80,7 @@
     <segment name="ListeDBUV" class="SocialInsurance.Germany.Messages.Pocos.DBUV0301, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMUV" collection="list">
       <include template="DBUV-v0301" />
     </segment>
-    <segment name="ListeDBKS" class="SocialInsurance.Germany.Messages.Pocos.DSME0301+WrapperDBKS, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMKS" collection="list">
+    <segment name="ListeDBKS" class="SocialInsurance.Germany.Messages.Pocos.DSME04+WrapperDBKS, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMKS" collection="list">
       <!--
       Wir können hier nicht das Template benutzen, weil wir eine eigene Typ-Konvertierung nutzen müssen
       um zwischen DBKSS und DBKSK unterscheiden zu können.
