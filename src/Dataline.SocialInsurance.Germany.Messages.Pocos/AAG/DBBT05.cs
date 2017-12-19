@@ -28,7 +28,17 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// Kennzeichen Verarbeitung, Länge 1, Mussangabe
         /// 0 = Antrag auf Erstattung, 1 = Stornierung des Erstattungsantrags
         /// </remarks>
-        public string KENNST { get; set; }
+        [Obsolete("Bitte verwenden Sie statt dessen KENNZV")]
+        public string KENNST { get => KENNZV.ToString("D1"); set => KENNZV = Convert.ToInt32(value, 10); }
+
+        /// <summary>
+        /// Holt oder setzt das Kennzeichen Verarbeitung
+        /// </summary>
+        /// <remarks>
+        /// Kennzeichen Verarbeitung, Länge 1, Mussangabe
+        /// 0 = Antrag auf Erstattung, 1 = Stornierung des Erstattungsantrags
+        /// </remarks>
+        public int KENNZV { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beginn des Erstattungszeitraums

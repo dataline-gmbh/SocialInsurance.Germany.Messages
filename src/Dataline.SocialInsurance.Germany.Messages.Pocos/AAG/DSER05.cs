@@ -52,7 +52,19 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         ///  Betriebsnummer des Erstellers des Datensatzes, Länge 15, (8 Stellen linksbündig mit nachfolgenden Leerzeichen), Mussangabe
         /// </remarks>
-        public string BBNRAB { get; set; }
+        [Obsolete("Bitte verwenden Sie statt dessen ABSN")]
+        public string BBNRAB { get => ABSN; set => ABSN = value; }
+
+        /// <summary>
+        /// Holt oder setzt die Absendernummer der Datei
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        ///     <item>Betriebsnummer des Absenders der Datei (8 Stellen linksbündig mit nachfolgenden Leerzeichen), Länge 15, Mussangabe</item>
+        ///     <item>Absendernummer gemäß § 18n Abs. 2 SGB IV (A + 7 Ziffern linksbündig mit nachfolgenden Leerzeichen), Länge 15, Mussangabe</item>
+        /// </list>
+        /// </remarks>
+        public string ABSN { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Betriebsnummer des Empfängers des Datensatzes
@@ -60,7 +72,19 @@ namespace SocialInsurance.Germany.Messages.Pocos.AAG
         /// <remarks>
         /// Betriebsnummer des Empfängers des Datensatzes, Länge 15, (8 Stellen linksbündig mit nachfolgenden Leerzeichen), Mussangabe
         /// </remarks>
-        public string BBNREP { get; set; }
+        [Obsolete("Bitte verwenden Sie statt dessen EPNR")]
+        public string BBNREP { get => EPNR; set => EPNR = value; }
+
+        /// <summary>
+        /// Holt oder setzt die Absendernummer des Empfängers der Datei
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        ///     <item>Betriebsnummer des Empfängers der Datei (8 Stellen linksbündig mit nachfolgenden Leerzeichen), Länge 15, Mussangabe</item>
+        ///     <item>Absendernummer gemäß § 18n Abs. 2 SGB IV (A + 7 Ziffern linksbündig mit nachfolgenden Leerzeichen), Länge 15, Mussangabe</item>
+        /// </list>
+        /// </remarks>
+        public string EPNR { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Versionsnummer des übermittelten Datensatzes
