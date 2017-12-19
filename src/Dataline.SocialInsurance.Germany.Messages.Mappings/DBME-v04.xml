@@ -14,7 +14,7 @@
     <field name="KENNZRK" length="1" required="false" regex="[WO]"/>
     <field name="KENNZMF" length="1" required="true" regex="[JN]"/>
     <field name="KENNZAP" length="1" required="true" regex="[02-9]" />
-    <field name="KENNZSAN" length="1" required="false" typeHandler="jn" default=" " parseDefault="false" />
+    <field name="KENNZSAN" length="1" required="false" typeHandler="jn" default=" " parseDefault="false" keepPadding="true" />
     <field name="RESERVE1" length="99" required="false" ignore="true"/>
   </template>
 </beanio>
