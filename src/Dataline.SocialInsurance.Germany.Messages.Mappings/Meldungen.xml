@@ -96,6 +96,12 @@
     </record>
   </stream>
 
+  <stream name="dsbd-v02" format="fixedlength">
+    <record name="DSBD" minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSBD02, Dataline.SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSBD-v02"/>
+    </record>
+  </stream>
+
   <stream name="dskk-deuev-v01" format="fixedlength">
 		<record order="1" name="VOSZ" minOccurs="1"  maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
 			<include template="VOSZ-v01"/>
