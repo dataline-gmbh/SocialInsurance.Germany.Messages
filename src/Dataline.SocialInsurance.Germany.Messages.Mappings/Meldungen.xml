@@ -8,6 +8,7 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSME-v0301.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSME-v04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBD-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBD-v02.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKK-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKK-v02.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSAE-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
@@ -51,8 +52,8 @@
 		<record name="DSME" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSME02, Dataline.SocialInsurance.Germany.Messages.Pocos">
 			<include template="DSME-v02"/>
 		</record>
-    <record name="DSBD" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBD01, Dataline.SocialInsurance.Germany.Messages.Pocos">
-      <include template="DSBD-v01"/>
+    <record name="DSBD" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBD02, Dataline.SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSBD-v02"/>
     </record>
     <record name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
 			<include template="NCSZ-v01"/>
@@ -69,8 +70,8 @@
     <record name="DSME" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSME0301, Dataline.SocialInsurance.Germany.Messages.Pocos">
       <include template="DSME-v0301"/>
     </record>
-    <record name="DSBD" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBD01, Dataline.SocialInsurance.Germany.Messages.Pocos">
-      <include template="DSBD-v01"/>
+    <record name="DSBD" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBD02, Dataline.SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSBD-v02"/>
     </record>
     <record name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
       <include template="NCSZ-v01"/>
@@ -87,8 +88,8 @@
     <record name="DSME" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSME04, Dataline.SocialInsurance.Germany.Messages.Pocos">
       <include template="DSME-v04"/>
     </record>
-    <record name="DSBD" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBD01, Dataline.SocialInsurance.Germany.Messages.Pocos">
-      <include template="DSBD-v01"/>
+    <record name="DSBD" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBD02, Dataline.SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSBD-v02"/>
     </record>
     <record name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
       <include template="NCSZ-v01"/>
@@ -441,6 +442,9 @@
       </record>
       <record name="DSBD-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSBD01, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSBD-v01"/>
+      </record>
+      <record name="DSBD-v02" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSBD02, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSBD-v02"/>
       </record>
       <record name="DSBE-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSBE01, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSBE-v01"/>
