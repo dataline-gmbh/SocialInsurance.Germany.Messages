@@ -52,24 +52,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string VF { get; set; }
 
         /// <summary>
-        /// Holt oder setzt die Betriebsnummer des Absenders des Datensatzes
+        /// Holt oder setzt die Betriebsnummer des Erstellers des Datensatzes
         /// </summary>
         /// <remarks>
-        ///  Betriebsnummer des Absenders des Datensatzes, Länge 15, (8 Stellen linksbündig mit nachfolgenden Leerzeichen), Mussangabe
+        ///  Betriebsnummer des Erstellers des Datensatzes, Länge 15, (8 Stellen linksbündig mit nachfolgenden Leerzeichen), Mussangabe
         /// </remarks>
-        [Obsolete("Bitte verwenden Sie statt dessen ABSN")]
-        public string BBNRAB { get => ABSN; set => ABSN = value; }
-
-        /// <summary>
-        /// Holt oder setzt die Absendernummer der Datei
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        ///     <item>Betriebsnummer des Absenders der Datei (8 Stellen linksbündig mit nachfolgenden Leerzeichen), Länge 15, Mussangabe</item>
-        ///     <item>Absendernummer gemäß § 18n Abs. 2 SGB IV (A + 7 Ziffern linksbündig mit nachfolgenden Leerzeichen), Länge 15, Mussangabe</item>
-        /// </list>
-        /// </remarks>
-        public string ABSN { get; set; }
+        public string BBNRAB { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Betriebsnummer des Empfängers des Datensatzes
@@ -77,19 +65,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Betriebsnummer des Empfängers des Datensatzes, Länge 15, (8 Stellen linksbündig mit nachfolgenden Leerzeichen), Mussangabe
         /// </remarks>
-        [Obsolete("Bitte verwenden Sie statt dessen EPNR")]
-        public string BBNREP { get => EPNR; set => EPNR = value; }
-
-        /// <summary>
-        /// Holt oder setzt die Absendernummer des Empfängers der Datei
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        ///     <item>Betriebsnummer des Empfängers der Datei (8 Stellen linksbündig mit nachfolgenden Leerzeichen), Länge 15, Mussangabe</item>
-        ///     <item>Absendernummer gemäß § 18n Abs. 2 SGB IV (A + 7 Ziffern linksbündig mit nachfolgenden Leerzeichen), Länge 15, Mussangabe</item>
-        /// </list>
-        /// </remarks>
-        public string EPNR { get; set; }
+        public string BBNREP { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Versionsnummer des übermittelten Datensatzes
@@ -341,24 +317,6 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Betriebsnummer der für den Beschäftigten zuständigen Einzugsstelle oder der berufsständischen Versorgungseinrichtung, Länge 15, Pflichtangabe, soweit bekannt
         /// </remarks>
         public string BBNRKK { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt den Produkt-Identifier des geprüften Softwareproduktes
-        /// </summary>
-        /// <remarks>
-        /// Produkt-Identifier des geprüften Softwareproduktes, das beim Ersteller der Datei eingesetzt wird, Länge 7, Mussangabe
-        /// Sie wird von der ITSG, eindeutig für jedes systemuntersuchte Programm, vergeben
-        /// </remarks>
-        public int? PRODID { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt den Modifikations-Identifier des geprüften Softwareproduktes
-        /// </summary>
-        /// <remarks>
-        /// Modifikations-Identifier des geprüften Softwareproduktes, das beim Ersteller der Datei eingesetzt wird, Länge 8, Mussangabe
-        /// Sie wird je geprüfter Produktversion von der ITSG vergeben
-        /// </remarks>
-        public int? MODID { get; set; }
 
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein abweichende Korrespondenzanschrift vorhanden ist
