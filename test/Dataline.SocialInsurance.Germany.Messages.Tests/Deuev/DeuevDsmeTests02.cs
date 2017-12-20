@@ -1940,7 +1940,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
 
                 while (reader.RecordName == "DSBD" || reader.RecordName == "DSBD-v01")
                 {
-                    var record = Assert.IsType<DSBD>(streamObject);
+                    var record = Assert.IsType<DSBD01>(streamObject);
                     deuevMessage.DSBD.Add(record);
                     streamObject = reader.Read();
                 }
@@ -2032,7 +2032,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             {
                 VOSZ = new List<VOSZ>();
                 DSME = new List<DSME02>();
-                DSBD = new List<DSBD>();
+                DSBD = new List<DSBD01>();
                 NCSZ = new List<NCSZ>();
             }
 
@@ -2042,7 +2042,7 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
 
             public List<DSME02> DSME { get; set; }
 
-            public List<DSBD> DSBD { get; set; }
+            public List<DSBD01> DSBD { get; set; }
 
             public List<NCSZ> NCSZ { get; set; }
         }

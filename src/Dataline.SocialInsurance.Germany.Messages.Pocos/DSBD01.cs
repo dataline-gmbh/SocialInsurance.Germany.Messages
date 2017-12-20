@@ -1,4 +1,4 @@
-﻿// <copyright file="DSBD.cs" company="DATALINE GmbH &amp; Co. KG">
+﻿// <copyright file="DSBD01.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
@@ -11,7 +11,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datensatz: DSBD - Datensatz Betriebsdatenpflege
     /// </summary>
-    public class DSBD : IDatensatz
+    public class DSBD01 : IDatensatz
     {
         private FehlerKennzeichen? _fekz;
 
@@ -25,7 +25,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt
         /// </remarks>
-        public DSBD()
+        public DSBD01()
         {
             KE = "DSBD";
             VERNR = 1;
