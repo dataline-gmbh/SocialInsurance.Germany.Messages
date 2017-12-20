@@ -4,7 +4,7 @@
     <Description>Bibliothek, die alle Klassen für SV-Meldungen enthält</Description>
     <Copyright>DATALINE GmbH &amp; Co. KG 2015-2016</Copyright>
     <AssemblyTitle>Klassen für SV-Meldungen</AssemblyTitle>
-    <VersionPrefix>0.4.0</VersionPrefix>
+    <VersionPrefix>0.5.0</VersionPrefix>
     <Authors>DATALINE GmbH &amp; Co. KG</Authors>
     <TargetFrameworks>netstandard1.3;net45;netstandard2.0</TargetFrameworks>
     <AssemblyName>Dataline.SocialInsurance.Germany.Messages.Pocos</AssemblyName>

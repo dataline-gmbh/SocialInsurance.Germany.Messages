@@ -4,7 +4,7 @@
     <Description>Bibliothek, die alle BeanIO-Mappings für die SV-Meldungen enthält</Description>
     <Copyright>DATALINE GmbH &amp; Co. KG 2015-2016</Copyright>
     <AssemblyTitle>BeanIO-Mappings für SV-Meldungen</AssemblyTitle>
-    <VersionPrefix>0.4.0</VersionPrefix>
+    <VersionPrefix>0.5.0</VersionPrefix>
     <Authors>DATALINE GmbH &amp; Co. KG</Authors>
     <TargetFrameworks>netstandard1.3;net45;netstandard2.0</TargetFrameworks>
     <AssemblyName>Dataline.SocialInsurance.Germany.Messages.Mappings</AssemblyName>
