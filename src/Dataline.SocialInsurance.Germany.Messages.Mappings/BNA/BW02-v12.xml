@@ -73,8 +73,8 @@
     <field name="LDKZ" length="3" required="false" />
     <field name="PLZ" length="10" required="true"/>
     <field name="ORT" length="25" required="true"/>
-    <field name="ABRECHN1" length="15" required="true" />
-    <field name="ABRECHN2" length="15" required="true" />
+    <field name="ABRECHN1" length="15" required="false" />
+    <field name="ABRECHN2" length="15" required="false" />
     <field name="ORDN" length="20" required="false" />
     <field name="VAMM" length="1" required="false"/>
     <field name="BEITRSA" length="4" required="true" format="d4" default="0" type="int"/>
