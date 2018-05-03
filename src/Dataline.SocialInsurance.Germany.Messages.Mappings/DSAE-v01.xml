@@ -23,7 +23,7 @@
     <field name="RESERVE2" length="8" required="false" ignore="true"/>
     <field name="KENNZUE" length="1" required="true"/>
     <field name="RESERVE3" length="5" required="false" ignore="true"/>
-    <field name="VERNRKP" length="2" required="true"/>
+    <field name="VERNRKP" length="2" required="false"/>
     <field name="RESERVE4" length="2" required="false" ignore="true"/>
     <segment name="ListeDBAZ" class="SocialInsurance.Germany.Messages.Pocos.DBAZ, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMAZ" collection="list">
       <include template="DBAZ" />
