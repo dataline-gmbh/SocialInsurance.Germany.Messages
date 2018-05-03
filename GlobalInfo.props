@@ -1,0 +1,19 @@
+<Project>
+  <PropertyGroup Label="Assembly-Metadaten">
+    <Company>DATALINE GmbH &amp; Co. KG</Company>
+    <Copyright>Copyright © DATALINE GmbH &amp; Co. KG 2015-2018</Copyright>
+    <VersionPrefix>0.5.1</VersionPrefix>
+    <Authors>dataline</Authors>
+    <PackageTags>SV;Meldung;BeanIO;mapping;Sozialversicherung;DEUEV;DEÜV</PackageTags>
+    <PackageIconUrl>https://raw.githubusercontent.com/dataline-gmbh/SocialInsurance.Germany.Messages/master/dataline-64.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/dataline-gmbh/SocialInsurance.Germany.Messages</PackageProjectUrl>
+    <PackageLicenseUrl>http://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/dataline-gmbh/SocialInsurance.Germany.Messages</RepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Compiler/Analyzer">
+    <LangVersion>7.0</LangVersion>
+    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)\Dataline.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+</Project>

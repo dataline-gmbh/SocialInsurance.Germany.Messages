@@ -1,36 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <Import Project="$(MSBuildThisFileDirectory)\..\..\GlobalInfo.props" />
+
   <PropertyGroup>
     <Description>Bibliothek, die alle BeanIO-Mappings für die SV-Meldungen enthält</Description>
-    <Copyright>DATALINE GmbH &amp; Co. KG 2015-2016</Copyright>
     <AssemblyTitle>BeanIO-Mappings für SV-Meldungen</AssemblyTitle>
-    <VersionPrefix>0.5.0</VersionPrefix>
-    <Authors>DATALINE GmbH &amp; Co. KG</Authors>
     <TargetFrameworks>netstandard1.3;net45;netstandard2.0</TargetFrameworks>
     <AssemblyName>Dataline.SocialInsurance.Germany.Messages.Mappings</AssemblyName>
     <PackageId>Dataline.SocialInsurance.Germany.Messages.Mappings</PackageId>
-    <PackageTags>SV;Meldung;BeanIO;mapping;Sozialversicherung;DEUEV;DEÜV</PackageTags>
-    <PackageIconUrl>https://raw.githubusercontent.com/dataline-gmbh/SocialInsurance.Germany.Messages/master/dataline-64.png</PackageIconUrl>
-    <PackageProjectUrl>https://github.com/dataline-gmbh/SocialInsurance.Germany.Messages</PackageProjectUrl>
-    <PackageLicenseUrl>http://opensource.org/licenses/MIT</PackageLicenseUrl>
-    <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/dataline-gmbh/SocialInsurance.Germany.Messages</RepositoryUrl>
-    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
-    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
-    <GenerateNeutralResourcesLanguageAttribute>false</GenerateNeutralResourcesLanguageAttribute>
-    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
-    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
-    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
-    <CodeAnalysisRuleSet>..\..\Dataline.ruleset</CodeAnalysisRuleSet>
     <RootNamespace>SocialInsurance.Germany.Messages.Mappings</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\GlobalAssemblyInfo.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**" Link="Properties\GlobalAssemblyInfo.cs" />
     <EmbeddedResource Include="**\*.xml" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
     <AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
     <None Include="..\..\packaging\Dataline.SocialInsurance.Germany.Messages.Mappings.targets" Link="build\native\Dataline.SocialInsurance.Germany.Messages.Mappings.targets">
