@@ -42,6 +42,8 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.NCSZ-v06.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BNA.NCSZ-v05.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
 
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.KSK.DSMK.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+
   <stream name="dsme-deuev-v02" format="fixedlength">
 		<record name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
 			<include template="VOSZ-v01"/>
@@ -407,7 +409,7 @@
   </stream>
 
   <!-- Wird verwendet, damit man auf allgemeingültige Art und Weise an die VOSZ/DSKO/NCSZ-Datensätze kommen kann -->
-  <stream name="super-message" format="fixedlength" ignoreUnidentifiedRecords="true">
+  <stream name="super-message" format="fixedlength" ignoreUnidentifiedRecords="false">
     <group name="vorlauf" order="1" occurs="1-2">
       <!-- <include template="VOSZ-generic"/> -->
       <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ_FELANG, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-DBFELANG-v01" />
@@ -466,6 +468,9 @@
       </record>
       <record name="DSKK-v02" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSKK02, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSKK-v02"/>
+      </record>
+      <record name="DSMK" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.KSK.DSMK, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSMK"/>
       </record>
       <record name="DSME-v02" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSME02, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSME-v02"/>

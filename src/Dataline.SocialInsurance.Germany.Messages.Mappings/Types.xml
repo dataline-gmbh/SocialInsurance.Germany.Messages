@@ -37,5 +37,15 @@
     format="fixedlength"
     type="SocialInsurance.Germany.Messages.Pocos.AAG.Versicherungsart, Dataline.SocialInsurance.Germany.Messages.Pocos">
   </typeHandler>
+  <typeHandler
+    class="SocialInsurance.Germany.Messages.Mappings.Types.NumericEnumTypeHandler`1[[SocialInsurance.Germany.Messages.Pocos.KSK.RuhensanordnungMitteilungsgrund, Dataline.SocialInsurance.Germany.Messages.Pocos]], Dataline.SocialInsurance.Germany.Messages.Mappings"
+    format="fixedlength"
+    type="SocialInsurance.Germany.Messages.Pocos.KSK.RuhensanordnungMitteilungsgrund, Dataline.SocialInsurance.Germany.Messages.Pocos">
+  </typeHandler>
+  <typeHandler
+    class="SocialInsurance.Germany.Messages.Mappings.Types.NumericEnumTypeHandler`1[[SocialInsurance.Germany.Messages.Pocos.KSK.Abgabegrund, Dataline.SocialInsurance.Germany.Messages.Pocos]], Dataline.SocialInsurance.Germany.Messages.Mappings"
+    format="fixedlength"
+    type="SocialInsurance.Germany.Messages.Pocos.KSK.Abgabegrund, Dataline.SocialInsurance.Germany.Messages.Pocos">
+  </typeHandler>
   <typeHandler name="01" class="BeanIO.Types.BooleanIntegerTypeHandler, FubarDev.BeanIO" />
 </beanio>

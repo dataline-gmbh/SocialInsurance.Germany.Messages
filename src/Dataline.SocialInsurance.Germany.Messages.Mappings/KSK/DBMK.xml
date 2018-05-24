@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBMK">
+    <field name="KE" length="4" literal="DBMK" required="true"/>
+    <field name="KENNZST" length="1" required="true" typeHandler="jn" />
+    <field name="RESERVE" length="1" required="false" ignore="true" />
+    <field name="VOSJAEK" length="11" required="true" type="long" />
+    <field name="BERBT" length="11" required="true" type="long" />
+    <field name="ZRBG" length="8" required="true" format="yyyyMMdd"/>
+    <field name="ZREN" length="8" required="true" format="yyyyMMdd"/>
+    <field name="SVTG" length="2" required="true" type="int" />
+    <field name="KZRV" length="1" required="true" typeHandler="jn" />
+    <field name="KENNZRK" length="1" required="true" regex="[WO]" />
+    <field name="KZMA" length="1" required="true" typeHandler="jn" />
+    <field name="RESERVE2" length="37" required="false" ignore="true" />
+  </template>
+</beanio>

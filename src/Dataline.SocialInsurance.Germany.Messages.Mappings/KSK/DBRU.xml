@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBRU">
+    <field name="KE" length="4" literal="DBRU" required="true"/>
+    <field name="KENNZST" length="1" required="true" typeHandler="jn" />
+    <field name="MIGR" length="1" required="true" regex="[1-3]" />
+    <field name="DATBGR" length="8" required="true" format="yyyyMMdd"/>
+    <field name="DATEDR" length="8" required="true" format="yyyyMMdd"/>
+    <field name="RESERVE" length="20" required="false" ignore="true" />
+  </template>
+</beanio>
