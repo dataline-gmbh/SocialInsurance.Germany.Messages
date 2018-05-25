@@ -9,6 +9,10 @@ namespace SocialInsurance.Germany.Messages.Pocos.KSK
     /// </summary>
     public enum Abgabegrund
     {
+        /// <summary>Monatliche Meldung</summary>
+        MonatlicheMeldung = 1,
 
+        /// <summary>Meldung über eine Ruhensanordnung</summary>
+        MeldungUeberRuhensanordnung,
     }
 }

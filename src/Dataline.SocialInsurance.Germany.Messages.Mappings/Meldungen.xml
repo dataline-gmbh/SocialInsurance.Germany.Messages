@@ -409,7 +409,7 @@
   </stream>
 
   <!-- Wird verwendet, damit man auf allgemeingültige Art und Weise an die VOSZ/DSKO/NCSZ-Datensätze kommen kann -->
-  <stream name="super-message" format="fixedlength" ignoreUnidentifiedRecords="false">
+  <stream name="super-message" format="fixedlength" ignoreUnidentifiedRecords="true">
     <group name="vorlauf" order="1" occurs="1-2">
       <!-- <include template="VOSZ-generic"/> -->
       <record name="VOSZ-v01" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.VOSZ_FELANG, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-DBFELANG-v01" />

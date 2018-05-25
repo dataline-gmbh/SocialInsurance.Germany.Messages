@@ -134,7 +134,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.KSK
         /// Baustein DBNA vorhanden?
         /// </summary>
         /// <see cref="DBNA" />
-        public bool MMDBNA {
+        public bool MMDBNA
+        {
             get => _hatDBNA ?? DBNA != null;
             set => _hatDBNA = value;
         }
@@ -143,7 +144,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.KSK
         /// Baustein DBAN vorhanden?
         /// </summary>
         /// <see cref="DBAN"/>
-        public bool MMDBAN {
+        public bool MMDBAN
+        {
             get => _hatDBAN ?? DBAN != null;
             set => _hatDBAN = value;
         }
@@ -152,7 +154,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.KSK
         /// Baustein DBRU vorhanden?
         /// </summary>
         /// <see cref="DBRU"/>
-        public bool MMDBRU {
+        public bool MMDBRU
+        {
             get => _hatDBRU ?? DBRU != null;
             set => _hatDBRU = value;
         }
