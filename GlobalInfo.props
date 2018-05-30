@@ -2,7 +2,7 @@
   <PropertyGroup Label="Assembly-Metadaten">
     <Company>DATALINE GmbH &amp; Co. KG</Company>
     <Copyright>Copyright © DATALINE GmbH &amp; Co. KG 2015-2018</Copyright>
-    <VersionPrefix>0.5.1</VersionPrefix>
+    <VersionPrefix>0.5.2</VersionPrefix>
     <Authors>dataline</Authors>
     <PackageTags>SV;Meldung;BeanIO;mapping;Sozialversicherung;DEUEV;DEÜV</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/dataline-gmbh/SocialInsurance.Germany.Messages/master/dataline-64.png</PackageIconUrl>
