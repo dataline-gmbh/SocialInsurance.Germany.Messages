@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBEN_BEA">
+    <field name="KE" length="4" literal="DBEN" required="true" />
+    <field name="MONATBEG" length="8" required="true" format="yyyyMMdd" />
+    <field name="MONATEND" length="8" required="true" format="yyyyMMdd" />
+    <field name="RESERVE" length="9" required="false" ignore="true" />
+    <field name="KENNZRK" length="1" required="true" regex="[WO]" />
+    <field name="RESERVE2" length="20" required="false" ignore="true" />
+    <field name="SVBREGLF" length="10" required="true" />
+    <field name="SVBREGE" length="10" required="false" />
+    <field name="FIBR" length="10" required="false" />
+    <field name="RESERVE3" length="12" required="false" ignore="true" />
+    <field name="TATSURLTAGE" length="3" required="false" />
+    <field name="URLEG" length="10" required="false" />
+    <field name="URLEGGEZ" length="1" regex="[0-2]" />
+    <field name="MIA" length="1" required="false" typeHandler="jn" />
+    <field name="MIABEG" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="MIAEND" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+  </template>
+</beanio>

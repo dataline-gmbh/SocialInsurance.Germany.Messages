@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBSB_BEA">
+    <field name="KE" length="4" literal="DBSB" required="true"/>
+    <field name="PERSBYGRBEG" length="8" required="true" format="yyyyMMdd" />
+    <field name="BYGRB" length="4" required="true" />
+    <field name="PERSGRB" length="3" required="true" />
+  </template>
+</beanio>

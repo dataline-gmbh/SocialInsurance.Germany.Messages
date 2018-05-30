@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBEE_BEA">
+    <field name="KE" length="4" literal="DBEE" required="true"/>
+    <field name="MONATBEGEU" length="8" required="true" format="yyyyMMdd"/>
+    <field name="MONATENDEU" length="8" required="true" format="yyyyMMdd"/>
+    <field name="RESERVE" length="9" required="false" ignore="true" />
+    <field name="STBREGLFEU" length="10" required="false" />
+    <field name="STBREGSOEU" length="10" required="false" />
+    <field name="RESERVE2" length="22" required="false" ignore="true" />
+  </template>
+</beanio>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBSE_BEA">
+    <field name="KE" length="4" literal="DBSE" required="true"/>
+    <field name="STKL" length="1" required="true" regex="[0-6]" />
+    <field name="FKT" length="4" required="false" />
+    <field name="KINDFRB" length="3" required="true" />
+    <field name="AESTEDATBEG" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+  </template>
+</beanio>
+

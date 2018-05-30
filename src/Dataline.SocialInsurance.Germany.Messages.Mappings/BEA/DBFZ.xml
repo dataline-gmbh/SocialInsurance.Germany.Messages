@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBFZ_BEA">
+    <field name="KE" length="4" literal="DBFZ" required="true"/>
+    <field name="FEHLBEG" length="8" required="true" format="yyyyMMdd"/>
+    <field name="FEHLART" length="2" required="true" />
+    <field name="FEHLEND" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false"/>
+  </template>
+</beanio>

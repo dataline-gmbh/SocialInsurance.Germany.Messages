@@ -44,6 +44,10 @@
 
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.KSK.DSMK.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
 
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BEA.DSAB.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BEA.DSEU.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BEA.DSNE.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+
   <stream name="dsme-deuev-v02" format="fixedlength">
 		<record name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
 			<include template="VOSZ-v01"/>
@@ -445,6 +449,9 @@
       <record name="BW02-v12" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.BNA.BW0212, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="BW02-v12"/>
       </record>
+      <record name="DSAB" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.BEA.DSAB, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSAB"/>
+      </record>
       <record name="DSAE-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSAE, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSAE-v01"/>
       </record>
@@ -463,6 +470,9 @@
       <record name="DSBE-v03" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSBE03, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSBE-v03"/>
       </record>
+      <record name="DSEU" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.BEA.DSEU, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSEU"/>
+      </record>
       <record name="DSKK-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSKK01, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSKK-v01"/>
       </record>
@@ -480,6 +490,9 @@
       </record>
       <record name="DSME-v04" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSME04, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSME-v04"/>
+      </record>
+      <record name="DSNE" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.BEA.DSNE, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSNE"/>
       </record>
       <record name="DSQU-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSQU, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSQU-v01"/>

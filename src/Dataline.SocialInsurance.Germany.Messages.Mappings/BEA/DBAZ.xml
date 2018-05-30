@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBAZ_BEA">
+    <field name="KE" length="4" literal="DBAZ" required="true"/>
+    <field name="AZWOECH" length="4" required="true" />
+    <field name="AZVG" length="4" required="true" />
+    <field name="AZAEGR" length="2" required="false" />
+    <field name="AZAEBEG" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false"/>
+  </template>
+</beanio>
