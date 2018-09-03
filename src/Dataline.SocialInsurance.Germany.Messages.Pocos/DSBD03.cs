@@ -1,4 +1,4 @@
-﻿// <copyright file="DSBD02.cs" company="DATALINE GmbH &amp; Co. KG">
+﻿// <copyright file="DSBD03.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
@@ -11,26 +11,26 @@ namespace SocialInsurance.Germany.Messages.Pocos
     /// <summary>
     /// Datensatz: DSBD - Datensatz Betriebsdatenpflege
     /// <para />
-    /// Version 2 gültig bis 30.6.2019
+    /// Version 3 gültig ab 01.07.2019
     /// </summary>
-    public class DSBD02 : IDatensatz
+    public class DSBD03 : IDatensatz
     {
         private FehlerKennzeichen? _fekz;
 
-        private bool? _hatDbka;
+        private bool? _hatDbpa;
 
         private bool? _hatDbtn;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DSBD02"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DSBD03"/> Klasse
         /// </summary>
         /// <remarks>
         /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt
         /// </remarks>
-        public DSBD02()
+        public DSBD03()
         {
             KE = "DSBD";
-            VERNR = 2;
+            VERNR = 3;
         }
 
         /// <summary>
@@ -116,12 +116,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         }
 
         /// <summary>
-        /// Holt oder setzt die Betriebsnummer der Betriebsstätte
+        /// Holt oder setzt die Betriebsnummer des Beschäftigungsbetriebs
         /// </summary>
         /// <remarks>
         /// Betriebsnummer der Betriebsstätte, für die die Meldung vorgenommen wird, Länge 15, Mussangabe
         /// </remarks>
-        public string BBNRBS { get; set; }
+        public string BBNRBB { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Betriebsnummer der Abrechnungsstelle
@@ -135,18 +135,22 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt den Grund der Abgabe
         /// </summary>
         /// <remarks>
-        /// Grund der Abgabe, Länge 2, Mussangabe
-        /// 11 = Änderung der Betriebsbezeichnung
-        /// 12 = Änderung der Anschrift
-        /// 13 = Änderung des Status/Ruhendkennzeichens
-        /// 14 = Änderung des Ansprechpartners
-        /// 15 = Änderung im Datenbaustein DBKA
-        /// 16 = Änderung der Meldenden Stelle
-        /// 17 = Kombination aus 12-16
-        /// 18 = Kombination aus 11 mit mindestens einem
-        /// weiteren Grund aus 12-16
+        /// Grund der Abgabe, Länge 2, Kannangabe
+        /// 01 = Änderung (im Verfahren BTRKS)
+        /// 02 = Neuvergabe (im Verfahren BTRKS)
+        /// 03 = Mitteilung ausschließlich der Teilnahmepflichten (im Verfahren BTRKV)
+        ///
+        /// Bei der Betriebsdatenpflege durch Arbeitgeber (VF = „BTRAG“) oder die Rentenversicherung (VF = „BTRRV“) ist nur die Grundstellung (Leerzeichen) zulässig.
         /// </remarks>
-        public int GD { get; set; }
+        public int? GD { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt das Datum, zu dem das Veränderungsereignis wirksam wird
+        /// </summary>
+        /// <remarks>
+        /// Die Grundstellung (<see langword="null"/>) ist bei der Betriebsdatenpflege durch Arbeitgeber(VF = „BTRAG“) unzulässig.
+        /// </remarks>
+        public DateTime? DTEREIGNIS { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Wirtschaftsunterklasse
@@ -157,55 +161,55 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public string WUKL { get; set; }
 
         /// <summary>
-        /// Holt oder setzt den ersten Teil des Namens des Betriebes
+        /// Holt oder setzt den ersten Teil des Namens des Beschäftigungsbetriebes
         /// </summary>
         /// <remarks>
         /// Name / Bezeichnung des Betriebes – Teil 1, Länge 30, Mussangabe
         /// </remarks>
-        public string NAME1 { get; set; }
+        public string NAMEBB1 { get; set; }
 
         /// <summary>
-        /// Holt oder setzt den zweiten Teil des Namens des Betriebes
+        /// Holt oder setzt den zweiten Teil des Namens des Beschäftigungsbetriebes
         /// </summary>
         /// <remarks>
         /// Name / Bezeichnung des Betriebes – Teil 2, Länge 30, Pflichtangabe unter Bedingungen
         /// </remarks>
-        public string NAME2 { get; set; }
+        public string NAMEBB2 { get; set; }
 
         /// <summary>
-        /// Holt oder setzt den dritten Teil des Namens des Betriebes
+        /// Holt oder setzt den dritten Teil des Namens des Beschäftigungsbetriebes
         /// </summary>
         /// <remarks>
         /// Name / Bezeichnung des Betriebes – Teil 3, Länge 30, Pflichtangabe unter Bedingungen
         /// </remarks>
-        public string NAME3 { get; set; }
+        public string NAMEBB3 { get; set; }
 
         /// <summary>
-        /// Holt oder setzt die zustellbezogene Postleitzahl
+        /// Holt oder setzt die inländische Postleitzahl des Beschäftigungsbetriebs
         /// </summary>
         /// <remarks>
         /// Postleitzahl(zustellbezogen), Länge 10, Mussangabe
         /// </remarks>
-        public string PLZZU { get; set; }
+        public string PLZBB { get; set; }
 
         /// <summary>
-        /// Holt oder setzt den Ort des Betriebes
+        /// Holt oder setzt den Ort des Beschäftigungsbetriebes
         /// </summary>
         /// <remarks>
         /// Ort des Betriebes, Länge 34, Mussangabe
         /// </remarks>
-        public string ORT { get; set; }
+        public string ORTBB { get; set; }
 
         /// <summary>
-        /// Holt oder setzt die Straße des Betriebes
+        /// Holt oder setzt die Straße des Beschäftigungsbetriebes
         /// </summary>
         /// <remarks>
         /// Straße des Betriebes, Länge 33, Pflichtangabe, soweit bekannt
         /// </remarks>
-        public string STR { get; set; }
+        public string STRBB { get; set; }
 
         /// <summary>
-        /// Holt oder setzt die Hausnummer des Betriebes
+        /// Holt oder setzt die Hausnummer des Beschäftigungsbetriebes
         /// </summary>
         /// <remarks>
         /// Hausnummer des Betriebes, Länge 9, Pflichtangabe, soweit bekannt
@@ -214,23 +218,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// das Feld Straße zu übernehmen. In solchen Fällen
         /// muss dann das Feld Hausnummer auf Grundstellung (Leerzeichen) stehen
         /// </remarks>
-        public string HNR { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt die postfachbezogene Postleitzahl
-        /// </summary>
-        /// <remarks>
-        /// Postleitzahl(postfachbezogen), Länge 10, Pflichtangabe, soweit bekannt
-        /// </remarks>
-        public string PLZPO { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt das Postfach des Betriebes
-        /// </summary>
-        /// <remarks>
-        /// Postfach des Betriebes, Länge 10, Pflichtangabe, soweit bekannt
-        /// </remarks>
-        public string POSTFACH { get; set; }
+        public string HNRBB { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Bestätigung/Einstellung der Betriebstätigkeit
@@ -238,24 +226,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Bestätigung über die Betriebstätigkeit bzw. Einstellung
         /// der Betriebstätigkeit (Mitteilung für Betriebseinstellungen bis Ende des lfd. Kalenderjahres möglich)
-        /// A = aktiver Betrieb
-        /// R = Betriebsaufgabe
+        /// A = aktiver oder wieder zu aktivierender Betrieb (nur im Verfahren „BTRKS“)
+        /// B = Vollständige Beendigung der Betriebstätigkeit des Beschäftigungsbetriebs
+        ///
+        /// Bei der Betriebsdatenpflege durch Arbeitgeber (VF = „BTRAG“) ist nur der Wert „B“ oder die Grundstellung (Leerzeichen) zulässig.
         /// </remarks>
-        public string RUHEND { get; set; }
-
-        /// <summary>
-        /// Holt oder setzt die Betriebsnummer der "meldenden Stelle"
-        /// </summary>
-        /// <remarks>
-        /// Betriebsnummer der „meldenden Stelle“, Länge 15, Pflichtangabe, soweit bekannt
-        /// Hinweis: Bei Unternehmen, die über mehrere Betriebsstätten
-        /// mit unterschiedlichen Betriebsnummern verfügen,
-        /// wird die Betriebsstätte, welche die Meldungen zur
-        /// Sozialversicherung erstattet, als „meldende Stelle“
-        /// bezeichnet. Dies ist somit kein externer Dienstleister
-        /// wie zum Beispiel ein Steuerberater
-        /// </remarks>
-        public string BBNRME { get; set; }
+        public string KENNZEND { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Geschlecht zur Anrede des Ansprechpartners
@@ -270,7 +246,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt den Namen des Ansprechpartners
         /// </summary>
         /// <remarks>
-        /// Name des Ansprechpartners, Länge 30, Pflichtangabe, soweit bekannt
+        /// Name des Ansprechpartners, Länge 30, Mussangabe
         /// </remarks>
         public string NAMEAP { get; set; }
 
@@ -278,7 +254,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt die Rufnummer des Ansprechpartners
         /// </summary>
         /// <remarks>
-        /// Rufnummer des Ansprechpartners, Länge 20, Pflichtangabe, soweit bekannt
+        /// Rufnummer des Ansprechpartners, Länge 20, Mussangabe
         /// </remarks>
         public string TELAP { get; set; }
 
@@ -313,17 +289,24 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// Holt oder setzt das dem Verursacher zur Verfügung stehende Feld
         /// </summary>
         /// <remarks>
-        /// Länge 20, Kannangabe
+        /// Länge 32, Kannangabe
         /// </remarks>
         public string DATENSATZID { get; set; }
 
         /// <summary>
-        /// Holt oder setzt die Betriebsnummer der für den Beschäftigten zuständigen Einzugsstelle oder der berufsständischen Versorgungseinrichtung
+        /// Änderung in den Namensfeldern
         /// </summary>
-        /// <remarks>
-        /// Betriebsnummer der für den Beschäftigten zuständigen Einzugsstelle oder der berufsständischen Versorgungseinrichtung, Länge 15, Pflichtangabe, soweit bekannt
-        /// </remarks>
-        public string BBNRKK { get; set; }
+        public bool KENNZNAME { get; set; }
+
+        /// <summary>
+        /// Änderung in den Anschriftenfeldern Beschäftigungsbetrieb
+        /// </summary>
+        public bool KENNZANSCHRIFT { get; set; }
+
+        /// <summary>
+        /// Änderung in den Ansprechpartnerdaten
+        /// </summary>
+        public bool KENNZANSPRECH { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Produkt-Identifier des geprüften Softwareproduktes
@@ -344,20 +327,20 @@ namespace SocialInsurance.Germany.Messages.Pocos
         public int? MODID { get; set; }
 
         /// <summary>
-        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein abweichende Korrespondenzanschrift vorhanden ist
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein abweichende Postanschrift vorhanden ist
         /// </summary>
         /// <remarks>
-        /// Datenbaustein DBKA, Länge 1, Mussangabe
+        /// Datenbaustein DBPA, Länge 1, Mussangabe
         /// Abweichende Korrespondenzanschrift vorhanden:
         /// N = Nein
         /// J = Ja
         /// Hinweis: Die Korrespondenzanschrift muss zum Unternehmen
         /// gehören. Sie gehört somit nicht zu einem Dienstleister wie zum Beispiel einem Steuerberater
         /// </remarks>
-        public bool MMKA
+        public bool MMPA
         {
-            get => _hatDbka ?? DBKA != null;
-            set => _hatDbka = value;
+            get => _hatDbpa ?? DBPA != null;
+            set => _hatDbpa = value;
         }
 
         /// <summary>
@@ -378,13 +361,13 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <summary>
         /// Holt oder setzt den Datenbaustein für Abweichende Korrespondenzanschrift
         /// </summary>
-        public DBKA DBKA
+        public DBPA DBPA
         {
-            get => ListeDBKA?.SingleOrDefault();
+            get => ListeDBPA?.SingleOrDefault();
             set
             {
-                ListeDBKA = ListeDBKA.Set(value);
-                _hatDbka = null;
+                ListeDBPA = ListeDBPA.Set(value);
+                _hatDbpa = null;
             }
         }
 
@@ -413,12 +396,12 @@ namespace SocialInsurance.Germany.Messages.Pocos
         {
             get
             {
-                foreach (var datenbaustein in ListExtensions.Enumerate(ListeDBKA, ListeDBTN, DBFE))
+                foreach (var datenbaustein in ListExtensions.Enumerate(ListeDBPA, ListeDBTN, DBFE))
                     yield return datenbaustein;
             }
         }
 
-        private IList<DBKA> ListeDBKA { get; set; }
+        private IList<DBPA> ListeDBPA { get; set; }
 
         private IList<DBTN> ListeDBTN { get; set; }
     }

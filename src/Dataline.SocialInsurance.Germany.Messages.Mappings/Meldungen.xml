@@ -9,6 +9,7 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSME-v04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBD-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBD-v02.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBD-v03.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKK-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSKK-v02.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSAE-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
@@ -94,8 +95,11 @@
     <record name="DSME" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSME04, Dataline.SocialInsurance.Germany.Messages.Pocos">
       <include template="DSME-v04"/>
     </record>
-    <record name="DSBD" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBD02, Dataline.SocialInsurance.Germany.Messages.Pocos">
+    <record name="DSBD-v02" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBD02, Dataline.SocialInsurance.Germany.Messages.Pocos">
       <include template="DSBD-v02"/>
+    </record>
+    <record name="DSBD-v03" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBD03, Dataline.SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSBD-v03"/>
     </record>
     <record name="NCSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
       <include template="NCSZ-v01"/>
@@ -105,6 +109,12 @@
   <stream name="dsbd-v02" format="fixedlength">
     <record name="DSBD" minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSBD02, Dataline.SocialInsurance.Germany.Messages.Pocos">
       <include template="DSBD-v02"/>
+    </record>
+  </stream>
+
+  <stream name="dsbd-v03" format="fixedlength">
+    <record name="DSBD" minOccurs="1" maxOccurs="1" class="SocialInsurance.Germany.Messages.Pocos.DSBD03, Dataline.SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSBD-v03"/>
     </record>
   </stream>
 
@@ -460,6 +470,9 @@
       </record>
       <record name="DSBD-v02" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSBD02, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSBD-v02"/>
+      </record>
+      <record name="DSBD-v03" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSBD03, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSBD-v03"/>
       </record>
       <record name="DSBE-v01" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSBE01, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSBE-v01"/>
