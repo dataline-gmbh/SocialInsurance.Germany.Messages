@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2015/06">
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBE-v04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <stream name="DSBE-v04" format="fixedlength">
+    <record name="DSBE" occurs="1+" class="SocialInsurance.Germany.Messages.Pocos.DSBE04, Dataline.SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSBE-v04"/>
+    </record>
+  </stream>
+</beanio>

@@ -18,6 +18,7 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBE-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBE-v0201.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBE-v03.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DSBE-v04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.NCSZ-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
 
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.UV.DSLN-v0101.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
@@ -350,6 +351,21 @@
     </record>
   </stream>
 
+  <stream name="dsbe-bvbei-v04" format="fixedlength">
+    <record order="1" name="VOSZ" occurs="1-2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos" template="VOSZ-v01" />
+    <group name="DSKO" order="2">
+      <record name="DSKO-v04" occurs="0-1" class="SocialInsurance.Germany.Messages.Pocos.DSKO04, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSKO-v04"/>
+      </record>
+    </group>
+    <record name="DSBE" order="3" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBE04, Dataline.SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSBE-v04"/>
+    </record>
+    <record name="NCSZ" order="4" occurs="1-2" class="SocialInsurance.Germany.Messages.Pocos.NCSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
+      <include template="NCSZ-v01"/>
+    </record>
+  </stream>
+
   <!-- Wird verwendet, damit man auf allgemeingültige Art und Weise an die VOSZ/DSKO/NCSZ-Datensätze kommen kann -->
   <stream name="envelope-request-generic" format="fixedlength" ignoreUnidentifiedRecords="true">
     <group name="VOSZ" order="1">
@@ -482,6 +498,9 @@
       </record>
       <record name="DSBE-v03" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSBE03, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSBE-v03"/>
+      </record>
+      <record name="DSBE-v04" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.DSBE04, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSBE-v04"/>
       </record>
       <record name="DSEU" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.BEA.DSEU, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSEU"/>
