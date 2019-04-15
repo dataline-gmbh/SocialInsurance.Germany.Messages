@@ -13,18 +13,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
+    <AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" Visible="false" />
     <None Include="..\..\packaging\Dataline.SocialInsurance.Germany.Messages.Pocos.targets" Link="build\native\Dataline.SocialInsurance.Germany.Messages.Pocos.targets">
       <PackagePath>build/native/</PackagePath>
       <Pack>true</Pack>
+      <Visible>false</Visible>
     </None>
     <None Include="..\..\packaging\_._" Link="lib\native\_._">
       <PackagePath>lib/native/</PackagePath>
       <Pack>true</Pack>
+      <Visible>false</Visible>
     </None>
     <None Include="..\..\*.md;..\..\dataline-64.png">
       <PackagePath>/</PackagePath>
       <Pack>true</Pack>
+      <Visible>false</Visible>
     </None>
   </ItemGroup>
 
