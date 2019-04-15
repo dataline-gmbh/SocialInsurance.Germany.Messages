@@ -1,0 +1,12 @@
+root = true
+
+[*.{xml,csproj,props,ruleset}]
+indent = space
+indent_width = 2
+insert_final_newline = true
+
+[*.cs]
+indent = space
+indent_width = 4
+insert_final_newline = true
+dotnet_sort_system_directives_first = true
