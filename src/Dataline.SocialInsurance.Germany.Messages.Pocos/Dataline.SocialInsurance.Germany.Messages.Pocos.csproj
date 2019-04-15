@@ -9,6 +9,7 @@
     <AssemblyName>Dataline.SocialInsurance.Germany.Messages.Pocos</AssemblyName>
     <PackageId>Dataline.SocialInsurance.Germany.Messages.Pocos</PackageId>
     <RootNamespace>SocialInsurance.Germany.Messages.Pocos</RootNamespace>
+    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)\Dataline.SocialInsurance.Germany.Messages.Pocos.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
   <ItemGroup>
