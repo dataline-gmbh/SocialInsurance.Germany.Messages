@@ -7,7 +7,6 @@
     <AssemblyName>Dataline.SocialInsurance.Germany.Messages.Tests</AssemblyName>
     <PackageId>Dataline.SocialInsurance.Germany.Messages.Tests</PackageId>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
-    <UserSecretsId>dataline-dev-sv-tests</UserSecretsId>
     <OutputType>Library</OutputType>
     <RootNamespace>SocialInsurance.Germany.Messages.Tests</RootNamespace>
     <IsPackable>false</IsPackable>
@@ -29,16 +28,10 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
-    <PackageReference Include="Dataline.ExtraStandard.Compression" Version="0.4.10" />
-    <PackageReference Include="Dataline.ExtraStandard.Encryption" Version="0.4.10" />
-    <PackageReference Include="Dataline.ExtraStandard.Extra14" Version="0.4.10" />
-    <PackageReference Include="Dataline.ExtraStandard.GkvKomServer" Version="0.4.10" />
-    <PackageReference Include="Dataline.ExtraStandard.GkvKomServer.Validation.Extra14" Version="0.4.10" />
     <PackageReference Include="Dguv.Kernpruefung.Uv-1.0" Version="1.0.10" />
     <PackageReference Include="Dsrv.Kernpruefung.Deuev-1.6" Version="1.6.1.13" />
     <PackageReference Include="Dsrv.Kernpruefung.Deuev-1.7" Version="1.7.0.13" />
     <PackageReference Include="Dsrv.Kernpruefung.Deuev-1.8" Version="1.8.0.13" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.0.0" />
     <PackageReference Include="xunit" Version="2.3.1" />
   </ItemGroup>
 
@@ -49,10 +42,6 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugType>none</DebugType>
   </PropertyGroup>
-
-  <ItemGroup>
-    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
-  </ItemGroup>
 
   <ItemGroup>
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
