@@ -12,8 +12,8 @@
     <field name="BEZFREISTVOM" length="8" required="false" format="yyyyMMdd" parseDefault="false" default="00000000" />
     <field name="BEZFREISTBIS" length="8" required="false" format="yyyyMMdd" parseDefault="false" default="00000000" />
     <field name="BEZFREISTJAHR" length="2" required="true" format="00" />
-    <field name="FREISTBRUTTO" length="8" required="true" />
-    <field name="FREISTNETTO" length="8" required="true" />
+    <field name="FREISTBRUTTO" length="8" required="true" format="D8" />
+    <field name="FREISTNETTO" length="8" required="true" format="D8" />
     <field name="FREISTEZ" length="1" required="true" typeHandler="jn" />
   </template>
 </beanio>

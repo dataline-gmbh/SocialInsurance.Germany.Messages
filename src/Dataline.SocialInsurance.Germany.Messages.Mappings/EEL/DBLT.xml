@@ -17,18 +17,18 @@
         typeHandler="DatumLaufend" />
     <field name="VORERBEGINN2" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
     <field name="VORERENDE2" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
-    <field name="AEBMZRMONAT" length="8" required="false" />
-    <field name="AEBMZRSTUEND" length="8" required="false" />
-    <field name="WOECHAZTARIF" length="5" required="false" />
+    <field name="AEBMZRMONAT" length="8" required="false" format="D8" />
+    <field name="AEBMZRSTUEND" length="8" required="false" format="D8" />
+    <field name="WOECHAZTARIF" length="5" required="false" format="D5" />
     <field name="TARIFVERTRAGVOM" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
     <field name="ANGABETARIFGEMEINSCHAFT" length="20" required="false" />
     <field name="MMTARIFVERTRAG" length="1" required="true" regex="[0-4]" />
     <field name="VERGUETGRUPPE" length="20" required="false" />
-    <field name="VWLMONATLICH" length="8" required="false" />
-    <field name="EZTARIF" length="8" required="false" />
-    <field name="VWL" length="6" required="false" />
-    <field name="BRUTTOSB" length="8" required="false" />
-    <field name="NETTOSB" length="8" required="false" />
+    <field name="VWLMONATLICH" length="8" required="false" format="D8" />
+    <field name="EZTARIF" length="8" required="false" format="D8" />
+    <field name="VWL" length="6" required="false" format="D6" />
+    <field name="BRUTTOSB" length="8" required="false" format="D8" />
+    <field name="NETTOSB" length="8" required="false" format="D8" />
     <field name="MMVERZICHTBEITRAGSFREI" length="1" required="false" typeHandler="jn" />
     <field name="AEGLEITZONE" length="1" required="false" typeHandler="jn" />
     <field name="MMVERZICHTBEITRGLEITZONE" length="1" required="false" typeHandler="jn" />

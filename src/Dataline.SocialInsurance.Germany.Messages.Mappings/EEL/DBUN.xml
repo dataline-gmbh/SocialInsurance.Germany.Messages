@@ -5,10 +5,10 @@
     <field name="UNFALLAZ" length="20" required="false" />
     <field name="VTAG" length="8" required="false" format="yyyyMMdd" />
     <field name="IKUV" length="15" required="false" />
-    <field name="ZUSCHL1" length="8" required="false" />
-    <field name="ZUSCHL2" length="8" required="false" />
-    <field name="ZUSCHL3" length="8" required="false" />
-    <field name="FREISTZUSCHL" length="8" required="false" />
-    <field name="EZUV" length="8" required="false" />
+    <field name="ZUSCHL1" length="8" required="false" format="D8" />
+    <field name="ZUSCHL2" length="8" required="false" format="D8" />
+    <field name="ZUSCHL3" length="8" required="false" format="D8" />
+    <field name="FREISTZUSCHL" length="8" required="false" format="D8" />
+    <field name="EZUV" length="8" required="false" format="D8" />
   </template>
 </beanio>

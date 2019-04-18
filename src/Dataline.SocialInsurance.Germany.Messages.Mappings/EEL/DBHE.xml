@@ -3,7 +3,7 @@
   <template name="DBHE">
     <field name="KE" literal="DBHE" length="4" required="true" />
     <field name="ZAHLBEGINN" length="8" required="true" format="yyyyMMdd" />
-    <field name="EELBRUTTO" length="8" required="false" />
-    <field name="EELNETTO" length="8" required="true" />
+    <field name="EELBRUTTO" length="8" required="false" format="D8" />
+    <field name="EELNETTO" length="8" required="true" format="D8" />
   </template>
 </beanio>

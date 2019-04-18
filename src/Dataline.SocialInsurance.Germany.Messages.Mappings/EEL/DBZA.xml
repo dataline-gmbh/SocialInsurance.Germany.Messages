@@ -2,14 +2,14 @@
 <beanio xmlns="http://www.beanio.org/2016/07">
   <template name="DBZA">
     <field name="KE" literal="DBZA" length="4" required="true" />
-    <field name="ANZAHLSTD" length="5" required="true" />
-    <field name="REGAZ" length="4" required="true" />
-    <field name="MAZR1" length="5" required="true" />
+    <field name="ANZAHLSTD" length="5" required="true" format="D5" />
+    <field name="REGAZ" length="4" required="true" format="D4" />
+    <field name="MAZR1" length="5" required="true" format="D5" />
     <field name="AZBEGINN2" length="8" required="true" format="yyyyMMdd" default="00000000" parseDefault="false" />
-    <field name="AZBEGINN2" length="8" required="true" format="yyyyMMdd" default="00000000" parseDefault="false" />
-    <field name="MAZR2" length="5" required="true" />
+    <field name="AZENDE2" length="8" required="true" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="MAZR2" length="5" required="true" format="D5" />
     <field name="AZBEGINN3" length="8" required="true" format="yyyyMMdd" default="00000000" parseDefault="false" />
-    <field name="AZBEGINN3" length="8" required="true" format="yyyyMMdd" default="00000000" parseDefault="false" />
-    <field name="MAZR3" length="5" required="true" />
+    <field name="AZENDE3" length="8" required="true" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="MAZR3" length="5" required="true" format="D5" />
   </template>
 </beanio>

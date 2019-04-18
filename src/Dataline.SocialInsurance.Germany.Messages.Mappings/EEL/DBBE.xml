@@ -3,7 +3,7 @@
   <template name="DBBE">
     <field name="KE" literal="DBBE" length="4" required="true" />
     <field name="ZAHLBEGINN" length="8" required="true" format="yyyyMMdd" />
-    <field name="BEITRPFLBRUTTO" length="8" required="true" />
-    <field name="BEITRPFLNETTO" length="8" required="true" />
+    <field name="BEITRPFLBRUTTO" length="8" required="true" format="D8" />
+    <field name="BEITRPFLNETTO" length="8" required="true" format="D8" />
   </template>
 </beanio>

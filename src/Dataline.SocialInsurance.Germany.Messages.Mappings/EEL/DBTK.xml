@@ -2,11 +2,11 @@
 <beanio xmlns="http://www.beanio.org/2016/07">
   <template name="DBTK">
     <field name="KE" literal="DBTK" length="4" required="true" />
-    <field name="BRUTTOSOLL" length="8" required="true" />
-    <field name="NETTOSOLL" length="8" required="false" />
-    <field name="TRANSFERKUG" length="8" required="true" />
-    <field name="BRUTTOIST" length="8" required="false" />
-    <field name="NETTOIST" length="8" required="false" />
-    <field name="AUFSTOCKUNGSBETRAG" length="8" required="false" />
+    <field name="BRUTTOSOLL" length="8" required="true" format="D8" />
+    <field name="NETTOSOLL" length="8" required="false" format="D8" />
+    <field name="TRANSFERKUG" length="8" required="true" format="D8" />
+    <field name="BRUTTOIST" length="8" required="false" format="D8" />
+    <field name="NETTOIST" length="8" required="false" format="D8" />
+    <field name="AUFSTOCKUNGSBETRAG" length="8" required="false" format="D8" />
   </template>
 </beanio>

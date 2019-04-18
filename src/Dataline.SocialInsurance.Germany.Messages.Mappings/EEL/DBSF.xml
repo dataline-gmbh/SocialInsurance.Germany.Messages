@@ -7,8 +7,8 @@
     <field name="UANSPRUCH" length="2" required="true" format="00" type="int" />
     <field name="VERLAENGVON" length="8" required="false" default="00000000" parseDefault="false" format="yyyyMMdd" />
     <field name="VERLAENGBIS" length="8" required="false" default="00000000" parseDefault="false" format="yyyyMMdd" />
-    <field name="KZDHEU" length="4" required="true" format="0000" type="int" />
-    <field name="DHEU" length="8" required="true" format="00000000" type="int" />
-    <field name="HEUNETTO" length="8" required="true" format="00000000" type="int" />
+    <field name="KZDHEU" length="4" required="true" format="D4" type="int" />
+    <field name="DHEU" length="8" required="true" format="D8" type="int" />
+    <field name="HEUNETTO" length="8" required="true" format="D8" type="int" />
   </template>
 </beanio>
