@@ -14,10 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="**\*.xml;**\*.dat;Deuev\DSKK02\*;**\ebna*.a*;**\ebea*.a*;**\eaag*.a*;Generic\Data\*;KSK\*.txt;BEA\*.txt" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
-    <None Update="project.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <EmbeddedResource Include="**\*.xml;**\*.dat;Deuev\DSKK02\*;**\ebna*.a*;**\ebea*.a*;**\eaag*.a*;Generic\Data\*;KSK\*.txt;BEA\*.txt;EEL\TEE*" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
   </ItemGroup>
 
   <ItemGroup>
