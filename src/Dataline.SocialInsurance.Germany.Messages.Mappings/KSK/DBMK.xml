@@ -4,11 +4,11 @@
     <field name="KE" length="4" literal="DBMK" required="true"/>
     <field name="KENNZST" length="1" required="true" typeHandler="jn" />
     <field name="RESERVE" length="1" required="false" ignore="true" />
-    <field name="VOSJAEK" length="11" required="true" type="long" />
-    <field name="BERBT" length="11" required="true" type="long" />
+    <field name="VOSJAEK" length="11" required="true" type="long" format="D11" />
+    <field name="BERBT" length="11" required="true" type="long" format="D11" />
     <field name="ZRBG" length="8" required="true" format="yyyyMMdd"/>
     <field name="ZREN" length="8" required="true" format="yyyyMMdd"/>
-    <field name="SVTG" length="2" required="true" type="int" />
+    <field name="SVTG" length="2" required="true" type="int" format="00" />
     <field name="KZRV" length="1" required="true" typeHandler="jn" />
     <field name="KENNZRK" length="1" required="true" regex="[WO]" />
     <field name="KZMA" length="1" required="true" typeHandler="jn" />

@@ -2,6 +2,7 @@
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using NodaTime;
@@ -53,7 +54,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.KSK
         /// <summary>
         /// Zeitpunkt der Erstellung des Datensatzes.
         /// </summary>
-        public LocalDate ED { get; set; }
+        public DateTime ED { get; set; }
 
         /// <summary>
         /// Kennzeichnung für fehlerhafte Datensätze

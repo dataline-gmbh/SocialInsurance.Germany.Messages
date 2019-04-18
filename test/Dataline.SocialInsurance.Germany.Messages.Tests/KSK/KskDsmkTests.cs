@@ -18,6 +18,7 @@ namespace SocialInsurance.Germany.Messages.Tests.KSK
         {
             var ds = GetDatensaetze(filename);
             AssertDatensatzCollection<DSMK>(ds);
+            TestRoundtripFile(filename, ds);
         }
     }
 }
