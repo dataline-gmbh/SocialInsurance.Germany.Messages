@@ -3,7 +3,7 @@
   <template name="DBSA_BEA">
     <field name="KE" length="4" literal="DBSA" required="true"/>
     <field name="BYGRA" length="4" required="true" />
-    <field name="PERSGRA" length="3" required="false" />
+    <field name="PERSGRA" length="3" required="false" format="D3" />
     <field name="KNAPPRV" length="1" required="false" typeHandler="jn" />
     <field name="KNAPPRVBEG" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
     <field name="TTSC" length="9" required="true" />

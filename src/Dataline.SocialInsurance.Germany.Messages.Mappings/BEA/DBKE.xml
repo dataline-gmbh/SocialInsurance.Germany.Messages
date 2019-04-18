@@ -28,7 +28,7 @@
     <field name="SAWPRSC" length="3" required="false" />
     <field name="AGKUEAM" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
     <field name="AGKUEZU" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
-    <field name="KF" length="3" required="false" />
+    <field name="KF" length="3" required="false" format="D3" />
     <field name="KFZE" length="1" required="false" regex="[0-4]" />
     <field name="KFBZ" length="1" required="false" regex="[0-7]" />
     <field name="KA" length="1" required="false" typeHandler="jn" />
@@ -37,17 +37,17 @@
     <field name="OKGL" length="1" required="false" typeHandler="jn" />
     <field name="OKGLFG" length="1" required="false" typeHandler="jn" />
     <field name="AVENLZ" length="1" required="true" regex="[JNU]" />
-    <field name="AVENLZG" length="2" required="false" regex="0[0-4]" />
+    <field name="AVENLZG" length="2" required="false" regex="0[0-4]" format="00" />
     <field name="ABF" length="1" required="true" regex="[JNU]" />
-    <field name="ABFHOE" length="10" required="false" />
-    <field name="BETZU" length="2" required="false" />
+    <field name="ABFHOE" length="10" required="false" format="D10" />
+    <field name="BETZU" length="2" required="false" format="00" />
     <field name="BVEGEN" length="1" required="true" regex="[JNU]" />
     <field name="BVEGENB" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
     <field name="AVENUAG" length="1" required="true" regex="[JNU]" />
     <field name="BVENUR" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
     <field name="AVENVL" length="1" required="true" regex="[JNU]" />
     <field name="AVENVGB" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
-    <field name="AVENVG" length="5" required="false" />
+    <field name="AVENVG" length="5" required="false" format="D5" />
     <field name="ABFMONAT" length="1" required="false" typeHandler="jn" />
     <field name="ABFGEZ" length="1" required="false" typeHandler="jn" />
     <field name="BFHG" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />

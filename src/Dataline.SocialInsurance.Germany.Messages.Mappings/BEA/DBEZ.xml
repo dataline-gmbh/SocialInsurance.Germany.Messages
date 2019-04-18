@@ -2,10 +2,10 @@
 <beanio xmlns="http://www.beanio.org/2016/07">
   <template name="DBEZ_BEA">
     <field name="KE" length="4" literal="DBEZ" required="true"/>
-    <field name="AZWOECH" length="4" required="true" />
-    <field name="AZAEGR" length="2" required="false" />
+    <field name="AZWOECH" length="4" required="true" format="D4" />
+    <field name="AZAEGR" length="2" required="false" format="00" />
     <field name="AZAEBEG" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
-    <field name="AZDUWOECH" length="4" required="false" />
-    <field name="ATDUWOE" length="3" required="false" />
+    <field name="AZDUWOECH" length="4" required="false" format="D4" />
+    <field name="ATDUWOE" length="3" required="false" format="D3" />
   </template>
 </beanio>

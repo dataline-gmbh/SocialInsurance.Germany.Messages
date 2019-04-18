@@ -31,13 +31,13 @@
     <field name="MMAN" length="1" required="true" typeHandler="jn" />
     <field name="MMAG" length="1" required="true" typeHandler="jn" />
     <field name="MMAB" length="1" required="true" typeHandler="jn" />
-    <field name="MMSE" length="2" required="true" />
+    <field name="MMSE" length="2" required="true" format="00" />
     <field name="RESERVE2" length="2" required="false" ignore="true" />
     <field name="MMSA" length="1" required="true" typeHandler="jn" />
-    <field name="MMSB" length="2" required="true" />
-    <field name="MMAZ" length="2" required="true" />
-    <field name="MMEN" length="2" required="true" />
-    <field name="MMFZ" length="2" required="true" />
+    <field name="MMSB" length="2" required="true" format="00" />
+    <field name="MMAZ" length="2" required="true" format="00" />
+    <field name="MMEN" length="2" required="true" format="00" />
+    <field name="MMFZ" length="2" required="true" format="00" />
     <field name="MMHA" length="1" required="true" typeHandler="jn" />
     <field name="MMKE" length="1" required="true" typeHandler="jn" />
     <segment name="ListeDBNA" class="SocialInsurance.Germany.Messages.Pocos.DBNA, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMNA" collection="list">

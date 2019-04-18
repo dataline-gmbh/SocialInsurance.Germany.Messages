@@ -5,8 +5,8 @@
     <field name="MONATBEGEU" length="8" required="true" format="yyyyMMdd"/>
     <field name="MONATENDEU" length="8" required="true" format="yyyyMMdd"/>
     <field name="RESERVE" length="9" required="false" ignore="true" />
-    <field name="STBREGLFEU" length="10" required="false" />
-    <field name="STBREGSOEU" length="10" required="false" />
+    <field name="STBREGLFEU" length="10" required="false" format="D10" />
+    <field name="STBREGSOEU" length="10" required="false" format="D10" />
     <field name="RESERVE2" length="22" required="false" ignore="true" />
   </template>
 </beanio>

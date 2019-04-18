@@ -2,6 +2,7 @@
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using NodaTime;
@@ -43,7 +44,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.BEA
         /// <summary>
         /// Erstellungsdatum
         /// </summary>
-        public LocalDate ED { get; set; }
+        public DateTime ED { get; set; }
 
         /// <summary>
         /// Fehlerkennzeichen
@@ -55,7 +56,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.BEA
         }
 
         /// <summary>
-        /// Anzahl Fehlre
+        /// Anzahl Fehler
         /// </summary>
         public int FEAN
         {

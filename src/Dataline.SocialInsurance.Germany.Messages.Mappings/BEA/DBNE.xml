@@ -6,13 +6,13 @@
     <field name="MONATBEG" length="8" required="true" format="yyyyMMdd"/>
     <field name="MONATEND" length="8" required="true" format="yyyyMMdd"/>
     <field name="RESERVE" length="9" required="false" ignore="true" />
-    <field name="SVBREGLF" length="10" required="false" />
-    <field name="SVBREGE" length="10" required="false" />
+    <field name="SVBREGLF" length="10" required="false" format="D10" />
+    <field name="SVBREGE" length="10" required="false" format="D10" />
     <field name="SVBREGEBEG" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
     <field name="SVBREGEEND" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
-    <field name="NETTOLFD" length="10" required="false" />
-    <field name="NETTOEINMAL" length="10" required="false" />
-    <field name="AZWOECH" length="4" required="true" />
+    <field name="NETTOLFD" length="10" required="false" format="D10" />
+    <field name="NETTOEINMAL" length="10" required="false" format="D10" />
+    <field name="AZWOECH" length="4" required="true" format="D4" />
     <field name="TTAUFENT" length="1" required="true" typeHandler="01" />
     <field name="BVUNFORT" length="1" required="true" typeHandler="jn" />
     <field name="BVUNFORTU" length="1" required="true" typeHandler="jn" />

@@ -2,11 +2,11 @@
 <beanio xmlns="http://www.beanio.org/2016/07">
   <template name="DBNB_BEA">
     <field name="KE" length="4" literal="DBNB" required="true"/>
-    <field name="STU1KW" length="4" required="true" />
-    <field name="STU2KW" length="4" required="true" />
-    <field name="STU3KW" length="4" required="true" />
-    <field name="STU4KW" length="4" required="true" />
-    <field name="STU5KW" length="4" required="true" />
-    <field name="STU6KW" length="4" required="true" />
+    <field name="STU1KW" length="4" required="true" format="D4" />
+    <field name="STU2KW" length="4" required="true" format="D4" />
+    <field name="STU3KW" length="4" required="true" format="D4" />
+    <field name="STU4KW" length="4" required="true" format="D4" />
+    <field name="STU5KW" length="4" required="true" format="D4" />
+    <field name="STU6KW" length="4" required="true" format="D4" />
   </template>
 </beanio>

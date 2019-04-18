@@ -2,6 +2,6 @@
 <beanio xmlns="http://www.beanio.org/2016/07">
   <template name="DBHA_BEA">
     <field name="KE" length="4" literal="DBHA" required="true"/>
-    <field name="URLTAGE" length="3" required="true" />
+    <field name="URLTAGE" length="3" required="true" format="D3" />
   </template>
 </beanio>

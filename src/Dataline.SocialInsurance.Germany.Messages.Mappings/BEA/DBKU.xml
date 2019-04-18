@@ -14,17 +14,18 @@
     <field name="AVKUESCHUKL" length="1" required="false" regex="[JNU]" />
     <field name="AVKUEAL" length="1" required="false" typeHandler="jn" />
     <field name="AVENLZ" length="1" required="true" regex="[JNU]" />
-    <field name="AVENLZG" length="2" required="false" regex="0[0-4]" />
+    <field name="AVENLZG" length="2" required="false" regex="0[0-4]" format="00" />
     <field name="ABF" length="1" required="true" regex="[JNU]" />
-    <field name="ABFHOE" length="10" required="false" />
-    <field name="BETZU" length="2" required="false" />
+    <field name="ABFHOE" length="10" required="false" format="D10" />
+    <field name="BETZU" length="2" required="false" format="D2" />
     <field name="BVEGEN" length="1" required="true" regex="[JNU]" />
     <field name="BVEGENB" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
     <field name="AVENUAG" length="1" required="true" regex="[JNU]" />
-    <field name="URLTAGEAV" length="3" required="false" />
+    <field name="URLTAGEAV" length="3" required="false" format="D3" />
     <field name="AVENUR" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="UAGHOE" length="10" required="false" format="D10" />
     <field name="AVVERZ" length="1" required="false" regex="[0-7]" />
-    <field name="KF" length="3" required="false" />
+    <field name="KF" length="3" required="false" format="D3" />
     <field name="KFZE" length="1" required="false" regex="[0-4]" />
     <field name="KFBZ" length="1" required="false" regex="[0-7]" />
   </template>

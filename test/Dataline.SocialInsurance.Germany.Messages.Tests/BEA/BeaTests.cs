@@ -37,10 +37,11 @@ namespace SocialInsurance.Germany.Messages.Tests.BEA
         }
 
         private void ReadFileAndAssert<TDatensatz>(string filename)
-            where TDatensatz : class, IDatensatz
+            where TDatensatz : BasisDatensatzBEA, new()
         {
             var ds = GetDatensaetze(filename);
             AssertDatensatzCollection<TDatensatz>(ds);
+            TestRoundtripFile(filename, ds);
         }
     }
 }
