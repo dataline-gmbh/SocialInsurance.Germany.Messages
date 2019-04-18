@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using BeanIO;
 using SocialInsurance.Germany.Messages.Pocos;
 using Xunit;
@@ -20,6 +21,9 @@ namespace SocialInsurance.Germany.Messages.Tests
 
         protected ITestOutputHelper TestOutput { get; }
 
+        /// <summary>
+        /// Deserialisiert eine Meldung in ihre Datensätze.
+        /// </summary>
         protected IReadOnlyCollection<IDatensatz> GetDatensaetze(string filename)
         {
             using (var reader = StreamFactory.CreateReader("super-message", LoadData(filename)))
@@ -71,6 +75,9 @@ namespace SocialInsurance.Germany.Messages.Tests
             }
         }
 
+        /// <summary>
+        /// Überprüft, ob alle Datensätze der Meldung vom korrekten Typ sind.
+        /// </summary>
         protected void AssertDatensatzCollection<TDatensatz>(IReadOnlyCollection<IDatensatz> datensaetze)
             where TDatensatz : class, IDatensatz
         {
@@ -81,6 +88,39 @@ namespace SocialInsurance.Germany.Messages.Tests
                 o => Assert.IsType<TDatensatz>(o),
                 o => Assert.IsType<NCSZ>(o)
             );
+        }
+
+        /// <summary>
+        /// Überprüft, ob die Meldung nach dem Deserialisieren und Serialisieren identisch zur Originalmeldung ist.
+        /// </summary>
+        protected void TestRoundtripFile(string filename, IReadOnlyCollection<IDatensatz> datensaetze)
+        {
+            using (var ms = new MemoryStream())
+            using (var sw = new StreamWriter(ms))
+            using (var writer = StreamFactory.CreateWriter("super-message", sw))
+            {
+                // Datensätze wieder serialisieren
+                foreach (var datensatz in datensaetze)
+                {
+                    writer.Write(datensatz);
+                }
+                writer.Flush();
+
+                // Serialisierten Datenstrom auslesen
+                ms.Position = 0;
+                using (var sr = new StreamReader(ms))
+                using (var srOriginal = LoadData(filename))
+                {
+                    bool CanReadLine(TextReader reader, out string line) => (line = reader.ReadLine()) != null;
+
+                    // Zeilenweise die Originalmeldung und die serialisierte Meldung vergleichen
+                    while (CanReadLine(sr, out string serialisedLine)
+                        && CanReadLine(srOriginal, out string originalLine))
+                    {
+                        Assert.Equal(originalLine, serialisedLine, ignoreLineEndingDifferences: true);
+                    }
+                }
+            }
         }
 
         private sealed class NullOutput : ITestOutputHelper

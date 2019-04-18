@@ -24,6 +24,7 @@ namespace SocialInsurance.Germany.Messages.Tests.EEL
         {
             var ds = GetDatensaetze(filename);
             AssertDatensatzCollection<DSLW09>(ds);
+            TestRoundtripFile(filename, ds);
         }
     }
 }
