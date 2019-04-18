@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBMU">
+    <field name="KE" literal="DBMU" length="4" required="true" />
+    <field name="SCHUTZFRBEGINN" length="8" required="true" format="yyyyMMdd" />
+    <field name="BVBEGINN" length="8" required="true" format="yyyyMMdd" />
+    <field name="LETZTTAG" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="ENDEBVAM" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="ENDEBVZUM" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="BVGEKUEND" length="2" required="true" regex="0[0-6]" />
+    <field name="WAEHREELNETTO" length="8" required="false" />
+    <field name="DATUMAEBIS"
+        length="8" required="false"
+        default="00000000" parseDefault="false"
+        typeHandler="DatumLaufend" />
+    <field name="FEHLZEIT" length="2" required="false" regex="(0[0-4])|99" />
+    <field name="AEUEBER" length="1" required="true" typeHandler="jn" />
+    <field name="AEFEST" length="1" required="true" typeHandler="jn" />
+
+    <field name="BEGINN1" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="ENDE1" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="BEZAZ1" length="5" required="false" />
+    <field name="MASTD1" length="5" required="false" />
+    <field name="AZUNENTSTD1" length="5" required="false" />
+    <field name="AZUNENTTAGE1" length="2" required="false" />
+    <field name="AZENTSCHSTD1" length="5" required="false" />
+    <field name="AZENTSCHTAGE1" length="2" required="false" />
+    <field name="NETTO1" length="8" required="false" />
+
+    <field name="BEGINN2" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="ENDE2" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="BEZAZ2" length="5" required="false" />
+    <field name="MASTD2" length="5" required="false" />
+    <field name="AZUNENTSTD2" length="5" required="false" />
+    <field name="AZUNENTTAGE2" length="2" required="false" />
+    <field name="AZENTSCHSTD2" length="5" required="false" />
+    <field name="AZENTSCHTAGE2" length="2" required="false" />
+    <field name="NETTO2" length="8" required="false" />
+
+    <field name="BEGINN3" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="ENDE3" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="BEZAZ3" length="5" required="false" />
+    <field name="MASTD3" length="5" required="false" />
+    <field name="AZUNENTSTD3" length="5" required="false" />
+    <field name="AZUNENTTAGE3" length="2" required="false" />
+    <field name="AZENTSCHSTD3" length="5" required="false" />
+    <field name="AZENTSCHTAGE3" length="2" required="false" />
+    <field name="NETTO3" length="8" required="false" />
+
+    <field name="AZWOECH" length="4" required="false" format="0000" />
+  </template>
+</beanio>

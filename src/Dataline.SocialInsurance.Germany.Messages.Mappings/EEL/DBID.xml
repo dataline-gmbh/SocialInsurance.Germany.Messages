@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBID">
+    <field name="KE" literal="DBID" length="4" required="true" />
+    <field name="AZSV" length="20" required="false" />
+    <field name="AZVU" length="20" required="false" />
+  </template>
+</beanio>

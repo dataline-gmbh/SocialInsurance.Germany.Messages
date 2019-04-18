@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBVO">
+    <field name="KE" literal="DBVO" length="4" required="true" />
+    <field name="GRUNDAV" length="1" required="true" regex="[12]" />
+    <field name="AUABAG" length="8" required="true" format="yyyyMMdd" />
+    <field name="AUABSV" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="KZAKAU" length="1" required="true" regex="[04]" />
+    <field name="ANZAHLAU" length="2" required="true" format="00" />
+    <segment name="AU" occursRef="ANZAHLAU" collection="list"
+    	class="SocialInsurance.Germany.Messages.Pocos.EEL.DBVO+DBVO_AU, Dataline.SocialInsurance.Germany.Messages.Pocos">
+    	<field name="BEGINNAU" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    	<field name="ENDEAU" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    	<field name="KZNACHWEIS" length="1" required="true" regex="[0124]" />
+    	<field name="TEILNACHWEISAUBEGINN" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    	<field name="TEILNACHWEISAUENDE" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    	<field name="KZAU" length="1" required="true" regex="[01235]" />
+    	<field name="TEILANRAUBEGINN" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    	<field name="TEILANRAUENDE" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    </segment>
+  </template>
+</beanio>

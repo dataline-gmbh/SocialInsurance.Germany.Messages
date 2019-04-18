@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBAL">
+    <field name="KE" literal="DBAL" length="4" required="true" />
+    <field name="DATUMAB" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="AEERSTTAG" length="1" required="true" typeHandler="jn" />
+    <field name="DATUMEZGBIS" length="8" required="true" format="yyyyMMdd" />
+    <field name="ENDEBVAM" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="ENDEBVZUM" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="GRUNDBEEND" length="2" format="00" type="int" required="false" />
+    <field name="PFLZUSCHLAG" length="1" required="true" typeHandler="jn" />
+    <field name="ARBZEITMOD" length="1" required="true" typeHandler="jn" />
+    <field name="MMKUG" length="1" required="true" regex="[0-3]" />
+    <field name="KUGBEGINN" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="KUGENDE" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="LAGBEGINN1" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="LAGENDE1" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="LAGBEGINN2" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="LAGENDE2" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+  </template>
+</beanio>

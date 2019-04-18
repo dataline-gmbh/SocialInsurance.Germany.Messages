@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBAW">
+    <field name="KE" literal="DBAW" length="4" required="true" />
+    <field name="TAGE1" length="2" format="00" type="int" required="true" />
+    <field name="TAGE2" length="2" format="00" type="int" required="true" />
+    <field name="TAGE3" length="2" format="00" type="int" required="true" />
+  </template>
+</beanio>

@@ -3,6 +3,9 @@
   <typeHandler name="jn" class="BeanIO.Types.BooleanCharacterTypeHandler, FubarDev.BeanIO">
     <property name="TrueValue" value="J"/>
   </typeHandler>
+  <typeHandler name="DatumLaufend"
+               class="SocialInsurance.Germany.Messages.Mappings.Types.DatumLaufendHandler, Dataline.SocialInsurance.Germany.Messages.Mappings"
+               format="fixedLength" />
   <typeHandler
     class="SocialInsurance.Germany.Messages.Mappings.Types.DBKSTypeHandler, Dataline.SocialInsurance.Germany.Messages.Mappings"
     format="fixedlength"

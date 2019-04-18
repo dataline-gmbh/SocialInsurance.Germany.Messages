@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBFR">
+    <field name="KE" literal="DBFR" length="4" required="true" />
+    <field name="ENDEBVZUM" length="8" required="false" format="yyyyMMdd" parseDefault="false" default="00000000" />
+    <field name="FREISTVOM" length="8" required="true" format="yyyyMMdd" />
+    <field name="FREISTBIS" length="8" required="true" format="yyyyMMdd" />
+    <field name="VAEERSTTAG" length="1" required="true" typeHandler="jn" />
+    <field name="TAGE" length="2" required="true" format="00" />
+    <field name="KEINEFREIST" length="1" required="true" regex="[0-3]" />
+    <field name="BEGRZFREIST" length="2" required="true" format="00" />
+    <field name="BEZFREISTVOM" length="8" required="false" format="yyyyMMdd" parseDefault="false" default="00000000" />
+    <field name="BEZFREISTBIS" length="8" required="false" format="yyyyMMdd" parseDefault="false" default="00000000" />
+    <field name="BEZFREISTJAHR" length="2" required="true" format="00" />
+    <field name="FREISTBRUTTO" length="8" required="true" />
+    <field name="FREISTNETTO" length="8" required="true" />
+    <field name="FREISTEZ" length="1" required="true" typeHandler="jn" />
+  </template>
+</beanio>
