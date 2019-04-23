@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <beanio xmlns="http://www.beanio.org/2016/07">
   <template name="DBKSS">
-    <field name="BGR" length="2" required="true"/>
-    <field name="VA" length="2" required="true"/>
-    <field name="FGR" length="2" required="true"/>
-    <field name="PAT" length="2" required="false"/>
-    <field name="AQRVB" length="1" required="true"/>
+    <field name="BGR" length="2" required="true" format="00" />
+    <field name="VA" length="2" required="true" format="00" />
+    <field name="FGR" length="2" required="true" format="00" />
+    <field name="PAT" length="2" required="false" format="00" />
+    <field name="AQRVB" length="1" required="true" regex="[JN]" />
+    <field name="RESERVE1" length="36" required="false" ignore="true" />
     <field name="VKNR" length="2" required="true" type="int" format="00"/>
-    <field name="RESERVE" length="168" required="false" ignore="true"/>
+    <field name="RESERVE2" length="168" required="false" ignore="true"/>
   </template>
 </beanio>

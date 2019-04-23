@@ -36,7 +36,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Ende des Beschäftigungsverhältnisses im knappschaftlichen Betrieb, Länge 8, Mussangabe unter Bedingungen
         /// </remarks>
-        public DateTime ENDEVS { get; set; }
+        public DateTime? ENDEVS { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Abkehrgrund Knappschaft

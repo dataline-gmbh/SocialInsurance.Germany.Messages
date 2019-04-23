@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <beanio xmlns="http://www.beanio.org/2016/07">
   <template name="DBKSK">
-    <field name="AUSBKNV" length="1" required="false"/>
-    <field name="TTSCKNV" length="144" required="true"/>
-    <field name="ENDEVS" length="8" required="true"/>
+    <field name="AUSBKNV" length="1" required="false" regex="[1-7]" default=" " parseDefault="false" />
+    <field name="TTSCKNV" length="144" required="true" />
+    <field name="ENDEVS" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
     <field name="ABKGDKNV" length="2" required="true"/>
     <field name="BPUT" length="24" required="true"/>
     <field name="RESERVE" length="36" required="false" ignore="true"/>
