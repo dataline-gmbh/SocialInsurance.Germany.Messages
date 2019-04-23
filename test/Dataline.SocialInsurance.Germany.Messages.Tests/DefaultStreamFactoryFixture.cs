@@ -15,7 +15,8 @@ namespace SocialInsurance.Germany.Messages.Tests
             _factory = new Lazy<StreamFactory>(() =>
             {
                 var factory = StreamFactory.NewInstance();
-                factory.Load(Meldungen.LoadMeldungen());
+                using (var meldungStream = Meldungen.LoadMeldungen())
+                    factory.Load(meldungStream);
                 return factory;
             });
         }

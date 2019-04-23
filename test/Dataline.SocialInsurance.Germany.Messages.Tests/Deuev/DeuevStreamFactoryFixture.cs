@@ -15,7 +15,8 @@ namespace SocialInsurance.Germany.Messages.Tests.Deuev
             _factory = new Lazy<StreamFactory>(() =>
             {
                 var factory = StreamFactory.NewInstance();
-                factory.Load(Meldungen.LoadMeldungen());
+                using (var meldungStream = Meldungen.LoadMeldungen())
+                    factory.Load(meldungStream);
                 factory.Load(new Uri("resource:SocialInsurance.Germany.Messages.Tests.Deuev.DeuevMappings.xml, Dataline.SocialInsurance.Germany.Messages.Tests"));
                 return factory;
             });

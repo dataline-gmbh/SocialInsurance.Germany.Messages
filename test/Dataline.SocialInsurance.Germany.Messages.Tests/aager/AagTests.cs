@@ -81,7 +81,7 @@ namespace SocialInsurance.Germany.Messages.Tests.aager
         /// </returns>
         private AagMessageData GetMessageFromFile(string fileName, string name, bool isCustomerFile = false)
         {
-            var input = isCustomerFile ? File.ReadAllText(fileName, Encoding.Default) : LoadData(fileName).ReadToEnd();
+            var input = isCustomerFile ? File.ReadAllText(fileName, Encoding.Default) : ReadData(fileName);
             try
             {
                 return GetMessageFromString(input, name);

@@ -4,7 +4,7 @@
 
 using System;
 using System.IO;
-
+using System.Text;
 using BeanIO;
 using BeanIO.Types;
 
@@ -20,7 +20,8 @@ namespace SocialInsurance.Germany.Messages.Mappings.Types
         private static readonly Lazy<StreamFactory> _factory = new Lazy<StreamFactory>(() =>
         {
             var factory = StreamFactory.NewInstance();
-            factory.Load(Meldungen.LoadMeldungen());
+            using (var meldungen = Meldungen.LoadMeldungen())
+                factory.Load(meldungen);
             return factory;
         });
 
@@ -32,18 +33,24 @@ namespace SocialInsurance.Germany.Messages.Mappings.Types
         /// <inheritdoc/>
         public string Format(object value)
         {
-            var output = new StringWriter();
-            var writer = Factory.CreateWriter("DBKS", output);
-            writer.Write(value);
-            writer.Close();
-            return output.ToString();
+            string returnValue;
+            var sb = new StringBuilder(capacity: 220); // Ein DBKS hat derzeit eine Länge von 220 Zeichen.
+            using (var output = new StringWriter(sb))
+            {
+                using (var writer = Factory.CreateWriter("DBKS", output))
+                    writer.Write(value);
+                returnValue = output.ToString();
+            }
+            return returnValue;
         }
 
         /// <inheritdoc/>
         public object Parse(string text)
         {
-            var reader = Factory.CreateReader("DBKS", new StringReader(text));
-            return reader.Read();
+            object returnObject;
+            using (var reader = Factory.CreateReader("DBKS", new StringReader(text)))
+                returnObject = reader.Read();
+            return returnObject;
         }
     }
 }
