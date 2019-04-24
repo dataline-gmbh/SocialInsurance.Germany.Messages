@@ -2,8 +2,6 @@
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
-using System;
-
 using NodaTime;
 
 namespace SocialInsurance.Germany.Messages.Pocos
@@ -14,7 +12,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
     public class DBME04 : IDatenbaustein
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBME03"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DBME04"/> Klasse
         /// </summary>
         public DBME04()
         {

@@ -2,6 +2,7 @@
 <beanio xmlns="http://www.beanio.org/2016/07">
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBKSK.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBKSS.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
   <stream name="DBKS" format="fixedlength">
     <!--
     Wird zur Laufzeit vom Typ-Konverter für DBKS benutzt.

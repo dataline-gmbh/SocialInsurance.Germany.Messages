@@ -29,12 +29,11 @@ namespace SocialInsurance.Germany.Messages.Tests
             using (var reader = StreamFactory.CreateReader("super-message", LoadData(filename)))
             {
                 var dsList = new List<IDatensatz>(3);
-                object ds;
                 try
                 {
-                    while ((ds = reader.Read()) != null)
+                    while (reader.Read() is IDatensatz datensatz)
                     {
-                        dsList.Add(ds as IDatensatz);
+                        dsList.Add(datensatz);
                     }
                 }
                 catch (BeanReaderException beanReaderEx)

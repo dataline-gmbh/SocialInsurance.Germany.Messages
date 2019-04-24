@@ -2,7 +2,7 @@
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
-using System;
+using NodaTime;
 
 namespace SocialInsurance.Germany.Messages.Pocos
 {
@@ -36,7 +36,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         /// <remarks>
         /// Ende des Beschäftigungsverhältnisses im knappschaftlichen Betrieb, Länge 8, Mussangabe unter Bedingungen
         /// </remarks>
-        public DateTime? ENDEVS { get; set; }
+        public LocalDate? ENDEVS { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Abkehrgrund Knappschaft
