@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBBM-v05">
+    <field name="KE" length="4" literal="DBBM" required="true"/>
+    <field name="KENNZST" length="1" required="true" typeHandler="jn" />
+    <field name="AVSNR" length="12" required="false" regex="[0-9]{8}[A-Z][0-9]{3}" />
+    <field name="APERSGR" length="3" required="false" format="000" />
+    <field name="AGD" length="2" required="false" format="D2" />
+    <field name="ASASC" length="3" required="false" />
+    <field name="AKENNZMIDI" length="1" required="false" default=" " parseDefault="false" regex="[ 012]" />
+    <field name="AZRBG" length="8" required="false" format="yyyyMMdd" />
+    <field name="AZREN" length="8" required="false" format="yyyyMMdd" />
+    <field name="AEG" length="6" required="false" format="D6" />
+    <field name="ABYGR" length="4" required="false" />
+    <field name="ATTSC" length="9" required="false" />
+    <field name="AKENNZRK" length="1" required="false" regex="[WO]"/>
+    <field name="AKENNZMF" length="1" required="false" typeHandler="jn" default=" " parseDefault="false" />
+    <field name="AZRBGKV" length="8" required="false" format="yyyyMMdd" />
+    <field name="AZRENKV" length="8" required="false" format="yyyyMMdd" />
+    <field name="AEZEG" length="8" required="false" format="D8" />
+    <field name="ALFDKV" length="8" required="false" format="D8" />
+    <field name="ALFDRV" length="8" required="false" format="D8" />
+    <field name="ALFDAV" length="8" required="false" format="D8" />
+    <field name="AEGRB" length="6" required="false" format="D6" />
+    <field name="RESERVE" length="494" required="false" ignore="true" />
+  </template>
+</beanio>
