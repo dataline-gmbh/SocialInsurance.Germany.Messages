@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.IO;
-using BeanIO;
-using SocialInsurance.Germany.Messages.Pocos;
+﻿using SocialInsurance.Germany.Messages.Pocos;
 using SocialInsurance.Germany.Messages.Pocos.EEL;
 using Xunit;
 using Xunit.Abstractions;
@@ -20,10 +17,23 @@ namespace SocialInsurance.Germany.Messages.Tests.EEL
         [InlineData("TEEK0102_0161_122018")]
         [InlineData("TEEK0103_0166_042019")]
         [InlineData("TEEL_DSLW_AlleBausteine")]
-        public void EELRueckmeldung(string filename)
+        public void TestEELV09(string filename)
+        {
+            TestFile<DSLW09>(filename);
+        }
+
+        [Theory]
+        [InlineData("TEEL_DSLW_v10")]
+        public void TestEELV10(string filename)
+        {
+            TestFile<DSLW10>(filename);
+        }
+
+        private void TestFile<TDatensatz>(string filename)
+            where TDatensatz : class, IDatensatz
         {
             var ds = GetDatensaetze(filename);
-            AssertDatensatzCollection<DSLW09>(ds);
+            AssertDatensatzCollection<TDatensatz>(ds);
             TestRoundtripFile(filename, ds);
         }
     }

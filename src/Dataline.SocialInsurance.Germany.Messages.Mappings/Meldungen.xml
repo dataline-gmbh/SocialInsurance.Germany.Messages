@@ -52,6 +52,7 @@
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.BEA.DSNE.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
 
   <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EEL.DSLW-v09.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EEL.DSLW-v10.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
 
   <stream name="dsme-deuev-v02" format="fixedlength">
 		<record name="VOSZ" minOccurs="1" maxOccurs="2" class="SocialInsurance.Germany.Messages.Pocos.VOSZ, Dataline.SocialInsurance.Germany.Messages.Pocos">
@@ -516,6 +517,9 @@
       </record>
       <record name="DSLW-v09" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.EEL.DSLW09, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSLW-v09"/>
+      </record>
+      <record name="DSLW-v10" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.EEL.DSLW10, Dataline.SocialInsurance.Germany.Messages.Pocos">
+        <include template="DSLW-v10"/>
       </record>
       <record name="DSMK" occurs="0+" class="SocialInsurance.Germany.Messages.Pocos.KSK.DSMK, Dataline.SocialInsurance.Germany.Messages.Pocos">
         <include template="DSMK"/>

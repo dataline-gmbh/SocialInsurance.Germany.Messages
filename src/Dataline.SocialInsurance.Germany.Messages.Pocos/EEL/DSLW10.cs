@@ -1,4 +1,4 @@
-﻿// <copyright file="DSLW09.cs" company="DATALINE GmbH &amp; Co. KG">
+﻿// <copyright file="DSLW10.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
 // </copyright>
 
@@ -10,9 +10,9 @@ using NodaTime;
 namespace SocialInsurance.Germany.Messages.Pocos.EEL
 {
     /// <summary>
-    /// Datensatz Leistungswesen (EEL) -- Version 9
+    /// Datensatz Leistungswesen (EEL) -- Version 10
     /// </summary>
-    public class DSLW09 : IDatensatz
+    public class DSLW10 : IDatensatz
     {
         private FehlerKennzeichen? _fekz;
 
@@ -36,9 +36,9 @@ namespace SocialInsurance.Germany.Messages.Pocos.EEL
         private bool? _hatDbid;
 
         /// <summary>
-        /// Erstellt ein neues <see cref="DSLW09"/>-Objekt.
+        /// Erstellt ein neues <see cref="DSLW10"/>-Objekt.
         /// </summary>
-        public DSLW09()
+        public DSLW10()
         {
             KE = "DSLW";
             VF = "LEIST";
@@ -452,7 +452,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EEL
         /// <summary>
         /// Holt oder setzt den Baustein DBMU.
         /// </summary>
-        public DBMU DBMU
+        public DBMU10 DBMU
         {
             get => ListeDBMU?.SingleOrDefault();
             set
@@ -504,7 +504,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EEL
         /// <summary>
         /// Holt oder setzt den Baustein DBLT.
         /// </summary>
-        public DBLT DBLT
+        public DBLT10 DBLT
         {
             get => ListeDBLT?.SingleOrDefault();
             set
@@ -597,7 +597,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EEL
 
         private IList<DBUN> ListeDBUN { get; set; }
 
-        private IList<DBMU> ListeDBMU { get; set; }
+        private IList<DBMU10> ListeDBMU { get; set; }
 
         private IList<DBVO> ListeDBVO { get; set; }
 
@@ -605,7 +605,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EEL
 
         private IList<DBBE> ListeDBBE { get; set; }
 
-        private IList<DBLT> ListeDBLT { get; set; }
+        private IList<DBLT10> ListeDBLT { get; set; }
 
         private IList<DBSF> ListeDBSF { get; set; }
 

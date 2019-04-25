@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBLT-v10">
+    <field name="KE" literal="DBLT" length="4" required="true" />
+    <field name="BVSEIT" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="BVBIS" length="8" required="false" format="yyyyMMdd" default="00000000" parseDefault="false" />
+    <field name="BVALS" length="30" required="false" />
+    <field name="AUSBVERH" length="1" required="true" typeHandler="jn" />
+    <field name="VORER" length="1" required="false" typeHandler="jn" />
+    <field name="VWL" length="6" required="false" format="D6" />
+    <field name="BRUTTOSB" length="8" required="false" format="D8" />
+    <field name="NETTOSB" length="8" required="false" format="D8" />
+    <field name="MMVERZICHTBEITRAGSFREI" length="1" required="false" typeHandler="jn" />
+    <field name="AEUEBERGANGSBEREICH" length="1" required="false" typeHandler="jn" />
+    <field name="RECHTSKREIS" length="1" required="true" regex="[WO]" />
+  </template>
+</beanio>

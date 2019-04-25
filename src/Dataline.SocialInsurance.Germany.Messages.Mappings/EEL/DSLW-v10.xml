@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBNA.xml, Dataline.SocialInsurance.Germany.Messages.Mappings" />
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBAP-v01.xml, Dataline.SocialInsurance.Germany.Messages.Mappings" />
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EEL.DBAE.xml, Dataline.SocialInsurance.Germany.Messages.Mappings" />
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EEL.DBAL.xml, Dataline.SocialInsurance.Germany.Messages.Mappings" />
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EEL.DBAW.xml, Dataline.SocialInsurance.Germany.Messages.Mappings" />
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EEL.DBBE.xml, Dataline.SocialInsurance.Germany.Messages.Mappings" />
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EEL.DBEE.xml, Dataline.SocialInsurance.Germany.Messages.Mappings" />
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EEL.DBFR.xml, Dataline.SocialInsurance.Germany.Messages.Mappings" />
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EEL.DBHE.xml, Dataline.SocialInsurance.Germany.Messages.Mappings" />
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EEL.DBID.xml, Dataline.SocialInsurance.Germany.Messages.Mappings" />
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EEL.DBLT-v10.xml, Dataline.SocialInsurance.Germany.Messages.Mappings" />
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EEL.DBMU-v10.xml, Dataline.SocialInsurance.Germany.Messages.Mappings" />
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EEL.DBSF.xml, Dataline.SocialInsurance.Germany.Messages.Mappings" />
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EEL.DBTK.xml, Dataline.SocialInsurance.Germany.Messages.Mappings" />
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EEL.DBUN.xml, Dataline.SocialInsurance.Germany.Messages.Mappings" />
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EEL.DBVO.xml, Dataline.SocialInsurance.Germany.Messages.Mappings" />
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EEL.DBZA.xml, Dataline.SocialInsurance.Germany.Messages.Mappings" />
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, Dataline.SocialInsurance.Germany.Messages.Mappings" />
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <template name="DSLW-v10">
+    <field name="KE" literal="DSLW" length="4" rid="true" required="true" />
+    <field name="VF" literal="LEIST" length="5" rid="true" required="true" />
+    <field name="ABSN" length="15" required="true" />
+    <field name="EPNR" length="15" required="true" />
+    <field name="VERNR" length="2" literal="10" rid="true" type="int" required="true" />
+    <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
+    <field name="FEKZ" regex="[0-4]" length="1" required="true" />
+    <field name="FEAN" length="1" required="true" regex="[0-9]" />
+    <field name="VSNR" length="12" required="false" regex="[0-9]{8}[A-Z][0-9]{3}" />
+    <field name="GEBURTSDAT" length="8" required="true" format="yyyyMMdd" />
+    <field name="BBNRVU" length="15" required="true" />
+    <field name="DSID" length="32" required="false" />
+    <field name="PRODID" length="7" required="false" />
+    <field name="MODID" length="8" required="false" />
+    <field name="DATUMVERARBEITUNG" length="20" ignore="true" type="datetime" required="false" parseDefault="false" default="00000000000000000000" format="yyyyMMddHHmmssffffff" />
+    <field name="RESERVE" length="2" ignore="true" />
+    <field name="BBNRKK" length="15" required="true" />
+    <field name="BBNRAS" length="15" required="false" />
+    <field name="RUECKMELDUNGEEL" length="1" typeHandler="jn" required="true" />
+    <field name="ABGABEGRUND" length="2" format="00" required="true" type="int" />
+    <field name="KENNZSTORNO" length="1" required="true" typeHandler="jn" />
+    <field name="MMNA" length="1" typeHandler="jn" required="true" />
+    <field name="MMAN" length="1" typeHandler="jn" required="true" />
+    <field name="MMAL" length="1" typeHandler="jn" required="true" />
+    <field name="MMAE" length="1" typeHandler="jn" required="true" />
+    <field name="MMZA" length="1" typeHandler="jn" required="true" />
+    <field name="MMEE" length="1" typeHandler="jn" required="true" />
+    <field name="MMAW" length="1" typeHandler="jn" required="true" />
+    <field name="MMFR" length="1" typeHandler="jn" required="true" />
+    <field name="MMUN" length="1" typeHandler="jn" required="true" />
+    <field name="MMMU" length="1" typeHandler="jn" required="true" />
+    <field name="MMVO" length="1" typeHandler="jn" required="true" />
+    <field name="MMHE" length="1" typeHandler="jn" required="true" />
+    <field name="MMBE" length="1" typeHandler="jn" required="true" />
+    <field name="MMLT" length="1" typeHandler="jn" required="true" />
+    <field name="MMSF" length="1" typeHandler="jn" required="true" />
+    <field name="MMTK" length="1" typeHandler="jn" required="true" />
+    <field name="MMAP" length="1" typeHandler="jn" required="true" />
+    <field name="MMID" length="1" typeHandler="jn" required="true" />
+
+    <segment name="ListeDBNA" class="SocialInsurance.Germany.Messages.Pocos.DBNA, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMNA" collection="list">
+      <include template="DBNA" />
+    </segment>
+    <segment name="ListeDBAN" class="SocialInsurance.Germany.Messages.Pocos.DBAN, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMAN" collection="list">
+      <include template="DBAN" />
+    </segment>
+    <segment name="ListeDBAL" class="SocialInsurance.Germany.Messages.Pocos.EEL.DBAL, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMAL" collection="list">
+      <include template="DBAL" />
+    </segment>
+    <segment name="ListeDBAE" class="SocialInsurance.Germany.Messages.Pocos.EEL.DBAE, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMAE" collection="list">
+      <include template="DBAE" />
+    </segment>
+    <segment name="ListeDBZA" class="SocialInsurance.Germany.Messages.Pocos.EEL.DBZA, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMZA" collection="list">
+      <include template="DBZA" />
+    </segment>
+    <segment name="ListeDBEE" class="SocialInsurance.Germany.Messages.Pocos.EEL.DBEE, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMEE" collection="list">
+      <include template="DBEE" />
+    </segment>
+    <segment name="ListeDBAW" class="SocialInsurance.Germany.Messages.Pocos.EEL.DBAW, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMAW" collection="list">
+      <include template="DBAW" />
+    </segment>
+    <segment name="ListeDBFR" class="SocialInsurance.Germany.Messages.Pocos.EEL.DBFR, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMFR" collection="list">
+      <include template="DBFR" />
+    </segment>
+    <segment name="ListeDBUN" class="SocialInsurance.Germany.Messages.Pocos.EEL.DBUN, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMUN" collection="list">
+      <include template="DBUN" />
+    </segment>
+    <segment name="ListeDBMU" class="SocialInsurance.Germany.Messages.Pocos.EEL.DBMU10, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMMU" collection="list">
+      <include template="DBMU-v10" />
+    </segment>
+    <segment name="ListeDBVO" class="SocialInsurance.Germany.Messages.Pocos.EEL.DBVO, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMVO" collection="list">
+      <include template="DBVO" />
+    </segment>
+    <segment name="ListeDBHE" class="SocialInsurance.Germany.Messages.Pocos.EEL.DBHE, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMHE" collection="list">
+      <include template="DBHE" />
+    </segment>
+    <segment name="ListeDBBE" class="SocialInsurance.Germany.Messages.Pocos.EEL.DBBE, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMBE" collection="list">
+      <include template="DBBE" />
+    </segment>
+    <segment name="ListeDBLT" class="SocialInsurance.Germany.Messages.Pocos.EEL.DBLT10, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMLT" collection="list">
+      <include template="DBLT-v10" />
+    </segment>
+    <segment name="ListeDBSF" class="SocialInsurance.Germany.Messages.Pocos.EEL.DBSF, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMSF" collection="list">
+      <include template="DBSF" />
+    </segment>
+    <segment name="ListeDBTK" class="SocialInsurance.Germany.Messages.Pocos.EEL.DBTK, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMTK" collection="list">
+      <include template="DBTK" />
+    </segment>
+    <segment name="ListeDBAP" class="SocialInsurance.Germany.Messages.Pocos.DBAP01, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMAP" collection="list">
+      <include template="DBAP-v01" />
+    </segment>
+    <segment name="ListeDBID" class="SocialInsurance.Germany.Messages.Pocos.EEL.DBID, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="MMID" collection="list">
+      <include template="DBID" />
+    </segment>
+
+    <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
+      <include template="DBFE" />
+    </segment>
+  </template>
+</beanio>
