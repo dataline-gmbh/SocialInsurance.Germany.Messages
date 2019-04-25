@@ -20,7 +20,7 @@ namespace SocialInsurance.Germany.Messages.Pocos
         private bool? _hatDbtn;
 
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DSBD"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DSBD01"/> Klasse
         /// </summary>
         /// <remarks>
         /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt
