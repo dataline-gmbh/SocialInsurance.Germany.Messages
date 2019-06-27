@@ -121,6 +121,9 @@
     <record name="DSME" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSME05, Dataline.SocialInsurance.Germany.Messages.Pocos">
       <include template="DSME-v05"/>
     </record>
+    <record name="DSBD-v02" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBD02, Dataline.SocialInsurance.Germany.Messages.Pocos">
+      <include template="DSBD-v02"/>
+    </record>
     <record name="DSBD-v03" minOccurs="0" maxOccurs="unbounded" class="SocialInsurance.Germany.Messages.Pocos.DSBD03, Dataline.SocialInsurance.Germany.Messages.Pocos">
       <include template="DSBD-v03"/>
     </record>
