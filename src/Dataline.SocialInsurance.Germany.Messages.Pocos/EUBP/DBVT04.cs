@@ -377,10 +377,101 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
             }
         }
 
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein für 
+        /// </summary>
+        public DBVA04 DBVA
+        {
+            get => ListeDBVA?.SingleOrDefault();
+            set
+            {
+                ListeDBVA = ListeDBVA.Set(value);
+                _hatDbvatzao = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein für 
+        /// </summary>
+        public DBOS04 DBOS
+        {
+            get => ListeDBOS?.SingleOrDefault();
+            set
+            {
+                ListeDBOS = ListeDBOS.Set(value);
+                _hatDbvwosf = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein für 
+        /// </summary>
+        public DBOA04 DBOA
+        {
+            get => ListeDBOA?.SingleOrDefault();
+            set
+            {
+                ListeDBOA = ListeDBOA.Set(value);
+                _hatDbvwoao = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein für 
+        /// </summary>
+        public DBWS04 DBWS
+        {
+            get => ListeDBWS?.SingleOrDefault();
+            set
+            {
+                ListeDBWS = ListeDBWS.Set(value);
+                _hatDbvwwsf = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein für 
+        /// </summary>
+        public DBWA04 DBWA
+        {
+            get => ListeDBWA?.SingleOrDefault();
+            set
+            {
+                ListeDBWA = ListeDBWA.Set(value);
+                _hatDbvwwao = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein für 
+        /// </summary>
+        public DBS504 DBS5
+        {
+            get => ListeDBS5?.SingleOrDefault();
+            set
+            {
+                ListeDBS5 = ListeDBS5.Set(value);
+                _hatDbs5 = null;
+            }
+        }
+
         private IList<DBVK04> ListeDBVK { get; set; }
 
         private IList<DBVS04> ListeDBVS { get; set; }
 
         private IList<DBVF04> ListeDBVF { get; set; }
+
+        private IList<DBVA04> ListeDBVA { get; set; }
+
+        private IList<DBOS04> ListeDBOS { get; set; }
+
+        private IList<DBOA04> ListeDBOA { get; set; }
+
+        private IList<DBWS04> ListeDBWS { get; set; }
+
+        private IList<DBWA04> ListeDBWA { get; set; }
+
+        private IList<DBS504> ListeDBS5 { get; set; }
+
     }
 }

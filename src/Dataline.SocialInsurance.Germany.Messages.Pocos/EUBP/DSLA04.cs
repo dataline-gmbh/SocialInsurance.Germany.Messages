@@ -17,6 +17,16 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 
         private bool? _hatDbvt;
 
+        private bool? _hatDbkg;
+
+        private bool? _hatDbat;
+
+        private bool? _hatDbwo;
+
+        private bool? _hatDbww;
+
+        private bool? _hatDbs4;
+
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DSME04"/> Klasse
         /// </summary>
@@ -151,7 +161,811 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         }
 
         /// <summary>
-        /// Holt oder setzt den Datenbaustein für Meldesachverhalt
+        /// Anzahl der Lohnabrechnungen des Arbeitnehmers im Prüfzeitraum
+        /// </summary>
+        /// <remarks>
+        /// Länge 3, Mussangabe
+        /// </remarks>
+        public int ANABRECH { get; set; }
+
+        /// <summary>
+        /// Jahr der Abrechnung (FÜR-Periode) Jahr für das die Abrechnung erfolgt ist.
+        /// </summary>
+        /// <remarks>
+        /// Länge 4, Mussangabe
+        /// </remarks>
+        public int KJ { get; set; }
+
+        /// <summary>
+        /// Monat der Abrechnung (FÜR-Periode) Monat für den die Abrechnung erfolgt ist.
+        /// </summary>
+        /// <remarks>
+        /// Länge 2, Mussangabe
+        /// </remarks>
+        public int KM { get; set; }
+
+        /// <summary>
+        /// Jahr der Abrechnung (INPeriode) Jahr in dem die Abrechnung erfolgt ist.
+        /// </summary>
+        /// <remarks>
+        /// Länge 4, Mussangabe
+        /// </remarks>
+        public int KJIN { get; set; }
+
+        /// <summary>
+        /// Monat der Abrechnung (IN-Periode) Monat in dem die Abrechnung erfolgt ist.
+        /// </summary>
+        /// <remarks>
+        /// Länge 2, Mussangabe
+        /// </remarks>
+        public int KMIN { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Kennzeichen der Art der Abrechnung
+        /// </summary>
+        /// <remarks>
+        /// E - erstmalige Abrechnung
+        /// K - Korrekturabrechnung
+        /// </remarks>
+        public string KENNZART { get; set; }
+
+        /// <summary>
+        /// Abrechnungsdatum, Länge 20, jhjjmmtt (Datum) hhmmss (Uhrzeit) msmsms (Mikrosekunde) (Wert > 0 in letzten 6 Stellen optional), Mussangabe
+        /// </summary>
+        public DateTime ABRECHDAT { get; set; }
+
+        /// <summary>
+        /// Abrechnungsfolgenummer; Nur bei mehreren Erstabrechnungen für den gleichen Abrechnungsmonat von 1 an aufsteigend zu füllen, ansonsten Grundstellung
+        /// </summary>
+        /// <remarks>
+        /// Länge 1, Mussangabe
+        /// </remarks>
+        public int ABRNR { get; set; }
+
+        /// <summary>
+        /// Anwendung der Märzklausel?
+        /// </summary>
+        /// <remarks>
+        /// Länge 1, Mussangabe
+        /// J = Ja
+        /// N = Nein
+        /// </remarks>
+        public bool KENNZMK { get; set; }
+
+        /// <summary>
+        /// KV-Tage
+        /// </summary>
+        /// <remarks>
+        /// Länge 2, Mussangabe
+        /// </remarks>
+        public int KVTG { get; set; }
+
+        /// <summary>
+        /// RV-Tage
+        /// </summary>
+        /// <remarks>
+        /// Länge 2, Mussangabe
+        /// </remarks>
+        public int RVTG { get; set; }
+
+        /// <summary>
+        /// AV-Tage
+        /// </summary>
+        /// <remarks>
+        /// Länge 2, Mussangabe
+        /// </remarks>
+        public int AVTG { get; set; }
+
+        /// <summary>
+        /// PV-Tage
+        /// </summary>
+        /// <remarks>
+        /// Länge 2, Mussangabe
+        /// </remarks>
+        public int PVTG { get; set; }
+
+        /// <summary>
+        /// St-Tage
+        /// </summary>
+        /// <remarks>
+        /// Länge 2, Mussangabe
+        /// </remarks>
+        public int STTG { get; set; }
+
+        /// <summary>
+        /// Kennzeichen Beitragszuschlag Pflegeversicherung?
+        /// </summary>
+        /// <remarks>
+        /// Länge 1, Mussangabe
+        /// J = Ja
+        /// N = Nein
+        /// </remarks>
+        public bool KENNZPVZ { get; set; }
+
+        /// <summary>
+        /// Währung (EUR)
+        /// </summary>
+        public string WG { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt einheitliche Pauschsteuer für geringfügig Beschäftigte
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? PAUSCHSTEUERGB { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Gesamtbrutto
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Mussangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int GESBRUTTO { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt ungemindertes SV-Brutto
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? SVBRUTTO { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Steuerbrutto
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? STEUERBRUTTO { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt KV-Brutto
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? KVBRUTTO { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt RV-Brutto
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? RVBRUTTO { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt AV-Brutto
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? AVBRUTTO { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt PV-Brutto
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? PVBRUTTO { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt umlagepfl. Brutto
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? UMBRUTTO { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Insolvenzgeldumlagepflichtiges Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? INSOBRUTTO { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt UV-pflichtiges Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Mussangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int UVBRUTTO { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Lohnsteuer laufend
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? LOHNSTEUER { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Solidaritätszuschlag laufend
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? SOLI { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Kirchensteuer laufend
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? KIRCHENST { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt KV-Beitrag AG ohne KVZusatzbeitrag
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? KVBYAG { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt KV-Zusatzbeitrag AG aus laufend gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? KVBYAGZUSATZ { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt KV-Beitrag AN ohne KVZusatzbeitrag
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? KVBYAN { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt KV-Zusatzbeitrag AN aus laufend gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? KVBYANZUSATZ { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt RV-Beitrag AG zur gesetzlichen Rentenversicherung aus laufend gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? RVBYAG { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt RV-Beitrag AN zur gesetzlichen Rentenversicherung aus laufend gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? RVBYAN { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt AV-Beitrag AG zur gesetzlichen Rentenversicherung aus laufend gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? AVBYAG { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt AV-Beitrag AN zur gesetzlichen Rentenversicherung aus laufend gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? AVBYAN { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt PV-Beitrag AG zur gesetzlichen Rentenversicherung aus laufend gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? PVBYAG { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt PV-Beitrag AN zur gesetzlichen Rentenversicherung aus laufend gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Mussangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? PVBYAN { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt U1-Beitrag AG aus laufend gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? U1BYAG { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt U2-Beitrag AG aus laufend gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? U2BYAG { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt InsolvenzgeldumlageBeitrag AG aus laufend gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? INSOBYAG { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Beitrag AG zur berufsständischen Versorgung aus laufend gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? BVBYAG { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Beitrag AN zur berufsständischen Versorgung aus laufend gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? BVBYAN { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt ungemindertes SV-Brutto (monatlich) aus einmalig gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? SVBRUTTOEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Steuer-Brutto (monatlich) aus einmalig gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? STBRUTTOEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Lohnsteuer aus sonstigen Bezügen
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? LOHNSTEUEREGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Solidaritätszuschlag aus sonstigen Bezügen
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? SOLIEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Kirchensteuer aus sonstigen Bezügen
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? KIRCHENSTEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt KV-pflichtiges, einmalig gezahltes Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? KVBRUTTOEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt RV-pflichtiges, einmalig gezahltes Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? RVBRUTTOEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt AV-pflichtiges, einmalig gezahltes Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? AVBRUTTOEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt PV-pflichtiges, einmalig gezahltes Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? PVBRUTTOEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Insolvenzgeldumlagepflichtiges, einmalig gezahltes Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? INSOBRUTTOEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt KV-Beitrag AG ohne KVZusatzbeitrag aus einmalig gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? KVBYAGEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt KV-Zusatzbeitrag AG aus einmalig gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? KVBYAGEGAZUSATZ { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt KV-Beitrag AN ohne KVZusatzbeitrag aus einmalig gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? KVBYANEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt KV-Zusatzbeitrag AN aus einmalig gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? KVBYANEGAZUSATZ { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt RV-Beitrag AG aus einmalig gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? RVBYAGEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt RV-Beitrag AN aus einmalig gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? RVBYANEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt AV-Beitrag AG aus einmalig gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? AVBYAGEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt AV-Beitrag AN aus einmalig gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? AVBYANEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt PV-Beitrag AG aus einmalig gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? PVBYAGEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt PV-Beitrag AN aus einmalig gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? PVBYANEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Insolvenzgeldumlage-Beitrag aus einmalig gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? INSOBYAGEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Beitrag AG zur berufsständischen Versorgung aus einmalig gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? BVBYAGEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Beitrag AN zur berufsständischen Versorgung aus einmalig gezahltem Arbeitsentgelt
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? BVBYANEGA { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Hinzurechnungsbetrag
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Kannangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int? HINZUBTRG { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Resturlaub in Tagen (Vorjahr)
+        /// </summary>
+        /// <remarks>
+        /// Länge 5 mit 2 NK, Kannangabe
+        /// </remarks>
+        public int? URLRESTVJ { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt genommener Urlaub in Tagen (lfd. Jahr)
+        /// </summary>
+        /// <remarks>
+        /// Länge 5 mit 2 NK, Kannangabe
+        /// </remarks>
+        public int? URLGENOM { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Resturlaub in Tagen
+        /// </summary>
+        /// <remarks>
+        /// Länge 5 mit 2 NK, Kannangabe
+        /// </remarks>
+        public int? URLREST { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt unbezahlter Urlaub in Tagen
+        /// </summary>
+        /// <remarks>
+        /// Länge 5 mit 2 NK, Kannangabe
+        /// </remarks>
+        public int? URLUNBEZ { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Netto
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Mussangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int NETTO { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Auszahlungsbetrag
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Mussangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int ZAHLBTRG { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Anwesenheitstage (monatlich)
+        /// </summary>
+        /// <remarks>
+        /// Länge 2, Kannangabe
+        /// </remarks>
+        public int? ANWESEND { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Fehltage (monatlich, unbezahlte Tage)
+        /// </summary>
+        /// <remarks>
+        /// Länge 2, Kannangabe
+        /// </remarks>
+        public int? FEHL { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt bezahlte Stunden (monatlich)
+        /// </summary>
+        /// <remarks>
+        /// Länge 5 mit 2 NK, Kannangabe
+        /// </remarks>
+        public int? BEZSTD { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Krankheitstage (monatlich)
+        /// </summary>
+        /// <remarks>
+        /// Länge 2, Kannangabe
+        /// </remarks>
+        public int? AU { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Krankheitsstunden (monatlich)
+        /// </summary>
+        /// <remarks>
+        /// Länge 5 mit 2 NK, Kannangabe
+        /// </remarks>
+        public int? AUSTD { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Stunden mit Zeitlohn (monatlich)
+        /// </summary>
+        /// <remarks>
+        /// Länge 5 mit 2 NK, Kannangabe
+        /// </remarks>
+        public int? ZEITLOHNSTD { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Überstunden (monatlich)
+        /// </summary>
+        /// <remarks>
+        /// Länge 5 mit 2 NK, Mussangabe
+        /// </remarks>
+        public int UESTD { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt Summe der Steuern nach dem Doppelbesteuerungsabkommen
+        /// </summary>
+        /// <remarks>
+        /// Entgelt, Länge 10, Mussangabe
+        /// EURO/CENT mit zwei Nachkommastellen
+        /// </remarks>
+        public int DOPPELST { get; set; }
+
+        /// <summary>
+        /// Holt die Anzahl Lohnarten
+        /// </summary>
+        /// <remarks>
+        /// Länge 2, Mussangabe
+        /// </remarks>
+        public int ANLA
+        {
+            get { return DSLAext?.Count ?? 0; }
+
+            // ReSharper disable once UnusedMember.Local
+            // ReSharper disable once ValueParameterNotUsed
+            private set { }
+        }
+
+        /// <summary>
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Kurzarbeitergeld vorhanden ist
+        /// </summary>
+        /// <remarks>
+        /// Kurzarbeitergeld vorhanden, Länge 1, Mussangabe
+        /// N = keine Kurzarbeitergeld
+        /// J = Kurzarbeitergeld vorhanden
+        /// </remarks>
+        public bool MMKG
+        {
+            get => _hatDbkg ?? DBKG != null;
+            set => _hatDbkg = value;
+        }
+
+        /// <summary>
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Altersteilzeit vorhanden ist
+        /// </summary>
+        /// <remarks>
+        /// Altersteilzeit vorhanden, Länge 1, Mussangabe
+        /// N = keine Altersteilzeit
+        /// J = Altersteilzeit vorhanden
+        /// </remarks>
+        public bool MMAT
+        {
+            get => _hatDbat ?? DBAT != null;
+            set => _hatDbat = value;
+        }
+
+        /// <summary>
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Wertguthaben Ost vorhanden ist
+        /// </summary>
+        /// <remarks>
+        /// Wertguthaben Ost vorhanden, Länge 1, Mussangabe
+        /// N = keine Wertguthaben Ost
+        /// J = Wertguthaben Ost vorhanden
+        /// </remarks>
+        public bool MMWO
+        {
+            get => _hatDbwo ?? DBWO != null;
+            set => _hatDbwo = value;
+        }
+
+        /// <summary>
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Wertguthaben West vorhanden ist
+        /// </summary>
+        /// <remarks>
+        /// Wertguthaben West vorhanden, Länge 1, Mussangabe
+        /// N = keine Wertguthaben West
+        /// J = Wertguthaben West vorhanden
+        /// </remarks>
+        public bool MMWW
+        {
+            get => _hatDbww ?? DBWW != null;
+            set => _hatDbww = value;
+        }
+
+        /// <summary>
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Seemännische Besonderheiten vorhanden ist
+        /// </summary>
+        /// <remarks>
+        /// Seemännische Besonderheiten vorhanden, Länge 1, Mussangabe
+        /// N = keine Seemännische Besonderheiten
+        /// J = Seemännische Besonderheiten vorhanden
+        /// </remarks>
+        public bool MMS4
+        {
+            get => _hatDbs4 ?? DBS4 != null;
+            set => _hatDbs4 = value;
+        }
+
+        /// <summary>
+        /// Holt oder setzt 
         /// </summary>
         public DBVT04 DBVT
         {
@@ -162,6 +976,76 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
                 _hatDbvt = null;
             }
         }
+
+        /// <summary>
+        /// Holt oder setzt 
+        /// </summary>
+        public DBKG04 DBKG
+        {
+            get => ListeDBKG?.SingleOrDefault();
+            set
+            {
+                ListeDBKG = ListeDBKG.Set(value);
+                _hatDbkg = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt 
+        /// </summary>
+        public DBAT04 DBAT
+        {
+            get => ListeDBAT?.SingleOrDefault();
+            set
+            {
+                ListeDBAT = ListeDBAT.Set(value);
+                _hatDbat = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt 
+        /// </summary>
+        public DBWO04 DBWO
+        {
+            get => ListeDBWO?.SingleOrDefault();
+            set
+            {
+                ListeDBWO = ListeDBWO.Set(value);
+                _hatDbwo = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt 
+        /// </summary>
+        public DBWW04 DBWW
+        {
+            get => ListeDBWW?.SingleOrDefault();
+            set
+            {
+                ListeDBWW = ListeDBWW.Set(value);
+                _hatDbww = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt 
+        /// </summary>
+        public DBS404 DBS4
+        {
+            get => ListeDBS4?.SingleOrDefault();
+            set
+            {
+                ListeDBS4 = ListeDBS4.Set(value);
+                _hatDbs4 = null;
+            }
+        }
+
+        /// <summary>
+        /// Holt oder setzt eine Liste von Lohnarten
+        /// </summary>
+        public IList<DSLAext04> DSLAext { get; set; }
 
         /// <summary>
         /// Holt oder setzt eine Liste von Fehlern
@@ -175,11 +1059,21 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         {
             get
             {
-                foreach (var datenbaustein in ListExtensions.Enumerate(ListeDBVT, DBFE))
+                foreach (var datenbaustein in ListExtensions.Enumerate(ListeDBVT, ListeDBKG, ListeDBAT, ListeDBWO, ListeDBWW, ListeDBS4, DBFE))
                     yield return datenbaustein;
             }
         }
 
         private IList<DBVT04> ListeDBVT { get; set; }
+
+        private IList<DBKG04> ListeDBKG { get; set; }
+
+        private IList<DBAT04> ListeDBAT { get; set; }
+
+        private IList<DBWO04> ListeDBWO { get; set; }
+
+        private IList<DBWW04> ListeDBWW { get; set; }
+
+        private IList<DBS404> ListeDBS4 { get; set; }
     }
 }

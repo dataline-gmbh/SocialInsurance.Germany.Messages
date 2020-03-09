@@ -1,13 +1,13 @@
 ﻿namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
-    public class DBOS04 : DBWOBasis04
+    public class DBWS04 : DBWWBasis04
     {
         /// <summary>
-        /// Initialisiert eine neue Instanz der <see cref="DBOS04"/> Klasse
+        /// Initialisiert eine neue Instanz der <see cref="DBWS04"/> Klasse
         /// </summary>
-        public DBOS04()
+        public DBWS04()
         {
-            KE = "DBOS";
+            KE = "DBWS";
             WGMODELL = "0";
         }
     }
