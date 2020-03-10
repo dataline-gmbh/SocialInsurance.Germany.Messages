@@ -1,4 +1,8 @@
-﻿namespace SocialInsurance.Germany.Messages.Pocos.EUBP
+﻿// <copyright file="DBVK04.cs" company="DATALINE GmbH &amp; Co. KG">
+// Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
+// </copyright>
+
+namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
     public class DBVK04 : DBKGBasis04
     {

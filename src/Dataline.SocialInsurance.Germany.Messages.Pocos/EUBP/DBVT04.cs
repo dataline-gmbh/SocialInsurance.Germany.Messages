@@ -339,7 +339,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         }
 
         /// <summary>
-        /// Holt oder setzt den Datenbaustein für 
+        /// Holt oder setzt den Datenbaustein für Vortragswerte Kurzarbeitergeld
         /// </summary>
         public DBVK04 DBVK
         {
@@ -352,7 +352,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         }
 
         /// <summary>
-        /// Holt oder setzt den Datenbaustein für 
+        /// Holt oder setzt den Datenbaustein für Vortragswerte Saison-Kurzarbeitergeld
         /// </summary>
         public DBVS04 DBVS
         {
@@ -365,7 +365,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         }
 
         /// <summary>
-        /// Holt oder setzt den Datenbaustein für 
+        /// Holt oder setzt den Datenbaustein für Vortragswerte Altersteilzeit Summenfelder-Modell
         /// </summary>
         public DBVF04 DBVF
         {
@@ -378,7 +378,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         }
 
         /// <summary>
-        /// Holt oder setzt den Datenbaustein für 
+        /// Holt oder setzt den Datenbaustein für Vortragswerte Altersteilzeit Alternativ-/Options-Modell
         /// </summary>
         public DBVA04 DBVA
         {
@@ -391,7 +391,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         }
 
         /// <summary>
-        /// Holt oder setzt den Datenbaustein für 
+        /// Holt oder setzt den Datenbaustein für Vortragswerte Wertguthaben Ost Summenfelder-Modell
         /// </summary>
         public DBOS04 DBOS
         {
@@ -404,7 +404,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         }
 
         /// <summary>
-        /// Holt oder setzt den Datenbaustein für 
+        /// Holt oder setzt den Datenbaustein für Vortragswerte Wertguthaben West Alternativ-/OptionsModell
         /// </summary>
         public DBOA04 DBOA
         {
@@ -417,7 +417,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         }
 
         /// <summary>
-        /// Holt oder setzt den Datenbaustein für 
+        /// Holt oder setzt den Datenbaustein für Vortragswerte Wertguthaben Ost Summenfelder-Modell
         /// </summary>
         public DBWS04 DBWS
         {
@@ -430,7 +430,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         }
 
         /// <summary>
-        /// Holt oder setzt den Datenbaustein für 
+        /// Holt oder setzt den Datenbaustein für Vortragswerte Wertguthaben West Alternativ-/OptionsModell
         /// </summary>
         public DBWA04 DBWA
         {
@@ -443,7 +443,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         }
 
         /// <summary>
-        /// Holt oder setzt den Datenbaustein für 
+        /// Holt oder setzt den Datenbaustein für seemännische Besonderheiten
         /// </summary>
         public DBS504 DBS5
         {
@@ -472,6 +472,5 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         private IList<DBWA04> ListeDBWA { get; set; }
 
         private IList<DBS504> ListeDBS5 { get; set; }
-
     }
 }

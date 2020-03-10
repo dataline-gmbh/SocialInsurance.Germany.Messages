@@ -25,9 +25,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
-    <PackageReference Include="Dsrv.Kernpruefung.Deuev-1.6" Version="1.6.1.13" />
-    <PackageReference Include="Dsrv.Kernpruefung.Deuev-1.7" Version="1.7.0.13" />
-    <PackageReference Include="Dsrv.Kernpruefung.Deuev-1.8" Version="1.8.0.13" />
+    <PackageReference Include="Dsrv.Kernpruefung.Deuev-1.6" Version="1.6.1.16" />
+    <PackageReference Include="Dsrv.Kernpruefung.Deuev-1.7" Version="1.7.0.16" />
+    <PackageReference Include="Dsrv.Kernpruefung.Deuev-1.8" Version="1.8.0.16" />
     <PackageReference Include="xunit" Version="2.3.1" />
   </ItemGroup>
 

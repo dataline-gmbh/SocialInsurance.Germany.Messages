@@ -1,4 +1,8 @@
-﻿namespace SocialInsurance.Germany.Messages.Pocos.EUBP
+﻿// <copyright file="DBATBasis04.cs" company="DATALINE GmbH &amp; Co. KG">
+// Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
+// </copyright>
+
+namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
     public abstract class DBATBasis04 : IDatenbaustein
     {

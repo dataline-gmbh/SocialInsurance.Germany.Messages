@@ -1,6 +1,6 @@
 ﻿// <copyright file="DSLA04.cs" company="DATALINE GmbH &amp; Co. KG">
 // Copyright (c) DATALINE GmbH &amp; Co. KG. All rights reserved.
-// </copyright>using System;
+// </copyright>
 
 using System;
 using System.Collections.Generic;
@@ -887,7 +887,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// </remarks>
         public int ANLA
         {
-            get { return DSLAext?.Count ?? 0; }
+            get => DSLAext?.Count ?? 0;
 
             // ReSharper disable once UnusedMember.Local
             // ReSharper disable once ValueParameterNotUsed
@@ -965,7 +965,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         }
 
         /// <summary>
-        /// Holt oder setzt 
+        /// Holt oder setzt Datenbaustein Vortragswerte
         /// </summary>
         public DBVT04 DBVT
         {
@@ -978,7 +978,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         }
 
         /// <summary>
-        /// Holt oder setzt 
+        /// Holt oder setzt Datenbaustein Kurzarbeitergeld
         /// </summary>
         public DBKG04 DBKG
         {
@@ -991,7 +991,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         }
 
         /// <summary>
-        /// Holt oder setzt 
+        /// Holt oder setzt Datenbaustein Altersteilzeit
         /// </summary>
         public DBAT04 DBAT
         {
@@ -1004,7 +1004,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         }
 
         /// <summary>
-        /// Holt oder setzt 
+        /// Holt oder setzt Datenbaustein Wertguthaben Ost
         /// </summary>
         public DBWO04 DBWO
         {
@@ -1017,7 +1017,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         }
 
         /// <summary>
-        /// Holt oder setzt 
+        /// Holt oder setzt Datenbaustein Wertguthaben West
         /// </summary>
         public DBWW04 DBWW
         {
@@ -1030,7 +1030,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         }
 
         /// <summary>
-        /// Holt oder setzt 
+        /// Holt oder setzt Datenbaustein Seemännische Besonderheiten
         /// </summary>
         public DBS404 DBS4
         {
