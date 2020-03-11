@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EUBP.DBKN04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings.EUBP"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EUBP.DBS304.xml, Dataline.SocialInsurance.Germany.Messages.Mappings.EUBP"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <template name="DSAN-v04">
+    <field name="KE" literal="DSAN" length="4" rid="true" required="true" />
+    <field name="VF" literal="EUBP" length="5" rid="true" required="true" />
+    <field name="ABSN" length="15" required="true" />
+    <field name="EPNR" length="15" required="true" />
+    <field name="VERNR" length="2" literal="04" rid="true" type="int" format="00" required="true" />
+    <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
+    <field name="FEKZ" regex="[0-1]" length="1" required="true" />
+    <field name="FEAN" length="1" required="true" regex="[0-9]" />
+    <field name="MANDANT" length="20" required="true"/>
+    <field name="AZVU" length="20" required="true"/>
+    <field name="VSNR" length="12" required="true"/>
+    <field name="ANSTAN" length="3" required="true" type="int" format="000" regex="[0-9]"/>
+
+    <segment name="DSANext" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DSAN04+DSANext04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="ANSTAN" collection="list" maxOccurs="999">
+      <field name="GLTAB" length="8" required="true" format="yyyyMMdd" />
+      <field name="AENDDAT" length="20" required="true" format="yyyyMMddHHmmssffffff" />
+      <field name="AZVUALT" length="20" required="false"/>
+      <field name="AZVUWEITER" length="20" required="false"/>
+      <field name="ERSTEINTR" length="8" required="true" format="yyyyMMdd" />
+      <field name="EINTR" length="8" required="true" format="yyyyMMdd" />
+      <field name="AUSTR" length="8" required="true" format="yyyyMMdd" />
+      <field name="NAME" length="30" required="true" />
+      <field name="GBNAME" length="30" required="false" />
+      <field name="VONAME" length="30" required="false" />
+      <field name="GE" regex="[MW]" length="1" required="false" />
+      <field name="LDKZ" length="3" required="false" />
+      <field name="PLZ" length="10" required="false" />
+      <field name="ORT" length="34" required="false" />
+      <field name="STR" length="33" required="false" />
+      <field name="HNR" length="9" required="false" />
+      <field name="EUVSNR" length="20" required="false" />
+      <field name="GBDT" length="8" required="false" format="yyyyMMdd" />
+      <field name="GBORT" length="34" required="false" />
+      <field name="SASC" length="3" required="false" />
+      <field name="TODDAT" length="8" required="false" format="yyyyMMdd" />
+      <field name="KENNZRK" regex="[OW]" length="1" required="true" />
+      <field name="KENNZPVS" length="1" typeHandler="jn" required="true"/>
+      <field name="KNR" length="10" required="false" />
+      <field name="BLZ" length="8" required="false" />
+      <field name="IBAN" length="34" required="false" />
+      <field name="BIC" length="11" required="false" />
+      <field name="STKL" length="1" required="false" type="int" format="0" regex="[1-6]" />
+      <field name="KISTPF" length="1" typeHandler="jn" required="true" />
+      <field name="KIFRBTRG" length="3" required="false" type="int" format="000" />
+      <field name="EGSTFRBTRG" length="10" required="false" type="int" format="D10" />
+      <field name="TT" length="25" required="false" />
+      <field name="TTSC" length="9" required="false" />
+      <field name="PERSGR" length="3" required="false" type="int" format="D3" />
+      <field name="BYGRKV" length="1" required="true" type="int" regex="[01234569]" />
+      <field name="BYGRRV" length="1" required="true" type="int" regex="[0135]" />
+      <field name="BYGRAV" length="1" required="true" type="int" regex="[0-2]" />
+      <field name="BYGRPV" length="1" required="true" type="int" regex="[0-2]" />
+      <field name="KENNZGV" length="1" typeHandler="jn" required="true" />
+      <field name="KENNZMF" length="1" typeHandler="jn" required="true" />
+      <field name="KENNZMFB" length="1" typeHandler="jn" required="true" />
+      <field name="KENNZSTA" length="1" required="true" type="int" regex="[1-2]" />
+      <field name="BBNRKK" length="15" required="true" />
+      <field name="VGESBYPRIVKV" length="1" required="true" />
+      <field name="GESBYPRIVKV" length="10" required="true" format="d10" default="0" type="int"/>
+      <field name="VGESBYPRIVPV" length="1" required="true" />
+      <field name="GESBYPRIVPV" length="10" required="true" format="d10" default="0" type="int"/>
+      <field name="BBNRVW" length="15" required="true" />
+      <field name="KENNZZVA" length="1" required="true" format="d1" default="0" type="int"/>
+      <field name="ZVA" length="35" required="false" />
+      <field name="KENNZBAU" length="1" typeHandler="jn" required="true" />
+      <field name="AZWOECH" length="4" required="false" format="d4" default="0" type="int"/>
+      <field name="KENNZGLE" length="1" typeHandler="jn" required="true" />
+      <field name="KENNZVERZGLE" length="1" typeHandler="jn" required="false" />
+      <field name="KENNZVERZRVFGB" length="1" typeHandler="jn" required="true" />
+      <field name="KENNZVERZRVPGB" length="1" typeHandler="jn" required="true" />
+      <field name="KENNZWG" length="1" typeHandler="jn" required="true" />
+      <field name="KENNZELT" length="1" typeHandler="jn" required="true" />
+      <field name="KENNZKG" length="1" typeHandler="jn" required="true" />
+      <field name="KENNZVBE" length="1" typeHandler="jn" required="true" />
+      <field name="KENNZRBZ" length="1" typeHandler="jn" required="true" />
+      <field name="KENNZATZ" length="1" required="true" format="d1" default="0" type="int" />
+      <field name="KENNZATZALT" length="1" typeHandler="jn" required="true" />
+      <field name="ATZBG" length="8" required="false" format="yyyyMMdd" />
+      <field name="ATZEN" length="8" required="false" format="yyyyMMdd" />
+      <field name="FPBEG" length="8" required="false" format="yyyyMMdd" />
+      <field name="MMKN" length="1" typeHandler="jn" required="true" />
+      <field name="MMS3" length="1" typeHandler="jn" required="true" />
+      <field name="RESERVE" length="5" required="false" />
+      <field name="ANGTST" length="1" required="true" type="int" format="0" regex="[0-9]"/>
+
+      <segment name="DSANGTST" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DSANext04+DSANGTST04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="ANGTST" collection="list" maxOccurs="9">
+        <field name="BBNRUV" length="15" required="false" />
+        <field name="MTNR" length="20" required="false" />
+        <field name="BBNRGTST" length="15" required="false" />
+        <field name="GTST" length="8" required="false" />
+        <field name="GTSTSATZ" length="3" required="false" format="d3" default="0" type="int"/>
+      </segment>
+
+      <segment name="DBKN" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DBKN04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="MMKN" collection="list">
+        <include template="DBKN" />
+      </segment>
+
+      <segment name="DBS3" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DBS304, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="MMS3" collection="list">
+        <include template="DBS3" />
+      </segment>
+    </segment>
+
+    <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
+      <include template="DBFE" />
+    </segment>
+  </template>
+</beanio>

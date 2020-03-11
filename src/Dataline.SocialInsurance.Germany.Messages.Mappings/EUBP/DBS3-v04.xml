@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBS3-v04">
+    <field name="KE" length="4" literal="DBS3" required="true"/>
+    <field name="BERUFSGR" length="2" required="true" type="int" format="00" regex="[0-9]"/>
+    <field name="VERSART" length="2" required="true" type="int" format="00" regex="[0-9]"/>
+    <field name="FZGR" length="2" required="true" type="int" format="00" regex="[0-9]"/>
+    <field name="PAT" length="2" required="true" type="int" format="00" regex="[0-9]"/>
+    <field name="KENNZSMK" length="1" required="true" type="int" format="0" regex="[0-2]"/>
+    <field name="DHEUERKENNZ" length="4" required="true" type="int" format="D4" regex="[0-9]"/>
+    <field name="DHEUER" length="10" required="true" type="int" format="D10" regex="[0-9]"/>
+  </template>
+</beanio>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <template name="DBSC-v04">
+    <field name="KE" literal="DBSC" length="4" rid="true" required="true" />
+    <field name="VKV1SCHAETZ" length="1" required="true" />
+    <field name="KV1SCHAETZ" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VKV2SCHAETZ" length="1" required="true" />
+    <field name="KV2SCHAETZ" length="11" required="false" format="d11" type="int"/>
+    <field name="VKV3SCHAETZ" length="1" required="true" />
+    <field name="KV3SCHAETZ" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VPVSCHAETZ" length="1" required="true" />
+    <field name="PVSCHAETZ" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VRV1SCHAETZ" length="1" required="true" />
+    <field name="RV1SCHAETZ" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VZZBPSCHAETZ" length="1" required="true" />
+    <field name="ZBPSCHAETZ" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VAV1SCHAETZ" length="1" required="true" />
+    <field name="AV1SCHAETZ" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VRV3SCHAETZ" length="1" required="true" />
+    <field name="RV3SCHAETZ" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VINSOSCHAETZ" length="1" required="true" />
+    <field name="INSOSCHAETZ" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VAV2SCHAETZ" length="1" required="true" />
+    <field name="AV2SCHAETZ" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VU1SCHAETZ" length="1" required="true" />
+    <field name="U1SCHAETZ" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VU2SCHAETZ" length="1" required="true" />
+    <field name="U2SCHAETZ" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VKV6SCHAETZ" length="1" required="true" />
+    <field name="KV6SCHAETZ" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VRV5SCHAETZ" length="1" required="true" />
+    <field name="RV5SCHAETZ" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VZRESERVE1" length="1" required="false" ignore="true" default="+"/>
+    <field name="RESERVE1" length="11" required="false" ignore="true" type="int" default="0" format="d11"/>
+    <field name="VKVFSCHAETZ" length="1" required="true" />
+    <field name="KVFSCHAETZ" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VPVFSCHAETZ" length="1" required="true" />
+    <field name="PVFSCHAETZ" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VZZBFSCHAETZ" length="1" required="true" />
+    <field name="ZBFSCHAETZ" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VZBEITR2SCHAETZ" length="1" required="true" />
+    <field name="BEITR2SCHAETZ" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VZBEITR3SCHAETZ" length="1" required="true" />
+    <field name="BEITR3SCHAETZ" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VBEITRSCHAETZ" length="1" required="true" />
+    <field name="BEITRSCHAETZ" length="11" required="false" format="d11" default="0" type="int"/>
+  </template>
+</beanio>

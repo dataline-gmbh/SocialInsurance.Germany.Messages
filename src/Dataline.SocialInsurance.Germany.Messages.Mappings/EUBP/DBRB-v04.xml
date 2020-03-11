@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <template name="DBRB-v04">
+    <field name="KE" literal="DBRB" length="4" rid="true" required="true" />
+    <field name="VKV1REST" length="1" required="true" />
+    <field name="KV1REST" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VKV2REST" length="1" required="true" />
+    <field name="KV2REST" length="11" required="false" format="d11" type="int"/>
+    <field name="VKV3REST" length="1" required="true" />
+    <field name="KV3REST" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VPVREST" length="1" required="true" />
+    <field name="PVREST" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VRV1REST" length="1" required="true" />
+    <field name="RV1REST" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VZZBPREST" length="1" required="true" />
+    <field name="ZBPREST" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VAV1REST" length="1" required="true" />
+    <field name="AV1REST" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VRV3REST" length="1" required="true" />
+    <field name="RV3REST" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VINSOREST" length="1" required="true" />
+    <field name="INSOREST" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VAV2REST" length="1" required="true" />
+    <field name="AV2REST" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VU1REST" length="1" required="true" />
+    <field name="U1REST" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VU2REST" length="1" required="true" />
+    <field name="U2REST" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VKV6REST" length="1" required="true" />
+    <field name="KV6REST" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VRV5REST" length="1" required="true" />
+    <field name="RV5REST" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VZRESERVE1" length="1" required="false" ignore="true" default="+"/>
+    <field name="RESERVE1" length="11" required="false" ignore="true" type="int" default="0" format="d11"/>
+    <field name="VKVFREST" length="1" required="true" />
+    <field name="KVFREST" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VPVFREST" length="1" required="true" />
+    <field name="PVFREST" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VZZBFREST" length="1" required="true" />
+    <field name="ZBFREST" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VZBEITR2REST" length="1" required="true" />
+    <field name="BEITR2REST" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VZBEITR3REST" length="1" required="true" />
+    <field name="BEITR3REST" length="11" required="false" format="d11" default="0" type="int"/>
+    <field name="VBEITRREST" length="1" required="true" />
+    <field name="BEITRREST" length="11" required="false" format="d11" default="0" type="int"/>
+  </template>
+</beanio>
