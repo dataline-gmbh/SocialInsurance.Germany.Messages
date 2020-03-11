@@ -4,6 +4,9 @@
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// DBRB - Datenbaustein Restbeträge
+    /// </summary>
     public class DBRB04 : IDatenbaustein
     {
         public DBRB04()

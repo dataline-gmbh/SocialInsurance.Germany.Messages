@@ -4,6 +4,9 @@
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// DBAT - Datenbaustein Altersteilzeit
+    /// </summary>
     public class DBAT04 : DBATBasis04
     {
         /// <summary>

@@ -6,6 +6,9 @@ using System.Collections.Generic;
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// DBS1 - Datenbaustein Seemännische Besonderheiten (DSAG)
+    /// </summary>
     public class DBS104 : IDatenbaustein
     {
         /// <summary>
@@ -32,7 +35,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// </remarks>
         public int ANWK
         {
-            get => DSS1ext?.Count ?? 0;
+            get => DBS1ext?.Count ?? 0;
 
             // ReSharper disable once UnusedMember.Local
             // ReSharper disable once ValueParameterNotUsed
@@ -42,6 +45,6 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// <summary>
         /// Holt oder setzt eine Liste von Wechselkursen
         /// </summary>
-        public IList<DBS1ext04> DSS1ext { get; set; }
+        public IList<DBS1ext04> DBS1ext { get; set; }
     }
 }

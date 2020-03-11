@@ -4,6 +4,9 @@
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// DBWW - Datenbaustein Wertguthaben West
+    /// </summary>
     public class DBWW04 : DBWWBasis04
     {
         /// <summary>

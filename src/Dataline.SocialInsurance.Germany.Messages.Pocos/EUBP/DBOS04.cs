@@ -4,6 +4,9 @@
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// DBOS - Datenbaustein Datenbaustein Vortragswerte Wertguthaben Ost Summenfelder-Modell
+    /// </summary>
     public class DBOS04 : DBWOBasis04
     {
         /// <summary>

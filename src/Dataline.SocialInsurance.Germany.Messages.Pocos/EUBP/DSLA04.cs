@@ -9,13 +9,11 @@ using System.Linq;
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
     /// <summary>
-    /// Datensatz: DSLA - Meldung
+    /// DSLA - Datensatz Lohn Arbeitnehmer
     /// </summary>
     public class DSLA04 : IDatensatz
     {
         private FehlerKennzeichen? _fekz;
-
-        private bool? _hatDbvt;
 
         private bool? _hatDbkg;
 
@@ -26,6 +24,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         private bool? _hatDbww;
 
         private bool? _hatDbs4;
+
+        private bool? _hatDbvt;
 
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DSME04"/> Klasse

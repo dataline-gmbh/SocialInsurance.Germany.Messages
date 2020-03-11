@@ -7,23 +7,26 @@ using System.Linq;
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// DBVT - Datenbaustein Vortragswerte
+    /// </summary>
     public class DBVT04 : IDatenbaustein
     {
-        private bool? _hatDbvkg;
+        private bool? _hatDbvk;
 
-        private bool? _hatDbvsk;
+        private bool? _hatDbvs;
 
-        private bool? _hatDbvatzsf;
+        private bool? _hatDbvf;
 
-        private bool? _hatDbvatzao;
+        private bool? _hatDbva;
 
-        private bool? _hatDbvwosf;
+        private bool? _hatDbos;
 
-        private bool? _hatDbvwoao;
+        private bool? _hatDboa;
 
-        private bool? _hatDbvwwsf;
+        private bool? _hatDbws;
 
-        private bool? _hatDbvwwao;
+        private bool? _hatDbwa;
 
         private bool? _hatDbs5;
 
@@ -222,8 +225,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// </remarks>
         public bool MMVKG
         {
-            get => _hatDbvkg ?? DBVK != null;
-            set => _hatDbvkg = value;
+            get => _hatDbvk ?? DBVK != null;
+            set => _hatDbvk = value;
         }
 
         /// <summary>
@@ -236,8 +239,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// </remarks>
         public bool MMVSK
         {
-            get => _hatDbvsk ?? DBVS != null;
-            set => _hatDbvsk = value;
+            get => _hatDbvs ?? DBVS != null;
+            set => _hatDbvs = value;
         }
 
         /// <summary>
@@ -250,8 +253,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// </remarks>
         public bool MMVATZSF
         {
-            get => _hatDbvatzsf ?? DBVF != null;
-            set => _hatDbvatzsf = value;
+            get => _hatDbvf ?? DBVF != null;
+            set => _hatDbvf = value;
         }
 
         /// <summary>
@@ -264,8 +267,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// </remarks>
         public bool MMVATZAO
         {
-            get => _hatDbvatzao ?? DBVA != null;
-            set => _hatDbvatzao = value;
+            get => _hatDbva ?? DBVA != null;
+            set => _hatDbva = value;
         }
 
         /// <summary>
@@ -278,8 +281,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// </remarks>
         public bool MMVWOSF
         {
-            get => _hatDbvwosf ?? DBOS != null;
-            set => _hatDbvwosf = value;
+            get => _hatDbos ?? DBOS != null;
+            set => _hatDbos = value;
         }
 
         /// <summary>
@@ -292,8 +295,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// </remarks>
         public bool MMVWOAO
         {
-            get => _hatDbvwoao ?? DBOA != null;
-            set => _hatDbvwoao = value;
+            get => _hatDboa ?? DBOA != null;
+            set => _hatDboa = value;
         }
 
         /// <summary>
@@ -306,8 +309,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// </remarks>
         public bool MMVWWSF
         {
-            get => _hatDbvwwsf ?? DBWS != null;
-            set => _hatDbvwwsf = value;
+            get => _hatDbws ?? DBWS != null;
+            set => _hatDbws = value;
         }
 
         /// <summary>
@@ -320,8 +323,8 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// </remarks>
         public bool MMVWWAO
         {
-            get => _hatDbvwwao ?? DBWA != null;
-            set => _hatDbvwwao = value;
+            get => _hatDbwa ?? DBWA != null;
+            set => _hatDbwa = value;
         }
 
         /// <summary>
@@ -347,7 +350,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
             set
             {
                 ListeDBVK = ListeDBVK.Set(value);
-                _hatDbvkg = null;
+                _hatDbvk = null;
             }
         }
 
@@ -360,7 +363,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
             set
             {
                 ListeDBVS = ListeDBVS.Set(value);
-                _hatDbvsk = null;
+                _hatDbvs = null;
             }
         }
 
@@ -373,7 +376,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
             set
             {
                 ListeDBVF = ListeDBVF.Set(value);
-                _hatDbvatzsf = null;
+                _hatDbvf = null;
             }
         }
 
@@ -386,7 +389,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
             set
             {
                 ListeDBVA = ListeDBVA.Set(value);
-                _hatDbvatzao = null;
+                _hatDbva = null;
             }
         }
 
@@ -399,7 +402,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
             set
             {
                 ListeDBOS = ListeDBOS.Set(value);
-                _hatDbvwosf = null;
+                _hatDbos = null;
             }
         }
 
@@ -412,7 +415,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
             set
             {
                 ListeDBOA = ListeDBOA.Set(value);
-                _hatDbvwoao = null;
+                _hatDboa = null;
             }
         }
 
@@ -425,7 +428,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
             set
             {
                 ListeDBWS = ListeDBWS.Set(value);
-                _hatDbvwwsf = null;
+                _hatDbws = null;
             }
         }
 
@@ -438,7 +441,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
             set
             {
                 ListeDBWA = ListeDBWA.Set(value);
-                _hatDbvwwao = null;
+                _hatDbwa = null;
             }
         }
 

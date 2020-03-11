@@ -9,7 +9,7 @@ using System.Linq;
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
     /// <summary>
-    /// Beitragsnachweis-Datensatz
+    /// DSBN - Datensatz Beitragsnachweis
     /// </summary>
     public class DSBN04 : IDatensatz
     {

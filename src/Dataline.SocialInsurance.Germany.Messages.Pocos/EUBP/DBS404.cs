@@ -4,6 +4,9 @@
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// DBS4 - Datenbaustein Seemännische Besonderheiten (DSLA)
+    /// </summary>
     public class DBS404 : IDatenbaustein
     {
         /// <summary>

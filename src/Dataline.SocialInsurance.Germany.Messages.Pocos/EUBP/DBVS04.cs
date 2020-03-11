@@ -4,6 +4,9 @@
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// DBVS - Datenbaustein Vortragswerte Saison-Kurzarbeitergeld
+    /// </summary>
     public class DBVS04 : DBKGBasis04
     {
         /// <summary>

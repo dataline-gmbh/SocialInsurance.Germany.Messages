@@ -9,12 +9,11 @@ using System.Linq;
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
     /// <summary>
-    /// Datensatz: DSAG - Stammdaten Arbeitgeber
+    /// DSAG - Datensatz Stammdaten Arbeitgeber
     /// </summary>
     public class DSAG04 : IDatensatz
     {
         private FehlerKennzeichen? _fekz;
-        private bool? _hatDbs1;
 
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="DSAG04"/> Klasse
@@ -147,33 +146,6 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         }
 
         /// <summary>
-        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Seemännische Besonderheiten vorhanden ist
-        /// </summary>
-        /// <remarks>
-        /// Seemännische Besonderheiten vorhanden, Länge 1, Mussangabe
-        /// N = keine Seemännischen Besonderheiten
-        /// J = Seemännische Besonderheiten vorhanden
-        /// </remarks>
-        public bool MMS1
-        {
-            get => _hatDbs1 ?? DBS1 != null;
-            set => _hatDbs1 = value;
-        }
-
-        /// <summary>
-        /// Holt oder setzt den Datenbaustein für Seemännische Besonderheiten
-        /// </summary>
-        public DBS104 DBS1
-        {
-            get => ListeDBS1?.SingleOrDefault();
-            set
-            {
-                ListeDBS1 = ListeDBS1.Set(value);
-                _hatDbs1 = null;
-            }
-        }
-
-        /// <summary>
         /// Holt oder setzt eine Liste von Stammdatensätzen
         /// </summary>
         public IList<DSAGext04> DSAGext { get; set; }
@@ -190,11 +162,9 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         {
             get
             {
-                foreach (var datenbaustein in ListExtensions.Enumerate(ListeDBS1, DBFE))
+                foreach (var datenbaustein in ListExtensions.Enumerate(DBFE))
                     yield return datenbaustein;
             }
         }
-
-        private IList<DBS104> ListeDBS1 { get; set; }
     }
 }

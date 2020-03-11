@@ -6,6 +6,9 @@ using NodaTime;
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// DBKN - Datenbaustein Knappschaft
+    /// </summary>
     public class DBKN04 : IDatenbaustein
     {
         public DBKN04()

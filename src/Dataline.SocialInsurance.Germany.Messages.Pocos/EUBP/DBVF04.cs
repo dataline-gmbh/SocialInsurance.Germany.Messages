@@ -4,6 +4,9 @@
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// DBVF - Datenbaustein Datenbaustein Vortragswerte Altersteilzeit Summenfelder-Modell
+    /// </summary>
     public class DBVF04 : DBATBasis04
     {
         /// <summary>

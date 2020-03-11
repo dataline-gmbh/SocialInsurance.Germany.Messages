@@ -4,6 +4,9 @@
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// DBOA - Datenbaustein Vortragswerte Wertguthaben Ost Alternativ-/Options-Modell
+    /// </summary>
     public class DBOA04 : DBWOBasis04
     {
         /// <summary>

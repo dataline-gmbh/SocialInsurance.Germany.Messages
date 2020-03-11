@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBS1-v04">
+    <field name="KE" length="4" literal="DBS1" required="true"/>
+    <field name="ANWK" length="2" required="true" type="int" format="00" regex="[0-9]"/>
+
+    <segment name="DSS1ext" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DBS104+DBS1ext04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="ANWK" collection="list" maxOccurs="99">
+      <field name="GLTAB" length="8" required="true" format="yyyyMMdd" />
+      <field name="WK" length="5" required="true" type="int" format="D5"/>
+    </segment>
+  </template>
+</beanio>

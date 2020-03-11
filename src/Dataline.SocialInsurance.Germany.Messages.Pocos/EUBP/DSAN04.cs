@@ -8,7 +8,7 @@ using System.Collections.Generic;
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
     /// <summary>
-    /// Datensatz: DSAN - Stammdaten Arbeitnehmer
+    /// DSAN - Datensatz Stammdaten Arbeitnehmer
     /// </summary>
     public class DSAN04 : IDatensatz
     {

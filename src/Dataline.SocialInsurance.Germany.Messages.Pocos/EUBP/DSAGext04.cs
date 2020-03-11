@@ -3,12 +3,20 @@
 // </copyright>
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+
 using NodaTime;
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// das sich wiederholende Element im DSAG
+    /// </summary>
     public class DSAGext04
     {
+        private bool? _hatDbs1;
+
         /// <summary>
         /// Holt oder setzt das Gültigkeitsdatum ab
         /// </summary>
@@ -87,7 +95,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// <remarks>
         /// Länge 4, Kannangabe
         /// </remarks>
-        public int BUFANR { get; set; }
+        public string BUFANR { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Steuernummer des Betriebes
@@ -96,5 +104,34 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// Länge 20, Kannangabe
         /// </remarks>
         public string STNR { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Seemännische Besonderheiten vorhanden ist
+        /// </summary>
+        /// <remarks>
+        /// Seemännische Besonderheiten vorhanden, Länge 1, Mussangabe
+        /// N = keine Seemännischen Besonderheiten
+        /// J = Seemännische Besonderheiten vorhanden
+        /// </remarks>
+        public bool MMS1
+        {
+            get => _hatDbs1 ?? DBS1 != null;
+            set => _hatDbs1 = value;
+        }
+
+        /// <summary>
+        /// Holt oder setzt den Datenbaustein für Seemännische Besonderheiten
+        /// </summary>
+        public DBS104 DBS1
+        {
+            get => ListeDBS1?.SingleOrDefault();
+            set
+            {
+                ListeDBS1 = ListeDBS1.Set(value);
+                _hatDbs1 = null;
+            }
+        }
+
+        private IList<DBS104> ListeDBS1 { get; set; }
     }
 }

@@ -4,6 +4,9 @@
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// DBVA - Datenbaustein Datenbaustein Vortragswerte Altersteilzeit Alternativ-/Options-Modell
+    /// </summary>
     public class DBVA04 : DBATBasis04
     {
         /// <summary>

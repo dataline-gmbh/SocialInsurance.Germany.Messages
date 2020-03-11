@@ -32,6 +32,22 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="EUBP\DBS1-v04.xml" />
+    <None Remove="EUBP\DSAG-v04.xml" />
+    <None Remove="EUBP\DSEK-v02.xml" />
+    <None Remove="EUBP\DSKO-v03.xml" />
+    <None Remove="EUBP\VOSZ-v04.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="EUBP\DBS1-v04.xml" />
+    <EmbeddedResource Include="EUBP\DSAG-v04.xml" />
+    <EmbeddedResource Include="EUBP\DSEK-v02.xml" />
+    <EmbeddedResource Include="EUBP\DSKO-v03.xml" />
+    <EmbeddedResource Include="EUBP\VOSZ-v04.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Dataline.SocialInsurance.Germany.Messages.Pocos\Dataline.SocialInsurance.Germany.Messages.Pocos.csproj" />
   </ItemGroup>
 

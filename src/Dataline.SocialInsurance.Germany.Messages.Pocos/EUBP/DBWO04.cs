@@ -4,6 +4,9 @@
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// DBWO - Datenbaustein Wertguthaben Ost
+    /// </summary>
     public class DBWO04 : DBWOBasis04
     {
         /// <summary>

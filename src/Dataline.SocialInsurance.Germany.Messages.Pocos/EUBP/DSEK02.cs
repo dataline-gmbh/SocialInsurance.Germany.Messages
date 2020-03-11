@@ -8,7 +8,7 @@ using System.Collections.Generic;
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
     /// <summary>
-    /// Datensatz: DSEK - gewählter Erstattungssatz der Krankenkasse
+    /// DSEK - Datensatz gewählter Erstattungssatz der Krankenkasse
     /// </summary>
     public class DSEK02 : IDatensatz
     {

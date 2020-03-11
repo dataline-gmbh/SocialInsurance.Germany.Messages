@@ -4,6 +4,9 @@
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// DBWA - Datenbaustein Datenbaustein Vortragswerte Wertguthaben West Alternativ-/Options-Modell
+    /// </summary>
     public class DBWA04 : DBWWBasis04
     {
         /// <summary>

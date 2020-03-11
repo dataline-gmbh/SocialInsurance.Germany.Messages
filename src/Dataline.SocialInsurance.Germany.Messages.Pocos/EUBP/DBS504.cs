@@ -4,6 +4,9 @@
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// DBS5 - Datenbaustein Seemännische Besonderheiten (DSAN)
+    /// </summary>
     public class DBS504 : IDatenbaustein
     {
         /// <summary>

@@ -8,7 +8,7 @@ using System.Collections.Generic;
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
     /// <summary>
-    /// Datensatz: DSKO - Datensatz Kommunikation
+    /// DSKO - Datensatz Kommunikation
     /// </summary>
     public class DSKO03 : IDatensatz
     {
@@ -264,6 +264,25 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// E-Mail-Adresse des Empfängers der Protokolle beim Ersteller der Datei, Länge 70, Mussangabe
         /// </remarks>
         public string EMAILAP { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt die Bestätigung der fehlerfreien Verarbeitung
+        /// </summary>
+        /// <remarks>
+        /// Wird eine Bestätigung der fehlerfreien Verarbeitung gewünscht? Länge 1, Mussangabe
+        /// J = Ja, N = Nein
+        /// </remarks>
+        public bool VERBEST { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt die verschlüsselte Rückgabe fehlerhafter Datensätze/Datenbausteine
+        /// </summary>
+        /// <remarks>
+        /// Verschlüsselte Rückgabe fehlerhafter Datensätze bzw. Datenbausteine mit angehängten
+        /// Fehlerdatenbausteinen und sonstigen Rückmeldungen mittels Datensatz erwünscht, Länge 1, Mussangabe
+        /// K = Rückmeldungen über den Kommunikationsserver der Datenannahmestellen
+        /// </remarks>
+        public bool? FERUECK { get; set; }
 
         /// <summary>
         /// Holt oder setzt eine Liste von Fehlern

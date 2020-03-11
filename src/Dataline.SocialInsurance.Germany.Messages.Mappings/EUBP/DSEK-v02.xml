@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EUBP.DSEK02.xml, Dataline.SocialInsurance.Germany.Messages.Mappings.EUBP"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <template name="DSAG-v04">
+    <field name="KE" literal="DSEK" length="4" rid="true" required="true" />
+    <field name="VF" literal="EUBP" length="5" rid="true" required="true" />
+    <field name="ABSN" length="15" required="true" />
+    <field name="EPNR" length="15" required="true" />
+    <field name="VERNR" length="2" literal="02" rid="true" type="int" format="00" required="true" />
+    <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
+    <field name="FEKZ" regex="[0-1]" length="1" required="true" />
+    <field name="FEAN" length="1" required="true" regex="[0-9]" />
+    <field name="MANDANT" length="20" required="true"/>
+    <field name="BBNRKK" length="15" required="true" />
+    <field name="ANSATZ" length="2" required="true" type="int" format="00" regex="[0-9]"/>
+
+    <segment name="DSEKext" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DSEK02+DSEKext02, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="ANSATZ" collection="list" maxOccurs="99">
+      <field name="GLTAB" length="8" required="true" format="yyyyMMdd" />
+      <field name="AENDDAT" length="20" required="true" format="yyyyMMddHHmmssffffff" />
+      <field name="ERSTSATZ" length="2" type="int" format="00" required="true" regex="[0-2]" />
+    </segment>
+
+    <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
+      <include template="DBFE" />
+    </segment>
+  </template>
+</beanio>

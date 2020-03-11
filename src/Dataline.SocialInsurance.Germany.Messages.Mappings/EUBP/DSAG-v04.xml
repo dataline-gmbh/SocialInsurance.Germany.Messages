@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EUBP.DBS104.xml, Dataline.SocialInsurance.Germany.Messages.Mappings.EUBP"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <template name="DSAG-v04">
+    <field name="KE" literal="DSAG" length="4" rid="true" required="true" />
+    <field name="VF" literal="EUBP" length="5" rid="true" required="true" />
+    <field name="ABSN" length="15" required="true" />
+    <field name="EPNR" length="15" required="true" />
+    <field name="VERNR" length="2" literal="04" rid="true" type="int" format="00" required="true" />
+    <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
+    <field name="FEKZ" regex="[0-1]" length="1" required="true" />
+    <field name="FEAN" length="1" required="true" regex="[0-9]" />
+    <field name="MANDANT" length="20" required="true"/>
+    <field name="ANSTAG" length="3" required="true" type="int" format="000" regex="[0-9]"/>
+
+    <segment name="DSAGext" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DSAG04+DSAGext04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="ANSTAG" collection="list" maxOccurs="999">
+      <field name="GLTAB" length="8" required="true" format="yyyyMMdd" />
+      <field name="AENDDAT" length="20" required="true" format="yyyyMMddHHmmssffffff" />
+      <field name="NAME" length="35" required="true" />
+      <field name="PLZ" length="5" required="false" />
+      <field name="ORT" length="34" required="false" />
+      <field name="STR" length="33" required="false" />
+      <field name="HNR" length="9" required="false" />
+      <field name="KENNZUM" length="1" type="int" format="0" required="true" regex="[0-2]" />
+      <field name="KENNZUI" length="1" type="int" format="0" required="true" regex="[0-1]" />
+      <field name="BUFANR" length="4" required="false" />
+      <field name="STNR" length="20" required="false" />
+      <field name="MMS1" length="1" typeHandler="jn" required="true"/>
+      <field name="RESERVE" length="5" required="false" ignore="true"/>
+
+      <segment name="ListeDBS1" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DBS104, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="MMS1" collection="list">
+        <include template="DBS1-v04" />
+      </segment>
+    </segment>
+
+    <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
+      <include template="DBFE" />
+    </segment>
+  </template>
+</beanio>

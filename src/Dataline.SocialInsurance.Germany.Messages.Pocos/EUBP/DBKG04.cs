@@ -4,6 +4,9 @@
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// DBKG - Datenbaustein Kurzarbeitergeld
+    /// </summary>
     public class DBKG04 : DBKGBasis04
     {
         /// <summary>

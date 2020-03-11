@@ -4,8 +4,17 @@
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// DBSC - Datenbaustein Schätzbeiträge
+    /// </summary>
     public class DBSC04 : IDatenbaustein
     {
+        /// <summary>
+        /// Initialisiert eine neue Instanz der <see cref="DBSC04"/> Klasse
+        /// </summary>
+        /// <remarks>
+        /// Beim Initialisieren werden die Konstanten, wie Kennung und Verfahren gesetzt
+        /// </remarks>
         public DBSC04()
         {
             KE = "DBSC";

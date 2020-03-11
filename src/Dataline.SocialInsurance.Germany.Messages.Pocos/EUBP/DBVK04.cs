@@ -4,6 +4,9 @@
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// DBVK - Datenbaustein Vortragswerte Kurzarbeitergeld
+    /// </summary>
     public class DBVK04 : DBKGBasis04
     {
         /// <summary>
