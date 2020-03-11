@@ -37,6 +37,7 @@
     <None Remove="EUBP\DBS3-v04.xml" />
     <None Remove="EUBP\DBSC-v04.xml" />
     <None Remove="EUBP\DSAN-v04.xml" />
+    <None Remove="EUBP\DSLA-v04.xml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -45,6 +46,7 @@
     <EmbeddedResource Include="EUBP\DBS3-v04.xml" />
     <EmbeddedResource Include="EUBP\DBSC-v04.xml" />
     <EmbeddedResource Include="EUBP\DSAN-v04.xml" />
+    <EmbeddedResource Include="EUBP\DSLA-v04.xml" />
   </ItemGroup>
 
   <ItemGroup>

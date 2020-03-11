@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EUBP.DBVT04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings.EUBP"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.DBFE.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <template name="DSLA-v04">
+    <field name="KE" literal="DSLA" length="4" rid="true" required="true" />
+    <field name="VF" literal="EUBP" length="5" rid="true" required="true" />
+    <field name="ABSN" length="15" required="true" />
+    <field name="EPNR" length="15" required="true" />
+    <field name="VERNR" length="2" literal="04" rid="true" type="int" format="00" required="true" />
+    <field name="ED" length="20" required="true" format="yyyyMMddHHmmssffffff" />
+    <field name="FEKZ" regex="[0-1]" length="1" required="true" />
+    <field name="FEAN" length="1" required="true" regex="[0-9]" />
+    <field name="MANDANT" length="20" required="true"/>
+    <field name="AZVU" length="4" required="true"/>
+    <field name="VSNR" length="12" required="true"/>
+    <field name="MMVT" length="1" typeHandler="jn" required="true"/>
+    <field name="RESERVE1" length="5" required="true"/>
+    <field name="ANABRECH" length="3" required="true" type="int" format="000" regex="[0-9]"/>
+
+    <segment name="DSLAext" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DSLA04+DSLAext04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="ANABRECH" collection="list" maxOccurs="999">
+      <field name="KJ" length="4" required="true" type="int" format="D4" />
+      <field name="KM" length="2" required="true" type="int" format="D2" />
+      <field name="KJIN" length="4" required="true" type="int" format="D4" />
+      <field name="KJIN" length="2" required="true" type="int" format="D2" />
+      <field name="KENNZART" length="1" required="true" regex="[EK]" />
+      <field name="ABRECHDAT" length="20" required="true" format="yyyyMMddHHmmssffffff" />
+      <field name="ABRNR" length="1" required="true" type="int" format="0" />
+      <field name="KENNZMK" length="1" typeHandler="jn" required="true"/>
+      <field name="KVTG" length="2" required="true" type="int" format="D2" />
+      <field name="RVTG" length="2" required="true" type="int" format="D2" />
+      <field name="AVTG" length="2" required="true" type="int" format="D2" />
+      <field name="PVTG" length="2" required="true" type="int" format="D2" />
+      <field name="STTG" length="2" required="true" type="int" format="D2" />
+      <field name="KENNZPVZ" length="1" typeHandler="jn" required="true"/>
+      <field name="WG" literal="EUR" length="3" required="true"/>
+      <field name="VPAUSCHSTEUERGB" length="1" required="true" />
+      <field name="PAUSCHSTEUERGB" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VGESBRUTTO" length="1" required="true" />
+      <field name="GESBRUTTO" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VSVBRUTTO" length="1" required="true" />
+      <field name="SVBRUTTO" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VSTEUERBRUTTO" length="1" required="true" />
+      <field name="STEUERBRUTTO" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VKVBRUTTO" length="1" required="true" />
+      <field name="KVBRUTTO" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VRVBRUTTO" length="1" required="true" />
+      <field name="RVBRUTTO" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VAVBRUTTO" length="1" required="true" />
+      <field name="AVBRUTTO" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VPVBRUTTO" length="1" required="true" />
+      <field name="PVBRUTTO" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VUMBRUTTO" length="1" required="true" />
+      <field name="UMBRUTTO" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VINSOBRUTTO" length="1" required="true" />
+      <field name="INSOBRUTTO" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VUVBRUTTO" length="1" required="true" />
+      <field name="UVBRUTTO" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VLOHNSTEUER" length="1" required="true" />
+      <field name="LOHNSTEUER" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VSOLI" length="1" required="true" />
+      <field name="SOLI" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VKIRCHENST" length="1" required="true" />
+      <field name="KIRCHENST" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VKVBYAG" length="1" required="true" />
+      <field name="KVBYAG" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VKVBYAGZUSATZ" length="1" required="true" />
+      <field name="KVBYAGZUSATZ" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VKVBYAN" length="1" required="true" />
+      <field name="KVBYAN" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VKVBYANZUSATZ" length="1" required="true" />
+      <field name="KVBYANZUSATZ" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VRVBYAG" length="1" required="true" />
+      <field name="RVBYAG" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VRVBYAN" length="1" required="true" />
+      <field name="RVBYAN" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VAVBYAG" length="1" required="true" />
+      <field name="AVBYAG" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VAVBYAN" length="1" required="true" />
+      <field name="AVBYAN" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VPVBYAG" length="1" required="true" />
+      <field name="PVBYAG" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VPVBYAN" length="1" required="true" />
+      <field name="PVBYAN" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VU1BYAG" length="1" required="true" />
+      <field name="U1BYAG" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VU2BYAG" length="1" required="true" />
+      <field name="U2BYAG" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VINSOBYAG" length="1" required="true" />
+      <field name="INSOBYAG" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VBVBYAG" length="1" required="true" />
+      <field name="BVBYAG" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VBVBYAN" length="1" required="true" />
+      <field name="BVBYAN" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VSVBRUTTOEGA" length="1" required="true" />
+      <field name="SVBRUTTOEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VSTBRUTTOEGA" length="1" required="true" />
+      <field name="STBRUTTOEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VLOHNSTEUEREGA" length="1" required="true" />
+      <field name="LOHNSTEUEREGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VSOLIEGA" length="1" required="true" />
+      <field name="SOLIEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VKIRCHENSTEGA" length="1" required="true" />
+      <field name="KIRCHENSTEGA" length="10" required="false" format="d10" default="0" type="int"/>
+    </segment>
+
+    <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
+      <include template="DBFE" />
+    </segment>
+  </template>
+</beanio>
