@@ -154,11 +154,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// <remarks>
         /// Länge 2, Mussangabe
         /// </remarks>
-        public int ANSTAN
-        {
-            get => DSANext?.Count ?? 0;
-            private set { }
-        }
+        public int ANSTAN => DSANext?.Count ?? 0;
 
         /// <summary>
         /// Holt oder setzt eine Liste von Stammdatensätzen

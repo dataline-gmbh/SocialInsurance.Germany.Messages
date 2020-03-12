@@ -117,7 +117,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// </remarks>
         public int FEAN
         {
-            get { return DBFE == null ? 0 : DBFE.Count; }
+            get => DBFE?.Count ?? 0;
             private set { }
         }
 

@@ -16,7 +16,7 @@
     <field name="MANDANT" length="20" required="true"/>
     <field name="AZVU" length="20" required="true"/>
     <field name="VSNR" length="12" required="true"/>
-    <field name="ANSTAN" length="3" required="true" type="int" format="000" regex="[0-9]"/>
+    <field name="ANSTAN" length="3" required="true" type="int" format="D3" />
 
     <segment name="DSANext" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DSAN04+DSANext04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="ANSTAN" collection="list" maxOccurs="999">
       <field name="GLTAB" length="8" required="true" format="yyyyMMdd" />
@@ -67,7 +67,7 @@
       <field name="VGESBYPRIVPV" length="1" required="true" />
       <field name="GESBYPRIVPV" length="10" required="true" format="d10" default="0" type="int"/>
       <field name="BBNRVW" length="15" required="true" />
-      <field name="KENNZZVA" length="1" required="true" format="d1" default="0" type="int"/>
+      <field name="KENNZZVA" length="1" required="true" format="d1" default="0" type="int" regex="[0-3]"/>
       <field name="ZVA" length="35" required="false" />
       <field name="KENNZBAU" length="1" typeHandler="jn" required="true" />
       <field name="AZWOECH" length="4" required="false" format="d4" default="0" type="int"/>

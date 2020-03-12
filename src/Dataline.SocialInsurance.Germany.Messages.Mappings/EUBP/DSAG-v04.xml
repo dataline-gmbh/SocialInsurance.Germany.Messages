@@ -13,7 +13,7 @@
     <field name="FEKZ" regex="[0-1]" length="1" required="true" />
     <field name="FEAN" length="1" required="true" regex="[0-9]" />
     <field name="MANDANT" length="20" required="true"/>
-    <field name="ANSTAG" length="3" required="true" type="int" format="000" regex="[0-9]"/>
+    <field name="ANSTAG" length="3" required="true" type="int" format="D3"/>
 
     <segment name="DSAGext" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DSAG04+DSAGext04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="ANSTAG" collection="list" maxOccurs="999">
       <field name="GLTAB" length="8" required="true" format="yyyyMMdd" />

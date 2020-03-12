@@ -66,12 +66,22 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public LocalDate ZREND { get; set; }
 
         /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZKV1 => KVBEITR1 < 0 ? "-" : "+";
+
+        /// <summary>
         /// Holt oder setzt den KV-Beitrag
         /// </summary>
         /// <remarks>
         /// Beitrag zur Krankversicherung - allgemein - ohne Zusatzbeitrag (Beitragsgruppe 1000) mit Centabgabe, Länge 11, Mussangabe
         /// </remarks>
         public int KVBEITR1 { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZKV2 => KVBEITR2 < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt den KV-Beitrag
@@ -82,12 +92,22 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public int KVBEITR2 { get; set; }
 
         /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZKV3 => KVBEITR3 < 0 ? "-" : "+";
+
+        /// <summary>
         /// Holt oder setzt den KV-Beitrag
         /// </summary>
         /// <remarks>
         /// Beitrag zur Krankversicherung - ermäßigt - ohne Zusatzbeitrag (Beitragsgruppe 3000) mit Centabgabe, Länge 11, Mussangabe
         /// </remarks>
         public int KVBEITR3 { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZPV => PVBEITR < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt den PV-Beitrag
@@ -98,12 +118,22 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public int PVBEITR { get; set; }
 
         /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZRV1 => RVBEITR1 < 0 ? "-" : "+";
+
+        /// <summary>
         /// Holt oder setzt den RV-Beitrag
         /// </summary>
         /// <remarks>
         /// Beitrag zur Rentenversicherung (Beitragsgruppen 0100) mit Centangaben, Länge 11, Mussangabe
         /// </remarks>
         public int RVBEITR1 { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZZBP => ZBP < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt den/die Zusatzbeitrag/Pflichtbeiträge
@@ -114,12 +144,22 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public int ZBP { get; set; }
 
         /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZAV1 => AVBEITR1 < 0 ? "-" : "+";
+
+        /// <summary>
         /// Holt oder setzt den Beitrag zur Abreitslosenversicherung
         /// </summary>
         /// <remarks>
         /// Beitrag zur Abreitslosenversicherung - voller Beitrag - (Beitragsgruppe 0010) mit Centangabe, Länge 11, Mussangabe
         /// </remarks>
         public int AVBEITR1 { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZRV3 => RVBEITR3 < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt den Beitrag zur Rentenversicherung
@@ -130,12 +170,22 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public int RVBEITR3 { get; set; }
 
         /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZINSG => INSGU < 0 ? "-" : "+";
+
+        /// <summary>
         /// Holt oder setzt den Beitrag zur Insolvenzgeldversicherung
         /// </summary>
         /// <remarks>
         /// Beitrag zur Rentenversicherung (Beitragsgruppe 0050) mit Centangabe, Länge 11, Mussangabe
         /// </remarks>
         public int INSGU { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZAV2 => AVBEITR2 < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt den Beitrag zur Abreitslosenversicherung
@@ -146,12 +196,22 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public int AVBEITR2 { get; set; }
 
         /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZU1 => U1 < 0 ? "-" : "+";
+
+        /// <summary>
         /// Holt oder setzt die Umlage Krankheitsaufwendung
         /// </summary>
         /// <remarks>
         /// Umlage Krankheitsaufwendung (Beitragsgruppe U1) mit Centangabe, Länge 11, Mussangabe
         /// </remarks>
         public int U1 { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZU2 => U2 < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt die Umlage Mutterschaftsaufwendung
@@ -162,12 +222,22 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public int U2 { get; set; }
 
         /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZKV6 => KVBEITR6 < 0 ? "-" : "+";
+
+        /// <summary>
         /// Holt oder setzt den Pauschal-Beitrag zur Krankenversicherung
         /// </summary>
         /// <remarks>
         /// Pauschal-Beitrag zur Krankenversicherung (Beitragsgruppe 6000) mit Centangabe, Länge 11, Mussangabe
         /// </remarks>
         public int KVBEITR6 { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZRV5 => RVBEITR5 < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt den Pauschal-Beitrag zur Rentenversicherung
@@ -178,12 +248,22 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public int RVBEITR5 { get; set; }
 
         /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZZWS => ZWS < 0 ? "-" : "+";
+
+        /// <summary>
         /// Holt oder setzt die Zwischensumme
         /// </summary>
         /// <remarks>
         /// Zwischensumme der Stellen 183-317, Länge 11, Mussangabe
         /// </remarks>
         public int ZWS { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZKVF => KVBEITRF < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt den Beitrag zur Krankenversicherung freiwilliger Mitglieder
@@ -194,12 +274,22 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public int KVBEITRF { get; set; }
 
         /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZPVF => PVBEITRF < 0 ? "-" : "+";
+
+        /// <summary>
         /// Holt oder setzt den Beitrag zur Pflegeversicherung freiwilliger Mitglieder
         /// </summary>
         /// <remarks>
         /// Beitrag zur Pflegeversicherung freiwilliger Mitglieder mit Centangabe, Länge 11, Mussangabe
         /// </remarks>
         public int PVBEITRF { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZERSTU1 => ERSTAAG < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt den Erstattungbetrag der Arbeitgeberaufwendungen
@@ -210,12 +300,22 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public int ERSTAAG { get; set; }
 
         /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZZBF => ZBF < 0 ? "-" : "+";
+
+        /// <summary>
         /// Holt oder setzt den Zusatzbetrag zur Krankversicherung freiwilliger Mitglieder
         /// </summary>
         /// <remarks>
         /// Zusatzbetrag zur Krankversicherung freiwilliger Mitglieder mit Centangabe, Länge 11, Mussangabe
         /// </remarks>
         public int ZBF { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZBEITR2 => BEITR2 < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt den wahlweisen Beitrag
@@ -226,12 +326,22 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public int BEITR2 { get; set; }
 
         /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZBEITR3 => BEITR3 < 0 ? "-" : "+";
+
+        /// <summary>
         /// Holt oder setzt den wahlweisen Beitrag
         /// </summary>
         /// <remarks>
         /// Wahlweise; z.B zur Seemannskasse - Arbeitgeberanteil - mit Centangabe, Länge 11, Mussangabe
         /// </remarks>
         public int BEITR3 { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZSUM => SUM < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt die Summe
@@ -398,6 +508,11 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// E = Euro, Länge = 1, Mussangabe
         /// </remark>
         public string WG { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZBEITR => BEITR < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt die einheitliche Pauschalsteuer

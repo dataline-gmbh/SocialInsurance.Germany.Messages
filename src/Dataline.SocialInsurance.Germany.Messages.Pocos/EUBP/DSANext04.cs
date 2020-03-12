@@ -350,12 +350,22 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public string BBNRKK { get; set; }
 
         /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VGESBYPRIVKV => (GESBYPRIVKV ?? 0) < 0 ? "-" : "+";
+
+        /// <summary>
         /// Holt oder setzt den Gesamtbeitrag zur privaten KV (monatlich)
         /// </summary>
         /// <remarks>
         /// Länge 10 mit 2 NK, Kannangabe
         /// </remarks>
         public int? GESBYPRIVKV { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VGESBYPRIVPV => (GESBYPRIVPV ?? 0) < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt den Gesamtbeitrag zur privaten PV (monatlich)

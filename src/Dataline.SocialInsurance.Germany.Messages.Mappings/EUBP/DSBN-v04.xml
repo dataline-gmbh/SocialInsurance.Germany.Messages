@@ -15,13 +15,13 @@
     <field name="FEAN" length="1" regex="[0-9]" type="int" required="true" />
     <field name="MANDANT" length="20" required="false" ignore="true"/>
     <field name="BBNRKK" length="15" required="true" />
-    <field name="ANBNW" length="4" required="true" type="int" format="0000" regex="[0-9]"/>
+    <field name="ANBNW" length="4" required="true" type="int" format="D4" />
 
     <segment name="DSBNext" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DSBN04+DSBNext04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="ANBNW" collection="list" maxOccurs="9999">
       <field name="RESERVE1" length="1" required="false" />
       <field name="DSID" length="20" required="false" />
       <field name="AZKK" length="20" required="false" />
-      <field name="KEART" regex="[0-1]" type="int" length="1" required="true" />
+      <field name="KEART" type="int" length="1" required="true" regex="[0-1]" />
       <field name="RESERVE2" length="1" required="true" default="0" ignore="true" type="int"/>
       <field name="RESERVE3" length="1" required="true" default="0" ignore="true" type="int"/>
       <field name="ZRBEG" length="8" required="true" format="yyyyMMdd"/>
@@ -87,7 +87,7 @@
       <field name="ABRECHN1" length="15" required="false" />
       <field name="ABRECHN2" length="15" required="false" />
       <field name="ORDN" length="20" required="false" />
-      <field name="VAMM" length="1" required="false"/>
+      <field name="VAMM" regex="[ S]" length="1" required="false"/>
       <field name="BEITRSA" length="4" required="true" format="d4" default="0" type="int"/>
       <field name="BEITRSE" length="4" required="true" format="d4" default="0" type="int"/>
       <field name="BEITRSH" length="4" required="true" format="d4" default="0" type="int"/>

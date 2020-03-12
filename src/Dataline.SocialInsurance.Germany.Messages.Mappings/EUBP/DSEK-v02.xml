@@ -14,12 +14,12 @@
     <field name="FEAN" length="1" required="true" regex="[0-9]" />
     <field name="MANDANT" length="20" required="true"/>
     <field name="BBNRKK" length="15" required="true" />
-    <field name="ANSATZ" length="2" required="true" type="int" format="00" regex="[0-9]"/>
+    <field name="ANSATZ" length="2" required="true" type="int" format="D2" />
 
     <segment name="DSEKext" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DSEK02+DSEKext02, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="ANSATZ" collection="list" maxOccurs="99">
       <field name="GLTAB" length="8" required="true" format="yyyyMMdd" />
       <field name="AENDDAT" length="20" required="true" format="yyyyMMddHHmmssffffff" />
-      <field name="ERSTSATZ" length="2" type="int" format="00" required="true" regex="[0-2]" />
+      <field name="ERSTSATZ" length="2" required="true" type="int" format="D2" />
     </segment>
 
     <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">
