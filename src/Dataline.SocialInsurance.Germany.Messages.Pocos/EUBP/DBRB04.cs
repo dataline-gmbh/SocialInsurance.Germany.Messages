@@ -142,7 +142,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// <summary>
         /// Holt das Vorzeichen für den Wert des Members
         /// </summary>
-        public string VAV2REST => AV2REST ?? 0) < 0 ? "-" : "+";
+        public string VAV2REST => (AV2REST ?? 0) < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt den Beitrag zur Abreitslosenversicherung

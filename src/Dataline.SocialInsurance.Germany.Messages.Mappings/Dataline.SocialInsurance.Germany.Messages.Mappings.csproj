@@ -37,7 +37,7 @@
 
   <ItemGroup>
     <PackageReference Include="NodaTime" Version="2.2.3" />
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta004">
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
     <PackageReference Include="FubarDev.BeanIO" Version="4.1.2" />

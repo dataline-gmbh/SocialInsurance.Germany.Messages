@@ -9,6 +9,9 @@ using NodaTime;
 
 namespace SocialInsurance.Germany.Messages.Pocos.EUBP
 {
+    /// <summary>
+    /// DSANext - Datensatz Stammdaten Arbeitnehmer (sich wiederholender Teil)
+    /// </summary>
     public class DSANext04
     {
         private bool? _hatDbkn;
