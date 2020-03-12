@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EUBP.DBVK04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings.EUBP"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EUBP.DBVS04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings.EUBP"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EUBP.DBVF04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings.EUBP"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EUBP.DBVA04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings.EUBP"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EUBP.DBOS04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings.EUBP"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EUBP.DBOA04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings.EUBP"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EUBP.DBWS04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings.EUBP"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EUBP.DBWA04.xml, Dataline.SocialInsurance.Germany.Messages.Mappings.EUBP"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.EUBP.DBS504.xml, Dataline.SocialInsurance.Germany.Messages.Mappings.EUBP"/>
+  <import resource="resource:SocialInsurance.Germany.Messages.Mappings.Types.xml, Dataline.SocialInsurance.Germany.Messages.Mappings"/>
+  <template name="DBVT-v04">
+    <field name="KE" literal="DBVT" length="4" rid="true" required="true" />
+    <field name="KJ" length="4" required="true" format="d4" type="int"/>
+    <field name="KM" length="2" required="true" format="d2" type="int"/>
+    <field name="BBNRKK" length="15" required="false" />
+    <field name="KVTG" length="3" required="true" format="d3" type="int"/>
+    <field name="RVTG" length="3" required="true" format="d3" type="int"/>
+    <field name="AVTG" length="3" required="true" format="d3" type="int"/>
+    <field name="PVTG" length="3" required="true" format="d3" type="int"/>
+    <field name="STTG" length="3" required="true" format="d3" type="int"/>
+    <field name="KENNZPVZ" length="1" typeHandler="jn" required="true"/>
+    <field name="PERSGR" length="3" required="false" type="int" format="D3" />
+    <field name="BYGRKV" length="1" required="true" type="int" regex="[01234569]" />
+    <field name="BYGRRV" length="1" required="true" type="int" regex="[0135]" />
+    <field name="BYGRAV" length="1" required="true" type="int" regex="[0-2]" />
+    <field name="BYGRPV" length="1" required="true" type="int" regex="[0-2]" />
+    <field name="VGESBRUTTO" length="1" required="true" />
+    <field name="GESBRUTTO" length="10" required="false" format="d10" default="0" type="int"/>
+    <field name="VSTEUERBRUTTO" length="1" required="true" />
+    <field name="STEUERBRUTTO" length="10" required="false" format="d10" default="0" type="int"/>
+    <field name="VKVBRUTTO" length="1" required="true" />
+    <field name="KVBRUTTO" length="10" required="false" format="d10" default="0" type="int"/>
+    <field name="VRVBRUTTO" length="1" required="true" />
+    <field name="RVBRUTTO" length="10" required="false" format="d10" default="0" type="int"/>
+    <field name="VAVBRUTTO" length="1" required="true" />
+    <field name="AVBRUTTO" length="10" required="false" format="d10" default="0" type="int"/>
+    <field name="VPVBRUTTO" length="1" required="true" />
+    <field name="PVBRUTTO" length="10" required="false" format="d10" default="0" type="int"/>
+    <field name="VUMBRUTTO" length="1" required="true" />
+    <field name="UMBRUTTO" length="10" required="false" format="d10" default="0" type="int"/>
+    <field name="VINSOBRUTTO" length="1" required="true" />
+    <field name="INSOBRUTTO" length="10" required="false" format="d10" default="0" type="int"/>
+    <field name="VUVBRUTTO" length="1" required="true" />
+    <field name="UVBRUTTO" length="10" required="false" format="d10" default="0" type="int"/>
+    <field name="MMVKG" length="1" typeHandler="jn" required="true"/>
+    <field name="MMVSK" length="1" typeHandler="jn" required="true"/>
+    <field name="MMVATZSF" length="1" typeHandler="jn" required="true"/>
+    <field name="MMVATZAO" length="1" typeHandler="jn" required="true"/>
+    <field name="MMVWOSF" length="1" typeHandler="jn" required="true"/>
+    <field name="MMVWOAO" length="1" typeHandler="jn" required="true"/>
+    <field name="MMVWWSF" length="1" typeHandler="jn" required="true"/>
+    <field name="MMVWWAO" length="1" typeHandler="jn" required="true"/>
+    <field name="MMS5" length="1" typeHandler="jn" required="true"/>
+    <field name="RESERVE" length="3" required="false"/>
+
+    <segment name="ListeDBVK" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DBVK04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="MMVKG" collection="list">
+      <include template="DBVK-v04" />
+    </segment>
+
+    <segment name="ListeDBVS" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DBVS04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="MMVSK" collection="list">
+      <include template="DBVS-v04" />
+    </segment>
+
+    <segment name="ListeDBVF" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DBVF04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="MMVATZSF" collection="list">
+      <include template="DBVF-v04" />
+    </segment>
+
+    <segment name="ListeDBVA" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DBVA04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="MMVATZAO" collection="list">
+      <include template="DBVA-v04" />
+    </segment>
+
+    <segment name="ListeDBOS" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DBOS04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="MMVWOSF" collection="list">
+      <include template="DBOS-v04" />
+    </segment>
+
+    <segment name="ListeDBOA" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DBOA04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="MMVWOAO" collection="list">
+      <include template="DBOA-v04" />
+    </segment>
+
+    <segment name="ListeDBWS" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DBWS04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="MMVWWSF" collection="list">
+      <include template="DBWS-v04" />
+    </segment>
+
+    <segment name="ListeDBWA" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DBWA04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="MMVWWAO" collection="list">
+      <include template="DBWA-v04" />
+    </segment>
+
+    <segment name="ListeDBS5" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DBS504, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="MMS5" collection="list">
+      <include template="DBS5-v04" />
+    </segment>
+
+  </template>
+</beanio>

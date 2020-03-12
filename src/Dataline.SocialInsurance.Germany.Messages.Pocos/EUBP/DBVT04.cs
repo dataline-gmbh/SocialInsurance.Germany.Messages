@@ -84,7 +84,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// <summary>
         /// Holt oder setzt die Summe der Steuer-Tage
         /// </summary>
-        public string STTG { get; set; }
+        public int? STTG { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen Beitragszuschlag Pflegeversicherung
@@ -92,7 +92,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// <remarks>
         /// J - Ja, N - Nein
         /// </remarks>
-        public string KENNZPVZ { get; set; }
+        public bool KENNZPVZ { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Personengruppe
@@ -100,7 +100,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// <remarks>
         /// Personengruppe, Länge 3, Kann-Feld
         /// </remarks>
-        public int PERSGR { get; set; }
+        public int? PERSGR { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beitragsgruppenschlüssel KV
@@ -108,7 +108,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// <remarks>
         /// Mussangabe
         /// </remarks>
-        public string BYGRKV { get; set; }
+        public int BYGRKV { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beitragsgruppenschlüssel RV
@@ -116,7 +116,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// <remarks>
         /// Mussangabe
         /// </remarks>
-        public string BYGRRV { get; set; }
+        public int BYGRRV { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beitragsgruppenschlüssel AV
@@ -124,7 +124,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// <remarks>
         /// Mussangabe
         /// </remarks>
-        public string BYGRAV { get; set; }
+        public int BYGRAV { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Beitragsgruppenschlüssel PV
@@ -132,7 +132,12 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// <remarks>
         /// Mussangabe
         /// </remarks>
-        public string BYGRPV { get; set; }
+        public int BYGRPV { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VGESBRUTTO => (GESBRUTTO ?? 0) < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt das Gesamtbrutto
@@ -141,7 +146,12 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// Entgelt, Länge 10, Kannangabe
         /// EURO/CENT mit zwei Nachkommastellen
         /// </remarks>
-        public int GESBRUTTO { get; set; }
+        public int? GESBRUTTO { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VSTEUERBRUTTO => (STEUERBRUTTO ?? 0) < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt das Steuerbrutto
@@ -150,7 +160,12 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// Entgelt, Länge 10, Kannangabe
         /// EURO/CENT mit zwei Nachkommastellen
         /// </remarks>
-        public int STEUERBRUTTO { get; set; }
+        public int? STEUERBRUTTO { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VKVBRUTTO => (KVBRUTTO ?? 0) < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt das KV-Brutto
@@ -159,7 +174,12 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// Entgelt, Länge 10, Kannangabe
         /// EURO/CENT mit zwei Nachkommastellen
         /// </remarks>
-        public int KVBRUTTO { get; set; }
+        public int? KVBRUTTO { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VRVBRUTTO => (RVBRUTTO ?? 0) < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt das RV-Brutto
@@ -168,7 +188,12 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// Entgelt, Länge 10, Kannangabe
         /// EURO/CENT mit zwei Nachkommastellen
         /// </remarks>
-        public int RVBRUTTO { get; set; }
+        public int? RVBRUTTO { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VAVBRUTTO => (AVBRUTTO ?? 0) < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt das AV-Brutto
@@ -177,7 +202,12 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// Entgelt, Länge 10, Kannangabe
         /// EURO/CENT mit zwei Nachkommastellen
         /// </remarks>
-        public int AVBRUTTO { get; set; }
+        public int? AVBRUTTO { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VPVBRUTTO => (PVBRUTTO ?? 0) < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt das PV-Brutto
@@ -186,7 +216,12 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// Entgelt, Länge 10, Kannangabe
         /// EURO/CENT mit zwei Nachkommastellen
         /// </remarks>
-        public int PVBRUTTO { get; set; }
+        public int? PVBRUTTO { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VUMBRUTTO => (UMBRUTTO ?? 0) < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt das umlagepfl. Brutto
@@ -195,7 +230,12 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// Entgelt, Länge 10, Kannangabe
         /// EURO/CENT mit zwei Nachkommastellen
         /// </remarks>
-        public int UMBRUTTO { get; set; }
+        public int? UMBRUTTO { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VINSOBRUTTO => (INSOBRUTTO ?? 0) < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt das insolvenzgeldumlagepflichtige Brutto
@@ -204,7 +244,12 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// Entgelt, Länge 10, Kannangabe
         /// EURO/CENT mit zwei Nachkommastellen
         /// </remarks>
-        public int INSOBRUTTO { get; set; }
+        public int? INSOBRUTTO { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VUVBRUTTO => (UVBRUTTO ?? 0) < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt das UV-Brutto
@@ -213,7 +258,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// Entgelt, Länge 10, Kannangabe
         /// EURO/CENT mit zwei Nachkommastellen
         /// </remarks>
-        public int UVBRUTTO { get; set; }
+        public int? UVBRUTTO { get; set; }
 
         /// <summary>
         /// Holt oder setzt einen Wert, der angibt, ob der Datenbaustein Vortragswerte Kurzarbeitergeld vorhanden ist

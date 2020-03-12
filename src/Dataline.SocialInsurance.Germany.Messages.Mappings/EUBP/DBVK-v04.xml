@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBVK-v04">
+    <field name="KE" length="4" literal="DBVK" required="true"/>
+    <field name="KENNZKUG" length="1" literal="0" required="true" />
+    <field name="RESERVE1" length="5" required="false" />
+    <field name="RESERVE2" length="5" required="false" />
+    <field name="VFIKTIVAEGKV" length="1" required="true"/>
+    <field name="FIKTIVAEGKV" length="10" required="true" type="int" format="D10" />
+    <field name="VFIKTIVAEGRV" length="1" required="true"/>
+    <field name="FIKTIVAEGRV" length="10" required="true" type="int" format="D10" />
+    <field name="VFIKTIVAEGPV" length="1" required="true"/>
+    <field name="FIKTIVAEGPV" length="10" required="true" type="int" format="D10" />
+    <field name="VFIKTIVAEGRVBEH" length="1" required="true"/>
+    <field name="FIKTIVAEGRVBEH" length="10" required="true" type="int" format="D10" />
+    <field name="VFIKTIVKVBY" length="1" required="true"/>
+    <field name="FIKTIVKVBY" length="10" required="true" type="int" format="D10" />
+    <field name="VFIKTIVRVBY" length="1" required="true"/>
+    <field name="FIKTIVRVBY" length="10" required="true" type="int" format="D10" />
+    <field name="VFIKTIVPVBY" length="1" required="true"/>
+    <field name="FIKTIVPVBY" length="10" required="true" type="int" format="D10" />
+    <field name="VFIKTIVKVBYZUSATZ" length="1" required="true"/>
+    <field name="FIKTIVKVBYZUSATZ" length="10" required="true" type="int" format="D10" />
+    <field name="VRESERVE3" length="1" required="false"/>
+    <field name="RESERVE3" length="10" required="false" type="int" default="0" format="D10" />
+    <field name="VRESERVE4" length="1" required="false"/>
+    <field name="RESERVE4" length="10" required="false" type="int" default="0" format="D10" />
+    <field name="RESERVE5" length="3" required="false"/>
+  </template>
+</beanio>

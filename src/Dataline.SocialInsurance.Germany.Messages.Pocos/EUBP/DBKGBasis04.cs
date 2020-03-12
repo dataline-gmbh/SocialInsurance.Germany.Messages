@@ -21,7 +21,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// 0 = KUG
         /// 1 = S-KUG
         /// </remarks>
-        public string KENNZKUG { get; set; }
+        public int KENNZKUG { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Anzahl Sollstunden
@@ -40,6 +40,11 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public int AUSFSTD { get; set; }
 
         /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VFIKTIVAEGKV => FIKTIVAEGKV < 0 ? "-" : "+";
+
+        /// <summary>
         /// Holt oder setzt das auf 80 % gekürzte ausgefallene Arbeitsentgelt KV (sog. Fiktivlohn)
         /// </summary>
         /// <remarks>
@@ -47,6 +52,11 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// EURO/CENT mit zwei Nachkommastellen
         /// </remarks>
         public int FIKTIVAEGKV { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VFIKTIVAEGRV => FIKTIVAEGRV < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt das auf 80 % gekürzte ausgefallene Arbeitsentgelt RV (sog. Fiktivlohn)
@@ -58,6 +68,11 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public int FIKTIVAEGRV { get; set; }
 
         /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VFIKTIVAEGPV => FIKTIVAEGPV < 0 ? "-" : "+";
+
+        /// <summary>
         /// Holt oder setzt das auf 80 % gekürzte ausgefallene Arbeitsentgelt PV (sog. Fiktivlohn)
         /// </summary>
         /// <remarks>
@@ -65,6 +80,11 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// EURO/CENT mit zwei Nachkommastellen
         /// </remarks>
         public int FIKTIVAEGPV { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VFIKTIVAEGRVBEH => FIKTIVAEGRVBEH < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt das auf 80 % gekürzte ausgefallene Arbeitsentgelt für behinderte AN in geschützten Einrichtungen
@@ -76,6 +96,11 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public int? FIKTIVAEGRVBEH { get; set; }
 
         /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VFIKTIVKVBY => FIKTIVKVBY < 0 ? "-" : "+";
+
+        /// <summary>
         /// Holt oder setzt die Summe KV-Beitrag ohne KV-Zusatzbeitrag aus fiktivem Arbeitsentgelt
         /// </summary>
         /// <remarks>
@@ -83,6 +108,11 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// EURO/CENT mit zwei Nachkommastellen
         /// </remarks>
         public int FIKTIVKVBY { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VFIKTIVRVBY => FIKTIVRVBY < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt die Summe RV-Beitrag aus fiktivem Arbeitsentgelt
@@ -94,6 +124,11 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public int FIKTIVRVBY { get; set; }
 
         /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VFIKTIVPVBY => FIKTIVPVBY < 0 ? "-" : "+";
+
+        /// <summary>
         /// Holt oder setzt die Summe PV-Beitrag aus fiktivem Arbeitsentgelt
         /// </summary>
         /// <remarks>
@@ -101,6 +136,11 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// EURO/CENT mit zwei Nachkommastellen
         /// </remarks>
         public int FIKTIVPVBY { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VFIKTIVKVBYZUSATZ => FIKTIVKVBYZUSATZ < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt die Summe KV-Zusatzbeitrag aus fiktivem Arbeitsentgelt

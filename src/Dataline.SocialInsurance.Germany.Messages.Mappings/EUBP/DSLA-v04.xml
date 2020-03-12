@@ -103,6 +103,128 @@
       <field name="SOLIEGA" length="10" required="false" format="d10" default="0" type="int"/>
       <field name="VKIRCHENSTEGA" length="1" required="true" />
       <field name="KIRCHENSTEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VKVBRUTTOEGA" length="1" required="true" />
+      <field name="KVBRUTTOEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VRVBRUTTOEGA" length="1" required="true" />
+      <field name="RVBRUTTOEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VAVBRUTTOEGA" length="1" required="true" />
+      <field name="AVBRUTTOEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VPVBRUTTOEGA" length="1" required="true" />
+      <field name="PVBRUTTOEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VINSOBRUTTOEGA" length="1" required="true" />
+      <field name="INSOBRUTTOEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VKVBYAGEGA" length="1" required="true" />
+      <field name="KVBYAGEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VKVBYAGEGAZUSATZ" length="1" required="true" />
+      <field name="KVBYAGEGAZUSATZ" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VKVBYANEGA" length="1" required="true" />
+      <field name="KVBYANEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VKVBYANEGAZUSATZ" length="1" required="true" />
+      <field name="KVBYANEGAZUSATZ" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VRVBYAGEGA" length="1" required="true" />
+      <field name="RVBYAGEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VRVBYANEGA" length="1" required="true" />
+      <field name="RVBYANEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VAVBYAGEGA" length="1" required="true" />
+      <field name="AVBYAGEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VAVBYANEGA" length="1" required="true" />
+      <field name="AVBYANEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VPVBYAGEGA" length="1" required="true" />
+      <field name="PVBYAGEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VPVBYANEGA" length="1" required="true" />
+      <field name="PVBYANEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VINSOBYAGEGA" length="1" required="true" />
+      <field name="INSOBYAGEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VBVBYAGEGA" length="1" required="true" />
+      <field name="BVBYAGEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VBVBYANEGA" length="1" required="true" />
+      <field name="BVBYANEGA" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VHINZUBTRG" length="1" required="true" />
+      <field name="HINZUBTRG" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VURLRESTVJ" length="1" required="true" />
+      <field name="URLRESTVJ" length="5" required="false" format="d5" default="0" type="int"/>
+      <field name="URLGENOM" length="5" required="false" format="d5" default="0" type="int"/>
+      <field name="VURLREST" length="1" required="true" />
+      <field name="URLREST" length="5" required="false" format="d5" default="0" type="int"/>
+      <field name="URLUNBEZ" length="5" required="false" format="d5" default="0" type="int"/>
+      <field name="VNETTO" length="1" required="true" />
+      <field name="NETTO" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VZAHLBTRG" length="1" required="true" />
+      <field name="ZAHLBTRG" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="VANWESEND" length="1" required="true" />
+      <field name="ANWESEND" length="2" required="false" format="d2" default="0" type="int"/>
+      <field name="VFEHL" length="1" required="true" />
+      <field name="FEHL" length="2" required="false" format="d2" default="0" type="int"/>
+      <field name="VBEZSTD" length="1" required="true" />
+      <field name="BEZSTD" length="5" required="false" format="d5" default="0" type="int"/>
+      <field name="VAU" length="1" required="true" />
+      <field name="AU" length="2" required="false" format="d2" default="0" type="int"/>
+      <field name="VAUSTD" length="1" required="true" />
+      <field name="AUSTD" length="5" required="false" format="d5" default="0" type="int"/>
+      <field name="VZEITLOHNSTD" length="1" required="true" />
+      <field name="ZEITLOHNSTD" length="5" required="false" format="d5" default="0" type="int"/>
+      <field name="VUESTD" length="1" required="true" />
+      <field name="UESTD" length="5" required="false" format="d5" default="0" type="int"/>
+      <field name="VDOPPELST" length="1" required="true" />
+      <field name="DOPPELST" length="10" required="false" format="d10" default="0" type="int"/>
+      <field name="ANLA" length="2" required="false" format="d2" default="0" type="int"/>
+      <field name="RESERVE2" length="1" required="false" />
+      <field name="MMKG" length="1" typeHandler="jn" required="true"/>
+      <field name="MMAT" length="1" typeHandler="jn" required="true"/>
+      <field name="MMWO" length="1" typeHandler="jn" required="true"/>
+      <field name="MMWW" length="1" typeHandler="jn" required="true"/>
+      <field name="MMS4" length="1" typeHandler="jn" required="true"/>
+      <field name="RESERVE3" length="5" required="false" />
+
+      <segment name="DSLAext" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DSLA04+DSLAext04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="ANLA" collection="list" maxOccurs="99">
+        <field name="LA" length="8" required="true" />
+        <field name="NAME" length="100" required="false" />
+        <field name="KENNZHERKUNFT" length="1" required="true" format="0" default="0" type="int" />
+        <field name="KENNZVERW" length="1" required="true" format="0" default="0" type="int" />
+        <field name="KENNZBRUTTONETTO" length="1" required="true" format="0" default="0" type="int" />
+        <field name="KENNZSV" length="1" required="true" format="0" default="0" type="int" />
+        <field name="KENNZUV" length="1" required="true" format="0" default="0" type="int" />
+        <field name="KENNZSTEUER" length="1" required="true" format="0" default="0" type="int" />
+        <field name="KENNZSTPFL" length="1" required="true" format="0" default="0" type="int" />
+        <field name="KENNZPAUSCHSTEUER" length="1" required="true" format="0" default="0" type="int" />
+        <field name="RESERVE4" length="5" required="false" />
+        <field name="VBEZMENGE" length="1" required="true" />
+        <field name="BEZMENGE" length="6" required="false" format="D6" type="int"/>
+        <field name="VFAKTOR" length="1" required="true" />
+        <field name="FAKTOR" length="8" required="false" format="D8" type="int"/>
+        <field name="VZUSCHLAG" length="1" required="true" />
+        <field name="ZUSCHLAG" length="5" required="false" format="D5" type="int"/>
+        <field name="VLABTRGGES" length="1" required="true" />
+        <field name="LABTRGGES" length="10" required="false" format="D10" type="int"/>
+        <field name="VLABTRGST" length="1" required="true" />
+        <field name="LABTRGST" length="10" required="false" format="D10" type="int"/>
+        <field name="VLABTRGSV" length="1" required="true" />
+        <field name="LABTRGSV" length="10" required="false" format="D10" type="int"/>
+      </segment>
+
+      <segment name="ListeDBKG" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DBKG04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="MMKG" collection="list">
+        <include template="DBKG-v04" />
+      </segment>
+
+      <segment name="ListeDBAT" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DBAT04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="MMAT" collection="list">
+        <include template="DBAT-v04" />
+      </segment>
+
+      <segment name="ListeDBWO" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DBWO04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="MMWO" collection="list">
+        <include template="DBWO-v04" />
+      </segment>
+
+      <segment name="ListeDBWW" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DBWW04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="MMWW" collection="list">
+        <include template="DBWW-v04" />
+      </segment>
+
+      <segment name="ListeDBS4" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DBS404, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="MMS4" collection="list">
+        <include template="DBS4-v04" />
+      </segment>
+    </segment>
+
+    <segment name="ListeDBVT" class="SocialInsurance.Germany.Messages.Pocos.EUBP.DBVT04, Dataline.SocialInsurance.Germany.Messages.Pocos.EUBP" occursRef="MMVT" collection="list">
+      <include template="DBVT-v04" />
     </segment>
 
     <segment name="DBFE" class="SocialInsurance.Germany.Messages.Pocos.DBFE, Dataline.SocialInsurance.Germany.Messages.Pocos" occursRef="FEAN" collection="list">

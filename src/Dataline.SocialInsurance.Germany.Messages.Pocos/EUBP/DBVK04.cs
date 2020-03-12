@@ -15,7 +15,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public DBVK04()
         {
             KE = "DBVK";
-            KENNZKUG = "0";
+            KENNZKUG = 0;
         }
     }
 }

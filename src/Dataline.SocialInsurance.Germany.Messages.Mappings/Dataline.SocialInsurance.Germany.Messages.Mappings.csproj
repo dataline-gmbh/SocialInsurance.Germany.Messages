@@ -32,19 +32,45 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="EUBP\DBAT-v04.xml" />
+    <None Remove="EUBP\DBKG-v04.xml" />
     <None Remove="EUBP\DBKN-v04.xml" />
-    <None Remove="EUBP\DBRB-v04.xml" />
+    <None Remove="EUBP\DBOA-v04.xml" />
+    <None Remove="EUBP\DBOS-v04.xml" />
     <None Remove="EUBP\DBS3-v04.xml" />
-    <None Remove="EUBP\DBSC-v04.xml" />
+    <None Remove="EUBP\DBS4-v04.xml" />
+    <None Remove="EUBP\DBS5-v04.xml" />
+    <None Remove="EUBP\DBVA-v04.xml" />
+    <None Remove="EUBP\DBVF-v04.xml" />
+    <None Remove="EUBP\DBVK-v04.xml" />
+    <None Remove="EUBP\DBVS-v04.xml" />
+    <None Remove="EUBP\DBVT-v04.xml" />
+    <None Remove="EUBP\DBWA-v04.xml" />
+    <None Remove="EUBP\DBWO-v04.xml" />
+    <None Remove="EUBP\DBWS-v04.xml" />
+    <None Remove="EUBP\DBWW-v04.xml" />
     <None Remove="EUBP\DSAN-v04.xml" />
     <None Remove="EUBP\DSLA-v04.xml" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="EUBP\DBAT-v04.xml" />
+    <EmbeddedResource Include="EUBP\DBKG-v04.xml" />
     <EmbeddedResource Include="EUBP\DBKN-v04.xml" />
-    <EmbeddedResource Include="EUBP\DBRB-v04.xml" />
+    <EmbeddedResource Include="EUBP\DBOA-v04.xml" />
+    <EmbeddedResource Include="EUBP\DBOS-v04.xml" />
     <EmbeddedResource Include="EUBP\DBS3-v04.xml" />
-    <EmbeddedResource Include="EUBP\DBSC-v04.xml" />
+    <EmbeddedResource Include="EUBP\DBS4-v04.xml" />
+    <EmbeddedResource Include="EUBP\DBS5-v04.xml" />
+    <EmbeddedResource Include="EUBP\DBVA-v04.xml" />
+    <EmbeddedResource Include="EUBP\DBVF-v04.xml" />
+    <EmbeddedResource Include="EUBP\DBVK-v04.xml" />
+    <EmbeddedResource Include="EUBP\DBVS-v04.xml" />
+    <EmbeddedResource Include="EUBP\DBVT-v04.xml" />
+    <EmbeddedResource Include="EUBP\DBWA-v04.xml" />
+    <EmbeddedResource Include="EUBP\DBWO-v04.xml" />
+    <EmbeddedResource Include="EUBP\DBWS-v04.xml" />
+    <EmbeddedResource Include="EUBP\DBWW-v04.xml" />
     <EmbeddedResource Include="EUBP\DSAN-v04.xml" />
     <EmbeddedResource Include="EUBP\DSLA-v04.xml" />
   </ItemGroup>

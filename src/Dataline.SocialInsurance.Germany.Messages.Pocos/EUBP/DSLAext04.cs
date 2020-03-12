@@ -24,7 +24,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// 1 - Standardlohnart
         /// 2 - individuelle Lohnart
         /// </remarks>
-        public string KENNZHERKUNFT { get; set; }
+        public int? KENNZHERKUNFT { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Verwendung der Lohnart
@@ -34,7 +34,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// 1 - buchbare Lohnart
         /// 2 - Rechen-/Systemlohnart
         /// </remarks>
-        public string KENNZVERW { get; set; }
+        public int? KENNZVERW { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen Bruttolohnart/Nettobe- oder -abzüge
@@ -43,7 +43,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// 0 - Bruttolohnart
         /// 1 - Nettobe- oder -abzug
         /// </remarks>
-        public string KENNZBRUTTONETTO { get; set; }
+        public int KENNZBRUTTONETTO { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen SV
@@ -56,7 +56,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// 4-einmalig gezahltes Arbeitsentgelt mit Freibetrag
         /// 5-umlagepflichtiges einmalig gezahltes Arbeitsentgelt (Vereinfachungsregel)
         /// </remarks>
-        public string KENNZSV { get; set; }
+        public int? KENNZSV { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen UV
@@ -66,7 +66,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// 1-UV-pflichtiges Entgelt
         /// 2-UV-pflichtiges Entgelt mit Freibetrag
         /// </remarks>
-        public string KENNZUV { get; set; }
+        public int? KENNZUV { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen Steuer
@@ -78,7 +78,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// 3-laufendes Arbeitsentgelt mit Freibetrag
         /// 4-sonstiges Arbeitsentgelt mit Freibetrag
         /// </remarks>
-        public string KENNZSTEUER { get; set; }
+        public int? KENNZSTEUER { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen Steuerpflicht
@@ -89,7 +89,7 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// 2-Pauschalsteuer
         /// 3-Mehrjahresbesteuerung
         /// </remarks>
-        public string KENNZSTPFL { get; set; }
+        public int? KENNZSTPFL { get; set; }
 
         /// <summary>
         /// Holt oder setzt das Kennzeichen Pauschalsteuer
@@ -102,7 +102,12 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// 4-Pauschalsteuer nach § 40a Abs. 2 EStG
         /// 5-Pauschalsteuer nach § 40b EStG
         /// </remarks>
-        public string KENNZPAUSCHSTEUER { get; set; }
+        public int? KENNZPAUSCHSTEUER { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VBEZMENGE => (BEZMENGE ?? 0) < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt die Anzahl der gegen Entgelt geleisteten Stunden
@@ -113,6 +118,11 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public int? BEZMENGE { get; set; }
 
         /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VFAKTOR => (FAKTOR ?? 0) < 0 ? "-" : "+";
+
+        /// <summary>
         /// Holt oder setzt den Faktor für nach Menge bezahlte Arbeitsleistung
         /// </summary>
         /// <remarks>
@@ -121,12 +131,22 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public int? FAKTOR { get; set; }
 
         /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VZUSCHLAG => (ZUSCHLAG ?? 0) < 0 ? "-" : "+";
+
+        /// <summary>
         /// Holt oder setzt den Faktor für Zuschläge in Prozent
         /// </summary>
         /// <remarks>
         /// Länge 5 mit 2 NK, Kannangabe
         /// </remarks>
         public int? ZUSCHLAG { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VLABTRGGES => LABTRGGES < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt den Gesamtbetrag aus Lohnart
@@ -138,13 +158,23 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         public int LABTRGGES { get; set; }
 
         /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VLABTRGST => (LABTRGST ?? 0) < 0 ? "-" : "+";
+
+        /// <summary>
         /// Holt oder setzt den Steuerbetrag aus Lohnart
         /// </summary>
         /// <remarks>
         /// Entgelt, Länge 10, Mussangabe
         /// EURO/CENT mit zwei Nachkommastellen
         /// </remarks>
-        public int LABTRGST { get; set; }
+        public int? LABTRGST { get; set; }
+
+        /// <summary>
+        /// Holt das Vorzeichen für den Wert des Members
+        /// </summary>
+        public string VLABTRGSV => (LABTRGSV ?? 0) < 0 ? "-" : "+";
 
         /// <summary>
         /// Holt oder setzt den SV-Betrag aus Lohnart
@@ -153,6 +183,6 @@ namespace SocialInsurance.Germany.Messages.Pocos.EUBP
         /// Entgelt, Länge 10, Mussangabe
         /// EURO/CENT mit zwei Nachkommastellen
         /// </remarks>
-        public int LABTRGSV { get; set; }
+        public int? LABTRGSV { get; set; }
     }
 }

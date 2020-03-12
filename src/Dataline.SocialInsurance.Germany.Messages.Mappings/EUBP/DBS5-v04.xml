@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<beanio xmlns="http://www.beanio.org/2016/07">
+  <template name="DBS5-v04">
+    <field name="KE" length="4" literal="DBS5" required="true"/>
+  </template>
+</beanio>
