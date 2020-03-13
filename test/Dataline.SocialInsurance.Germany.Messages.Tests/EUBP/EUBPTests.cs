@@ -13,8 +13,8 @@ namespace SocialInsurance.Germany.Messages.Tests.EUBP
         }
 
         [Theory]
-        [InlineData("TEBExxx.dat")]
-        public void TestEEUBPV04(string filename)
+        [InlineData("tebe0099.dat")]
+        public void TestEUBPV04(string filename)
         {
             TestFile<DSAG04>(filename);
         }
@@ -23,7 +23,6 @@ namespace SocialInsurance.Germany.Messages.Tests.EUBP
             where TDatensatz : class, IDatensatz
         {
             var ds = GetDatensaetze(filename);
-            AssertDatensatzCollection<TDatensatz>(ds);
             TestRoundtripFile(filename, ds);
         }
     }
